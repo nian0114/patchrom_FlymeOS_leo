@@ -357,7 +357,7 @@
     .prologue
     const/4 v3, 0x0
 
-    invoke-static {p1}, Landroid/app/WallpaperManager;->openDefaultWallpaper(Landroid/content/Context;)Ljava/io/InputStream;
+    invoke-static {p1}, Landroid/app/WallpaperManager$FlymeInjector;->flymeOpenDefaultWallpaper(Landroid/content/Context;)Ljava/io/InputStream;
 
     move-result-object v1
 

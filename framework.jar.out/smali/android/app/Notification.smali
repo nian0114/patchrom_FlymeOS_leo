@@ -13,6 +13,7 @@
         Landroid/app/Notification$WearableExtender;,
         Landroid/app/Notification$Extender;,
         Landroid/app/Notification$MediaStyle;,
+        Landroid/app/Notification$FlymeInjector;,
         Landroid/app/Notification$InboxStyle;,
         Landroid/app/Notification$BigTextStyle;,
         Landroid/app/Notification$BigPictureStyle;,
@@ -186,6 +187,10 @@
 
 
 # instance fields
+.field public mFlymeNotification:Landroid/app/NotificationExt;
+
+.field public snoozeIntent:Landroid/app/PendingIntent;
+
 .field public actions:[Landroid/app/Notification$Action;
 
 .field public audioAttributes:Landroid/media/AudioAttributes;
@@ -323,6 +328,8 @@
 
     iput v2, p0, Landroid/app/Notification;->priority:I
 
+    invoke-static/range {p0 .. p0}, Landroid/app/Notification$FlymeInjector;->initFlymeExtFields(Landroid/app/Notification;)V
+
     return-void
 .end method
 
@@ -360,6 +367,8 @@
     iput-object p2, p0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     iput-wide p3, p0, Landroid/app/Notification;->when:J
+
+    invoke-static/range {p0 .. p0}, Landroid/app/Notification$FlymeInjector;->initFlymeExtFields(Landroid/app/Notification;)V
 
     return-void
 .end method
@@ -406,6 +415,8 @@
     move-result-object v0
 
     invoke-virtual {p0, p1, p6, p7, v0}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    invoke-static/range {p0 .. p0}, Landroid/app/Notification$FlymeInjector;->initFlymeExtFields(Landroid/app/Notification;)V
 
     return-void
 .end method
@@ -761,6 +772,8 @@
     move-result v1
 
     iput v1, p0, Landroid/app/Notification;->color:I
+
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInjector;->readFromParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -1364,6 +1377,9 @@
     invoke-virtual {p1}, Landroid/app/Notification;->lightenPayload()V
 
     :cond_b
+
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInjector;->cloneIntoFlyme(Landroid/app/Notification;Landroid/app/Notification;)V
+
     return-void
 .end method
 
@@ -1550,6 +1566,8 @@
     iget v1, p0, Landroid/app/Notification;->icon:I
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+
+    invoke-static {p0, v0}, Landroid/app/Notification$FlymeInjector;->setLatestEventInfoFlyme(Landroid/app/Notification;Landroid/app/Notification$Builder;)V
 
     iget v1, p0, Landroid/app/Notification;->priority:I
 
@@ -2134,6 +2152,8 @@
     iget v0, p0, Landroid/app/Notification;->color:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p2}, Landroid/app/Notification$FlymeInjector;->writeToParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;I)V
 
     return-void
 

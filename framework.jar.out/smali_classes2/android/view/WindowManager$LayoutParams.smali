@@ -16,8 +16,24 @@
     name = "LayoutParams"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/view/WindowManager$LayoutParams$FlymeInjector;
+    }
+.end annotation
+
 
 # static fields
+.field public static final MEIZU_FLAGS_CHANGED:I = 0x800000
+
+.field public static final MEIZU_FLAG_CHANGE_TOAST:I = 0x10
+
+.field public static final MEIZU_FLAG_DARK_STATUS_BAR_ICON:I = 0x200
+
+.field public static final MEIZU_STATUS_BAR_CHANGED:I = 0x1000000
+
+.field public static final TYPE_MEIZU_TOP_MOST:I = 0x7f8
+
 .field public static final ALPHA_CHANGED:I = 0x80
 
 .field public static final ANIMATION_CHANGED:I = 0x10
@@ -350,6 +366,12 @@
 
 
 # instance fields
+.field public meizuFlags:I
+
+.field public meizuParams:Landroid/view/MeizuLayoutParams;
+
+.field public statusBarColor:I
+
 .field public alpha:F
 
 .field public blurMaskAlphaThreshold:F
@@ -806,6 +828,8 @@
 
     iput v2, p0, Landroid/view/WindowManager$LayoutParams;->format:I
 
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->initFlymeExtraFields(Landroid/view/WindowManager$LayoutParams;)V
+
     return-void
 .end method
 
@@ -867,6 +891,8 @@
     iput p1, p0, Landroid/view/WindowManager$LayoutParams;->type:I
 
     iput v2, p0, Landroid/view/WindowManager$LayoutParams;->format:I
+
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->initFlymeExtraFields(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
 .end method
@@ -933,6 +959,8 @@
 
     iput v2, p0, Landroid/view/WindowManager$LayoutParams;->format:I
 
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->initFlymeExtraFields(Landroid/view/WindowManager$LayoutParams;)V
+
     return-void
 .end method
 
@@ -998,6 +1026,8 @@
     iput p2, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     iput p3, p0, Landroid/view/WindowManager$LayoutParams;->format:I
+
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->initFlymeExtraFields(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
 .end method
@@ -1066,6 +1096,8 @@
     iput p4, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     iput p5, p0, Landroid/view/WindowManager$LayoutParams;->format:I
+
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->initFlymeExtraFields(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
 .end method
@@ -1140,6 +1172,8 @@
     iput p6, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     iput p7, p0, Landroid/view/WindowManager$LayoutParams;->format:I
+
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->initFlymeExtraFields(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
 .end method
@@ -1419,6 +1453,8 @@
     move-result v0
 
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->blurMaskAlphaThreshold:F
+
+    invoke-static/range {p0 .. p1}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->readFromParcel(Landroid/view/WindowManager$LayoutParams;Landroid/os/Parcel;)V
 
     return-void
 
@@ -1999,6 +2035,11 @@
     or-int/2addr v0, v2
 
     :cond_21
+
+    invoke-static {p0, p1, v0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->copyFrom(Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManager$LayoutParams;I)I
+
+    move-result v0
+
     return v0
 .end method
 
@@ -2853,6 +2894,8 @@
     iget v0, p0, Landroid/view/WindowManager$LayoutParams;->blurMaskAlphaThreshold:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    invoke-static/range {p0 .. p1}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->writeToParcel(Landroid/view/WindowManager$LayoutParams;Landroid/os/Parcel;)V
 
     return-void
 

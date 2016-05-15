@@ -23,7 +23,7 @@
     .prologue
     const/high16 v3, 0x20000
 
-    const v1, 0x1030483
+    sget v1, Lcom/flyme/internal/R$style;->Theme_Flyme_Light_Dialog_Alert:I
 
     invoke-direct {p0, p1, v1}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
@@ -100,7 +100,7 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    const v1, 0x1020019
+    const v1, #android:id@button1#t
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseErrorDialog;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
     :cond_0
-    const v1, 0x102001a
+    const v1, #android:id@button2#t
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseErrorDialog;->findViewById(I)Landroid/view/View;
 
@@ -129,7 +129,7 @@
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
     :cond_1
-    const v1, 0x102001b
+    const v1, #android:id@button3#t
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseErrorDialog;->findViewById(I)Landroid/view/View;
 

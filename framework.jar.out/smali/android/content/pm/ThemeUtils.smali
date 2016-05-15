@@ -1453,6 +1453,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
+    const/4 v1, 0x0
+
+    return-object v1
+
     :try_start_0
     const-string v1, "com.android.systemui"
 
@@ -1590,6 +1594,8 @@
 
     .prologue
     const/4 v9, 0x0
+
+    return-object v9
 
     .local v9, "config":Landroid/content/res/ThemeConfig;
     const/4 v0, 0x0

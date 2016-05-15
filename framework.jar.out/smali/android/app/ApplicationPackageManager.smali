@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/ApplicationPackageManager$FlymeInjector;,
         Landroid/app/ApplicationPackageManager$ResourceName;
     }
 .end annotation
@@ -173,7 +174,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x108034f
+    const v1, #android:drawable@ic_corp_icon_badge#t
 
     :goto_0
     return v1
@@ -2116,11 +2117,17 @@
     .locals 2
 
     .prologue
+    invoke-static {}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getDefaultFlymeActivityIcon()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x1080093
+    const v1, #android:drawable@sym_def_app_icon#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2148,6 +2155,12 @@
     move-result-object v0
 
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    invoke-static/range {p1 .. p1}, Landroid/app/ApplicationPackageManager$FlymeInjector;->isFlymeCalendarPkg(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_flyme_0
+
     if-eqz v0, :cond_0
 
     move-object v4, v0
@@ -2156,6 +2169,7 @@
     return-object v4
 
     :cond_0
+    :cond_flyme_0
     if-nez p3, :cond_1
 
     const/16 v5, 0x400
@@ -2174,7 +2188,7 @@
     move-result-object v3
 
     .local v3, "r":Landroid/content/res/Resources;
-    invoke-virtual {v3, p2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2, p3, v3}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getFlymeThemeDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -4340,7 +4354,7 @@
 
     move-result-object v1
 
-    const v2, 0x108034d
+    const v2, #android:drawable@ic_corp_badge#t
 
     invoke-virtual {v1, v2, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
@@ -4453,7 +4467,7 @@
 
     move-result-object v1
 
-    const v2, 0x1040758
+    const v2, #android:string@managed_profile_label_badge#t
 
     const/4 v3, 0x1
 
@@ -6492,6 +6506,92 @@
 
     :catch_0
     move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    .locals 5
+    .param p1, "archiveFilePath"    # Ljava/lang/String;
+    .param p2, "flags"    # I
+
+    .prologue
+    invoke-super {p0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v2
+
+    .local v2, "packageInfo":Landroid/content/pm/PackageInfo;
+    if-nez v2, :cond_1
+
+    .end local v2    # "packageInfo":Landroid/content/pm/PackageInfo;
+    :cond_0
+    :goto_0
+    return-object v2
+
+    .restart local v2    # "packageInfo":Landroid/content/pm/PackageInfo;
+    :cond_1
+    iget-object v3, p0, Landroid/app/ApplicationPackageManager;->mContext:Landroid/app/ContextImpl;
+
+    invoke-static {v3}, Landroid/content/pm/FlymePackageManager;->getInstance(Landroid/content/Context;)Landroid/content/pm/FlymePackageManager;
+
+    move-result-object v1
+
+    .local v1, "fpm":Landroid/content/pm/FlymePackageManager;
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v3
+
+    const/16 v4, 0x3e8
+
+    if-eq v3, v4, :cond_0
+
+    invoke-virtual {v1}, Landroid/content/pm/FlymePackageManager;->getInternalAppList()Ljava/util/List;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1}, Landroid/content/pm/FlymePackageManager;->getInternalAppList()Ljava/util/List;
+
+    move-result-object v3
+
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-interface {v3, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    :try_start_0
+    iget-object v3, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0, v3, v4}, Landroid/app/ApplicationPackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    .local v0, "fakeInfo":Landroid/content/pm/PackageInfo;
+    if-eqz v0, :cond_0
+
+    iget v3, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const v4, 0x7fffffff
+
+    if-ne v3, v4, :cond_0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    .end local v0    # "fakeInfo":Landroid/content/pm/PackageInfo;
+    :catch_0
+    move-exception v3
 
     goto :goto_0
 .end method

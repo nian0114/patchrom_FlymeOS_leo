@@ -13,6 +13,18 @@
 
 
 # static fields
+.field public static final LAYOUT_MODE_AUTO:I = 0x1
+
+.field public static final LAYOUT_MODE_CENTER:I = 0x2
+
+.field public static final LAYOUT_MODE_CENTER_IN_SCREEN:I = 0x3
+
+.field public static final LAYOUT_MODE_DEFAULT:I = 0x0
+
+.field public static final LAYOUT_MODE_RIGHT:I = 0x4
+
+.field public static final LAYOUT_MODE_RIGHT_IN_SCREEN:I = 0x5
+
 .field private static final ABOVE_ANCHOR_STATE_SET:[I
 
 .field private static final DEFAULT_ANCHORED_GRAVITY:I = 0x800033
@@ -25,6 +37,8 @@
 
 
 # instance fields
+.field public mMzHelper:Landroid/widget/MzPopupWindowHelper;
+
 .field private mAboveAnchor:Z
 
 .field private mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
@@ -146,7 +160,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x10100aa
+    const v2, #android:attr@state_above_anchor#t
 
     aput v2, v0, v1
 
@@ -199,7 +213,7 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    const v0, 0x1010076
+    const v0, #android:attr@popupWindowStyle#t
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -331,7 +345,7 @@
     move-result v1
 
     .local v1, "animStyle":I
-    const v3, 0x10302e7
+    const v3, #android:style@Animation.PopupWindow#t
 
     if-ne v1, v3, :cond_0
 
@@ -344,6 +358,8 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     invoke-virtual {p0, v2}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/PopupWindow;->initFlymeExtraFields()V
 
     return-void
 .end method
@@ -468,6 +484,8 @@
     invoke-virtual {p0, p3}, Landroid/widget/PopupWindow;->setHeight(I)V
 
     invoke-virtual {p0, p4}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/PopupWindow;->initFlymeExtraFields()V
 
     return-void
 .end method
@@ -607,13 +625,13 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x10302df
+    const v0, #android:style@Animation.DropDownUp#t
 
     :goto_0
     return v0
 
     :cond_0
-    const v0, 0x10302de
+    const v0, #android:style@Animation.DropDownDown#t
 
     goto :goto_0
 
@@ -840,7 +858,7 @@
 .end method
 
 .method private findDropDownPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;III)Z
-    .locals 17
+    .locals 21
     .param p1, "anchor"    # Landroid/view/View;
     .param p2, "p"    # Landroid/view/WindowManager$LayoutParams;
     .param p3, "xoff"    # I
@@ -1195,6 +1213,24 @@
 
     :cond_5
     :goto_1
+    move-object/from16 v14, p0
+
+    move-object/from16 v15, p1
+
+    move-object/from16 v16, p2
+
+    move/from16 v17, p3
+
+    move/from16 v18, p4
+
+    move-object/from16 v19, v3
+
+    move/from16 v20, v6
+
+    invoke-direct/range {v14 .. v20}, Landroid/widget/PopupWindow;->meansureFlymePopupPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;IILandroid/graphics/Rect;Z)Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object p2
+
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Landroid/widget/PopupWindow;->mClipToScreen:Z
@@ -2234,6 +2270,10 @@
 
     .end local v5    # "res":Landroid/content/res/Resources;
     :cond_0
+    invoke-virtual {p0, v1}, Landroid/widget/PopupWindow;->computePopwindowPositionForMz(I)I
+
+    move-result v1
+
     aget v7, v0, v9
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -2725,6 +2765,10 @@
     .param p1, "mode"    # I
 
     .prologue
+    invoke-direct/range {p0 .. p1}, Landroid/widget/PopupWindow;->setFlymeInputMethodMode(I)I
+
+    move-result p1
+
     iput p1, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
     return-void
@@ -3450,6 +3494,145 @@
     move v7, p5
 
     invoke-direct/range {v0 .. v8}, Landroid/widget/PopupWindow;->update(Landroid/view/View;ZIIZIII)V
+
+    return-void
+.end method
+
+.method private initFlymeExtraFields()V
+    .locals 2
+
+    .prologue
+    new-instance v0, Landroid/widget/MzPopupWindowHelper;
+
+    iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, p0, v1}, Landroid/widget/MzPopupWindowHelper;-><init>(Landroid/widget/PopupWindow;Landroid/content/Context;)V
+
+    iput-object v0, p0, Landroid/widget/PopupWindow;->mMzHelper:Landroid/widget/MzPopupWindowHelper;
+
+    return-void
+.end method
+
+.method private meansureFlymePopupPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;IILandroid/graphics/Rect;Z)Landroid/view/WindowManager$LayoutParams;
+    .locals 8
+    .param p1, "anchor"    # Landroid/view/View;
+    .param p2, "p"    # Landroid/view/WindowManager$LayoutParams;
+    .param p3, "xoff"    # I
+    .param p4, "yoff"    # I
+    .param p5, "displayFrame"    # Landroid/graphics/Rect;
+    .param p6, "onTop"    # Z
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupWindow;->mMzHelper:Landroid/widget/MzPopupWindowHelper;
+
+    iget-object v7, p0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move-object v5, p5
+
+    move v6, p6
+
+    invoke-virtual/range {v0 .. v7}, Landroid/widget/MzPopupWindowHelper;->meansurePopupPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;IILandroid/graphics/Rect;Z[I)Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private setFlymeInputMethodMode(I)I
+    .locals 1
+    .param p1, "mode"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupWindow;->mMzHelper:Landroid/widget/MzPopupWindowHelper;
+
+    invoke-virtual {v0, p1}, Landroid/widget/MzPopupWindowHelper;->setInputMethodMode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public adjustWindowPositionForMz(Z)V
+    .locals 0
+    .param p1, "adjust"    # Z
+
+    .prologue
+    return-void
+.end method
+
+.method public computePopwindowPositionForMz(I)I
+    .locals 2
+    .param p1, "bottom"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/flyme/internal/R$dimen;->mz_action_button_min_height:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    return v0
+.end method
+
+.method public getPopupHeight()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Landroid/widget/PopupWindow;->mPopupHeight:I
+
+    return v0
+.end method
+
+.method public getPopupView()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupWindow;->mPopupView:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public setLayoutMode(I)V
+    .locals 1
+    .param p1, "mode"    # I
+
+    .prologue
+    if-gez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
+    iget-object v0, p0, Landroid/widget/PopupWindow;->mMzHelper:Landroid/widget/MzPopupWindowHelper;
+
+    invoke-virtual {v0, p1}, Landroid/widget/MzPopupWindowHelper;->setLayoutMode(I)V
+
+    return-void
+.end method
+
+.method public setMzClippingEnabled(Z)V
+    .locals 1
+    .param p1, "enabled"    # Z
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupWindow;->mMzHelper:Landroid/widget/MzPopupWindowHelper;
+
+    invoke-virtual {v0, p1}, Landroid/widget/MzPopupWindowHelper;->setMzClippingEnabled(Z)V
 
     return-void
 .end method

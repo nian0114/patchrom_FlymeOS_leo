@@ -3314,6 +3314,8 @@
     const/4 v1, 0x0
 
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Landroid/telephony/TelephonyManager;->enforceReadPhoneStatePermission()V
+
     invoke-direct {p0}, Landroid/telephony/TelephonyManager;->getITelephony()Lcom/android/internal/telephony/ITelephony;
 
     move-result-object v2
@@ -3350,6 +3352,8 @@
     const/4 v1, 0x0
 
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Landroid/telephony/TelephonyManager;->enforceReadPhoneStatePermission()V
+
     invoke-direct {p0}, Landroid/telephony/TelephonyManager;->getSubscriberInfo()Lcom/android/internal/telephony/IPhoneSubInfo;
 
     move-result-object v2
@@ -3638,6 +3642,8 @@
 
     .local v1, "subId":[I
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Landroid/telephony/TelephonyManager;->enforceReadPhoneStatePermission()V
+
     invoke-direct {p0}, Landroid/telephony/TelephonyManager;->getSubscriberInfo()Lcom/android/internal/telephony/IPhoneSubInfo;
 
     move-result-object v3
@@ -3996,6 +4002,8 @@
 
     .local v1, "number":Ljava/lang/String;
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Landroid/telephony/TelephonyManager;->enforceReadPhoneStatePermission()V
+
     invoke-direct {p0}, Landroid/telephony/TelephonyManager;->getITelephony()Lcom/android/internal/telephony/ITelephony;
 
     move-result-object v3
@@ -4017,6 +4025,8 @@
     .restart local v1    # "number":Ljava/lang/String;
     :cond_0
     :try_start_1
+    invoke-direct/range {p0 .. p0}, Landroid/telephony/TelephonyManager;->enforceReadPhoneStatePermission()V
+
     invoke-direct {p0}, Landroid/telephony/TelephonyManager;->getSubscriberInfo()Lcom/android/internal/telephony/IPhoneSubInfo;
 
     move-result-object v3
@@ -4165,7 +4175,7 @@
 
     move-result-object v0
 
-    const v1, 0x10400fb
+    const v1, #android:string@config_mms_user_agent_profile_url#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4194,7 +4204,7 @@
 
     move-result-object v0
 
-    const v1, 0x10400fa
+    const v1, #android:string@config_mms_user_agent#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -5302,6 +5312,8 @@
     const/4 v1, 0x0
 
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Landroid/telephony/TelephonyManager;->enforceReadPhoneStatePermission()V
+
     invoke-direct {p0}, Landroid/telephony/TelephonyManager;->getSubscriberInfo()Lcom/android/internal/telephony/IPhoneSubInfo;
 
     move-result-object v2
@@ -6414,7 +6426,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120060
+    const v1, #android:bool@config_sms_capable#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -6476,7 +6488,7 @@
 
     move-result-object v0
 
-    const v1, 0x112005e
+    const v1, #android:bool@config_voice_capable#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -6681,7 +6693,7 @@
 
     move-result-object v2
 
-    const v3, 0x1040115
+    const v3, #android:string@config_rat_2g#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -6696,7 +6708,7 @@
 
     move-result-object v2
 
-    const v3, 0x1040116
+    const v3, #android:string@config_rat_3g#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -6711,7 +6723,7 @@
 
     move-result-object v2
 
-    const v3, 0x1040117
+    const v3, #android:string@config_rat_4g#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -8214,4 +8226,31 @@
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
+.end method
+
+.method private enforceReadPhoneStatePermission()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    const/16 v0, 0x49
+
+    invoke-static {v0}, Lmeizu/security/FlymePermissionManager;->isFlymePermissionGranted(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/os/RemoteException;
+
+    invoke-direct {v0}, Landroid/os/RemoteException;-><init>()V
+
+    throw v0
+
+    :cond_0
+    return-void
 .end method

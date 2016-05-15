@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x10100a0
+    const v2, #android:attr@state_checked#t
 
     aput v2, v0, v1
 
@@ -759,7 +759,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Landroid/widget/CompoundButton;->playSoundEffect(I)V
+    #invoke-virtual {p0, v1}, Landroid/widget/CompoundButton;->playSoundEffect(I)V
 
     :cond_0
     return v0

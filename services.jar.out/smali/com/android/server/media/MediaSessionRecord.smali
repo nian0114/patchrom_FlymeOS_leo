@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120013
+    const v1, #android:bool@config_useMasterVolume#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -4055,6 +4055,15 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method flymeGetFieldService()Lcom/android/server/media/MediaSessionService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord;->mService:Lcom/android/server/media/MediaSessionService;
 
     return-object v0
 .end method

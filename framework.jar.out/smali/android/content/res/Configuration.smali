@@ -8,6 +8,12 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/content/res/Configuration$FlymeInjector;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
@@ -240,6 +246,8 @@
 
 
 # instance fields
+.field public configurationExt:Landroid/content/res/flymetheme/ConfigurationExt;
+
 .field public compatScreenHeightDp:I
 
 .field public compatScreenWidthDp:I
@@ -643,6 +651,9 @@
     iput v1, v0, Landroid/content/res/Configuration;->densityDpi:I
 
     :cond_14
+
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInjector;->generateDelta(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     return-object v0
 .end method
 
@@ -820,6 +831,12 @@
     const/high16 v0, 0x40000000    # 2.0f
 
     or-int/2addr v0, p1
+
+    or-int/lit16 v0, v0, 0x4000
+
+    const v1, 0x8000
+
+    or-int/2addr v0, v1
 
     const/high16 v1, 0x100000
 
@@ -1001,6 +1018,8 @@
     move-result v1
 
     iput v1, p1, Landroid/content/res/Configuration;->densityDpi:I
+
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$FlymeInjector;->readXmlAttrs(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -2032,6 +2051,9 @@
     invoke-static {p0, v0, v1}, Lcom/android/internal/util/XmlUtils;->writeIntAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;I)V
 
     :cond_f
+
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$FlymeInjector;->writeXmlAttrs(Lorg/xmlpull/v1/XmlSerializer;Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
@@ -2288,6 +2310,10 @@
     iget-object v4, p1, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
     invoke-virtual {v3, v4}, Landroid/content/res/ThemeConfig;->compareTo(Landroid/content/res/ThemeConfig;)I
+
+    move-result v2
+
+    invoke-static {p0, p1, v2}, Landroid/content/res/Configuration$FlymeInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
 
     move-result v2
 
@@ -2647,6 +2673,11 @@
 
     .end local v2    # "fontPkgName":Ljava/lang/String;
     :cond_15
+
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInjector;->diff(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+
     return v0
 .end method
 
@@ -2866,6 +2897,10 @@
 
     :cond_0
     add-int v0, v1, v2
+
+    invoke-static {p0, v0}, Landroid/content/res/Configuration$FlymeInjector;->hashCode(Landroid/content/res/Configuration;I)I
+
+    move-result v0
 
     return v0
 
@@ -3136,6 +3171,8 @@
 
     iput-object v0, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$FlymeInjector;->readFromParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;)V
+
     return-void
 
     :cond_1
@@ -3306,6 +3343,8 @@
     iput-object v0, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
     :cond_1
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
@@ -3364,6 +3403,8 @@
     iput v1, p0, Landroid/content/res/Configuration;->seq:I
 
     iput-object v2, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
+
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Configuration$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -4697,6 +4738,11 @@
 
     .end local v2    # "fontPkgName":Ljava/lang/String;
     :cond_1d
+
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInjector;->updateFrom(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+
     return v0
 
     .end local v1    # "deltaScreenLayoutDir":I
@@ -4821,6 +4867,8 @@
     iget-object v0, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    invoke-static/range {p0 .. p2}, Landroid/content/res/Configuration$FlymeInjector;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;I)V
 
     return-void
 

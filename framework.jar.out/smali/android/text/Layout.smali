@@ -647,6 +647,22 @@
     .param p1, "method"    # Landroid/text/TextUtils$TruncateAt;
 
     .prologue
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v0
+
+    if-nez v0, :cond_flyme_0
+
+    sget-object v0, Landroid/text/TextUtils;->ELLIPSIS_TWO_DOTS:[C
+
+    const/4 v1, 0x0
+
+    aget-char v0, v0, v1
+
+    return v0
+
+    :cond_flyme_0
+
     const/4 v1, 0x0
 
     sget-object v0, Landroid/text/TextUtils$TruncateAt;->END_SMALL:Landroid/text/TextUtils$TruncateAt;
@@ -4944,6 +4960,15 @@
     move v4, v13
 
     :cond_a
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    invoke-direct {v0, v1, v4}, Landroid/text/Layout;->getFlymeOffsetForHorizontal(II)I
+
+    move-result v4
+
     return v4
 .end method
 
@@ -5249,6 +5274,14 @@
     move-result v7
 
     .local v7, "bottom":I
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    invoke-direct {v0, v1, v7}, Landroid/text/Layout;->getFlymeLineBottom(II)I
+
+    move-result v7
+
     if-ne v3, v15, :cond_2
 
     move-object/from16 v2, p0
@@ -5281,7 +5314,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-direct {v0, v3}, Landroid/text/Layout;->getFlymeLineBottom(I)I
 
     move-result v13
 
@@ -5319,7 +5352,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-direct {v0, v3}, Landroid/text/Layout;->getFlymeLineBottom(I)I
 
     move-result v2
 
@@ -5352,7 +5385,7 @@
 
     move/from16 v1, v16
 
-    invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-direct {v0, v1}, Landroid/text/Layout;->getFlymeLineBottom(I)I
 
     move-result v7
 
@@ -5386,7 +5419,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-direct {v0, v3}, Landroid/text/Layout;->getFlymeLineBottom(I)I
 
     move-result v2
 
@@ -5413,6 +5446,14 @@
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v15}, Landroid/text/Layout;->getLineBottom(I)I
+
+    move-result v7
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p2
+
+    invoke-direct {v0, v1, v7}, Landroid/text/Layout;->getFlymeLineBottom(II)I
 
     move-result v7
 
@@ -5902,4 +5943,79 @@
         :pswitch_0
         :pswitch_1
     .end packed-switch
+.end method
+
+.method private getFlymeLineBottom(I)I
+    .locals 2
+    .param p1, "line"    # I
+
+    .prologue
+    invoke-virtual {p0, p1}, Landroid/text/Layout;->getLineBottom(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p0}, Landroid/text/Layout;->getSpacingAdd()F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    return v0
+.end method
+
+.method private getFlymeLineBottom(II)I
+    .locals 3
+    .param p1, "line"    # I
+    .param p2, "bottom"    # I
+
+    .prologue
+    invoke-virtual {p0, p1}, Landroid/text/Layout;->getLineForOffset(I)I
+
+    move-result v0
+
+    .local v0, "bottomLine":I
+    invoke-virtual {p0}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    if-ge v0, v1, :cond_0
+
+    int-to-float v1, p2
+
+    invoke-virtual {p0}, Landroid/text/Layout;->getSpacingAdd()F
+
+    move-result v2
+
+    sub-float/2addr v1, v2
+
+    float-to-int p2, v1
+
+    :cond_0
+    return p2
+.end method
+
+.method private getFlymeOffsetForHorizontal(II)I
+    .locals 1
+    .param p1, "line"    # I
+    .param p2, "best"    # I
+
+    .prologue
+    invoke-virtual {p0, p1}, Landroid/text/Layout;->getLineEnd(I)I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_0
+
+    invoke-direct {p0, p2}, Landroid/text/Layout;->getOffsetAtStartOf(I)I
+
+    move-result p2
+
+    :cond_0
+    return p2
 .end method
