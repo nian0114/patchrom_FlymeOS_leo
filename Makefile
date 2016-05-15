@@ -7,7 +7,7 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-#BASE := base_cm
+BASE := base_cm
 
 ##############################################################################
 # The value is used for resource adapter with the aapt tool.
@@ -76,7 +76,7 @@ Shell Stk UserDictionaryProvider WAPPushManager
 # You need to decode android.policy.jar to the project directory (use apktool d android.policy.jar) first,
 # and then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := android.policy framework services telephony-common wifi-service org.cyanogenmod.platform
+vendor_modify_jars := android.policy framework services telephony-common org.cyanogenmod.platform
 
 ##############################################################################
 # The value decides which board system directory you want to save.
