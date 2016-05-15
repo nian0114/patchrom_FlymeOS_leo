@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 319
     new-instance v0, Landroid/content/IntentSender$1;
 
     invoke-direct {v0}, Landroid/content/IntentSender$1;-><init>()V
@@ -53,13 +52,10 @@
     .param p1, "target"    # Landroid/content/IIntentSender;
 
     .prologue
-    .line 366
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 367
     iput-object p1, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
-    .line 368
     return-void
 .end method
 
@@ -68,17 +64,14 @@
     .param p1, "target"    # Landroid/os/IBinder;
 
     .prologue
-    .line 371
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 372
     invoke-static {p1}, Landroid/content/IIntentSender$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/IIntentSender;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
-    .line 373
     return-void
 .end method
 
@@ -87,12 +80,10 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 356
     invoke-virtual {p0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 357
     .local v0, "b":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
@@ -115,7 +106,6 @@
     .param p1, "out"    # Landroid/os/Parcel;
 
     .prologue
-    .line 341
     if-eqz p0, :cond_0
 
     iget-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
@@ -127,10 +117,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 343
     return-void
 
-    .line 341
     :cond_0
     const/4 v0, 0x0
 
@@ -143,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 312
     const/4 v0, 0x0
 
     return v0
@@ -154,12 +141,10 @@
     .param p1, "otherObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 288
     instance-of v0, p1, Landroid/content/IntentSender;
 
     if-eqz v0, :cond_0
 
-    .line 289
     iget-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
     invoke-interface {v0}, Landroid/content/IIntentSender;->asBinder()Landroid/os/IBinder;
@@ -179,7 +164,6 @@
 
     move-result v0
 
-    .line 292
     :goto_0
     return v0
 
@@ -194,7 +178,6 @@
     .locals 3
 
     .prologue
-    .line 232
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -208,15 +191,12 @@
 
     move-result-object v1
 
-    .line 236
     :goto_0
     return-object v1
 
-    .line 234
     :catch_0
     move-exception v0
 
-    .line 236
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -227,7 +207,6 @@
     .locals 3
 
     .prologue
-    .line 251
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -241,15 +220,12 @@
 
     move-result v1
 
-    .line 255
     :goto_0
     return v1
 
-    .line 253
     :catch_0
     move-exception v0
 
-    .line 255
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -262,7 +238,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 272
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -274,7 +249,6 @@
 
     move-result v1
 
-    .line 274
     .local v1, "uid":I
     if-lez v1, :cond_0
 
@@ -288,7 +262,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 277
     .end local v1    # "uid":I
     :goto_0
     return-object v2
@@ -297,10 +270,8 @@
     :cond_0
     move-object v2, v3
 
-    .line 274
     goto :goto_0
 
-    .line 275
     .end local v1    # "uid":I
     :catch_0
     move-exception v0
@@ -308,7 +279,6 @@
     .local v0, "e":Landroid/os/RemoteException;
     move-object v2, v3
 
-    .line 277
     goto :goto_0
 .end method
 
@@ -316,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 362
     iget-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
     return-object v0
@@ -328,7 +297,6 @@
     .end annotation
 
     .prologue
-    .line 213
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -342,15 +310,12 @@
 
     move-result-object v1
 
-    .line 217
     :goto_0
     return-object v1
 
-    .line 215
     :catch_0
     move-exception v0
 
-    .line 217
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -361,7 +326,6 @@
     .locals 1
 
     .prologue
-    .line 297
     iget-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
     invoke-interface {v0}, Landroid/content/IIntentSender;->asBinder()Landroid/os/IBinder;
@@ -389,7 +353,6 @@
     .end annotation
 
     .prologue
-    .line 158
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -406,7 +369,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/content/IntentSender;->sendIntent(Landroid/content/Context;ILandroid/content/Intent;Landroid/content/IntentSender$OnFinished;Landroid/os/Handler;Ljava/lang/String;)V
 
-    .line 159
     return-void
 .end method
 
@@ -427,7 +389,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 191
     if-eqz p3, :cond_1
 
     :try_start_0
@@ -439,7 +400,6 @@
 
     move-result-object v3
 
-    .line 194
     .local v3, "resolvedType":Ljava/lang/String;
     :goto_0
     iget-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
@@ -461,11 +421,9 @@
 
     move-result v7
 
-    .line 199
     .local v7, "res":I
     if-gez v7, :cond_2
 
-    .line 200
     new-instance v0, Landroid/content/IntentSender$SendIntentException;
 
     invoke-direct {v0}, Landroid/content/IntentSender$SendIntentException;-><init>()V
@@ -474,13 +432,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     .end local v3    # "resolvedType":Ljava/lang/String;
     .end local v7    # "res":I
     :catch_0
     move-exception v6
 
-    .line 203
     .local v6, "e":Landroid/os/RemoteException;
     new-instance v0, Landroid/content/IntentSender$SendIntentException;
 
@@ -492,10 +448,8 @@
     :cond_1
     move-object v3, v4
 
-    .line 191
     goto :goto_0
 
-    .line 205
     .restart local v3    # "resolvedType":Ljava/lang/String;
     .restart local v7    # "res":I
     :cond_2
@@ -506,20 +460,17 @@
     .locals 2
 
     .prologue
-    .line 302
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 303
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "IntentSender{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 304
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -530,12 +481,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 305
     const-string v1, ": "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 306
     iget-object v1, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
     if-eqz v1, :cond_0
@@ -549,19 +498,16 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 307
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 308
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 306
     :cond_0
     const/4 v1, 0x0
 
@@ -574,7 +520,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 316
     iget-object v0, p0, Landroid/content/IntentSender;->mTarget:Landroid/content/IIntentSender;
 
     invoke-interface {v0}, Landroid/content/IIntentSender;->asBinder()Landroid/os/IBinder;
@@ -583,6 +528,5 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 317
     return-void
 .end method

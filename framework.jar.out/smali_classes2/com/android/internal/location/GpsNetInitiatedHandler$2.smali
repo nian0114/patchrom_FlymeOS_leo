@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 195
     iput-object p1, p0, Lcom/android/internal/location/GpsNetInitiatedHandler$2;->this$0:Lcom/android/internal/location/GpsNetInitiatedHandler;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 198
     const-string v0, "GpsNetInitiatedHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -62,17 +60,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     if-nez p1, :cond_0
 
-    .line 201
     iget-object v0, p0, Lcom/android/internal/location/GpsNetInitiatedHandler$2;->this$0:Lcom/android/internal/location/GpsNetInitiatedHandler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->setInEmergency(Z)V
 
-    .line 203
     :cond_0
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 134
     iput-object p1, p0, Lcom/android/internal/os/SamplingProfilerIntegration$2;->val$processName:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/internal/os/SamplingProfilerIntegration$2;->val$packageInfo:Landroid/content/pm/PackageInfo;
@@ -46,7 +45,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 137
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/os/SamplingProfilerIntegration$2;->val$processName:Ljava/lang/String;
 
@@ -57,7 +55,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 139
     # getter for: Lcom/android/internal/os/SamplingProfilerIntegration;->pending:Ljava/util/concurrent/atomic/AtomicBoolean;
     invoke-static {}, Lcom/android/internal/os/SamplingProfilerIntegration;->access$100()Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -65,10 +62,8 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 141
     return-void
 
-    .line 139
     :catchall_0
     move-exception v0
 

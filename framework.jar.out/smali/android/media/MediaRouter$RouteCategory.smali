@@ -34,19 +34,14 @@
     .param p3, "groupable"    # Z
 
     .prologue
-    .line 2546
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2547
     iput p1, p0, Landroid/media/MediaRouter$RouteCategory;->mNameResId:I
 
-    .line 2548
     iput p2, p0, Landroid/media/MediaRouter$RouteCategory;->mTypes:I
 
-    .line 2549
     iput-boolean p3, p0, Landroid/media/MediaRouter$RouteCategory;->mGroupable:Z
 
-    .line 2550
     return-void
 .end method
 
@@ -57,19 +52,14 @@
     .param p3, "groupable"    # Z
 
     .prologue
-    .line 2540
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2541
     iput-object p1, p0, Landroid/media/MediaRouter$RouteCategory;->mName:Ljava/lang/CharSequence;
 
-    .line 2542
     iput p2, p0, Landroid/media/MediaRouter$RouteCategory;->mTypes:I
 
-    .line 2543
     iput-boolean p3, p0, Landroid/media/MediaRouter$RouteCategory;->mGroupable:Z
 
-    .line 2544
     return-void
 .end method
 
@@ -79,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 2556
     sget-object v0, Landroid/media/MediaRouter;->sStatic:Landroid/media/MediaRouter$Static;
 
     iget-object v0, v0, Landroid/media/MediaRouter$Static;->mResources:Landroid/content/res/Resources;
@@ -96,7 +85,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2566
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -113,19 +101,16 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 2570
     iget v0, p0, Landroid/media/MediaRouter$RouteCategory;->mNameResId:I
 
     if-eqz v0, :cond_0
 
-    .line 2571
     iget v0, p0, Landroid/media/MediaRouter$RouteCategory;->mNameResId:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 2573
     :goto_0
     return-object v0
 
@@ -152,24 +137,20 @@
     .end annotation
 
     .prologue
-    .line 2590
     .local p1, "out":Ljava/util/List;, "Ljava/util/List<Landroid/media/MediaRouter$RouteInfo;>;"
     if-nez p1, :cond_1
 
-    .line 2591
     new-instance p1, Ljava/util/ArrayList;
 
     .end local p1    # "out":Ljava/util/List;, "Ljava/util/List<Landroid/media/MediaRouter$RouteInfo;>;"
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2596
     .restart local p1    # "out":Ljava/util/List;, "Ljava/util/List<Landroid/media/MediaRouter$RouteInfo;>;"
     :goto_0
     invoke-static {}, Landroid/media/MediaRouter;->getRouteCountStatic()I
 
     move-result v0
 
-    .line 2597
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -177,27 +158,22 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 2598
     invoke-static {v1}, Landroid/media/MediaRouter;->getRouteAtStatic(I)Landroid/media/MediaRouter$RouteInfo;
 
     move-result-object v2
 
-    .line 2599
     .local v2, "route":Landroid/media/MediaRouter$RouteInfo;
     iget-object v3, v2, Landroid/media/MediaRouter$RouteInfo;->mCategory:Landroid/media/MediaRouter$RouteCategory;
 
     if-ne v3, p0, :cond_0
 
-    .line 2600
     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2597
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 2593
     .end local v0    # "count":I
     .end local v1    # "i":I
     .end local v2    # "route":Landroid/media/MediaRouter$RouteInfo;
@@ -206,7 +182,6 @@
 
     goto :goto_0
 
-    .line 2603
     .restart local v0    # "count":I
     .restart local v1    # "i":I
     :cond_2
@@ -217,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 2610
     iget v0, p0, Landroid/media/MediaRouter$RouteCategory;->mTypes:I
 
     return v0
@@ -227,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 2622
     iget-boolean v0, p0, Landroid/media/MediaRouter$RouteCategory;->mGroupable:Z
 
     return v0
@@ -237,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 2630
     iget-boolean v0, p0, Landroid/media/MediaRouter$RouteCategory;->mIsSystem:Z
 
     return v0
@@ -247,7 +219,6 @@
     .locals 2
 
     .prologue
-    .line 2635
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 86
     iput-object p1, p0, Landroid/app/job/JobService$1;->this$0:Landroid/app/job/JobService;
 
     invoke-direct {p0}, Landroid/app/job/IJobService$Stub;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "jobParams"    # Landroid/app/job/JobParameters;
 
     .prologue
-    .line 89
     iget-object v1, p0, Landroid/app/job/JobService$1;->this$0:Landroid/app/job/JobService;
 
     invoke-virtual {v1}, Landroid/app/job/JobService;->ensureHandler()V
 
-    .line 90
     iget-object v1, p0, Landroid/app/job/JobService$1;->this$0:Landroid/app/job/JobService;
 
     iget-object v1, v1, Landroid/app/job/JobService;->mHandler:Landroid/app/job/JobService$JobHandler;
@@ -54,11 +51,9 @@
 
     move-result-object v0
 
-    .line 91
     .local v0, "m":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 92
     return-void
 .end method
 
@@ -67,12 +62,10 @@
     .param p1, "jobParams"    # Landroid/app/job/JobParameters;
 
     .prologue
-    .line 95
     iget-object v1, p0, Landroid/app/job/JobService$1;->this$0:Landroid/app/job/JobService;
 
     invoke-virtual {v1}, Landroid/app/job/JobService;->ensureHandler()V
 
-    .line 96
     iget-object v1, p0, Landroid/app/job/JobService$1;->this$0:Landroid/app/job/JobService;
 
     iget-object v1, v1, Landroid/app/job/JobService;->mHandler:Landroid/app/job/JobService$JobHandler;
@@ -83,10 +76,8 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "m":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 98
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 230
     iput-object p1, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
 
     const/4 v8, 0x0
 
-    .line 276
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
     const-string v6, "/"
@@ -59,7 +57,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 277
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
     # getter for: Landroid/media/Tokenizer;->mListener:Landroid/media/Tokenizer$OnTokenListener;
@@ -75,11 +72,9 @@
 
     invoke-interface {v3, v6}, Landroid/media/Tokenizer$OnTokenListener;->onEnd(Ljava/lang/String;)V
 
-    .line 303
     :goto_0
     return-void
 
-    .line 278
     :cond_0
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
@@ -101,7 +96,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 281
     :try_start_0
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
@@ -109,7 +103,6 @@
 
     move-result-wide v4
 
-    .line 282
     .local v4, "timestampMs":J
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
@@ -124,12 +117,10 @@
 
     goto :goto_0
 
-    .line 283
     .end local v4    # "timestampMs":J
     :catch_0
     move-exception v2
 
-    .line 284
     .local v2, "e":Ljava/lang/NumberFormatException;
     const-string v3, "Tokenizer"
 
@@ -163,7 +154,6 @@
 
     goto :goto_0
 
-    .line 287
     .end local v2    # "e":Ljava/lang/NumberFormatException;
     :cond_1
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
@@ -178,7 +168,6 @@
 
     iput-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
-    .line 288
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
     const-string v6, " "
@@ -189,7 +178,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 289
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -198,7 +186,6 @@
 
     iput-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
-    .line 291
     :cond_2
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
@@ -210,7 +197,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 292
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
     iget-object v6, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
@@ -227,11 +213,9 @@
 
     iput-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
-    .line 295
     :cond_3
     const/4 v0, 0x0
 
-    .line 296
     .local v0, "classes":[Ljava/lang/String;
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
@@ -241,11 +225,9 @@
 
     move-result v1
 
-    .line 297
     .local v1, "dotAt":I
     if-ltz v1, :cond_4
 
-    .line 298
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
     add-int/lit8 v6, v1, 0x1
@@ -260,7 +242,6 @@
 
     move-result-object v0
 
-    .line 299
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
     invoke-virtual {v3, v8, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -269,7 +250,6 @@
 
     iput-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
-    .line 301
     :cond_4
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
@@ -293,19 +273,16 @@
     .locals 1
 
     .prologue
-    .line 235
     const-string v0, ""
 
     iput-object v0, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;
 
-    .line 236
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/media/Tokenizer$TagTokenizer;->mAtAnnotation:Z
 
-    .line 237
     return-object p0
 .end method
 
@@ -315,18 +292,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 242
     iget-boolean v2, p0, Landroid/media/Tokenizer$TagTokenizer;->mAtAnnotation:Z
 
     if-nez v2, :cond_0
 
-    .line 243
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
     # operator++ for: Landroid/media/Tokenizer;->mHandledLen:I
     invoke-static {v2}, Landroid/media/Tokenizer;->access$108(Landroid/media/Tokenizer;)I
 
-    .line 244
     :cond_0
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
@@ -348,7 +322,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 250
     iget-boolean v2, p0, Landroid/media/Tokenizer$TagTokenizer;->mAtAnnotation:Z
 
     if-nez v2, :cond_1
@@ -375,7 +348,6 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 251
     :cond_1
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
@@ -401,7 +373,6 @@
 
     move-result-object v1
 
-    .line 255
     .local v1, "parts":[Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
@@ -437,7 +408,6 @@
 
     move-result-object v0
 
-    .line 257
     .local v0, "part":Ljava/lang/String;
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
@@ -450,12 +420,10 @@
     # += operator for: Landroid/media/Tokenizer;->mHandledLen:I
     invoke-static {v2, v3}, Landroid/media/Tokenizer;->access$112(Landroid/media/Tokenizer;I)I
 
-    .line 259
     iget-boolean v2, p0, Landroid/media/Tokenizer$TagTokenizer;->mAtAnnotation:Z
 
     if-eqz v2, :cond_5
 
-    .line 260
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -482,7 +450,6 @@
 
     iput-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->mAnnotation:Ljava/lang/String;
 
-    .line 266
     .end local v0    # "part":Ljava/lang/String;
     .end local v1    # "parts":[Ljava/lang/String;
     :cond_2
@@ -491,7 +458,6 @@
 
     iput-boolean v2, p0, Landroid/media/Tokenizer$TagTokenizer;->mAtAnnotation:Z
 
-    .line 268
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
     # getter for: Landroid/media/Tokenizer;->mHandledLen:I
@@ -534,10 +500,8 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 269
     invoke-direct {p0}, Landroid/media/Tokenizer$TagTokenizer;->yield_tag()V
 
-    .line 270
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
     iget-object v3, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
@@ -554,17 +518,14 @@
     # setter for: Landroid/media/Tokenizer;->mPhase:Landroid/media/Tokenizer$TokenizerPhase;
     invoke-static {v2, v3}, Landroid/media/Tokenizer;->access$202(Landroid/media/Tokenizer;Landroid/media/Tokenizer$TokenizerPhase;)Landroid/media/Tokenizer$TokenizerPhase;
 
-    .line 271
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
     # operator++ for: Landroid/media/Tokenizer;->mHandledLen:I
     invoke-static {v2}, Landroid/media/Tokenizer;->access$108(Landroid/media/Tokenizer;)I
 
-    .line 273
     :cond_3
     return-void
 
-    .line 253
     :cond_4
     iget-object v2, p0, Landroid/media/Tokenizer$TagTokenizer;->this$0:Landroid/media/Tokenizer;
 
@@ -593,7 +554,6 @@
     .restart local v1    # "parts":[Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 262
     .restart local v0    # "part":Ljava/lang/String;
     :cond_5
     iput-object v0, p0, Landroid/media/Tokenizer$TagTokenizer;->mName:Ljava/lang/String;

@@ -28,31 +28,26 @@
     .param p1, "fp"    # Landroid/hardware/fingerprint/Fingerprint;
 
     .prologue
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     invoke-virtual {p1}, Landroid/hardware/fingerprint/Fingerprint;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/fingerprint/Fingerprint$Builder;->mName:Ljava/lang/String;
 
-    .line 105
     invoke-virtual {p1}, Landroid/hardware/fingerprint/Fingerprint;->getFingerId()Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/fingerprint/Fingerprint$Builder;->mId:Ljava/lang/Integer;
 
-    .line 106
     invoke-virtual {p1}, Landroid/hardware/fingerprint/Fingerprint;->getUserId()Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/fingerprint/Fingerprint$Builder;->mUserId:Ljava/lang/Integer;
 
-    .line 107
     return-void
 .end method
 
@@ -62,7 +57,6 @@
     .locals 4
 
     .prologue
-    .line 120
     new-instance v0, Landroid/hardware/fingerprint/Fingerprint;
 
     iget-object v1, p0, Landroid/hardware/fingerprint/Fingerprint$Builder;->mName:Ljava/lang/String;
@@ -81,14 +75,12 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 115
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/fingerprint/Fingerprint$Builder;->mId:Ljava/lang/Integer;
 
-    .line 116
     return-object p0
 .end method
 
@@ -97,9 +89,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     iput-object p1, p0, Landroid/hardware/fingerprint/Fingerprint$Builder;->mName:Ljava/lang/String;
 
-    .line 111
     return-object p0
 .end method

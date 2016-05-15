@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 297
     new-instance v0, Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-direct {v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;-><init>()V
 
-    .line 298
     .local v0, "metadata":Landroid/hardware/camera2/impl/CameraMetadataNative;
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/impl/CameraMetadataNative;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 299
     return-object v0
 .end method
 
@@ -62,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 294
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/impl/CameraMetadataNative$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     move-result-object v0
@@ -75,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 304
     new-array v0, p1, [Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     return-object v0
@@ -85,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 294
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/impl/CameraMetadataNative$1;->newArray(I)[Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     move-result-object v0

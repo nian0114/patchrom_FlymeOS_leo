@@ -18,16 +18,12 @@
     .param p2, "timestamp"    # J
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     iput-wide p2, p0, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 
-    .line 76
     iput-object p1, p0, Landroid/media/TextTrackCueSpan;->mText:Ljava/lang/String;
 
-    .line 78
     iget-wide v0, p0, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 
     const-wide/16 v2, 0x0
@@ -41,10 +37,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/media/TextTrackCueSpan;->mEnabled:Z
 
-    .line 79
     return-void
 
-    .line 78
     :cond_0
     const/4 v0, 0x0
 
@@ -60,12 +54,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 83
     instance-of v2, p1, Landroid/media/TextTrackCueSpan;
 
     if-nez v2, :cond_1
 
-    .line 87
     :cond_0
     :goto_0
     return v1
@@ -73,10 +65,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 86
     check-cast v0, Landroid/media/TextTrackCueSpan;
 
-    .line 87
     .local v0, "span":Landroid/media/TextTrackCueSpan;
     iget-wide v2, p0, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 

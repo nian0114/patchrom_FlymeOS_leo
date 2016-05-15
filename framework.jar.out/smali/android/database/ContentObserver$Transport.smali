@@ -24,13 +24,10 @@
     .param p1, "contentObserver"    # Landroid/database/ContentObserver;
 
     .prologue
-    .line 223
     invoke-direct {p0}, Landroid/database/IContentObserver$Stub;-><init>()V
 
-    .line 224
     iput-object p1, p0, Landroid/database/ContentObserver$Transport;->mContentObserver:Landroid/database/ContentObserver;
 
-    .line 225
     return-void
 .end method
 
@@ -43,18 +40,14 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/database/ContentObserver$Transport;->mContentObserver:Landroid/database/ContentObserver;
 
-    .line 230
     .local v0, "contentObserver":Landroid/database/ContentObserver;
     if-eqz v0, :cond_0
 
-    .line 231
     # invokes: Landroid/database/ContentObserver;->dispatchChange(ZLandroid/net/Uri;I)V
     invoke-static {v0, p1, p2, p3}, Landroid/database/ContentObserver;->access$000(Landroid/database/ContentObserver;ZLandroid/net/Uri;I)V
 
-    .line 233
     :cond_0
     return-void
 .end method
@@ -63,11 +56,9 @@
     .locals 1
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/database/ContentObserver$Transport;->mContentObserver:Landroid/database/ContentObserver;
 
-    .line 237
     return-void
 .end method

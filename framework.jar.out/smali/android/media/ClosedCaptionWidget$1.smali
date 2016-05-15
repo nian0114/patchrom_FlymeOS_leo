@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1199
     iput-object p1, p0, Landroid/media/ClosedCaptionWidget$1;->this$0:Landroid/media/ClosedCaptionWidget;
 
     invoke-direct {p0}, Landroid/view/accessibility/CaptioningManager$CaptioningChangeListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "userStyle"    # Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
     .prologue
-    .line 1202
     iget-object v0, p0, Landroid/media/ClosedCaptionWidget$1;->this$0:Landroid/media/ClosedCaptionWidget;
 
     # getter for: Landroid/media/ClosedCaptionWidget;->DEFAULT_CAPTION_STYLE:Landroid/view/accessibility/CaptioningManager$CaptionStyle;
@@ -53,7 +51,6 @@
     # setter for: Landroid/media/ClosedCaptionWidget;->mCaptionStyle:Landroid/view/accessibility/CaptioningManager$CaptionStyle;
     invoke-static {v0, v1}, Landroid/media/ClosedCaptionWidget;->access$002(Landroid/media/ClosedCaptionWidget;Landroid/view/accessibility/CaptioningManager$CaptionStyle;)Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
-    .line 1203
     iget-object v0, p0, Landroid/media/ClosedCaptionWidget$1;->this$0:Landroid/media/ClosedCaptionWidget;
 
     # getter for: Landroid/media/ClosedCaptionWidget;->mClosedCaptionLayout:Landroid/media/ClosedCaptionWidget$CCLayout;
@@ -70,6 +67,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/ClosedCaptionWidget$CCLayout;->setCaptionStyle(Landroid/view/accessibility/CaptioningManager$CaptionStyle;)V
 
-    .line 1204
     return-void
 .end method

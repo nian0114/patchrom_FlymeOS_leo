@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 104
     iput-object p1, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     invoke-direct {p0}, Landroid/media/tv/ITvInputService$Stub;-><init>()V
@@ -40,41 +39,32 @@
     .param p3, "inputId"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     if-nez p1, :cond_0
 
-    .line 123
     const-string v1, "TvInputService"
 
     const-string v2, "Creating session without input channel"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     if-nez p2, :cond_1
 
-    .line 133
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 129
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 130
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 131
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 132
     iget-object v1, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
@@ -98,7 +88,6 @@
     .param p1, "hardwareInfo"    # Landroid/media/tv/TvInputHardwareInfo;
 
     .prologue
-    .line 137
     iget-object v0, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
@@ -114,7 +103,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 139
     return-void
 .end method
 
@@ -123,7 +111,6 @@
     .param p1, "hardwareInfo"    # Landroid/media/tv/TvInputHardwareInfo;
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
@@ -139,7 +126,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 145
     return-void
 .end method
 
@@ -148,7 +134,6 @@
     .param p1, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
@@ -164,7 +149,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 151
     return-void
 .end method
 
@@ -173,7 +157,6 @@
     .param p1, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
@@ -189,7 +172,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 157
     return-void
 .end method
 
@@ -198,10 +180,8 @@
     .param p1, "cb"    # Landroid/media/tv/ITvInputServiceCallback;
 
     .prologue
-    .line 107
     if-eqz p1, :cond_0
 
-    .line 108
     iget-object v0, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mCallbacks:Landroid/os/RemoteCallbackList;
@@ -211,7 +191,6 @@
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 110
     :cond_0
     return-void
 .end method
@@ -221,10 +200,8 @@
     .param p1, "cb"    # Landroid/media/tv/ITvInputServiceCallback;
 
     .prologue
-    .line 114
     if-eqz p1, :cond_0
 
-    .line 115
     iget-object v0, p0, Landroid/media/tv/TvInputService$1;->this$0:Landroid/media/tv/TvInputService;
 
     # getter for: Landroid/media/tv/TvInputService;->mCallbacks:Landroid/os/RemoteCallbackList;
@@ -234,7 +211,6 @@
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 117
     :cond_0
     return-void
 .end method

@@ -30,20 +30,16 @@
     .locals 1
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/animation/Transformation;->mClipRect:Landroid/graphics/Rect;
 
-    .line 58
     invoke-virtual {p0}, Landroid/view/animation/Transformation;->clear()V
 
-    .line 59
     return-void
 .end method
 
@@ -53,43 +49,35 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
     if-nez v0, :cond_0
 
-    .line 68
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
-    .line 72
     :goto_0
     iget-object v0, p0, Landroid/view/animation/Transformation;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 73
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
-    .line 74
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
-    .line 75
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/view/animation/Transformation;->mTransformationType:I
 
-    .line 76
     return-void
 
-    .line 70
     :cond_0
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
@@ -103,7 +91,6 @@
     .param p1, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 122
     iget v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getAlpha()F
@@ -114,7 +101,6 @@
 
     iput v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
-    .line 123
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -123,19 +109,16 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
-    .line 124
     iget-boolean v0, p1, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
     if-eqz v0, :cond_0
 
-    .line 125
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getClipRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/view/animation/Transformation;->setClipRect(Landroid/graphics/Rect;)V
 
-    .line 127
     :cond_0
     return-void
 .end method
@@ -144,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
     return v0
@@ -154,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget-object v0, p0, Landroid/view/animation/Transformation;->mClipRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -164,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -174,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/view/animation/Transformation;->mTransformationType:I
 
     return v0
@@ -184,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-boolean v0, p0, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
     return v0
@@ -195,7 +173,6 @@
     .param p1, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 135
     iget v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getAlpha()F
@@ -206,7 +183,6 @@
 
     iput v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
-    .line 136
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -215,19 +191,16 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
-    .line 137
     iget-boolean v0, p1, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
     if-eqz v0, :cond_0
 
-    .line 138
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getClipRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/view/animation/Transformation;->setClipRect(Landroid/graphics/Rect;)V
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -237,7 +210,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 229
     const-string v0, "{alpha="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -246,22 +218,18 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(F)V
 
-    .line 230
     const-string v0, " matrix="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 231
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->printShortString(Ljava/io/PrintWriter;)V
 
-    .line 232
     const/16 v0, 0x7d
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 233
     return-void
 .end method
 
@@ -270,14 +238,12 @@
     .param p1, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 105
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getAlpha()F
 
     move-result v0
 
     iput v0, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
-    .line 106
     iget-object v0, p0, Landroid/view/animation/Transformation;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -286,19 +252,16 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 107
     iget-boolean v0, p1, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
     if-eqz v0, :cond_0
 
-    .line 108
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getClipRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/view/animation/Transformation;->setClipRect(Landroid/graphics/Rect;)V
 
-    .line 113
     :goto_0
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getTransformationType()I
 
@@ -306,16 +269,13 @@
 
     iput v0, p0, Landroid/view/animation/Transformation;->mTransformationType:I
 
-    .line 114
     return-void
 
-    .line 110
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
-    .line 111
     iget-object v0, p0, Landroid/view/animation/Transformation;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
@@ -328,10 +288,8 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 155
     iput p1, p0, Landroid/view/animation/Transformation;->mAlpha:F
 
-    .line 156
     return-void
 .end method
 
@@ -343,17 +301,14 @@
     .param p4, "b"    # I
 
     .prologue
-    .line 171
     iget-object v0, p0, Landroid/view/animation/Transformation;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 172
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/view/animation/Transformation;->mHasClipRect:Z
 
-    .line 173
     return-void
 .end method
 
@@ -362,7 +317,6 @@
     .param p1, "r"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 163
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -373,7 +327,6 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/view/animation/Transformation;->setClipRect(IIII)V
 
-    .line 164
     return-void
 .end method
 
@@ -382,10 +335,8 @@
     .param p1, "transformationType"    # I
 
     .prologue
-    .line 96
     iput p1, p0, Landroid/view/animation/Transformation;->mTransformationType:I
 
-    .line 97
     return-void
 .end method
 
@@ -393,18 +344,15 @@
     .locals 2
 
     .prologue
-    .line 210
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x40
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 211
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0}, Landroid/view/animation/Transformation;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 212
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -417,7 +365,6 @@
     .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 219
     const-string v0, "{alpha="
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -426,7 +373,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 220
     const-string v0, " matrix="
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -435,12 +381,10 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 221
     const/16 v0, 0x7d
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 222
     return-void
 .end method
 
@@ -448,23 +392,19 @@
     .locals 2
 
     .prologue
-    .line 200
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x40
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 201
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "Transformation"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
     invoke-virtual {p0, v0}, Landroid/view/animation/Transformation;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 203
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

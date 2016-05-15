@@ -26,15 +26,12 @@
     .param p2, "smsSender"    # Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;
 
     .prologue
-    .line 559
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/service/carrier/ICarrierMessagingCallback$Stub;-><init>()V
 
-    .line 560
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->mSmsSender:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;
 
-    .line 561
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 601
     const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -68,7 +64,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .param p1, "keepMessage"    # Z
 
     .prologue
-    .line 591
     const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -100,7 +94,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 592
     return-void
 .end method
 
@@ -110,7 +103,6 @@
     .param p2, "sendConfPdu"    # [B
 
     .prologue
-    .line 596
     const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -133,7 +125,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     return-void
 .end method
 
@@ -143,7 +134,6 @@
     .param p2, "messageRefs"    # [I
 
     .prologue
-    .line 573
     iget-object v2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->mSmsSender:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;
 
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -152,25 +142,21 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->disposeConnection(Landroid/content/Context;)V
 
-    .line 575
     iget-object v2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->mSmsSender:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;
 
     iget-object v2, v2, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mTrackers:[Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     if-nez v2, :cond_1
 
-    .line 576
     const-string v2, "SMSDispatcher"
 
     const-string v3, "Unexpected onSendMultipartSmsComplete call with null trackers."
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     :cond_0
     return-void
 
-    .line 580
     :cond_1
     const/4 v0, 0x0
 
@@ -184,10 +170,8 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 581
     const/4 v1, 0x0
 
-    .line 582
     .local v1, "messageRef":I
     if-eqz p2, :cond_2
 
@@ -195,10 +179,8 @@
 
     if-le v2, v0, :cond_2
 
-    .line 583
     aget v1, p2, v0
 
-    .line 585
     :cond_2
     iget-object v2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
@@ -211,7 +193,6 @@
     # invokes: Lcom/android/internal/telephony/SMSDispatcher;->processSendSmsResponse(Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;II)V
     invoke-static {v2, v3, p1, v1}, Lcom/android/internal/telephony/SMSDispatcher;->access$000(Lcom/android/internal/telephony/SMSDispatcher;Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;II)V
 
-    .line 580
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -223,7 +204,6 @@
     .param p2, "messageRef"    # I
 
     .prologue
-    .line 565
     const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -246,6 +226,5 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     return-void
 .end method

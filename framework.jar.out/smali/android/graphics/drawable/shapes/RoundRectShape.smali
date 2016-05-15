@@ -25,26 +25,22 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 60
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
 
-    .line 61
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 62
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string/jumbo v1, "outer radii must have >= 8 values"
+    const-string v1, "outer radii must have >= 8 values"
 
     invoke-direct {v0, v1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 64
     :cond_0
     if-eqz p3, :cond_1
 
@@ -52,7 +48,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 65
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     const-string v1, "inner radii must have >= 8 values"
@@ -61,27 +56,21 @@
 
     throw v0
 
-    .line 67
     :cond_1
     iput-object p1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
-    .line 68
     iput-object p2, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInset:Landroid/graphics/RectF;
 
-    .line 69
     iput-object p3, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRadii:[F
 
-    .line 71
     if-eqz p2, :cond_2
 
-    .line 72
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
 
-    .line 74
     :cond_2
     new-instance v0, Landroid/graphics/Path;
 
@@ -89,7 +78,6 @@
 
     iput-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
-    .line 75
     return-void
 .end method
 
@@ -104,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RoundRectShape;->clone()Landroid/graphics/drawable/shapes/RoundRectShape;
 
     move-result-object v0
@@ -123,14 +110,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 131
     invoke-super {p0}, Landroid/graphics/drawable/shapes/RectShape;->clone()Landroid/graphics/drawable/shapes/RectShape;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/drawable/shapes/RoundRectShape;
 
-    .line 132
     .local v0, "shape":Landroid/graphics/drawable/shapes/RoundRectShape;
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
@@ -147,7 +132,6 @@
     :goto_0
     iput-object v1, v0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
-    .line 133
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRadii:[F
 
     if-eqz v1, :cond_1
@@ -163,7 +147,6 @@
     :goto_1
     iput-object v1, v0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRadii:[F
 
-    .line 134
     new-instance v1, Landroid/graphics/RectF;
 
     iget-object v2, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInset:Landroid/graphics/RectF;
@@ -172,7 +155,6 @@
 
     iput-object v1, v0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInset:Landroid/graphics/RectF;
 
-    .line 135
     new-instance v1, Landroid/graphics/RectF;
 
     iget-object v2, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
@@ -181,7 +163,6 @@
 
     iput-object v1, v0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
 
-    .line 136
     new-instance v1, Landroid/graphics/Path;
 
     iget-object v2, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
@@ -190,19 +171,16 @@
 
     iput-object v1, v0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
-    .line 137
     return-object v0
 
     :cond_0
     move-object v1, v2
 
-    .line 132
     goto :goto_0
 
     :cond_1
     move-object v1, v2
 
-    .line 133
     goto :goto_1
 .end method
 
@@ -215,7 +193,6 @@
     .end annotation
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RoundRectShape;->clone()Landroid/graphics/drawable/shapes/RoundRectShape;
 
     move-result-object v0
@@ -232,7 +209,6 @@
     .end annotation
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RoundRectShape;->clone()Landroid/graphics/drawable/shapes/RoundRectShape;
 
     move-result-object v0
@@ -246,12 +222,10 @@
     .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 79
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 80
     return-void
 .end method
 
@@ -260,33 +234,27 @@
     .param p1, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
 
     if-eqz v0, :cond_0
 
-    .line 102
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     const/4 v5, 0x0
 
-    .line 87
     .local v5, "radius":F
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
     if-eqz v0, :cond_2
 
-    .line 88
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
     const/4 v1, 0x0
 
     aget v5, v0, v1
 
-    .line 89
     const/4 v6, 0x1
 
     .local v6, "i":I
@@ -295,7 +263,6 @@
 
     if-ge v6, v0, :cond_2
 
-    .line 90
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
     aget v0, v0, v6
@@ -304,27 +271,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Outline;->setConvexPath(Landroid/graphics/Path;)V
 
     goto :goto_0
 
-    .line 89
     :cond_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 98
     .end local v6    # "i":I
     :cond_2
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RoundRectShape;->rect()Landroid/graphics/RectF;
 
     move-result-object v7
 
-    .line 99
     .local v7, "rect":Landroid/graphics/RectF;
     iget v0, v7, Landroid/graphics/RectF;->left:F
 
@@ -379,26 +342,21 @@
     .param p2, "h"    # F
 
     .prologue
-    .line 106
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/shapes/RectShape;->onResize(FF)V
 
-    .line 108
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RoundRectShape;->rect()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 109
     .local v0, "r":Landroid/graphics/RectF;
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 111
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
 
     if-eqz v1, :cond_1
 
-    .line 112
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mOuterRadii:[F
@@ -407,13 +365,11 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 116
     :goto_0
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
 
     if-eqz v1, :cond_0
 
-    .line 117
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
 
     iget v2, v0, Landroid/graphics/RectF;->left:F
@@ -450,7 +406,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 119
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
@@ -471,12 +426,10 @@
 
     if-gez v1, :cond_0
 
-    .line 120
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRadii:[F
 
     if-eqz v1, :cond_2
 
-    .line 121
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mInnerRect:Landroid/graphics/RectF;
@@ -487,12 +440,10 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 127
     :cond_0
     :goto_1
     return-void
 
-    .line 114
     :cond_1
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 
@@ -502,7 +453,6 @@
 
     goto :goto_0
 
-    .line 123
     :cond_2
     iget-object v1, p0, Landroid/graphics/drawable/shapes/RoundRectShape;->mPath:Landroid/graphics/Path;
 

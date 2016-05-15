@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 264
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$1;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 269
     const-string v0, "android.intent.extra.REPLACING"
 
     const/4 v1, 0x0
@@ -50,13 +48,11 @@
 
     if-nez v0, :cond_0
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$1;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     # invokes: Lcom/android/server/accounts/AccountManagerService;->purgeOldGrantsAll()V
     invoke-static {v0}, Lcom/android/server/accounts/AccountManagerService;->access$000(Lcom/android/server/accounts/AccountManagerService;)V
 
-    .line 272
     :cond_0
     return-void
 .end method

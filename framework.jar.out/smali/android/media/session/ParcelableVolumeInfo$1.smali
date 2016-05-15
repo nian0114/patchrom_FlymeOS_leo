@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 72
     new-instance v0, Landroid/media/session/ParcelableVolumeInfo;
 
     invoke-direct {v0, p1}, Landroid/media/session/ParcelableVolumeInfo;-><init>(Landroid/os/Parcel;)V
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 69
     invoke-virtual {p0, p1}, Landroid/media/session/ParcelableVolumeInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/media/session/ParcelableVolumeInfo;
 
     move-result-object v0
@@ -70,7 +67,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 77
     new-array v0, p1, [Landroid/media/session/ParcelableVolumeInfo;
 
     return-object v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 69
     invoke-virtual {p0, p1}, Landroid/media/session/ParcelableVolumeInfo$1;->newArray(I)[Landroid/media/session/ParcelableVolumeInfo;
 
     move-result-object v0

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1077
     iput-object p1, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper$1;->this$1:Landroid/service/dreams/DreamService$DreamServiceWrapper;
 
     iput-object p2, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper$1;->val$windowToken:Landroid/os/IBinder;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 1080
     iget-object v0, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper$1;->this$1:Landroid/service/dreams/DreamService$DreamServiceWrapper;
 
     iget-object v0, v0, Landroid/service/dreams/DreamService$DreamServiceWrapper;->this$0:Landroid/service/dreams/DreamService;
@@ -60,6 +58,5 @@
     # invokes: Landroid/service/dreams/DreamService;->attach(Landroid/os/IBinder;Z)V
     invoke-static {v0, v1, v2}, Landroid/service/dreams/DreamService;->access$600(Landroid/service/dreams/DreamService;Landroid/os/IBinder;Z)V
 
-    .line 1081
     return-void
 .end method

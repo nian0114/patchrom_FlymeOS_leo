@@ -41,25 +41,18 @@
     .param p5, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/display/DisplayAdapter;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
-    .line 49
     iput-object p2, p0, Lcom/android/server/display/DisplayAdapter;->mContext:Landroid/content/Context;
 
-    .line 50
     iput-object p3, p0, Lcom/android/server/display/DisplayAdapter;->mHandler:Landroid/os/Handler;
 
-    .line 51
     iput-object p4, p0, Lcom/android/server/display/DisplayAdapter;->mListener:Lcom/android/server/display/DisplayAdapter$Listener;
 
-    .line 52
     iput-object p5, p0, Lcom/android/server/display/DisplayAdapter;->mName:Ljava/lang/String;
 
-    .line 53
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayAdapter;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mListener:Lcom/android/server/display/DisplayAdapter$Listener;
 
     return-object v0
@@ -81,7 +73,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 98
     return-void
 .end method
 
@@ -89,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -99,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -109,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mName:Ljava/lang/String;
 
     return-object v0
@@ -119,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     return-object v0
@@ -129,7 +116,6 @@
     .locals 0
 
     .prologue
-    .line 92
     return-void
 .end method
 
@@ -139,7 +125,6 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/DisplayAdapter$1;
@@ -148,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 111
     return-void
 .end method
 
@@ -156,7 +140,6 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/DisplayAdapter$2;
@@ -165,6 +148,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 123
     return-void
 .end method

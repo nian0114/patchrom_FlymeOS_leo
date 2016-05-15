@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 88
     new-instance v0, Landroid/net/UidRange$1;
 
     invoke-direct {v0}, Landroid/net/UidRange$1;-><init>()V
@@ -46,10 +45,8 @@
     .param p2, "stopUid"    # I
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     if-gez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -60,7 +57,6 @@
 
     throw v0
 
-    .line 37
     :cond_0
     if-gez p2, :cond_1
 
@@ -72,7 +68,6 @@
 
     throw v0
 
-    .line 38
     :cond_1
     if-le p1, p2, :cond_2
 
@@ -84,14 +79,11 @@
 
     throw v0
 
-    .line 39
     :cond_2
     iput p1, p0, Landroid/net/UidRange;->start:I
 
-    .line 40
     iput p2, p0, Landroid/net/UidRange;->stop:I
 
-    .line 41
     return-void
 .end method
 
@@ -102,7 +94,6 @@
     .prologue
     const v3, 0x186a0
 
-    .line 44
     new-instance v0, Landroid/net/UidRange;
 
     mul-int v1, p0, v3
@@ -124,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     return v0
@@ -139,15 +129,12 @@
 
     const/4 v2, 0x0
 
-    .line 61
     if-ne p0, p1, :cond_1
 
-    .line 68
     :cond_0
     :goto_0
     return v1
 
-    .line 64
     :cond_1
     instance-of v3, p1, Landroid/net/UidRange;
 
@@ -155,10 +142,8 @@
 
     move-object v0, p1
 
-    .line 65
     check-cast v0, Landroid/net/UidRange;
 
-    .line 66
     .local v0, "other":Landroid/net/UidRange;
     iget v3, p0, Landroid/net/UidRange;->start:I
 
@@ -181,7 +166,6 @@
     :cond_3
     move v1, v2
 
-    .line 68
     goto :goto_0
 .end method
 
@@ -189,7 +173,6 @@
     .locals 2
 
     .prologue
-    .line 48
     iget v0, p0, Landroid/net/UidRange;->start:I
 
     const v1, 0x186a0
@@ -203,23 +186,19 @@
     .locals 3
 
     .prologue
-    .line 53
     const/16 v0, 0x11
 
-    .line 54
     .local v0, "result":I
     iget v1, p0, Landroid/net/UidRange;->start:I
 
     add-int/lit16 v0, v1, 0x20f
 
-    .line 55
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/net/UidRange;->stop:I
 
     add-int v0, v1, v2
 
-    .line 56
     return v0
 .end method
 
@@ -227,7 +206,6 @@
     .locals 2
 
     .prologue
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,16 +241,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 84
     iget v0, p0, Landroid/net/UidRange;->start:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     iget v0, p0, Landroid/net/UidRange;->stop:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 86
     return-void
 .end method

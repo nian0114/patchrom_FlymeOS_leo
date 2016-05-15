@@ -28,17 +28,14 @@
     .param p1, "physicalAddress"    # I
 
     .prologue
-    .line 727
     const/4 v0, 0x5
 
     const/4 v1, 0x2
 
     invoke-direct {p0, v0, v1}, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;-><init>(II)V
 
-    .line 728
     iput p1, p0, Landroid/hardware/hdmi/HdmiRecordSources$ExternalPhysicalAddress;->mPhysicalAddress:I
 
-    .line 729
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p2, "x1"    # Landroid/hardware/hdmi/HdmiRecordSources$1;
 
     .prologue
-    .line 721
     invoke-direct {p0, p1}, Landroid/hardware/hdmi/HdmiRecordSources$ExternalPhysicalAddress;-><init>(I)V
 
     return-void
@@ -62,7 +58,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 733
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordSources$ExternalPhysicalAddress;->mPhysicalAddress:I
 
     int-to-short v0, v0
@@ -70,7 +65,6 @@
     # invokes: Landroid/hardware/hdmi/HdmiRecordSources;->shortToByteArray(S[BI)I
     invoke-static {v0, p1, p2}, Landroid/hardware/hdmi/HdmiRecordSources;->access$200(S[BI)I
 
-    .line 734
     const/4 v0, 0x2
 
     return v0

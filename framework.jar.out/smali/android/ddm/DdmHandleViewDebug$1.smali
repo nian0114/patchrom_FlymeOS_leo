@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 297
     iput-object p1, p0, Landroid/ddm/DdmHandleViewDebug$1;->this$0:Landroid/ddm/DdmHandleViewDebug;
 
     iput-object p2, p0, Landroid/ddm/DdmHandleViewDebug$1;->val$rootView:Landroid/view/View;
@@ -48,13 +47,11 @@
     .locals 2
 
     .prologue
-    .line 300
     iget-object v0, p0, Landroid/ddm/DdmHandleViewDebug$1;->val$rootView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/ddm/DdmHandleViewDebug$1;->val$targetView:Landroid/view/View;
 
     invoke-static {v0, v1}, Landroid/view/ViewDebug;->outputDisplayList(Landroid/view/View;Landroid/view/View;)V
 
-    .line 301
     return-void
 .end method

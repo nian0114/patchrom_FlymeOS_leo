@@ -35,10 +35,8 @@
     .locals 0
 
     .prologue
-    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 189
     return-void
 .end method
 
@@ -48,7 +46,6 @@
     .locals 9
 
     .prologue
-    .line 272
     new-instance v0, Landroid/media/MediaDescription;
 
     iget-object v1, p0, Landroid/media/MediaDescription$Builder;->mMediaId:Ljava/lang/String;
@@ -77,10 +74,8 @@
     .param p1, "description"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 232
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mDescription:Ljava/lang/CharSequence;
 
-    .line 233
     return-object p0
 .end method
 
@@ -89,10 +84,8 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 267
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mExtras:Landroid/os/Bundle;
 
-    .line 268
     return-object p0
 .end method
 
@@ -101,10 +94,8 @@
     .param p1, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 244
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 245
     return-object p0
 .end method
 
@@ -113,10 +104,8 @@
     .param p1, "iconUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 256
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mIconUri:Landroid/net/Uri;
 
-    .line 257
     return-object p0
 .end method
 
@@ -125,10 +114,8 @@
     .param p1, "mediaId"    # Ljava/lang/String;
 
     .prologue
-    .line 198
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mMediaId:Ljava/lang/String;
 
-    .line 199
     return-object p0
 .end method
 
@@ -137,10 +124,8 @@
     .param p1, "subtitle"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 220
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mSubtitle:Ljava/lang/CharSequence;
 
-    .line 221
     return-object p0
 .end method
 
@@ -149,9 +134,7 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 209
     iput-object p1, p0, Landroid/media/MediaDescription$Builder;->mTitle:Ljava/lang/CharSequence;
 
-    .line 210
     return-object p0
 .end method

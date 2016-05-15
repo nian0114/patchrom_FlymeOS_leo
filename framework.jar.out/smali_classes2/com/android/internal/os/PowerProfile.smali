@@ -76,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 155
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -91,10 +90,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     sget-object v0, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -103,10 +100,8 @@
 
     if-nez v0, :cond_0
 
-    .line 167
     invoke-direct {p0, p1}, Lcom/android/internal/os/PowerProfile;->readPowerValuesFromXml(Landroid/content/Context;)V
 
-    .line 169
     :cond_0
     return-void
 .end method
@@ -116,10 +111,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 172
     const v4, 0x111000e
 
-    .line 173
     .local v4, "id":I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -129,45 +122,36 @@
 
     move-result-object v6
 
-    .line 174
     .local v6, "parser":Landroid/content/res/XmlResourceParser;
     const/4 v7, 0x0
 
-    .line 175
     .local v7, "parsingArray":Z
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 176
     .local v0, "array":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Double;>;"
     const/4 v1, 0x0
 
-    .line 179
     .local v1, "arrayName":Ljava/lang/String;
     :try_start_0
     const-string v9, "device"
 
     invoke-static {v6, v9}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 182
     :cond_0
     :goto_0
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 184
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 185
     .local v3, "element":Ljava/lang/String;
     if-nez v3, :cond_2
 
-    .line 214
     if-eqz v7, :cond_1
 
-    .line 215
     sget-object v9, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -186,14 +170,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 222
     :cond_1
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 224
     return-void
 
-    .line 187
     :cond_2
     if-eqz v7, :cond_3
 
@@ -206,7 +187,6 @@
 
     if-nez v9, :cond_3
 
-    .line 189
     sget-object v9, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -221,10 +201,8 @@
 
     invoke-virtual {v9, v1, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     const/4 v7, 0x0
 
-    .line 192
     :cond_3
     const-string v9, "array"
 
@@ -234,13 +212,10 @@
 
     if-eqz v9, :cond_4
 
-    .line 193
     const/4 v7, 0x1
 
-    .line 194
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 195
     const/4 v9, 0x0
 
     const-string v12, "name"
@@ -251,7 +226,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_4
     const-string v9, "item"
 
@@ -269,11 +243,9 @@
 
     if-eqz v9, :cond_0
 
-    .line 197
     :cond_5
     const/4 v5, 0x0
 
-    .line 198
     .local v5, "name":Ljava/lang/String;
     if-nez v7, :cond_6
 
@@ -285,7 +257,6 @@
 
     move-result-object v5
 
-    .line 199
     :cond_6
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -295,7 +266,6 @@
 
     if-ne v9, v12, :cond_0
 
-    .line 200
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->getText()Ljava/lang/String;
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
@@ -304,11 +274,9 @@
 
     move-result-object v8
 
-    .line 201
     .local v8, "power":Ljava/lang/String;
     const-wide/16 v10, 0x0
 
-    .line 203
     .local v10, "value":D
     :try_start_2
     invoke-static {v8}, Ljava/lang/Double;->valueOf(Ljava/lang/String;)Ljava/lang/Double;
@@ -324,7 +292,6 @@
 
     move-result-wide v10
 
-    .line 206
     :goto_1
     :try_start_3
     const-string v9, "item"
@@ -335,7 +302,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 207
     sget-object v9, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-static {v10, v11}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -350,7 +316,6 @@
 
     goto/16 :goto_0
 
-    .line 217
     .end local v3    # "element":Ljava/lang/String;
     .end local v5    # "name":Ljava/lang/String;
     .end local v8    # "power":Ljava/lang/String;
@@ -358,7 +323,6 @@
     :catch_0
     move-exception v2
 
-    .line 218
     .local v2, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_4
     new-instance v9, Ljava/lang/RuntimeException;
@@ -369,7 +333,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 222
     .end local v2    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catchall_0
     move-exception v9
@@ -378,7 +341,6 @@
 
     throw v9
 
-    .line 208
     .restart local v3    # "element":Ljava/lang/String;
     .restart local v5    # "name":Ljava/lang/String;
     .restart local v8    # "power":Ljava/lang/String;
@@ -386,7 +348,6 @@
     :cond_7
     if-eqz v7, :cond_0
 
-    .line 209
     :try_start_5
     invoke-static {v10, v11}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -400,7 +361,6 @@
 
     goto/16 :goto_0
 
-    .line 219
     .end local v3    # "element":Ljava/lang/String;
     .end local v5    # "name":Ljava/lang/String;
     .end local v8    # "power":Ljava/lang/String;
@@ -408,7 +368,6 @@
     :catch_1
     move-exception v2
 
-    .line 220
     .local v2, "e":Ljava/io/IOException;
     :try_start_6
     new-instance v9, Ljava/lang/RuntimeException;
@@ -419,7 +378,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 204
     .end local v2    # "e":Ljava/io/IOException;
     .restart local v3    # "element":Ljava/lang/String;
     .restart local v5    # "name":Ljava/lang/String;
@@ -438,7 +396,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     sget-object v1, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -447,20 +404,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 233
     sget-object v1, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 234
     .local v0, "data":Ljava/lang/Object;
     instance-of v1, v0, [Ljava/lang/Double;
 
     if-eqz v1, :cond_0
 
-    .line 235
     check-cast v0, [Ljava/lang/Double;
 
     .end local v0    # "data":Ljava/lang/Object;
@@ -474,11 +428,9 @@
 
     move-result-wide v2
 
-    .line 240
     :goto_0
     return-wide v2
 
-    .line 237
     .restart local v0    # "data":Ljava/lang/Object;
     :cond_0
     sget-object v1, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
@@ -495,7 +447,6 @@
 
     goto :goto_0
 
-    .line 240
     .end local v0    # "data":Ljava/lang/Object;
     :cond_1
     const-wide/16 v2, 0x0
@@ -511,7 +462,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 253
     sget-object v4, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -520,20 +470,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 254
     sget-object v4, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 255
     .local v0, "data":Ljava/lang/Object;
     instance-of v4, v0, [Ljava/lang/Double;
 
     if-eqz v4, :cond_2
 
-    .line 256
     check-cast v0, [Ljava/lang/Double;
 
     .end local v0    # "data":Ljava/lang/Object;
@@ -541,7 +488,6 @@
 
     check-cast v1, [Ljava/lang/Double;
 
-    .line 257
     .local v1, "values":[Ljava/lang/Double;
     array-length v4, v1
 
@@ -549,25 +495,21 @@
 
     if-ltz p2, :cond_1
 
-    .line 258
     aget-object v2, v1, p2
 
     invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v2
 
-    .line 268
     .end local v1    # "values":[Ljava/lang/Double;
     :cond_0
     :goto_0
     return-wide v2
 
-    .line 259
     .restart local v1    # "values":[Ljava/lang/Double;
     :cond_1
     if-ltz p2, :cond_0
 
-    .line 262
     array-length v2, v1
 
     add-int/lit8 v2, v2, -0x1
@@ -580,7 +522,6 @@
 
     goto :goto_0
 
-    .line 265
     .end local v1    # "values":[Ljava/lang/Double;
     .restart local v0    # "data":Ljava/lang/Object;
     :cond_2
@@ -598,7 +539,6 @@
     .locals 2
 
     .prologue
-    .line 278
     const-string v0, "battery.capacity"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
@@ -612,7 +552,6 @@
     .locals 3
 
     .prologue
-    .line 286
     sget-object v1, Lcom/android/internal/os/PowerProfile;->sPowerMap:Ljava/util/HashMap;
 
     const-string v2, "cpu.speeds"
@@ -621,7 +560,6 @@
 
     move-result-object v0
 
-    .line 287
     .local v0, "value":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -629,7 +567,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 288
     check-cast v0, [Ljava/lang/Double;
 
     .end local v0    # "value":Ljava/lang/Object;
@@ -637,7 +574,6 @@
 
     array-length v1, v0
 
-    .line 290
     :goto_0
     return v1
 

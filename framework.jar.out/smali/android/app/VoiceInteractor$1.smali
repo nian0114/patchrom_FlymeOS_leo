@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Landroid/app/VoiceInteractor$1;->this$0:Landroid/app/VoiceInteractor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,23 +44,19 @@
 
     const/4 v3, 0x1
 
-    .line 73
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 75
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 129
     :cond_0
     :goto_0
     return-void
 
-    .line 77
     :pswitch_0
     iget-object v5, p0, Landroid/app/VoiceInteractor$1;->this$0:Landroid/app/VoiceInteractor;
 
@@ -73,7 +68,6 @@
 
     move-result-object v1
 
-    .line 78
     .local v1, "request":Landroid/app/VoiceInteractor$Request;
     const-string v5, "VoiceInteractor"
 
@@ -81,7 +75,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "onConfirmResult: req="
+    const-string v6, "onConfirmResult: req="
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -139,12 +133,10 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     if-eqz v1, :cond_0
 
     move-object v2, v1
 
-    .line 82
     check-cast v2, Landroid/app/VoiceInteractor$ConfirmationRequest;
 
     iget v5, p1, Landroid/os/Message;->arg1:I
@@ -160,12 +152,10 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/app/VoiceInteractor$ConfirmationRequest;->onConfirmationResult(ZLandroid/os/Bundle;)V
 
-    .line 84
     invoke-virtual {v1}, Landroid/app/VoiceInteractor$Request;->clear()V
 
     goto :goto_0
 
-    .line 88
     .end local v1    # "request":Landroid/app/VoiceInteractor$Request;
     :pswitch_1
     iget-object v4, p0, Landroid/app/VoiceInteractor$1;->this$0:Landroid/app/VoiceInteractor;
@@ -178,7 +168,6 @@
 
     move-result-object v1
 
-    .line 89
     .restart local v1    # "request":Landroid/app/VoiceInteractor$Request;
     const-string v3, "VoiceInteractor"
 
@@ -186,7 +175,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onCompleteVoice: req="
+    const-string v4, "onCompleteVoice: req="
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -232,12 +221,10 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     if-eqz v1, :cond_0
 
     move-object v2, v1
 
-    .line 93
     check-cast v2, Landroid/app/VoiceInteractor$CompleteVoiceRequest;
 
     iget-object v3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
@@ -246,12 +233,10 @@
 
     invoke-virtual {v2, v3}, Landroid/app/VoiceInteractor$CompleteVoiceRequest;->onCompleteResult(Landroid/os/Bundle;)V
 
-    .line 94
     invoke-virtual {v1}, Landroid/app/VoiceInteractor$Request;->clear()V
 
     goto/16 :goto_0
 
-    .line 98
     .end local v1    # "request":Landroid/app/VoiceInteractor$Request;
     :pswitch_2
     iget-object v4, p0, Landroid/app/VoiceInteractor$1;->this$0:Landroid/app/VoiceInteractor;
@@ -264,7 +249,6 @@
 
     move-result-object v1
 
-    .line 99
     .restart local v1    # "request":Landroid/app/VoiceInteractor$Request;
     const-string v3, "VoiceInteractor"
 
@@ -272,7 +256,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onAbortVoice: req="
+    const-string v4, "onAbortVoice: req="
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -318,12 +302,10 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     if-eqz v1, :cond_0
 
     move-object v2, v1
 
-    .line 103
     check-cast v2, Landroid/app/VoiceInteractor$AbortVoiceRequest;
 
     iget-object v3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
@@ -332,12 +314,10 @@
 
     invoke-virtual {v2, v3}, Landroid/app/VoiceInteractor$AbortVoiceRequest;->onAbortResult(Landroid/os/Bundle;)V
 
-    .line 104
     invoke-virtual {v1}, Landroid/app/VoiceInteractor$Request;->clear()V
 
     goto/16 :goto_0
 
-    .line 108
     .end local v1    # "request":Landroid/app/VoiceInteractor$Request;
     :pswitch_3
     iget-object v5, p0, Landroid/app/VoiceInteractor$1;->this$0:Landroid/app/VoiceInteractor;
@@ -355,7 +335,6 @@
 
     move-result-object v1
 
-    .line 109
     .restart local v1    # "request":Landroid/app/VoiceInteractor$Request;
     const-string v3, "VoiceInteractor"
 
@@ -363,7 +342,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onCommandResult: req="
+    const-string v4, "onCommandResult: req="
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -409,12 +388,10 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     if-eqz v1, :cond_0
 
     move-object v2, v1
 
-    .line 113
     check-cast v2, Landroid/app/VoiceInteractor$CommandRequest;
 
     iget-object v3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
@@ -423,12 +400,10 @@
 
     invoke-virtual {v2, v3}, Landroid/app/VoiceInteractor$CommandRequest;->onCommandResult(Landroid/os/Bundle;)V
 
-    .line 114
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-eqz v2, :cond_0
 
-    .line 115
     invoke-virtual {v1}, Landroid/app/VoiceInteractor$Request;->clear()V
 
     goto/16 :goto_0
@@ -437,10 +412,8 @@
     :cond_2
     move v3, v4
 
-    .line 108
     goto :goto_1
 
-    .line 120
     :pswitch_4
     iget-object v4, p0, Landroid/app/VoiceInteractor$1;->this$0:Landroid/app/VoiceInteractor;
 
@@ -452,7 +425,6 @@
 
     move-result-object v1
 
-    .line 121
     .restart local v1    # "request":Landroid/app/VoiceInteractor$Request;
     const-string v3, "VoiceInteractor"
 
@@ -460,7 +432,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onCancelResult: req="
+    const-string v4, "onCancelResult: req="
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -494,18 +466,14 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     if-eqz v1, :cond_0
 
-    .line 124
     invoke-virtual {v1}, Landroid/app/VoiceInteractor$Request;->onCancel()V
 
-    .line 125
     invoke-virtual {v1}, Landroid/app/VoiceInteractor$Request;->clear()V
 
     goto/16 :goto_0
 
-    .line 75
     nop
 
     :pswitch_data_0

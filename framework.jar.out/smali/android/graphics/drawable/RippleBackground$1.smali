@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 361
     iput-object p1, p0, Landroid/graphics/drawable/RippleBackground$1;->this$0:Landroid/graphics/drawable/RippleBackground;
 
     iput p2, p0, Landroid/graphics/drawable/RippleBackground$1;->val$outerDuration:I
@@ -42,10 +41,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 378
     invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 379
     return-void
 .end method
 
@@ -56,10 +53,9 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 364
     iget-object v1, p0, Landroid/graphics/drawable/RippleBackground$1;->this$0:Landroid/graphics/drawable/RippleBackground;
 
-    const-string/jumbo v2, "outerOpacity"
+    const-string v2, "outerOpacity"
 
     new-array v3, v6, [F
 
@@ -73,18 +69,15 @@
 
     move-result-object v0
 
-    .line 366
     .local v0, "outerFadeOutAnim":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0, v6}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 367
     iget v1, p0, Landroid/graphics/drawable/RippleBackground$1;->val$outerDuration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 368
     # getter for: Landroid/graphics/drawable/RippleBackground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
     invoke-static {}, Landroid/graphics/drawable/RippleBackground;->access$000()Landroid/animation/TimeInterpolator;
 
@@ -92,7 +85,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 369
     iget-object v1, p0, Landroid/graphics/drawable/RippleBackground$1;->this$0:Landroid/graphics/drawable/RippleBackground;
 
     # getter for: Landroid/graphics/drawable/RippleBackground;->mAnimationListener:Landroid/animation/AnimatorListenerAdapter;
@@ -102,15 +94,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 371
     iget-object v1, p0, Landroid/graphics/drawable/RippleBackground$1;->this$0:Landroid/graphics/drawable/RippleBackground;
 
     # setter for: Landroid/graphics/drawable/RippleBackground;->mAnimOuterOpacity:Landroid/animation/ObjectAnimator;
     invoke-static {v1, v0}, Landroid/graphics/drawable/RippleBackground;->access$202(Landroid/graphics/drawable/RippleBackground;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
 
-    .line 373
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 374
     return-void
 .end method

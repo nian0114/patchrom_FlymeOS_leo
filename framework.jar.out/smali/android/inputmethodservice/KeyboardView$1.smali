@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 256
     iput-object p1, p0, Landroid/inputmethodservice/KeyboardView$1;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 259
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 276
     :cond_0
     :goto_0
     return-void
 
-    .line 261
     :pswitch_0
     iget-object v1, p0, Landroid/inputmethodservice/KeyboardView$1;->this$0:Landroid/inputmethodservice/KeyboardView;
 
@@ -59,7 +55,6 @@
 
     goto :goto_0
 
-    .line 264
     :pswitch_1
     iget-object v1, p0, Landroid/inputmethodservice/KeyboardView$1;->this$0:Landroid/inputmethodservice/KeyboardView;
 
@@ -74,7 +69,6 @@
 
     goto :goto_0
 
-    .line 267
     :pswitch_2
     iget-object v1, p0, Landroid/inputmethodservice/KeyboardView$1;->this$0:Landroid/inputmethodservice/KeyboardView;
 
@@ -85,14 +79,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 268
     const/4 v1, 0x3
 
     invoke-static {p0, v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 269
     .local v0, "repeat":Landroid/os/Message;
     const-wide/16 v2, 0x32
 
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 273
     .end local v0    # "repeat":Landroid/os/Message;
     :pswitch_3
     iget-object v2, p0, Landroid/inputmethodservice/KeyboardView$1;->this$0:Landroid/inputmethodservice/KeyboardView;
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 259
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

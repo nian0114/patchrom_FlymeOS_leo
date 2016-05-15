@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const-string v0, "content://contacts/settings"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -64,7 +63,6 @@
     .locals 0
 
     .prologue
-    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,22 +83,19 @@
 
     const/4 v7, 0x0
 
-    .line 202
     const-string v3, "key=?"
 
-    .line 203
     .local v3, "selectString":Ljava/lang/String;
     new-array v4, v0, [Ljava/lang/String;
 
     aput-object p2, v4, v7
 
-    .line 205
     .local v4, "selectArgs":[Ljava/lang/String;
     sget-object v1, Landroid/provider/Contacts$Settings;->CONTENT_URI:Landroid/net/Uri;
 
     new-array v2, v0, [Ljava/lang/String;
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     aput-object v0, v2, v7
 
@@ -110,7 +105,6 @@
 
     move-result-object v6
 
-    .line 208
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
@@ -121,13 +115,11 @@
 
     if-nez v0, :cond_0
 
-    .line 211
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :goto_0
     return-object v5
 
-    .line 209
     :cond_0
     const/4 v0, 0x0
 
@@ -138,7 +130,6 @@
 
     move-result-object v5
 
-    .line 211
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
@@ -163,27 +154,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 221
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 228
     .local v0, "values":Landroid/content/ContentValues;
     const-string v1, "key"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
-    const-string/jumbo v1, "value"
+    const-string v1, "value"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 230
     sget-object v1, Landroid/provider/Contacts$Settings;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v1, v0, v2, v2}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 231
     return-void
 .end method

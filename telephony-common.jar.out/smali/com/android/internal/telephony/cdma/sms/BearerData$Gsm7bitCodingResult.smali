@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 554
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p1, "x0"    # Lcom/android/internal/telephony/cdma/sms/BearerData$1;
 
     .prologue
-    .line 554
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/sms/BearerData$Gsm7bitCodingResult;-><init>()V
 
     return-void

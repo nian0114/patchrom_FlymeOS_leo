@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/android/internal/policy/impl/WakeGestureListener$1;->this$0:Lcom/android/internal/policy/impl/WakeGestureListener;
 
     invoke-direct {p0}, Landroid/hardware/TriggerEventListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "event"    # Landroid/hardware/TriggerEvent;
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/internal/policy/impl/WakeGestureListener$1;->this$0:Lcom/android/internal/policy/impl/WakeGestureListener;
 
     # getter for: Lcom/android/internal/policy/impl/WakeGestureListener;->mLock:Ljava/lang/Object;
@@ -48,7 +46,6 @@
 
     monitor-enter v1
 
-    .line 88
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/WakeGestureListener$1;->this$0:Lcom/android/internal/policy/impl/WakeGestureListener;
 
@@ -57,7 +54,6 @@
     # setter for: Lcom/android/internal/policy/impl/WakeGestureListener;->mTriggerRequested:Z
     invoke-static {v0, v2}, Lcom/android/internal/policy/impl/WakeGestureListener;->access$102(Lcom/android/internal/policy/impl/WakeGestureListener;Z)Z
 
-    .line 89
     iget-object v0, p0, Lcom/android/internal/policy/impl/WakeGestureListener$1;->this$0:Lcom/android/internal/policy/impl/WakeGestureListener;
 
     # getter for: Lcom/android/internal/policy/impl/WakeGestureListener;->mHandler:Landroid/os/Handler;
@@ -74,13 +70,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 90
     monitor-exit v1
 
-    .line 91
     return-void
 
-    .line 90
     :catchall_0
     move-exception v0
 

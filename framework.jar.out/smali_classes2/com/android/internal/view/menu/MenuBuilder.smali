@@ -147,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -180,86 +179,68 @@
 
     const/4 v0, 0x0
 
-    .line 186
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     iput v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mDefaultShowAsAction:I
 
-    .line 142
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
-    .line 143
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented:Z
 
-    .line 145
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mOptionalIconsVisible:Z
 
-    .line 147
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsClosing:Z
 
-    .line 149
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mTempShortcutItemList:Ljava/util/ArrayList;
 
-    .line 151
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 187
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mContext:Landroid/content/Context;
 
-    .line 188
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
-    .line 190
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
-    .line 192
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mVisibleItems:Ljava/util/ArrayList;
 
-    .line 193
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsVisibleItemsStale:Z
 
-    .line 195
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mActionItems:Ljava/util/ArrayList;
 
-    .line 196
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
-    .line 197
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsActionItemsStale:Z
 
-    .line 199
     invoke-direct {p0, v1}, Lcom/android/internal/view/menu/MenuBuilder;->setShortcutsVisibleInner(Z)V
 
-    .line 200
     return-void
 .end method
 
@@ -271,12 +252,10 @@
     .param p4, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 406
     invoke-static {p3}, Lcom/android/internal/view/menu/MenuBuilder;->getOrdering(I)I
 
     move-result v4
 
-    .line 408
     .local v4, "ordering":I
     iget v6, p0, Lcom/android/internal/view/menu/MenuBuilder;->mDefaultShowAsAction:I
 
@@ -294,18 +273,15 @@
 
     move-result-object v7
 
-    .line 411
     .local v7, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCurrentMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
     if-eqz v0, :cond_0
 
-    .line 413
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCurrentMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
     invoke-virtual {v7, v0}, Lcom/android/internal/view/menu/MenuItemImpl;->setMenuInfo(Landroid/view/ContextMenu$ContextMenuInfo;)V
 
-    .line 416
     :cond_0
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
@@ -317,12 +293,10 @@
 
     invoke-virtual {v0, v1, v7}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 417
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 419
     return-object v7
 .end method
 
@@ -336,7 +310,6 @@
     .param p6, "defaultShowAsAction"    # I
 
     .prologue
-    .line 425
     new-instance v0, Lcom/android/internal/view/menu/MenuItemImpl;
 
     move-object v1, p0
@@ -363,7 +336,6 @@
     .param p1, "cleared"    # Z
 
     .prologue
-    .line 249
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
@@ -372,15 +344,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 261
     :goto_0
     return-void
 
-    .line 251
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->stopDispatchingItemsChanged()V
 
-    .line 252
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -401,7 +370,6 @@
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 253
     .local v2, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -409,24 +377,20 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 254
     .local v1, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v1, :cond_1
 
-    .line 255
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 257
     :cond_1
     invoke-interface {v1, p1}, Lcom/android/internal/view/menu/MenuPresenter;->updateMenuView(Z)V
 
     goto :goto_1
 
-    .line 260
     .end local v1    # "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v2    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     :cond_2
@@ -440,14 +404,12 @@
     .param p1, "state"    # Landroid/os/Bundle;
 
     .prologue
-    .line 309
     const-string v6, "android:menu:presenters"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getSparseParcelableArray(Ljava/lang/String;)Landroid/util/SparseArray;
 
     move-result-object v4
 
-    .line 311
     .local v4, "presenterStates":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     if-eqz v4, :cond_0
 
@@ -459,11 +421,9 @@
 
     if-eqz v6, :cond_1
 
-    .line 327
     :cond_0
     return-void
 
-    .line 313
     :cond_1
     iget-object v6, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -486,7 +446,6 @@
 
     check-cast v5, Ljava/lang/ref/WeakReference;
 
-    .line 314
     .local v5, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v5}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -494,39 +453,32 @@
 
     check-cast v3, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 315
     .local v3, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v3, :cond_3
 
-    .line 316
     iget-object v6, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 318
     :cond_3
     invoke-interface {v3}, Lcom/android/internal/view/menu/MenuPresenter;->getId()I
 
     move-result v1
 
-    .line 319
     .local v1, "id":I
     if-lez v1, :cond_2
 
-    .line 320
     invoke-virtual {v4, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/Parcelable;
 
-    .line 321
     .local v2, "parcel":Landroid/os/Parcelable;
     if-eqz v2, :cond_2
 
-    .line 322
     invoke-interface {v3, v2}, Lcom/android/internal/view/menu/MenuPresenter;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     goto :goto_0
@@ -537,7 +489,6 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 286
     iget-object v6, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
@@ -546,17 +497,14 @@
 
     if-eqz v6, :cond_0
 
-    .line 306
     :goto_0
     return-void
 
-    .line 288
     :cond_0
     new-instance v3, Landroid/util/SparseArray;
 
     invoke-direct {v3}, Landroid/util/SparseArray;-><init>()V
 
-    .line 290
     .local v3, "presenterStates":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     iget-object v6, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -579,7 +527,6 @@
 
     check-cast v4, Ljava/lang/ref/WeakReference;
 
-    .line 291
     .local v4, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v4}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -587,42 +534,34 @@
 
     check-cast v2, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 292
     .local v2, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v2, :cond_2
 
-    .line 293
     iget-object v6, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v6, v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 295
     :cond_2
     invoke-interface {v2}, Lcom/android/internal/view/menu/MenuPresenter;->getId()I
 
     move-result v1
 
-    .line 296
     .local v1, "id":I
     if-lez v1, :cond_1
 
-    .line 297
     invoke-interface {v2}, Lcom/android/internal/view/menu/MenuPresenter;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v5
 
-    .line 298
     .local v5, "state":Landroid/os/Parcelable;
     if-eqz v5, :cond_1
 
-    .line 299
     invoke-virtual {v3, v1, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     goto :goto_1
 
-    .line 305
     .end local v1    # "id":I
     .end local v2    # "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v4    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
@@ -641,7 +580,6 @@
     .param p2, "preferredPresenter"    # Lcom/android/internal/view/menu/MenuPresenter;
 
     .prologue
-    .line 265
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
@@ -652,24 +590,19 @@
 
     const/4 v3, 0x0
 
-    .line 282
     :cond_0
     return v3
 
-    .line 267
     :cond_1
     const/4 v3, 0x0
 
-    .line 270
     .local v3, "result":Z
     if-eqz p2, :cond_2
 
-    .line 271
     invoke-interface {p2, p1}, Lcom/android/internal/view/menu/MenuPresenter;->onSubMenuSelected(Lcom/android/internal/view/menu/SubMenuBuilder;)Z
 
     move-result v3
 
-    .line 274
     :cond_2
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -692,7 +625,6 @@
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 275
     .local v2, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -700,22 +632,18 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 276
     .local v1, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v1, :cond_4
 
-    .line 277
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 278
     :cond_4
     if-nez v3, :cond_3
 
-    .line 279
     invoke-interface {v1, p1}, Lcom/android/internal/view/menu/MenuPresenter;->onSubMenuSelected(Lcom/android/internal/view/menu/SubMenuBuilder;)Z
 
     move-result v3
@@ -737,7 +665,6 @@
     .end annotation
 
     .prologue
-    .line 774
     .local p0, "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -749,14 +676,12 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 775
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 776
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getOrdering()I
 
@@ -764,22 +689,18 @@
 
     if-gt v2, p1, :cond_0
 
-    .line 777
     add-int/lit8 v2, v0, 0x1
 
-    .line 781
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :goto_1
     return v2
 
-    .line 774
     .restart local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 781
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
     const/4 v2, 0x0
@@ -792,14 +713,12 @@
     .param p0, "categoryOrder"    # I
 
     .prologue
-    .line 707
     const/high16 v1, -0x10000
 
     and-int/2addr v1, p0
 
     shr-int/lit8 v0, v1, 0x10
 
-    .line 709
     .local v0, "index":I
     if-ltz v0, :cond_0
 
@@ -809,7 +728,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 710
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -819,7 +737,6 @@
 
     throw v1
 
-    .line 713
     :cond_1
     sget-object v1, Lcom/android/internal/view/menu/MenuBuilder;->sCategoryToOrder:[I
 
@@ -842,7 +759,6 @@
     .param p2, "updateChildrenOnMenuViews"    # Z
 
     .prologue
-    .line 525
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
@@ -853,18 +769,15 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 530
     :cond_0
     :goto_0
     return-void
 
-    .line 527
     :cond_1
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 529
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -885,50 +798,39 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1128
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 1130
     .local v0, "r":Landroid/content/res/Resources;
     if-eqz p5, :cond_0
 
-    .line 1131
     iput-object p5, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderView:Landroid/view/View;
 
-    .line 1134
     iput-object v2, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderTitle:Ljava/lang/CharSequence;
 
-    .line 1135
     iput-object v2, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 1154
     :goto_0
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 1155
     return-void
 
-    .line 1137
     :cond_0
     if-lez p1, :cond_3
 
-    .line 1138
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderTitle:Ljava/lang/CharSequence;
 
-    .line 1143
     :cond_1
     :goto_1
     if-lez p3, :cond_4
 
-    .line 1144
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -939,27 +841,22 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 1150
     :cond_2
     :goto_2
     iput-object v2, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderView:Landroid/view/View;
 
     goto :goto_0
 
-    .line 1139
     :cond_3
     if-eqz p2, :cond_1
 
-    .line 1140
     iput-object p2, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderTitle:Ljava/lang/CharSequence;
 
     goto :goto_1
 
-    .line 1145
     :cond_4
     if-eqz p4, :cond_2
 
-    .line 1146
     iput-object p4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderIcon:Landroid/graphics/drawable/Drawable;
 
     goto :goto_2
@@ -972,7 +869,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 739
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
@@ -998,10 +894,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mShortcutsVisible:Z
 
-    .line 743
     return-void
 
-    .line 739
     :cond_0
     const/4 v0, 0x0
 
@@ -1017,7 +911,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 434
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1039,7 +932,6 @@
     .param p4, "title"    # I
 
     .prologue
-    .line 442
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1061,7 +953,6 @@
     .param p4, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 438
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/view/menu/MenuBuilder;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object v0
@@ -1076,7 +967,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 430
     invoke-direct {p0, v0, v0, v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object v0
@@ -1096,14 +986,12 @@
     .param p8, "outSpecificItems"    # [Landroid/view/MenuItem;
 
     .prologue
-    .line 467
     iget-object v10, p0, Lcom/android/internal/view/menu/MenuBuilder;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
-    .line 468
     .local v7, "pm":Landroid/content/pm/PackageManager;
     const/4 v10, 0x0
 
@@ -1117,7 +1005,6 @@
 
     move-result-object v6
 
-    .line 470
     .local v6, "lri":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v6, :cond_2
 
@@ -1125,17 +1012,14 @@
 
     move-result v3
 
-    .line 472
     .local v3, "N":I
     :goto_0
     and-int/lit8 v10, p7, 0x1
 
     if-nez v10, :cond_0
 
-    .line 473
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->removeGroup(I)V
 
-    .line 476
     :cond_0
     const/4 v4, 0x0
 
@@ -1143,14 +1027,12 @@
     :goto_1
     if-ge v4, v3, :cond_4
 
-    .line 477
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/content/pm/ResolveInfo;
 
-    .line 478
     .local v8, "ri":Landroid/content/pm/ResolveInfo;
     new-instance v9, Landroid/content/Intent;
 
@@ -1163,7 +1045,6 @@
     :goto_2
     invoke-direct {v9, v10}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 480
     .local v9, "rintent":Landroid/content/Intent;
     new-instance v10, Landroid/content/ComponentName;
 
@@ -1181,7 +1062,6 @@
 
     invoke-virtual {v9, v10}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 483
     invoke-virtual {v8, v7}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v10
@@ -1204,7 +1084,6 @@
 
     move-result-object v5
 
-    .line 486
     .local v5, "item":Landroid/view/MenuItem;
     if-eqz p8, :cond_1
 
@@ -1212,18 +1091,15 @@
 
     if-ltz v10, :cond_1
 
-    .line 487
     iget v10, v8, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
     aput-object v5, p8, v10
 
-    .line 476
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 470
     .end local v3    # "N":I
     .end local v4    # "i":I
     .end local v5    # "item":Landroid/view/MenuItem;
@@ -1234,7 +1110,6 @@
 
     goto :goto_0
 
-    .line 478
     .restart local v3    # "N":I
     .restart local v4    # "i":I
     .restart local v8    # "ri":Landroid/content/pm/ResolveInfo;
@@ -1245,7 +1120,6 @@
 
     goto :goto_2
 
-    .line 491
     .end local v8    # "ri":Landroid/content/pm/ResolveInfo;
     :cond_4
     return v3
@@ -1256,12 +1130,10 @@
     .param p1, "presenter"    # Lcom/android/internal/view/menu/MenuPresenter;
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/view/menu/MenuBuilder;->addMenuPresenter(Lcom/android/internal/view/menu/MenuPresenter;Landroid/content/Context;)V
 
-    .line 216
     return-void
 .end method
 
@@ -1271,7 +1143,6 @@
     .param p2, "menuContext"    # Landroid/content/Context;
 
     .prologue
-    .line 228
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -1280,15 +1151,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 229
     invoke-interface {p1, p2, p0}, Lcom/android/internal/view/menu/MenuPresenter;->initForMenu(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;)V
 
-    .line 230
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsActionItemsStale:Z
 
-    .line 231
     return-void
 .end method
 
@@ -1299,7 +1167,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 450
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1321,7 +1188,6 @@
     .param p4, "title"    # I
 
     .prologue
-    .line 462
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1343,14 +1209,12 @@
     .param p4, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 454
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/view/menu/MenuBuilder;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 455
     .local v0, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     new-instance v1, Lcom/android/internal/view/menu/SubMenuBuilder;
 
@@ -1358,11 +1222,9 @@
 
     invoke-direct {v1, v2, p0, v0}, Lcom/android/internal/view/menu/SubMenuBuilder;-><init>(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;Lcom/android/internal/view/menu/MenuItemImpl;)V
 
-    .line 456
     .local v1, "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     invoke-virtual {v0, v1}, Lcom/android/internal/view/menu/MenuItemImpl;->setSubMenu(Lcom/android/internal/view/menu/SubMenuBuilder;)V
 
-    .line 458
     return-object v1
 .end method
 
@@ -1373,7 +1235,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 446
     invoke-virtual {p0, v0, v0, v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
 
     move-result-object v0
@@ -1385,17 +1246,14 @@
     .locals 1
 
     .prologue
-    .line 768
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCallback:Lcom/android/internal/view/menu/MenuBuilder$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 769
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCallback:Lcom/android/internal/view/menu/MenuBuilder$Callback;
 
     invoke-interface {v0, p0}, Lcom/android/internal/view/menu/MenuBuilder$Callback;->onMenuModeChange(Lcom/android/internal/view/menu/MenuBuilder;)V
 
-    .line 771
     :cond_0
     return-void
 .end method
@@ -1404,28 +1262,23 @@
     .locals 1
 
     .prologue
-    .line 546
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mExpandedItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     if-eqz v0, :cond_0
 
-    .line 547
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mExpandedItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->collapseItemActionView(Lcom/android/internal/view/menu/MenuItemImpl;)Z
 
-    .line 549
     :cond_0
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 551
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 552
     return-void
 .end method
 
@@ -1437,25 +1290,18 @@
 
     const/4 v0, 0x0
 
-    .line 537
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
-    .line 538
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->clear()V
 
-    .line 539
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->clearHeader()V
 
-    .line 540
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
-    .line 541
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented:Z
 
-    .line 542
     invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 543
     return-void
 .end method
 
@@ -1465,21 +1311,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1119
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 1120
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderTitle:Ljava/lang/CharSequence;
 
-    .line 1121
     iput-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderView:Landroid/view/View;
 
-    .line 1123
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 1124
     return-void
 .end method
 
@@ -1487,12 +1328,10 @@
     .locals 1
 
     .prologue
-    .line 959
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->close(Z)V
 
-    .line 960
     return-void
 .end method
 
@@ -1501,22 +1340,18 @@
     .param p1, "allMenusAreClosing"    # Z
 
     .prologue
-    .line 943
     iget-boolean v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsClosing:Z
 
     if-eqz v3, :cond_0
 
-    .line 955
     :goto_0
     return-void
 
-    .line 945
     :cond_0
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsClosing:Z
 
-    .line 946
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -1537,7 +1372,6 @@
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 947
     .local v2, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1545,24 +1379,20 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 948
     .local v1, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v1, :cond_1
 
-    .line 949
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 951
     :cond_1
     invoke-interface {v1, p0, p1}, Lcom/android/internal/view/menu/MenuPresenter;->onCloseMenu(Lcom/android/internal/view/menu/MenuBuilder;Z)V
 
     goto :goto_1
 
-    .line 954
     .end local v1    # "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v2    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     :cond_2
@@ -1578,7 +1408,6 @@
     .param p1, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 1279
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
@@ -1594,20 +1423,16 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1297
     :cond_1
     :goto_0
     return v0
 
-    .line 1281
     :cond_2
     const/4 v0, 0x0
 
-    .line 1283
     .local v0, "collapsed":Z
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->stopDispatchingItemsChanged()V
 
-    .line 1284
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -1629,7 +1454,6 @@
 
     check-cast v3, Ljava/lang/ref/WeakReference;
 
-    .line 1285
     .local v3, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1637,18 +1461,15 @@
 
     check-cast v2, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 1286
     .local v2, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v2, :cond_4
 
-    .line 1287
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1288
     :cond_4
     invoke-interface {v2, p0, p1}, Lcom/android/internal/view/menu/MenuPresenter;->collapseItemActionView(Lcom/android/internal/view/menu/MenuBuilder;Lcom/android/internal/view/menu/MenuItemImpl;)Z
 
@@ -1656,16 +1477,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 1292
     .end local v2    # "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v3    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     :cond_5
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->startDispatchingItemsChanged()V
 
-    .line 1294
     if-eqz v0, :cond_1
 
-    .line 1295
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mExpandedItem:Lcom/android/internal/view/menu/MenuItemImpl;
@@ -1679,7 +1497,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 761
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCallback:Lcom/android/internal/view/menu/MenuBuilder$Callback;
 
     if-eqz v0, :cond_0
@@ -1708,7 +1525,6 @@
     .param p1, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 1257
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
@@ -1719,20 +1535,16 @@
 
     const/4 v0, 0x0
 
-    .line 1275
     :cond_0
     :goto_0
     return v0
 
-    .line 1259
     :cond_1
     const/4 v0, 0x0
 
-    .line 1261
     .local v0, "expanded":Z
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->stopDispatchingItemsChanged()V
 
-    .line 1262
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -1754,7 +1566,6 @@
 
     check-cast v3, Ljava/lang/ref/WeakReference;
 
-    .line 1263
     .local v3, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1762,18 +1573,15 @@
 
     check-cast v2, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 1264
     .local v2, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v2, :cond_3
 
-    .line 1265
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1266
     :cond_3
     invoke-interface {v2, p0, p1}, Lcom/android/internal/view/menu/MenuPresenter;->expandItemActionView(Lcom/android/internal/view/menu/MenuBuilder;Lcom/android/internal/view/menu/MenuItemImpl;)Z
 
@@ -1781,16 +1589,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 1270
     .end local v2    # "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v3    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     :cond_4
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->startDispatchingItemsChanged()V
 
-    .line 1272
     if-eqz v0, :cond_0
 
-    .line 1273
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mExpandedItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     goto :goto_0
@@ -1801,7 +1606,6 @@
     .param p1, "group"    # I
 
     .prologue
-    .line 655
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/view/menu/MenuBuilder;->findGroupIndex(II)I
@@ -1817,19 +1621,15 @@
     .param p2, "start"    # I
 
     .prologue
-    .line 659
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->size()I
 
     move-result v2
 
-    .line 661
     .local v2, "size":I
     if-gez p2, :cond_0
 
-    .line 662
     const/4 p2, 0x0
 
-    .line 665
     :cond_0
     move v0, p2
 
@@ -1837,7 +1637,6 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 666
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1846,7 +1645,6 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 668
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getGroupId()I
 
@@ -1854,13 +1652,11 @@
 
     if-ne v3, p1, :cond_1
 
-    .line 673
     .end local v0    # "i":I
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :goto_1
     return v0
 
-    .line 665
     .restart local v0    # "i":I
     .restart local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
@@ -1868,7 +1664,6 @@
 
     goto :goto_0
 
-    .line 673
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_2
     const/4 v0, -0x1
@@ -1881,12 +1676,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 624
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->size()I
 
     move-result v3
 
-    .line 625
     .local v3, "size":I
     const/4 v0, 0x0
 
@@ -1894,7 +1687,6 @@
     :goto_0
     if-ge v0, v3, :cond_2
 
-    .line 626
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1903,7 +1695,6 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 627
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getItemId()I
 
@@ -1911,12 +1702,10 @@
 
     if-ne v4, p1, :cond_0
 
-    .line 638
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :goto_1
     return-object v1
 
-    .line 629
     .restart local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_0
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
@@ -1925,7 +1714,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 630
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getSubMenu()Landroid/view/SubMenu;
 
     move-result-object v4
@@ -1934,23 +1722,19 @@
 
     move-result-object v2
 
-    .line 632
     .local v2, "possibleItem":Landroid/view/MenuItem;
     if-eqz v2, :cond_1
 
     move-object v1, v2
 
-    .line 633
     goto :goto_1
 
-    .line 625
     .end local v2    # "possibleItem":Landroid/view/MenuItem;
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 638
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_2
     const/4 v1, 0x0
@@ -1963,12 +1747,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 642
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->size()I
 
     move-result v2
 
-    .line 644
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -1976,7 +1758,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 645
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1985,7 +1766,6 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 646
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getItemId()I
 
@@ -1993,13 +1773,11 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 651
     .end local v0    # "i":I
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :goto_1
     return v0
 
-    .line 644
     .restart local v0    # "i":I
     .restart local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_0
@@ -2007,7 +1785,6 @@
 
     goto :goto_0
 
-    .line 651
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
     const/4 v0, -0x1
@@ -2025,56 +1802,45 @@
 
     const/4 v11, 0x0
 
-    .line 850
     iget-object v2, p0, Lcom/android/internal/view/menu/MenuBuilder;->mTempShortcutItemList:Ljava/util/ArrayList;
 
-    .line 851
     .local v2, "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 852
     invoke-virtual {p0, v2, p1, p2}, Lcom/android/internal/view/menu/MenuBuilder;->findItemsWithShortcutForKey(Ljava/util/List;ILandroid/view/KeyEvent;)V
 
-    .line 854
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 885
     :cond_0
     :goto_0
     return-object v8
 
-    .line 858
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result v3
 
-    .line 859
     .local v3, "metaState":I
     new-instance v4, Landroid/view/KeyCharacterMap$KeyData;
 
     invoke-direct {v4}, Landroid/view/KeyCharacterMap$KeyData;-><init>()V
 
-    .line 861
     .local v4, "possibleChars":Landroid/view/KeyCharacterMap$KeyData;
     invoke-virtual {p2, v4}, Landroid/view/KeyEvent;->getKeyData(Landroid/view/KeyCharacterMap$KeyData;)Z
 
-    .line 864
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
-    .line 865
     .local v7, "size":I
     const/4 v9, 0x1
 
     if-ne v7, v9, :cond_2
 
-    .line 866
     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -2083,13 +1849,11 @@
 
     goto :goto_0
 
-    .line 869
     :cond_2
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->isQwertyMode()Z
 
     move-result v5
 
-    .line 872
     .local v5, "qwerty":Z
     const/4 v0, 0x0
 
@@ -2097,14 +1861,12 @@
     :goto_1
     if-ge v0, v7, :cond_0
 
-    .line 873
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 874
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     if-eqz v5, :cond_6
 
@@ -2112,7 +1874,6 @@
 
     move-result v6
 
-    .line 876
     .local v6, "shortcutChar":C
     :goto_2
     iget-object v9, v4, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
@@ -2152,10 +1913,8 @@
     :cond_5
     move-object v8, v1
 
-    .line 882
     goto :goto_0
 
-    .line 874
     .end local v6    # "shortcutChar":C
     :cond_6
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getNumericShortcut()C
@@ -2164,7 +1923,6 @@
 
     goto :goto_2
 
-    .line 872
     .restart local v6    # "shortcutChar":C
     :cond_7
     add-int/lit8 v0, v0, 0x1
@@ -2192,40 +1950,33 @@
     .local p1, "items":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     const/16 v10, 0x43
 
-    .line 807
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->isQwertyMode()Z
 
     move-result v6
 
-    .line 808
     .local v6, "qwerty":Z
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result v4
 
-    .line 809
     .local v4, "metaState":I
     new-instance v5, Landroid/view/KeyCharacterMap$KeyData;
 
     invoke-direct {v5}, Landroid/view/KeyCharacterMap$KeyData;-><init>()V
 
-    .line 811
     .local v5, "possibleChars":Landroid/view/KeyCharacterMap$KeyData;
     invoke-virtual {p3, v5}, Landroid/view/KeyEvent;->getKeyData(Landroid/view/KeyCharacterMap$KeyData;)Z
 
     move-result v2
 
-    .line 813
     .local v2, "isKeyCodeMapped":Z
     if-nez v2, :cond_1
 
     if-eq p2, v10, :cond_1
 
-    .line 835
     :cond_0
     return-void
 
-    .line 818
     :cond_1
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
@@ -2233,7 +1984,6 @@
 
     move-result v0
 
-    .line 819
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -2241,7 +1991,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 820
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2250,7 +1999,6 @@
 
     check-cast v3, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 821
     .local v3, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
 
@@ -2258,7 +2006,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 822
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->getSubMenu()Landroid/view/SubMenu;
 
     move-result-object v8
@@ -2267,7 +2014,6 @@
 
     invoke-virtual {v8, p1, p2, p3}, Lcom/android/internal/view/menu/MenuBuilder;->findItemsWithShortcutForKey(Ljava/util/List;ILandroid/view/KeyEvent;)V
 
-    .line 824
     :cond_2
     if-eqz v6, :cond_5
 
@@ -2275,7 +2021,6 @@
 
     move-result v7
 
-    .line 825
     .local v7, "shortcutChar":C
     :goto_1
     and-int/lit8 v8, v4, 0x5
@@ -2315,16 +2060,13 @@
 
     if-eqz v8, :cond_4
 
-    .line 832
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 819
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 824
     .end local v7    # "shortcutChar":C
     :cond_5
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->getNumericShortcut()C
@@ -2338,26 +2080,21 @@
     .locals 10
 
     .prologue
-    .line 1069
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
 
     move-result-object v7
 
-    .line 1071
     .local v7, "visibleItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     iget-boolean v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsActionItemsStale:Z
 
     if-nez v8, :cond_0
 
-    .line 1106
     :goto_0
     return-void
 
-    .line 1076
     :cond_0
     const/4 v0, 0x0
 
-    .line 1077
     .local v0, "flagged":Z
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -2379,7 +2116,6 @@
 
     check-cast v6, Ljava/lang/ref/WeakReference;
 
-    .line 1078
     .local v6, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v6}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -2387,18 +2123,15 @@
 
     check-cast v5, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 1079
     .local v5, "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     if-nez v5, :cond_1
 
-    .line 1080
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v8, v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1082
     :cond_1
     invoke-interface {v5}, Lcom/android/internal/view/menu/MenuPresenter;->flagActionItems()Z
 
@@ -2408,28 +2141,23 @@
 
     goto :goto_1
 
-    .line 1086
     .end local v5    # "presenter":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v6    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     :cond_2
     if-eqz v0, :cond_4
 
-    .line 1087
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mActionItems:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1088
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1089
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 1090
     .local v4, "itemsSize":I
     const/4 v1, 0x0
 
@@ -2437,14 +2165,12 @@
     :goto_2
     if-ge v1, v4, :cond_5
 
-    .line 1091
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 1092
     .local v3, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->isActionButton()Z
 
@@ -2452,18 +2178,15 @@
 
     if-eqz v8, :cond_3
 
-    .line 1093
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mActionItems:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1090
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 1095
     :cond_3
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
@@ -2471,7 +2194,6 @@
 
     goto :goto_3
 
-    .line 1101
     .end local v1    # "i":I
     .end local v3    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     .end local v4    # "itemsSize":I
@@ -2480,12 +2202,10 @@
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1102
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1103
     iget-object v8, p0, Lcom/android/internal/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
@@ -2494,7 +2214,6 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1105
     :cond_5
     const/4 v8, 0x0
 
@@ -2516,10 +2235,8 @@
     .end annotation
 
     .prologue
-    .line 1109
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->flagActionItems()V
 
-    .line 1110
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mActionItems:Ljava/util/ArrayList;
 
     return-object v0
@@ -2529,7 +2246,6 @@
     .locals 1
 
     .prologue
-    .line 395
     const-string v0, "android:menu:actionviewstates"
 
     return-object v0
@@ -2539,7 +2255,6 @@
     .locals 1
 
     .prologue
-    .line 757
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -2549,7 +2264,6 @@
     .locals 1
 
     .prologue
-    .line 1301
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mExpandedItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     return-object v0
@@ -2559,7 +2273,6 @@
     .locals 1
 
     .prologue
-    .line 1222
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -2569,7 +2282,6 @@
     .locals 1
 
     .prologue
-    .line 1218
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderTitle:Ljava/lang/CharSequence;
 
     return-object v0
@@ -2579,7 +2291,6 @@
     .locals 1
 
     .prologue
-    .line 1226
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mHeaderView:Landroid/view/View;
 
     return-object v0
@@ -2590,7 +2301,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 682
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2615,10 +2325,8 @@
     .end annotation
 
     .prologue
-    .line 1114
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->flagActionItems()V
 
-    .line 1115
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
     return-object v0
@@ -2628,7 +2336,6 @@
     .locals 1
 
     .prologue
-    .line 1253
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mOptionalIconsVisible:Z
 
     return v0
@@ -2638,7 +2345,6 @@
     .locals 1
 
     .prologue
-    .line 753
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
     return-object v0
@@ -2648,7 +2354,6 @@
     .locals 0
 
     .prologue
-    .line 1234
     return-object p0
 .end method
 
@@ -2665,31 +2370,26 @@
     .end annotation
 
     .prologue
-    .line 1024
     iget-boolean v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsVisibleItemsStale:Z
 
     if-nez v3, :cond_0
 
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mVisibleItems:Ljava/util/ArrayList;
 
-    .line 1039
     :goto_0
     return-object v3
 
-    .line 1027
     :cond_0
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mVisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 1029
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 1031
     .local v2, "itemsSize":I
     const/4 v0, 0x0
 
@@ -2697,7 +2397,6 @@
     :goto_1
     if-ge v0, v2, :cond_2
 
-    .line 1032
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2706,7 +2405,6 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 1033
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->isVisible()Z
 
@@ -2718,25 +2416,21 @@
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1031
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1036
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_2
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsVisibleItemsStale:Z
 
-    .line 1037
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsActionItemsStale:Z
 
-    .line 1039
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mVisibleItems:Ljava/util/ArrayList;
 
     goto :goto_0
@@ -2746,12 +2440,10 @@
     .locals 4
 
     .prologue
-    .line 611
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->size()I
 
     move-result v2
 
-    .line 613
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -2759,7 +2451,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 614
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2768,7 +2459,6 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 615
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->isVisible()Z
 
@@ -2776,22 +2466,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 616
     const/4 v3, 0x1
 
-    .line 620
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :goto_1
     return v3
 
-    .line 613
     .restart local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 620
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
     const/4 v3, 0x0
@@ -2803,7 +2489,6 @@
     .locals 1
 
     .prologue
-    .line 720
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mQwertyMode:Z
 
     return v0
@@ -2815,7 +2500,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 686
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/view/menu/MenuBuilder;->findItemWithShortcutForKey(ILandroid/view/KeyEvent;)Lcom/android/internal/view/menu/MenuItemImpl;
 
     move-result-object v0
@@ -2837,7 +2521,6 @@
     .locals 1
 
     .prologue
-    .line 749
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mShortcutsVisible:Z
 
     return v0
@@ -2850,13 +2533,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1019
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsActionItemsStale:Z
 
-    .line 1020
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 1021
     return-void
 .end method
 
@@ -2867,13 +2547,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1009
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsVisibleItemsStale:Z
 
-    .line 1010
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 1011
     return-void
 .end method
 
@@ -2884,29 +2561,22 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 970
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
     if-nez v0, :cond_1
 
-    .line 971
     if-eqz p1, :cond_0
 
-    .line 972
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsVisibleItemsStale:Z
 
-    .line 973
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mIsActionItemsStale:Z
 
-    .line 976
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->dispatchPresenterUpdate(Z)V
 
-    .line 980
     :goto_0
     return-void
 
-    .line 978
     :cond_1
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented:Z
 
@@ -2919,7 +2589,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 890
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
@@ -2937,7 +2606,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 894
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/internal/view/menu/MenuBuilder;->performItemAction(Landroid/view/MenuItem;Lcom/android/internal/view/menu/MenuPresenter;I)Z
@@ -2958,12 +2626,10 @@
 
     const/4 v5, 0x1
 
-    .line 898
     move-object v1, p1
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 900
     .local v1, "itemImpl":Lcom/android/internal/view/menu/MenuItemImpl;
     if-eqz v1, :cond_0
 
@@ -2976,24 +2642,20 @@
     :cond_0
     move v0, v6
 
-    .line 930
     :cond_1
     :goto_0
     return v0
 
-    .line 904
     :cond_2
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->invoke()Z
 
     move-result v0
 
-    .line 906
     .local v0, "invoked":Z
     invoke-interface {p1}, Landroid/view/MenuItem;->getActionProvider()Landroid/view/ActionProvider;
 
     move-result-object v2
 
-    .line 907
     .local v2, "provider":Landroid/view/ActionProvider;
     if-eqz v2, :cond_3
 
@@ -3005,7 +2667,6 @@
 
     move v3, v5
 
-    .line 908
     .local v3, "providerHasSubMenu":Z
     :goto_1
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->hasCollapsibleActionView()Z
@@ -3014,14 +2675,12 @@
 
     if-eqz v7, :cond_4
 
-    .line 909
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->expandActionView()Z
 
     move-result v6
 
     or-int/2addr v0, v6
 
-    .line 910
     if-eqz v0, :cond_1
 
     invoke-virtual {p0, v5}, Lcom/android/internal/view/menu/MenuBuilder;->close(Z)V
@@ -3032,10 +2691,8 @@
     :cond_3
     move v3, v6
 
-    .line 907
     goto :goto_1
 
-    .line 911
     .restart local v3    # "providerHasSubMenu":Z
     :cond_4
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
@@ -3046,18 +2703,15 @@
 
     if-eqz v3, :cond_8
 
-    .line 912
     :cond_5
     invoke-virtual {p0, v6}, Lcom/android/internal/view/menu/MenuBuilder;->close(Z)V
 
-    .line 914
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
 
     move-result v6
 
     if-nez v6, :cond_6
 
-    .line 915
     new-instance v6, Lcom/android/internal/view/menu/SubMenuBuilder;
 
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
@@ -3068,7 +2722,6 @@
 
     invoke-virtual {v1, v6}, Lcom/android/internal/view/menu/MenuItemImpl;->setSubMenu(Lcom/android/internal/view/menu/SubMenuBuilder;)V
 
-    .line 918
     :cond_6
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getSubMenu()Landroid/view/SubMenu;
 
@@ -3076,14 +2729,11 @@
 
     check-cast v4, Lcom/android/internal/view/menu/SubMenuBuilder;
 
-    .line 919
     .local v4, "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     if-eqz v3, :cond_7
 
-    .line 920
     invoke-virtual {v2, v4}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
 
-    .line 922
     :cond_7
     invoke-direct {p0, v4, p2}, Lcom/android/internal/view/menu/MenuBuilder;->dispatchSubMenuSelected(Lcom/android/internal/view/menu/SubMenuBuilder;Lcom/android/internal/view/menu/MenuPresenter;)Z
 
@@ -3091,21 +2741,18 @@
 
     or-int/2addr v0, v6
 
-    .line 923
     if-nez v0, :cond_1
 
     invoke-virtual {p0, v5}, Lcom/android/internal/view/menu/MenuBuilder;->close(Z)V
 
     goto :goto_0
 
-    .line 925
     .end local v4    # "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     :cond_8
     and-int/lit8 v6, p3, 0x1
 
     if-nez v6, :cond_1
 
-    .line 926
     invoke-virtual {p0, v5}, Lcom/android/internal/view/menu/MenuBuilder;->close(Z)V
 
     goto :goto_0
@@ -3118,36 +2765,29 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 785
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/view/menu/MenuBuilder;->findItemWithShortcutForKey(ILandroid/view/KeyEvent;)Lcom/android/internal/view/menu/MenuItemImpl;
 
     move-result-object v1
 
-    .line 787
     .local v1, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     const/4 v0, 0x0
 
-    .line 789
     .local v0, "handled":Z
     if-eqz v1, :cond_0
 
-    .line 790
     invoke-virtual {p0, v1, p3}, Lcom/android/internal/view/menu/MenuBuilder;->performItemAction(Landroid/view/MenuItem;I)Z
 
     move-result v0
 
-    .line 793
     :cond_0
     and-int/lit8 v2, p3, 0x2
 
     if-eqz v2, :cond_1
 
-    .line 794
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Lcom/android/internal/view/menu/MenuBuilder;->close(Z)V
 
-    .line 797
     :cond_1
     return v0
 .end method
@@ -3157,16 +2797,13 @@
     .param p1, "group"    # I
 
     .prologue
-    .line 499
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->findGroupIndex(I)I
 
     move-result v0
 
-    .line 501
     .local v0, "i":I
     if-ltz v0, :cond_1
 
-    .line 502
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -3175,14 +2812,12 @@
 
     sub-int v1, v4, v0
 
-    .line 503
     .local v1, "maxRemovable":I
     const/4 v2, 0x0
 
     .local v2, "numRemoved":I
     move v3, v2
 
-    .line 504
     .end local v2    # "numRemoved":I
     .local v3, "numRemoved":I
     :goto_0
@@ -3206,7 +2841,6 @@
 
     if-ne v4, p1, :cond_0
 
-    .line 506
     const/4 v4, 0x0
 
     invoke-direct {p0, v0, v4}, Lcom/android/internal/view/menu/MenuBuilder;->removeItemAtInt(IZ)V
@@ -3217,7 +2851,6 @@
     .restart local v3    # "numRemoved":I
     goto :goto_0
 
-    .line 510
     .end local v3    # "numRemoved":I
     .restart local v2    # "numRemoved":I
     :cond_0
@@ -3225,7 +2858,6 @@
 
     invoke-virtual {p0, v4}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 512
     .end local v1    # "maxRemovable":I
     .end local v2    # "numRemoved":I
     :cond_1
@@ -3237,7 +2869,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 495
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->findItemIndex(I)I
 
     move-result v0
@@ -3246,7 +2877,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/view/menu/MenuBuilder;->removeItemAtInt(IZ)V
 
-    .line 496
     return-void
 .end method
 
@@ -3255,12 +2885,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 533
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/view/menu/MenuBuilder;->removeItemAtInt(IZ)V
 
-    .line 534
     return-void
 .end method
 
@@ -3269,7 +2897,6 @@
     .param p1, "presenter"    # Lcom/android/internal/view/menu/MenuPresenter;
 
     .prologue
-    .line 240
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -3291,7 +2918,6 @@
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 241
     .local v2, "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -3299,13 +2925,11 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuPresenter;
 
-    .line 242
     .local v1, "item":Lcom/android/internal/view/menu/MenuPresenter;
     if-eqz v1, :cond_1
 
     if-ne v1, p1, :cond_0
 
-    .line 243
     :cond_1
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -3313,7 +2937,6 @@
 
     goto :goto_0
 
-    .line 246
     .end local v1    # "item":Lcom/android/internal/view/menu/MenuPresenter;
     .end local v2    # "ref":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/android/internal/view/menu/MenuPresenter;>;"
     :cond_2
@@ -3325,15 +2948,12 @@
     .param p1, "states"    # Landroid/os/Bundle;
 
     .prologue
-    .line 365
     if-nez p1, :cond_1
 
-    .line 392
     :cond_0
     :goto_0
     return-void
 
-    .line 369
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getActionViewStatesKey()Ljava/lang/String;
 
@@ -3343,13 +2963,11 @@
 
     move-result-object v7
 
-    .line 372
     .local v7, "viewStates":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->size()I
 
     move-result v3
 
-    .line 373
     .local v3, "itemCount":I
     const/4 v1, 0x0
 
@@ -3357,18 +2975,15 @@
     :goto_1
     if-ge v1, v3, :cond_4
 
-    .line 374
     invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/MenuBuilder;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v2
 
-    .line 375
     .local v2, "item":Landroid/view/MenuItem;
     invoke-interface {v2}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
 
     move-result-object v6
 
-    .line 376
     .local v6, "v":Landroid/view/View;
     if-eqz v6, :cond_2
 
@@ -3380,10 +2995,8 @@
 
     if-eq v8, v9, :cond_2
 
-    .line 377
     invoke-virtual {v6, v7}, Landroid/view/View;->restoreHierarchyState(Landroid/util/SparseArray;)V
 
-    .line 379
     :cond_2
     invoke-interface {v2}, Landroid/view/MenuItem;->hasSubMenu()Z
 
@@ -3391,25 +3004,21 @@
 
     if-eqz v8, :cond_3
 
-    .line 380
     invoke-interface {v2}, Landroid/view/MenuItem;->getSubMenu()Landroid/view/SubMenu;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/internal/view/menu/SubMenuBuilder;
 
-    .line 381
     .local v5, "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     invoke-virtual {v5, p1}, Lcom/android/internal/view/menu/SubMenuBuilder;->restoreActionViewStates(Landroid/os/Bundle;)V
 
-    .line 373
     .end local v5    # "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 385
     .end local v2    # "item":Landroid/view/MenuItem;
     .end local v6    # "v":Landroid/view/View;
     :cond_4
@@ -3419,20 +3028,16 @@
 
     move-result v0
 
-    .line 386
     .local v0, "expandedId":I
     if-lez v0, :cond_0
 
-    .line 387
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v4
 
-    .line 388
     .local v4, "itemToExpand":Landroid/view/MenuItem;
     if-eqz v4, :cond_0
 
-    .line 389
     invoke-interface {v4}, Landroid/view/MenuItem;->expandActionView()Z
 
     goto :goto_0
@@ -3443,10 +3048,8 @@
     .param p1, "state"    # Landroid/os/Bundle;
 
     .prologue
-    .line 334
     invoke-direct {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->dispatchRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 335
     return-void
 .end method
 
@@ -3455,16 +3058,13 @@
     .param p1, "outStates"    # Landroid/os/Bundle;
 
     .prologue
-    .line 338
     const/4 v5, 0x0
 
-    .line 340
     .local v5, "viewStates":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->size()I
 
     move-result v2
 
-    .line 341
     .local v2, "itemCount":I
     const/4 v0, 0x0
 
@@ -3472,18 +3072,15 @@
     :goto_0
     if-ge v0, v2, :cond_3
 
-    .line 342
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v1
 
-    .line 343
     .local v1, "item":Landroid/view/MenuItem;
     invoke-interface {v1}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
 
     move-result-object v4
 
-    .line 344
     .local v4, "v":Landroid/view/View;
     if-eqz v4, :cond_1
 
@@ -3495,28 +3092,23 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 345
     if-nez v5, :cond_0
 
-    .line 346
     new-instance v5, Landroid/util/SparseArray;
 
     .end local v5    # "viewStates":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-direct {v5}, Landroid/util/SparseArray;-><init>()V
 
-    .line 348
     .restart local v5    # "viewStates":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     :cond_0
     invoke-virtual {v4, v5}, Landroid/view/View;->saveHierarchyState(Landroid/util/SparseArray;)V
 
-    .line 349
     invoke-interface {v1}, Landroid/view/MenuItem;->isActionViewExpanded()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 350
     const-string v6, "android:menu:expandedactionview"
 
     invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
@@ -3525,7 +3117,6 @@
 
     invoke-virtual {p1, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 353
     :cond_1
     invoke-interface {v1}, Landroid/view/MenuItem;->hasSubMenu()Z
 
@@ -3533,38 +3124,32 @@
 
     if-eqz v6, :cond_2
 
-    .line 354
     invoke-interface {v1}, Landroid/view/MenuItem;->getSubMenu()Landroid/view/SubMenu;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/internal/view/menu/SubMenuBuilder;
 
-    .line 355
     .local v3, "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     invoke-virtual {v3, p1}, Lcom/android/internal/view/menu/SubMenuBuilder;->saveActionViewStates(Landroid/os/Bundle;)V
 
-    .line 341
     .end local v3    # "subMenu":Lcom/android/internal/view/menu/SubMenuBuilder;
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 359
     .end local v1    # "item":Landroid/view/MenuItem;
     .end local v4    # "v":Landroid/view/View;
     :cond_3
     if-eqz v5, :cond_4
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getActionViewStatesKey()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {p1, v6, v5}, Landroid/os/Bundle;->putSparseParcelableArray(Ljava/lang/String;Landroid/util/SparseArray;)V
 
-    .line 362
     :cond_4
     return-void
 .end method
@@ -3574,10 +3159,8 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 330
     invoke-direct {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->dispatchSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 331
     return-void
 .end method
 
@@ -3586,10 +3169,8 @@
     .param p1, "cb"    # Lcom/android/internal/view/menu/MenuBuilder$Callback;
 
     .prologue
-    .line 399
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCallback:Lcom/android/internal/view/menu/MenuBuilder$Callback;
 
-    .line 400
     return-void
 .end method
 
@@ -3598,10 +3179,8 @@
     .param p1, "menuInfo"    # Landroid/view/ContextMenu$ContextMenuInfo;
 
     .prologue
-    .line 1245
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mCurrentMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
-    .line 1246
     return-void
 .end method
 
@@ -3610,10 +3189,8 @@
     .param p1, "defaultShowAsAction"    # I
 
     .prologue
-    .line 203
     iput p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mDefaultShowAsAction:I
 
-    .line 204
     return-object p0
 .end method
 
@@ -3622,12 +3199,10 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 555
     invoke-interface {p1}, Landroid/view/MenuItem;->getGroupId()I
 
     move-result v2
 
-    .line 557
     .local v2, "group":I
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
@@ -3635,7 +3210,6 @@
 
     move-result v0
 
-    .line 558
     .local v0, "N":I
     const/4 v3, 0x0
 
@@ -3643,7 +3217,6 @@
     :goto_0
     if-ge v3, v0, :cond_3
 
-    .line 559
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3652,7 +3225,6 @@
 
     check-cast v1, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 560
     .local v1, "curItem":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->getGroupId()I
 
@@ -3660,21 +3232,18 @@
 
     if-ne v4, v2, :cond_0
 
-    .line 561
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->isExclusiveCheckable()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 558
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 562
     :cond_1
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->isCheckable()Z
 
@@ -3682,7 +3251,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 565
     if-ne v1, p1, :cond_2
 
     const/4 v4, 0x1
@@ -3697,7 +3265,6 @@
 
     goto :goto_2
 
-    .line 568
     .end local v1    # "curItem":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_3
     return-void
@@ -3710,14 +3277,12 @@
     .param p3, "exclusive"    # Z
 
     .prologue
-    .line 571
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 573
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -3725,7 +3290,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 574
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3734,7 +3298,6 @@
 
     check-cast v2, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 575
     .local v2, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v2}, Lcom/android/internal/view/menu/MenuItemImpl;->getGroupId()I
 
@@ -3742,19 +3305,15 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 576
     invoke-virtual {v2, p3}, Lcom/android/internal/view/menu/MenuItemImpl;->setExclusiveCheckable(Z)V
 
-    .line 577
     invoke-virtual {v2, p2}, Lcom/android/internal/view/menu/MenuItemImpl;->setCheckable(Z)Landroid/view/MenuItem;
 
-    .line 573
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 580
     .end local v2    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
     return-void
@@ -3766,14 +3325,12 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 600
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 602
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -3781,7 +3338,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 603
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3790,7 +3346,6 @@
 
     check-cast v2, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 604
     .local v2, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v2}, Lcom/android/internal/view/menu/MenuItemImpl;->getGroupId()I
 
@@ -3798,16 +3353,13 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 605
     invoke-virtual {v2, p2}, Lcom/android/internal/view/menu/MenuItemImpl;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 602
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 608
     .end local v2    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
     return-void
@@ -3819,18 +3371,15 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 583
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 588
     .local v0, "N":I
     const/4 v1, 0x0
 
-    .line 589
     .local v1, "changedAtLeastOneItem":Z
     const/4 v2, 0x0
 
@@ -3838,7 +3387,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 590
     iget-object v4, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3847,7 +3395,6 @@
 
     check-cast v3, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 591
     .local v3, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->getGroupId()I
 
@@ -3855,7 +3402,6 @@
 
     if-ne v4, p1, :cond_0
 
-    .line 592
     invoke-virtual {v3, p2}, Lcom/android/internal/view/menu/MenuItemImpl;->setVisibleInt(Z)Z
 
     move-result v4
@@ -3864,13 +3410,11 @@
 
     const/4 v1, 0x1
 
-    .line 589
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 596
     .end local v3    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_1
     if-eqz v1, :cond_2
@@ -3879,7 +3423,6 @@
 
     invoke-virtual {p0, v4}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 597
     :cond_2
     return-void
 .end method
@@ -3891,7 +3434,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1201
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -3904,7 +3446,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderInternal(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 1202
     return-object p0
 .end method
 
@@ -3917,7 +3458,6 @@
 
     const/4 v1, 0x0
 
-    .line 1189
     move-object v0, p0
 
     move v3, v1
@@ -3928,7 +3468,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderInternal(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 1190
     return-object p0
 .end method
 
@@ -3939,7 +3478,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1177
     const/4 v3, 0x0
 
     move-object v0, p0
@@ -3952,7 +3490,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderInternal(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 1178
     return-object p0
 .end method
 
@@ -3965,7 +3502,6 @@
 
     const/4 v1, 0x0
 
-    .line 1165
     move-object v0, p0
 
     move-object v2, p1
@@ -3976,7 +3512,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderInternal(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 1166
     return-object p0
 .end method
 
@@ -3989,7 +3524,6 @@
 
     const/4 v1, 0x0
 
-    .line 1213
     move-object v0, p0
 
     move v3, v1
@@ -4000,7 +3534,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderInternal(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 1214
     return-object p0
 .end method
 
@@ -4009,10 +3542,8 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 1249
     iput-boolean p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mOptionalIconsVisible:Z
 
-    .line 1250
     return-void
 .end method
 
@@ -4021,15 +3552,12 @@
     .param p1, "isQwerty"    # Z
 
     .prologue
-    .line 690
     iput-boolean p1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mQwertyMode:Z
 
-    .line 692
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 693
     return-void
 .end method
 
@@ -4038,20 +3566,16 @@
     .param p1, "shortcutsVisible"    # Z
 
     .prologue
-    .line 732
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mShortcutsVisible:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 736
     :goto_0
     return-void
 
-    .line 734
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setShortcutsVisibleInner(Z)V
 
-    .line 735
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
@@ -4063,7 +3587,6 @@
     .locals 1
 
     .prologue
-    .line 677
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -4079,23 +3602,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 995
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
-    .line 997
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented:Z
 
     if-eqz v0, :cond_0
 
-    .line 998
     iput-boolean v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented:Z
 
-    .line 999
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 1001
     :cond_0
     return-void
 .end method
@@ -4104,22 +3622,18 @@
     .locals 1
 
     .prologue
-    .line 988
     iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
     if-nez v0, :cond_0
 
-    .line 989
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged:Z
 
-    .line 990
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented:Z
 
-    .line 992
     :cond_0
     return-void
 .end method

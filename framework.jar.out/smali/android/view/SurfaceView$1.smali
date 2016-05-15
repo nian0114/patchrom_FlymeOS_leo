@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 119
     iput-object p1, p0, Landroid/view/SurfaceView$1;->this$0:Landroid/view/SurfaceView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,16 +39,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 122
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 133
     :goto_0
     return-void
 
-    .line 124
     :pswitch_0
     iget-object v1, p0, Landroid/view/SurfaceView$1;->this$0:Landroid/view/SurfaceView;
 
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 127
     :pswitch_1
     iget-object v0, p0, Landroid/view/SurfaceView$1;->this$0:Landroid/view/SurfaceView;
 
@@ -72,7 +67,6 @@
 
     goto :goto_0
 
-    .line 130
     :pswitch_2
     iget-object v1, p0, Landroid/view/SurfaceView$1;->this$0:Landroid/view/SurfaceView;
 
@@ -80,7 +74,6 @@
 
     goto :goto_0
 
-    .line 122
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

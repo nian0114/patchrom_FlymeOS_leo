@@ -45,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Landroid/app/usage/UsageEvents$Event;->mClass:Ljava/lang/String;
 
     return-object v0
@@ -67,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/app/usage/UsageEvents$Event;->mConfiguration:Landroid/content/res/Configuration;
 
     return-object v0
@@ -77,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget v0, p0, Landroid/app/usage/UsageEvents$Event;->mEventType:I
 
     return v0
@@ -87,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/app/usage/UsageEvents$Event;->mPackage:Ljava/lang/String;
 
     return-object v0
@@ -97,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-wide v0, p0, Landroid/app/usage/UsageEvents$Event;->mTimeStamp:J
 
     return-wide v0

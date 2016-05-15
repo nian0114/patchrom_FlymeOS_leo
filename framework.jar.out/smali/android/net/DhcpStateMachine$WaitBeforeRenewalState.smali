@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 309
     iput-object p1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 313
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 345
     iget-object v0, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
     # getter for: Landroid/net/DhcpStateMachine;->mDhcpRenewWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -55,7 +52,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 346
     return-void
 .end method
 
@@ -64,24 +60,19 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 317
     const/4 v0, 0x1
 
-    .line 319
     .local v0, "retValue":Z
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 338
     const/4 v0, 0x0
 
-    .line 341
     :goto_0
     :sswitch_0
     return v0
 
-    .line 321
     :sswitch_1
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -99,7 +90,6 @@
 
     invoke-virtual {v1, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 322
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
     # getter for: Landroid/net/DhcpStateMachine;->mInterfaceName:Ljava/lang/String;
@@ -113,7 +103,6 @@
 
     if-nez v1, :cond_0
 
-    .line 323
     const-string v1, "DhcpStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -143,7 +132,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     :cond_0
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -159,7 +147,6 @@
 
     goto :goto_0
 
-    .line 328
     :sswitch_2
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -172,7 +159,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 329
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
     iget-object v2, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
@@ -187,7 +173,6 @@
 
     goto :goto_0
 
-    .line 331
     :cond_1
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeRenewalState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -203,7 +188,6 @@
 
     goto :goto_0
 
-    .line 319
     nop
 
     :sswitch_data_0

@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 495
     new-instance v0, Landroid/widget/CompoundButton$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/CompoundButton$SavedState$1;-><init>()V
@@ -51,10 +50,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 478
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 479
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
@@ -69,7 +66,6 @@
 
     iput-boolean v0, p0, Landroid/widget/CompoundButton$SavedState;->checked:Z
 
-    .line 480
     return-void
 .end method
 
@@ -79,7 +75,6 @@
     .param p2, "x1"    # Landroid/widget/CompoundButton$1;
 
     .prologue
-    .line 464
     invoke-direct {p0, p1}, Landroid/widget/CompoundButton$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -90,10 +85,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 471
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 472
     return-void
 .end method
 
@@ -103,7 +96,6 @@
     .locals 2
 
     .prologue
-    .line 490
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -157,10 +149,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 484
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 485
     iget-boolean v0, p0, Landroid/widget/CompoundButton$SavedState;->checked:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -169,6 +159,5 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 486
     return-void
 .end method

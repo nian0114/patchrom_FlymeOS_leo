@@ -37,27 +37,22 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput p1, p0, Landroid/hardware/soundtrigger/SoundTriggerModule;->mId:I
 
-    .line 47
     new-instance v0, Landroid/hardware/soundtrigger/SoundTriggerModule$NativeEventHandlerDelegate;
 
     invoke-direct {v0, p0, p2, p3}, Landroid/hardware/soundtrigger/SoundTriggerModule$NativeEventHandlerDelegate;-><init>(Landroid/hardware/soundtrigger/SoundTriggerModule;Landroid/hardware/soundtrigger/SoundTrigger$StatusListener;Landroid/os/Handler;)V
 
     iput-object v0, p0, Landroid/hardware/soundtrigger/SoundTriggerModule;->mEventHandlerDelegate:Landroid/hardware/soundtrigger/SoundTriggerModule$NativeEventHandlerDelegate;
 
-    .line 48
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, v0}, Landroid/hardware/soundtrigger/SoundTriggerModule;->native_setup(Ljava/lang/Object;)V
 
-    .line 49
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 189
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0    # "module_ref":Ljava/lang/Object;
@@ -86,38 +80,30 @@
 
     check-cast v3, Landroid/hardware/soundtrigger/SoundTriggerModule;
 
-    .line 190
     .local v3, "module":Landroid/hardware/soundtrigger/SoundTriggerModule;
     if-nez v3, :cond_1
 
-    .line 202
     :cond_0
     :goto_0
     return-void
 
-    .line 194
     :cond_1
     iget-object v0, v3, Landroid/hardware/soundtrigger/SoundTriggerModule;->mEventHandlerDelegate:Landroid/hardware/soundtrigger/SoundTriggerModule$NativeEventHandlerDelegate;
 
-    .line 195
     .local v0, "delegate":Landroid/hardware/soundtrigger/SoundTriggerModule$NativeEventHandlerDelegate;
     if-eqz v0, :cond_0
 
-    .line 196
     invoke-virtual {v0}, Landroid/hardware/soundtrigger/SoundTriggerModule$NativeEventHandlerDelegate;->handler()Landroid/os/Handler;
 
     move-result-object v1
 
-    .line 197
     .local v1, "handler":Landroid/os/Handler;
     if-eqz v1, :cond_0
 
-    .line 198
     invoke-virtual {v1, p1, p2, p3, p4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
 
-    .line 199
     .local v2, "m":Landroid/os/Message;
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -133,10 +119,8 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Landroid/hardware/soundtrigger/SoundTriggerModule;->native_finalize()V
 
-    .line 55
     return-void
 .end method
 

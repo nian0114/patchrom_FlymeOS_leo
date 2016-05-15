@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1053
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1056
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object v1, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -51,12 +49,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1070
     :cond_0
     :goto_0
     return-void
 
-    .line 1058
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -70,7 +66,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1059
     const-string v1, "networkType"
 
     const/4 v2, -0x1
@@ -92,7 +87,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1061
     const-string v1, "networkInfo"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -101,7 +95,6 @@
 
     check-cast v0, Landroid/net/NetworkInfo;
 
-    .line 1063
     .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
@@ -111,7 +104,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1065
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
@@ -137,7 +129,6 @@
 
     goto :goto_0
 
-    .line 1066
     :catch_0
     move-exception v1
 

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "audioState"    # Landroid/telecom/AudioState;
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -43,7 +41,6 @@
     .param p2, "showDialpad"    # Z
 
     .prologue
-    .line 53
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .param p2, "call"    # Landroid/telecom/Call;
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .param p2, "call"    # Landroid/telecom/Call;
 
     .prologue
-    .line 76
     return-void
 .end method
 
@@ -73,6 +68,5 @@
     .param p2, "canAddCall"    # Z
 
     .prologue
-    .line 86
     return-void
 .end method

@@ -25,13 +25,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 246
     iput-object p1, p0, Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;->this$0:Landroid/media/tv/ITvInputSessionWrapper;
 
-    .line 247
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 248
     return-void
 .end method
 
@@ -46,7 +43,6 @@
 
     const/4 v2, 0x0
 
-    .line 252
     iget-object v3, p0, Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;->this$0:Landroid/media/tv/ITvInputSessionWrapper;
 
     # getter for: Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
@@ -56,15 +52,12 @@
 
     if-nez v3, :cond_1
 
-    .line 254
     invoke-virtual {p0, p1, v2}, Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
-    .line 262
     :cond_0
     :goto_0
     return-void
 
-    .line 258
     :cond_1
     iget-object v3, p0, Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;->this$0:Landroid/media/tv/ITvInputSessionWrapper;
 
@@ -77,13 +70,11 @@
 
     move-result v0
 
-    .line 259
     .local v0, "handled":I
     const/4 v3, -0x1
 
     if-eq v0, v3, :cond_0
 
-    .line 260
     if-ne v0, v1, :cond_2
 
     :goto_1

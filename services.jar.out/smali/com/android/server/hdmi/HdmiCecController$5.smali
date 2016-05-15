@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 450
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$5;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$sourceAddress:I
@@ -64,7 +63,6 @@
     .locals 4
 
     .prologue
-    .line 453
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$5;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$sourceAddress:I
@@ -84,14 +82,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$allocated:Ljava/util/List;
 
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$candidate:Ljava/lang/Integer;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 456
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$5;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
@@ -102,6 +98,5 @@
     # invokes: Lcom/android/server/hdmi/HdmiCecController;->runOnServiceThread(Ljava/lang/Runnable;)V
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiCecController;->access$400(Lcom/android/server/hdmi/HdmiCecController;Ljava/lang/Runnable;)V
 
-    .line 463
     return-void
 .end method

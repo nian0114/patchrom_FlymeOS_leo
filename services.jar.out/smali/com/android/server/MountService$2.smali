@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 690
     iput-object p1, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v4, 0x0
 
-    .line 693
     new-instance v5, Landroid/hardware/usb/UsbManager;
 
     invoke-direct {v5, v6, v6}, Landroid/hardware/usb/UsbManager;-><init>(Landroid/content/Context;Landroid/hardware/usb/IUsbManager;)V
@@ -54,7 +52,6 @@
 
     move-result-object v2
 
-    .line 694
     .local v2, "usbMode":Ljava/lang/String;
     const-string v5, "mass_storage"
 
@@ -62,7 +59,6 @@
 
     move-result v1
 
-    .line 695
     .local v1, "isUmsMode":Z
     const-string v5, "connected"
 
@@ -82,7 +78,6 @@
 
     move v0, v3
 
-    .line 698
     .local v0, "available":Z
     :goto_0
     const-string v5, "persist.sys.ums"
@@ -93,14 +88,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 699
     if-eqz v0, :cond_2
 
     if-eqz v1, :cond_2
 
     move v0, v3
 
-    .line 701
     :cond_0
     :goto_1
     iget-object v3, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
@@ -108,20 +101,17 @@
     # invokes: Lcom/android/server/MountService;->notifyShareAvailabilityChange(Z)V
     invoke-static {v3, v0}, Lcom/android/server/MountService;->access$1400(Lcom/android/server/MountService;Z)V
 
-    .line 702
     return-void
 
     .end local v0    # "available":Z
     :cond_1
     move v0, v4
 
-    .line 695
     goto :goto_0
 
     .restart local v0    # "available":Z
     :cond_2
     move v0, v4
 
-    .line 699
     goto :goto_1
 .end method

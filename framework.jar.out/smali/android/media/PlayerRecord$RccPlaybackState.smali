@@ -30,19 +30,14 @@
     .param p4, "speed"    # F
 
     .prologue
-    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     iput p1, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mState:I
 
-    .line 93
     iput-wide p2, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
-    .line 94
     iput p4, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mSpeed:F
 
-    .line 95
     return-void
 .end method
 
@@ -50,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 109
     iget-wide v0, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
     const-wide/16 v2, -0x1
@@ -59,14 +53,11 @@
 
     if-nez v0, :cond_0
 
-    .line 110
     const-string v0, "PLAYBACK_POSITION_INVALID"
 
-    .line 114
     :goto_0
     return-object v0
 
-    .line 111
     :cond_0
     iget-wide v0, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
@@ -76,12 +67,10 @@
 
     if-nez v0, :cond_1
 
-    .line 112
     const-string v0, "PLAYBACK_POSITION_ALWAYS_UNKNOWN"
 
     goto :goto_0
 
-    .line 114
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -97,7 +86,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "ms"
+    const-string v1, "ms"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,78 +103,65 @@
     .locals 1
 
     .prologue
-    .line 119
     iget v0, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 141
     const-string v0, "[invalid playstate]"
 
     :goto_0
     return-object v0
 
-    .line 121
     :pswitch_0
     const-string v0, "PLAYSTATE_NONE"
 
     goto :goto_0
 
-    .line 123
     :pswitch_1
     const-string v0, "PLAYSTATE_STOPPED"
 
     goto :goto_0
 
-    .line 125
     :pswitch_2
     const-string v0, "PLAYSTATE_PAUSED"
 
     goto :goto_0
 
-    .line 127
     :pswitch_3
     const-string v0, "PLAYSTATE_PLAYING"
 
     goto :goto_0
 
-    .line 129
     :pswitch_4
     const-string v0, "PLAYSTATE_FAST_FORWARDING"
 
     goto :goto_0
 
-    .line 131
     :pswitch_5
     const-string v0, "PLAYSTATE_REWINDING"
 
     goto :goto_0
 
-    .line 133
     :pswitch_6
     const-string v0, "PLAYSTATE_SKIPPING_FORWARDS"
 
     goto :goto_0
 
-    .line 135
     :pswitch_7
     const-string v0, "PLAYSTATE_SKIPPING_BACKWARDS"
 
     goto :goto_0
 
-    .line 137
     :pswitch_8
     const-string v0, "PLAYSTATE_BUFFERING"
 
     goto :goto_0
 
-    .line 139
     :pswitch_9
     const-string v0, "PLAYSTATE_ERROR"
 
     goto :goto_0
 
-    .line 119
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -207,22 +183,18 @@
     .locals 2
 
     .prologue
-    .line 98
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mState:I
 
-    .line 99
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
-    .line 100
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/media/PlayerRecord$RccPlaybackState;->mSpeed:F
 
-    .line 101
     return-void
 .end method
 
@@ -230,7 +202,6 @@
     .locals 2
 
     .prologue
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

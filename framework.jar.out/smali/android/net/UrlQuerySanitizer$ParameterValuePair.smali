@@ -29,17 +29,13 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     iput-object p1, p0, Landroid/net/UrlQuerySanitizer$ParameterValuePair;->this$0:Landroid/net/UrlQuerySanitizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iput-object p2, p0, Landroid/net/UrlQuerySanitizer$ParameterValuePair;->mParameter:Ljava/lang/String;
 
-    .line 77
     iput-object p3, p0, Landroid/net/UrlQuerySanitizer$ParameterValuePair;->mValue:Ljava/lang/String;
 
-    .line 78
     return-void
 .end method

@@ -64,7 +64,6 @@
 
     const/4 v7, 0x1
 
-    .line 57
     new-instance v0, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v1, "OVERLAY"
@@ -77,7 +76,6 @@
 
     sput-object v0, Landroid/content/ThemeVersion$ComponentVersion;->OVERLAY:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 58
     new-instance v5, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v6, "BOOT_ANIM"
@@ -92,7 +90,6 @@
 
     sput-object v5, Landroid/content/ThemeVersion$ComponentVersion;->BOOT_ANIM:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 59
     new-instance v8, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v9, "WALLPAPER"
@@ -109,7 +106,6 @@
 
     sput-object v8, Landroid/content/ThemeVersion$ComponentVersion;->WALLPAPER:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 60
     new-instance v8, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v9, "LOCKSCREEN"
@@ -126,7 +122,6 @@
 
     sput-object v8, Landroid/content/ThemeVersion$ComponentVersion;->LOCKSCREEN:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 61
     new-instance v8, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v9, "FONT"
@@ -143,7 +138,6 @@
 
     sput-object v8, Landroid/content/ThemeVersion$ComponentVersion;->FONT:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 62
     new-instance v8, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v9, "ICON"
@@ -160,7 +154,6 @@
 
     sput-object v8, Landroid/content/ThemeVersion$ComponentVersion;->ICON:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 63
     new-instance v8, Landroid/content/ThemeVersion$ComponentVersion;
 
     const-string v9, "SOUNDS"
@@ -177,7 +170,6 @@
 
     sput-object v8, Landroid/content/ThemeVersion$ComponentVersion;->SOUNDS:Landroid/content/ThemeVersion$ComponentVersion;
 
-    .line 56
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/content/ThemeVersion$ComponentVersion;
@@ -231,19 +223,14 @@
     .end annotation
 
     .prologue
-    .line 69
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 70
     iput p3, p0, Landroid/content/ThemeVersion$ComponentVersion;->id:I
 
-    .line 71
     iput p4, p0, Landroid/content/ThemeVersion$ComponentVersion;->minSupportedVersion:I
 
-    .line 72
     iput p5, p0, Landroid/content/ThemeVersion$ComponentVersion;->currentVersion:I
 
-    .line 73
     return-void
 .end method
 
@@ -252,7 +239,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     const-class v0, Landroid/content/ThemeVersion$ComponentVersion;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -268,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 56
     sget-object v0, Landroid/content/ThemeVersion$ComponentVersion;->$VALUES:[Landroid/content/ThemeVersion$ComponentVersion;
 
     invoke-virtual {v0}, [Landroid/content/ThemeVersion$ComponentVersion;->clone()Ljava/lang/Object;

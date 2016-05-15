@@ -84,15 +84,12 @@
     .locals 1
 
     .prologue
-    .line 581
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 582
     const-string v0, "android.security.keystore"
 
     invoke-virtual {p0, p0, v0}, Landroid/security/IKeystoreService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 583
     return-void
 .end method
 
@@ -101,17 +98,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 570
     if-nez p0, :cond_0
 
-    .line 571
     const/4 v0, 0x0
 
-    .line 577
     :goto_0
     return-object v0
 
-    .line 573
     :cond_0
     const-string v1, "android.security.keystore"
 
@@ -119,7 +112,6 @@
 
     move-result-object v0
 
-    .line 574
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -127,12 +119,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 575
     check-cast v0, Landroid/security/IKeystoreService;
 
     goto :goto_0
 
-    .line 577
     :cond_1
     new-instance v0, Landroid/security/IKeystoreService$Stub$Proxy;
 
@@ -148,7 +138,6 @@
     .locals 0
 
     .prologue
-    .line 586
     return-object p0
 .end method
 
@@ -167,10 +156,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 592
     sparse-switch p1, :sswitch_data_0
 
-    .line 605
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -178,7 +165,6 @@
     :goto_0
     return v1
 
-    .line 594
     :sswitch_0
     const-string v2, "android.security.keystore"
 
@@ -186,27 +172,22 @@
 
     goto :goto_0
 
-    .line 598
     :sswitch_1
     const-string v2, "android.security.keystore"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 599
     invoke-virtual {p0}, Landroid/security/IKeystoreService$Stub;->test()I
 
     move-result v0
 
-    .line 600
     .local v0, "resultCode":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 601
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 592
     nop
 
     :sswitch_data_0

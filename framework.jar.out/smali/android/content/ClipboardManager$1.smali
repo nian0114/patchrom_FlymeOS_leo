@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 61
     iput-object p1, p0, Landroid/content/ClipboardManager$1;->this$0:Landroid/content/ClipboardManager;
 
     invoke-direct {p0}, Landroid/content/IOnPrimaryClipChangedListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/content/ClipboardManager$1;->this$0:Landroid/content/ClipboardManager;
 
     # getter for: Landroid/content/ClipboardManager;->mHandler:Landroid/os/Handler;
@@ -49,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 64
     return-void
 .end method

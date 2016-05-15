@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 573
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Landroid/graphics/drawable/Ripple$1;
 
     .prologue
-    .line 573
     invoke-direct {p0}, Landroid/graphics/drawable/Ripple$LogInterpolator;-><init>()V
 
     return-void
@@ -46,7 +44,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 576
     const/high16 v0, 0x3f800000    # 1.0f
 
     const-wide/high16 v2, 0x4079000000000000L    # 400.0

@@ -64,26 +64,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput v1, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
-    .line 57
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/filterfw/core/FrameFormat;->mBytesPerSample:I
 
-    .line 58
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/filterfw/core/FrameFormat;->mSize:I
 
-    .line 59
     iput v1, p0, Landroid/filterfw/core/FrameFormat;->mTarget:I
 
-    .line 65
     return-void
 .end method
 
@@ -95,35 +89,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput v1, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
-    .line 57
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/filterfw/core/FrameFormat;->mBytesPerSample:I
 
-    .line 58
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/filterfw/core/FrameFormat;->mSize:I
 
-    .line 59
     iput v1, p0, Landroid/filterfw/core/FrameFormat;->mTarget:I
 
-    .line 68
     iput p1, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
-    .line 69
     iput p2, p0, Landroid/filterfw/core/FrameFormat;->mTarget:I
 
-    .line 70
     invoke-direct {p0}, Landroid/filterfw/core/FrameFormat;->initDefaults()V
 
-    .line 71
     return-void
 .end method
 
@@ -132,70 +117,58 @@
     .param p0, "baseType"    # I
 
     .prologue
-    .line 344
     packed-switch p0, :pswitch_data_0
 
-    .line 354
-    const-string/jumbo v0, "unknown"
+    const-string v0, "unknown"
 
     :goto_0
     return-object v0
 
-    .line 345
     :pswitch_0
-    const-string/jumbo v0, "unspecified"
+    const-string v0, "unspecified"
 
     goto :goto_0
 
-    .line 346
     :pswitch_1
     const-string v0, "bit"
 
     goto :goto_0
 
-    .line 347
     :pswitch_2
     const-string v0, "byte"
 
     goto :goto_0
 
-    .line 348
     :pswitch_3
     const-string v0, "int"
 
     goto :goto_0
 
-    .line 349
     :pswitch_4
     const-string v0, "int"
 
     goto :goto_0
 
-    .line 350
     :pswitch_5
     const-string v0, "float"
 
     goto :goto_0
 
-    .line 351
     :pswitch_6
     const-string v0, "double"
 
     goto :goto_0
 
-    .line 352
     :pswitch_7
-    const-string/jumbo v0, "pointer"
+    const-string v0, "pointer"
 
     goto :goto_0
 
-    .line 353
     :pswitch_8
-    const-string/jumbo v0, "object"
+    const-string v0, "object"
 
     goto :goto_0
 
-    .line 344
     nop
 
     :pswitch_data_0
@@ -219,33 +192,27 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 311
     packed-switch p0, :pswitch_data_0
 
-    .line 324
     :goto_0
     :pswitch_0
     return v0
 
-    .line 316
     :pswitch_1
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 320
     :pswitch_2
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 322
     :pswitch_3
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 311
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -263,19 +230,15 @@
     .param p0, "dimensions"    # [I
 
     .prologue
-    .line 329
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 330
     .local v0, "buffer":Ljava/lang/StringBuffer;
     if-eqz p0, :cond_1
 
-    .line 331
     array-length v2, p0
 
-    .line 332
     .local v2, "n":I
     const/4 v1, 0x0
 
@@ -283,23 +246,19 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 333
     aget v3, p0, v1
 
     if-nez v3, :cond_0
 
-    .line 334
     const-string v3, "[]"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 332
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 336
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -335,7 +294,6 @@
 
     goto :goto_1
 
-    .line 340
     .end local v1    # "i":I
     .end local v2    # "n":I
     :cond_1
@@ -350,7 +308,6 @@
     .locals 1
 
     .prologue
-    .line 419
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
     invoke-static {v0}, Landroid/filterfw/core/FrameFormat;->bytesPerSampleOf(I)I
@@ -359,7 +316,6 @@
 
     iput v0, p0, Landroid/filterfw/core/FrameFormat;->mBytesPerSample:I
 
-    .line 420
     return-void
 .end method
 
@@ -368,29 +324,23 @@
     .param p0, "metaData"    # Landroid/filterfw/core/KeyValueMap;
 
     .prologue
-    .line 371
     if-nez p0, :cond_0
 
-    .line 372
     const-string v3, ""
 
-    .line 380
     :goto_0
     return-object v3
 
-    .line 374
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 375
     .local v0, "buffer":Ljava/lang/StringBuffer;
-    const-string/jumbo v3, "{ "
+    const-string v3, "{ "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 376
     invoke-virtual {p0}, Landroid/filterfw/core/KeyValueMap;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -413,7 +363,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 377
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -457,14 +406,12 @@
 
     goto :goto_1
 
-    .line 379
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_1
-    const-string/jumbo v3, "}"
+    const-string v3, "}"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 380
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -477,7 +424,6 @@
     .param p0, "targetString"    # Ljava/lang/String;
 
     .prologue
-    .line 385
     const-string v0, "CPU"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -494,15 +440,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 386
     :cond_0
     const/4 v0, 0x2
 
-    .line 394
     :goto_0
     return v0
 
-    .line 387
     :cond_1
     const-string v0, "GPU"
 
@@ -512,12 +455,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 388
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 389
     :cond_2
     const-string v0, "SIMPLE"
 
@@ -527,12 +468,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 390
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 391
     :cond_3
     const-string v0, "VERTEXBUFFER"
 
@@ -542,12 +481,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 392
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 393
     :cond_4
     const-string v0, "UNSPECIFIED"
 
@@ -557,12 +494,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 394
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 396
     :cond_5
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -600,52 +535,43 @@
     .param p0, "target"    # I
 
     .prologue
-    .line 359
     packed-switch p0, :pswitch_data_0
 
-    .line 366
-    const-string/jumbo v0, "unknown"
+    const-string v0, "unknown"
 
     :goto_0
     return-object v0
 
-    .line 360
     :pswitch_0
-    const-string/jumbo v0, "unspecified"
+    const-string v0, "unspecified"
 
     goto :goto_0
 
-    .line 361
     :pswitch_1
-    const-string/jumbo v0, "simple"
+    const-string v0, "simple"
 
     goto :goto_0
 
-    .line 362
     :pswitch_2
-    const-string/jumbo v0, "native"
+    const-string v0, "native"
 
     goto :goto_0
 
-    .line 363
     :pswitch_3
     const-string v0, "gpu"
 
     goto :goto_0
 
-    .line 364
     :pswitch_4
-    const-string/jumbo v0, "vbo"
+    const-string v0, "vbo"
 
     goto :goto_0
 
-    .line 365
     :pswitch_5
-    const-string/jumbo v0, "renderscript"
+    const-string v0, "renderscript"
 
     goto :goto_0
 
-    .line 359
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -663,7 +589,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 74
     new-instance v0, Landroid/filterfw/core/FrameFormat;
 
     invoke-direct {v0, v1, v1}, Landroid/filterfw/core/FrameFormat;-><init>(II)V
@@ -678,19 +603,16 @@
     .param p1, "dimensions"    # [I
 
     .prologue
-    .line 424
     if-eqz p1, :cond_0
 
     array-length v5, p1
 
     if-lez v5, :cond_0
 
-    .line 425
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getBytesPerSample()I
 
     move-result v4
 
-    .line 426
     .local v4, "size":I
     move-object v0, p1
 
@@ -706,16 +628,13 @@
 
     aget v1, v0, v2
 
-    .line 427
     .local v1, "dim":I
     mul-int/2addr v4, v1
 
-    .line 426
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 431
     .end local v0    # "arr$":[I
     .end local v1    # "dim":I
     .end local v2    # "i$":I
@@ -737,15 +656,12 @@
 
     const/4 v2, 0x0
 
-    .line 172
     if-ne p0, p1, :cond_1
 
-    .line 181
     :cond_0
     :goto_0
     return v1
 
-    .line 176
     :cond_1
     instance-of v3, p1, Landroid/filterfw/core/FrameFormat;
 
@@ -753,16 +669,13 @@
 
     move v1, v2
 
-    .line 177
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 180
     check-cast v0, Landroid/filterfw/core/FrameFormat;
 
-    .line 181
     .local v0, "format":Landroid/filterfw/core/FrameFormat;
     iget v3, v0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
@@ -812,7 +725,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
     return v0
@@ -822,7 +734,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mBytesPerSample:I
 
     return v0
@@ -832,7 +743,6 @@
     .locals 2
 
     .prologue
-    .line 147
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     if-eqz v0, :cond_0
@@ -865,7 +775,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 102
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     aget v0, v0, p1
@@ -877,7 +786,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     if-nez v0, :cond_0
@@ -899,7 +807,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     return-object v0
@@ -909,7 +816,6 @@
     .locals 2
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     if-eqz v0, :cond_0
@@ -941,7 +847,6 @@
     .locals 2
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     if-eqz v0, :cond_0
@@ -974,7 +879,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 127
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     if-eqz v0, :cond_0
@@ -998,7 +902,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mDimensions:[I
 
     if-eqz v0, :cond_0
@@ -1020,7 +923,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mObjectClass:Ljava/lang/Class;
 
     return-object v0
@@ -1030,7 +932,6 @@
     .locals 2
 
     .prologue
-    .line 151
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mSize:I
 
     const/4 v1, -0x1
@@ -1045,7 +946,6 @@
 
     iput v0, p0, Landroid/filterfw/core/FrameFormat;->mSize:I
 
-    .line 152
     :cond_0
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mSize:I
 
@@ -1056,7 +956,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mTarget:I
 
     return v0
@@ -1066,7 +965,6 @@
     .locals 2
 
     .prologue
-    .line 90
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mBytesPerSample:I
 
     iget v1, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
@@ -1084,7 +982,6 @@
     .locals 1
 
     .prologue
-    .line 139
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getLength()I
 
     move-result v0
@@ -1097,7 +994,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     if-eqz v0, :cond_0
@@ -1123,7 +1019,6 @@
     .param p2, "expectedClass"    # Ljava/lang/Class;
 
     .prologue
-    .line 114
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     if-eqz v0, :cond_1
@@ -1136,7 +1031,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 115
     iget-object v0, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     invoke-virtual {v0, p1}, Landroid/filterfw/core/KeyValueMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1153,7 +1047,6 @@
 
     if-nez v0, :cond_0
 
-    .line 116
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1214,11 +1107,9 @@
 
     throw v0
 
-    .line 121
     :cond_0
     const/4 v0, 0x1
 
-    .line 123
     :goto_0
     return v0
 
@@ -1232,7 +1123,6 @@
     .locals 2
 
     .prologue
-    .line 190
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
     xor-int/lit16 v0, v0, 0x1073
@@ -1256,7 +1146,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 82
     iget v1, p0, Landroid/filterfw/core/FrameFormat;->mBaseType:I
 
     if-lt v1, v0, :cond_0
@@ -1285,7 +1174,6 @@
 
     const/4 v4, 0x0
 
-    .line 195
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getBaseType()I
 
     move-result v6
@@ -1302,12 +1190,10 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 246
     :cond_0
     :goto_0
     return v4
 
-    .line 201
     :cond_1
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getTarget()I
 
@@ -1325,7 +1211,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 207
     :cond_2
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getBytesPerSample()I
 
@@ -1343,7 +1228,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 213
     :cond_3
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getDimensionCount()I
 
@@ -1361,7 +1245,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 219
     :cond_4
     const/4 v0, 0x0
 
@@ -1373,12 +1256,10 @@
 
     if-ge v0, v6, :cond_6
 
-    .line 220
     invoke-virtual {p1, v0}, Landroid/filterfw/core/FrameFormat;->getDimension(I)I
 
     move-result v2
 
-    .line 221
     .local v2, "specDim":I
     if-eqz v2, :cond_5
 
@@ -1388,13 +1269,11 @@
 
     if-ne v6, v2, :cond_0
 
-    .line 219
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 227
     .end local v2    # "specDim":I
     :cond_6
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getObjectClass()Ljava/lang/Class;
@@ -1403,7 +1282,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 228
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getObjectClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -1424,13 +1302,11 @@
 
     if-eqz v6, :cond_0
 
-    .line 235
     :cond_7
     iget-object v6, p1, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     if-eqz v6, :cond_9
 
-    .line 236
     iget-object v6, p1, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     invoke-virtual {v6}, Landroid/filterfw/core/KeyValueMap;->keySet()Ljava/util/Set;
@@ -1455,7 +1331,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 237
     .local v3, "specKey":Ljava/lang/String;
     iget-object v6, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
@@ -1494,7 +1369,6 @@
     :cond_9
     move v4, v5
 
-    .line 246
     goto/16 :goto_0
 .end method
 
@@ -1503,7 +1377,6 @@
     .param p1, "format"    # Landroid/filterfw/core/FrameFormat;
 
     .prologue
-    .line 435
     iget v0, p0, Landroid/filterfw/core/FrameFormat;->mTarget:I
 
     iget v1, p1, Landroid/filterfw/core/FrameFormat;->mTarget:I
@@ -1550,7 +1423,6 @@
 
     const/4 v4, 0x0
 
-    .line 251
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getBaseType()I
 
     move-result v6
@@ -1573,12 +1445,10 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 306
     :cond_0
     :goto_0
     return v4
 
-    .line 258
     :cond_1
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getTarget()I
 
@@ -1602,7 +1472,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 265
     :cond_2
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getBytesPerSample()I
 
@@ -1626,7 +1495,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 272
     :cond_3
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getDimensionCount()I
 
@@ -1650,7 +1518,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 279
     :cond_4
     const/4 v0, 0x0
 
@@ -1662,12 +1529,10 @@
 
     if-ge v0, v6, :cond_6
 
-    .line 280
     invoke-virtual {p1, v0}, Landroid/filterfw/core/FrameFormat;->getDimension(I)I
 
     move-result v2
 
-    .line 281
     .local v2, "specDim":I
     if-eqz v2, :cond_5
 
@@ -1683,13 +1548,11 @@
 
     if-ne v6, v2, :cond_0
 
-    .line 279
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 289
     .end local v2    # "specDim":I
     :cond_6
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getObjectClass()Ljava/lang/Class;
@@ -1704,7 +1567,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 290
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getObjectClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -1719,7 +1581,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 296
     :cond_7
     iget-object v6, p1, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
@@ -1729,7 +1590,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 297
     iget-object v6, p1, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     invoke-virtual {v6}, Landroid/filterfw/core/KeyValueMap;->keySet()Ljava/util/Set;
@@ -1754,7 +1614,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 298
     .local v3, "specKey":Ljava/lang/String;
     iget-object v6, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
@@ -1789,7 +1648,6 @@
     :cond_9
     move v4, v5
 
-    .line 306
     goto/16 :goto_0
 .end method
 
@@ -1797,12 +1655,10 @@
     .locals 2
 
     .prologue
-    .line 160
     new-instance v0, Landroid/filterfw/core/MutableFrameFormat;
 
     invoke-direct {v0}, Landroid/filterfw/core/MutableFrameFormat;-><init>()V
 
-    .line 161
     .local v0, "result":Landroid/filterfw/core/MutableFrameFormat;
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getBaseType()I
 
@@ -1810,35 +1666,30 @@
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setBaseType(I)V
 
-    .line 162
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getTarget()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setTarget(I)V
 
-    .line 163
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getBytesPerSample()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setBytesPerSample(I)V
 
-    .line 164
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getDimensions()[I
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setDimensions([I)V
 
-    .line 165
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getObjectClass()Ljava/lang/Class;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setObjectClass(Ljava/lang/Class;)V
 
-    .line 166
     iget-object v1, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
     if-nez v1, :cond_0
@@ -1848,10 +1699,8 @@
     :goto_0
     iput-object v1, v0, Landroid/filterfw/core/MutableFrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
-    .line 167
     return-object v0
 
-    .line 166
     :cond_0
     iget-object v1, p0, Landroid/filterfw/core/FrameFormat;->mMetaData:Landroid/filterfw/core/KeyValueMap;
 
@@ -1868,12 +1717,10 @@
     .locals 6
 
     .prologue
-    .line 403
     invoke-virtual {p0}, Landroid/filterfw/core/FrameFormat;->getValuesPerSample()I
 
     move-result v3
 
-    .line 404
     .local v3, "valuesPerSample":I
     const/4 v4, 0x1
 
@@ -1881,7 +1728,6 @@
 
     const-string v1, ""
 
-    .line 405
     .local v1, "sampleCountString":Ljava/lang/String;
     :goto_0
     iget v4, p0, Landroid/filterfw/core/FrameFormat;->mTarget:I
@@ -1890,7 +1736,6 @@
 
     const-string v2, ""
 
-    .line 406
     .local v2, "targetString":Ljava/lang/String;
     :goto_1
     iget-object v4, p0, Landroid/filterfw/core/FrameFormat;->mObjectClass:Ljava/lang/Class;
@@ -1899,7 +1744,6 @@
 
     const-string v0, ""
 
-    .line 410
     .local v0, "classString":Ljava/lang/String;
     :goto_2
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1954,7 +1798,6 @@
 
     return-object v4
 
-    .line 404
     .end local v0    # "classString":Ljava/lang/String;
     .end local v1    # "sampleCountString":Ljava/lang/String;
     .end local v2    # "targetString":Ljava/lang/String;
@@ -1965,7 +1808,6 @@
 
     goto :goto_0
 
-    .line 405
     .restart local v1    # "sampleCountString":Ljava/lang/String;
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1994,7 +1836,6 @@
 
     goto :goto_1
 
-    .line 406
     .restart local v2    # "targetString":Ljava/lang/String;
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;

@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 434
     iput-object p1, p0, Lcom/android/server/am/TaskPersister$1;->this$0:Lcom/android/server/am/TaskPersister;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,38 +53,31 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 437
     iget-wide v2, p2, Lcom/android/server/am/TaskRecord;->mLastTimeMoved:J
 
     iget-wide v4, p1, Lcom/android/server/am/TaskRecord;->mLastTimeMoved:J
 
     sub-long v0, v2, v4
 
-    .line 438
     .local v0, "diff":J
     cmp-long v2, v0, v6
 
     if-gez v2, :cond_0
 
-    .line 439
     const/4 v2, -0x1
 
-    .line 443
     :goto_0
     return v2
 
-    .line 440
     :cond_0
     cmp-long v2, v0, v6
 
     if-lez v2, :cond_1
 
-    .line 441
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 443
     :cond_1
     const/4 v2, 0x0
 
@@ -96,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 434
     check-cast p1, Lcom/android/server/am/TaskRecord;
 
     check-cast p2, Lcom/android/server/am/TaskRecord;

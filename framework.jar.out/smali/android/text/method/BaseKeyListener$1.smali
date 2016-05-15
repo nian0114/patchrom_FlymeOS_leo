@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 133
     invoke-static {}, Landroid/text/method/TextKeyListener$Capitalize;->values()[Landroid/text/method/TextKeyListener$Capitalize;
 
     move-result-object v0

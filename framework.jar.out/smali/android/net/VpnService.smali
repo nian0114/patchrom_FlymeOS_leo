@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 116
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 402
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 116
     invoke-static {p0, p1}, Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
 
     return-void
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 116
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
     move-result-object v0
@@ -59,14 +55,12 @@
     .param p1, "prefixLength"    # I
 
     .prologue
-    .line 380
     invoke-virtual {p0}, Ljava/net/InetAddress;->isLoopbackAddress()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 381
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad address"
@@ -75,20 +69,17 @@
 
     throw v0
 
-    .line 383
     :cond_0
     instance-of v0, p0, Ljava/net/Inet4Address;
 
     if-eqz v0, :cond_2
 
-    .line 384
     if-ltz p1, :cond_1
 
     const/16 v0, 0x20
 
     if-le p1, v0, :cond_5
 
-    .line 385
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -98,20 +89,17 @@
 
     throw v0
 
-    .line 387
     :cond_2
     instance-of v0, p0, Ljava/net/Inet6Address;
 
     if-eqz v0, :cond_4
 
-    .line 388
     if-ltz p1, :cond_3
 
     const/16 v0, 0x80
 
     if-le p1, v0, :cond_5
 
-    .line 389
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -121,7 +109,6 @@
 
     throw v0
 
-    .line 392
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -131,7 +118,6 @@
 
     throw v0
 
-    .line 394
     :cond_5
     return-void
 .end method
@@ -140,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 130
     const-string v0, "connectivity"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -161,7 +146,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 159
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -181,15 +165,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 165
     :goto_0
     return-object v0
 
-    .line 162
     :catch_0
     move-exception v0
 
-    .line 165
     :cond_0
     invoke-static {}, Lcom/android/internal/net/VpnConfig;->getIntentForConfirmation()Landroid/content/Intent;
 
@@ -203,18 +184,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 181
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
     move-result-object v0
 
-    .line 182
     .local v0, "cm":Landroid/net/IConnectivityManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 185
     .local v1, "packageName":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -225,12 +203,10 @@
 
     if-nez v2, :cond_0
 
-    .line 186
     const/4 v2, 0x0
 
     invoke-interface {v0, v2, v1}, Landroid/net/IConnectivityManager;->prepareVpn(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 188
     :cond_0
     const/4 v2, 0x1
 
@@ -238,11 +214,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 192
     :goto_0
     return-void
 
-    .line 189
     :catch_0
     move-exception v2
 
@@ -257,10 +231,8 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 253
     invoke-static {p1, p2}, Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
 
-    .line 255
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -278,11 +250,9 @@
 
     return v1
 
-    .line 256
     :catch_0
     move-exception v0
 
-    .line 257
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -298,7 +268,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 341
     if-eqz p1, :cond_0
 
     const-string v0, "android.net.VpnService"
@@ -313,12 +282,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 342
     new-instance v0, Landroid/net/VpnService$Callback;
 
     invoke-direct {v0, p0, v1}, Landroid/net/VpnService$Callback;-><init>(Landroid/net/VpnService;Landroid/net/VpnService$1;)V
 
-    .line 344
     :goto_0
     return-object v0
 
@@ -332,10 +299,8 @@
     .locals 0
 
     .prologue
-    .line 359
     invoke-virtual {p0}, Landroid/net/VpnService;->stopSelf()V
 
-    .line 360
     return-void
 .end method
 
@@ -344,7 +309,6 @@
     .param p1, "socket"    # I
 
     .prologue
-    .line 209
     invoke-static {p1}, Landroid/net/NetworkUtils;->protectFromVpn(I)Z
 
     move-result v0
@@ -357,7 +321,6 @@
     .param p1, "socket"    # Ljava/net/DatagramSocket;
 
     .prologue
-    .line 230
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->getFileDescriptor$()Ljava/io/FileDescriptor;
 
     move-result-object v0
@@ -378,7 +341,6 @@
     .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 219
     invoke-virtual {p1}, Ljava/net/Socket;->getFileDescriptor$()Ljava/io/FileDescriptor;
 
     move-result-object v0
@@ -400,10 +362,8 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 283
     invoke-static {p1, p2}, Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
 
-    .line 285
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -421,11 +381,9 @@
 
     return v1
 
-    .line 286
     :catch_0
     move-exception v0
 
-    .line 287
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -439,7 +397,6 @@
     .param p1, "networks"    # [Landroid/net/Network;
 
     .prologue
-    .line 325
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -453,11 +410,9 @@
 
     return v1
 
-    .line 326
     :catch_0
     move-exception v0
 
-    .line 327
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 

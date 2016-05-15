@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 19463
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$N:I
@@ -46,7 +45,6 @@
 
     invoke-direct {p0}, Landroid/os/IRemoteCallback$Stub;-><init>()V
 
-    .line 19464
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
@@ -66,12 +64,10 @@
     .end annotation
 
     .prologue
-    .line 19467
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 19468
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -79,21 +75,18 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 19469
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
 
-    .line 19470
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
 
     iget v2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$N:I
 
     if-ne v0, v2, :cond_0
 
-    .line 19471
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$uss:Lcom/android/server/am/UserStartedState;
@@ -104,14 +97,11 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/server/am/ActivityManagerService;->sendContinueUserSwitchLocked(Lcom/android/server/am/UserStartedState;II)V
 
-    .line 19474
     :cond_0
     monitor-exit v1
 
-    .line 19475
     return-void
 
-    .line 19474
     :catchall_0
     move-exception v0
 

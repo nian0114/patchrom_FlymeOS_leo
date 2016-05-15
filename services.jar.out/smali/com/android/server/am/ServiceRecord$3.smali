@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 540
     iput-object p1, p0, Lcom/android/server/am/ServiceRecord$3;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iput-object p2, p0, Lcom/android/server/am/ServiceRecord$3;->val$localPackageName:Ljava/lang/String;
@@ -52,7 +51,6 @@
     .locals 4
 
     .prologue
-    .line 543
     const-class v1, Lcom/android/server/notification/NotificationManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -61,15 +59,12 @@
 
     check-cast v0, Lcom/android/server/notification/NotificationManagerInternal;
 
-    .line 545
     .local v0, "nmi":Lcom/android/server/notification/NotificationManagerInternal;
     if-nez v0, :cond_0
 
-    .line 550
     :goto_0
     return-void
 
-    .line 548
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord$3;->val$localPackageName:Ljava/lang/String;
 

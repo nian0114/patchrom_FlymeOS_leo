@@ -10,17 +10,14 @@
     .param p2, "deviation"    # F
 
     .prologue
-    .line 25
     invoke-direct {p0}, Landroid/graphics/PathEffect;-><init>()V
 
-    .line 26
     invoke-static {p1, p2}, Landroid/graphics/DiscretePathEffect;->nativeCreate(FF)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/graphics/DiscretePathEffect;->native_instance:J
 
-    .line 27
     return-void
 .end method
 

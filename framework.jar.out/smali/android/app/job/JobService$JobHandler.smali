@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 116
     iput-object p1, p0, Landroid/app/job/JobService$JobHandler;->this$0:Landroid/app/job/JobService;
 
-    .line 117
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 118
     return-void
 .end method
 
@@ -40,37 +37,30 @@
     .param p2, "workOngoing"    # Z
 
     .prologue
-    .line 163
     invoke-virtual {p1}, Landroid/app/job/JobParameters;->getCallback()Landroid/app/job/IJobCallback;
 
     move-result-object v0
 
-    .line 164
     .local v0, "callback":Landroid/app/job/IJobCallback;
     invoke-virtual {p1}, Landroid/app/job/JobParameters;->getJobId()I
 
     move-result v2
 
-    .line 165
     .local v2, "jobId":I
     if-eqz v0, :cond_1
 
-    .line 167
     :try_start_0
     invoke-interface {v0, v2, p2}, Landroid/app/job/IJobCallback;->acknowledgeStartMessage(IZ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
     :cond_0
     :goto_0
     return-void
 
-    .line 168
     :catch_0
     move-exception v1
 
-    .line 169
     .local v1, "e":Landroid/os/RemoteException;
     const-string v3, "JobService"
 
@@ -80,7 +70,6 @@
 
     goto :goto_0
 
-    .line 172
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v3, "JobService"
@@ -93,7 +82,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 173
     const-string v3, "JobService"
 
     const-string v4, "Attempting to ack a job that has already been processed."
@@ -109,37 +97,30 @@
     .param p2, "reschedule"    # Z
 
     .prologue
-    .line 179
     invoke-virtual {p1}, Landroid/app/job/JobParameters;->getCallback()Landroid/app/job/IJobCallback;
 
     move-result-object v0
 
-    .line 180
     .local v0, "callback":Landroid/app/job/IJobCallback;
     invoke-virtual {p1}, Landroid/app/job/JobParameters;->getJobId()I
 
     move-result v2
 
-    .line 181
     .local v2, "jobId":I
     if-eqz v0, :cond_1
 
-    .line 183
     :try_start_0
     invoke-interface {v0, v2, p2}, Landroid/app/job/IJobCallback;->acknowledgeStopMessage(IZ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 192
     :cond_0
     :goto_0
     return-void
 
-    .line 184
     :catch_0
     move-exception v1
 
-    .line 185
     .local v1, "e":Landroid/os/RemoteException;
     const-string v3, "JobService"
 
@@ -149,7 +130,6 @@
 
     goto :goto_0
 
-    .line 188
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v3, "JobService"
@@ -162,7 +142,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 189
     const-string v3, "JobService"
 
     const-string v4, "Attempting to ack a job that has already been processed."
@@ -181,29 +160,24 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 122
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/app/job/JobParameters;
 
-    .line 123
     .local v3, "params":Landroid/app/job/JobParameters;
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 157
     const-string v6, "JobService"
 
     const-string v7, "Unrecognised message received."
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     :goto_0
     return-void
 
-    .line 126
     :pswitch_0
     :try_start_0
     iget-object v6, p0, Landroid/app/job/JobService$JobHandler;->this$0:Landroid/app/job/JobService;
@@ -212,7 +186,6 @@
 
     move-result v5
 
-    .line 127
     .local v5, "workOngoing":Z
     invoke-direct {p0, v3, v5}, Landroid/app/job/JobService$JobHandler;->ackStartMessage(Landroid/app/job/JobParameters;Z)V
     :try_end_0
@@ -220,12 +193,10 @@
 
     goto :goto_0
 
-    .line 128
     .end local v5    # "workOngoing":Z
     :catch_0
     move-exception v1
 
-    .line 129
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "JobService"
 
@@ -253,14 +224,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     new-instance v6, Ljava/lang/RuntimeException;
 
     invoke-direct {v6, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v6
 
-    .line 135
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -270,7 +239,6 @@
 
     move-result v4
 
-    .line 136
     .local v4, "ret":Z
     invoke-direct {p0, v3, v4}, Landroid/app/job/JobService$JobHandler;->ackStopMessage(Landroid/app/job/JobParameters;Z)V
     :try_end_1
@@ -278,12 +246,10 @@
 
     goto :goto_0
 
-    .line 137
     .end local v4    # "ret":Z
     :catch_1
     move-exception v1
 
-    .line 138
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v6, "JobService"
 
@@ -291,32 +257,27 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 139
     new-instance v6, Ljava/lang/RuntimeException;
 
     invoke-direct {v6, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v6
 
-    .line 143
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_2
     iget v6, p1, Landroid/os/Message;->arg2:I
 
     if-ne v6, v2, :cond_0
 
-    .line 144
     .local v2, "needsReschedule":Z
     :goto_1
     invoke-virtual {v3}, Landroid/app/job/JobParameters;->getCallback()Landroid/app/job/IJobCallback;
 
     move-result-object v0
 
-    .line 145
     .local v0, "callback":Landroid/app/job/IJobCallback;
     if-eqz v0, :cond_1
 
-    .line 147
     :try_start_2
     invoke-virtual {v3}, Landroid/app/job/JobParameters;->getJobId()I
 
@@ -328,11 +289,9 @@
 
     goto :goto_0
 
-    .line 148
     :catch_2
     move-exception v1
 
-    .line 149
     .local v1, "e":Landroid/os/RemoteException;
     const-string v6, "JobService"
 
@@ -342,7 +301,6 @@
 
     goto :goto_0
 
-    .line 143
     .end local v0    # "callback":Landroid/app/job/IJobCallback;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "needsReschedule":Z
@@ -351,7 +309,6 @@
 
     goto :goto_1
 
-    .line 153
     .restart local v0    # "callback":Landroid/app/job/IJobCallback;
     .restart local v2    # "needsReschedule":Z
     :cond_1
@@ -363,7 +320,6 @@
 
     goto :goto_0
 
-    .line 123
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

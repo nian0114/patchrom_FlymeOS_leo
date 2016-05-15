@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 219
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,30 +34,25 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 222
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 223
     .local v1, "tag":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 224
     .local v2, "millis":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 225
     .local v5, "flags":I
     and-int/lit8 v0, v5, 0x8
 
     if-eqz v0, :cond_0
 
-    .line 226
     new-instance v0, Landroid/os/DropBoxManager$Entry;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
@@ -69,7 +63,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/os/DropBoxManager$Entry;-><init>(Ljava/lang/String;J[BI)V
 
-    .line 228
     .end local v5    # "flags":I
     :goto_0
     return-object v0
@@ -91,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 219
     invoke-virtual {p0, p1}, Landroid/os/DropBoxManager$Entry$1;->createFromParcel(Landroid/os/Parcel;)Landroid/os/DropBoxManager$Entry;
 
     move-result-object v0
@@ -104,7 +96,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 220
     new-array v0, p1, [Landroid/os/DropBoxManager$Entry;
 
     return-object v0
@@ -114,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 219
     invoke-virtual {p0, p1}, Landroid/os/DropBoxManager$Entry$1;->newArray(I)[Landroid/os/DropBoxManager$Entry;
 
     move-result-object v0

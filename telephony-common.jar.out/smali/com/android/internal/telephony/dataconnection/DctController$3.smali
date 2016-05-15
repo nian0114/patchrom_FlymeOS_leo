@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 146
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
@@ -37,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->onSubInfoReady()V
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DctController;->access$200(Lcom/android/internal/telephony/dataconnection/DctController;)V
 
-    .line 150
     return-void
 .end method

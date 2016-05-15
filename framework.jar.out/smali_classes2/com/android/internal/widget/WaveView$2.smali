@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 436
     iput-object p1, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 14
 
     .prologue
-    .line 438
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     # getter for: Lcom/android/internal/widget/WaveView;->mMouseX:F
@@ -59,7 +57,6 @@
 
     float-to-double v10, v2
 
-    .line 439
     .local v10, "distX":D
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
@@ -79,7 +76,6 @@
 
     float-to-double v12, v2
 
-    .line 440
     .local v12, "distY":D
     invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->hypot(DD)D
 
@@ -91,7 +87,6 @@
 
     double-to-int v0, v2
 
-    .line 441
     .local v0, "dragDistance":I
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
@@ -126,7 +121,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 443
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     const-wide/16 v4, 0x7d0
@@ -149,7 +143,6 @@
     # setter for: Lcom/android/internal/widget/WaveView;->mWaveTimerDelay:J
     invoke-static {v2, v4, v5}, Lcom/android/internal/widget/WaveView;->access$602(Lcom/android/internal/widget/WaveView;J)J
 
-    .line 445
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     # getter for: Lcom/android/internal/widget/WaveView;->mLightWaves:Ljava/util/ArrayList;
@@ -170,23 +163,19 @@
 
     check-cast v1, Lcom/android/internal/widget/DrawableHolder;
 
-    .line 446
     .local v1, "wave":Lcom/android/internal/widget/DrawableHolder;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/DrawableHolder;->setAlpha(F)V
 
-    .line 447
     const v2, 0x3e4ccccd    # 0.2f
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/DrawableHolder;->setScaleX(F)V
 
-    .line 448
     const v2, 0x3e4ccccd    # 0.2f
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/DrawableHolder;->setScaleY(F)V
 
-    .line 449
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     # getter for: Lcom/android/internal/widget/WaveView;->mMouseX:F
@@ -196,7 +185,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/DrawableHolder;->setX(F)V
 
-    .line 450
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     # getter for: Lcom/android/internal/widget/WaveView;->mMouseY:F
@@ -206,7 +194,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/DrawableHolder;->setY(F)V
 
-    .line 452
     const-wide/16 v2, 0x7d0
 
     const-wide/16 v4, 0x0
@@ -224,7 +211,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/widget/DrawableHolder;->addAnimTo(JJLjava/lang/String;FZ)Landroid/animation/ObjectAnimator;
 
-    .line 453
     const-wide/16 v2, 0x7d0
 
     const-wide/16 v4, 0x0
@@ -242,7 +228,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/widget/DrawableHolder;->addAnimTo(JJLjava/lang/String;FZ)Landroid/animation/ObjectAnimator;
 
-    .line 454
     const-wide/16 v2, 0x535
 
     const-wide/16 v4, 0x0
@@ -255,7 +240,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/widget/DrawableHolder;->addAnimTo(JJLjava/lang/String;FZ)Landroid/animation/ObjectAnimator;
 
-    .line 455
     const-wide/16 v2, 0x7d0
 
     const-wide/16 v4, 0x0
@@ -268,7 +252,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/widget/DrawableHolder;->addAnimTo(JJLjava/lang/String;FZ)Landroid/animation/ObjectAnimator;
 
-    .line 456
     const-wide/16 v2, 0x7d0
 
     const-wide/16 v4, 0x0
@@ -281,7 +264,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/widget/DrawableHolder;->addAnimTo(JJLjava/lang/String;FZ)Landroid/animation/ObjectAnimator;
 
-    .line 458
     const-wide/16 v2, 0x3e8
 
     const-wide/16 v4, 0x514
@@ -294,12 +276,10 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/widget/DrawableHolder;->addAnimTo(JJLjava/lang/String;FZ)Landroid/animation/ObjectAnimator;
 
-    .line 459
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/DrawableHolder;->startAnimations(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 461
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     iget-object v3, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
@@ -323,7 +303,6 @@
     # setter for: Lcom/android/internal/widget/WaveView;->mCurrentWave:I
     invoke-static {v2, v3}, Lcom/android/internal/widget/WaveView;->access$702(Lcom/android/internal/widget/WaveView;I)I
 
-    .line 466
     .end local v1    # "wave":Lcom/android/internal/widget/DrawableHolder;
     :goto_0
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
@@ -335,7 +314,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 468
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
     const/4 v3, 0x0
@@ -343,11 +321,9 @@
     # setter for: Lcom/android/internal/widget/WaveView;->mWavesRunning:Z
     invoke-static {v2, v3}, Lcom/android/internal/widget/WaveView;->access$1102(Lcom/android/internal/widget/WaveView;Z)Z
 
-    .line 472
     :goto_1
     return-void
 
-    .line 464
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 
@@ -358,7 +334,6 @@
 
     goto :goto_0
 
-    .line 470
     :cond_1
     iget-object v2, p0, Lcom/android/internal/widget/WaveView$2;->this$0:Lcom/android/internal/widget/WaveView;
 

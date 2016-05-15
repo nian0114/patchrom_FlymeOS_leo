@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 92
     iput-object p1, p0, Landroid/accounts/GrantCredentialsPermissionActivity$1;->this$0:Landroid/accounts/GrantCredentialsPermissionActivity;
 
     iput-object p2, p0, Landroid/accounts/GrantCredentialsPermissionActivity$1;->val$authTokenTypeView:Landroid/widget/TextView;
@@ -63,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 95
     .local p1, "future":Landroid/accounts/AccountManagerFuture;, "Landroid/accounts/AccountManagerFuture<Ljava/lang/String;>;"
     :try_start_0
     invoke-interface {p1}, Landroid/accounts/AccountManagerFuture;->getResult()Ljava/lang/Object;
@@ -72,7 +70,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 96
     .local v0, "authTokenLabel":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -80,7 +77,6 @@
 
     if-nez v1, :cond_0
 
-    .line 97
     iget-object v1, p0, Landroid/accounts/GrantCredentialsPermissionActivity$1;->this$0:Landroid/accounts/GrantCredentialsPermissionActivity;
 
     new-instance v2, Landroid/accounts/GrantCredentialsPermissionActivity$1$1;
@@ -93,25 +89,21 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/accounts/AuthenticatorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
     .end local v0    # "authTokenLabel":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 108
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 107
     :catch_1
     move-exception v1
 
     goto :goto_0
 
-    .line 106
     :catch_2
     move-exception v1
 

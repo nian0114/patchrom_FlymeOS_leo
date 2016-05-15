@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 57
     iput-object p1, p0, Landroid/content/res/ThemeManager$1$1;->this$1:Landroid/content/res/ThemeManager$1;
 
     iput p2, p0, Landroid/content/res/ThemeManager$1$1;->val$progress:I
@@ -44,7 +43,6 @@
     .locals 7
 
     .prologue
-    .line 60
     iget-object v4, p0, Landroid/content/res/ThemeManager$1$1;->this$1:Landroid/content/res/ThemeManager$1;
 
     iget-object v4, v4, Landroid/content/res/ThemeManager$1;->this$0:Landroid/content/res/ThemeManager;
@@ -56,13 +54,11 @@
 
     monitor-enter v5
 
-    .line 61
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 63
     .local v3, "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/content/res/ThemeManager$ThemeChangeListener;>;"
     iget-object v4, p0, Landroid/content/res/ThemeManager$1$1;->this$1:Landroid/content/res/ThemeManager$1;
 
@@ -93,7 +89,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 65
     .local v2, "listener":Landroid/content/res/ThemeManager$ThemeChangeListener;
     :try_start_1
     iget v4, p0, Landroid/content/res/ThemeManager$1$1;->val$progress:I
@@ -105,11 +100,9 @@
 
     goto :goto_0
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "e":Ljava/lang/Throwable;
     :try_start_2
     # getter for: Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
@@ -121,12 +114,10 @@
 
     invoke-static {v4, v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 68
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 76
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "listener":Landroid/content/res/ThemeManager$ThemeChangeListener;
@@ -140,7 +131,6 @@
 
     throw v4
 
-    .line 71
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/content/res/ThemeManager$ThemeChangeListener;>;"
     :cond_0
@@ -151,7 +141,6 @@
 
     if-lez v4, :cond_1
 
-    .line 72
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -169,7 +158,6 @@
 
     check-cast v2, Landroid/content/res/ThemeManager$ThemeChangeListener;
 
-    .line 73
     .restart local v2    # "listener":Landroid/content/res/ThemeManager$ThemeChangeListener;
     iget-object v4, p0, Landroid/content/res/ThemeManager$1$1;->this$1:Landroid/content/res/ThemeManager$1;
 
@@ -184,13 +172,11 @@
 
     goto :goto_1
 
-    .line 76
     .end local v2    # "listener":Landroid/content/res/ThemeManager$ThemeChangeListener;
     :cond_1
     monitor-exit v5
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 77
     return-void
 .end method

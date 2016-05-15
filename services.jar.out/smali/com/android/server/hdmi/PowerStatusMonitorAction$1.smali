@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->this$0:Lcom/android/server/hdmi/PowerStatusMonitorAction;
 
     iput p2, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->val$logicalAddress:I
@@ -45,10 +44,8 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 126
     if-eqz p1, :cond_0
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->this$0:Lcom/android/server/hdmi/PowerStatusMonitorAction;
 
     iget v1, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->val$logicalAddress:I
@@ -60,7 +57,6 @@
     # invokes: Lcom/android/server/hdmi/PowerStatusMonitorAction;->updatePowerStatus(IIZ)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/hdmi/PowerStatusMonitorAction;->access$000(Lcom/android/server/hdmi/PowerStatusMonitorAction;IIZ)V
 
-    .line 129
     :cond_0
     return-void
 .end method

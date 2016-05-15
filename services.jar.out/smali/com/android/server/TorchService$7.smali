@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 552
     iput-object p1, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
@@ -36,12 +35,10 @@
     .param p1, "available"    # Z
 
     .prologue
-    .line 572
     iget-object v2, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
     monitor-enter v2
 
-    .line 573
     :try_start_0
     iget-object v1, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
@@ -50,22 +47,18 @@
 
     move-result v0
 
-    .line 574
     .local v0, "oldAvailable":Z
     iget-object v1, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
     # setter for: Lcom/android/server/TorchService;->mTorchAvailable:Z
     invoke-static {v1, p1}, Lcom/android/server/TorchService;->access$1702(Lcom/android/server/TorchService;Z)Z
 
-    .line 575
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 576
     if-eq v0, p1, :cond_1
 
-    .line 577
     # getter for: Lcom/android/server/TorchService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/TorchService;->access$400()Z
 
@@ -104,18 +97,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     :cond_0
     iget-object v1, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
     # invokes: Lcom/android/server/TorchService;->dispatchAvailabilityChanged(Z)V
     invoke-static {v1, p1}, Lcom/android/server/TorchService;->access$1800(Lcom/android/server/TorchService;Z)V
 
-    .line 580
     :cond_1
     return-void
 
-    .line 575
     .end local v0    # "oldAvailable":Z
     :catchall_0
     move-exception v1
@@ -135,7 +125,6 @@
     .param p1, "cameraId"    # Ljava/lang/String;
 
     .prologue
-    .line 555
     # getter for: Lcom/android/server/TorchService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/TorchService;->access$400()Z
 
@@ -174,7 +163,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     :cond_0
     iget-object v0, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
@@ -193,12 +181,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 557
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/TorchService$7;->setTorchAvailable(Z)V
 
-    .line 559
     :cond_1
     return-void
 .end method
@@ -210,7 +196,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 563
     # getter for: Lcom/android/server/TorchService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/TorchService;->access$400()Z
 
@@ -249,7 +234,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
     :cond_0
     iget-object v2, p0, Lcom/android/server/TorchService$7;->this$0:Lcom/android/server/TorchService;
 
@@ -272,7 +256,6 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 565
     .local v0, "openedOurselves":Z
     :goto_0
     if-nez v0, :cond_2
@@ -294,10 +277,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 566
     invoke-direct {p0, v1}, Lcom/android/server/TorchService$7;->setTorchAvailable(Z)V
 
-    .line 568
     :cond_2
     return-void
 
@@ -305,6 +286,5 @@
     :cond_3
     move v0, v1
 
-    .line 564
     goto :goto_0
 .end method

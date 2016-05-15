@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 433
     iput-object p1, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 436
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
     # getter for: Landroid/speech/SpeechRecognizer$InternalListener;->mInternalListener:Landroid/speech/RecognitionListener;
@@ -48,11 +46,9 @@
 
     if-nez v0, :cond_0
 
-    .line 468
     :goto_0
     return-void
 
-    .line 439
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -60,7 +56,6 @@
 
     goto :goto_0
 
-    .line 441
     :pswitch_0
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 444
     :pswitch_1
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -92,7 +86,6 @@
 
     goto :goto_0
 
-    .line 447
     :pswitch_2
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -105,7 +98,6 @@
 
     goto :goto_0
 
-    .line 450
     :pswitch_3
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -126,7 +118,6 @@
 
     goto :goto_0
 
-    .line 453
     :pswitch_4
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -143,7 +134,6 @@
 
     goto :goto_0
 
-    .line 456
     :pswitch_5
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -160,7 +150,6 @@
 
     goto :goto_0
 
-    .line 459
     :pswitch_6
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -177,7 +166,6 @@
 
     goto :goto_0
 
-    .line 462
     :pswitch_7
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -198,7 +186,6 @@
 
     goto :goto_0
 
-    .line 465
     :pswitch_8
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener$1;->this$0:Landroid/speech/SpeechRecognizer$InternalListener;
 
@@ -217,7 +204,6 @@
 
     goto/16 :goto_0
 
-    .line 439
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

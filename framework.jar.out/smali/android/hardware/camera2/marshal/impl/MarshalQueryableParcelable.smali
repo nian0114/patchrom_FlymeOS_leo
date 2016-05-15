@@ -38,7 +38,6 @@
     .locals 2
 
     .prologue
-    .line 40
     const-string v0, "MarshalParcelable"
 
     const/4 v1, 0x2
@@ -56,11 +55,9 @@
     .locals 0
 
     .prologue
-    .line 36
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     return-void
 .end method
 
@@ -68,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-boolean v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable;->VERBOSE:Z
 
     return v0
@@ -90,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 185
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable$MarshalerParcelable;
@@ -112,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 190
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableParcelable<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     const-class v0, Landroid/os/Parcelable;

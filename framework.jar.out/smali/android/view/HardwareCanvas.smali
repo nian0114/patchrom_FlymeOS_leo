@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Landroid/graphics/Canvas;-><init>()V
 
     return-void
@@ -20,10 +19,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     invoke-static {p0, p1}, Landroid/view/GLES20Canvas;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
     return-void
 .end method
 
@@ -67,14 +64,12 @@
     .param p1, "renderNode"    # Landroid/view/RenderNode;
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/view/HardwareCanvas;->drawRenderNode(Landroid/view/RenderNode;Landroid/graphics/Rect;I)I
 
-    .line 68
     return-void
 .end method
 
@@ -118,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x1
 
     return v0
@@ -135,7 +129,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 39
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

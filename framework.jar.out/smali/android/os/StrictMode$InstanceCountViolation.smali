@@ -33,7 +33,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 2272
     new-array v0, v6, [Ljava/lang/StackTraceElement;
 
     const/4 v1, 0x0
@@ -42,7 +41,7 @@
 
     const-string v3, "android.os.StrictMode"
 
-    const-string/jumbo v4, "setClassInstanceLimit"
+    const-string v4, "setClassInstanceLimit"
 
     const-string v5, "StrictMode.java"
 
@@ -62,7 +61,6 @@
     .param p4, "limit"    # I
 
     .prologue
-    .line 2278
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,20 +99,15 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    .line 2279
     sget-object v0, Landroid/os/StrictMode$InstanceCountViolation;->FAKE_STACK:[Ljava/lang/StackTraceElement;
 
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$InstanceCountViolation;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 2280
     iput-object p1, p0, Landroid/os/StrictMode$InstanceCountViolation;->mClass:Ljava/lang/Class;
 
-    .line 2281
     iput-wide p2, p0, Landroid/os/StrictMode$InstanceCountViolation;->mInstances:J
 
-    .line 2282
     iput p4, p0, Landroid/os/StrictMode$InstanceCountViolation;->mLimit:I
 
-    .line 2283
     return-void
 .end method

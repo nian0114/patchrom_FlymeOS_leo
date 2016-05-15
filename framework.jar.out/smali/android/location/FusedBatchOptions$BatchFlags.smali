@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 99
     const/4 v0, 0x1
 
     sput v0, Landroid/location/FusedBatchOptions$BatchFlags;->WAKEUP_ON_FIFO_FULL:I
 
-    .line 100
     const/4 v0, 0x2
 
     sput v0, Landroid/location/FusedBatchOptions$BatchFlags;->CALLBACK_ON_LOCATION_FIX:I
@@ -42,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

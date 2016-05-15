@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 349
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$4;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput p2, p0, Lcom/android/server/display/WifiDisplayController$4;->val$featureState:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$4;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mListener:Lcom/android/server/display/WifiDisplayController$Listener;
@@ -56,6 +54,5 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/display/WifiDisplayController$Listener;->onFeatureStateChanged(I)V
 
-    .line 353
     return-void
 .end method

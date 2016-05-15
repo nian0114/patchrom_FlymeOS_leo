@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 377
     iput-object p1, p0, Landroid/bluetooth/le/BluetoothLeScanner$1;->this$0:Landroid/bluetooth/le/BluetoothLeScanner;
 
     iput-object p2, p0, Landroid/bluetooth/le/BluetoothLeScanner$1;->val$callback:Landroid/bluetooth/le/ScanCallback;
@@ -48,13 +47,11 @@
     .locals 2
 
     .prologue
-    .line 380
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeScanner$1;->val$callback:Landroid/bluetooth/le/ScanCallback;
 
     iget v1, p0, Landroid/bluetooth/le/BluetoothLeScanner$1;->val$errorCode:I
 
     invoke-virtual {v0, v1}, Landroid/bluetooth/le/ScanCallback;->onScanFailed(I)V
 
-    .line 381
     return-void
 .end method

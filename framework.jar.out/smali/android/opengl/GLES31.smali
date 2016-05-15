@@ -348,10 +348,8 @@
     .locals 0
 
     .prologue
-    .line 198
     invoke-static {}, Landroid/opengl/GLES31;->_nativeClassInit()V
 
-    .line 199
     return-void
 .end method
 
@@ -359,7 +357,6 @@
     .locals 0
 
     .prologue
-    .line 201
     invoke-direct {p0}, Landroid/opengl/GLES30;-><init>()V
 
     return-void

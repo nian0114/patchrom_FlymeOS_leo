@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 129
     new-instance v0, Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
 
     const-string v1, "UPSTREAM_IFACE_REMOVED"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;->UPSTREAM_IFACE_REMOVED:Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
 
-    .line 130
     new-instance v0, Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
 
     const-string v1, "UPSTREAM_IFACE_ADDED"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;->UPSTREAM_IFACE_ADDED:Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
 
-    .line 128
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 128
     const-class v0, Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 128
     sget-object v0, Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;->$VALUES:[Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;
 
     invoke-virtual {v0}, [Lcom/android/server/connectivity/Tethering$UpstreamInfoUpdateType;->clone()Ljava/lang/Object;

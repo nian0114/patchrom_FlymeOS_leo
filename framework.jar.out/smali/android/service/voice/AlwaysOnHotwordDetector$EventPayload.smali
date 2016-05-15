@@ -36,25 +36,18 @@
     .param p5, "data"    # [B
 
     .prologue
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     iput-boolean p1, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mTriggerAvailable:Z
 
-    .line 219
     iput-boolean p2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mCaptureAvailable:Z
 
-    .line 220
     iput p4, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mCaptureSession:I
 
-    .line 221
     iput-object p3, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mAudioFormat:Landroid/media/AudioFormat;
 
-    .line 222
     iput-object p5, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mData:[B
 
-    .line 223
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .param p6, "x5"    # Landroid/service/voice/AlwaysOnHotwordDetector$1;
 
     .prologue
-    .line 204
     invoke-direct/range {p0 .. p5}, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;-><init>(ZZLandroid/media/AudioFormat;I[B)V
 
     return-void
@@ -80,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 231
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mAudioFormat:Landroid/media/AudioFormat;
 
     return-object v0
@@ -90,19 +81,16 @@
     .locals 1
 
     .prologue
-    .line 271
     iget-boolean v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mCaptureAvailable:Z
 
     if-eqz v0, :cond_0
 
-    .line 272
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mCaptureSession:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 274
     :goto_0
     return-object v0
 
@@ -116,15 +104,12 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-boolean v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mTriggerAvailable:Z
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$EventPayload;->mData:[B
 
-    .line 247
     :goto_0
     return-object v0
 

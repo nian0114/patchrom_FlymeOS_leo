@@ -31,10 +31,8 @@
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 89
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     new-instance v13, Landroid/content/Intent;
 
     const-string v14, "com.android.intent.action.MANAGE_VOICE_KEYPHRASES"
@@ -49,7 +47,6 @@
 
     move-result-object v11
 
-    .line 95
     .local v11, "ris":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v11, :cond_0
 
@@ -59,7 +56,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 97
     :cond_0
     const-string v13, "No enrollment application found"
 
@@ -67,20 +63,16 @@
 
     iput-object v13, v0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 175
     :cond_1
     :goto_0
     return-void
 
-    .line 101
     :cond_2
     const/4 v5, 0x0
 
-    .line 102
     .local v5, "found":Z
     const/4 v1, 0x0
 
-    .line 103
     .local v1, "ai":Landroid/content/pm/ApplicationInfo;
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -100,7 +92,6 @@
 
     check-cast v10, Landroid/content/pm/ResolveInfo;
 
-    .line 105
     .local v10, "ri":Landroid/content/pm/ResolveInfo;
     :try_start_0
     iget-object v13, v10, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -115,7 +106,6 @@
 
     move-result-object v1
 
-    .line 107
     iget v13, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v14, 0x40000000    # 2.0f
@@ -124,7 +114,6 @@
 
     if-nez v13, :cond_3
 
-    .line 110
     const-string v13, "KeyphraseEnrollmentInfo"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -153,11 +142,9 @@
 
     goto :goto_1
 
-    .line 122
     :catch_0
     move-exception v4
 
-    .line 123
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v13, "KeyphraseEnrollmentInfo"
 
@@ -167,7 +154,6 @@
 
     goto :goto_1
 
-    .line 113
     .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_3
     :try_start_1
@@ -181,7 +167,6 @@
 
     if-nez v13, :cond_4
 
-    .line 116
     const-string v13, "KeyphraseEnrollmentInfo"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -208,7 +193,6 @@
 
     goto :goto_1
 
-    .line 119
     :cond_4
     iget-object v13, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -218,22 +202,18 @@
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 120
     const/4 v5, 0x1
 
-    .line 127
     .end local v10    # "ri":Landroid/content/pm/ResolveInfo;
     :cond_5
     if-nez v5, :cond_6
 
-    .line 128
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v13, v0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mKeyphrases:[Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
-    .line 129
     const-string v13, "No suitable enrollment application found"
 
     move-object/from16 v0, p0
@@ -242,11 +222,9 @@
 
     goto/16 :goto_0
 
-    .line 133
     :cond_6
     const/4 v8, 0x0
 
-    .line 135
     .local v8, "parser":Landroid/content/res/XmlResourceParser;
     :try_start_2
     const-string v13, "android.voice_enrollment"
@@ -257,10 +235,8 @@
 
     move-result-object v8
 
-    .line 136
     if-nez v8, :cond_7
 
-    .line 137
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,14 +266,12 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 173
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 142
     :cond_7
     :try_start_3
     move-object/from16 v0, p1
@@ -306,13 +280,11 @@
 
     move-result-object v9
 
-    .line 143
     .local v9, "res":Landroid/content/res/Resources;
     invoke-static {v8}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v3
 
-    .line 147
     .local v3, "attrs":Landroid/util/AttributeSet;
     :cond_8
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->next()I
@@ -328,15 +300,13 @@
 
     if-ne v12, v13, :cond_8
 
-    .line 150
     :cond_9
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 151
     .local v7, "nodeName":Ljava/lang/String;
-    const-string/jumbo v13, "voice-enrollment-application"
+    const-string v13, "voice-enrollment-application"
 
     invoke-virtual {v13, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -344,7 +314,6 @@
 
     if-nez v13, :cond_a
 
-    .line 152
     const-string v13, "Meta-data does not start with voice-enrollment-application tag"
 
     move-object/from16 v0, p0
@@ -356,14 +325,12 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 173
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 156
     :cond_a
     :try_start_4
     sget-object v13, Lcom/android/internal/R$styleable;->VoiceEnrollmentApplication:[I
@@ -372,13 +339,11 @@
 
     move-result-object v2
 
-    .line 158
     .local v2, "array":Landroid/content/res/TypedArray;
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2}, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->initializeKeyphrasesFromTypedArray(Landroid/content/res/TypedArray;)V
 
-    .line 159
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
     :try_end_4
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_1
@@ -386,14 +351,12 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 173
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 160
     .end local v2    # "array":Landroid/content/res/TypedArray;
     .end local v3    # "attrs":Landroid/util/AttributeSet;
     .end local v7    # "nodeName":Ljava/lang/String;
@@ -402,7 +365,6 @@
     :catch_1
     move-exception v4
 
-    .line 161
     .local v4, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_5
     new-instance v13, Ljava/lang/StringBuilder;
@@ -427,7 +389,6 @@
 
     iput-object v13, v0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 162
     const-string v13, "KeyphraseEnrollmentInfo"
 
     const-string v14, "error parsing keyphrase enrollment meta-data"
@@ -436,19 +397,16 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 173
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 164
     .end local v4    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v4
 
-    .line 165
     .local v4, "e":Ljava/io/IOException;
     :try_start_6
     new-instance v13, Ljava/lang/StringBuilder;
@@ -473,7 +431,6 @@
 
     iput-object v13, v0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 166
     const-string v13, "KeyphraseEnrollmentInfo"
 
     const-string v14, "error parsing keyphrase enrollment meta-data"
@@ -482,19 +439,16 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 173
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 168
     .end local v4    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v4
 
-    .line 169
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_7
     new-instance v13, Ljava/lang/StringBuilder;
@@ -519,7 +473,6 @@
 
     iput-object v13, v0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 170
     const-string v13, "KeyphraseEnrollmentInfo"
 
     const-string v14, "error parsing keyphrase enrollment meta-data"
@@ -528,7 +481,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 173
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
@@ -558,47 +510,38 @@
 
     const/4 v9, -0x1
 
-    .line 179
     invoke-virtual {p1, v10, v9}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v5
 
-    .line 181
     .local v5, "searchKeyphraseId":I
     if-gtz v5, :cond_0
 
-    .line 182
     const-string v8, "No valid searchKeyphraseId specified in meta-data"
 
     iput-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 183
     const-string v8, "KeyphraseEnrollmentInfo"
 
     iget-object v9, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
     invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     :goto_0
     return-void
 
-    .line 188
     :cond_0
     invoke-virtual {p1, v11}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 190
     .local v4, "searchKeyphrase":Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 191
     const-string v8, "No valid searchKeyphrase specified in meta-data"
 
     iput-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 192
     const-string v8, "KeyphraseEnrollmentInfo"
 
     iget-object v9, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
@@ -607,7 +550,6 @@
 
     goto :goto_0
 
-    .line 197
     :cond_1
     const/4 v8, 0x2
 
@@ -615,16 +557,13 @@
 
     move-result-object v6
 
-    .line 200
     .local v6, "searchKeyphraseSupportedLocales":Ljava/lang/String;
     if-nez v6, :cond_2
 
-    .line 201
     const-string v8, "No valid searchKeyphraseSupportedLocales specified in meta-data"
 
     iput-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 202
     const-string v8, "KeyphraseEnrollmentInfo"
 
     iget-object v9, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
@@ -633,13 +572,11 @@
 
     goto :goto_0
 
-    .line 205
     :cond_2
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 207
     .local v2, "locales":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/util/Locale;>;"
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -647,7 +584,6 @@
 
     if-nez v8, :cond_3
 
-    .line 209
     :try_start_0
     const-string v8, ","
 
@@ -655,7 +591,6 @@
 
     move-result-object v7
 
-    .line 210
     .local v7, "supportedLocalesDelimited":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -665,7 +600,6 @@
 
     if-ge v1, v8, :cond_3
 
-    .line 211
     aget-object v8, v7, v1
 
     invoke-static {v8}, Ljava/util/Locale;->forLanguageTag(Ljava/lang/String;)Ljava/util/Locale;
@@ -676,24 +610,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 210
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 213
     .end local v1    # "i":I
     .end local v7    # "supportedLocalesDelimited":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 217
     .local v0, "ex":Ljava/lang/Exception;
     const-string v8, "Error reading searchKeyphraseSupportedLocales from meta-data"
 
     iput-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 218
     const-string v8, "KeyphraseEnrollmentInfo"
 
     iget-object v9, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
@@ -702,7 +632,6 @@
 
     goto :goto_0
 
-    .line 224
     .end local v0    # "ex":Ljava/lang/Exception;
     :cond_3
     const/4 v8, 0x3
@@ -711,16 +640,13 @@
 
     move-result v3
 
-    .line 226
     .local v3, "recognitionModes":I
     if-gez v3, :cond_4
 
-    .line 227
     const-string v8, "No valid searchKeyphraseRecognitionFlags specified in meta-data"
 
     iput-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
-    .line 228
     const-string v8, "KeyphraseEnrollmentInfo"
 
     iget-object v9, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
@@ -729,13 +655,11 @@
 
     goto :goto_0
 
-    .line 231
     :cond_4
     new-array v8, v11, [Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
     iput-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mKeyphrases:[Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
-    .line 232
     iget-object v8, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mKeyphrases:[Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
     new-instance v9, Landroid/hardware/soundtrigger/KeyphraseMetadata;
@@ -757,7 +681,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 289
     iget-object v5, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mKeyphrases:[Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
     if-eqz v5, :cond_0
@@ -768,7 +691,6 @@
 
     if-nez v5, :cond_2
 
-    .line 290
     :cond_0
     const-string v5, "KeyphraseEnrollmentInfo"
 
@@ -778,12 +700,10 @@
 
     move-object v2, v4
 
-    .line 302
     :cond_1
     :goto_0
     return-object v2
 
-    .line 293
     :cond_2
     iget-object v0, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mKeyphrases:[Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
@@ -799,7 +719,6 @@
 
     aget-object v2, v0, v1
 
-    .line 296
     .local v2, "keyphraseMetadata":Landroid/hardware/soundtrigger/KeyphraseMetadata;
     invoke-virtual {v2, p1}, Landroid/hardware/soundtrigger/KeyphraseMetadata;->supportsPhrase(Ljava/lang/String;)Z
 
@@ -813,13 +732,11 @@
 
     if-nez v5, :cond_1
 
-    .line 293
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 301
     .end local v2    # "keyphraseMetadata":Landroid/hardware/soundtrigger/KeyphraseMetadata;
     :cond_4
     const-string v5, "KeyphraseEnrollmentInfo"
@@ -830,7 +747,6 @@
 
     move-object v2, v4
 
-    .line 302
     goto :goto_0
 .end method
 
@@ -843,7 +759,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 262
     iget-object v1, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mEnrollmentPackage:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -856,7 +771,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 263
     :cond_0
     const-string v1, "KeyphraseEnrollmentInfo"
 
@@ -864,12 +778,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     :cond_1
     :goto_0
     return-object v0
 
-    .line 267
     :cond_2
     invoke-virtual {p0, p2, p3}, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->getKeyphraseMetadata(Ljava/lang/String;Ljava/util/Locale;)Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
@@ -877,7 +789,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 268
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.android.intent.action.MANAGE_VOICE_KEYPHRASES"
@@ -912,7 +823,6 @@
 
     move-result-object v0
 
-    .line 273
     .local v0, "intent":Landroid/content/Intent;
     goto :goto_0
 .end method
@@ -921,7 +831,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget-object v0, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mParseError:Ljava/lang/String;
 
     return-object v0
@@ -931,7 +840,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget-object v0, p0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->mKeyphrases:[Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
     return-object v0
@@ -941,7 +849,6 @@
     .locals 2
 
     .prologue
-    .line 307
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

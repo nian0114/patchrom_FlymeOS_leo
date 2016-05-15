@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 119
     const/4 v0, -0x1
 
     sput v0, Landroid/hardware/camera2/marshal/Marshaler;->NATIVE_SIZE_DYNAMIC:I
@@ -58,14 +57,12 @@
     .end annotation
 
     .prologue
-    .line 56
     .local p0, "this":Landroid/hardware/camera2/marshal/Marshaler;, "Landroid/hardware/camera2/marshal/Marshaler<TT;>;"
     .local p1, "query":Landroid/hardware/camera2/marshal/MarshalQueryable;, "Landroid/hardware/camera2/marshal/MarshalQueryable<TT;>;"
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
-    const-string/jumbo v0, "typeReference must not be null"
+    const-string v0, "typeReference must not be null"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -75,21 +72,18 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/marshal/Marshaler;->mTypeReference:Landroid/hardware/camera2/utils/TypeReference;
 
-    .line 58
     invoke-static {p3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeType(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/marshal/Marshaler;->mNativeType:I
 
-    .line 60
     invoke-interface {p1, p2, p3}, Landroid/hardware/camera2/marshal/MarshalQueryable;->isTypeMappingSupported(Landroid/hardware/camera2/utils/TypeReference;I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 61
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -128,7 +122,6 @@
 
     throw v0
 
-    .line 66
     :cond_0
     return-void
 .end method
@@ -144,20 +137,17 @@
     .end annotation
 
     .prologue
-    .line 93
     .local p0, "this":Landroid/hardware/camera2/marshal/Marshaler;, "Landroid/hardware/camera2/marshal/Marshaler<TT;>;"
     .local p1, "value":Ljava/lang/Object;, "TT;"
     invoke-virtual {p0}, Landroid/hardware/camera2/marshal/Marshaler;->getNativeSize()I
 
     move-result v0
 
-    .line 95
     .local v0, "nativeSize":I
     sget v1, Landroid/hardware/camera2/marshal/Marshaler;->NATIVE_SIZE_DYNAMIC:I
 
     if-ne v0, v1, :cond_0
 
-    .line 96
     new-instance v1, Ljava/lang/AssertionError;
 
     const-string v2, "Override this function for dynamically-sized objects"
@@ -166,7 +156,6 @@
 
     throw v1
 
-    .line 99
     :cond_0
     return v0
 .end method
@@ -178,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 146
     .local p0, "this":Landroid/hardware/camera2/marshal/Marshaler;, "Landroid/hardware/camera2/marshal/Marshaler<TT;>;"
     iget v0, p0, Landroid/hardware/camera2/marshal/Marshaler;->mNativeType:I
 
@@ -196,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 141
     .local p0, "this":Landroid/hardware/camera2/marshal/Marshaler;, "Landroid/hardware/camera2/marshal/Marshaler<TT;>;"
     iget-object v0, p0, Landroid/hardware/camera2/marshal/Marshaler;->mTypeReference:Landroid/hardware/camera2/utils/TypeReference;
 

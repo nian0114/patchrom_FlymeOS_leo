@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 26
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -48,14 +46,12 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 30
     const-string v1, "UNSET"
 
     invoke-static {p1, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 31
     .local v0, "prop":Ljava/lang/String;
     const-string v1, "UNSET"
 

@@ -27,17 +27,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/ConsumerIrManager;->mPackageName:Ljava/lang/String;
 
-    .line 45
     const-string v0, "consumer_ir"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -50,7 +47,6 @@
 
     iput-object v0, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
 
-    .line 47
     return-void
 .end method
 
@@ -62,26 +58,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 134
     iget-object v4, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
 
     if-nez v4, :cond_1
 
-    .line 135
     const-string v4, "ConsumerIr"
 
-    const-string/jumbo v5, "no consumer ir service."
+    const-string v5, "no consumer ir service."
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v2, v3
 
-    .line 153
     :cond_0
     :goto_0
     return-object v2
 
-    .line 140
     :cond_1
     :try_start_0
     iget-object v4, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
@@ -90,7 +82,6 @@
 
     move-result-object v0
 
-    .line 141
     .local v0, "freqs":[I
     array-length v4, v0
 
@@ -98,7 +89,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 142
     const-string v4, "ConsumerIr"
 
     const-string v5, "consumer ir service returned an uneven number of frequencies."
@@ -107,10 +97,8 @@
 
     move-object v2, v3
 
-    .line 143
     goto :goto_0
 
-    .line 145
     :cond_2
     array-length v4, v0
 
@@ -118,7 +106,6 @@
 
     new-array v2, v4, [Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;
 
-    .line 147
     .local v2, "range":[Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;
     const/4 v1, 0x0
 
@@ -128,7 +115,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 148
     div-int/lit8 v4, v1, 0x2
 
     new-instance v5, Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;
@@ -145,12 +131,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_1
 
-    .line 151
     .end local v0    # "freqs":[I
     .end local v1    # "i":I
     .end local v2    # "range":[Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;
@@ -159,7 +143,6 @@
 
     move-object v2, v3
 
-    .line 153
     goto :goto_0
 .end method
 
@@ -169,23 +152,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 55
     iget-object v1, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
 
     if-nez v1, :cond_0
 
-    .line 56
     const-string v1, "ConsumerIr"
 
-    const-string/jumbo v2, "no consumer ir service."
+    const-string v2, "no consumer ir service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :goto_0
     return v0
 
-    .line 61
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
@@ -198,7 +177,6 @@
 
     goto :goto_0
 
-    .line 62
     :catch_0
     move-exception v1
 
@@ -211,23 +189,19 @@
     .param p2, "pattern"    # [I
 
     .prologue
-    .line 79
     iget-object v1, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
 
     if-nez v1, :cond_0
 
-    .line 80
     const-string v1, "ConsumerIr"
 
     const-string v2, "failed to transmit; no consumer ir service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :goto_0
     return-void
 
-    .line 85
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/ConsumerIrManager;->mService:Landroid/hardware/IConsumerIrService;
@@ -240,11 +214,9 @@
 
     goto :goto_0
 
-    .line 86
     :catch_0
     move-exception v0
 
-    .line 87
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "ConsumerIr"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 351
     iput-object p1, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
     invoke-direct {p0}, Landroid/content/pm/IOnAppsChangedListener$Stub;-><init>()V
@@ -44,12 +43,10 @@
     .end annotation
 
     .prologue
-    .line 383
     iget-object v3, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
     monitor-enter v3
 
-    .line 384
     :try_start_0
     iget-object v2, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
@@ -76,13 +73,11 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps$CallbackMessageHandler;
 
-    .line 385
     .local v0, "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     invoke-virtual {v0, p2, p1}, Landroid/content/pm/LauncherApps$CallbackMessageHandler;->postOnPackageAdded(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    .line 387
     .end local v0    # "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -101,7 +96,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 388
     return-void
 .end method
 
@@ -116,12 +110,10 @@
     .end annotation
 
     .prologue
-    .line 371
     iget-object v3, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
     monitor-enter v3
 
-    .line 372
     :try_start_0
     iget-object v2, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
@@ -148,13 +140,11 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps$CallbackMessageHandler;
 
-    .line 373
     .local v0, "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     invoke-virtual {v0, p2, p1}, Landroid/content/pm/LauncherApps$CallbackMessageHandler;->postOnPackageChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    .line 375
     .end local v0    # "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -173,7 +163,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 376
     return-void
 .end method
 
@@ -188,12 +177,10 @@
     .end annotation
 
     .prologue
-    .line 359
     iget-object v3, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
     monitor-enter v3
 
-    .line 360
     :try_start_0
     iget-object v2, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
@@ -220,13 +207,11 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps$CallbackMessageHandler;
 
-    .line 361
     .local v0, "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     invoke-virtual {v0, p2, p1}, Landroid/content/pm/LauncherApps$CallbackMessageHandler;->postOnPackageRemoved(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    .line 363
     .end local v0    # "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -245,7 +230,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 364
     return-void
 .end method
 
@@ -261,12 +245,10 @@
     .end annotation
 
     .prologue
-    .line 396
     iget-object v3, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
     monitor-enter v3
 
-    .line 397
     :try_start_0
     iget-object v2, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
@@ -293,13 +275,11 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps$CallbackMessageHandler;
 
-    .line 398
     .local v0, "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     invoke-virtual {v0, p2, p1, p3}, Landroid/content/pm/LauncherApps$CallbackMessageHandler;->postOnPackagesAvailable([Ljava/lang/String;Landroid/os/UserHandle;Z)V
 
     goto :goto_0
 
-    .line 400
     .end local v0    # "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -318,7 +298,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 401
     return-void
 .end method
 
@@ -334,12 +313,10 @@
     .end annotation
 
     .prologue
-    .line 409
     iget-object v3, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
     monitor-enter v3
 
-    .line 410
     :try_start_0
     iget-object v2, p0, Landroid/content/pm/LauncherApps$1;->this$0:Landroid/content/pm/LauncherApps;
 
@@ -366,13 +343,11 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps$CallbackMessageHandler;
 
-    .line 411
     .local v0, "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     invoke-virtual {v0, p2, p1, p3}, Landroid/content/pm/LauncherApps$CallbackMessageHandler;->postOnPackagesUnavailable([Ljava/lang/String;Landroid/os/UserHandle;Z)V
 
     goto :goto_0
 
-    .line 413
     .end local v0    # "callback":Landroid/content/pm/LauncherApps$CallbackMessageHandler;
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -391,6 +366,5 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 414
     return-void
 .end method

@@ -20,10 +20,8 @@
     .locals 1
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -41,13 +39,10 @@
     .end annotation
 
     .prologue
-    .line 59
     sparse-switch p0, :sswitch_data_0
 
-    .line 68
     if-gez p0, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,15 +67,12 @@
 
     throw v0
 
-    .line 61
     :sswitch_0
     const/4 p0, 0x0
 
-    .line 71
     :cond_0
     return p0
 
-    .line 64
     :sswitch_1
     new-instance v0, Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
 
@@ -88,7 +80,6 @@
 
     throw v0
 
-    .line 59
     :sswitch_data_0
     .sparse-switch
         -0x13 -> :sswitch_1

@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1425
     const-string v0, "android.type.digits"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1426
     return-void
 .end method
 
@@ -42,13 +40,10 @@
     .param p1, "digits"    # Ljava/lang/String;
 
     .prologue
-    .line 1433
     invoke-direct {p0}, Landroid/text/style/TtsSpan$DigitsBuilder;-><init>()V
 
-    .line 1434
     invoke-virtual {p0, p1}, Landroid/text/style/TtsSpan$DigitsBuilder;->setDigits(Ljava/lang/String;)Landroid/text/style/TtsSpan$DigitsBuilder;
 
-    .line 1435
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .param p1, "digits"    # Ljava/lang/String;
 
     .prologue
-    .line 1443
     const-string v0, "android.arg.digits"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$DigitsBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;

@@ -40,29 +40,22 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
-    .line 139
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
-    .line 140
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastPrintTime:J
 
-    .line 141
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastFps:D
 
-    .line 146
     iput-object p1, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mStreamType:Ljava/lang/String;
 
-    .line 147
     return-void
 .end method
 
@@ -72,7 +65,6 @@
     .locals 2
 
     .prologue
-    .line 164
     monitor-enter p0
 
     :try_start_0
@@ -96,23 +88,19 @@
     .locals 1
 
     .prologue
-    .line 175
     monitor-enter p0
 
     :try_start_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->countFrame()V
 
-    .line 176
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->staggeredLog()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 177
     monitor-exit p0
 
     return-void
 
-    .line 175
     :catchall_0
     move-exception v0
 
@@ -125,7 +113,6 @@
     .locals 10
 
     .prologue
-    .line 150
     monitor-enter p0
 
     :try_start_0
@@ -135,12 +122,10 @@
 
     iput v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
-    .line 151
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v2
 
-    .line 152
     .local v2, "nextTime":J
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
@@ -150,10 +135,8 @@
 
     if-nez v4, :cond_0
 
-    .line 153
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
-    .line 155
     :cond_0
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
@@ -165,12 +148,10 @@
 
     if-lez v4, :cond_1
 
-    .line 156
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
     sub-long v0, v2, v4
 
-    .line 157
     .local v0, "elapsed":J
     iget v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
@@ -186,24 +167,20 @@
 
     iput-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastFps:D
 
-    .line 158
     const/4 v4, 0x0
 
     iput v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
-    .line 159
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     .end local v0    # "elapsed":J
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 150
     .end local v2    # "nextTime":J
     :catchall_0
     move-exception v4
@@ -217,7 +194,6 @@
     .locals 6
 
     .prologue
-    .line 168
     monitor-enter p0
 
     :try_start_0
@@ -233,12 +209,10 @@
 
     if-lez v0, :cond_0
 
-    .line 169
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastPrintTime:J
 
-    .line 170
     const-string v0, "FpsCounter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -277,13 +251,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 172
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 168
     :catchall_0
     move-exception v0
 

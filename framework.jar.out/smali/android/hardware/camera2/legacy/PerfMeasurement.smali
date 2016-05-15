@@ -81,50 +81,42 @@
     .locals 2
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCompletedQueryCount:I
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedGpuDurations:Ljava/util/ArrayList;
 
-    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedCpuDurations:Ljava/util/ArrayList;
 
-    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedTimestamps:Ljava/util/ArrayList;
 
-    .line 73
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
 
-    .line 74
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
 
-    .line 95
     const/4 v0, 0x3
 
     invoke-static {v0}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeCreateContext(I)J
@@ -133,7 +125,6 @@
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mNativeContext:J
 
-    .line 96
     return-void
 .end method
 
@@ -142,63 +133,54 @@
     .param p1, "maxQueries"    # I
 
     .prologue
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCompletedQueryCount:I
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedGpuDurations:Ljava/util/ArrayList;
 
-    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedCpuDurations:Ljava/util/ArrayList;
 
-    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedTimestamps:Ljava/util/ArrayList;
 
-    .line 73
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
 
-    .line 74
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
 
-    .line 106
     const/4 v0, 0x1
 
     if-ge p1, v0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "maxQueries is less than 1"
+    const-string v1, "maxQueries is less than 1"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 107
     :cond_0
     invoke-static {p1}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeCreateContext(I)J
 
@@ -206,7 +188,6 @@
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mNativeContext:J
 
-    .line 108
     return-void
 .end method
 
@@ -214,14 +195,12 @@
     .locals 4
 
     .prologue
-    .line 229
     iget-wide v2, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mNativeContext:J
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeGetNextGlDuration(J)J
 
     move-result-wide v0
 
-    .line 230
     .local v0, "duration":J
     const-wide/16 v2, 0x0
 
@@ -229,14 +208,12 @@
 
     if-lez v2, :cond_0
 
-    .line 231
     iget v2, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCompletedQueryCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCompletedQueryCount:I
 
-    .line 233
     :cond_0
     return-wide v0
 .end method
@@ -245,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 116
     invoke-static {}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeQuerySupport()Z
 
     move-result v0
@@ -278,7 +254,6 @@
     .param p1, "timestamp"    # J
 
     .prologue
-    .line 209
     iget-object v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -287,7 +262,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 210
     return-void
 .end method
 
@@ -296,7 +270,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     :try_start_0
     new-instance v0, Ljava/io/BufferedWriter;
 
@@ -311,13 +284,11 @@
     .local v0, "dump":Ljava/io/BufferedWriter;
     const/4 v5, 0x0
 
-    .line 136
     :try_start_1
-    const-string/jumbo v4, "timestamp gpu_duration cpu_duration\n"
+    const-string v4, "timestamp gpu_duration cpu_duration\n"
 
     invoke-virtual {v0, v4}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 137
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -330,7 +301,6 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 138
     const-string v4, "%d %d %d\n"
 
     const/4 v6, 0x3
@@ -373,23 +343,19 @@
 
     invoke-virtual {v0, v4}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 137
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 143
     :cond_0
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedTimestamps:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 144
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedGpuDurations:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 145
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedCpuDurations:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
@@ -397,7 +363,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 146
     if-eqz v0, :cond_1
 
     if-eqz v5, :cond_2
@@ -408,14 +373,12 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 149
     .end local v0    # "dump":Ljava/io/BufferedWriter;
     .end local v2    # "i":I
     :cond_1
     :goto_1
     return-void
 
-    .line 146
     .restart local v0    # "dump":Ljava/io/BufferedWriter;
     .restart local v2    # "i":I
     :catch_0
@@ -435,7 +398,6 @@
     :catch_1
     move-exception v1
 
-    .line 147
     .local v1, "e":Ljava/io/IOException;
     const-string v4, "PerfMeasurement"
 
@@ -471,7 +433,6 @@
 
     goto :goto_1
 
-    .line 146
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v0    # "dump":Ljava/io/BufferedWriter;
     .restart local v2    # "i":I
@@ -483,7 +444,6 @@
 
     goto :goto_1
 
-    .line 135
     .end local v2    # "i":I
     :catch_2
     move-exception v4
@@ -493,7 +453,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 146
     :catchall_0
     move-exception v5
 
@@ -545,12 +504,10 @@
     .locals 2
 
     .prologue
-    .line 246
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mNativeContext:J
 
     invoke-static {v0, v1}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeDeleteContext(J)V
 
-    .line 247
     return-void
 .end method
 
@@ -558,7 +515,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCompletedQueryCount:I
 
     return v0
@@ -568,19 +524,16 @@
     .locals 2
 
     .prologue
-    .line 162
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mNativeContext:J
 
     invoke-static {v0, v1}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeStartGlTimer(J)V
 
-    .line 163
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mStartTimeNs:J
 
-    .line 164
     return-void
 .end method
 
@@ -590,12 +543,10 @@
     .prologue
     const-wide/16 v6, -0x1
 
-    .line 178
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v2
 
-    .line 179
     .local v2, "endTimeNs":J
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
 
@@ -609,17 +560,14 @@
 
     invoke-interface {v4, v5}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 181
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mNativeContext:J
 
     invoke-static {v4, v5}, Landroid/hardware/camera2/legacy/PerfMeasurement;->nativeStopGlTimer(J)V
 
-    .line 185
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/PerfMeasurement;->getNextGlDuration()J
 
     move-result-wide v0
 
-    .line 186
     .local v0, "duration":J
     const-wide/16 v4, 0x0
 
@@ -627,7 +575,6 @@
 
     if-lez v4, :cond_0
 
-    .line 187
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedGpuDurations:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -636,7 +583,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
     iget-object v8, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedTimestamps:Ljava/util/ArrayList;
 
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
@@ -656,7 +602,6 @@
 
     invoke-virtual {v8, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 190
     iget-object v5, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCollectedCpuDurations:Ljava/util/ArrayList;
 
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
@@ -674,7 +619,6 @@
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 193
     :cond_0
     const-wide/16 v4, -0x2
 
@@ -682,7 +626,6 @@
 
     if-nez v4, :cond_2
 
-    .line 195
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
 
     invoke-interface {v4}, Ljava/util/Queue;->isEmpty()Z
@@ -691,12 +634,10 @@
 
     if-nez v4, :cond_1
 
-    .line 196
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
 
     invoke-interface {v4}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
-    .line 198
     :cond_1
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
 
@@ -706,16 +647,13 @@
 
     if-nez v4, :cond_2
 
-    .line 199
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
 
     invoke-interface {v4}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
-    .line 202
     :cond_2
     return-void
 
-    .line 188
     :cond_3
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mTimestampQueue:Ljava/util/Queue;
 
@@ -731,7 +669,6 @@
 
     goto :goto_0
 
-    .line 190
     :cond_4
     iget-object v4, p0, Landroid/hardware/camera2/legacy/PerfMeasurement;->mCpuDurationsQueue:Ljava/util/Queue;
 

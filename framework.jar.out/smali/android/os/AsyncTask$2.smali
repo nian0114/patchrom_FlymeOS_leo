@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 286
     .local p0, "this":Landroid/os/AsyncTask$2;, "Landroid/os/AsyncTask.2;"
     iput-object p1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
@@ -58,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 288
     .local p0, "this":Landroid/os/AsyncTask$2;, "Landroid/os/AsyncTask.2;"
     iget-object v0, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
@@ -71,12 +69,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 290
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 292
     iget-object v0, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
     iget-object v1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;

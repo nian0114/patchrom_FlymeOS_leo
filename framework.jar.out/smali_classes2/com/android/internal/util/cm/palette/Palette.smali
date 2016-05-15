@@ -91,21 +91,17 @@
     .end annotation
 
     .prologue
-    .line 204
     .local p1, "swatches":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/util/cm/palette/Palette$Swatch;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 205
     iput-object p1, p0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
-    .line 206
     invoke-direct {p0}, Lcom/android/internal/util/cm/palette/Palette;->findMaxPopulation()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mHighestPopulation:I
 
-    .line 208
     const/high16 v1, 0x3f000000    # 0.5f
 
     const v2, 0x3e99999a    # 0.3f
@@ -126,7 +122,6 @@
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 211
     const v1, 0x3f3d70a4    # 0.74f
 
     const v2, 0x3f0ccccd    # 0.55f
@@ -147,7 +142,6 @@
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 214
     const v1, 0x3e851eb8    # 0.26f
 
     const/4 v2, 0x0
@@ -168,7 +162,6 @@
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 217
     const/high16 v1, 0x3f000000    # 0.5f
 
     const v2, 0x3e99999a    # 0.3f
@@ -189,7 +182,6 @@
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 220
     const v1, 0x3f3d70a4    # 0.74f
 
     const v2, 0x3f0ccccd    # 0.55f
@@ -210,7 +202,6 @@
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightMutedColor:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 223
     const v1, 0x3e851eb8    # 0.26f
 
     const/4 v2, 0x0
@@ -231,10 +222,8 @@
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 227
     invoke-direct {p0}, Lcom/android/internal/util/cm/palette/Palette;->generateEmptySwatches()V
 
-    .line 228
     return-void
 .end method
 
@@ -243,10 +232,8 @@
     .param p0, "listener"    # Lcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;
 
     .prologue
-    .line 538
     if-nez p0, :cond_0
 
-    .line 539
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "listener can not be null"
@@ -255,7 +242,6 @@
 
     throw v0
 
-    .line 541
     :cond_0
     return-void
 .end method
@@ -265,10 +251,8 @@
     .param p0, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 523
     if-nez p0, :cond_0
 
-    .line 524
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "bitmap can not be null"
@@ -277,7 +261,6 @@
 
     throw v0
 
-    .line 526
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -285,7 +268,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 527
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "bitmap can not be recycled"
@@ -294,7 +276,6 @@
 
     throw v0
 
-    .line 529
     :cond_1
     return-void
 .end method
@@ -304,12 +285,10 @@
     .param p0, "numColors"    # I
 
     .prologue
-    .line 532
     const/4 v0, 0x1
 
     if-ge p0, v0, :cond_0
 
-    .line 533
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "numColors must be 1 of greater"
@@ -318,7 +297,6 @@
 
     throw v0
 
-    .line 535
     :cond_0
     return-void
 .end method
@@ -332,10 +310,8 @@
 
     const/4 v2, 0x0
 
-    .line 490
     new-array v0, v3, [F
 
-    .line 491
     .local v0, "newHsl":[F
     invoke-virtual {p0}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getHsl()[F
 
@@ -343,7 +319,6 @@
 
     invoke-static {v1, v2, v0, v2, v3}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 492
     return-object v0
 .end method
 
@@ -357,7 +332,6 @@
     .param p5, "highestPopulation"    # I
 
     .prologue
-    .line 479
     const/4 v0, 0x6
 
     new-array v0, v0, [F
@@ -423,14 +397,11 @@
     .param p6, "maxSaturation"    # F
 
     .prologue
-    .line 344
     const/4 v7, 0x0
 
-    .line 345
     .local v7, "max":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     const/4 v8, 0x0
 
-    .line 347
     .local v8, "maxValue":F
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
@@ -453,7 +424,6 @@
 
     check-cast v9, Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 348
     .local v9, "swatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     invoke-virtual {v9}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getHsl()[F
 
@@ -463,7 +433,6 @@
 
     aget v0, v1, v3
 
-    .line 349
     .local v0, "sat":F
     invoke-virtual {v9}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getHsl()[F
 
@@ -473,7 +442,6 @@
 
     aget v2, v1, v3
 
-    .line 351
     .local v2, "luma":F
     cmpl-float v1, v0, p5
 
@@ -497,7 +465,6 @@
 
     if-nez v1, :cond_0
 
-    .line 354
     invoke-virtual {v9}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getPopulation()I
 
     move-result v4
@@ -512,7 +479,6 @@
 
     move-result v10
 
-    .line 356
     .local v10, "thisValue":F
     if-eqz v7, :cond_1
 
@@ -520,16 +486,13 @@
 
     if-lez v1, :cond_0
 
-    .line 357
     :cond_1
     move-object v7, v9
 
-    .line 358
     move v8, v10
 
     goto :goto_0
 
-    .line 363
     .end local v0    # "sat":F
     .end local v2    # "luma":F
     .end local v9    # "swatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
@@ -542,10 +505,8 @@
     .locals 4
 
     .prologue
-    .line 395
     const/4 v1, 0x0
 
-    .line 396
     .local v1, "population":I
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
@@ -567,7 +528,6 @@
 
     check-cast v2, Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 397
     .local v2, "swatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     invoke-virtual {v2}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getPopulation()I
 
@@ -577,10 +537,8 @@
 
     move-result v1
 
-    .line 398
     goto :goto_0
 
-    .line 399
     .end local v2    # "swatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     :cond_0
     return v1
@@ -600,14 +558,11 @@
     .end annotation
 
     .prologue
-    .line 198
     .local p0, "swatches":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/util/cm/palette/Palette$Swatch;>;"
     if-nez p0, :cond_0
 
-    .line 199
     const/4 v0, 0x0
 
-    .line 201
     :goto_0
     return-object v0
 
@@ -624,7 +579,6 @@
     .param p0, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 116
     const/16 v0, 0x10
 
     invoke-static {p0, v0}, Lcom/android/internal/util/cm/palette/Palette;->generate(Landroid/graphics/Bitmap;I)Lcom/android/internal/util/cm/palette/Palette;
@@ -640,31 +594,24 @@
     .param p1, "numColors"    # I
 
     .prologue
-    .line 129
     invoke-static {p0}, Lcom/android/internal/util/cm/palette/Palette;->checkBitmapParam(Landroid/graphics/Bitmap;)V
 
-    .line 130
     invoke-static {p1}, Lcom/android/internal/util/cm/palette/Palette;->checkNumberColorsParam(I)V
 
-    .line 133
     invoke-static {p0}, Lcom/android/internal/util/cm/palette/Palette;->scaleBitmapDown(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 136
     .local v1, "scaledBitmap":Landroid/graphics/Bitmap;
     invoke-static {v1, p1}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->fromBitmap(Landroid/graphics/Bitmap;I)Lcom/android/internal/util/cm/palette/ColorCutQuantizer;
 
     move-result-object v0
 
-    .line 139
     .local v0, "quantizer":Lcom/android/internal/util/cm/palette/ColorCutQuantizer;
     if-eq v1, p0, :cond_0
 
-    .line 140
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 144
     :cond_0
     new-instance v2, Lcom/android/internal/util/cm/palette/Palette;
 
@@ -699,21 +646,16 @@
     .end annotation
 
     .prologue
-    .line 172
     invoke-static {p0}, Lcom/android/internal/util/cm/palette/Palette;->checkBitmapParam(Landroid/graphics/Bitmap;)V
 
-    .line 173
     invoke-static {p1}, Lcom/android/internal/util/cm/palette/Palette;->checkNumberColorsParam(I)V
 
-    .line 174
     invoke-static {p2}, Lcom/android/internal/util/cm/palette/Palette;->checkAsyncListenerParam(Lcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;)V
 
-    .line 176
     new-instance v0, Lcom/android/internal/util/cm/palette/Palette$1;
 
     invoke-direct {v0, p1, p2}, Lcom/android/internal/util/cm/palette/Palette$1;-><init>(ILcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;)V
 
-    .line 187
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Landroid/graphics/Bitmap;Ljava/lang/Void;Lcom/android/internal/util/cm/palette/Palette;>;"
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -727,7 +669,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 189
     return-object v0
 .end method
 
@@ -751,7 +692,6 @@
     .end annotation
 
     .prologue
-    .line 158
     const/16 v0, 0x10
 
     invoke-static {p0, v0, p1}, Lcom/android/internal/util/cm/palette/Palette;->generateAsync(Landroid/graphics/Bitmap;ILcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;)Landroid/os/AsyncTask;
@@ -769,30 +709,25 @@
 
     const/4 v3, 0x0
 
-    .line 370
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v1, :cond_0
 
-    .line 372
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v1, :cond_0
 
-    .line 374
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     invoke-static {v1}, Lcom/android/internal/util/cm/palette/Palette;->copyHslValues(Lcom/android/internal/util/cm/palette/Palette$Swatch;)[F
 
     move-result-object v0
 
-    .line 375
     .local v0, "newHsl":[F
     const/high16 v1, 0x3f000000    # 0.5f
 
     aput v1, v0, v4
 
-    .line 376
     new-instance v1, Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     invoke-static {v0}, Lcom/android/internal/util/cm/palette/ColorUtils;->HSLtoRGB([F)I
@@ -803,32 +738,27 @@
 
     iput-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 380
     .end local v0    # "newHsl":[F
     :cond_0
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v1, :cond_1
 
-    .line 382
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v1, :cond_1
 
-    .line 384
     iget-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     invoke-static {v1}, Lcom/android/internal/util/cm/palette/Palette;->copyHslValues(Lcom/android/internal/util/cm/palette/Palette$Swatch;)[F
 
     move-result-object v0
 
-    .line 385
     .restart local v0    # "newHsl":[F
     const v1, 0x3e851eb8    # 0.26f
 
     aput v1, v0, v4
 
-    .line 386
     new-instance v1, Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     invoke-static {v0}, Lcom/android/internal/util/cm/palette/ColorUtils;->HSLtoRGB([F)I
@@ -839,7 +769,6 @@
 
     iput-object v1, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 389
     .end local v0    # "newHsl":[F
     :cond_1
     return-void
@@ -851,7 +780,6 @@
     .param p1, "targetValue"    # F
 
     .prologue
-    .line 504
     const/high16 v0, 0x3f800000    # 1.0f
 
     sub-float v1, p0, p1
@@ -870,7 +798,6 @@
     .param p1, "swatch"    # Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     .prologue
-    .line 337
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eq v0, p1, :cond_0
@@ -912,7 +839,6 @@
     .param p0, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 462
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
@@ -925,18 +851,15 @@
 
     move-result v0
 
-    .line 464
     .local v0, "minDimension":I
     const/16 v2, 0x64
 
     if-gt v0, v2, :cond_0
 
-    .line 470
     .end local p0    # "bitmap":Landroid/graphics/Bitmap;
     :goto_0
     return-object p0
 
-    .line 469
     .restart local p0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_0
     const/high16 v2, 0x42c80000    # 100.0f
@@ -945,7 +868,6 @@
 
     div-float v1, v2, v3
 
-    .line 470
     .local v1, "scaleRatio":F
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -985,14 +907,11 @@
     .param p0, "values"    # [F
 
     .prologue
-    .line 508
     const/4 v1, 0x0
 
-    .line 509
     .local v1, "sum":F
     const/4 v2, 0x0
 
-    .line 511
     .local v2, "sumWeight":F
     const/4 v0, 0x0
 
@@ -1002,30 +921,24 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 512
     aget v3, p0, v0
 
-    .line 513
     .local v3, "value":F
     add-int/lit8 v5, v0, 0x1
 
     aget v4, p0, v5
 
-    .line 515
     .local v4, "weight":F
     mul-float v5, v3, v4
 
     add-float/2addr v1, v5
 
-    .line 516
     add-float/2addr v2, v4
 
-    .line 511
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 519
     .end local v3    # "value":F
     .end local v4    # "weight":F
     :cond_0
@@ -1045,15 +958,12 @@
 
     const/4 v2, 0x0
 
-    .line 404
     if-ne p0, p1, :cond_1
 
-    .line 441
     :cond_0
     :goto_0
     return v1
 
-    .line 407
     :cond_1
     if-eqz p1, :cond_2
 
@@ -1070,16 +980,13 @@
     :cond_2
     move v1, v2
 
-    .line 408
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 411
     check-cast v0, Lcom/android/internal/util/cm/palette/Palette;
 
-    .line 413
     .local v0, "palette":Lcom/android/internal/util/cm/palette/Palette;
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
@@ -1098,16 +1005,13 @@
     :cond_4
     move v1, v2
 
-    .line 414
     goto :goto_0
 
-    .line 413
     :cond_5
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
     if-nez v3, :cond_4
 
-    .line 416
     :cond_6
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1126,16 +1030,13 @@
     :cond_7
     move v1, v2
 
-    .line 418
     goto :goto_0
 
-    .line 416
     :cond_8
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mDarkMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v3, :cond_7
 
-    .line 420
     :cond_9
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1154,16 +1055,13 @@
     :cond_a
     move v1, v2
 
-    .line 422
     goto :goto_0
 
-    .line 420
     :cond_b
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v3, :cond_a
 
-    .line 424
     :cond_c
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightMutedColor:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1182,16 +1080,13 @@
     :cond_d
     move v1, v2
 
-    .line 426
     goto :goto_0
 
-    .line 424
     :cond_e
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mLightMutedColor:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v3, :cond_d
 
-    .line 428
     :cond_f
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1210,16 +1105,13 @@
     :cond_10
     move v1, v2
 
-    .line 430
     goto :goto_0
 
-    .line 428
     :cond_11
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mLightVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v3, :cond_10
 
-    .line 432
     :cond_12
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1238,16 +1130,13 @@
     :cond_13
     move v1, v2
 
-    .line 434
     goto/16 :goto_0
 
-    .line 432
     :cond_14
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-nez v3, :cond_13
 
-    .line 436
     :cond_15
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1266,10 +1155,8 @@
     :goto_1
     move v1, v2
 
-    .line 438
     goto/16 :goto_0
 
-    .line 436
     :cond_16
     iget-object v3, v0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
@@ -1283,7 +1170,6 @@
     .param p1, "defaultColor"    # I
 
     .prologue
-    .line 330
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v0, :cond_0
@@ -1303,7 +1189,6 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     return-object v0
@@ -1314,7 +1199,6 @@
     .param p1, "defaultColor"    # I
 
     .prologue
-    .line 303
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v0, :cond_0
@@ -1334,7 +1218,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     return-object v0
@@ -1345,7 +1228,6 @@
     .param p1, "defaultColor"    # I
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightMutedColor:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v0, :cond_0
@@ -1365,7 +1247,6 @@
     .locals 1
 
     .prologue
-    .line 269
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightMutedColor:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     return-object v0
@@ -1376,7 +1257,6 @@
     .param p1, "defaultColor"    # I
 
     .prologue
-    .line 294
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v0, :cond_0
@@ -1396,7 +1276,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     return-object v0
@@ -1407,7 +1286,6 @@
     .param p1, "defaultColor"    # I
 
     .prologue
-    .line 312
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v0, :cond_0
@@ -1427,7 +1305,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     return-object v0
@@ -1446,7 +1323,6 @@
     .end annotation
 
     .prologue
-    .line 234
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -1461,7 +1337,6 @@
     .param p1, "defaultColor"    # I
 
     .prologue
-    .line 285
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     if-eqz v0, :cond_0
@@ -1481,7 +1356,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette;->mVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     return-object v0
@@ -1493,7 +1367,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 446
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/Palette;->mSwatches:Ljava/util/List;
 
     if-eqz v2, :cond_1
@@ -1504,7 +1377,6 @@
 
     move-result v0
 
-    .line 447
     .local v0, "result":I
     :goto_0
     mul-int/lit8 v3, v0, 0x1f
@@ -1522,7 +1394,6 @@
     :goto_1
     add-int v0, v3, v2
 
-    .line 448
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/Palette;->mMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
@@ -1538,7 +1409,6 @@
     :goto_2
     add-int v0, v3, v2
 
-    .line 449
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
@@ -1554,7 +1424,6 @@
     :goto_3
     add-int v0, v3, v2
 
-    .line 450
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/Palette;->mDarkMutedSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
@@ -1570,7 +1439,6 @@
     :goto_4
     add-int v0, v3, v2
 
-    .line 451
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightVibrantSwatch:Lcom/android/internal/util/cm/palette/Palette$Swatch;
@@ -1586,7 +1454,6 @@
     :goto_5
     add-int v0, v3, v2
 
-    .line 452
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v3, p0, Lcom/android/internal/util/cm/palette/Palette;->mLightMutedColor:Lcom/android/internal/util/cm/palette/Palette$Swatch;
@@ -1602,44 +1469,37 @@
     :cond_0
     add-int v0, v2, v1
 
-    .line 453
     return v0
 
     .end local v0    # "result":I
     :cond_1
     move v0, v1
 
-    .line 446
     goto :goto_0
 
     .restart local v0    # "result":I
     :cond_2
     move v2, v1
 
-    .line 447
     goto :goto_1
 
     :cond_3
     move v2, v1
 
-    .line 448
     goto :goto_2
 
     :cond_4
     move v2, v1
 
-    .line 449
     goto :goto_3
 
     :cond_5
     move v2, v1
 
-    .line 450
     goto :goto_4
 
     :cond_6
     move v2, v1
 
-    .line 451
     goto :goto_5
 .end method

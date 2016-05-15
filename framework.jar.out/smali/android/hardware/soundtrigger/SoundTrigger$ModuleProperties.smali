@@ -65,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 115
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties$1;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties$1;-><init>()V
@@ -93,56 +92,40 @@
     .param p14, "returnsTriggerInEvent"    # Z
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput p1, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->id:I
 
-    .line 100
     iput-object p2, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->implementor:Ljava/lang/String;
 
-    .line 101
     iput-object p3, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->description:Ljava/lang/String;
 
-    .line 102
     invoke-static {p4}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->uuid:Ljava/util/UUID;
 
-    .line 103
     iput p5, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->version:I
 
-    .line 104
     iput p6, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxSoundModels:I
 
-    .line 105
     iput p7, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxKeyphrases:I
 
-    .line 106
     iput p8, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxUsers:I
 
-    .line 107
     iput p9, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->recognitionModes:I
 
-    .line 108
     iput-boolean p10, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->supportsCaptureTransition:Z
 
-    .line 109
     iput p11, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxBufferMs:I
 
-    .line 110
     iput-boolean p12, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->supportsConcurrentCapture:Z
 
-    .line 111
     iput p13, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->powerConsumptionMw:I
 
-    .line 112
     iput-boolean p14, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->returnsTriggerInEvent:Z
 
-    .line 113
     return-void
 .end method
 
@@ -151,7 +134,6 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 50
     invoke-static {p0}, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->fromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
 
     move-result-object v0
@@ -164,60 +146,50 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 127
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 128
     .local v1, "id":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 129
     .local v2, "implementor":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 130
     .local v3, "description":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 131
     .local v4, "uuid":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 132
     .local v5, "version":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 133
     .local v6, "maxSoundModels":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 134
     .local v7, "maxKeyphrases":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 135
     .local v8, "maxUsers":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 136
     .local v9, "recognitionModes":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readByte()B
 
@@ -229,14 +201,12 @@
 
     const/4 v10, 0x1
 
-    .line 137
     .local v10, "supportsCaptureTransition":Z
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 138
     .local v11, "maxBufferMs":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readByte()B
 
@@ -248,14 +218,12 @@
 
     const/4 v12, 0x1
 
-    .line 139
     .local v12, "supportsConcurrentCapture":Z
     :goto_1
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 140
     .local v13, "powerConsumptionMw":I
     invoke-virtual/range {p0 .. p0}, Landroid/os/Parcel;->readByte()B
 
@@ -267,7 +235,6 @@
 
     const/4 v14, 0x1
 
-    .line 141
     .local v14, "returnsTriggerInEvent":Z
     :goto_2
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
@@ -276,7 +243,6 @@
 
     return-object v0
 
-    .line 136
     .end local v10    # "supportsCaptureTransition":Z
     .end local v11    # "maxBufferMs":I
     .end local v12    # "supportsConcurrentCapture":Z
@@ -287,7 +253,6 @@
 
     goto :goto_0
 
-    .line 138
     .restart local v10    # "supportsCaptureTransition":Z
     .restart local v11    # "maxBufferMs":I
     :cond_1
@@ -295,7 +260,6 @@
 
     goto :goto_1
 
-    .line 140
     .restart local v12    # "supportsConcurrentCapture":Z
     .restart local v13    # "powerConsumptionMw":I
     :cond_2
@@ -310,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 167
     const/4 v0, 0x0
 
     return v0
@@ -320,7 +283,6 @@
     .locals 2
 
     .prologue
-    .line 172
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -516,22 +478,18 @@
 
     const/4 v2, 0x0
 
-    .line 149
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 150
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->implementor:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 151
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->description:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 152
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->uuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
@@ -540,32 +498,26 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 153
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->version:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 154
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxSoundModels:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 155
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxKeyphrases:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 156
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxUsers:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 157
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->recognitionModes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 158
     iget-boolean v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->supportsCaptureTransition:Z
 
     if-eqz v0, :cond_0
@@ -577,12 +529,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 159
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->maxBufferMs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
     iget-boolean v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->supportsConcurrentCapture:Z
 
     if-eqz v0, :cond_1
@@ -594,12 +544,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 161
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->powerConsumptionMw:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 162
     iget-boolean v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;->returnsTriggerInEvent:Z
 
     if-eqz v0, :cond_2
@@ -609,24 +557,20 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 163
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 158
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 160
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 162
     goto :goto_2
 .end method

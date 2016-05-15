@@ -32,20 +32,15 @@
     .param p4, "_uid"    # I
 
     .prologue
-    .line 894
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$Identity;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 895
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$Identity;->token:Landroid/os/IBinder;
 
-    .line 896
     iput p3, p0, Lcom/android/server/am/ActivityManagerService$Identity;->pid:I
 
-    .line 897
     iput p4, p0, Lcom/android/server/am/ActivityManagerService$Identity;->uid:I
 
-    .line 898
     return-void
 .end method

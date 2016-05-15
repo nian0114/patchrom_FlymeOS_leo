@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 669
     const-string v0, "content://sms/draft"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -45,10 +44,8 @@
     .locals 0
 
     .prologue
-    .line 663
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 664
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p5, "date"    # Ljava/lang/Long;
 
     .prologue
-    .line 694
     sget-object v2, Landroid/provider/Telephony$Sms$Draft;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v7, 0x1
@@ -97,7 +93,6 @@
     .param p4, "date"    # Ljava/lang/Long;
 
     .prologue
-    .line 676
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()I
 
     move-result v0

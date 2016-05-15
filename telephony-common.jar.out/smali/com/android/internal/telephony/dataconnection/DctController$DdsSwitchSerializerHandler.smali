@@ -28,13 +28,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 905
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
-    .line 906
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 907
     return-void
 .end method
 
@@ -45,16 +42,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 929
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 980
     :goto_0
     return-void
 
-    .line 931
     :pswitch_0
     const-string v1, "DdsSwitchSerializer"
 
@@ -62,13 +56,11 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 934
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 935
     :goto_1
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
@@ -80,19 +72,16 @@
 
     if-nez v1, :cond_0
 
-    .line 936
     const-string v1, "DdsSwitchSerializer"
 
     const-string v2, "DDS switch in progress, wait"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 937
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
 
     goto :goto_1
 
-    .line 942
     :catchall_0
     move-exception v1
 
@@ -105,11 +94,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 943
     :catch_0
     move-exception v8
 
-    .line 944
     .local v8, "e":Ljava/lang/Exception;
     const-string v1, "DdsSwitchSerializer"
 
@@ -135,7 +122,6 @@
 
     goto :goto_0
 
-    .line 940
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_0
     :try_start_3
@@ -145,7 +131,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 941
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     const/4 v2, 0x0
@@ -153,17 +138,14 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->mIsDdsSwitchCompleted:Z
     invoke-static {v1, v2}, Lcom/android/internal/telephony/dataconnection/DctController;->access$502(Lcom/android/internal/telephony/dataconnection/DctController;Z)Z
 
-    .line 942
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 949
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/net/NetworkRequest;
 
-    .line 951
     .local v3, "n":Landroid/net/NetworkRequest;
     const-string v1, "DdsSwitchSerializer"
 
@@ -187,7 +169,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 952
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mSubController:Lcom/android/internal/telephony/SubscriptionController;
@@ -199,7 +180,6 @@
 
     move-result v12
 
-    .line 954
     .local v12, "subId":I
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -214,14 +194,12 @@
 
     if-ne v12, v1, :cond_1
 
-    .line 955
     const-string v1, "DdsSwitchSerializer"
 
     const-string v2, "No change in DDS, respond back"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 956
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     const/4 v2, 0x1
@@ -229,7 +207,6 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->mIsDdsSwitchCompleted:Z
     invoke-static {v1, v2}, Lcom/android/internal/telephony/dataconnection/DctController;->access$502(Lcom/android/internal/telephony/dataconnection/DctController;Z)Z
 
-    .line 957
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mNotifyOnDemandDataSwitchInfo:Landroid/os/RegistrantList;
@@ -249,7 +226,6 @@
 
     goto/16 :goto_0
 
-    .line 961
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -262,7 +238,6 @@
 
     move-result v10
 
-    .line 962
     .local v10, "phoneId":I
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -286,7 +261,6 @@
 
     move-result v11
 
-    .line 964
     .local v11, "prefPhoneId":I
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -304,12 +278,10 @@
     .local v9, "phone":Lcom/android/internal/telephony/Phone;
     move-object v1, v9
 
-    .line 965
     check-cast v1, Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v7, v1, Lcom/android/internal/telephony/PhoneBase;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    .line 966
     .local v7, "dcTracker":Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;
 
@@ -329,7 +301,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;-><init>(Lcom/android/internal/telephony/dataconnection/DctController;ILandroid/net/NetworkRequest;ZZ)V
 
-    .line 967
     .local v0, "s":Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -339,13 +310,11 @@
 
     move-result-object v6
 
-    .line 969
     .local v6, "dataAllowFalse":Landroid/os/Message;
     const/4 v1, 0x0
 
     invoke-virtual {v7, v1, v6}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setDataAllowed(ZLandroid/os/Message;)V
 
-    .line 970
     invoke-interface {v9}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
     move-result v1
@@ -354,12 +323,10 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 972
     const-string v1, "Ondemand DDS switch"
 
     invoke-virtual {v7, v1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->cleanUpAllConnections(Ljava/lang/String;)V
 
-    .line 974
     :cond_2
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -379,7 +346,6 @@
 
     invoke-virtual {v1, v2, v4, v0}, Lcom/android/internal/telephony/PhoneProxy;->registerForAllDataDisconnected(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 976
     const/4 v1, 0x1
 
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->isOnDemandDdsSwitchInProgress:Z
@@ -387,7 +353,6 @@
 
     goto/16 :goto_0
 
-    .line 929
     nop
 
     :pswitch_data_0
@@ -404,10 +369,8 @@
 
     const/4 v1, 0x0
 
-    .line 920
     monitor-enter p0
 
-    .line 921
     :try_start_0
     const-string v3, "DdsSwitchSerializer"
 
@@ -443,7 +406,6 @@
 
     invoke-static {v3, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 922
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mIsDdsSwitchCompleted:Z
@@ -461,16 +423,13 @@
     :cond_0
     move v2, v1
 
-    .line 921
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 922
     goto :goto_1
 
-    .line 923
     :catchall_0
     move-exception v0
 
@@ -485,17 +444,14 @@
     .locals 2
 
     .prologue
-    .line 910
     const-string v0, "DdsSwitchSerializer"
 
     const-string v1, "unLock the DdsSwitchSerializer"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 911
     monitor-enter p0
 
-    .line 912
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$DdsSwitchSerializerHandler;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -504,23 +460,18 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->mIsDdsSwitchCompleted:Z
     invoke-static {v0, v1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$502(Lcom/android/internal/telephony/dataconnection/DctController;Z)Z
 
-    .line 913
     const-string v0, "DdsSwitchSerializer"
 
     const-string v1, "unLocked the DdsSwitchSerializer"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 914
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 915
     monitor-exit p0
 
-    .line 917
     return-void
 
-    .line 915
     :catchall_0
     move-exception v0
 

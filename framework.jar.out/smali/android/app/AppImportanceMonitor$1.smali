@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 48
     iput-object p1, p0, Landroid/app/AppImportanceMonitor$1;->this$0:Landroid/app/AppImportanceMonitor;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "foregroundActivities"    # Z
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -50,14 +48,12 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/app/AppImportanceMonitor$1;->this$0:Landroid/app/AppImportanceMonitor;
 
     iget-object v1, v0, Landroid/app/AppImportanceMonitor;->mApps:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 65
     :try_start_0
     iget-object v0, p0, Landroid/app/AppImportanceMonitor$1;->this$0:Landroid/app/AppImportanceMonitor;
 
@@ -67,13 +63,10 @@
 
     invoke-virtual {v0, p1, p2, v2, v3}, Landroid/app/AppImportanceMonitor;->updateImportanceLocked(IIIZ)V
 
-    .line 67
     monitor-exit v1
 
-    .line 68
     return-void
 
-    .line 67
     :catchall_0
     move-exception v0
 
@@ -91,14 +84,12 @@
     .param p3, "procState"    # I
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/app/AppImportanceMonitor$1;->this$0:Landroid/app/AppImportanceMonitor;
 
     iget-object v1, v0, Landroid/app/AppImportanceMonitor;->mApps:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 56
     :try_start_0
     iget-object v0, p0, Landroid/app/AppImportanceMonitor$1;->this$0:Landroid/app/AppImportanceMonitor;
 
@@ -110,13 +101,10 @@
 
     invoke-virtual {v0, p1, p2, v2, v3}, Landroid/app/AppImportanceMonitor;->updateImportanceLocked(IIIZ)V
 
-    .line 59
     monitor-exit v1
 
-    .line 60
     return-void
 
-    .line 59
     :catchall_0
     move-exception v0
 

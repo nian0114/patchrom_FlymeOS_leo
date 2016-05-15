@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1129
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiDeviceEventListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/tv/TvInputHardwareManager$1;
 
     .prologue
-    .line 1129
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;-><init>(Lcom/android/server/tv/TvInputHardwareManager;)V
 
     return-void
@@ -48,7 +46,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 1181
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->mHdmiDeviceList:Ljava/util/List;
@@ -74,7 +71,6 @@
 
     check-cast v1, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
-    .line 1182
     .local v1, "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     invoke-virtual {v1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getId()I
 
@@ -82,7 +78,6 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 1186
     .end local v1    # "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     :goto_0
     return-object v1
@@ -101,18 +96,15 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 1132
     invoke-virtual {p1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->isSourceType()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1178
     :goto_0
     return-void
 
-    .line 1133
     :cond_0
     iget-object v4, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -123,18 +115,14 @@
 
     monitor-enter v5
 
-    .line 1134
     const/4 v0, 0x0
 
-    .line 1135
     .local v0, "messageType":I
     const/4 v2, 0x0
 
-    .line 1136
     .local v2, "obj":Ljava/lang/Object;
     packed-switch p2, :pswitch_data_0
 
-    .line 1171
     .end local v2    # "obj":Ljava/lang/Object;
     :goto_1
     :try_start_0
@@ -153,7 +141,6 @@
 
     move-result-object v1
 
-    .line 1172
     .local v1, "msg":Landroid/os/Message;
     iget-object v4, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -168,10 +155,8 @@
 
     if-eqz v4, :cond_4
 
-    .line 1173
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1177
     :goto_2
     monitor-exit v5
 
@@ -187,7 +172,6 @@
 
     throw v4
 
-    .line 1138
     .restart local v2    # "obj":Ljava/lang/Object;
     :pswitch_0
     :try_start_1
@@ -201,7 +185,6 @@
 
     if-nez v4, :cond_1
 
-    .line 1139
     iget-object v4, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->mHdmiDeviceList:Ljava/util/List;
@@ -211,17 +194,13 @@
 
     invoke-interface {v4, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1144
     const/4 v0, 0x4
 
-    .line 1145
     move-object v2, p1
 
-    .line 1146
     .local v2, "obj":Landroid/hardware/hdmi/HdmiDeviceInfo;
     goto :goto_1
 
-    .line 1141
     .local v2, "obj":Ljava/lang/Object;
     :cond_1
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->TAG:Ljava/lang/String;
@@ -255,12 +234,10 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1142
     monitor-exit v5
 
     goto :goto_0
 
-    .line 1149
     :pswitch_1
     invoke-virtual {p1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getId()I
 
@@ -270,7 +247,6 @@
 
     move-result-object v3
 
-    .line 1150
     .local v3, "originalDeviceInfo":Landroid/hardware/hdmi/HdmiDeviceInfo;
     iget-object v4, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -285,7 +261,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1151
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/tv/TvInputHardwareManager;->access$700()Ljava/lang/String;
 
@@ -317,23 +292,18 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1152
     monitor-exit v5
 
     goto/16 :goto_0
 
-    .line 1154
     :cond_2
     const/4 v0, 0x5
 
-    .line 1155
     move-object v2, p1
 
-    .line 1156
     .local v2, "obj":Landroid/hardware/hdmi/HdmiDeviceInfo;
     goto/16 :goto_1
 
-    .line 1159
     .end local v3    # "originalDeviceInfo":Landroid/hardware/hdmi/HdmiDeviceInfo;
     .local v2, "obj":Ljava/lang/Object;
     :pswitch_2
@@ -345,7 +315,6 @@
 
     move-result-object v3
 
-    .line 1160
     .restart local v3    # "originalDeviceInfo":Landroid/hardware/hdmi/HdmiDeviceInfo;
     iget-object v4, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -360,7 +329,6 @@
 
     if-nez v4, :cond_3
 
-    .line 1161
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/tv/TvInputHardwareManager;->access$700()Ljava/lang/String;
 
@@ -392,12 +360,10 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1162
     monitor-exit v5
 
     goto/16 :goto_0
 
-    .line 1164
     :cond_3
     iget-object v4, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiDeviceEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -408,17 +374,13 @@
 
     invoke-interface {v4, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1165
     const/4 v0, 0x6
 
-    .line 1166
     move-object v2, p1
 
-    .line 1167
     .local v2, "obj":Landroid/hardware/hdmi/HdmiDeviceInfo;
     goto/16 :goto_1
 
-    .line 1175
     .end local v2    # "obj":Landroid/hardware/hdmi/HdmiDeviceInfo;
     .end local v3    # "originalDeviceInfo":Landroid/hardware/hdmi/HdmiDeviceInfo;
     .restart local v1    # "msg":Landroid/os/Message;
@@ -436,7 +398,6 @@
 
     goto/16 :goto_2
 
-    .line 1136
     nop
 
     :pswitch_data_0

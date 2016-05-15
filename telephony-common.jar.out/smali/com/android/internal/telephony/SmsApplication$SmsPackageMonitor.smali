@@ -24,13 +24,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 545
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
 
-    .line 546
     iput-object p1, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->mContext:Landroid/content/Context;
 
-    .line 547
     return-void
 .end method
 
@@ -39,28 +36,23 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 565
     iget-object v4, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 566
     .local v1, "packageManager":Landroid/content/pm/PackageManager;
     iget-object v2, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->mContext:Landroid/content/Context;
 
-    .line 567
     .local v2, "userContext":Landroid/content/Context;
     invoke-virtual {p0}, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->getSendingUserId()I
 
     move-result v3
 
-    .line 568
     .local v3, "userId":I
     if-eqz v3, :cond_0
 
-    .line 570
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->mContext:Landroid/content/Context;
 
@@ -82,7 +74,6 @@
 
     move-result-object v2
 
-    .line 579
     :cond_0
     :goto_0
     const/4 v4, 0x1
@@ -91,19 +82,15 @@
 
     move-result-object v0
 
-    .line 580
     .local v0, "componentName":Landroid/content/ComponentName;
     if-eqz v0, :cond_1
 
-    .line 581
     # invokes: Lcom/android/internal/telephony/SmsApplication;->configurePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
     invoke-static {v1, v0, v3}, Lcom/android/internal/telephony/SmsApplication;->access$000(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
 
-    .line 583
     :cond_1
     return-void
 
-    .line 572
     .end local v0    # "componentName":Landroid/content/ComponentName;
     :catch_0
     move-exception v4
@@ -119,10 +106,8 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 556
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->onPackageChanged(Ljava/lang/String;)V
 
-    .line 557
     return-void
 .end method
 
@@ -132,10 +117,8 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 551
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->onPackageChanged(Ljava/lang/String;)V
 
-    .line 552
     return-void
 .end method
 
@@ -144,9 +127,7 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 561
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->onPackageChanged(Ljava/lang/String;)V
 
-    .line 562
     return-void
 .end method

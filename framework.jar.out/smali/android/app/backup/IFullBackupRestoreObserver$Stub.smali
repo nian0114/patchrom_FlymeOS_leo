@@ -50,15 +50,12 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 21
     const-string v0, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
@@ -67,17 +64,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 29
     if-nez p0, :cond_0
 
-    .line 30
     const/4 v0, 0x0
 
-    .line 36
     :goto_0
     return-object v0
 
-    .line 32
     :cond_0
     const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
@@ -85,7 +78,6 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -93,12 +85,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 34
     check-cast v0, Landroid/app/backup/IFullBackupRestoreObserver;
 
     goto :goto_0
 
-    .line 36
     :cond_1
     new-instance v0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;
 
@@ -114,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 40
     return-object p0
 .end method
 
@@ -133,10 +122,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 114
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -144,7 +131,6 @@
     :goto_0
     return v1
 
-    .line 48
     :sswitch_0
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
@@ -152,134 +138,111 @@
 
     goto :goto_0
 
-    .line 53
     :sswitch_1
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onStartBackup()V
 
     goto :goto_0
 
-    .line 59
     :sswitch_2
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onBackupPackage(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 67
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_3
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onEndBackup()V
 
     goto :goto_0
 
-    .line 73
     :sswitch_4
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 76
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onEndBackupWithResult(I)V
 
     goto :goto_0
 
-    .line 81
     .end local v0    # "_arg0":I
     :sswitch_5
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onStartRestore()V
 
     goto :goto_0
 
-    .line 87
     :sswitch_6
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 90
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onRestorePackage(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 95
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_7
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onEndRestore()V
 
     goto :goto_0
 
-    .line 101
     :sswitch_8
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 103
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 104
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onEndRestoreWithResult(I)V
 
     goto :goto_0
 
-    .line 109
     .end local v0    # "_arg0":I
     :sswitch_9
     const-string v2, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 110
     invoke-virtual {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;->onTimeout()V
 
     goto :goto_0
 
-    .line 44
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

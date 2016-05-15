@@ -8,7 +8,6 @@
     .locals 4
 
     .prologue
-    .line 26
     const-string v0, "/data/misc/zoneinfo/"
 
     const-string v1, "tzdata"
@@ -19,7 +18,6 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 27
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .end annotation
 
     .prologue
-    .line 31
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/util/Base64;->decode([BI)[B
@@ -45,6 +42,5 @@
 
     invoke-super {p0, v0, p2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->install([BI)V
 
-    .line 32
     return-void
 .end method

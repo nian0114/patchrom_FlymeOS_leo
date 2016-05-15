@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v7, 0x0
 
-    .line 158
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 159
     .local v0, "action":Ljava/lang/String;
     const-string v5, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -58,7 +55,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 160
     const-string v5, "networkType"
 
     const/4 v8, -0x1
@@ -67,7 +63,6 @@
 
     move-result v3
 
-    .line 164
     .local v3, "networkType":I
     const-string v5, "connectivity"
 
@@ -77,41 +72,34 @@
 
     check-cast v2, Landroid/net/ConnectivityManager;
 
-    .line 166
     .local v2, "connManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v2}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 167
     .local v1, "activeNetwork":Landroid/net/NetworkInfo;
     invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
 
     move-result v4
 
-    .line 169
     .local v4, "userid":I
     if-nez v1, :cond_1
 
-    .line 170
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # setter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkUnmetered:Z
     invoke-static {v5, v7}, Lcom/android/server/job/controllers/ConnectivityController;->access$002(Lcom/android/server/job/controllers/ConnectivityController;Z)Z
 
-    .line 171
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # setter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkConnected:Z
     invoke-static {v5, v7}, Lcom/android/server/job/controllers/ConnectivityController;->access$102(Lcom/android/server/job/controllers/ConnectivityController;Z)Z
 
-    .line 172
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # invokes: Lcom/android/server/job/controllers/ConnectivityController;->updateTrackedJobs(I)V
     invoke-static {v5, v4}, Lcom/android/server/job/controllers/ConnectivityController;->access$200(Lcom/android/server/job/controllers/ConnectivityController;I)V
 
-    .line 187
     .end local v1    # "activeNetwork":Landroid/net/NetworkInfo;
     .end local v2    # "connManager":Landroid/net/ConnectivityManager;
     .end local v3    # "networkType":I
@@ -120,7 +108,6 @@
     :goto_0
     return-void
 
-    .line 173
     .restart local v1    # "activeNetwork":Landroid/net/NetworkInfo;
     .restart local v2    # "connManager":Landroid/net/ConnectivityManager;
     .restart local v3    # "networkType":I
@@ -132,13 +119,11 @@
 
     if-ne v5, v3, :cond_0
 
-    .line 174
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # setter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkUnmetered:Z
     invoke-static {v5, v7}, Lcom/android/server/job/controllers/ConnectivityController;->access$002(Lcom/android/server/job/controllers/ConnectivityController;Z)Z
 
-    .line 175
     iget-object v8, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     const-string v5, "noConnectivity"
@@ -155,7 +140,6 @@
     # setter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkConnected:Z
     invoke-static {v8, v5}, Lcom/android/server/job/controllers/ConnectivityController;->access$102(Lcom/android/server/job/controllers/ConnectivityController;Z)Z
 
-    .line 177
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # getter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkConnected:Z
@@ -165,7 +149,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 178
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
@@ -178,7 +161,6 @@
     # setter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkUnmetered:Z
     invoke-static {v5, v6}, Lcom/android/server/job/controllers/ConnectivityController;->access$002(Lcom/android/server/job/controllers/ConnectivityController;Z)Z
 
-    .line 180
     :cond_2
     iget-object v5, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
@@ -190,12 +172,10 @@
     :cond_3
     move v5, v7
 
-    .line 175
     goto :goto_1
 
     :cond_4
     move v6, v7
 
-    .line 178
     goto :goto_2
 .end method

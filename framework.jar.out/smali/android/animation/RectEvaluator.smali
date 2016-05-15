@@ -27,10 +27,8 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     return-void
 .end method
 
@@ -39,13 +37,10 @@
     .param p1, "reuseRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-object p1, p0, Landroid/animation/RectEvaluator;->mRect:Landroid/graphics/Rect;
 
-    .line 52
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .param p3, "endValue"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 73
     iget v4, p2, Landroid/graphics/Rect;->left:I
 
     iget v5, p3, Landroid/graphics/Rect;->left:I
@@ -75,7 +69,6 @@
 
     add-int v1, v4, v5
 
-    .line 74
     .local v1, "left":I
     iget v4, p2, Landroid/graphics/Rect;->top:I
 
@@ -93,7 +86,6 @@
 
     add-int v3, v4, v5
 
-    .line 75
     .local v3, "top":I
     iget v4, p2, Landroid/graphics/Rect;->right:I
 
@@ -111,7 +103,6 @@
 
     add-int v2, v4, v5
 
-    .line 76
     .local v2, "right":I
     iget v4, p2, Landroid/graphics/Rect;->bottom:I
 
@@ -129,28 +120,23 @@
 
     add-int v0, v4, v5
 
-    .line 77
     .local v0, "bottom":I
     iget-object v4, p0, Landroid/animation/RectEvaluator;->mRect:Landroid/graphics/Rect;
 
     if-nez v4, :cond_0
 
-    .line 78
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4, v1, v3, v2, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 81
     :goto_0
     return-object v4
 
-    .line 80
     :cond_0
     iget-object v4, p0, Landroid/animation/RectEvaluator;->mRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4, v1, v3, v2, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 81
     iget-object v4, p0, Landroid/animation/RectEvaluator;->mRect:Landroid/graphics/Rect;
 
     goto :goto_0
@@ -160,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 23
     check-cast p2, Landroid/graphics/Rect;
 
     check-cast p3, Landroid/graphics/Rect;

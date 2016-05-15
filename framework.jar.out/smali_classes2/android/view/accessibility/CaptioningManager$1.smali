@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 223
     iput-object p1, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +39,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 226
     invoke-virtual {p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 227
     .local v1, "uriPath":Ljava/lang/String;
     const/16 v2, 0x2f
 
@@ -59,7 +56,6 @@
 
     move-result-object v0
 
-    .line 228
     .local v0, "name":Ljava/lang/String;
     const-string v2, "accessibility_captioning_enabled"
 
@@ -69,17 +65,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 229
     iget-object v2, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     # invokes: Landroid/view/accessibility/CaptioningManager;->notifyEnabledChanged()V
     invoke-static {v2}, Landroid/view/accessibility/CaptioningManager;->access$000(Landroid/view/accessibility/CaptioningManager;)V
 
-    .line 240
     :goto_0
     return-void
 
-    .line 230
     :cond_0
     const-string v2, "accessibility_captioning_locale"
 
@@ -89,7 +82,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 231
     iget-object v2, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     # invokes: Landroid/view/accessibility/CaptioningManager;->notifyLocaleChanged()V
@@ -97,7 +89,6 @@
 
     goto :goto_0
 
-    .line 232
     :cond_1
     const-string v2, "accessibility_captioning_font_scale"
 
@@ -107,7 +98,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 233
     iget-object v2, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     # invokes: Landroid/view/accessibility/CaptioningManager;->notifyFontScaleChanged()V
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 237
     :cond_2
     iget-object v2, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
@@ -133,7 +122,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 238
     iget-object v2, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     # getter for: Landroid/view/accessibility/CaptioningManager;->mHandler:Landroid/os/Handler;

@@ -34,13 +34,10 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 1253
     iput-object p1, p0, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->this$0:Landroid/database/sqlite/SQLiteConnection;
 
-    .line 1254
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
 
-    .line 1255
     return-void
 .end method
 
@@ -51,17 +48,14 @@
     .param p1, "printer"    # Landroid/util/Printer;
 
     .prologue
-    .line 1267
     const-string v6, "  Prepared statement cache:"
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1268
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->snapshot()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 1269
     .local v0, "cache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;>;"
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
@@ -69,10 +63,8 @@
 
     if-nez v6, :cond_1
 
-    .line 1270
     const/4 v2, 0x0
 
-    .line 1271
     .local v2, "i":I
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -96,7 +88,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 1272
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -104,20 +95,17 @@
 
     check-cast v5, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 1273
     .local v5, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     iget-boolean v6, v5, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     if-eqz v6, :cond_0
 
-    .line 1274
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 1275
     .local v4, "sql":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -212,15 +200,12 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1282
     .end local v4    # "sql":Ljava/lang/String;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
-    .line 1283
     goto :goto_0
 
-    .line 1285
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;>;"
     .end local v2    # "i":I
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -230,7 +215,6 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1287
     :cond_2
     return-void
 .end method
@@ -239,7 +223,6 @@
     .locals 0
 
     .prologue
-    .line 1251
     check-cast p2, Ljava/lang/String;
 
     check-cast p3, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -259,23 +242,19 @@
     .param p4, "newValue"    # Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     .prologue
-    .line 1260
     const/4 v0, 0x0
 
     iput-boolean v0, p3, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
-    .line 1261
     iget-boolean v0, p3, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
     if-nez v0, :cond_0
 
-    .line 1262
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->this$0:Landroid/database/sqlite/SQLiteConnection;
 
     # invokes: Landroid/database/sqlite/SQLiteConnection;->finalizePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     invoke-static {v0, p3}, Landroid/database/sqlite/SQLiteConnection;->access$200(Landroid/database/sqlite/SQLiteConnection;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 1264
     :cond_0
     return-void
 .end method

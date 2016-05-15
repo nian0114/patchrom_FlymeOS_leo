@@ -40,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 583
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM/dd/yyyy"
@@ -58,23 +57,18 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 589
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 590
     iput-object p1, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mDelegator:Landroid/widget/CalendarView;
 
-    .line 591
     iput-object p2, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mContext:Landroid/content/Context;
 
-    .line 594
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->setCurrentLocale(Ljava/util/Locale;)V
 
-    .line 595
     return-void
 .end method
 
@@ -86,7 +80,6 @@
     .param p2, "outDate"    # Ljava/util/Calendar;
 
     .prologue
-    .line 612
     :try_start_0
     sget-object v1, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->DATE_FORMATTER:Ljava/text/DateFormat;
 
@@ -98,18 +91,14 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 613
     const/4 v1, 0x1
 
-    .line 616
     :goto_0
     return v1
 
-    .line 614
     :catch_0
     move-exception v0
 
-    .line 615
     .local v0, "e":Ljava/text/ParseException;
     const-string v1, "CalendarView"
 
@@ -145,7 +134,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     const/4 v1, 0x0
 
     goto :goto_0
@@ -156,7 +144,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 598
     iget-object v0, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mCurrentLocale:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -165,11 +152,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 602
     :goto_0
     return-void
 
-    .line 601
     :cond_0
     iput-object p1, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mCurrentLocale:Ljava/util/Locale;
 

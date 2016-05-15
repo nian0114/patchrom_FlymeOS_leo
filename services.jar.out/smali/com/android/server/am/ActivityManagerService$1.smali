@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 714
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$1;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
@@ -47,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 714
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$1;->allowFilterResult(Lcom/android/server/am/BroadcastFilter;Ljava/util/List;)Z
@@ -72,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 718
     .local p2, "dest":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/am/BroadcastFilter;>;"
     iget-object v2, p1, Lcom/android/server/am/BroadcastFilter;->receiverList:Lcom/android/server/am/ReceiverList;
 
@@ -82,7 +79,6 @@
 
     move-result-object v1
 
-    .line 719
     .local v1, "target":Landroid/os/IBinder;
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -94,7 +90,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 720
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -111,20 +106,16 @@
 
     if-ne v2, v1, :cond_0
 
-    .line 721
     const/4 v2, 0x0
 
-    .line 724
     :goto_1
     return v2
 
-    .line 719
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 724
     :cond_1
     const/4 v2, 0x1
 
@@ -135,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 714
     check-cast p2, Lcom/android/server/am/BroadcastFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$1;->isPackageForFilter(Ljava/lang/String;Lcom/android/server/am/BroadcastFilter;)Z
@@ -151,7 +141,6 @@
     .param p2, "filter"    # Lcom/android/server/am/BroadcastFilter;
 
     .prologue
-    .line 743
     iget-object v0, p2, Lcom/android/server/am/BroadcastFilter;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -165,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 714
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService$1;->newArray(I)[Lcom/android/server/am/BroadcastFilter;
 
     move-result-object v0
@@ -178,7 +166,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 738
     new-array v0, p1, [Lcom/android/server/am/BroadcastFilter;
 
     return-object v0
@@ -193,7 +180,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 729
     if-eq p3, v1, :cond_0
 
     iget v0, p1, Lcom/android/server/am/BroadcastFilter;->owningUserId:I
@@ -204,7 +190,6 @@
 
     if-ne p3, v0, :cond_1
 
-    .line 731
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/IntentResolver;->newResult(Landroid/content/IntentFilter;II)Ljava/lang/Object;
 
@@ -212,7 +197,6 @@
 
     check-cast v0, Lcom/android/server/am/BroadcastFilter;
 
-    .line 733
     :goto_0
     return-object v0
 
@@ -226,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 714
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ActivityManagerService$1;->newResult(Lcom/android/server/am/BroadcastFilter;II)Lcom/android/server/am/BroadcastFilter;

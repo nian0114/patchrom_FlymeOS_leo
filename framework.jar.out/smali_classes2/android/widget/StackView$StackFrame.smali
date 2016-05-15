@@ -44,10 +44,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 485
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 486
     return-void
 .end method
 
@@ -57,12 +55,10 @@
     .locals 2
 
     .prologue
-    .line 508
     iget-object v1, p0, Landroid/widget/StackView$StackFrame;->sliderAnimator:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_0
 
-    .line 509
     iget-object v1, p0, Landroid/widget/StackView$StackFrame;->sliderAnimator:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -71,17 +67,13 @@
 
     check-cast v0, Landroid/animation/ObjectAnimator;
 
-    .line 510
     .local v0, "oa":Landroid/animation/ObjectAnimator;
     if-eqz v0, :cond_0
 
-    .line 511
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 512
     const/4 v1, 0x1
 
-    .line 515
     .end local v0    # "oa":Landroid/animation/ObjectAnimator;
     :goto_0
     return v1
@@ -96,12 +88,10 @@
     .locals 2
 
     .prologue
-    .line 497
     iget-object v1, p0, Landroid/widget/StackView$StackFrame;->transformAnimator:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_0
 
-    .line 498
     iget-object v1, p0, Landroid/widget/StackView$StackFrame;->transformAnimator:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -110,17 +100,13 @@
 
     check-cast v0, Landroid/animation/ObjectAnimator;
 
-    .line 499
     .local v0, "oa":Landroid/animation/ObjectAnimator;
     if-eqz v0, :cond_0
 
-    .line 500
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 501
     const/4 v1, 0x1
 
-    .line 504
     .end local v0    # "oa":Landroid/animation/ObjectAnimator;
     :goto_0
     return v1
@@ -136,14 +122,12 @@
     .param p1, "oa"    # Landroid/animation/ObjectAnimator;
 
     .prologue
-    .line 493
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/widget/StackView$StackFrame;->sliderAnimator:Ljava/lang/ref/WeakReference;
 
-    .line 494
     return-void
 .end method
 
@@ -152,13 +136,11 @@
     .param p1, "oa"    # Landroid/animation/ObjectAnimator;
 
     .prologue
-    .line 489
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/widget/StackView$StackFrame;->transformAnimator:Ljava/lang/ref/WeakReference;
 
-    .line 490
     return-void
 .end method

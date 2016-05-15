@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/print/RemotePrintSpooler$1;
 
     .prologue
-    .line 443
     invoke-direct {p0, p1}, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;-><init>(Lcom/android/server/print/RemotePrintSpooler;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 446
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     # getter for: Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
@@ -64,7 +61,6 @@
 
     monitor-enter v1
 
-    .line 447
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
@@ -75,13 +71,11 @@
     # setter for: Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
     invoke-static {v0, v2}, Lcom/android/server/print/RemotePrintSpooler;->access$202(Lcom/android/server/print/RemotePrintSpooler;Landroid/print/IPrintSpooler;)Landroid/print/IPrintSpooler;
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     # invokes: Lcom/android/server/print/RemotePrintSpooler;->setClientLocked()V
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->access$300(Lcom/android/server/print/RemotePrintSpooler;)V
 
-    .line 449
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     # getter for: Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
@@ -91,13 +85,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 450
     monitor-exit v1
 
-    .line 451
     return-void
 
-    .line 450
     :catchall_0
     move-exception v0
 
@@ -113,7 +104,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 455
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     # getter for: Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
@@ -123,14 +113,12 @@
 
     monitor-enter v1
 
-    .line 456
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     # invokes: Lcom/android/server/print/RemotePrintSpooler;->clearClientLocked()V
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->access$400(Lcom/android/server/print/RemotePrintSpooler;)V
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     const/4 v2, 0x0
@@ -138,13 +126,10 @@
     # setter for: Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
     invoke-static {v0, v2}, Lcom/android/server/print/RemotePrintSpooler;->access$202(Lcom/android/server/print/RemotePrintSpooler;Landroid/print/IPrintSpooler;)Landroid/print/IPrintSpooler;
 
-    .line 458
     monitor-exit v1
 
-    .line 459
     return-void
 
-    .line 458
     :catchall_0
     move-exception v0
 

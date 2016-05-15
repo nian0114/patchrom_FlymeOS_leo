@@ -25,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 57
     new-instance v0, Landroid/net/http/CertificateChainValidator;
 
     const/4 v1, 0x0
@@ -34,7 +33,6 @@
 
     sput-object v0, Landroid/net/http/CertificateChainValidator$NoPreloadHolder;->sInstance:Landroid/net/http/CertificateChainValidator;
 
-    .line 62
     invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v0
@@ -48,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Landroid/net/http/CertificateChainValidator$NoPreloadHolder;->sInstance:Landroid/net/http/CertificateChainValidator;
 
     return-object v0
@@ -68,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Landroid/net/http/CertificateChainValidator$NoPreloadHolder;->sVerifier:Ljavax/net/ssl/HostnameVerifier;
 
     return-object v0

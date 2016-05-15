@@ -24,13 +24,10 @@
     .param p1, "callback"    # Landroid/bluetooth/BluetoothHealthCallback;
 
     .prologue
-    .line 425
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothHealthCallback$Stub;-><init>()V
 
-    .line 426
     iput-object p1, p0, Landroid/bluetooth/BluetoothHealth$BluetoothHealthCallbackWrapper;->mCallback:Landroid/bluetooth/BluetoothHealthCallback;
 
-    .line 427
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 432
     iget-object v0, p0, Landroid/bluetooth/BluetoothHealth$BluetoothHealthCallbackWrapper;->mCallback:Landroid/bluetooth/BluetoothHealthCallback;
 
     invoke-virtual {v0, p1, p2}, Landroid/bluetooth/BluetoothHealthCallback;->onHealthAppConfigurationStatusChange(Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V
 
-    .line 433
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .param p6, "channelId"    # I
 
     .prologue
-    .line 439
     iget-object v0, p0, Landroid/bluetooth/BluetoothHealth$BluetoothHealthCallbackWrapper;->mCallback:Landroid/bluetooth/BluetoothHealthCallback;
 
     move-object v1, p1
@@ -78,6 +72,5 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/bluetooth/BluetoothHealthCallback;->onHealthChannelStateChange(Landroid/bluetooth/BluetoothHealthAppConfiguration;Landroid/bluetooth/BluetoothDevice;IILandroid/os/ParcelFileDescriptor;I)V
 
-    .line 441
     return-void
 .end method

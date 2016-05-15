@@ -34,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 5483
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "local-groups"
@@ -45,7 +44,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$LocalGroup;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 5487
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$LocalGroup;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "lookup"
@@ -56,7 +54,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$LocalGroup;->CONTENT_LOOKUP_URI:Landroid/net/Uri;
 
-    .line 5491
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$LocalGroup;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "filter"
@@ -74,9 +71,7 @@
     .locals 0
 
     .prologue
-    .line 5473
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5474
     return-void
 .end method

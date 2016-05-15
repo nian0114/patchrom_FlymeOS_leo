@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 434
     iput-object p1, p0, Landroid/drm/DrmHelper$1;->val$path:Ljava/lang/String;
 
     iput-object p2, p0, Landroid/drm/DrmHelper$1;->val$context:Landroid/content/Context;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 438
     iget-object v0, p0, Landroid/drm/DrmHelper$1;->val$path:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/drm/DrmHelper;->isDrmFile(Ljava/lang/String;)Z
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 439
     iget-object v0, p0, Landroid/drm/DrmHelper$1;->val$context:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/drm/DrmHelper$1;->val$path:Ljava/lang/String;
@@ -70,14 +67,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 440
     iget-object v0, p0, Landroid/drm/DrmHelper$1;->val$path:Ljava/lang/String;
 
     iget-object v1, p0, Landroid/drm/DrmHelper$1;->val$mimeType:Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/drm/DrmHelper;->consumeDrmRights(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 443
     :cond_0
     return-void
 .end method

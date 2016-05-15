@@ -36,15 +36,12 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 20
     const-string v0, "android.print.IPrinterDiscoveryObserver"
 
     invoke-virtual {p0, p0, v0}, Landroid/print/IPrinterDiscoveryObserver$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -53,17 +50,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     if-nez p0, :cond_0
 
-    .line 29
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 31
     :cond_0
     const-string v1, "android.print.IPrinterDiscoveryObserver"
 
@@ -71,7 +64,6 @@
 
     move-result-object v0
 
-    .line 32
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -79,12 +71,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 33
     check-cast v0, Landroid/print/IPrinterDiscoveryObserver;
 
     goto :goto_0
 
-    .line 35
     :cond_1
     new-instance v0, Landroid/print/IPrinterDiscoveryObserver$Stub$Proxy;
 
@@ -100,7 +90,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-object p0
 .end method
 
@@ -119,10 +108,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 77
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -130,7 +117,6 @@
     :goto_0
     return v1
 
-    .line 47
     :sswitch_0
     const-string v2, "android.print.IPrinterDiscoveryObserver"
 
@@ -138,20 +124,17 @@
 
     goto :goto_0
 
-    .line 52
     :sswitch_1
     const-string v2, "android.print.IPrinterDiscoveryObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 55
     sget-object v2, Landroid/content/pm/ParceledListSlice;->CREATOR:Landroid/os/Parcelable$ClassLoaderCreator;
 
     invoke-interface {v2, p2}, Landroid/os/Parcelable$ClassLoaderCreator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -160,14 +143,12 @@
 
     check-cast v0, Landroid/content/pm/ParceledListSlice;
 
-    .line 60
     .local v0, "_arg0":Landroid/content/pm/ParceledListSlice;
     :goto_1
     invoke-virtual {p0, v0}, Landroid/print/IPrinterDiscoveryObserver$Stub;->onPrintersAdded(Landroid/content/pm/ParceledListSlice;)V
 
     goto :goto_0
 
-    .line 58
     .end local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     :cond_0
     const/4 v0, 0x0
@@ -175,21 +156,18 @@
     .restart local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     goto :goto_1
 
-    .line 65
     .end local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     :sswitch_2
     const-string v2, "android.print.IPrinterDiscoveryObserver"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 67
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 68
     sget-object v2, Landroid/content/pm/ParceledListSlice;->CREATOR:Landroid/os/Parcelable$ClassLoaderCreator;
 
     invoke-interface {v2, p2}, Landroid/os/Parcelable$ClassLoaderCreator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -198,14 +176,12 @@
 
     check-cast v0, Landroid/content/pm/ParceledListSlice;
 
-    .line 73
     .restart local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     :goto_2
     invoke-virtual {p0, v0}, Landroid/print/IPrinterDiscoveryObserver$Stub;->onPrintersRemoved(Landroid/content/pm/ParceledListSlice;)V
 
     goto :goto_0
 
-    .line 71
     .end local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     :cond_1
     const/4 v0, 0x0
@@ -213,7 +189,6 @@
     .restart local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     goto :goto_2
 
-    .line 43
     nop
 
     :sswitch_data_0

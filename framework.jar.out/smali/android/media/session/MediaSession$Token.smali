@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 754
     new-instance v0, Landroid/media/session/MediaSession$Token$1;
 
     invoke-direct {v0}, Landroid/media/session/MediaSession$Token$1;-><init>()V
@@ -54,13 +53,10 @@
     .param p1, "binder"    # Landroid/media/session/ISessionController;
 
     .prologue
-    .line 711
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 712
     iput-object p1, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
-    .line 713
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 717
     const/4 v0, 0x0
 
     return v0
@@ -85,24 +80,19 @@
 
     const/4 v2, 0x0
 
-    .line 735
     if-ne p0, p1, :cond_1
 
-    .line 747
     :cond_0
     :goto_0
     return v1
 
-    .line 737
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 738
     goto :goto_0
 
-    .line 739
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -116,32 +106,26 @@
 
     move v1, v2
 
-    .line 740
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 741
     check-cast v0, Landroid/media/session/MediaSession$Token;
 
-    .line 742
     .local v0, "other":Landroid/media/session/MediaSession$Token;
     iget-object v3, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
     if-nez v3, :cond_4
 
-    .line 743
     iget-object v3, v0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
     if-eqz v3, :cond_0
 
     move v1, v2
 
-    .line 744
     goto :goto_0
 
-    .line 745
     :cond_4
     iget-object v3, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
@@ -163,7 +147,6 @@
 
     move v1, v2
 
-    .line 746
     goto :goto_0
 .end method
 
@@ -171,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 751
     iget-object v0, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
     return-object v0
@@ -181,14 +163,11 @@
     .locals 3
 
     .prologue
-    .line 727
     const/16 v0, 0x1f
 
-    .line 728
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 729
     .local v1, "result":I
     iget-object v2, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
@@ -199,10 +178,8 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 730
     return v1
 
-    .line 729
     :cond_0
     iget-object v2, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
@@ -223,7 +200,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 722
     iget-object v0, p0, Landroid/media/session/MediaSession$Token;->mBinder:Landroid/media/session/ISessionController;
 
     invoke-interface {v0}, Landroid/media/session/ISessionController;->asBinder()Landroid/os/IBinder;
@@ -232,6 +208,5 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 723
     return-void
 .end method

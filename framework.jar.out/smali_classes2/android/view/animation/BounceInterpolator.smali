@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 32
     return-void
 .end method
 
@@ -29,10 +27,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 36
     return-void
 .end method
 
@@ -41,7 +37,6 @@
     .param p0, "t"    # F
 
     .prologue
-    .line 39
     mul-float v0, p0, p0
 
     const/high16 v1, 0x41000000    # 8.0f
@@ -57,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 59
     invoke-static {}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createBounceInterpolator()J
 
     move-result-wide v0
@@ -70,12 +64,10 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 49
     const v0, 0x3f8fb15b    # 1.1226f
 
     mul-float/2addr p1, v0
 
-    .line 50
     const v0, 0x3eb4fdf4    # 0.3535f
 
     cmpg-float v0, p1, v0
@@ -86,11 +78,9 @@
 
     move-result v0
 
-    .line 53
     :goto_0
     return v0
 
-    .line 51
     :cond_0
     const v0, 0x3f3da512    # 0.7408f
 
@@ -112,7 +102,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_1
     const v0, 0x3f76e2eb    # 0.9644f
 
@@ -134,7 +123,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_2
     const v0, 0x3f859168    # 1.0435f
 

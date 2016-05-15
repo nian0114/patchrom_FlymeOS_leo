@@ -32,13 +32,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcom/android/server/ThemeService$ThemeWorkerHandler;->this$0:Lcom/android/server/ThemeService;
 
-    .line 137
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 138
     return-void
 .end method
 
@@ -51,12 +48,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 142
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 154
     # getter for: Lcom/android/server/ThemeService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/ThemeService;->access$300()Ljava/lang/String;
 
@@ -84,17 +79,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     :goto_0
     return-void
 
-    .line 144
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/res/ThemeChangeRequest;
 
-    .line 145
     .local v0, "request":Landroid/content/res/ThemeChangeRequest;
     iget-object v2, p0, Lcom/android/server/ThemeService$ThemeWorkerHandler;->this$0:Lcom/android/server/ThemeService;
 
@@ -113,7 +105,6 @@
 
     goto :goto_1
 
-    .line 148
     .end local v0    # "request":Landroid/content/res/ThemeChangeRequest;
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/ThemeService$ThemeWorkerHandler;->this$0:Lcom/android/server/ThemeService;
@@ -123,7 +114,6 @@
 
     goto :goto_0
 
-    .line 151
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/ThemeService$ThemeWorkerHandler;->this$0:Lcom/android/server/ThemeService;
 
@@ -132,7 +122,6 @@
 
     goto :goto_0
 
-    .line 142
     nop
 
     :pswitch_data_0

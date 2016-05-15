@@ -24,16 +24,12 @@
     .param p2, "inputManager"    # Lcom/android/server/input/InputManagerService;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/service/gesture/IGestureService$Stub;-><init>()V
 
-    .line 45
     iput-object p1, p0, Lcom/android/server/gesture/GestureService;->mContext:Landroid/content/Context;
 
-    .line 46
     iput-object p2, p0, Lcom/android/server/gesture/GestureService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
-    .line 47
     return-void
 .end method
 
@@ -44,12 +40,10 @@
     .param p1, "pendingIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/gesture/GestureService;->mInputFilter:Lcom/android/server/gesture/GestureInputFilter;
 
     invoke-virtual {v0, p1}, Lcom/android/server/gesture/GestureInputFilter;->setOnDoubleClickPendingIntent(Landroid/app/PendingIntent;)V
 
-    .line 62
     return-void
 .end method
 
@@ -58,12 +52,10 @@
     .param p1, "pendingIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/server/gesture/GestureService;->mInputFilter:Lcom/android/server/gesture/GestureInputFilter;
 
     invoke-virtual {v0, p1}, Lcom/android/server/gesture/GestureInputFilter;->setOnLongPressPendingIntent(Landroid/app/PendingIntent;)V
 
-    .line 58
     return-void
 .end method
 
@@ -71,7 +63,6 @@
     .locals 2
 
     .prologue
-    .line 52
     new-instance v0, Lcom/android/server/gesture/GestureInputFilter;
 
     iget-object v1, p0, Lcom/android/server/gesture/GestureService;->mContext:Landroid/content/Context;
@@ -80,13 +71,11 @@
 
     iput-object v0, p0, Lcom/android/server/gesture/GestureService;->mInputFilter:Lcom/android/server/gesture/GestureInputFilter;
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/gesture/GestureService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
     iget-object v1, p0, Lcom/android/server/gesture/GestureService;->mInputFilter:Lcom/android/server/gesture/GestureInputFilter;
 
     invoke-virtual {v0, v1}, Lcom/android/server/input/InputManagerService;->registerSecondaryInputFilter(Landroid/view/IInputFilter;)V
 
-    .line 54
     return-void
 .end method

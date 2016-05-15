@@ -17,13 +17,10 @@
     .param p1, "array"    # Landroid/util/SparseIntArray;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
-    .line 31
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->get(I)I
@@ -50,7 +46,6 @@
     .param p2, "valueIfKeyNotFound"    # I
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseIntArray;->get(II)I
@@ -65,7 +60,6 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->indexOfValue(I)I
@@ -80,7 +74,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->keyAt(I)I
@@ -94,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->size()I
@@ -108,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->toString()Ljava/lang/String;
@@ -123,7 +114,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseIntArray;->mArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->valueAt(I)I

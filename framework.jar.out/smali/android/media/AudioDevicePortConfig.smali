@@ -13,10 +13,8 @@
     .param p5, "gain"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 31
     invoke-direct/range {p0 .. p5}, Landroid/media/AudioPortConfig;-><init>(Landroid/media/AudioPort;IIILandroid/media/AudioGainConfig;)V
 
-    .line 32
     return-void
 .end method
 
@@ -25,7 +23,6 @@
     .param p1, "config"    # Landroid/media/AudioDevicePortConfig;
 
     .prologue
-    .line 35
     invoke-virtual {p1}, Landroid/media/AudioDevicePortConfig;->port()Landroid/media/AudioDevicePort;
 
     move-result-object v1
@@ -50,7 +47,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/media/AudioDevicePortConfig;-><init>(Landroid/media/AudioDevicePort;IIILandroid/media/AudioGainConfig;)V
 
-    .line 37
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/AudioDevicePortConfig;->mPort:Landroid/media/AudioPort;
 
     check-cast v0, Landroid/media/AudioDevicePort;
@@ -72,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 28
     invoke-virtual {p0}, Landroid/media/AudioDevicePortConfig;->port()Landroid/media/AudioDevicePort;
 
     move-result-object v0

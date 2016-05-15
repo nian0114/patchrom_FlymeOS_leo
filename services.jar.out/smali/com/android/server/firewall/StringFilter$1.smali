@@ -20,7 +20,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 230
     invoke-direct {p0, p1}, Lcom/android/server/firewall/StringFilter$ValueProvider;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -35,15 +34,12 @@
     .param p3, "resolvedType"    # Ljava/lang/String;
 
     .prologue
-    .line 234
     if-eqz p1, :cond_0
 
-    .line 235
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 237
     :goto_0
     return-object v0
 

@@ -27,16 +27,12 @@
     .param p2, "recordSource"    # Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;
 
     .prologue
-    .line 385
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 386
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->mTimerInfo:Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;
 
-    .line 387
     iput-object p2, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->mRecordSource:Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;
 
-    .line 388
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p3, "x2"    # Landroid/hardware/hdmi/HdmiTimerRecordSources$1;
 
     .prologue
-    .line 381
     invoke-direct {p0, p1, p2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;-><init>(Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;)V
 
     return-void
@@ -59,7 +54,6 @@
     .locals 3
 
     .prologue
-    .line 391
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->mTimerInfo:Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;
 
     invoke-virtual {v0}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->getDataSize()I
@@ -85,7 +79,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 397
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->mTimerInfo:Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->toByteArray([BI)I
@@ -94,14 +87,12 @@
 
     add-int/2addr p2, v0
 
-    .line 399
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->mRecordSource:Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->toByteArray(Z[BI)I
 
-    .line 400
     invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->getDataSize()I
 
     move-result v0

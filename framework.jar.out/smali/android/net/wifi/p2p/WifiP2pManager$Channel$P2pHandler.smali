@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 685
     iput-object p1, p0, Landroid/net/wifi/p2p/WifiP2pManager$Channel$P2pHandler;->this$0:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
-    .line 686
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 687
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 691
     iget-object v8, p0, Landroid/net/wifi/p2p/WifiP2pManager$Channel$P2pHandler;->this$0:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     iget v9, p1, Landroid/os/Message;->arg2:I
@@ -53,13 +49,11 @@
 
     move-result-object v4
 
-    .line 692
     .local v4, "listener":Ljava/lang/Object;
     iget v8, p1, Landroid/os/Message;->what:I
 
     sparse-switch v8, :sswitch_data_0
 
-    .line 791
     const-string v8, "WifiP2pManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -82,13 +76,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 794
     .end local v4    # "listener":Ljava/lang/Object;
     :cond_0
     :goto_0
     return-void
 
-    .line 694
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_0
     iget-object v8, p0, Landroid/net/wifi/p2p/WifiP2pManager$Channel$P2pHandler;->this$0:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
@@ -100,7 +92,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 695
     iget-object v8, p0, Landroid/net/wifi/p2p/WifiP2pManager$Channel$P2pHandler;->this$0:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mChannelListener:Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;
@@ -110,7 +101,6 @@
 
     invoke-interface {v8}, Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;->onChannelDisconnected()V
 
-    .line 696
     iget-object v8, p0, Landroid/net/wifi/p2p/WifiP2pManager$Channel$P2pHandler;->this$0:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     # setter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mChannelListener:Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;
@@ -118,11 +108,9 @@
 
     goto :goto_0
 
-    .line 721
     :sswitch_1
     if-eqz v4, :cond_0
 
-    .line 722
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .end local v4    # "listener":Ljava/lang/Object;
@@ -132,12 +120,10 @@
 
     goto :goto_0
 
-    .line 747
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_2
     if-eqz v4, :cond_0
 
-    .line 748
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .end local v4    # "listener":Ljava/lang/Object;
@@ -145,18 +131,15 @@
 
     goto :goto_0
 
-    .line 752
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_3
     iget-object v5, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/net/wifi/p2p/WifiP2pDeviceList;
 
-    .line 753
     .local v5, "peers":Landroid/net/wifi/p2p/WifiP2pDeviceList;
     if-eqz v4, :cond_0
 
-    .line 754
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$PeerListListener;
 
     .end local v4    # "listener":Ljava/lang/Object;
@@ -164,7 +147,6 @@
 
     goto :goto_0
 
-    .line 758
     .end local v5    # "peers":Landroid/net/wifi/p2p/WifiP2pDeviceList;
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_4
@@ -172,11 +154,9 @@
 
     check-cast v7, Landroid/net/wifi/p2p/WifiP2pInfo;
 
-    .line 759
     .local v7, "wifiP2pInfo":Landroid/net/wifi/p2p/WifiP2pInfo;
     if-eqz v4, :cond_0
 
-    .line 760
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$ConnectionInfoListener;
 
     .end local v4    # "listener":Ljava/lang/Object;
@@ -184,7 +164,6 @@
 
     goto :goto_0
 
-    .line 764
     .end local v7    # "wifiP2pInfo":Landroid/net/wifi/p2p/WifiP2pInfo;
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_5
@@ -192,11 +171,9 @@
 
     check-cast v0, Landroid/net/wifi/p2p/WifiP2pGroup;
 
-    .line 765
     .local v0, "group":Landroid/net/wifi/p2p/WifiP2pGroup;
     if-eqz v4, :cond_0
 
-    .line 766
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$GroupInfoListener;
 
     .end local v4    # "listener":Ljava/lang/Object;
@@ -204,7 +181,6 @@
 
     goto :goto_0
 
-    .line 770
     .end local v0    # "group":Landroid/net/wifi/p2p/WifiP2pGroup;
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_6
@@ -212,7 +188,6 @@
 
     check-cast v6, Landroid/net/wifi/p2p/nsd/WifiP2pServiceResponse;
 
-    .line 771
     .local v6, "resp":Landroid/net/wifi/p2p/nsd/WifiP2pServiceResponse;
     iget-object v8, p0, Landroid/net/wifi/p2p/WifiP2pManager$Channel$P2pHandler;->this$0:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
@@ -221,18 +196,15 @@
 
     goto :goto_0
 
-    .line 774
     .end local v6    # "resp":Landroid/net/wifi/p2p/nsd/WifiP2pServiceResponse;
     :sswitch_7
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/net/wifi/p2p/WifiP2pGroupList;
 
-    .line 775
     .local v1, "groups":Landroid/net/wifi/p2p/WifiP2pGroupList;
     if-eqz v4, :cond_0
 
-    .line 776
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$PersistentGroupInfoListener;
 
     .end local v4    # "listener":Ljava/lang/Object;
@@ -240,7 +212,6 @@
 
     goto :goto_0
 
-    .line 781
     .end local v1    # "groups":Landroid/net/wifi/p2p/WifiP2pGroupList;
     .restart local v4    # "listener":Ljava/lang/Object;
     :sswitch_8
@@ -248,11 +219,9 @@
 
     check-cast v2, Landroid/os/Bundle;
 
-    .line 782
     .local v2, "handoverBundle":Landroid/os/Bundle;
     if-eqz v4, :cond_0
 
-    .line 783
     if-eqz v2, :cond_1
 
     const-string v8, "android.net.wifi.p2p.EXTRA_HANDOVER_MESSAGE"
@@ -261,7 +230,6 @@
 
     move-result-object v3
 
-    .line 786
     .local v3, "handoverMessage":Ljava/lang/String;
     :cond_1
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pManager$HandoverMessageListener;
@@ -271,7 +239,6 @@
 
     goto :goto_0
 
-    .line 692
     :sswitch_data_0
     .sparse-switch
         0x11004 -> :sswitch_0

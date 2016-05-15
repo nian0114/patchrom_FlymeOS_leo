@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/internal/util/cm/LockscreenShortcutsHelper$1;->this$0:Lcom/android/internal/util/cm/LockscreenShortcutsHelper;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,13 +39,11 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/internal/util/cm/LockscreenShortcutsHelper$1;->this$0:Lcom/android/internal/util/cm/LockscreenShortcutsHelper;
 
     # invokes: Lcom/android/internal/util/cm/LockscreenShortcutsHelper;->fetchTargets()V
     invoke-static {v0}, Lcom/android/internal/util/cm/LockscreenShortcutsHelper;->access$000(Lcom/android/internal/util/cm/LockscreenShortcutsHelper;)V
 
-    .line 64
     iget-object v0, p0, Lcom/android/internal/util/cm/LockscreenShortcutsHelper$1;->this$0:Lcom/android/internal/util/cm/LockscreenShortcutsHelper;
 
     # getter for: Lcom/android/internal/util/cm/LockscreenShortcutsHelper;->mListener:Lcom/android/internal/util/cm/LockscreenShortcutsHelper$OnChangeListener;
@@ -56,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Lcom/android/internal/util/cm/LockscreenShortcutsHelper$1;->this$0:Lcom/android/internal/util/cm/LockscreenShortcutsHelper;
 
     # getter for: Lcom/android/internal/util/cm/LockscreenShortcutsHelper;->mListener:Lcom/android/internal/util/cm/LockscreenShortcutsHelper$OnChangeListener;
@@ -66,7 +62,6 @@
 
     invoke-interface {v0}, Lcom/android/internal/util/cm/LockscreenShortcutsHelper$OnChangeListener;->onChange()V
 
-    .line 67
     :cond_0
     return-void
 .end method

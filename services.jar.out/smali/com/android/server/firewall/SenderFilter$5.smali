@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p7, "receivingUid"    # I
 
     .prologue
-    .line 112
     const/4 v1, 0x0
 
     const/4 v5, 0x0

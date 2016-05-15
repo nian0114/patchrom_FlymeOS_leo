@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 179
     iput-object p1, p0, Lcom/android/server/CountryDetectorService$1$1;->this$1:Lcom/android/server/CountryDetectorService$1;
 
     iput-object p2, p0, Lcom/android/server/CountryDetectorService$1$1;->val$country:Landroid/location/Country;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 181
     iget-object v0, p0, Lcom/android/server/CountryDetectorService$1$1;->this$1:Lcom/android/server/CountryDetectorService$1;
 
     iget-object v0, v0, Lcom/android/server/CountryDetectorService$1;->this$0:Lcom/android/server/CountryDetectorService;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/CountryDetectorService;->notifyReceivers(Landroid/location/Country;)V
 
-    .line 182
     return-void
 .end method

@@ -29,17 +29,13 @@
     .param p3, "_fmt"    # Landroid/renderscript/ProgramFragmentFixedFunction$Builder$Format;
 
     .prologue
-    .line 154
     iput-object p1, p0, Landroid/renderscript/ProgramFragmentFixedFunction$Builder$Slot;->this$0:Landroid/renderscript/ProgramFragmentFixedFunction$Builder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput-object p2, p0, Landroid/renderscript/ProgramFragmentFixedFunction$Builder$Slot;->env:Landroid/renderscript/ProgramFragmentFixedFunction$Builder$EnvMode;
 
-    .line 156
     iput-object p3, p0, Landroid/renderscript/ProgramFragmentFixedFunction$Builder$Slot;->format:Landroid/renderscript/ProgramFragmentFixedFunction$Builder$Format;
 
-    .line 157
     return-void
 .end method

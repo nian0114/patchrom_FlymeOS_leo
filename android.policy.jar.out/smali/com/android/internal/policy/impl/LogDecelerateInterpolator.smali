@@ -23,16 +23,12 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput p1, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mBase:I
 
-    .line 29
     iput p2, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mDrift:I
 
-    .line 31
     iget v0, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mBase:I
 
     iget v1, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mDrift:I
@@ -45,7 +41,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mLogScale:F
 
-    .line 32
     return-void
 .end method
 
@@ -56,7 +51,6 @@
     .param p2, "drift"    # I
 
     .prologue
-    .line 35
     int-to-double v0, p1
 
     neg-float v2, p0
@@ -91,7 +85,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 40
     iget v0, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mBase:I
 
     iget v1, p0, Lcom/android/internal/policy/impl/LogDecelerateInterpolator;->mDrift:I

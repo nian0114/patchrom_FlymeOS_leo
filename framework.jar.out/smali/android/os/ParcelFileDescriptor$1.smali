@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 906
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 911
     invoke-virtual {p1}, Landroid/os/Parcel;->readRawFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v1
 
-    .line 912
     .local v1, "fd":Ljava/io/FileDescriptor;
     const/4 v0, 0x0
 
-    .line 913
     .local v0, "commChannel":Ljava/io/FileDescriptor;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -62,12 +58,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 914
     invoke-virtual {p1}, Landroid/os/Parcel;->readRawFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
-    .line 916
     :cond_0
     new-instance v2, Landroid/os/ParcelFileDescriptor;
 
@@ -80,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 906
     invoke-virtual {p0, p1}, Landroid/os/ParcelFileDescriptor$1;->createFromParcel(Landroid/os/Parcel;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
@@ -93,7 +86,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 921
     new-array v0, p1, [Landroid/os/ParcelFileDescriptor;
 
     return-object v0
@@ -103,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 906
     invoke-virtual {p0, p1}, Landroid/os/ParcelFileDescriptor$1;->newArray(I)[Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0

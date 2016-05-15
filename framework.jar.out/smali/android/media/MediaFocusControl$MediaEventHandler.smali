@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 350
     iput-object p1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
-    .line 351
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 352
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 356
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 405
     :goto_0
     :pswitch_0
     return-void
 
-    .line 358
     :pswitch_1
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 363
     :pswitch_2
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -75,7 +68,6 @@
 
     goto :goto_0
 
-    .line 367
     :pswitch_3
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 371
     :pswitch_4
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 376
     :pswitch_5
     const-string v1, "MediaFocusControl"
 
@@ -131,7 +121,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
     iget v2, p1, Landroid/os/Message;->arg2:I
@@ -153,7 +142,6 @@
 
     goto :goto_0
 
-    .line 382
     :pswitch_6
     const-string v0, "MediaFocusControl"
 
@@ -161,7 +149,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
     # invokes: Landroid/media/MediaFocusControl;->onGetRemoteControlClientNowPlayingEntries()V
@@ -169,7 +156,6 @@
 
     goto :goto_0
 
-    .line 387
     :pswitch_7
     const-string v0, "MediaFocusControl"
 
@@ -177,7 +163,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
     # invokes: Landroid/media/MediaFocusControl;->onSetRemoteControlClientBrowsedPlayer()V
@@ -185,7 +170,6 @@
 
     goto :goto_0
 
-    .line 393
     :pswitch_8
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -202,7 +186,6 @@
 
     goto :goto_0
 
-    .line 398
     :pswitch_9
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -211,7 +194,6 @@
 
     goto/16 :goto_0
 
-    .line 402
     :pswitch_a
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -223,7 +205,6 @@
 
     goto/16 :goto_0
 
-    .line 356
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

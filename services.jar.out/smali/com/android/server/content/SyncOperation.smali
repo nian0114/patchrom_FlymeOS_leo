@@ -69,7 +69,6 @@
     .locals 3
 
     .prologue
-    .line 48
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/String;
@@ -142,7 +141,6 @@
     .param p15, "allowParallelSyncs"    # Z
 
     .prologue
-    .line 96
     new-instance v6, Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     move-object/from16 v0, p1
@@ -173,7 +171,6 @@
 
     invoke-direct/range {v5 .. v18}, Lcom/android/server/content/SyncOperation;-><init>(Lcom/android/server/content/SyncStorageEngine$EndPoint;IILandroid/os/Bundle;JJJJZ)V
 
-    .line 99
     return-void
 .end method
 
@@ -190,7 +187,6 @@
     .param p12, "delayUntil"    # J
 
     .prologue
-    .line 104
     new-instance v4, Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     move-object/from16 v0, p1
@@ -219,7 +215,6 @@
 
     invoke-direct/range {v3 .. v16}, Lcom/android/server/content/SyncOperation;-><init>(Lcom/android/server/content/SyncStorageEngine$EndPoint;IILandroid/os/Bundle;JJJJZ)V
 
-    .line 106
     return-void
 .end method
 
@@ -229,7 +224,6 @@
     .param p2, "newRunTimeFromNow"    # J
 
     .prologue
-    .line 142
     move-object/from16 v0, p1
 
     iget-object v4, v0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
@@ -272,7 +266,6 @@
 
     invoke-direct/range {v3 .. v16}, Lcom/android/server/content/SyncOperation;-><init>(Lcom/android/server/content/SyncStorageEngine$EndPoint;IILandroid/os/Bundle;JJJJZ)V
 
-    .line 148
     return-void
 .end method
 
@@ -289,51 +282,40 @@
     .param p13, "allowParallelSyncs"    # Z
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     iput-object p1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
-    .line 112
     iput p2, p0, Lcom/android/server/content/SyncOperation;->reason:I
 
-    .line 113
     iput p3, p0, Lcom/android/server/content/SyncOperation;->syncSource:I
 
-    .line 114
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     iput-object v4, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
-    .line 115
     iget-object v4, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     invoke-direct {p0, v4}, Lcom/android/server/content/SyncOperation;->cleanBundle(Landroid/os/Bundle;)V
 
-    .line 116
     move-wide/from16 v0, p11
 
     iput-wide v0, p0, Lcom/android/server/content/SyncOperation;->delayUntil:J
 
-    .line 117
     move-wide/from16 v0, p9
 
     iput-wide v0, p0, Lcom/android/server/content/SyncOperation;->backoff:J
 
-    .line 118
     move/from16 v0, p13
 
     iput-boolean v0, p0, Lcom/android/server/content/SyncOperation;->allowParallelSyncs:Z
 
-    .line 119
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 122
     .local v2, "now":J
     const-wide/16 v4, 0x0
 
@@ -341,12 +323,10 @@
 
     if-gez v4, :cond_1
 
-    .line 123
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/content/SyncOperation;->expedited:Z
 
-    .line 125
     iget-object v4, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v5, "expedited"
@@ -359,7 +339,6 @@
 
     if-nez v4, :cond_0
 
-    .line 126
     iget-object v4, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v5, "expedited"
@@ -368,20 +347,16 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 128
     :cond_0
     iput-wide v2, p0, Lcom/android/server/content/SyncOperation;->latestRunTime:J
 
-    .line 129
     const-wide/16 v4, 0x0
 
     iput-wide v4, p0, Lcom/android/server/content/SyncOperation;->flexTime:J
 
-    .line 136
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/content/SyncOperation;->updateEffectiveRunTime()V
 
-    .line 137
     iget-object v4, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     invoke-static {p1, v4}, Lcom/android/server/content/SyncOperation;->toKey(Lcom/android/server/content/SyncStorageEngine$EndPoint;Landroid/os/Bundle;)Ljava/lang/String;
@@ -390,28 +365,23 @@
 
     iput-object v4, p0, Lcom/android/server/content/SyncOperation;->key:Ljava/lang/String;
 
-    .line 138
     return-void
 
-    .line 131
     :cond_1
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/server/content/SyncOperation;->expedited:Z
 
-    .line 132
     iget-object v4, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v5, "expedited"
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 133
     add-long v4, v2, p5
 
     iput-wide v4, p0, Lcom/android/server/content/SyncOperation;->latestRunTime:J
 
-    .line 134
     iput-wide p7, p0, Lcom/android/server/content/SyncOperation;->flexTime:J
 
     goto :goto_0
@@ -422,52 +392,42 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 160
     const-string v0, "upload"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 161
     const-string v0, "force"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 162
     const-string v0, "ignore_settings"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 163
     const-string v0, "ignore_backoff"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 164
     const-string v0, "do_not_retry"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 165
     const-string v0, "discard_deletions"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 166
     const-string v0, "expedited"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 167
     const-string v0, "deletions_override"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 168
     const-string v0, "allow_metered"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/content/SyncOperation;->removeFalseExtra(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 169
     return-void
 .end method
 
@@ -477,12 +437,10 @@
     .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 313
     const-string v2, "["
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 314
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -505,7 +463,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 315
     .local v1, "key":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -531,14 +488,12 @@
 
     goto :goto_0
 
-    .line 317
     .end local v1    # "key":Ljava/lang/String;
     :cond_0
     const-string v2, "]"
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 318
     return-void
 .end method
 
@@ -548,18 +503,14 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 236
     if-ltz p1, :cond_3
 
-    .line 237
     if-eqz p0, :cond_2
 
-    .line 238
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 239
     .local v2, "packages":[Ljava/lang/String;
     if-eqz v2, :cond_1
 
@@ -569,36 +520,30 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 240
     const/4 v3, 0x0
 
     aget-object v1, v2, v3
 
-    .line 255
     .end local v2    # "packages":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 242
     .restart local v2    # "packages":[Ljava/lang/String;
     :cond_1
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getNameForUid(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 243
     .local v1, "name":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 246
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 248
     .end local v1    # "name":Ljava/lang/String;
     .end local v2    # "packages":[Ljava/lang/String;
     :cond_2
@@ -608,13 +553,11 @@
 
     goto :goto_0
 
-    .line 251
     :cond_3
     neg-int v3, p1
 
     add-int/lit8 v0, v3, -0x1
 
-    .line 252
     .local v0, "index":I
     sget-object v3, Lcom/android/server/content/SyncOperation;->REASON_NAMES:[Ljava/lang/String;
 
@@ -622,14 +565,12 @@
 
     if-lt v0, v3, :cond_4
 
-    .line 253
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 255
     :cond_4
     sget-object v3, Lcom/android/server/content/SyncOperation;->REASON_NAMES:[Ljava/lang/String;
 
@@ -644,7 +585,6 @@
     .param p2, "extraName"    # Ljava/lang/String;
 
     .prologue
-    .line 172
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
@@ -653,10 +593,8 @@
 
     if-nez v0, :cond_0
 
-    .line 173
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 175
     :cond_0
     return-void
 .end method
@@ -667,18 +605,15 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 286
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 287
     .local v0, "sb":Ljava/lang/StringBuilder;
     iget-boolean v1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->target_provider:Z
 
     if-eqz v1, :cond_0
 
-    .line 288
     const-string v1, "provider: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -689,7 +624,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 289
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -746,16 +680,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 307
     :goto_0
     const-string v1, " extras: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 308
     invoke-static {p1, v0}, Lcom/android/server/content/SyncOperation;->extrasToStringBuilder(Landroid/os/Bundle;Ljava/lang/StringBuilder;)V
 
-    .line 309
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -763,13 +694,11 @@
     :goto_1
     return-object v1
 
-    .line 295
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->target_service:Z
 
     if-eqz v1, :cond_1
 
-    .line 296
     const-string v1, "service {package="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -820,7 +749,6 @@
 
     goto :goto_0
 
-    .line 304
     :cond_1
     const-string v1, "SyncManager"
 
@@ -848,7 +776,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     const-string v1, ""
 
     goto :goto_1
@@ -867,12 +794,10 @@
 
     const/4 v1, -0x1
 
-    .line 357
     move-object v0, p1
 
     check-cast v0, Lcom/android/server/content/SyncOperation;
 
-    .line 358
     .local v0, "other":Lcom/android/server/content/SyncOperation;
     iget-boolean v7, p0, Lcom/android/server/content/SyncOperation;->expedited:Z
 
@@ -880,12 +805,10 @@
 
     if-eq v7, v8, :cond_2
 
-    .line 359
     iget-boolean v7, p0, Lcom/android/server/content/SyncOperation;->expedited:Z
 
     if-eqz v7, :cond_1
 
-    .line 369
     :cond_0
     :goto_0
     return v1
@@ -893,10 +816,8 @@
     :cond_1
     move v1, v6
 
-    .line 359
     goto :goto_0
 
-    .line 361
     :cond_2
     iget-wide v8, p0, Lcom/android/server/content/SyncOperation;->effectiveRunTime:J
 
@@ -908,7 +829,6 @@
 
     move-result-wide v4
 
-    .line 362
     .local v4, "thisIntervalStart":J
     iget-wide v8, v0, Lcom/android/server/content/SyncOperation;->effectiveRunTime:J
 
@@ -920,23 +840,19 @@
 
     move-result-wide v2
 
-    .line 364
     .local v2, "otherIntervalStart":J
     cmp-long v7, v4, v2
 
     if-ltz v7, :cond_0
 
-    .line 366
     cmp-long v1, v2, v4
 
     if-gez v1, :cond_3
 
     move v1, v6
 
-    .line 367
     goto :goto_0
 
-    .line 369
     :cond_3
     const/4 v1, 0x0
 
@@ -949,12 +865,10 @@
     .param p2, "useOneLine"    # Z
 
     .prologue
-    .line 203
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 204
     .local v0, "sb":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -962,7 +876,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 205
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
@@ -1027,7 +940,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     :cond_0
     :goto_0
     sget-object v1, Lcom/android/server/content/SyncStorageEngine;->SOURCES:[Ljava/lang/String;
@@ -1050,23 +962,19 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 223
     iget-boolean v1, p0, Lcom/android/server/content/SyncOperation;->expedited:Z
 
     if-eqz v1, :cond_1
 
-    .line 224
     const-string v1, ", EXPEDITED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 226
     :cond_1
     const-string v1, ", reason: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 227
     iget v1, p0, Lcom/android/server/content/SyncOperation;->reason:I
 
     invoke-static {p1, v1}, Lcom/android/server/content/SyncOperation;->reasonToString(Landroid/content/pm/PackageManager;I)Ljava/lang/String;
@@ -1075,7 +983,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 228
     if-nez p2, :cond_2
 
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
@@ -1090,17 +997,14 @@
 
     if-nez v1, :cond_2
 
-    .line 229
     const-string v1, "\n    "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 230
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     invoke-static {v1, v0}, Lcom/android/server/content/SyncOperation;->extrasToStringBuilder(Landroid/os/Bundle;Ljava/lang/StringBuilder;)V
 
-    .line 232
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1108,7 +1012,6 @@
 
     return-object v1
 
-    .line 213
     :cond_3
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -1116,7 +1019,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 214
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->service:Landroid/content/ComponentName;
@@ -1178,7 +1080,6 @@
     .locals 3
 
     .prologue
-    .line 269
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v1, "ignore_backoff"
@@ -1201,10 +1102,8 @@
 
     const/4 v2, 0x0
 
-    .line 183
     iget-object v0, p1, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
-    .line 184
     .local v0, "other":Lcom/android/server/content/SyncStorageEngine$EndPoint;
     iget-object v3, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -1212,7 +1111,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 185
     iget-object v3, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v3, v3, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
@@ -1269,7 +1167,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 193
     :cond_0
     :goto_0
     return v1
@@ -1277,10 +1174,8 @@
     :cond_1
     move v1, v2
 
-    .line 185
     goto :goto_0
 
-    .line 193
     :cond_2
     iget-object v3, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -1308,7 +1203,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget-boolean v0, p0, Lcom/android/server/content/SyncOperation;->expedited:Z
 
     return v0
@@ -1318,7 +1212,6 @@
     .locals 3
 
     .prologue
-    .line 281
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v1, "ignore_settings"
@@ -1336,7 +1229,6 @@
     .locals 3
 
     .prologue
-    .line 261
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v1, "initialize"
@@ -1354,7 +1246,6 @@
     .locals 3
 
     .prologue
-    .line 277
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v1, "force"
@@ -1372,7 +1263,6 @@
     .locals 3
 
     .prologue
-    .line 273
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->extras:Landroid/os/Bundle;
 
     const-string v1, "allow_metered"
@@ -1391,7 +1281,6 @@
     .param p1, "other"    # Lcom/android/server/content/SyncOperation;
 
     .prologue
-    .line 151
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, p1, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
@@ -1412,12 +1301,10 @@
 
     const/4 v3, 0x0
 
-    .line 375
     const/4 v1, 0x4
 
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 376
     .local v0, "logArray":[Ljava/lang/Object;
     const/4 v1, 0x1
 
@@ -1427,7 +1314,6 @@
 
     aput-object v2, v0, v1
 
-    .line 377
     const/4 v1, 0x2
 
     iget v2, p0, Lcom/android/server/content/SyncOperation;->syncSource:I
@@ -1438,21 +1324,18 @@
 
     aput-object v2, v0, v1
 
-    .line 378
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-boolean v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->target_provider:Z
 
     if-eqz v1, :cond_0
 
-    .line 379
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
     aput-object v1, v0, v3
 
-    .line 380
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
@@ -1469,11 +1352,9 @@
 
     aput-object v1, v0, v4
 
-    .line 387
     :goto_0
     return-object v0
 
-    .line 381
     :cond_0
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -1481,7 +1362,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 382
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->service:Landroid/content/ComponentName;
@@ -1492,7 +1372,6 @@
 
     aput-object v1, v0, v3
 
-    .line 383
     iget-object v1, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, v1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->service:Landroid/content/ComponentName;
@@ -1509,7 +1388,6 @@
 
     goto :goto_0
 
-    .line 385
     :cond_1
     const-string v1, "SyncManager"
 
@@ -1542,7 +1420,6 @@
     .locals 2
 
     .prologue
-    .line 199
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -1558,7 +1435,6 @@
     .locals 4
 
     .prologue
-    .line 345
     invoke-virtual {p0}, Lcom/android/server/content/SyncOperation;->ignoreBackoff()Z
 
     move-result v0
@@ -1570,10 +1446,8 @@
     :goto_0
     iput-wide v0, p0, Lcom/android/server/content/SyncOperation;->effectiveRunTime:J
 
-    .line 348
     return-void
 
-    .line 345
     :cond_0
     iget-wide v0, p0, Lcom/android/server/content/SyncOperation;->latestRunTime:J
 
@@ -1596,19 +1470,15 @@
     .locals 3
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->wakeLockName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 322
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->wakeLockName:Ljava/lang/String;
 
-    .line 333
     :goto_0
     return-object v0
 
-    .line 324
     :cond_0
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -1616,7 +1486,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 325
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1669,7 +1538,6 @@
 
     goto :goto_0
 
-    .line 328
     :cond_1
     iget-object v0, p0, Lcom/android/server/content/SyncOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
@@ -1677,7 +1545,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 329
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1720,7 +1587,6 @@
 
     goto :goto_0
 
-    .line 332
     :cond_2
     const-string v0, "SyncManager"
 
@@ -1746,7 +1612,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     const/4 v0, 0x0
 
     goto/16 :goto_0

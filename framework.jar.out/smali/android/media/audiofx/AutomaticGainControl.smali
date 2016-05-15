@@ -20,7 +20,6 @@
     .end annotation
 
     .prologue
-    .line 95
     sget-object v0, Landroid/media/audiofx/AutomaticGainControl;->EFFECT_TYPE_AGC:Ljava/util/UUID;
 
     sget-object v1, Landroid/media/audiofx/AutomaticGainControl;->EFFECT_TYPE_NULL:Ljava/util/UUID;
@@ -29,7 +28,6 @@
 
     invoke-direct {p0, v0, v1, v2, p1}, Landroid/media/audiofx/AudioEffect;-><init>(Ljava/util/UUID;Ljava/util/UUID;II)V
 
-    .line 96
     return-void
 .end method
 
@@ -38,10 +36,8 @@
     .param p0, "audioSession"    # I
 
     .prologue
-    .line 62
     const/4 v0, 0x0
 
-    .line 64
     .local v0, "agc":Landroid/media/audiofx/AutomaticGainControl;
     :try_start_0
     new-instance v1, Landroid/media/audiofx/AutomaticGainControl;
@@ -57,17 +53,14 @@
     .local v1, "agc":Landroid/media/audiofx/AutomaticGainControl;
     move-object v0, v1
 
-    .line 72
     .end local v1    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     :goto_0
     return-object v1
 
-    .line 65
     .restart local v0    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     :catch_0
     move-exception v2
 
-    .line 66
     .local v2, "e":Ljava/lang/IllegalArgumentException;
     :try_start_1
     const-string v3, "AutomaticGainControl"
@@ -76,7 +69,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "not implemented on this device "
+    const-string v5, "not implemented on this device "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -94,45 +87,39 @@
 
     move-object v1, v0
 
-    .line 72
     .end local v0    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     .restart local v1    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     goto :goto_0
 
-    .line 67
     .end local v1    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     .restart local v0    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     :catch_1
     move-exception v2
 
-    .line 68
     .local v2, "e":Ljava/lang/UnsupportedOperationException;
     const-string v3, "AutomaticGainControl"
 
-    const-string/jumbo v4, "not enough resources"
+    const-string v4, "not enough resources"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v1, v0
 
-    .line 72
     .end local v0    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     .restart local v1    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     goto :goto_0
 
-    .line 69
     .end local v1    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     .end local v2    # "e":Ljava/lang/UnsupportedOperationException;
     .restart local v0    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     :catch_2
     move-exception v2
 
-    .line 70
     .local v2, "e":Ljava/lang/RuntimeException;
     const-string v3, "AutomaticGainControl"
 
-    const-string/jumbo v4, "not enough memory"
+    const-string v4, "not enough memory"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
@@ -140,7 +127,6 @@
 
     move-object v1, v0
 
-    .line 72
     .end local v0    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     .restart local v1    # "agc":Landroid/media/audiofx/AutomaticGainControl;
     goto :goto_0
@@ -162,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 51
     sget-object v0, Landroid/media/audiofx/AudioEffect;->EFFECT_TYPE_AGC:Ljava/util/UUID;
 
     invoke-static {v0}, Landroid/media/audiofx/AudioEffect;->isEffectTypeAvailable(Ljava/util/UUID;)Z

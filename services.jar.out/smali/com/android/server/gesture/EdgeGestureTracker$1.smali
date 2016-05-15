@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 158
     invoke-static {}, Lcom/android/internal/util/gesture/EdgeGesturePosition;->values()[Lcom/android/internal/util/gesture/EdgeGesturePosition;
 
     move-result-object v0

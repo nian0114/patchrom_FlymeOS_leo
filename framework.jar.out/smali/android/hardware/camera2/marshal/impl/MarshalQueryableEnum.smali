@@ -55,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 40
     const-class v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -64,7 +63,6 @@
 
     sput-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->TAG:Ljava/lang/String;
 
-    .line 41
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -75,7 +73,6 @@
 
     sput-boolean v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->VERBOSE:Z
 
-    .line 137
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -89,11 +86,9 @@
     .locals 0
 
     .prologue
-    .line 38
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     return-void
 .end method
 
@@ -102,7 +97,6 @@
     .param p0, "x0"    # Ljava/lang/Enum;
 
     .prologue
-    .line 38
     invoke-static {p0}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->getEnumValue(Ljava/lang/Enum;)I
 
     move-result v0
@@ -116,7 +110,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 38
     invoke-static {p0, p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->getEnumFromValue(Ljava/lang/Class;I)Ljava/lang/Enum;
 
     move-result-object v0
@@ -143,7 +136,6 @@
 
     const/4 v5, 0x0
 
-    .line 193
     sget-object v6, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->sEnumValues:Ljava/util/HashMap;
 
     invoke-virtual {v6, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -152,14 +144,11 @@
 
     check-cast v2, [I
 
-    .line 194
     .local v2, "registeredValues":[I
     if-eqz v2, :cond_3
 
-    .line 195
     const/4 v1, -0x1
 
-    .line 197
     .local v1, "ordinal":I
     const/4 v0, 0x0
 
@@ -169,15 +158,12 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 198
     aget v6, v2, v0
 
     if-ne v6, p1, :cond_2
 
-    .line 199
     move v1, v0
 
-    .line 207
     .end local v0    # "i":I
     :cond_0
     :goto_1
@@ -187,7 +173,6 @@
 
     check-cast v3, [Ljava/lang/Enum;
 
-    .line 209
     .local v3, "values":[Ljava/lang/Enum;, "[TT;"
     if-ltz v1, :cond_1
 
@@ -195,7 +180,6 @@
 
     if-lt v1, v6, :cond_5
 
-    .line 210
     :cond_1
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
@@ -232,7 +216,6 @@
 
     throw v6
 
-    .line 197
     .end local v3    # "values":[Ljava/lang/Enum;, "[TT;"
     .restart local v0    # "i":I
     :cond_2
@@ -240,7 +223,6 @@
 
     goto :goto_0
 
-    .line 204
     .end local v0    # "i":I
     .end local v1    # "ordinal":I
     :cond_3
@@ -253,10 +235,8 @@
     :cond_4
     move v4, v5
 
-    .line 210
     goto :goto_2
 
-    .line 218
     :cond_5
     aget-object v4, v3, v1
 
@@ -274,7 +254,6 @@
     .end annotation
 
     .prologue
-    .line 173
     .local p0, "enumValue":Ljava/lang/Enum;, "TT;"
     sget-object v2, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->sEnumValues:Ljava/util/HashMap;
 
@@ -288,20 +267,16 @@
 
     check-cast v1, [I
 
-    .line 175
     .local v1, "values":[I
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    .line 176
     .local v0, "ordinal":I
     if-eqz v1, :cond_0
 
-    .line 177
     aget v0, v1, v0
 
-    .line 180
     .end local v0    # "ordinal":I
     :cond_0
     return v0
@@ -321,7 +296,6 @@
     .end annotation
 
     .prologue
-    .line 149
     .local p0, "enumType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
@@ -335,7 +309,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 150
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -372,13 +345,11 @@
 
     throw v0
 
-    .line 154
     :cond_0
     sget-boolean v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->VERBOSE:Z
 
     if-eqz v0, :cond_1
 
-    .line 155
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -407,13 +378,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     :cond_1
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->sEnumValues:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     return-void
 .end method
 
@@ -433,7 +402,6 @@
     .end annotation
 
     .prologue
-    .line 103
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;
@@ -461,12 +429,10 @@
 
     const/4 v2, 0x1
 
-    .line 108
     if-eq p2, v2, :cond_0
 
     if-nez p2, :cond_2
 
-    .line 109
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getType()Ljava/lang/reflect/Type;
 
@@ -476,14 +442,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 110
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Class;
 
-    .line 112
     .local v1, "typeClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v1}, Ljava/lang/Class;->isEnum()Z
 
@@ -491,19 +455,17 @@
 
     if-eqz v4, :cond_2
 
-    .line 113
     sget-boolean v4, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->VERBOSE:Z
 
     if-eqz v4, :cond_1
 
-    .line 114
     sget-object v4, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "possible enum detected for "
+    const-string v6, "possible enum detected for "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -519,7 +481,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_1
     const/4 v4, 0x2
 
@@ -543,17 +504,14 @@
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 133
     .end local v1    # "typeClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     return v2
 
-    .line 122
     .restart local v1    # "typeClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     sget-object v2, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->TAG:Ljava/lang/String;
 
@@ -589,15 +547,12 @@
     :goto_1
     move v2, v3
 
-    .line 133
     goto :goto_0
 
-    .line 125
     .restart local v1    # "typeClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_1
     move-exception v0
 
-    .line 127
     .local v0, "e":Ljava/lang/SecurityException;
     sget-object v2, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->TAG:Ljava/lang/String;
 

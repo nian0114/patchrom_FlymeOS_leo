@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 615
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$10;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     iput-object p2, p0, Landroid/app/EnterTransitionCoordinator$10;->val$decorView:Landroid/view/ViewGroup;
@@ -46,14 +45,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 618
     iget-object v3, p0, Landroid/app/EnterTransitionCoordinator$10;->val$decorView:Landroid/view/ViewGroup;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
 
     move-result-object v2
 
-    .line 619
     .local v2, "overlay":Landroid/view/ViewGroupOverlay;
     iget-object v3, p0, Landroid/app/EnterTransitionCoordinator$10;->val$rejectedSnapshots:Ljava/util/ArrayList;
 
@@ -61,7 +58,6 @@
 
     move-result v1
 
-    .line 620
     .local v1, "numRejected":I
     const/4 v0, 0x0
 
@@ -69,7 +65,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 621
     iget-object v3, p0, Landroid/app/EnterTransitionCoordinator$10;->val$rejectedSnapshots:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -80,12 +75,10 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
 
-    .line 620
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 623
     :cond_0
     return-void
 .end method

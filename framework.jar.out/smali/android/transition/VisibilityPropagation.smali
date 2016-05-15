@@ -16,7 +16,6 @@
     .locals 3
 
     .prologue
-    .line 37
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -42,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Landroid/transition/TransitionPropagation;-><init>()V
 
     return-void
@@ -56,16 +54,13 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 105
     if-nez p0, :cond_0
 
     move v1, v2
 
-    .line 114
     :goto_0
     return v1
 
-    .line 109
     :cond_0
     iget-object v1, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
@@ -81,16 +76,13 @@
 
     check-cast v0, [I
 
-    .line 110
     .local v0, "coordinates":[I
     if-nez v0, :cond_1
 
     move v1, v2
 
-    .line 111
     goto :goto_0
 
-    .line 114
     :cond_1
     aget v1, v0, p1
 
@@ -108,10 +100,8 @@
 
     const/4 v5, 0x0
 
-    .line 44
     iget-object v1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
-    .line 45
     .local v1, "view":Landroid/view/View;
     iget-object v3, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
@@ -123,11 +113,9 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 46
     .local v2, "visibility":Ljava/lang/Integer;
     if-nez v2, :cond_0
 
-    .line 47
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
     move-result v3
@@ -136,7 +124,6 @@
 
     move-result-object v2
 
-    .line 49
     :cond_0
     iget-object v3, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
@@ -144,16 +131,13 @@
 
     invoke-interface {v3, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
     const/4 v3, 0x2
 
     new-array v0, v3, [I
 
-    .line 51
     .local v0, "loc":[I
     invoke-virtual {v1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 52
     aget v3, v0, v5
 
     invoke-virtual {v1}, Landroid/view/View;->getTranslationX()F
@@ -168,7 +152,6 @@
 
     aput v3, v0, v5
 
-    .line 53
     aget v3, v0, v5
 
     invoke-virtual {v1}, Landroid/view/View;->getWidth()I
@@ -181,7 +164,6 @@
 
     aput v3, v0, v5
 
-    .line 54
     aget v3, v0, v6
 
     invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
@@ -196,7 +178,6 @@
 
     aput v3, v0, v6
 
-    .line 55
     aget v3, v0, v6
 
     invoke-virtual {v1}, Landroid/view/View;->getHeight()I
@@ -209,14 +190,12 @@
 
     aput v3, v0, v6
 
-    .line 56
     iget-object v3, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v4, "android:visibilityPropagation:center"
 
     invoke-interface {v3, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     return-void
 .end method
 
@@ -224,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 61
     sget-object v0, Landroid/transition/VisibilityPropagation;->VISIBILITY_PROPAGATION_VALUES:[Ljava/lang/String;
 
     return-object v0
@@ -237,15 +215,12 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 72
     if-nez p1, :cond_1
 
-    .line 79
     :cond_0
     :goto_0
     return v1
 
-    .line 75
     :cond_1
     iget-object v2, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
@@ -257,11 +232,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 76
     .local v0, "visibility":Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
-    .line 79
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -274,7 +247,6 @@
     .param p1, "values"    # Landroid/transition/TransitionValues;
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/transition/VisibilityPropagation;->getViewCoordinate(Landroid/transition/TransitionValues;I)I
@@ -289,7 +261,6 @@
     .param p1, "values"    # Landroid/transition/TransitionValues;
 
     .prologue
-    .line 101
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Landroid/transition/VisibilityPropagation;->getViewCoordinate(Landroid/transition/TransitionValues;I)I

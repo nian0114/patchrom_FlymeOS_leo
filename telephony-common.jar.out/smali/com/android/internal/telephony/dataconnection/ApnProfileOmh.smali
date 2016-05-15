@@ -32,7 +32,6 @@
     .param p2, "priority"    # I
 
     .prologue
-    .line 116
     const/4 v3, 0x0
 
     const-string v4, ""
@@ -89,28 +88,24 @@
 
     invoke-direct/range {v2 .. v27}, Lcom/android/internal/telephony/dataconnection/ApnSetting;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZIIZIIIILjava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mServiceTypeMasks:I
 
-    .line 108
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mPriority:I
 
-    .line 120
     move/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mPriority:I
 
-    .line 121
     return-void
 .end method
 
@@ -119,7 +114,6 @@
     .param p1, "priority"    # I
 
     .prologue
-    .line 183
     if-ltz p1, :cond_0
 
     const/16 v0, 0xff
@@ -144,7 +138,6 @@
     .param p1, "modemProfile"    # Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
 
     .prologue
-    .line 196
     iget v5, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mServiceTypeMasks:I
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;->getid()I
@@ -155,12 +148,10 @@
 
     iput v5, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mServiceTypeMasks:I
 
-    .line 199
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 200
     .local v4, "serviceTypes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;->values()[Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
 
@@ -178,7 +169,6 @@
 
     aget-object v0, v1, v2
 
-    .line 201
     .local v0, "apt":Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
     iget v5, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mServiceTypeMasks:I
 
@@ -190,20 +180,17 @@
 
     if-eqz v5, :cond_0
 
-    .line 202
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;->getDataServiceType()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 200
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 205
     .end local v0    # "apt":Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
     :cond_1
     const/4 v5, 0x0
@@ -218,7 +205,6 @@
 
     iput-object v5, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->types:[Ljava/lang/String;
 
-    .line 206
     return-void
 .end method
 
@@ -227,7 +213,6 @@
     .param p1, "serviceType"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mServiceTypeMasks:I
 
     invoke-static {p1}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;->getApnProfileTypeModem(Ljava/lang/String;)Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
@@ -257,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 131
     sget-object v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->PROFILE_TYPE_OMH:Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
     return-object v0
@@ -267,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mApnProfileModem:Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
 
     return-object v0
@@ -277,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mPriority:I
 
     return v0
@@ -287,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->profileId:I
 
     return v0
@@ -298,7 +279,6 @@
     .param p1, "priority"    # I
 
     .prologue
-    .line 169
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->isValidPriority(I)Z
 
     move-result v0
@@ -325,7 +305,6 @@
     .param p1, "priority"    # I
 
     .prologue
-    .line 174
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->isValidPriority(I)Z
 
     move-result v0
@@ -351,7 +330,6 @@
     .locals 1
 
     .prologue
-    .line 178
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mPriority:I
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->isValidPriority(I)Z
@@ -366,10 +344,8 @@
     .param p1, "modemProfile"    # Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
 
     .prologue
-    .line 156
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mApnProfileModem:Lcom/android/internal/telephony/dataconnection/ApnProfileOmh$ApnProfileTypeModem;
 
-    .line 157
     return-void
 .end method
 
@@ -378,10 +354,8 @@
     .param p1, "priority"    # I
 
     .prologue
-    .line 164
     iput p1, p0, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->mPriority:I
 
-    .line 165
     return-void
 .end method
 
@@ -389,7 +363,6 @@
     .locals 1
 
     .prologue
-    .line 141
     invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/ApnProfileOmh;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -401,7 +374,6 @@
     .locals 1
 
     .prologue
-    .line 136
     const-string v0, "ApnProfile OMH"
 
     return-object v0
@@ -411,12 +383,10 @@
     .locals 3
 
     .prologue
-    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 148
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-super {p0}, Lcom/android/internal/telephony/dataconnection/ApnSetting;->toString()Ljava/lang/String;
 
@@ -442,12 +412,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 151
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 152
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

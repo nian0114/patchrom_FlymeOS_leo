@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 102
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$1$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$1;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 105
     const/4 v0, 0x0
 
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$1$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$1;
@@ -64,6 +62,5 @@
 
     invoke-virtual {p2, v0, v1, v2, v3}, Landroid/graphics/Outline;->setRect(IIII)V
 
-    .line 106
     return-void
 .end method

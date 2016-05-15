@@ -40,15 +40,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "com.android.internal.appwidget.IAppWidgetHost"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -57,17 +54,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "com.android.internal.appwidget.IAppWidgetHost"
 
@@ -75,7 +68,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,12 +75,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Lcom/android/internal/appwidget/IAppWidgetHost;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Lcom/android/internal/appwidget/IAppWidgetHost$Stub$Proxy;
 
@@ -104,7 +94,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -123,10 +112,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 93
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -134,7 +121,6 @@
     :goto_0
     return v2
 
-    .line 43
     :sswitch_0
     const-string v3, "com.android.internal.appwidget.IAppWidgetHost"
 
@@ -142,18 +128,15 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v3, "com.android.internal.appwidget.IAppWidgetHost"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 52
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -161,7 +144,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 53
     sget-object v3, Landroid/widget/RemoteViews;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -170,14 +152,12 @@
 
     check-cast v1, Landroid/widget/RemoteViews;
 
-    .line 58
     .local v1, "_arg1":Landroid/widget/RemoteViews;
     :goto_1
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;->updateAppWidget(ILandroid/widget/RemoteViews;)V
 
     goto :goto_0
 
-    .line 56
     .end local v1    # "_arg1":Landroid/widget/RemoteViews;
     :cond_0
     const/4 v1, 0x0
@@ -185,7 +165,6 @@
     .restart local v1    # "_arg1":Landroid/widget/RemoteViews;
     goto :goto_1
 
-    .line 63
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/widget/RemoteViews;
     :sswitch_2
@@ -193,12 +172,10 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 67
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -206,7 +183,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 68
     sget-object v3, Landroid/appwidget/AppWidgetProviderInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -215,14 +191,12 @@
 
     check-cast v1, Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 73
     .local v1, "_arg1":Landroid/appwidget/AppWidgetProviderInfo;
     :goto_2
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;->providerChanged(ILandroid/appwidget/AppWidgetProviderInfo;)V
 
     goto :goto_0
 
-    .line 71
     .end local v1    # "_arg1":Landroid/appwidget/AppWidgetProviderInfo;
     :cond_1
     const/4 v1, 0x0
@@ -230,7 +204,6 @@
     .restart local v1    # "_arg1":Landroid/appwidget/AppWidgetProviderInfo;
     goto :goto_2
 
-    .line 78
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/appwidget/AppWidgetProviderInfo;
     :sswitch_3
@@ -238,35 +211,29 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;->providersChanged()V
 
     goto :goto_0
 
-    .line 84
     :sswitch_4
     const-string v3, "com.android.internal.appwidget.IAppWidgetHost"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 88
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 89
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;->viewDataChanged(II)V
 
     goto :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

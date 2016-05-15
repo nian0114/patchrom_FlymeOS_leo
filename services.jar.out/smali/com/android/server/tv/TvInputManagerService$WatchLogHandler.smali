@@ -31,13 +31,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2164
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2165
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$WatchLogHandler;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 2166
     return-void
 .end method
 
@@ -46,24 +43,20 @@
     .param p1, "tuneParams"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2219
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 2220
     .local v3, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 2221
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -73,36 +66,30 @@
 
     if-eqz v5, :cond_1
 
-    .line 2222
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2223
     .local v2, "key":Ljava/lang/String;
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 2224
     .local v4, "value":Ljava/lang/Object;
     if-eqz v4, :cond_0
 
-    .line 2227
     invoke-direct {p0, v2}, Lcom/android/server/tv/TvInputManagerService$WatchLogHandler;->replaceEscapeCharacters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2228
     const-string v5, "="
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2229
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -113,21 +100,18 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2230
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 2231
     const-string v5, ", "
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2234
     .end local v2    # "key":Ljava/lang/String;
     .end local v4    # "value":Ljava/lang/Object;
     :cond_1
@@ -143,20 +127,16 @@
     .param p1, "src"    # Ljava/lang/String;
 
     .prologue
-    .line 2238
     const/16 v1, 0x25
 
-    .line 2239
     .local v1, "ESCAPE_CHARACTER":C
     const-string v0, "%=,"
 
-    .line 2240
     .local v0, "ENCODING_TARGET_CHARACTERS":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2241
     .local v3, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
@@ -174,7 +154,6 @@
 
     aget-char v4, v2, v5
 
-    .line 2242
     .local v4, "ch":C
     const-string v7, "%=,"
 
@@ -184,21 +163,17 @@
 
     if-ltz v7, :cond_0
 
-    .line 2243
     const/16 v7, 0x25
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2245
     :cond_0
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2241
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 2247
     .end local v4    # "ch":C
     :cond_1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -215,12 +190,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2170
     iget v7, p1, Landroid/os/Message;->what:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 2211
     const-string v7, "TvInputManagerService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -245,23 +218,19 @@
 
     invoke-static {v7, v12}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2212
     :goto_0
     return-void
 
-    .line 2172
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 2173
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2174
     .local v1, "packageName":Ljava/lang/String;
     iget-object v7, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
@@ -271,7 +240,6 @@
 
     move-result-wide v10
 
-    .line 2175
     .local v10, "watchStartTime":J
     iget-object v7, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
@@ -281,31 +249,26 @@
 
     move-result-wide v2
 
-    .line 2176
     .local v2, "channelId":J
     iget-object v5, v0, Lcom/android/internal/os/SomeArgs;->arg4:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/Bundle;
 
-    .line 2177
     .local v5, "tuneParams":Landroid/os/Bundle;
     iget-object v4, v0, Lcom/android/internal/os/SomeArgs;->arg5:Ljava/lang/Object;
 
     check-cast v4, Landroid/os/IBinder;
 
-    .line 2179
     .local v4, "sessionToken":Landroid/os/IBinder;
     new-instance v6, Landroid/content/ContentValues;
 
     invoke-direct {v6}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2180
     .local v6, "values":Landroid/content/ContentValues;
     const-string v7, "package_name"
 
     invoke-virtual {v6, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2181
     const-string v7, "watch_start_time_utc_millis"
 
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -314,7 +277,6 @@
 
     invoke-virtual {v6, v7, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2183
     const-string v7, "channel_id"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -323,10 +285,8 @@
 
     invoke-virtual {v6, v7, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2184
     if-eqz v5, :cond_0
 
-    .line 2185
     const-string v7, "tune_params"
 
     invoke-direct {p0, v5}, Lcom/android/server/tv/TvInputManagerService$WatchLogHandler;->encodeTuneParams(Landroid/os/Bundle;)Ljava/lang/String;
@@ -335,7 +295,6 @@
 
     invoke-virtual {v6, v7, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2188
     :cond_0
     const-string v7, "session_token"
 
@@ -345,19 +304,16 @@
 
     invoke-virtual {v6, v7, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2191
     iget-object v7, p0, Lcom/android/server/tv/TvInputManagerService$WatchLogHandler;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v12, Landroid/media/tv/TvContract$WatchedPrograms;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v7, v12, v6}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 2192
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
 
-    .line 2196
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     .end local v1    # "packageName":Ljava/lang/String;
     .end local v2    # "channelId":J
@@ -370,13 +326,11 @@
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 2197
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     iget-object v4, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     check-cast v4, Landroid/os/IBinder;
 
-    .line 2198
     .restart local v4    # "sessionToken":Landroid/os/IBinder;
     iget-object v7, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
@@ -386,13 +340,11 @@
 
     move-result-wide v8
 
-    .line 2200
     .local v8, "watchEndTime":J
     new-instance v6, Landroid/content/ContentValues;
 
     invoke-direct {v6}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2201
     .restart local v6    # "values":Landroid/content/ContentValues;
     const-string v7, "watch_end_time_utc_millis"
 
@@ -402,7 +354,6 @@
 
     invoke-virtual {v6, v7, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2203
     const-string v7, "session_token"
 
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -411,19 +362,16 @@
 
     invoke-virtual {v6, v7, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2206
     iget-object v7, p0, Lcom/android/server/tv/TvInputManagerService$WatchLogHandler;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v12, Landroid/media/tv/TvContract$WatchedPrograms;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v7, v12, v6}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 2207
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
 
-    .line 2170
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

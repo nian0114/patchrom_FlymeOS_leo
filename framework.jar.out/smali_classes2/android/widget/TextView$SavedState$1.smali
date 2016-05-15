@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 9194
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 9196
     new-instance v0, Landroid/widget/TextView$SavedState;
 
     const/4 v1, 0x0
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 9194
     invoke-virtual {p0, p1}, Landroid/widget/TextView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/widget/TextView$SavedState;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 9200
     new-array v0, p1, [Landroid/widget/TextView$SavedState;
 
     return-object v0
@@ -82,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 9194
     invoke-virtual {p0, p1}, Landroid/widget/TextView$SavedState$1;->newArray(I)[Landroid/widget/TextView$SavedState;
 
     move-result-object v0

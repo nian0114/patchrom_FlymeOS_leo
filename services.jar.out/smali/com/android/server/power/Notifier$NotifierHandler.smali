@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 501
     iput-object p1, p0, Lcom/android/server/power/Notifier$NotifierHandler;->this$0:Lcom/android/server/power/Notifier;
 
-    .line 502
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 503
     return-void
 .end method
 
@@ -45,16 +42,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 507
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 516
     :goto_0
     return-void
 
-    .line 509
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/power/Notifier$NotifierHandler;->this$0:Lcom/android/server/power/Notifier;
 
@@ -63,7 +57,6 @@
 
     goto :goto_0
 
-    .line 513
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/power/Notifier$NotifierHandler;->this$0:Lcom/android/server/power/Notifier;
 
@@ -72,7 +65,6 @@
 
     goto :goto_0
 
-    .line 507
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

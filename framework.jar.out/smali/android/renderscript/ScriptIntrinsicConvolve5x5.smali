@@ -16,17 +16,14 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/ScriptIntrinsic;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 24
     const/16 v0, 0x19
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->mValues:[F
 
-    .line 29
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .param p1, "e"    # Landroid/renderscript/Element;
 
     .prologue
-    .line 52
     invoke-static {p0}, Landroid/renderscript/Element;->U8(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
 
     move-result-object v2
@@ -117,7 +113,6 @@
 
     if-nez v2, :cond_0
 
-    .line 60
     new-instance v2, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v3, "Unsuported element type."
@@ -126,7 +121,6 @@
 
     throw v2
 
-    .line 63
     :cond_0
     const/4 v2, 0x4
 
@@ -138,7 +132,6 @@
 
     move-result-wide v0
 
-    .line 64
     .local v0, "id":J
     new-instance v2, Landroid/renderscript/ScriptIntrinsicConvolve5x5;
 
@@ -156,7 +149,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 110
     const/4 v2, 0x0
 
     move-object v0, v1
@@ -165,7 +157,6 @@
 
     invoke-virtual {p0, v2, v0, p1, v1}, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;)V
 
-    .line 111
     return-void
 .end method
 
@@ -177,7 +168,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 122
     const/4 v1, 0x0
 
     move-object v2, v4
@@ -192,7 +182,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 123
     return-void
 .end method
 
@@ -200,7 +189,6 @@
     .locals 2
 
     .prologue
-    .line 141
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -218,7 +206,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 132
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -235,14 +222,12 @@
     .param p1, "v"    # [F
 
     .prologue
-    .line 94
     new-instance v1, Landroid/renderscript/FieldPacker;
 
     const/16 v2, 0x64
 
     invoke-direct {v1, v2}, Landroid/renderscript/FieldPacker;-><init>(I)V
 
-    .line 95
     .local v1, "fp":Landroid/renderscript/FieldPacker;
     const/4 v0, 0x0
 
@@ -254,32 +239,27 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 96
     iget-object v2, p0, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->mValues:[F
 
     aget v3, p1, v0
 
     aput v3, v2, v0
 
-    .line 97
     iget-object v2, p0, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->mValues:[F
 
     aget v2, v2, v0
 
     invoke-virtual {v1, v2}, Landroid/renderscript/FieldPacker;->addF32(F)V
 
-    .line 95
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 99
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2, v1}, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->setVar(ILandroid/renderscript/FieldPacker;)V
 
-    .line 100
     return-void
 .end method
 
@@ -288,14 +268,11 @@
     .param p1, "ain"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 75
     iput-object p1, p0, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->mInput:Landroid/renderscript/Allocation;
 
-    .line 76
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Landroid/renderscript/ScriptIntrinsicConvolve5x5;->setVar(ILandroid/renderscript/BaseObj;)V
 
-    .line 77
     return-void
 .end method

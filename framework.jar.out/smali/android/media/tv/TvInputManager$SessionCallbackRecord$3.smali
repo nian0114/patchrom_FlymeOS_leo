@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 364
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$3;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     iput-object p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$3;->val$channelUri:Landroid/net/Uri;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 367
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$3;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSessionCallback:Landroid/media/tv/TvInputManager$SessionCallback;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/tv/TvInputManager$SessionCallback;->onChannelRetuned(Landroid/media/tv/TvInputManager$Session;Landroid/net/Uri;)V
 
-    .line 368
     return-void
 .end method

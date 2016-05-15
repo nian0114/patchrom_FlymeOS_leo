@@ -21,12 +21,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/preference/YesNoPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 49
     return-void
 .end method
 
@@ -36,12 +34,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 44
     const v0, 0x1010090
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/preference/YesNoPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 45
     return-void
 .end method
 
@@ -52,12 +48,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 40
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/internal/preference/YesNoPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 41
     return-void
 .end method
 
@@ -69,10 +63,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 37
     return-void
 .end method
 
@@ -82,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-boolean v0, p0, Lcom/android/internal/preference/YesNoPreference;->mWasPositiveResult:Z
 
     return v0
@@ -93,10 +84,8 @@
     .param p1, "positiveResult"    # Z
 
     .prologue
-    .line 53
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onDialogClosed(Z)V
 
-    .line 55
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -107,10 +96,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 56
     invoke-virtual {p0, p1}, Lcom/android/internal/preference/YesNoPreference;->setValue(Z)V
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -121,7 +108,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 85
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -140,7 +126,6 @@
     .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 114
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -153,20 +138,16 @@
 
     if-nez v1, :cond_0
 
-    .line 116
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 123
     :goto_0
     return-void
 
     :cond_0
     move-object v0, p1
 
-    .line 120
     check-cast v0, Lcom/android/internal/preference/YesNoPreference$SavedState;
 
-    .line 121
     .local v0, "myState":Lcom/android/internal/preference/YesNoPreference$SavedState;
     invoke-virtual {v0}, Lcom/android/internal/preference/YesNoPreference$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -174,7 +155,6 @@
 
     invoke-super {p0, v1}, Landroid/preference/DialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 122
     iget-boolean v1, v0, Lcom/android/internal/preference/YesNoPreference$SavedState;->wasPositiveResult:Z
 
     invoke-virtual {p0, v1}, Lcom/android/internal/preference/YesNoPreference;->setValue(Z)V
@@ -186,12 +166,10 @@
     .locals 3
 
     .prologue
-    .line 101
     invoke-super {p0}, Landroid/preference/DialogPreference;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 102
     .local v1, "superState":Landroid/os/Parcelable;
     invoke-virtual {p0}, Lcom/android/internal/preference/YesNoPreference;->isPersistent()Z
 
@@ -199,19 +177,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 109
     .end local v1    # "superState":Landroid/os/Parcelable;
     :goto_0
     return-object v1
 
-    .line 107
     .restart local v1    # "superState":Landroid/os/Parcelable;
     :cond_0
     new-instance v0, Lcom/android/internal/preference/YesNoPreference$SavedState;
 
     invoke-direct {v0, v1}, Lcom/android/internal/preference/YesNoPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 108
     .local v0, "myState":Lcom/android/internal/preference/YesNoPreference$SavedState;
     invoke-virtual {p0}, Lcom/android/internal/preference/YesNoPreference;->getValue()Z
 
@@ -221,7 +196,6 @@
 
     move-object v1, v0
 
-    .line 109
     goto :goto_0
 .end method
 
@@ -231,7 +205,6 @@
     .param p2, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 90
     if-eqz p1, :cond_0
 
     iget-boolean v0, p0, Lcom/android/internal/preference/YesNoPreference;->mWasPositiveResult:Z
@@ -244,10 +217,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/internal/preference/YesNoPreference;->setValue(Z)V
 
-    .line 92
     return-void
 
-    .line 90
     .restart local p2    # "defaultValue":Ljava/lang/Object;
     :cond_0
     check-cast p2, Ljava/lang/Boolean;
@@ -265,13 +236,10 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 67
     iput-boolean p1, p0, Lcom/android/internal/preference/YesNoPreference;->mWasPositiveResult:Z
 
-    .line 69
     invoke-virtual {p0, p1}, Lcom/android/internal/preference/YesNoPreference;->persistBoolean(Z)Z
 
-    .line 71
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -279,10 +247,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/internal/preference/YesNoPreference;->notifyDependencyChange(Z)V
 
-    .line 72
     return-void
 
-    .line 71
     :cond_0
     const/4 v0, 0x0
 
@@ -293,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-boolean v0, p0, Lcom/android/internal/preference/YesNoPreference;->mWasPositiveResult:Z
 
     if-eqz v0, :cond_0

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 992
     iput-object p1, p0, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
     invoke-direct {p0}, Landroid/net/sip/SipAudioCall$Listener;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/sip/SipPhone$1;
 
     .prologue
-    .line 992
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;-><init>(Lcom/android/internal/telephony/sip/SipPhone;)V
 
     return-void
@@ -54,12 +52,10 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 1055
     const-string v0, "SipAudioCallAdapter"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1056
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .param p1, "call"    # Landroid/net/sip/SipAudioCall;
 
     .prologue
-    .line 1010
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,12 +86,10 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->log(Ljava/lang/String;)V
 
-    .line 1011
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->onCallEnded(I)V
 
-    .line 1012
     return-void
 .end method
 
@@ -108,7 +101,6 @@
     .param p1, "call"    # Landroid/net/sip/SipAudioCall;
 
     .prologue
-    .line 1002
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +121,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->log(Ljava/lang/String;)V
 
-    .line 1003
     invoke-virtual {p1}, Landroid/net/sip/SipAudioCall;->isInCall()Z
 
     move-result v0
@@ -141,10 +132,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->onCallEnded(I)V
 
-    .line 1006
     return-void
 
-    .line 1003
     :cond_0
     const/4 v0, 0x1
 
@@ -161,7 +150,6 @@
     .param p3, "errorMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 1018
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,20 +194,16 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->log(Ljava/lang/String;)V
 
-    .line 1021
     packed-switch p2, :pswitch_data_0
 
-    .line 1050
     :pswitch_0
     const/16 v0, 0x24
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/sip/SipPhone$SipAudioCallAdapter;->onError(I)V
 
-    .line 1052
     :goto_0
     return-void
 
-    .line 1023
     :pswitch_1
     const/16 v0, 0x9
 
@@ -227,7 +211,6 @@
 
     goto :goto_0
 
-    .line 1026
     :pswitch_2
     const/16 v0, 0x8
 
@@ -235,7 +218,6 @@
 
     goto :goto_0
 
-    .line 1029
     :pswitch_3
     const/4 v0, 0x7
 
@@ -243,7 +225,6 @@
 
     goto :goto_0
 
-    .line 1033
     :pswitch_4
     const/16 v0, 0xd
 
@@ -251,7 +232,6 @@
 
     goto :goto_0
 
-    .line 1036
     :pswitch_5
     const/16 v0, 0xe
 
@@ -259,7 +239,6 @@
 
     goto :goto_0
 
-    .line 1039
     :pswitch_6
     const/16 v0, 0xa
 
@@ -267,7 +246,6 @@
 
     goto :goto_0
 
-    .line 1042
     :pswitch_7
     const/16 v0, 0xb
 
@@ -275,7 +253,6 @@
 
     goto :goto_0
 
-    .line 1045
     :pswitch_8
     const/16 v0, 0xc
 
@@ -283,7 +260,6 @@
 
     goto :goto_0
 
-    .line 1021
     :pswitch_data_0
     .packed-switch -0xc
         :pswitch_1

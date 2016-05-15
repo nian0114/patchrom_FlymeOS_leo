@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 86
     new-instance v0, Landroid/view/WindowAnimationFrameStats;
 
     const/4 v1, 0x0
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 83
     invoke-virtual {p0, p1}, Landroid/view/WindowAnimationFrameStats$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/WindowAnimationFrameStats;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 91
     new-array v0, p1, [Landroid/view/WindowAnimationFrameStats;
 
     return-object v0
@@ -82,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 83
     invoke-virtual {p0, p1}, Landroid/view/WindowAnimationFrameStats$1;->newArray(I)[Landroid/view/WindowAnimationFrameStats;
 
     move-result-object v0

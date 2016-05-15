@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 334
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Landroid/graphics/Atlas$1;
 
     .prologue
-    .line 334
     invoke-direct {p0}, Landroid/graphics/Atlas$SlicePolicy$ShorterFreeAxisSplitDecision;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p4, "rectHeight"    # I
 
     .prologue
-    .line 338
     if-gt p1, p2, :cond_0
 
     const/4 v0, 0x1

@@ -19,20 +19,16 @@
     .param p1, "s"    # Ljava/io/InputStream;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     const/16 v0, 0x1000
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/internal/telephony/test/LineReader;->mBuffer:[B
 
-    .line 55
     iput-object p1, p0, Lcom/android/internal/telephony/test/LineReader;->mInStream:Ljava/io/InputStream;
 
-    .line 56
     return-void
 .end method
 
@@ -42,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/test/LineReader;->getNextLine(Z)Ljava/lang/String;
@@ -59,13 +54,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 80
     const/4 v1, 0x0
 
     .local v1, "i":I
     move v2, v1
 
-    .line 86
     .end local v1    # "i":I
     .local v2, "i":I
     :goto_0
@@ -79,20 +72,17 @@
 
     move-result v3
 
-    .line 88
     .local v3, "result":I
     if-gez v3, :cond_0
 
     move v1, v2
 
-    .line 115
     .end local v2    # "i":I
     .end local v3    # "result":I
     .restart local v1    # "i":I
     :goto_1
     return-object v4
 
-    .line 92
     .end local v1    # "i":I
     .restart local v2    # "i":I
     .restart local v3    # "result":I
@@ -106,7 +96,6 @@
     :cond_1
     move v1, v2
 
-    .line 112
     .end local v2    # "i":I
     .end local v3    # "result":I
     .restart local v1    # "i":I
@@ -128,7 +117,6 @@
 
     goto :goto_1
 
-    .line 94
     .end local v1    # "i":I
     .restart local v2    # "i":I
     .restart local v3    # "result":I
@@ -141,13 +129,11 @@
 
     if-ne v3, v5, :cond_4
 
-    .line 95
     :cond_3
     if-nez v2, :cond_1
 
     goto :goto_0
 
-    .line 103
     :cond_4
     :try_start_2
     iget-object v5, p0, Lcom/android/internal/telephony/test/LineReader;->mBuffer:[B
@@ -169,26 +155,22 @@
 
     move v2, v1
 
-    .line 104
     .end local v1    # "i":I
     .restart local v2    # "i":I
     goto :goto_0
 
-    .line 105
     .end local v3    # "result":I
     :catch_0
     move-exception v0
 
     move v1, v2
 
-    .line 106
     .end local v2    # "i":I
     .local v0, "ex":Ljava/io/IOException;
     .restart local v1    # "i":I
     :goto_3
     goto :goto_1
 
-    .line 107
     .end local v0    # "ex":Ljava/io/IOException;
     .end local v1    # "i":I
     .restart local v2    # "i":I
@@ -197,7 +179,6 @@
 
     move v1, v2
 
-    .line 108
     .end local v2    # "i":I
     .local v0, "ex":Ljava/lang/IndexOutOfBoundsException;
     .restart local v1    # "i":I
@@ -210,12 +191,10 @@
 
     goto :goto_2
 
-    .line 113
     .end local v0    # "ex":Ljava/lang/IndexOutOfBoundsException;
     :catch_2
     move-exception v0
 
-    .line 114
     .local v0, "ex":Ljava/io/UnsupportedEncodingException;
     sget-object v5, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -225,7 +204,6 @@
 
     goto :goto_1
 
-    .line 107
     .end local v0    # "ex":Ljava/io/UnsupportedEncodingException;
     .restart local v3    # "result":I
     :catch_3
@@ -233,7 +211,6 @@
 
     goto :goto_4
 
-    .line 105
     :catch_4
     move-exception v0
 
@@ -244,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/test/LineReader;->getNextLine(Z)Ljava/lang/String;

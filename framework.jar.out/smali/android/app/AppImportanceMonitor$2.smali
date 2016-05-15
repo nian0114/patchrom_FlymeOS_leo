@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 77
     iput-object p1, p0, Landroid/app/AppImportanceMonitor$2;->this$0:Landroid/app/AppImportanceMonitor;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,19 +38,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 80
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 85
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 87
     :goto_0
     return-void
 
-    .line 82
     :pswitch_0
     iget-object v0, p0, Landroid/app/AppImportanceMonitor$2;->this$0:Landroid/app/AppImportanceMonitor;
 
@@ -71,7 +66,6 @@
 
     goto :goto_0
 
-    .line 80
     nop
 
     :pswitch_data_0

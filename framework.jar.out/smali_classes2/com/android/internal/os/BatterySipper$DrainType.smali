@@ -64,7 +64,6 @@
 
     const/4 v3, 0x0
 
-    .line 52
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "IDLE"
@@ -73,7 +72,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->IDLE:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 53
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "CELL"
@@ -82,7 +80,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->CELL:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 54
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "PHONE"
@@ -91,7 +88,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->PHONE:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 55
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "WIFI"
@@ -100,7 +96,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->WIFI:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 56
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "BLUETOOTH"
@@ -109,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->BLUETOOTH:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 57
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "FLASHLIGHT"
@@ -120,7 +114,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->FLASHLIGHT:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 58
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "SCREEN"
@@ -131,7 +124,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->SCREEN:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 59
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "APP"
@@ -142,7 +134,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->APP:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 60
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "USER"
@@ -153,7 +144,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->USER:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 61
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "UNACCOUNTED"
@@ -164,7 +154,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->UNACCOUNTED:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 62
     new-instance v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     const-string v1, "OVERCOUNTED"
@@ -175,7 +164,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->OVERCOUNTED:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    .line 51
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/android/internal/os/BatterySipper$DrainType;
@@ -250,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -261,7 +248,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     const-class v0, Lcom/android/internal/os/BatterySipper$DrainType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -277,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 51
     sget-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->$VALUES:[Lcom/android/internal/os/BatterySipper$DrainType;
 
     invoke-virtual {v0}, [Lcom/android/internal/os/BatterySipper$DrainType;->clone()Ljava/lang/Object;

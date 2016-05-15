@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 295
     iput-object p1, p0, Landroid/media/session/MediaSession$1;->this$0:Landroid/media/session/MediaSession;
 
     invoke-direct {p0}, Landroid/media/VolumeProvider$Callback;-><init>()V
@@ -38,11 +37,9 @@
     .param p1, "volumeProvider"    # Landroid/media/VolumeProvider;
 
     .prologue
-    .line 298
     iget-object v0, p0, Landroid/media/session/MediaSession$1;->this$0:Landroid/media/session/MediaSession;
 
     invoke-virtual {v0, p1}, Landroid/media/session/MediaSession;->notifyRemoteVolumeChanged(Landroid/media/VolumeProvider;)V
 
-    .line 299
     return-void
 .end method

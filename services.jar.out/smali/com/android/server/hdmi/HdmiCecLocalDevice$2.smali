@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 842
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$2;->val$origialCallback:Lcom/android/server/hdmi/HdmiCecLocalDevice$PendingActionClearedCallback;
@@ -45,7 +44,6 @@
     .param p1, "device"    # Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     .prologue
-    .line 845
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     # getter for: Lcom/android/server/hdmi/HdmiCecLocalDevice;->mHandler:Landroid/os/Handler;
@@ -57,11 +55,9 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 846
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$2;->val$origialCallback:Lcom/android/server/hdmi/HdmiCecLocalDevice$PendingActionClearedCallback;
 
     invoke-interface {v0, p1}, Lcom/android/server/hdmi/HdmiCecLocalDevice$PendingActionClearedCallback;->onCleared(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
-    .line 847
     return-void
 .end method

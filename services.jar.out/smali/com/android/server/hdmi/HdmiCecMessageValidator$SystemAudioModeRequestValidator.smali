@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 306
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$SystemAudioModeRequestValidator;->this$0:Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     const/4 v0, 0x0
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lcom/android/server/hdmi/HdmiCecMessageValidator$1;
 
     .prologue
-    .line 306
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecMessageValidator$SystemAudioModeRequestValidator;-><init>(Lcom/android/server/hdmi/HdmiCecMessageValidator;)V
 
     return-void
@@ -52,15 +50,12 @@
     .param p1, "params"    # [B
 
     .prologue
-    .line 310
     array-length v0, p1
 
     if-nez v0, :cond_0
 
-    .line 311
     const/4 v0, 0x0
 
-    .line 313
     :goto_0
     return v0
 

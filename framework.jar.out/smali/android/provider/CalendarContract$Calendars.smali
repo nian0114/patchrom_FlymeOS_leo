@@ -36,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 693
     const-string v0, "content://com.android.calendar/calendars"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -45,7 +44,6 @@
 
     sput-object v0, Landroid/provider/CalendarContract$Calendars;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 720
     const/16 v0, 0x19
 
     new-array v0, v0, [Ljava/lang/String;
@@ -76,19 +74,19 @@
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "mutators"
+    const-string v2, "mutators"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "ownerAccount"
+    const-string v2, "ownerAccount"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string/jumbo v2, "maxReminders"
+    const-string v2, "maxReminders"
 
     aput-object v2, v0, v1
 
@@ -209,7 +207,6 @@
     .locals 0
 
     .prologue
-    .line 687
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

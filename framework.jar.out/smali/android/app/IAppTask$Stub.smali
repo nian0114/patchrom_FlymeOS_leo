@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.app.IAppTask"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/IAppTask$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -59,17 +56,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.app.IAppTask"
 
@@ -77,7 +70,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -85,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/app/IAppTask;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/app/IAppTask$Stub$Proxy;
 
@@ -106,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -127,10 +116,8 @@
 
     const/4 v7, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 112
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -138,7 +125,6 @@
     :goto_0
     return v7
 
-    .line 43
     :sswitch_0
     const-string v0, "android.app.IAppTask"
 
@@ -146,85 +132,68 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v0, "android.app.IAppTask"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {p0}, Landroid/app/IAppTask$Stub;->finishAndRemoveTask()V
 
-    .line 50
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 55
     :sswitch_2
     const-string v0, "android.app.IAppTask"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 56
     invoke-virtual {p0}, Landroid/app/IAppTask$Stub;->getTaskInfo()Landroid/app/ActivityManager$RecentTaskInfo;
 
     move-result-object v6
 
-    .line 57
     .local v6, "_result":Landroid/app/ActivityManager$RecentTaskInfo;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 58
     if-eqz v6, :cond_0
 
-    .line 59
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 60
     invoke-virtual {v6, p3, v7}, Landroid/app/ActivityManager$RecentTaskInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 63
     :cond_0
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 69
     .end local v6    # "_result":Landroid/app/ActivityManager$RecentTaskInfo;
     :sswitch_3
     const-string v0, "android.app.IAppTask"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 70
     invoke-virtual {p0}, Landroid/app/IAppTask$Stub;->moveToFront()V
 
-    .line 71
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 76
     :sswitch_4
     const-string v0, "android.app.IAppTask"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 80
     .local v1, "_arg0":Landroid/os/IBinder;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 82
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -232,7 +201,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 83
     sget-object v0, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -241,14 +209,12 @@
 
     check-cast v3, Landroid/content/Intent;
 
-    .line 89
     .local v3, "_arg2":Landroid/content/Intent;
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 91
     .local v4, "_arg3":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -256,7 +222,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 92
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -269,21 +234,17 @@
     :goto_2
     move-object v0, p0
 
-    .line 97
     invoke-virtual/range {v0 .. v5}, Landroid/app/IAppTask$Stub;->startActivity(Landroid/os/IBinder;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/os/Bundle;)I
 
     move-result v6
 
-    .line 98
     .local v6, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 99
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 86
     .end local v3    # "_arg2":Landroid/content/Intent;
     .end local v4    # "_arg3":Ljava/lang/String;
     .end local v5    # "_arg4":Landroid/os/Bundle;
@@ -294,7 +255,6 @@
     .restart local v3    # "_arg2":Landroid/content/Intent;
     goto :goto_1
 
-    .line 95
     .restart local v4    # "_arg3":Ljava/lang/String;
     :cond_2
     const/4 v5, 0x0
@@ -302,7 +262,6 @@
     .restart local v5    # "_arg4":Landroid/os/Bundle;
     goto :goto_2
 
-    .line 104
     .end local v1    # "_arg0":Landroid/os/IBinder;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Landroid/content/Intent;
@@ -313,7 +272,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -322,17 +280,14 @@
 
     move v1, v7
 
-    .line 107
     .local v1, "_arg0":Z
     :cond_3
     invoke-virtual {p0, v1}, Landroid/app/IAppTask$Stub;->setExcludeFromRecents(Z)V
 
-    .line 108
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 39
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

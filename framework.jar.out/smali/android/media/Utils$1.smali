@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 43
     .local p1, "lhs":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     .local p2, "rhs":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     invoke-virtual {p1}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -70,14 +68,11 @@
 
     if-gez v0, :cond_0
 
-    .line 44
     const/4 v0, -0x1
 
-    .line 46
     :goto_0
     return v0
 
-    .line 45
     :cond_0
     invoke-virtual {p1}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
@@ -93,12 +88,10 @@
 
     if-lez v0, :cond_1
 
-    .line 46
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 48
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -106,7 +99,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sample rate ranges must be distinct ("
+    const-string v2, "sample rate ranges must be distinct ("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -145,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 40
     check-cast p1, Landroid/util/Range;
 
     check-cast p2, Landroid/util/Range;

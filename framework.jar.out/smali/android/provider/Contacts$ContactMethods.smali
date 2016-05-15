@@ -135,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 1471
     const-string v0, "content://contacts/contact_methods"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -144,7 +143,6 @@
 
     sput-object v0, Landroid/provider/Contacts$ContactMethods;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1479
     const-string v0, "content://contacts/contact_methods/email"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -160,7 +158,6 @@
     .locals 0
 
     .prologue
-    .line 1390
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -173,19 +170,15 @@
     .end annotation
 
     .prologue
-    .line 1319
     if-nez p0, :cond_0
 
-    .line 1320
     const/4 v0, 0x0
 
-    .line 1328
     :goto_0
     return-object v0
 
-    .line 1323
     :cond_0
-    const-string/jumbo v0, "pre:"
+    const-string v0, "pre:"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -193,7 +186,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1324
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -210,7 +202,6 @@
 
     goto :goto_0
 
-    .line 1327
     :cond_1
     const-string v0, "custom:"
 
@@ -220,7 +211,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1328
     const/4 v0, 0x7
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -229,7 +219,6 @@
 
     goto :goto_0
 
-    .line 1331
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -237,7 +226,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "the value is not a valid encoded protocol, "
+    const-string v2, "the value is not a valid encoded protocol, "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -263,7 +252,6 @@
     .end annotation
 
     .prologue
-    .line 1311
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,12 +280,11 @@
     .end annotation
 
     .prologue
-    .line 1303
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "pre:"
+    const-string v1, "pre:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -326,30 +313,24 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1398
     const-string v0, ""
 
-    .line 1399
     .local v0, "display":Ljava/lang/CharSequence;
     packed-switch p1, :pswitch_data_0
 
-    .line 1435
     const v3, 0x104000f
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1437
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1401
     :pswitch_0
     if-eqz p2, :cond_1
 
-    .line 1402
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -360,7 +341,6 @@
 
     move-result-object v2
 
-    .line 1405
     .local v2, "labels":[Ljava/lang/CharSequence;
     add-int/lit8 v3, p2, -0x1
 
@@ -371,17 +351,14 @@
 
     goto :goto_0
 
-    .line 1406
     :catch_0
     move-exception v1
 
-    .line 1407
     .local v1, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     aget-object v0, v2, v5
 
     goto :goto_0
 
-    .line 1410
     .end local v1    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v2    # "labels":[Ljava/lang/CharSequence;
     :cond_1
@@ -391,16 +368,13 @@
 
     if-nez v3, :cond_0
 
-    .line 1411
     move-object v0, p3
 
     goto :goto_0
 
-    .line 1418
     :pswitch_1
     if-eqz p2, :cond_2
 
-    .line 1419
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -411,7 +385,6 @@
 
     move-result-object v2
 
-    .line 1422
     .restart local v2    # "labels":[Ljava/lang/CharSequence;
     add-int/lit8 v3, p2, -0x1
 
@@ -422,17 +395,14 @@
 
     goto :goto_0
 
-    .line 1423
     :catch_1
     move-exception v1
 
-    .line 1424
     .restart local v1    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     aget-object v0, v2, v5
 
     goto :goto_0
 
-    .line 1427
     .end local v1    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v2    # "labels":[Ljava/lang/CharSequence;
     :cond_2
@@ -442,12 +412,10 @@
 
     if-nez v3, :cond_0
 
-    .line 1428
     move-object v0, p3
 
     goto :goto_0
 
-    .line 1399
     nop
 
     :pswitch_data_0
@@ -464,64 +432,53 @@
     .end annotation
 
     .prologue
-    .line 1366
     packed-switch p0, :pswitch_data_0
 
-    .line 1384
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1368
     :pswitch_0
     const-string v0, "GTalk"
 
     goto :goto_0
 
-    .line 1370
     :pswitch_1
     const-string v0, "AIM"
 
     goto :goto_0
 
-    .line 1372
     :pswitch_2
     const-string v0, "MSN"
 
     goto :goto_0
 
-    .line 1374
     :pswitch_3
     const-string v0, "Yahoo"
 
     goto :goto_0
 
-    .line 1376
     :pswitch_4
     const-string v0, "ICQ"
 
     goto :goto_0
 
-    .line 1378
     :pswitch_5
     const-string v0, "JABBER"
 
     goto :goto_0
 
-    .line 1380
     :pswitch_6
     const-string v0, "SKYPE"
 
     goto :goto_0
 
-    .line 1382
     :pswitch_7
     const-string v0, "QQ"
 
     goto :goto_0
 
-    .line 1366
     nop
 
     :pswitch_data_0
@@ -551,12 +508,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1452
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 1454
     .local v1, "resolver":Landroid/content/ContentResolver;
     new-instance v4, Landroid/content/ContentValues;
 
@@ -564,7 +519,6 @@
 
     invoke-direct {v4, v5}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 1455
     .local v4, "values":Landroid/content/ContentValues;
     const-string v5, "data"
 
@@ -574,7 +528,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 1456
     const-string v5, "aux_data"
 
     invoke-static {p6, p7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -583,24 +536,20 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 1457
     sget-object v5, Landroid/provider/Contacts$ContactMethods;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v1, v5, v4}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 1458
     .local v0, "loc":Landroid/net/Uri;
     invoke-static {v0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v2
 
-    .line 1461
     .local v2, "locId":J
     invoke-virtual {v4}, Landroid/content/ContentValues;->clear()V
 
-    .line 1462
     const-string v5, "aux_data"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -609,7 +558,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1463
     sget-object v5, Landroid/provider/Contacts$ContactMethods;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v5, p2, p3}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
@@ -618,6 +566,5 @@
 
     invoke-virtual {v1, v5, v4, v7, v7}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1464
     return-void
 .end method

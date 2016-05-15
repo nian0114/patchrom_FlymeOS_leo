@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 168
     iput-object p1, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/speech/SpeechRecognizer$1;
 
     .prologue
-    .line 168
     invoke-direct {p0, p1}, Landroid/speech/SpeechRecognizer$Connection;-><init>(Landroid/speech/SpeechRecognizer;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
     invoke-static {p2}, Landroid/speech/IRecognitionService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/speech/IRecognitionService;
@@ -64,7 +61,6 @@
     # setter for: Landroid/speech/SpeechRecognizer;->mService:Landroid/speech/IRecognitionService;
     invoke-static {v0, v1}, Landroid/speech/SpeechRecognizer;->access$502(Landroid/speech/SpeechRecognizer;Landroid/speech/IRecognitionService;)Landroid/speech/IRecognitionService;
 
-    .line 174
     :goto_0
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
@@ -79,7 +75,6 @@
 
     if-nez v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
     # getter for: Landroid/speech/SpeechRecognizer;->mHandler:Landroid/os/Handler;
@@ -104,7 +99,6 @@
 
     goto :goto_0
 
-    .line 177
     :cond_0
     return-void
 .end method
@@ -116,19 +110,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 181
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
     # setter for: Landroid/speech/SpeechRecognizer;->mService:Landroid/speech/IRecognitionService;
     invoke-static {v0, v1}, Landroid/speech/SpeechRecognizer;->access$502(Landroid/speech/SpeechRecognizer;Landroid/speech/IRecognitionService;)Landroid/speech/IRecognitionService;
 
-    .line 182
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
     # setter for: Landroid/speech/SpeechRecognizer;->mConnection:Landroid/speech/SpeechRecognizer$Connection;
     invoke-static {v0, v1}, Landroid/speech/SpeechRecognizer;->access$802(Landroid/speech/SpeechRecognizer;Landroid/speech/SpeechRecognizer$Connection;)Landroid/speech/SpeechRecognizer$Connection;
 
-    .line 183
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$Connection;->this$0:Landroid/speech/SpeechRecognizer;
 
     # getter for: Landroid/speech/SpeechRecognizer;->mPendingTasks:Ljava/util/Queue;
@@ -138,6 +129,5 @@
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
 
-    .line 185
     return-void
 .end method

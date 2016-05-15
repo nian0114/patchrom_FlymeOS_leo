@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 1791
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1897
     new-instance v0, Landroid/provider/ContactsContract$Contacts$AggregationSuggestions$Builder;
 
     invoke-direct {v0}, Landroid/provider/ContactsContract$Contacts$AggregationSuggestions$Builder;-><init>()V

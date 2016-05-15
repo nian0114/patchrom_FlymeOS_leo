@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 593
     new-instance v0, Landroid/media/browse/MediaBrowser$MediaItem$1;
 
     invoke-direct {v0}, Landroid/media/browse/MediaBrowser$MediaItem$1;-><init>()V
@@ -61,13 +60,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 554
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 555
     if-nez p1, :cond_0
 
-    .line 556
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "description cannot be null"
@@ -76,7 +72,6 @@
 
     throw v0
 
-    .line 558
     :cond_0
     invoke-virtual {p1}, Landroid/media/MediaDescription;->getMediaId()Ljava/lang/String;
 
@@ -88,7 +83,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 559
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "description must have a non-empty media id"
@@ -97,14 +91,11 @@
 
     throw v0
 
-    .line 561
     :cond_1
     iput p2, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mFlags:I
 
-    .line 562
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mDescription:Landroid/media/MediaDescription;
 
-    .line 563
     return-void
 .end method
 
@@ -113,17 +104,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 568
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 569
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mFlags:I
 
-    .line 570
     sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -134,7 +122,6 @@
 
     iput-object v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mDescription:Landroid/media/MediaDescription;
 
-    .line 571
     return-void
 .end method
 
@@ -144,7 +131,6 @@
     .param p2, "x1"    # Landroid/media/browse/MediaBrowser$1;
 
     .prologue
-    .line 524
     invoke-direct {p0, p1}, Landroid/media/browse/MediaBrowser$MediaItem;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -156,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 575
     const/4 v0, 0x0
 
     return v0
@@ -166,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 633
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mDescription:Landroid/media/MediaDescription;
 
     return-object v0
@@ -176,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 610
     iget v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mFlags:I
 
     return v0
@@ -186,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 640
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mDescription:Landroid/media/MediaDescription;
 
     invoke-virtual {v0}, Landroid/media/MediaDescription;->getMediaId()Ljava/lang/String;
@@ -200,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 618
     iget v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -222,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 626
     iget v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mFlags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -244,16 +224,14 @@
     .locals 3
 
     .prologue
-    .line 586
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "MediaItem{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 587
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "mFlags="
+    const-string v1, "mFlags="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -263,7 +241,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 588
     const-string v1, ", mDescription="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -274,12 +251,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 589
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 590
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -293,16 +268,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 580
     iget v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 581
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$MediaItem;->mDescription:Landroid/media/MediaDescription;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaDescription;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 582
     return-void
 .end method

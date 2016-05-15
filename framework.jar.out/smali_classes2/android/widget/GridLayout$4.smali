@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2828
     invoke-direct {p0}, Landroid/widget/GridLayout$Alignment;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .param p3, "mode"    # I
 
     .prologue
-    .line 2836
     return p2
 .end method
 
@@ -44,6 +42,5 @@
     .param p2, "cellDelta"    # I
 
     .prologue
-    .line 2831
     return p2
 .end method

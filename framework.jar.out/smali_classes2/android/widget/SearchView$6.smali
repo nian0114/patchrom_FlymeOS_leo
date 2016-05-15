@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 913
     iput-object p1, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 916
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     # getter for: Landroid/widget/SearchView;->mSearchButton:Landroid/widget/ImageView;
@@ -51,18 +49,15 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 917
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->onSearchClicked()V
     invoke-static {v0}, Landroid/widget/SearchView;->access$500(Landroid/widget/SearchView;)V
 
-    .line 927
     :cond_0
     :goto_0
     return-void
 
-    .line 918
     :cond_1
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
@@ -73,7 +68,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 919
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->onCloseClicked()V
@@ -81,7 +75,6 @@
 
     goto :goto_0
 
-    .line 920
     :cond_2
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
@@ -92,7 +85,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 921
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->onSubmitQuery()V
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 922
     :cond_3
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
@@ -111,7 +102,6 @@
 
     if-ne p1, v0, :cond_4
 
-    .line 923
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->onVoiceClicked()V
@@ -119,7 +109,6 @@
 
     goto :goto_0
 
-    .line 924
     :cond_4
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
@@ -130,7 +119,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 925
     iget-object v0, p0, Landroid/widget/SearchView$6;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->forceSuggestionQuery()V

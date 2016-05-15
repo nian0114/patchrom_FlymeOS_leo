@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1944
     .local p0, "this":Landroid/accounts/AccountManager$Future2Task$1;, "Landroid/accounts/AccountManager$Future2Task.1;"
     iput-object p1, p0, Landroid/accounts/AccountManager$Future2Task$1;->this$1:Landroid/accounts/AccountManager$Future2Task;
 
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1946
     .local p0, "this":Landroid/accounts/AccountManager$Future2Task$1;, "Landroid/accounts/AccountManager$Future2Task.1;"
     iget-object v0, p0, Landroid/accounts/AccountManager$Future2Task$1;->this$1:Landroid/accounts/AccountManager$Future2Task;
 
@@ -51,6 +49,5 @@
 
     invoke-interface {v0, v1}, Landroid/accounts/AccountManagerCallback;->run(Landroid/accounts/AccountManagerFuture;)V
 
-    .line 1947
     return-void
 .end method

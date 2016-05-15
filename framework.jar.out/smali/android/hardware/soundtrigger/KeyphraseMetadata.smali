@@ -40,23 +40,17 @@
     .end annotation
 
     .prologue
-    .line 35
     .local p3, "supportedLocales":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/util/Locale;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput p1, p0, Landroid/hardware/soundtrigger/KeyphraseMetadata;->id:I
 
-    .line 37
     iput-object p2, p0, Landroid/hardware/soundtrigger/KeyphraseMetadata;->keyphrase:Ljava/lang/String;
 
-    .line 38
     iput-object p3, p0, Landroid/hardware/soundtrigger/KeyphraseMetadata;->supportedLocales:Landroid/util/ArraySet;
 
-    .line 39
     iput p4, p0, Landroid/hardware/soundtrigger/KeyphraseMetadata;->recognitionModeFlags:I
 
-    .line 40
     return-void
 .end method
 
@@ -67,7 +61,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/hardware/soundtrigger/KeyphraseMetadata;->supportedLocales:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->isEmpty()Z
@@ -101,7 +94,6 @@
     .param p1, "phrase"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/hardware/soundtrigger/KeyphraseMetadata;->keyphrase:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -134,7 +126,6 @@
     .locals 2
 
     .prologue
-    .line 44
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

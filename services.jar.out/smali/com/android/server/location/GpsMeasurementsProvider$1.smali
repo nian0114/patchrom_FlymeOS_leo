@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/location/GpsMeasurementsProvider$1;->this$0:Lcom/android/server/location/GpsMeasurementsProvider;
 
     iput-object p2, p0, Lcom/android/server/location/GpsMeasurementsProvider$1;->val$event:Landroid/location/GpsMeasurementsEvent;
@@ -60,12 +59,10 @@
     .end annotation
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/location/GpsMeasurementsProvider$1;->val$event:Landroid/location/GpsMeasurementsEvent;
 
     invoke-interface {p1, v0}, Landroid/location/IGpsMeasurementsListener;->onGpsMeasurementsReceived(Landroid/location/GpsMeasurementsEvent;)V
 
-    .line 46
     return-void
 .end method
 
@@ -78,7 +75,6 @@
     .end annotation
 
     .prologue
-    .line 42
     check-cast p1, Landroid/location/IGpsMeasurementsListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/GpsMeasurementsProvider$1;->execute(Landroid/location/IGpsMeasurementsListener;)V

@@ -29,12 +29,10 @@
     .locals 1
 
     .prologue
-    .line 145
     const/4 v0, 0x3
 
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternView$Cell;->updateSize(B)V
 
-    .line 146
     return-void
 .end method
 
@@ -45,19 +43,14 @@
     .param p3, "size"    # B
 
     .prologue
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     invoke-static {p1, p2, p3}, Lcom/android/internal/widget/LockPatternView$Cell;->checkRange(IIB)V
 
-    .line 154
     iput p1, p0, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
-    .line 155
     iput p2, p0, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
-    .line 156
     return-void
 .end method
 
@@ -68,14 +61,12 @@
     .param p2, "size"    # B
 
     .prologue
-    .line 189
     if-ltz p0, :cond_0
 
     add-int/lit8 v0, p2, -0x1
 
     if-le p0, v0, :cond_1
 
-    .line 190
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -103,7 +94,6 @@
 
     throw v0
 
-    .line 192
     :cond_1
     if-ltz p1, :cond_2
 
@@ -111,7 +101,6 @@
 
     if-le p1, v0, :cond_3
 
-    .line 193
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -139,7 +128,6 @@
 
     throw v0
 
-    .line 195
     :cond_3
     return-void
 .end method
@@ -151,7 +139,6 @@
     .param p2, "size"    # B
 
     .prologue
-    .line 171
     const-class v1, Lcom/android/internal/widget/LockPatternView$Cell;
 
     monitor-enter v1
@@ -185,10 +172,8 @@
     .param p3, "size"    # B
 
     .prologue
-    .line 175
     invoke-static {p1, p2, p3}, Lcom/android/internal/widget/LockPatternView$Cell;->checkRange(IIB)V
 
-    .line 176
     aget-object v0, p0, p1
 
     aget-object v0, v0, p2
@@ -201,7 +186,6 @@
     .param p0, "size"    # B
 
     .prologue
-    .line 180
     filled-new-array {p0, p0}, [I
 
     move-result-object v2
@@ -216,21 +200,18 @@
 
     sput-object v2, Lcom/android/internal/widget/LockPatternView$Cell;->sCells:[[Lcom/android/internal/widget/LockPatternView$Cell;
 
-    .line 181
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, p0, :cond_1
 
-    .line 182
     const/4 v1, 0x0
 
     .local v1, "j":I
     :goto_1
     if-ge v1, p0, :cond_0
 
-    .line 183
     sget-object v2, Lcom/android/internal/widget/LockPatternView$Cell;->sCells:[[Lcom/android/internal/widget/LockPatternView$Cell;
 
     aget-object v2, v2, v0
@@ -241,18 +222,15 @@
 
     aput-object v3, v2, v1
 
-    .line 182
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 181
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 186
     .end local v1    # "j":I
     :cond_1
     return-void
@@ -267,17 +245,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 199
     instance-of v2, p1, Lcom/android/internal/widget/LockPatternView$Cell;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 200
     check-cast v0, Lcom/android/internal/widget/LockPatternView$Cell;
 
-    .line 201
     .local v0, "other":Lcom/android/internal/widget/LockPatternView$Cell;
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternView$Cell;->getColumn()I
 
@@ -301,7 +276,6 @@
 
     const/4 v1, 0x1
 
-    .line 204
     .end local v0    # "other":Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_0
     return v1
@@ -311,7 +285,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget v0, p0, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
     return v0
@@ -321,7 +294,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget v0, p0, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
     return v0
@@ -331,7 +303,6 @@
     .locals 2
 
     .prologue
-    .line 208
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

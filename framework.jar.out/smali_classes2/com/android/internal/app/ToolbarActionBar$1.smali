@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/android/internal/app/ToolbarActionBar$1;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$1;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ToolbarActionBar;->populateOptionsMenu()V
 
-    .line 56
     return-void
 .end method

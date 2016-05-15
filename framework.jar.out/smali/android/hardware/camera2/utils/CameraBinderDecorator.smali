@@ -42,10 +42,8 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 166
     .local p0, "obj":Ljava/lang/Object;, "TT;"
     new-instance v0, Landroid/hardware/camera2/utils/CameraBinderDecorator$CameraBinderDecoratorListener;
 
@@ -84,13 +81,10 @@
 
     const/4 v2, 0x1
 
-    .line 104
     sparse-switch p0, :sswitch_data_0
 
-    .line 140
     if-gez p0, :cond_0
 
-    .line 141
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Unknown error %d"
@@ -113,7 +107,6 @@
 
     throw v0
 
-    .line 108
     :sswitch_0
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -123,7 +116,6 @@
 
     throw v0
 
-    .line 114
     :sswitch_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -133,7 +125,6 @@
 
     throw v0
 
-    .line 116
     :sswitch_2
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -141,7 +132,6 @@
 
     throw v0
 
-    .line 118
     :sswitch_3
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -151,7 +141,6 @@
 
     throw v0
 
-    .line 121
     :sswitch_4
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -159,7 +148,6 @@
 
     throw v0
 
-    .line 123
     :sswitch_5
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -169,7 +157,6 @@
 
     throw v0
 
-    .line 125
     :sswitch_6
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -179,7 +166,6 @@
 
     throw v0
 
-    .line 127
     :sswitch_7
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -187,7 +173,6 @@
 
     throw v0
 
-    .line 129
     :sswitch_8
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -197,7 +182,6 @@
 
     throw v0
 
-    .line 131
     :sswitch_9
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -207,12 +191,10 @@
 
     throw v0
 
-    .line 144
     :cond_0
     :sswitch_a
     return-void
 
-    .line 104
     :sswitch_data_0
     .sparse-switch
         -0x6e -> :sswitch_3

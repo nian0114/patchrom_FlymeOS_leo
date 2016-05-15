@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 466
     iput-object p1, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -40,18 +39,15 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 470
     iget-object v0, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     # setter for: Landroid/view/ScaleGestureDetector;->mDoubleTapEvent:Landroid/view/MotionEvent;
     invoke-static {v0, p1}, Landroid/view/ScaleGestureDetector;->access$002(Landroid/view/ScaleGestureDetector;Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    .line 471
     iget-object v0, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     # setter for: Landroid/view/ScaleGestureDetector;->mDoubleTapMode:I
     invoke-static {v0, v1}, Landroid/view/ScaleGestureDetector;->access$102(Landroid/view/ScaleGestureDetector;I)I
 
-    .line 472
     return v1
 .end method

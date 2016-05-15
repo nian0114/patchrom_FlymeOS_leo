@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper$1;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 97
     const-string v1, "componentName"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -50,7 +48,6 @@
 
     check-cast v0, Landroid/content/ComponentName;
 
-    .line 98
     .local v0, "component":Landroid/content/ComponentName;
     const-string v1, "android.server.trust.TRUST_EXPIRED_ACTION"
 
@@ -77,7 +74,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 100
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper$1;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     # getter for: Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
@@ -87,7 +83,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 101
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper$1;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     # getter for: Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
@@ -97,7 +92,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 103
     :cond_0
     return-void
 .end method

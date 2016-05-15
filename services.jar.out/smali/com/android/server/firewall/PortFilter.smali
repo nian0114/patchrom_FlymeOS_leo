@@ -29,7 +29,6 @@
     .locals 2
 
     .prologue
-    .line 56
     new-instance v0, Lcom/android/server/firewall/PortFilter$1;
 
     const-string v1, "port"
@@ -47,16 +46,12 @@
     .param p2, "upperBound"    # I
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput p1, p0, Lcom/android/server/firewall/PortFilter;->mLowerBound:I
 
-    .line 40
     iput p2, p0, Lcom/android/server/firewall/PortFilter;->mUpperBound:I
 
-    .line 41
     return-void
 .end method
 
@@ -67,7 +62,6 @@
     .param p3, "x2"    # Lcom/android/server/firewall/PortFilter$1;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1, p2}, Lcom/android/server/firewall/PortFilter;-><init>(II)V
 
     return-void
@@ -88,25 +82,20 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 46
     const/4 v0, -0x1
 
-    .line 47
     .local v0, "port":I
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 48
     .local v1, "uri":Landroid/net/Uri;
     if-eqz v1, :cond_0
 
-    .line 49
     invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
 
     move-result v0
 
-    .line 51
     :cond_0
     if-eq v0, v3, :cond_3
 

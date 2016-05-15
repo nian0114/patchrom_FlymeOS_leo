@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,38 +45,30 @@
     .param p2, "object2"    # Landroid/gesture/Prediction;
 
     .prologue
-    .line 31
     iget-wide v0, p1, Landroid/gesture/Prediction;->score:D
 
-    .line 32
     .local v0, "score1":D
     iget-wide v2, p2, Landroid/gesture/Prediction;->score:D
 
-    .line 33
     .local v2, "score2":D
     cmpl-double v4, v0, v2
 
     if-lez v4, :cond_0
 
-    .line 34
     const/4 v4, -0x1
 
-    .line 38
     :goto_0
     return v4
 
-    .line 35
     :cond_0
     cmpg-double v4, v0, v2
 
     if-gez v4, :cond_1
 
-    .line 36
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 38
     :cond_1
     const/4 v4, 0x0
 
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 29
     check-cast p1, Landroid/gesture/Prediction;
 
     check-cast p2, Landroid/gesture/Prediction;

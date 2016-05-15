@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 31
     const-class v0, Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
@@ -51,7 +50,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->INTENT_BASE:Ljava/lang/String;
 
-    .line 42
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ERROR_UNSPECIFIED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->DEFAULT_FAIL_CAUSE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
@@ -63,7 +61,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,12 +71,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     const-string v0, "DcFailBringUp"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     return-void
 .end method
 
@@ -92,20 +87,16 @@
     .param p3, "suggestedRetryTime"    # I
 
     .prologue
-    .line 64
     iput p1, p0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->mCounter:I
 
-    .line 65
     invoke-static {p2}, Lcom/android/internal/telephony/dataconnection/DcFailCause;->fromInt(I)Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->mFailCause:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 66
     iput p3, p0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->mSuggestedRetryTime:I
 
-    .line 67
     return-void
 .end method
 
@@ -115,7 +106,6 @@
     .param p2, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,7 +134,6 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->log(Ljava/lang/String;)V
 
-    .line 53
     const-string v0, "counter"
 
     const/4 v1, 0x1
@@ -155,7 +144,6 @@
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->mCounter:I
 
-    .line 54
     const-string v0, "fail_cause"
 
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->DEFAULT_FAIL_CAUSE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
@@ -174,7 +162,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->mFailCause:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 56
     const-string v0, "suggested_retry_time"
 
     const/4 v1, -0x1
@@ -185,7 +172,6 @@
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->mSuggestedRetryTime:I
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -210,7 +196,6 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DcFailBringUp;->log(Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -218,7 +203,6 @@
     .locals 2
 
     .prologue
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -12,10 +12,8 @@
     .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
-    .line 42
     invoke-direct {p0, p1}, Landroid/database/CursorWrapper;-><init>(Landroid/database/Cursor;)V
 
-    .line 43
     return-void
 .end method
 
@@ -27,28 +25,23 @@
     .param p2, "window"    # Landroid/database/CursorWindow;
 
     .prologue
-    .line 47
     iget-object v1, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
     instance-of v1, v1, Landroid/database/CrossProcessCursor;
 
     if-eqz v1, :cond_0
 
-    .line 48
     iget-object v0, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
     check-cast v0, Landroid/database/CrossProcessCursor;
 
-    .line 49
     .local v0, "crossProcessCursor":Landroid/database/CrossProcessCursor;
     invoke-interface {v0, p1, p2}, Landroid/database/CrossProcessCursor;->fillWindow(ILandroid/database/CursorWindow;)V
 
-    .line 54
     .end local v0    # "crossProcessCursor":Landroid/database/CrossProcessCursor;
     :goto_0
     return-void
 
-    .line 53
     :cond_0
     iget-object v1, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
@@ -61,25 +54,21 @@
     .locals 2
 
     .prologue
-    .line 58
     iget-object v1, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
     instance-of v1, v1, Landroid/database/CrossProcessCursor;
 
     if-eqz v1, :cond_0
 
-    .line 59
     iget-object v0, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
     check-cast v0, Landroid/database/CrossProcessCursor;
 
-    .line 60
     .local v0, "crossProcessCursor":Landroid/database/CrossProcessCursor;
     invoke-interface {v0}, Landroid/database/CrossProcessCursor;->getWindow()Landroid/database/CursorWindow;
 
     move-result-object v1
 
-    .line 63
     .end local v0    # "crossProcessCursor":Landroid/database/CrossProcessCursor;
     :goto_0
     return-object v1
@@ -96,25 +85,21 @@
     .param p2, "newPosition"    # I
 
     .prologue
-    .line 68
     iget-object v1, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
     instance-of v1, v1, Landroid/database/CrossProcessCursor;
 
     if-eqz v1, :cond_0
 
-    .line 69
     iget-object v0, p0, Landroid/database/CrossProcessCursorWrapper;->mCursor:Landroid/database/Cursor;
 
     check-cast v0, Landroid/database/CrossProcessCursor;
 
-    .line 70
     .local v0, "crossProcessCursor":Landroid/database/CrossProcessCursor;
     invoke-interface {v0, p1, p2}, Landroid/database/CrossProcessCursor;->onMove(II)Z
 
     move-result v1
 
-    .line 73
     .end local v0    # "crossProcessCursor":Landroid/database/CrossProcessCursor;
     :goto_0
     return v1

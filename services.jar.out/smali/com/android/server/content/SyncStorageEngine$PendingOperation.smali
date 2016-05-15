@@ -40,21 +40,16 @@
     .param p5, "expedited"    # Z
 
     .prologue
-    .line 174
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 175
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
-    .line 176
     iput p3, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->syncSource:I
 
-    .line 177
     iput p2, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->reason:I
 
-    .line 178
     if-eqz p4, :cond_0
 
     new-instance v0, Landroid/os/Bundle;
@@ -67,15 +62,12 @@
     :cond_0
     iput-object p4, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->extras:Landroid/os/Bundle;
 
-    .line 179
     iput-boolean p5, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->expedited:Z
 
-    .line 180
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authorityId:I
 
-    .line 181
     return-void
 .end method
 
@@ -84,40 +76,32 @@
     .param p1, "other"    # Lcom/android/server/content/SyncStorageEngine$PendingOperation;
 
     .prologue
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 184
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->reason:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->reason:I
 
-    .line 185
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->syncSource:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->syncSource:I
 
-    .line 186
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
-    .line 187
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->extras:Landroid/os/Bundle;
 
     iput-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->extras:Landroid/os/Bundle;
 
-    .line 188
     iget v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authorityId:I
 
     iput v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->authorityId:I
 
-    .line 189
     iget-boolean v0, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->expedited:Z
 
     iput-boolean v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->expedited:Z
 
-    .line 190
     return-void
 .end method
 
@@ -128,7 +112,6 @@
     .param p1, "other"    # Lcom/android/server/content/SyncStorageEngine$PendingOperation;
 
     .prologue
-    .line 200
     iget-object v0, p0, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     iget-object v1, p1, Lcom/android/server/content/SyncStorageEngine$PendingOperation;->target:Lcom/android/server/content/SyncStorageEngine$EndPoint;
@@ -144,7 +127,6 @@
     .locals 2
 
     .prologue
-    .line 204
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

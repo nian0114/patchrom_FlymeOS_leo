@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 251
     iput-object p1, p0, Landroid/preference/MultiCheckPreference$1;->this$0:Landroid/preference/MultiCheckPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p3, "isChecked"    # Z
 
     .prologue
-    .line 254
     iget-object v0, p0, Landroid/preference/MultiCheckPreference$1;->this$0:Landroid/preference/MultiCheckPreference;
 
     # getter for: Landroid/preference/MultiCheckPreference;->mSetValues:[Z
@@ -53,6 +51,5 @@
 
     aput-boolean p3, v0, p2
 
-    .line 255
     return-void
 .end method

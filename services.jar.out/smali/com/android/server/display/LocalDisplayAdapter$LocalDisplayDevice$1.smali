@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 239
     iput-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->this$1:Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice;
 
     iput p2, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
@@ -58,7 +57,6 @@
     .prologue
     const-wide/32 v2, 0x20000
 
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,7 +101,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 245
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$token:Landroid/os/IBinder;
 
@@ -113,13 +110,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 249
     return-void
 
-    .line 247
     :catchall_0
     move-exception v0
 

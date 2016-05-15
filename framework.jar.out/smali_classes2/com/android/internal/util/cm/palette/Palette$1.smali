@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 176
     iput p1, p0, Lcom/android/internal/util/cm/palette/Palette$1;->val$numColors:I
 
     iput-object p2, p0, Lcom/android/internal/util/cm/palette/Palette$1;->val$listener:Lcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;
@@ -53,7 +52,6 @@
     .param p1, "params"    # [Landroid/graphics/Bitmap;
 
     .prologue
-    .line 179
     const/4 v0, 0x0
 
     aget-object v0, p1, v0
@@ -71,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 176
     check-cast p1, [Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/util/cm/palette/Palette$1;->doInBackground([Landroid/graphics/Bitmap;)Lcom/android/internal/util/cm/palette/Palette;
@@ -86,12 +83,10 @@
     .param p1, "colorExtractor"    # Lcom/android/internal/util/cm/palette/Palette;
 
     .prologue
-    .line 184
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette$1;->val$listener:Lcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;
 
     invoke-interface {v0, p1}, Lcom/android/internal/util/cm/palette/Palette$PaletteAsyncListener;->onGenerated(Lcom/android/internal/util/cm/palette/Palette;)V
 
-    .line 185
     return-void
 .end method
 
@@ -99,7 +94,6 @@
     .locals 0
 
     .prologue
-    .line 176
     check-cast p1, Lcom/android/internal/util/cm/palette/Palette;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/util/cm/palette/Palette$1;->onPostExecute(Lcom/android/internal/util/cm/palette/Palette;)V

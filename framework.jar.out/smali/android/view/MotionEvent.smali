@@ -283,302 +283,257 @@
 
     const/4 v4, 0x0
 
-    .line 1119
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v1, Landroid/view/MotionEvent;->AXIS_SYMBOLIC_NAMES:Landroid/util/SparseArray;
 
-    .line 1121
     sget-object v0, Landroid/view/MotionEvent;->AXIS_SYMBOLIC_NAMES:Landroid/util/SparseArray;
 
-    .line 1122
     .local v0, "names":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     const-string v1, "AXIS_X"
 
     invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1123
     const-string v1, "AXIS_Y"
 
     invoke-virtual {v0, v5, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1124
     const-string v1, "AXIS_PRESSURE"
 
     invoke-virtual {v0, v6, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1125
     const-string v1, "AXIS_SIZE"
 
     invoke-virtual {v0, v7, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1126
     const-string v1, "AXIS_TOUCH_MAJOR"
 
     invoke-virtual {v0, v8, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1127
     const/4 v1, 0x5
 
     const-string v2, "AXIS_TOUCH_MINOR"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1128
     const/4 v1, 0x6
 
     const-string v2, "AXIS_TOOL_MAJOR"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1129
     const/4 v1, 0x7
 
     const-string v2, "AXIS_TOOL_MINOR"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1130
     const/16 v1, 0x8
 
     const-string v2, "AXIS_ORIENTATION"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1131
     const/16 v1, 0x9
 
     const-string v2, "AXIS_VSCROLL"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1132
     const/16 v1, 0xa
 
     const-string v2, "AXIS_HSCROLL"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1133
     const/16 v1, 0xb
 
     const-string v2, "AXIS_Z"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1134
     const/16 v1, 0xc
 
     const-string v2, "AXIS_RX"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1135
     const/16 v1, 0xd
 
     const-string v2, "AXIS_RY"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1136
     const/16 v1, 0xe
 
     const-string v2, "AXIS_RZ"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1137
     const/16 v1, 0xf
 
     const-string v2, "AXIS_HAT_X"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1138
     const/16 v1, 0x10
 
     const-string v2, "AXIS_HAT_Y"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1139
     const/16 v1, 0x11
 
     const-string v2, "AXIS_LTRIGGER"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1140
     const/16 v1, 0x12
 
     const-string v2, "AXIS_RTRIGGER"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1141
     const/16 v1, 0x13
 
     const-string v2, "AXIS_THROTTLE"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1142
     const/16 v1, 0x14
 
     const-string v2, "AXIS_RUDDER"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1143
     const/16 v1, 0x15
 
     const-string v2, "AXIS_WHEEL"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1144
     const/16 v1, 0x16
 
     const-string v2, "AXIS_GAS"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1145
     const/16 v1, 0x17
 
     const-string v2, "AXIS_BRAKE"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1146
     const/16 v1, 0x18
 
     const-string v2, "AXIS_DISTANCE"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1147
     const/16 v1, 0x19
 
     const-string v2, "AXIS_TILT"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1148
     const/16 v1, 0x20
 
     const-string v2, "AXIS_GENERIC_1"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1149
     const/16 v1, 0x21
 
     const-string v2, "AXIS_GENERIC_2"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1150
     const/16 v1, 0x22
 
     const-string v2, "AXIS_GENERIC_3"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1151
     const/16 v1, 0x23
 
     const-string v2, "AXIS_GENERIC_4"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1152
     const/16 v1, 0x24
 
     const-string v2, "AXIS_GENERIC_5"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1153
     const/16 v1, 0x25
 
     const-string v2, "AXIS_GENERIC_6"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1154
     const/16 v1, 0x26
 
     const-string v2, "AXIS_GENERIC_7"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1155
     const/16 v1, 0x27
 
     const-string v2, "AXIS_GENERIC_8"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1156
     const/16 v1, 0x28
 
     const-string v2, "AXIS_GENERIC_9"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1157
     const/16 v1, 0x29
 
     const-string v2, "AXIS_GENERIC_10"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1158
     const/16 v1, 0x2a
 
     const-string v2, "AXIS_GENERIC_11"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1159
     const/16 v1, 0x2b
 
     const-string v2, "AXIS_GENERIC_12"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1160
     const/16 v1, 0x2c
 
     const-string v2, "AXIS_GENERIC_13"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1161
     const/16 v1, 0x2d
 
     const-string v2, "AXIS_GENERIC_14"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1162
     const/16 v1, 0x2e
 
     const-string v2, "AXIS_GENERIC_15"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1163
     const/16 v1, 0x2f
 
     const-string v2, "AXIS_GENERIC_16"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1217
     const/16 v1, 0x20
 
     new-array v1, v1, [Ljava/lang/String;
@@ -767,56 +722,46 @@
 
     sput-object v1, Landroid/view/MotionEvent;->BUTTON_SYMBOLIC_NAMES:[Ljava/lang/String;
 
-    .line 1293
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v1, Landroid/view/MotionEvent;->TOOL_TYPE_SYMBOLIC_NAMES:Landroid/util/SparseArray;
 
-    .line 1295
     sget-object v0, Landroid/view/MotionEvent;->TOOL_TYPE_SYMBOLIC_NAMES:Landroid/util/SparseArray;
 
-    .line 1296
     const-string v1, "TOOL_TYPE_UNKNOWN"
 
     invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1297
     const-string v1, "TOOL_TYPE_FINGER"
 
     invoke-virtual {v0, v5, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1298
     const-string v1, "TOOL_TYPE_STYLUS"
 
     invoke-virtual {v0, v6, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1299
     const-string v1, "TOOL_TYPE_MOUSE"
 
     invoke-virtual {v0, v7, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1300
     const-string v1, "TOOL_TYPE_ERASER"
 
     invoke-virtual {v0, v8, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1307
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     sput-object v1, Landroid/view/MotionEvent;->gRecyclerLock:Ljava/lang/Object;
 
-    .line 1313
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     sput-object v1, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
-    .line 3183
     new-instance v1, Landroid/view/MotionEvent$1;
 
     invoke-direct {v1}, Landroid/view/MotionEvent$1;-><init>()V
@@ -830,10 +775,8 @@
     .locals 0
 
     .prologue
-    .line 1393
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1394
     return-void
 .end method
 
@@ -842,10 +785,8 @@
     .param p0, "action"    # I
 
     .prologue
-    .line 3050
     packed-switch p0, :pswitch_data_0
 
-    .line 3070
     :pswitch_0
     const v1, 0xff00
 
@@ -853,13 +794,11 @@
 
     shr-int/lit8 v0, v1, 0x8
 
-    .line 3071
     .local v0, "index":I
     and-int/lit16 v1, p0, 0xff
 
     packed-switch v1, :pswitch_data_1
 
-    .line 3077
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -868,61 +807,51 @@
     :goto_0
     return-object v1
 
-    .line 3052
     :pswitch_1
     const-string v1, "ACTION_DOWN"
 
     goto :goto_0
 
-    .line 3054
     :pswitch_2
     const-string v1, "ACTION_UP"
 
     goto :goto_0
 
-    .line 3056
     :pswitch_3
     const-string v1, "ACTION_CANCEL"
 
     goto :goto_0
 
-    .line 3058
     :pswitch_4
     const-string v1, "ACTION_OUTSIDE"
 
     goto :goto_0
 
-    .line 3060
     :pswitch_5
     const-string v1, "ACTION_MOVE"
 
     goto :goto_0
 
-    .line 3062
     :pswitch_6
     const-string v1, "ACTION_HOVER_MOVE"
 
     goto :goto_0
 
-    .line 3064
     :pswitch_7
     const-string v1, "ACTION_SCROLL"
 
     goto :goto_0
 
-    .line 3066
     :pswitch_8
     const-string v1, "ACTION_HOVER_ENTER"
 
     goto :goto_0
 
-    .line 3068
     :pswitch_9
     const-string v1, "ACTION_HOVER_EXIT"
 
     goto :goto_0
 
-    .line 3073
     .restart local v0    # "index":I
     :pswitch_a
     new-instance v1, Ljava/lang/StringBuilder;
@@ -951,7 +880,6 @@
 
     goto :goto_0
 
-    .line 3075
     :pswitch_b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -979,7 +907,6 @@
 
     goto :goto_0
 
-    .line 3050
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -995,7 +922,6 @@
         :pswitch_9
     .end packed-switch
 
-    .line 3071
     :pswitch_data_1
     .packed-switch 0x5
         :pswitch_a
@@ -1008,7 +934,6 @@
     .param p0, "symbolicName"    # Ljava/lang/String;
 
     .prologue
-    .line 3102
     const-string v2, "AXIS_"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1017,7 +942,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3103
     const-string v2, "AXIS_"
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -1028,21 +952,17 @@
 
     move-result-object p0
 
-    .line 3104
     invoke-static {p0}, Landroid/view/MotionEvent;->nativeAxisFromString(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3105
     .local v0, "axis":I
     if-ltz v0, :cond_0
 
-    .line 3112
     .end local v0    # "axis":I
     :goto_0
     return v0
 
-    .line 3110
     :cond_0
     const/16 v2, 0xa
 
@@ -1055,11 +975,9 @@
 
     goto :goto_0
 
-    .line 3111
     :catch_0
     move-exception v1
 
-    .line 3112
     .local v1, "ex":Ljava/lang/NumberFormatException;
     const/4 v0, -0x1
 
@@ -1071,12 +989,10 @@
     .param p0, "axis"    # I
 
     .prologue
-    .line 3089
     invoke-static {p0}, Landroid/view/MotionEvent;->nativeAxisToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3090
     .local v0, "symbolicName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1114,81 +1030,64 @@
     .param p0, "buttonState"    # I
 
     .prologue
-    .line 3127
     if-nez p0, :cond_1
 
-    .line 3128
     const-string v2, "0"
 
-    .line 3149
     :cond_0
     :goto_0
     return-object v2
 
-    .line 3130
     :cond_1
     const/4 v3, 0x0
 
-    .line 3131
     .local v3, "result":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .line 3132
     .local v0, "i":I
     :goto_1
     if-eqz p0, :cond_5
 
-    .line 3133
     and-int/lit8 v4, p0, 0x1
 
     if-eqz v4, :cond_3
 
     const/4 v1, 0x1
 
-    .line 3134
     .local v1, "isSet":Z
     :goto_2
     ushr-int/lit8 p0, p0, 0x1
 
-    .line 3135
     if-eqz v1, :cond_2
 
-    .line 3136
     sget-object v4, Landroid/view/MotionEvent;->BUTTON_SYMBOLIC_NAMES:[Ljava/lang/String;
 
     aget-object v2, v4, v0
 
-    .line 3137
     .local v2, "name":Ljava/lang/String;
     if-nez v3, :cond_4
 
-    .line 3138
     if-eqz p0, :cond_0
 
-    .line 3141
     new-instance v3, Ljava/lang/StringBuilder;
 
     .end local v3    # "result":Ljava/lang/StringBuilder;
     invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 3147
     .end local v2    # "name":Ljava/lang/String;
     .restart local v3    # "result":Ljava/lang/StringBuilder;
     :cond_2
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
-    .line 3148
     goto :goto_1
 
-    .line 3133
     .end local v1    # "isSet":Z
     :cond_3
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 3143
     .restart local v1    # "isSet":Z
     .restart local v2    # "name":Ljava/lang/String;
     :cond_4
@@ -1196,12 +1095,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 3144
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 
-    .line 3149
     .end local v1    # "isSet":Z
     .end local v2    # "name":Ljava/lang/String;
     :cond_5
@@ -1219,17 +1116,14 @@
     .param p2, "high"    # F
 
     .prologue
-    .line 2875
     cmpg-float v0, p0, p1
 
     if-gez v0, :cond_0
 
-    .line 2880
     .end local p1    # "low":F
     :goto_0
     return p1
 
-    .line 2877
     .restart local p1    # "low":F
     :cond_0
     cmpl-float v0, p0, p2
@@ -1238,13 +1132,11 @@
 
     move p1, p2
 
-    .line 2878
     goto :goto_0
 
     :cond_1
     move p1, p0
 
-    .line 2880
     goto :goto_0
 .end method
 
@@ -1253,12 +1145,10 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 3197
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 3198
     .local v0, "ev":Landroid/view/MotionEvent;
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -1268,7 +1158,6 @@
 
     iput-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 3199
     return-object v0
 .end method
 
@@ -1277,7 +1166,6 @@
     .param p0, "desiredCapacity"    # I
 
     .prologue
-    .line 1319
     sget-object v1, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     if-eqz v1, :cond_0
@@ -1288,7 +1176,6 @@
 
     if-ge v1, p0, :cond_3
 
-    .line 1321
     :cond_0
     sget-object v1, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
@@ -1298,24 +1185,20 @@
 
     array-length v0, v1
 
-    .line 1322
     .local v0, "capacity":I
     :goto_0
     if-ge v0, p0, :cond_2
 
-    .line 1323
     mul-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 1321
     .end local v0    # "capacity":I
     :cond_1
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 1325
     .restart local v0    # "capacity":I
     :cond_2
     invoke-static {v0}, Landroid/view/MotionEvent$PointerCoords;->createArray(I)[Landroid/view/MotionEvent$PointerCoords;
@@ -1324,19 +1207,16 @@
 
     sput-object v1, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 1326
     invoke-static {v0}, Landroid/view/MotionEvent$PointerProperties;->createArray(I)[Landroid/view/MotionEvent$PointerProperties;
 
     move-result-object v1
 
     sput-object v1, Landroid/view/MotionEvent;->gSharedTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 1327
     new-array v1, v0, [I
 
     sput-object v1, Landroid/view/MotionEvent;->gSharedTempPointerIndexMap:[I
 
-    .line 1329
     .end local v0    # "capacity":I
     :cond_3
     return-void
@@ -1463,20 +1343,16 @@
     .locals 3
 
     .prologue
-    .line 1410
     sget-object v2, Landroid/view/MotionEvent;->gRecyclerLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1411
     :try_start_0
     sget-object v0, Landroid/view/MotionEvent;->gRecyclerTop:Landroid/view/MotionEvent;
 
-    .line 1412
     .local v0, "ev":Landroid/view/MotionEvent;
     if-nez v0, :cond_0
 
-    .line 1413
     new-instance v0, Landroid/view/MotionEvent;
 
     .end local v0    # "ev":Landroid/view/MotionEvent;
@@ -1484,40 +1360,33 @@
 
     monitor-exit v2
 
-    .line 1420
     .restart local v0    # "ev":Landroid/view/MotionEvent;
     :goto_0
     return-object v0
 
-    .line 1415
     :cond_0
     iget-object v1, v0, Landroid/view/MotionEvent;->mNext:Landroid/view/MotionEvent;
 
     sput-object v1, Landroid/view/MotionEvent;->gRecyclerTop:Landroid/view/MotionEvent;
 
-    .line 1416
     sget v1, Landroid/view/MotionEvent;->gRecyclerUsed:I
 
     add-int/lit8 v1, v1, -0x1
 
     sput v1, Landroid/view/MotionEvent;->gRecyclerUsed:I
 
-    .line 1417
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1418
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/view/MotionEvent;->mNext:Landroid/view/MotionEvent;
 
-    .line 1419
     invoke-virtual {v0}, Landroid/view/MotionEvent;->prepareForReuse()V
 
     goto :goto_0
 
-    .line 1417
     :catchall_0
     move-exception v1
 
@@ -1545,27 +1414,22 @@
     .param p13, "edgeFlags"    # I
 
     .prologue
-    .line 1544
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v2
 
-    .line 1545
     .local v2, "ev":Landroid/view/MotionEvent;
     sget-object v23, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
     monitor-enter v23
 
-    .line 1546
     const/4 v3, 0x1
 
     :try_start_0
     invoke-static {v3}, Landroid/view/MotionEvent;->ensureSharedTempPointerCapacity(I)V
 
-    .line 1547
     sget-object v21, Landroid/view/MotionEvent;->gSharedTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 1548
     .local v21, "pp":[Landroid/view/MotionEvent$PointerProperties;
     const/4 v3, 0x0
 
@@ -1573,7 +1437,6 @@
 
     invoke-virtual {v3}, Landroid/view/MotionEvent$PointerProperties;->clear()V
 
-    .line 1549
     const/4 v3, 0x0
 
     aget-object v3, v21, v3
@@ -1582,10 +1445,8 @@
 
     iput v4, v3, Landroid/view/MotionEvent$PointerProperties;->id:I
 
-    .line 1551
     sget-object v22, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 1552
     .local v22, "pc":[Landroid/view/MotionEvent$PointerCoords;
     const/4 v3, 0x0
 
@@ -1593,7 +1454,6 @@
 
     invoke-virtual {v3}, Landroid/view/MotionEvent$PointerCoords;->clear()V
 
-    .line 1553
     const/4 v3, 0x0
 
     aget-object v3, v22, v3
@@ -1602,7 +1462,6 @@
 
     iput v0, v3, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 1554
     const/4 v3, 0x0
 
     aget-object v3, v22, v3
@@ -1611,7 +1470,6 @@
 
     iput v0, v3, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 1555
     const/4 v3, 0x0
 
     aget-object v3, v22, v3
@@ -1620,7 +1478,6 @@
 
     iput v0, v3, Landroid/view/MotionEvent$PointerCoords;->pressure:F
 
-    .line 1556
     const/4 v3, 0x0
 
     aget-object v3, v22, v3
@@ -1629,7 +1486,6 @@
 
     iput v0, v3, Landroid/view/MotionEvent$PointerCoords;->size:F
 
-    .line 1558
     iget-wide v3, v2, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v6, 0x0
@@ -1670,12 +1526,10 @@
 
     iput-wide v4, v2, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 1563
     monitor-exit v23
 
     return-object v2
 
-    .line 1564
     .end local v21    # "pp":[Landroid/view/MotionEvent$PointerProperties;
     .end local v22    # "pc":[Landroid/view/MotionEvent$PointerCoords;
     :catchall_0
@@ -1698,7 +1552,6 @@
     .param p7, "metaState"    # I
 
     .prologue
-    .line 1625
     const/high16 v7, 0x3f800000    # 1.0f
 
     const/high16 v8, 0x3f800000    # 1.0f
@@ -1749,7 +1602,6 @@
     .end annotation
 
     .prologue
-    .line 1604
     move-wide v0, p0
 
     move-wide/from16 v2, p2
@@ -1800,19 +1652,15 @@
     .end annotation
 
     .prologue
-    .line 1499
     sget-object v19, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
     monitor-enter v19
 
-    .line 1500
     :try_start_0
     invoke-static/range {p5 .. p5}, Landroid/view/MotionEvent;->ensureSharedTempPointerCapacity(I)V
 
-    .line 1501
     sget-object v8, Landroid/view/MotionEvent;->gSharedTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 1502
     .local v8, "pp":[Landroid/view/MotionEvent$PointerProperties;
     const/16 v18, 0x0
 
@@ -1824,24 +1672,20 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1503
     aget-object v2, v8, v18
 
     invoke-virtual {v2}, Landroid/view/MotionEvent$PointerProperties;->clear()V
 
-    .line 1504
     aget-object v2, v8, v18
 
     aget v3, p6, v18
 
     iput v3, v2, Landroid/view/MotionEvent$PointerProperties;->id:I
 
-    .line 1502
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_0
 
-    .line 1506
     :cond_0
     const/4 v11, 0x0
 
@@ -1877,7 +1721,6 @@
 
     return-object v2
 
-    .line 1509
     .end local v8    # "pp":[Landroid/view/MotionEvent$PointerProperties;
     .end local v18    # "i":I
     :catchall_0
@@ -1908,12 +1751,10 @@
     .param p15, "flags"    # I
 
     .prologue
-    .line 1456
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 1457
     .local v0, "ev":Landroid/view/MotionEvent;
     iget-wide v1, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -1959,7 +1800,6 @@
 
     iput-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 1462
     return-object v0
 .end method
 
@@ -1968,25 +1808,21 @@
     .param p0, "other"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1633
     if-nez p0, :cond_0
 
-    .line 1634
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "other motion event must not be null"
+    const-string v2, "other motion event must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 1637
     :cond_0
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 1638
     .local v0, "ev":Landroid/view/MotionEvent;
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -2000,7 +1836,6 @@
 
     iput-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 1639
     return-object v0
 .end method
 
@@ -2009,25 +1844,21 @@
     .param p0, "other"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1647
     if-nez p0, :cond_0
 
-    .line 1648
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "other motion event must not be null"
+    const-string v2, "other motion event must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 1651
     :cond_0
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 1652
     .local v0, "ev":Landroid/view/MotionEvent;
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -2041,7 +1872,6 @@
 
     iput-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 1653
     return-object v0
 .end method
 
@@ -2050,7 +1880,6 @@
     .param p0, "toolType"    # I
 
     .prologue
-    .line 3161
     sget-object v1, Landroid/view/MotionEvent;->TOOL_TYPE_SYMBOLIC_NAMES:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -2059,7 +1888,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 3162
     .local v0, "symbolicName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2088,21 +1916,17 @@
     .param p7, "metaState"    # I
 
     .prologue
-    .line 2768
     sget-object v6, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 2769
     const/4 v0, 0x1
 
     :try_start_0
     invoke-static {v0}, Landroid/view/MotionEvent;->ensureSharedTempPointerCapacity(I)V
 
-    .line 2770
     sget-object v4, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 2771
     .local v4, "pc":[Landroid/view/MotionEvent$PointerCoords;
     const/4 v0, 0x0
 
@@ -2110,35 +1934,30 @@
 
     invoke-virtual {v0}, Landroid/view/MotionEvent$PointerCoords;->clear()V
 
-    .line 2772
     const/4 v0, 0x0
 
     aget-object v0, v4, v0
 
     iput p3, v0, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 2773
     const/4 v0, 0x0
 
     aget-object v0, v4, v0
 
     iput p4, v0, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 2774
     const/4 v0, 0x0
 
     aget-object v0, v4, v0
 
     iput p5, v0, Landroid/view/MotionEvent$PointerCoords;->pressure:F
 
-    .line 2775
     const/4 v0, 0x0
 
     aget-object v0, v4, v0
 
     iput p6, v0, Landroid/view/MotionEvent$PointerCoords;->size:F
 
-    .line 2777
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const-wide/32 v2, 0xf4240
@@ -2149,13 +1968,10 @@
 
     invoke-static/range {v0 .. v5}, Landroid/view/MotionEvent;->nativeAddBatch(JJ[Landroid/view/MotionEvent$PointerCoords;I)V
 
-    .line 2778
     monitor-exit v6
 
-    .line 2779
     return-void
 
-    .line 2778
     .end local v4    # "pc":[Landroid/view/MotionEvent$PointerCoords;
     :catchall_0
     move-exception v0
@@ -2174,7 +1990,6 @@
     .param p4, "metaState"    # I
 
     .prologue
-    .line 2793
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const-wide/32 v2, 0xf4240
@@ -2187,7 +2002,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/view/MotionEvent;->nativeAddBatch(JJ[Landroid/view/MotionEvent$PointerCoords;I)V
 
-    .line 2794
     return-void
 .end method
 
@@ -2196,7 +2010,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2809
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -2205,7 +2018,6 @@
 
     move-result v8
 
-    .line 2810
     .local v8, "action":I
     const/4 v2, 0x2
 
@@ -2215,14 +2027,11 @@
 
     if-eq v8, v2, :cond_0
 
-    .line 2811
     const/4 v2, 0x0
 
-    .line 2854
     :goto_0
     return v2
 
-    .line 2813
     :cond_0
     move-object/from16 v0, p1
 
@@ -2234,12 +2043,10 @@
 
     if-eq v8, v2, :cond_1
 
-    .line 2814
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2817
     :cond_1
     move-object/from16 v0, p0
 
@@ -2301,13 +2108,11 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 2820
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2823
     :cond_3
     move-object/from16 v0, p0
 
@@ -2317,7 +2122,6 @@
 
     move-result v13
 
-    .line 2824
     .local v13, "pointerCount":I
     move-object/from16 v0, p1
 
@@ -2329,18 +2133,15 @@
 
     if-eq v13, v2, :cond_4
 
-    .line 2825
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2828
     :cond_4
     sget-object v15, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
     monitor-enter v15
 
-    .line 2829
     const/4 v2, 0x2
 
     :try_start_0
@@ -2350,14 +2151,11 @@
 
     invoke-static {v2}, Landroid/view/MotionEvent;->ensureSharedTempPointerCapacity(I)V
 
-    .line 2830
     sget-object v14, Landroid/view/MotionEvent;->gSharedTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 2831
     .local v14, "pp":[Landroid/view/MotionEvent$PointerProperties;
     sget-object v6, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 2833
     .local v6, "pc":[Landroid/view/MotionEvent$PointerCoords;
     const/4 v12, 0x0
 
@@ -2365,7 +2163,6 @@
     :goto_1
     if-ge v12, v13, :cond_6
 
-    .line 2834
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -2378,7 +2175,6 @@
 
     invoke-static {v2, v3, v12, v0}, Landroid/view/MotionEvent;->nativeGetPointerProperties(JILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 2835
     move-object/from16 v0, p1
 
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -2391,7 +2187,6 @@
 
     invoke-static {v2, v3, v12, v0}, Landroid/view/MotionEvent;->nativeGetPointerProperties(JILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 2836
     const/4 v2, 0x0
 
     aget-object v2, v14, v2
@@ -2407,14 +2202,12 @@
 
     if-nez v2, :cond_5
 
-    .line 2837
     const/4 v2, 0x0
 
     monitor-exit v15
 
     goto/16 :goto_0
 
-    .line 2853
     .end local v6    # "pc":[Landroid/view/MotionEvent$PointerCoords;
     .end local v12    # "i":I
     .end local v14    # "pp":[Landroid/view/MotionEvent$PointerProperties;
@@ -2427,7 +2220,6 @@
 
     throw v2
 
-    .line 2833
     .restart local v6    # "pc":[Landroid/view/MotionEvent$PointerCoords;
     .restart local v12    # "i":I
     .restart local v14    # "pp":[Landroid/view/MotionEvent$PointerProperties;
@@ -2436,7 +2228,6 @@
 
     goto :goto_1
 
-    .line 2841
     :cond_6
     :try_start_1
     move-object/from16 v0, p1
@@ -2447,7 +2238,6 @@
 
     move-result v7
 
-    .line 2842
     .local v7, "metaState":I
     move-object/from16 v0, p1
 
@@ -2457,7 +2247,6 @@
 
     move-result v11
 
-    .line 2843
     .local v11, "historySize":I
     const/4 v9, 0x0
 
@@ -2465,12 +2254,10 @@
     :goto_2
     if-gt v9, v11, :cond_9
 
-    .line 2844
     if-ne v9, v11, :cond_7
 
     const/high16 v10, -0x80000000
 
-    .line 2846
     .local v10, "historyPos":I
     :goto_3
     const/4 v12, 0x0
@@ -2478,7 +2265,6 @@
     :goto_4
     if-ge v12, v13, :cond_8
 
-    .line 2847
     move-object/from16 v0, p1
 
     iget-wide v2, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -2489,7 +2275,6 @@
 
     invoke-static {v2, v3, v12, v10, v0}, Landroid/view/MotionEvent;->nativeGetPointerCoords(JIILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 2846
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_4
@@ -2498,10 +2283,8 @@
     :cond_7
     move v10, v9
 
-    .line 2844
     goto :goto_3
 
-    .line 2850
     .restart local v10    # "historyPos":I
     :cond_8
     move-object/from16 v0, p1
@@ -2512,7 +2295,6 @@
 
     move-result-wide v4
 
-    .line 2851
     .local v4, "eventTimeNanos":J
     move-object/from16 v0, p0
 
@@ -2520,12 +2302,10 @@
 
     invoke-static/range {v2 .. v7}, Landroid/view/MotionEvent;->nativeAddBatch(JJ[Landroid/view/MotionEvent$PointerCoords;I)V
 
-    .line 2843
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 2853
     .end local v4    # "eventTimeNanos":J
     .end local v10    # "historyPos":I
     :cond_9
@@ -2533,7 +2313,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2854
     const/4 v2, 0x1
 
     goto/16 :goto_0
@@ -2543,12 +2322,10 @@
     .locals 1
 
     .prologue
-    .line 3205
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 3206
     return-void
 .end method
 
@@ -2560,18 +2337,15 @@
     .param p4, "bottom"    # F
 
     .prologue
-    .line 2888
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v4
 
-    .line 2889
     .local v4, "ev":Landroid/view/MotionEvent;
     sget-object v26, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
     monitor-enter v26
 
-    .line 2890
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2581,18 +2355,14 @@
 
     move-result v22
 
-    .line 2892
     .local v22, "pointerCount":I
     invoke-static/range {v22 .. v22}, Landroid/view/MotionEvent;->ensureSharedTempPointerCapacity(I)V
 
-    .line 2893
     sget-object v23, Landroid/view/MotionEvent;->gSharedTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 2894
     .local v23, "pp":[Landroid/view/MotionEvent$PointerProperties;
     sget-object v24, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 2896
     .local v24, "pc":[Landroid/view/MotionEvent$PointerCoords;
     const/16 v25, 0x0
 
@@ -2604,7 +2374,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2897
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -2615,7 +2384,6 @@
 
     invoke-static {v6, v7, v0, v5}, Landroid/view/MotionEvent;->nativeGetPointerProperties(JILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 2898
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -2628,7 +2396,6 @@
 
     invoke-static {v6, v7, v0, v5, v8}, Landroid/view/MotionEvent;->nativeGetPointerCoords(JIILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 2899
     aget-object v5, v24, v25
 
     aget-object v6, v24, v25
@@ -2645,7 +2412,6 @@
 
     iput v6, v5, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 2900
     aget-object v5, v24, v25
 
     aget-object v6, v24, v25
@@ -2662,12 +2428,10 @@
 
     iput v6, v5, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 2896
     add-int/lit8 v25, v25, 0x1
 
     goto :goto_0
 
-    .line 2902
     :cond_0
     iget-wide v5, v4, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -2797,12 +2561,10 @@
 
     iput-wide v6, v4, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 2912
     monitor-exit v26
 
     return-object v4
 
-    .line 2913
     .end local v22    # "pointerCount":I
     .end local v23    # "pp":[Landroid/view/MotionEvent$PointerProperties;
     .end local v24    # "pc":[Landroid/view/MotionEvent$PointerCoords;
@@ -2821,7 +2583,6 @@
     .locals 1
 
     .prologue
-    .line 168
     invoke-virtual {p0}, Landroid/view/MotionEvent;->copy()Landroid/view/MotionEvent;
 
     move-result-object v0
@@ -2833,7 +2594,6 @@
     .locals 1
 
     .prologue
-    .line 1659
     invoke-static {p0}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
@@ -2852,7 +2612,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 1399
     :try_start_0
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -2860,26 +2619,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 1400
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeDispose(J)V
 
-    .line 1401
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1404
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 1406
     return-void
 
-    .line 1404
     :catchall_0
     move-exception v0
 
@@ -2893,7 +2647,6 @@
     .param p1, "pointerId"    # I
 
     .prologue
-    .line 1999
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeFindPointerIndex(JI)I
@@ -2907,7 +2660,6 @@
     .locals 2
 
     .prologue
-    .line 1722
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetAction(J)I
@@ -2921,7 +2673,6 @@
     .locals 2
 
     .prologue
-    .line 1745
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetAction(J)I
@@ -2941,7 +2692,6 @@
     .locals 2
 
     .prologue
-    .line 1731
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetAction(J)I
@@ -2958,7 +2708,6 @@
     .param p1, "axis"    # I
 
     .prologue
-    .line 1949
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x0
@@ -2978,7 +2727,6 @@
     .param p2, "pointerIndex"    # I
 
     .prologue
-    .line 2159
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/high16 v2, -0x80000000
@@ -2994,7 +2742,6 @@
     .locals 2
 
     .prologue
-    .line 2217
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetButtonState(J)I
@@ -3008,7 +2755,6 @@
     .locals 2
 
     .prologue
-    .line 1699
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetDeviceId(J)I
@@ -3022,7 +2768,6 @@
     .locals 4
 
     .prologue
-    .line 1805
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetDownTimeNanos(J)J
@@ -3040,7 +2785,6 @@
     .locals 2
 
     .prologue
-    .line 2695
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetEdgeFlags(J)I
@@ -3054,7 +2798,6 @@
     .locals 4
 
     .prologue
-    .line 1827
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/high16 v2, -0x80000000
@@ -3074,7 +2817,6 @@
     .locals 3
 
     .prologue
-    .line 1846
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/high16 v2, -0x80000000
@@ -3090,7 +2832,6 @@
     .locals 2
 
     .prologue
-    .line 1769
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetFlags(J)I
@@ -3106,7 +2847,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2477
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x0
@@ -3125,7 +2865,6 @@
     .param p3, "pos"    # I
 
     .prologue
-    .line 2658
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Landroid/view/MotionEvent;->nativeGetAxisValue(JIII)F
@@ -3140,7 +2879,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2299
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeGetEventTimeNanos(JI)J
@@ -3159,7 +2897,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2325
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeGetEventTimeNanos(JI)J
@@ -3174,7 +2911,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2460
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/16 v2, 0x8
@@ -3194,7 +2930,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2639
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/16 v2, 0x8
@@ -3213,12 +2948,10 @@
     .param p3, "outPointerCoords"    # Landroid/view/MotionEvent$PointerCoords;
 
     .prologue
-    .line 2679
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Landroid/view/MotionEvent;->nativeGetPointerCoords(JIILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 2680
     return-void
 .end method
 
@@ -3227,7 +2960,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2370
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x2
@@ -3247,7 +2979,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2531
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x2
@@ -3264,7 +2995,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2385
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x3
@@ -3284,7 +3014,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2549
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x3
@@ -3301,7 +3030,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2430
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x6
@@ -3321,7 +3049,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2603
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x6
@@ -3338,7 +3065,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2445
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x7
@@ -3358,7 +3084,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2621
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x7
@@ -3375,7 +3100,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2400
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x4
@@ -3395,7 +3119,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2567
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x4
@@ -3412,7 +3135,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2415
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x5
@@ -3432,7 +3154,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2585
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x5
@@ -3451,7 +3172,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2340
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, v2, v2, p1}, Landroid/view/MotionEvent;->nativeGetAxisValue(JIII)F
@@ -3467,7 +3187,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2495
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x0
@@ -3484,7 +3203,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 2355
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x1
@@ -3504,7 +3222,6 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 2513
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x1
@@ -3520,7 +3237,6 @@
     .locals 2
 
     .prologue
-    .line 2279
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetHistorySize(J)I
@@ -3534,7 +3250,6 @@
     .locals 2
 
     .prologue
-    .line 2202
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetMetaState(J)I
@@ -3548,7 +3263,6 @@
     .locals 5
 
     .prologue
-    .line 1936
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/16 v2, 0x8
@@ -3569,7 +3283,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2143
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/16 v2, 0x8
@@ -3589,14 +3302,12 @@
     .param p2, "outPointerCoords"    # Landroid/view/MotionEvent$PointerCoords;
 
     .prologue
-    .line 2173
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/high16 v2, -0x80000000
 
     invoke-static {v0, v1, p1, v2, p2}, Landroid/view/MotionEvent;->nativeGetPointerCoords(JIILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 2174
     return-void
 .end method
 
@@ -3604,7 +3315,6 @@
     .locals 2
 
     .prologue
-    .line 1957
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetPointerCount(J)I
@@ -3619,7 +3329,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 1969
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeGetPointerId(JI)I
@@ -3633,10 +3342,8 @@
     .locals 6
 
     .prologue
-    .line 2921
     const/4 v1, 0x0
 
-    .line 2922
     .local v1, "idBits":I
     iget-wide v4, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -3644,7 +3351,6 @@
 
     move-result v2
 
-    .line 2923
     .local v2, "pointerCount":I
     const/4 v0, 0x0
 
@@ -3652,7 +3358,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 2924
     const/4 v3, 0x1
 
     iget-wide v4, p0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -3665,12 +3370,10 @@
 
     or-int/2addr v1, v3
 
-    .line 2923
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2926
     :cond_0
     return v1
 .end method
@@ -3681,12 +3384,10 @@
     .param p2, "outPointerProperties"    # Landroid/view/MotionEvent$PointerProperties;
 
     .prologue
-    .line 2188
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2}, Landroid/view/MotionEvent;->nativeGetPointerProperties(JILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 2189
     return-void
 .end method
 
@@ -3694,7 +3395,6 @@
     .locals 5
 
     .prologue
-    .line 1876
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x2
@@ -3715,7 +3415,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2046
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x2
@@ -3735,7 +3434,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2230
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/high16 v2, -0x80000000
@@ -3751,7 +3449,6 @@
     .locals 5
 
     .prologue
-    .line 2243
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x1
@@ -3771,7 +3468,6 @@
     .locals 5
 
     .prologue
-    .line 1886
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x3
@@ -3792,7 +3488,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2064
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x3
@@ -3810,7 +3505,6 @@
     .locals 2
 
     .prologue
-    .line 1705
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetSource(J)I
@@ -3824,7 +3518,6 @@
     .locals 5
 
     .prologue
-    .line 1916
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x6
@@ -3845,7 +3538,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2108
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x6
@@ -3863,7 +3555,6 @@
     .locals 5
 
     .prologue
-    .line 1926
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x7
@@ -3884,7 +3575,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2124
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x7
@@ -3903,7 +3593,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 1987
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeGetToolType(JI)I
@@ -3917,7 +3606,6 @@
     .locals 5
 
     .prologue
-    .line 1896
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x4
@@ -3938,7 +3626,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2078
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x4
@@ -3956,7 +3643,6 @@
     .locals 5
 
     .prologue
-    .line 1906
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x5
@@ -3977,7 +3663,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2092
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x5
@@ -3997,7 +3682,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1856
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/high16 v2, -0x80000000
@@ -4014,7 +3698,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2014
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x0
@@ -4032,7 +3715,6 @@
     .locals 2
 
     .prologue
-    .line 2255
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetXPrecision(J)F
@@ -4046,7 +3728,6 @@
     .locals 5
 
     .prologue
-    .line 1866
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x1
@@ -4067,7 +3748,6 @@
     .param p1, "pointerIndex"    # I
 
     .prologue
-    .line 2029
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const/4 v2, 0x1
@@ -4085,7 +3765,6 @@
     .locals 2
 
     .prologue
-    .line 2267
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeGetYPrecision(J)F
@@ -4102,10 +3781,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3177
     if-nez p1, :cond_1
 
-    .line 3180
     :cond_0
     :goto_0
     return v0
@@ -4128,12 +3805,10 @@
     .locals 2
 
     .prologue
-    .line 1775
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getFlags()I
 
     move-result v0
 
-    .line 1776
     .local v0, "flags":I
     const/high16 v1, -0x80000000
 
@@ -4156,12 +3831,10 @@
     .locals 2
 
     .prologue
-    .line 1788
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getFlags()I
 
     move-result v0
 
-    .line 1789
     .local v0, "flags":I
     const/high16 v1, 0x40000000    # 2.0f
 
@@ -4184,7 +3857,6 @@
     .locals 2
 
     .prologue
-    .line 1760
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1}, Landroid/view/MotionEvent;->nativeIsTouchEvent(J)Z
@@ -4208,14 +3880,12 @@
 
     const/high16 v8, -0x80000000
 
-    .line 2863
     iget-wide v6, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v6, v7}, Landroid/view/MotionEvent;->nativeGetPointerCount(J)I
 
     move-result v1
 
-    .line 2864
     .local v1, "pointerCount":I
     const/4 v0, 0x0
 
@@ -4223,14 +3893,12 @@
     :goto_0
     if-ge v0, v1, :cond_2
 
-    .line 2865
     iget-wide v6, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v6, v7, v4, v0, v8}, Landroid/view/MotionEvent;->nativeGetAxisValue(JIII)F
 
     move-result v2
 
-    .line 2866
     .local v2, "x":F
     iget-wide v6, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -4238,7 +3906,6 @@
 
     move-result v3
 
-    .line 2867
     .local v3, "y":F
     cmpg-float v6, v2, p1
 
@@ -4256,14 +3923,12 @@
 
     if-lez v6, :cond_1
 
-    .line 2871
     .end local v2    # "x":F
     .end local v3    # "y":F
     :cond_0
     :goto_1
     return v4
 
-    .line 2864
     .restart local v2    # "x":F
     .restart local v3    # "y":F
     :cond_1
@@ -4276,7 +3941,6 @@
     :cond_2
     move v4, v5
 
-    .line 2871
     goto :goto_1
 .end method
 
@@ -4288,7 +3952,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2721
     cmpl-float v0, p1, v1
 
     if-nez v0, :cond_0
@@ -4297,13 +3960,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 2722
     :cond_0
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2}, Landroid/view/MotionEvent;->nativeOffsetLocation(JFF)V
 
-    .line 2724
     :cond_1
     return-void
 .end method
@@ -4312,15 +3973,12 @@
     .locals 3
 
     .prologue
-    .line 1668
     invoke-super {p0}, Landroid/view/InputEvent;->recycle()V
 
-    .line 1670
     sget-object v1, Landroid/view/MotionEvent;->gRecyclerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1671
     :try_start_0
     sget v0, Landroid/view/MotionEvent;->gRecyclerUsed:I
 
@@ -4328,29 +3986,23 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1672
     sget v0, Landroid/view/MotionEvent;->gRecyclerUsed:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Landroid/view/MotionEvent;->gRecyclerUsed:I
 
-    .line 1673
     sget-object v0, Landroid/view/MotionEvent;->gRecyclerTop:Landroid/view/MotionEvent;
 
     iput-object v0, p0, Landroid/view/MotionEvent;->mNext:Landroid/view/MotionEvent;
 
-    .line 1674
     sput-object p0, Landroid/view/MotionEvent;->gRecyclerTop:Landroid/view/MotionEvent;
 
-    .line 1676
     :cond_0
     monitor-exit v1
 
-    .line 1677
     return-void
 
-    .line 1676
     :catchall_0
     move-exception v0
 
@@ -4366,19 +4018,16 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 1691
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
 
     if-eqz v0, :cond_0
 
-    .line 1692
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeScale(JF)V
 
-    .line 1694
     :cond_0
     return-void
 .end method
@@ -4388,12 +4037,10 @@
     .param p1, "action"    # I
 
     .prologue
-    .line 2712
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeSetAction(JI)V
 
-    .line 2713
     return-void
 .end method
 
@@ -4402,7 +4049,6 @@
     .param p1, "downTime"    # J
 
     .prologue
-    .line 1815
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     const-wide/32 v2, 0xf4240
@@ -4411,7 +4057,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/view/MotionEvent;->nativeSetDownTimeNanos(JJ)V
 
-    .line 1816
     return-void
 .end method
 
@@ -4420,12 +4065,10 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 2705
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeSetEdgeFlags(JI)V
 
-    .line 2706
     return-void
 .end method
 
@@ -4435,18 +4078,15 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 2734
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 2735
     .local v0, "oldX":F
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 2736
     .local v1, "oldY":F
     sub-float v2, p1, v0
 
@@ -4454,7 +4094,6 @@
 
     invoke-virtual {p0, v2, v3}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
-    .line 2737
     return-void
 .end method
 
@@ -4463,12 +4102,10 @@
     .param p1, "source"    # I
 
     .prologue
-    .line 1711
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeSetSource(JI)I
 
-    .line 1712
     return-void
 .end method
 
@@ -4477,12 +4114,10 @@
     .param p1, "tainted"    # Z
 
     .prologue
-    .line 1782
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getFlags()I
 
     move-result v0
 
-    .line 1783
     .local v0, "flags":I
     iget-wide v2, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -4495,10 +4130,8 @@
     :goto_0
     invoke-static {v2, v3, v1}, Landroid/view/MotionEvent;->nativeSetFlags(JI)V
 
-    .line 1784
     return-void
 
-    .line 1783
     :cond_0
     const v1, 0x7fffffff
 
@@ -4512,12 +4145,10 @@
     .param p1, "targetsFocus"    # Z
 
     .prologue
-    .line 1794
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getFlags()I
 
     move-result v0
 
-    .line 1795
     .local v0, "flags":I
     iget-wide v2, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -4530,10 +4161,8 @@
     :goto_0
     invoke-static {v2, v3, v1}, Landroid/view/MotionEvent;->nativeSetFlags(JI)V
 
-    .line 1798
     return-void
 
-    .line 1795
     :cond_0
     const v1, -0x40000001    # -1.9999999f
 
@@ -4547,18 +4176,15 @@
     .param p1, "idBits"    # I
 
     .prologue
-    .line 2934
     invoke-static {}, Landroid/view/MotionEvent;->obtain()Landroid/view/MotionEvent;
 
     move-result-object v2
 
-    .line 2935
     .local v2, "ev":Landroid/view/MotionEvent;
     sget-object v35, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
     monitor-enter v35
 
-    .line 2936
     :try_start_0
     move-object/from16 v0, p0
 
@@ -4568,22 +4194,17 @@
 
     move-result v34
 
-    .line 2937
     .local v34, "oldPointerCount":I
     invoke-static/range {v34 .. v34}, Landroid/view/MotionEvent;->ensureSharedTempPointerCapacity(I)V
 
-    .line 2938
     sget-object v21, Landroid/view/MotionEvent;->gSharedTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 2939
     .local v21, "pp":[Landroid/view/MotionEvent$PointerProperties;
     sget-object v22, Landroid/view/MotionEvent;->gSharedTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 2940
     .local v22, "pc":[Landroid/view/MotionEvent$PointerCoords;
     sget-object v28, Landroid/view/MotionEvent;->gSharedTempPointerIndexMap:[I
 
-    .line 2942
     .local v28, "map":[I
     move-object/from16 v0, p0
 
@@ -4593,7 +4214,6 @@
 
     move-result v31
 
-    .line 2943
     .local v31, "oldAction":I
     move/from16 v0, v31
 
@@ -4601,7 +4221,6 @@
 
     move/from16 v32, v0
 
-    .line 2944
     .local v32, "oldActionMasked":I
     const v3, 0xff00
 
@@ -4609,19 +4228,15 @@
 
     shr-int/lit8 v33, v3, 0x8
 
-    .line 2946
     .local v33, "oldActionPointerIndex":I
     const/16 v29, -0x1
 
-    .line 2947
     .local v29, "newActionPointerIndex":I
     const/16 v20, 0x0
 
-    .line 2948
     .local v20, "newPointerCount":I
     const/16 v30, 0x0
 
-    .line 2949
     .local v30, "newIdBits":I
     const/16 v26, 0x0
 
@@ -4633,7 +4248,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2950
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -4644,7 +4258,6 @@
 
     invoke-static {v4, v5, v0, v3}, Landroid/view/MotionEvent;->nativeGetPointerProperties(JILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 2951
     const/4 v3, 0x1
 
     aget-object v4, v21, v20
@@ -4653,44 +4266,35 @@
 
     shl-int v27, v3, v4
 
-    .line 2952
     .local v27, "idBit":I
     and-int v3, v27, p1
 
     if-eqz v3, :cond_1
 
-    .line 2953
     move/from16 v0, v26
 
     move/from16 v1, v33
 
     if-ne v0, v1, :cond_0
 
-    .line 2954
     move/from16 v29, v20
 
-    .line 2956
     :cond_0
     aput v26, v28, v20
 
-    .line 2957
     add-int/lit8 v20, v20, 0x1
 
-    .line 2958
     or-int v30, v30, v27
 
-    .line 2949
     :cond_1
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_0
 
-    .line 2962
     .end local v27    # "idBit":I
     :cond_2
     if-nez v20, :cond_3
 
-    .line 2963
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "idBits did not match any ids in the event"
@@ -4699,7 +4303,6 @@
 
     throw v3
 
-    .line 3009
     .end local v20    # "newPointerCount":I
     .end local v21    # "pp":[Landroid/view/MotionEvent$PointerProperties;
     .end local v22    # "pc":[Landroid/view/MotionEvent$PointerCoords;
@@ -4720,7 +4323,6 @@
 
     throw v3
 
-    .line 2967
     .restart local v20    # "newPointerCount":I
     .restart local v21    # "pp":[Landroid/view/MotionEvent$PointerProperties;
     .restart local v22    # "pc":[Landroid/view/MotionEvent$PointerCoords;
@@ -4745,14 +4347,11 @@
 
     if-ne v0, v3, :cond_8
 
-    .line 2968
     :cond_4
     if-gez v29, :cond_5
 
-    .line 2970
     const/4 v7, 0x2
 
-    .line 2985
     .local v7, "newAction":I
     :goto_1
     :try_start_1
@@ -4764,7 +4363,6 @@
 
     move-result v25
 
-    .line 2986
     .local v25, "historySize":I
     const/16 v23, 0x0
 
@@ -4776,7 +4374,6 @@
 
     if-gt v0, v1, :cond_c
 
-    .line 2987
     move/from16 v0, v23
 
     move/from16 v1, v25
@@ -4785,7 +4382,6 @@
 
     const/high16 v24, -0x80000000
 
-    .line 2989
     .local v24, "historyPos":I
     :goto_3
     const/16 v26, 0x0
@@ -4797,7 +4393,6 @@
 
     if-ge v0, v1, :cond_a
 
-    .line 2990
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Landroid/view/MotionEvent;->mNativePtr:J
@@ -4810,12 +4405,10 @@
 
     invoke-static {v4, v5, v3, v0, v6}, Landroid/view/MotionEvent;->nativeGetPointerCoords(JIILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 2989
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_4
 
-    .line 2971
     .end local v7    # "newAction":I
     .end local v23    # "h":I
     .end local v24    # "historyPos":I
@@ -4827,7 +4420,6 @@
 
     if-ne v0, v3, :cond_7
 
-    .line 2973
     const/4 v3, 0x5
 
     move/from16 v0, v32
@@ -4846,7 +4438,6 @@
 
     goto :goto_5
 
-    .line 2977
     :cond_7
     shl-int/lit8 v3, v29, 0x8
 
@@ -4855,7 +4446,6 @@
     .restart local v7    # "newAction":I
     goto :goto_1
 
-    .line 2982
     .end local v7    # "newAction":I
     :cond_8
     move/from16 v7, v31
@@ -4868,10 +4458,8 @@
     :cond_9
     move/from16 v24, v23
 
-    .line 2987
     goto :goto_3
 
-    .line 2993
     .restart local v24    # "historyPos":I
     :cond_a
     move-object/from16 v0, p0
@@ -4884,11 +4472,9 @@
 
     move-result-wide v18
 
-    .line 2994
     .local v18, "eventTimeNanos":J
     if-nez v23, :cond_b
 
-    .line 2995
     iget-wide v3, v2, Landroid/view/MotionEvent;->mNativePtr:J
 
     move-object/from16 v0, p0
@@ -4989,13 +4575,11 @@
 
     iput-wide v4, v2, Landroid/view/MotionEvent;->mNativePtr:J
 
-    .line 2986
     :goto_6
     add-int/lit8 v23, v23, 0x1
 
     goto/16 :goto_2
 
-    .line 3005
     :cond_b
     iget-wide v8, v2, Landroid/view/MotionEvent;->mNativePtr:J
 
@@ -5009,7 +4593,6 @@
 
     goto :goto_6
 
-    .line 3008
     .end local v18    # "eventTimeNanos":J
     .end local v24    # "historyPos":I
     :cond_c
@@ -5024,12 +4607,10 @@
     .locals 6
 
     .prologue
-    .line 3014
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3015
     .local v1, "msg":Ljava/lang/StringBuilder;
     const-string v3, "MotionEvent { action="
 
@@ -5047,12 +4628,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3017
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v2
 
-    .line 3018
     .local v2, "pointerCount":I
     const/4 v0, 0x0
 
@@ -5060,7 +4639,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 3019
     const-string v3, ", id["
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5083,7 +4661,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3020
     const-string v3, ", x["
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5106,7 +4683,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 3021
     const-string v3, ", y["
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5129,7 +4705,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 3022
     const-string v3, ", toolType["
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5156,12 +4731,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3018
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3026
     :cond_0
     const-string v3, ", buttonState="
 
@@ -5179,7 +4752,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3027
     const-string v3, ", metaState="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5196,7 +4768,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3028
     const-string v3, ", flags=0x"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5213,7 +4784,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3029
     const-string v3, ", edgeFlags=0x"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5230,7 +4800,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3030
     const-string v3, ", pointerCount="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5239,7 +4808,6 @@
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3031
     const-string v3, ", historySize="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5252,7 +4820,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3032
     const-string v3, ", eventTime="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5265,7 +4832,6 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 3033
     const-string v3, ", downTime="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5278,7 +4844,6 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 3034
     const-string v3, ", deviceId="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5291,7 +4856,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3035
     const-string v3, ", source=0x"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5308,12 +4872,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3036
     const-string v3, " }"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3037
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -5326,25 +4888,21 @@
     .param p1, "matrix"    # Landroid/graphics/Matrix;
 
     .prologue
-    .line 2745
     if-nez p1, :cond_0
 
-    .line 2746
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "matrix must not be null"
+    const-string v1, "matrix must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 2749
     :cond_0
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeTransform(JLandroid/graphics/Matrix;)V
 
-    .line 2750
     return-void
 .end method
 
@@ -5354,16 +4912,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 3209
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3210
     iget-wide v0, p0, Landroid/view/MotionEvent;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/view/MotionEvent;->nativeWriteToParcel(JLandroid/os/Parcel;)V
 
-    .line 3211
     return-void
 .end method

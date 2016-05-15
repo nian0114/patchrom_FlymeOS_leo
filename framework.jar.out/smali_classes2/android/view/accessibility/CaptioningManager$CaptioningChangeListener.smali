@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 497
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 503
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "fontScale"    # F
 
     .prologue
-    .line 527
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 519
     return-void
 .end method
 
@@ -59,6 +55,5 @@
     .param p1, "userStyle"    # Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
     .prologue
-    .line 511
     return-void
 .end method

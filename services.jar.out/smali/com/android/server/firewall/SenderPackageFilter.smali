@@ -21,7 +21,6 @@
     .locals 2
 
     .prologue
-    .line 59
     new-instance v0, Lcom/android/server/firewall/SenderPackageFilter$1;
 
     const-string v1, "sender-package"
@@ -38,13 +37,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/firewall/SenderPackageFilter;->mPackageName:Ljava/lang/String;
 
-    .line 38
     return-void
 .end method
 
@@ -63,16 +59,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 43
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 45
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     const/4 v0, -0x1
 
-    .line 47
     .local v0, "packageUid":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/firewall/SenderPackageFilter;->mPackageName:Ljava/lang/String;
@@ -85,13 +78,11 @@
 
     move-result v0
 
-    .line 52
     :goto_0
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_0
 
-    .line 56
     :goto_1
     return v2
 
@@ -102,7 +93,6 @@
 
     goto :goto_1
 
-    .line 48
     :catch_0
     move-exception v3
 

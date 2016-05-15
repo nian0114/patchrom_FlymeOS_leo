@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 110
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -54,7 +52,6 @@
 
     move-result-object v0
 
-    .line 112
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -62,23 +59,19 @@
 
     check-cast v1, Landroid/location/GpsClock;
 
-    .line 114
     .local v1, "clock":Landroid/location/GpsClock;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 115
     .local v3, "measurementsLength":I
     new-array v2, v3, [Landroid/location/GpsMeasurement;
 
-    .line 116
     .local v2, "measurementsArray":[Landroid/location/GpsMeasurement;
     sget-object v4, Landroid/location/GpsMeasurement;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v2, v4}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
 
-    .line 118
     new-instance v4, Landroid/location/GpsMeasurementsEvent;
 
     invoke-direct {v4, v1, v2}, Landroid/location/GpsMeasurementsEvent;-><init>(Landroid/location/GpsClock;[Landroid/location/GpsMeasurement;)V
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 107
     invoke-virtual {p0, p1}, Landroid/location/GpsMeasurementsEvent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/location/GpsMeasurementsEvent;
 
     move-result-object v0
@@ -103,7 +95,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 123
     new-array v0, p1, [Landroid/location/GpsMeasurementsEvent;
 
     return-object v0
@@ -113,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 107
     invoke-virtual {p0, p1}, Landroid/location/GpsMeasurementsEvent$1;->newArray(I)[Landroid/location/GpsMeasurementsEvent;
 
     move-result-object v0

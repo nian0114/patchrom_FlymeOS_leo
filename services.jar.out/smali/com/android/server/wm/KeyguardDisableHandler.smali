@@ -44,21 +44,16 @@
     .param p2, "policy"    # Landroid/view/WindowManagerPolicy;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 37
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mAllowDisableKeyguard:I
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mContext:Landroid/content/Context;
 
-    .line 50
     iput-object p2, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mPolicy:Landroid/view/WindowManagerPolicy;
 
-    .line 51
     return-void
 .end method
 
@@ -67,7 +62,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/KeyguardDisableHandler;
 
     .prologue
-    .line 31
     iget v0, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mAllowDisableKeyguard:I
 
     return v0
@@ -79,7 +73,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mAllowDisableKeyguard:I
 
     return p1
@@ -94,36 +87,30 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 56
     iget-object v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mKeyguardTokenWatcher:Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
 
     if-nez v1, :cond_0
 
-    .line 57
     new-instance v1, Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
 
     invoke-direct {v1, p0, p0}, Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;-><init>(Lcom/android/server/wm/KeyguardDisableHandler;Landroid/os/Handler;)V
 
     iput-object v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mKeyguardTokenWatcher:Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
 
-    .line 60
     :cond_0
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 85
     :cond_1
     :goto_0
     return-void
 
-    .line 62
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 63
     .local v0, "pair":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/os/IBinder;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mKeyguardTokenWatcher:Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
 
@@ -139,7 +126,6 @@
 
     goto :goto_0
 
-    .line 67
     .end local v0    # "pair":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/os/IBinder;Ljava/lang/String;>;"
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mKeyguardTokenWatcher:Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
@@ -152,13 +138,11 @@
 
     goto :goto_0
 
-    .line 71
     :pswitch_2
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mAllowDisableKeyguard:I
 
-    .line 72
     iget-object v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mKeyguardTokenWatcher:Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
 
     invoke-virtual {v1}, Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;->isAcquired()Z
@@ -167,24 +151,20 @@
 
     if-eqz v1, :cond_2
 
-    .line 75
     iget-object v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mKeyguardTokenWatcher:Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;
 
     invoke-virtual {v1}, Lcom/android/server/wm/KeyguardDisableHandler$KeyguardTokenWatcher;->updateAllowState()V
 
-    .line 76
     iget v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mAllowDisableKeyguard:I
 
     if-eq v1, v2, :cond_1
 
-    .line 77
     iget-object v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     invoke-interface {v1, v2}, Landroid/view/WindowManagerPolicy;->enableKeyguard(Z)V
 
     goto :goto_0
 
-    .line 81
     :cond_2
     iget-object v1, p0, Lcom/android/server/wm/KeyguardDisableHandler;->mPolicy:Landroid/view/WindowManagerPolicy;
 
@@ -192,7 +172,6 @@
 
     goto :goto_0
 
-    .line 60
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

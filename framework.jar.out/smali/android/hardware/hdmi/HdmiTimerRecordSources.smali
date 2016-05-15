@@ -48,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,14 +59,12 @@
     .param p1, "minute"    # I
 
     .prologue
-    .line 178
     if-ltz p0, :cond_0
 
     const/16 v0, 0x63
 
     if-le p0, v0, :cond_1
 
-    .line 179
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -93,7 +90,6 @@
 
     throw v0
 
-    .line 181
     :cond_1
     if-ltz p1, :cond_2
 
@@ -101,7 +97,6 @@
 
     if-le p1, v0, :cond_3
 
-    .line 182
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -109,7 +104,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "minute should be in rage of [0, 59]:"
+    const-string v2, "minute should be in rage of [0, 59]:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,7 +122,6 @@
 
     throw v0
 
-    .line 184
     :cond_3
     return-void
 .end method
@@ -138,14 +132,12 @@
     .param p1, "minute"    # I
 
     .prologue
-    .line 156
     if-ltz p0, :cond_0
 
     const/16 v0, 0x17
 
     if-le p0, v0, :cond_1
 
-    .line 157
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -171,7 +163,6 @@
 
     throw v0
 
-    .line 159
     :cond_1
     if-ltz p1, :cond_2
 
@@ -179,7 +170,6 @@
 
     if-le p1, v0, :cond_3
 
-    .line 160
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -205,7 +195,6 @@
 
     throw v0
 
-    .line 162
     :cond_3
     return-void
 .end method
@@ -224,23 +213,19 @@
 
     const/4 v3, 0x0
 
-    .line 441
     array-length v4, p1
 
     add-int/lit8 v0, v4, -0x7
 
-    .line 442
     .local v0, "recordSourceSize":I
     packed-switch p0, :pswitch_data_0
 
     move v2, v3
 
-    .line 460
     :cond_0
     :goto_0
     return v2
 
-    .line 444
     :pswitch_0
     if-eq v6, v0, :cond_0
 
@@ -248,7 +233,6 @@
 
     goto :goto_0
 
-    .line 446
     :pswitch_1
     if-eq v5, v0, :cond_0
 
@@ -256,15 +240,12 @@
 
     goto :goto_0
 
-    .line 448
     :pswitch_2
     aget-byte v1, p1, v6
 
-    .line 449
     .local v1, "specifier":I
     if-ne v1, v5, :cond_1
 
-    .line 451
     const/4 v4, 0x2
 
     if-eq v4, v0, :cond_0
@@ -273,13 +254,11 @@
 
     goto :goto_0
 
-    .line 452
     :cond_1
     const/4 v4, 0x5
 
     if-ne v1, v4, :cond_2
 
-    .line 454
     const/4 v4, 0x3
 
     if-eq v4, v0, :cond_0
@@ -291,10 +270,8 @@
     :cond_2
     move v2, v3
 
-    .line 457
     goto :goto_0
 
-    .line 442
     nop
 
     :pswitch_data_0
@@ -311,17 +288,14 @@
     .param p1, "source"    # Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;
 
     .prologue
-    .line 132
     if-nez p0, :cond_0
 
-    .line 133
     const-string v0, "HdmiTimerRecordingSources"
 
     const-string v1, "TimerInfo should not be null."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "TimerInfo should not be null."
@@ -330,27 +304,23 @@
 
     throw v0
 
-    .line 136
     :cond_0
     if-nez p1, :cond_1
 
-    .line 137
     const-string v0, "HdmiTimerRecordingSources"
 
-    const-string/jumbo v1, "source should not be null."
+    const-string v1, "source should not be null."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "source should not be null."
+    const-string v1, "source should not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 140
     :cond_1
     return-void
 .end method
@@ -361,10 +331,8 @@
     .param p1, "minute"    # I
 
     .prologue
-    .line 173
     invoke-static {p0, p1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkDurationValue(II)V
 
-    .line 174
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$Duration;
 
     const/4 v1, 0x0
@@ -380,10 +348,8 @@
     .param p1, "source"    # Landroid/hardware/hdmi/HdmiRecordSources$AnalogueServiceSource;
 
     .prologue
-    .line 95
     invoke-static {p0, p1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkTimerRecordSourceInputs(Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;)V
 
-    .line 96
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;
 
     const/4 v1, 0x0
@@ -399,10 +365,8 @@
     .param p1, "source"    # Landroid/hardware/hdmi/HdmiRecordSources$DigitalServiceSource;
 
     .prologue
-    .line 80
     invoke-static {p0, p1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkTimerRecordSourceInputs(Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;)V
 
-    .line 81
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;
 
     const/4 v1, 0x0
@@ -420,10 +384,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 125
     invoke-static {p0, p1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkTimerRecordSourceInputs(Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;)V
 
-    .line 126
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;
 
     new-instance v1, Landroid/hardware/hdmi/HdmiTimerRecordSources$ExternalSourceDecorator;
@@ -445,10 +407,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 109
     invoke-static {p0, p1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkTimerRecordSourceInputs(Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;)V
 
-    .line 110
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;
 
     new-instance v1, Landroid/hardware/hdmi/HdmiTimerRecordSources$ExternalSourceDecorator;
@@ -468,10 +428,8 @@
     .param p1, "minute"    # I
 
     .prologue
-    .line 151
     invoke-static {p0, p1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkTimeValue(II)V
 
-    .line 152
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$Time;
 
     const/4 v1, 0x0
@@ -490,14 +448,12 @@
     .param p4, "recordingSequence"    # I
 
     .prologue
-    .line 274
     if-ltz p0, :cond_0
 
     const/16 v0, 0x1f
 
     if-le p0, v0, :cond_1
 
-    .line 275
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -523,7 +479,6 @@
 
     throw v0
 
-    .line 278
     :cond_1
     const/4 v0, 0x1
 
@@ -533,7 +488,6 @@
 
     if-le p1, v0, :cond_3
 
-    .line 279
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -559,7 +513,6 @@
 
     throw v0
 
-    .line 282
     :cond_3
     iget v0, p2, Landroid/hardware/hdmi/HdmiTimerRecordSources$Time;->mHour:I
 
@@ -567,21 +520,18 @@
 
     invoke-static {v0, v1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkTimeValue(II)V
 
-    .line 283
     iget v0, p3, Landroid/hardware/hdmi/HdmiTimerRecordSources$Duration;->mHour:I
 
     iget v1, p3, Landroid/hardware/hdmi/HdmiTimerRecordSources$Duration;->mMinute:I
 
     invoke-static {v0, v1}, Landroid/hardware/hdmi/HdmiTimerRecordSources;->checkDurationValue(II)V
 
-    .line 285
     if-eqz p4, :cond_4
 
     and-int/lit8 v0, p4, -0x80
 
     if-eqz v0, :cond_4
 
-    .line 287
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -606,7 +556,6 @@
 
     throw v0
 
-    .line 291
     :cond_4
     new-instance v0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;
 

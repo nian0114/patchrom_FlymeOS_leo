@@ -16,13 +16,10 @@
     .param p1, "clientIsUsingV2"    # Z
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-boolean p1, p0, Landroid/speech/tts/AbstractSynthesisCallback;->mClientIsUsingV2:Z
 
-    .line 39
     return-void
 .end method
 
@@ -32,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-boolean v0, p0, Landroid/speech/tts/AbstractSynthesisCallback;->mClientIsUsingV2:Z
 
     if-eqz v0, :cond_0

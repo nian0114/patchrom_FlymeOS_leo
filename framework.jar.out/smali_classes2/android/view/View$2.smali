@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 7353
     iput-object p1, p0, Landroid/view/View$2;->this$0:Landroid/view/View;
 
     iput p2, p0, Landroid/view/View$2;->val$id:I
@@ -55,7 +54,6 @@
     .param p1, "t"    # Landroid/view/View;
 
     .prologue
-    .line 7356
     iget v0, p1, Landroid/view/View;->mNextFocusForwardId:I
 
     iget v1, p0, Landroid/view/View$2;->val$id:I
@@ -77,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 7353
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/View$2;->apply(Landroid/view/View;)Z

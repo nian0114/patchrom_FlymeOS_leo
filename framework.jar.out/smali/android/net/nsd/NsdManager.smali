@@ -118,57 +118,46 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 232
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 215
     iput v1, p0, Landroid/net/nsd/NsdManager;->mListenerKey:I
 
-    .line 216
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
-    .line 217
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/net/nsd/NsdManager;->mServiceMap:Landroid/util/SparseArray;
 
-    .line 218
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
-    .line 220
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
     iput-object v0, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 222
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
     iput-object v0, p0, Landroid/net/nsd/NsdManager;->mConnected:Ljava/util/concurrent/CountDownLatch;
 
-    .line 233
     iput-object p2, p0, Landroid/net/nsd/NsdManager;->mService:Landroid/net/nsd/INsdManager;
 
-    .line 234
     iput-object p1, p0, Landroid/net/nsd/NsdManager;->mContext:Landroid/content/Context;
 
-    .line 235
     invoke-direct {p0}, Landroid/net/nsd/NsdManager;->init()V
 
-    .line 236
     return-void
 .end method
 
@@ -177,7 +166,6 @@
     .param p0, "x0"    # Landroid/net/nsd/NsdManager;
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     return-object v0
@@ -188,7 +176,6 @@
     .param p0, "x0"    # Landroid/net/nsd/NsdManager;
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mConnected:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -200,7 +187,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 121
     invoke-direct {p0, p1}, Landroid/net/nsd/NsdManager;->getListener(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -214,7 +200,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 121
     invoke-direct {p0, p1}, Landroid/net/nsd/NsdManager;->getNsdService(I)Landroid/net/nsd/NsdServiceInfo;
 
     move-result-object v0
@@ -228,7 +213,6 @@
     .param p1, "x1"    # Landroid/net/nsd/NsdServiceInfo;
 
     .prologue
-    .line 121
     invoke-direct {p0, p1}, Landroid/net/nsd/NsdManager;->getNsdServiceInfoType(Landroid/net/nsd/NsdServiceInfo;)Ljava/lang/String;
 
     move-result-object v0
@@ -242,7 +226,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 121
     invoke-direct {p0, p1}, Landroid/net/nsd/NsdManager;->removeListener(I)V
 
     return-void
@@ -253,22 +236,18 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 399
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 401
     :goto_0
     return-object v0
 
-    .line 400
     :cond_0
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 401
     :try_start_0
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
@@ -280,7 +259,6 @@
 
     goto :goto_0
 
-    .line 402
     :catchall_0
     move-exception v0
 
@@ -296,12 +274,10 @@
     .param p1, "listener"    # Ljava/lang/Object;
 
     .prologue
-    .line 420
     iget-object v2, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 421
     :try_start_0
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
@@ -309,13 +285,11 @@
 
     move-result v0
 
-    .line 422
     .local v0, "valueIndex":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 423
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -324,20 +298,16 @@
 
     monitor-exit v2
 
-    .line 426
     :goto_0
     return v1
 
-    .line 425
     :cond_0
     monitor-exit v2
 
-    .line 426
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 425
     .end local v0    # "valueIndex":I
     :catchall_0
     move-exception v1
@@ -353,7 +323,6 @@
     .locals 2
 
     .prologue
-    .line 633
     :try_start_0
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mService:Landroid/net/nsd/INsdManager;
 
@@ -363,15 +332,12 @@
 
     move-result-object v1
 
-    .line 635
     :goto_0
     return-object v1
 
-    .line 634
     :catch_0
     move-exception v0
 
-    .line 635
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -383,12 +349,10 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 406
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 407
     :try_start_0
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mServiceMap:Landroid/util/SparseArray;
 
@@ -402,7 +366,6 @@
 
     return-object v0
 
-    .line 408
     :catchall_0
     move-exception v0
 
@@ -418,12 +381,10 @@
     .param p1, "s"    # Landroid/net/nsd/NsdServiceInfo;
 
     .prologue
-    .line 430
     if-nez p1, :cond_0
 
     const-string v0, "?"
 
-    .line 431
     :goto_0
     return-object v0
 
@@ -439,12 +400,10 @@
     .locals 6
 
     .prologue
-    .line 438
     invoke-direct {p0}, Landroid/net/nsd/NsdManager;->getMessenger()Landroid/os/Messenger;
 
     move-result-object v1
 
-    .line 439
     .local v1, "messenger":Landroid/os/Messenger;
     if-nez v1, :cond_0
 
@@ -456,7 +415,6 @@
 
     throw v3
 
-    .line 440
     :cond_0
     new-instance v2, Landroid/os/HandlerThread;
 
@@ -464,11 +422,9 @@
 
     invoke-direct {v2, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 441
     .local v2, "t":Landroid/os/HandlerThread;
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 442
     new-instance v3, Landroid/net/nsd/NsdManager$ServiceHandler;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -479,7 +435,6 @@
 
     iput-object v3, p0, Landroid/net/nsd/NsdManager;->mHandler:Landroid/net/nsd/NsdManager$ServiceHandler;
 
-    .line 443
     iget-object v3, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     iget-object v4, p0, Landroid/net/nsd/NsdManager;->mContext:Landroid/content/Context;
@@ -488,7 +443,6 @@
 
     invoke-virtual {v3, v4, v5, v1}, Lcom/android/internal/util/AsyncChannel;->connect(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Messenger;)V
 
-    .line 445
     :try_start_0
     iget-object v3, p0, Landroid/net/nsd/NsdManager;->mConnected:Ljava/util/concurrent/CountDownLatch;
 
@@ -496,15 +450,12 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 449
     :goto_0
     return-void
 
-    .line 446
     :catch_0
     move-exception v0
 
-    .line 447
     .local v0, "e":Ljava/lang/InterruptedException;
     const-string v3, "NsdManager"
 
@@ -523,22 +474,18 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 382
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 395
     :goto_0
     return v0
 
-    .line 384
     :cond_0
     iget-object v3, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 385
     :try_start_0
     iget-object v2, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
@@ -546,16 +493,13 @@
 
     move-result v1
 
-    .line 386
     .local v1, "valueIndex":I
     if-eq v1, v0, :cond_1
 
-    .line 387
     monitor-exit v3
 
     goto :goto_0
 
-    .line 394
     .end local v1    # "valueIndex":I
     :catchall_0
     move-exception v2
@@ -566,7 +510,6 @@
 
     throw v2
 
-    .line 390
     .restart local v1    # "valueIndex":I
     :cond_1
     :try_start_1
@@ -576,21 +519,17 @@
 
     iput v2, p0, Landroid/net/nsd/NsdManager;->mListenerKey:I
 
-    .line 391
     .local v0, "key":I
     if-eqz v0, :cond_1
 
-    .line 392
     iget-object v2, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 393
     iget-object v2, p0, Landroid/net/nsd/NsdManager;->mServiceMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 394
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -603,31 +542,25 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 412
     if-nez p1, :cond_0
 
-    .line 417
     :goto_0
     return-void
 
-    .line 413
     :cond_0
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 414
     :try_start_0
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mListenerMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 415
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mServiceMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 416
     monitor-exit v1
 
     goto :goto_0
@@ -651,10 +584,8 @@
     .param p3, "listener"    # Landroid/net/nsd/NsdManager$DiscoveryListener;
 
     .prologue
-    .line 543
     if-nez p3, :cond_0
 
-    .line 544
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "listener cannot be null"
@@ -663,7 +594,6 @@
 
     throw v2
 
-    .line 546
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -671,7 +601,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 547
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Service type cannot be empty"
@@ -680,13 +609,11 @@
 
     throw v2
 
-    .line 550
     :cond_1
     const/4 v2, 0x1
 
     if-eq p2, v2, :cond_2
 
-    .line 551
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Unsupported protocol"
@@ -695,28 +622,23 @@
 
     throw v2
 
-    .line 554
     :cond_2
     new-instance v1, Landroid/net/nsd/NsdServiceInfo;
 
     invoke-direct {v1}, Landroid/net/nsd/NsdServiceInfo;-><init>()V
 
-    .line 555
     .local v1, "s":Landroid/net/nsd/NsdServiceInfo;
     invoke-virtual {v1, p1}, Landroid/net/nsd/NsdServiceInfo;->setServiceType(Ljava/lang/String;)V
 
-    .line 557
     invoke-direct {p0, p3, v1}, Landroid/net/nsd/NsdManager;->putListener(Ljava/lang/Object;Landroid/net/nsd/NsdServiceInfo;)I
 
     move-result v0
 
-    .line 558
     .local v0, "key":I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_3
 
-    .line 559
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "listener already in use"
@@ -725,7 +647,6 @@
 
     throw v2
 
-    .line 562
     :cond_3
     iget-object v2, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -735,7 +656,6 @@
 
     invoke-virtual {v2, v3, v4, v0, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 563
     return-void
 .end method
 
@@ -746,7 +666,6 @@
     .param p3, "listener"    # Landroid/net/nsd/NsdManager$RegistrationListener;
 
     .prologue
-    .line 470
     invoke-virtual {p1}, Landroid/net/nsd/NsdServiceInfo;->getServiceName()Ljava/lang/String;
 
     move-result-object v1
@@ -767,7 +686,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 472
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -777,7 +695,6 @@
 
     throw v1
 
-    .line 474
     :cond_1
     invoke-virtual {p1}, Landroid/net/nsd/NsdServiceInfo;->getPort()I
 
@@ -785,7 +702,6 @@
 
     if-gtz v1, :cond_2
 
-    .line 475
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid port number"
@@ -794,11 +710,9 @@
 
     throw v1
 
-    .line 477
     :cond_2
     if-nez p3, :cond_3
 
-    .line 478
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener cannot be null"
@@ -807,13 +721,11 @@
 
     throw v1
 
-    .line 480
     :cond_3
     const/4 v1, 0x1
 
     if-eq p2, v1, :cond_4
 
-    .line 481
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Unsupported protocol"
@@ -822,19 +734,16 @@
 
     throw v1
 
-    .line 483
     :cond_4
     invoke-direct {p0, p3, p1}, Landroid/net/nsd/NsdManager;->putListener(Ljava/lang/Object;Landroid/net/nsd/NsdServiceInfo;)I
 
     move-result v0
 
-    .line 484
     .local v0, "key":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_5
 
-    .line 485
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener already in use"
@@ -843,7 +752,6 @@
 
     throw v1
 
-    .line 487
     :cond_5
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -853,7 +761,6 @@
 
     invoke-virtual {v1, v2, v3, v0, p1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 488
     return-void
 .end method
 
@@ -863,7 +770,6 @@
     .param p2, "listener"    # Landroid/net/nsd/NsdManager$ResolveListener;
 
     .prologue
-    .line 602
     invoke-virtual {p1}, Landroid/net/nsd/NsdServiceInfo;->getServiceName()Ljava/lang/String;
 
     move-result-object v1
@@ -884,7 +790,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 604
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -894,11 +799,9 @@
 
     throw v1
 
-    .line 606
     :cond_1
     if-nez p2, :cond_2
 
-    .line 607
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener cannot be null"
@@ -907,19 +810,16 @@
 
     throw v1
 
-    .line 610
     :cond_2
     invoke-direct {p0, p2, p1}, Landroid/net/nsd/NsdManager;->putListener(Ljava/lang/Object;Landroid/net/nsd/NsdServiceInfo;)I
 
     move-result v0
 
-    .line 612
     .local v0, "key":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_3
 
-    .line 613
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener already in use"
@@ -928,7 +828,6 @@
 
     throw v1
 
-    .line 615
     :cond_3
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -938,7 +837,6 @@
 
     invoke-virtual {v1, v2, v3, v0, p1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 616
     return-void
 .end method
 
@@ -947,7 +845,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 621
     :try_start_0
     iget-object v0, p0, Landroid/net/nsd/NsdManager;->mService:Landroid/net/nsd/INsdManager;
 
@@ -955,11 +852,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 623
     :goto_0
     return-void
 
-    .line 622
     :catch_0
     move-exception v0
 
@@ -971,29 +866,24 @@
     .param p1, "listener"    # Landroid/net/nsd/NsdManager$DiscoveryListener;
 
     .prologue
-    .line 582
     invoke-direct {p0, p1}, Landroid/net/nsd/NsdManager;->getListenerKey(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 583
     .local v0, "id":I
     if-nez v0, :cond_0
 
-    .line 584
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "service discovery not active on listener"
+    const-string v2, "service discovery not active on listener"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 586
     :cond_0
     if-nez p1, :cond_1
 
-    .line 587
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener cannot be null"
@@ -1002,7 +892,6 @@
 
     throw v1
 
-    .line 589
     :cond_1
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -1012,7 +901,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 590
     return-void
 .end method
 
@@ -1021,16 +909,13 @@
     .param p1, "listener"    # Landroid/net/nsd/NsdManager$RegistrationListener;
 
     .prologue
-    .line 504
     invoke-direct {p0, p1}, Landroid/net/nsd/NsdManager;->getListenerKey(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 505
     .local v0, "id":I
     if-nez v0, :cond_0
 
-    .line 506
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener not registered"
@@ -1039,11 +924,9 @@
 
     throw v1
 
-    .line 508
     :cond_0
     if-nez p1, :cond_1
 
-    .line 509
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener cannot be null"
@@ -1052,7 +935,6 @@
 
     throw v1
 
-    .line 511
     :cond_1
     iget-object v1, p0, Landroid/net/nsd/NsdManager;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -1062,6 +944,5 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 512
     return-void
 .end method

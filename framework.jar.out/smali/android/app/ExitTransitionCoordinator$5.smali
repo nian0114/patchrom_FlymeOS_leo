@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 227
     iput-object p1, p0, Landroid/app/ExitTransitionCoordinator$5;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 230
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$5;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     const/4 v1, 0x1
@@ -46,12 +44,10 @@
     # setter for: Landroid/app/ExitTransitionCoordinator;->mIsCanceled:Z
     invoke-static {v0, v1}, Landroid/app/ExitTransitionCoordinator;->access$502(Landroid/app/ExitTransitionCoordinator;Z)Z
 
-    .line 231
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$5;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     # invokes: Landroid/app/ExitTransitionCoordinator;->finish()V
     invoke-static {v0}, Landroid/app/ExitTransitionCoordinator;->access$600(Landroid/app/ExitTransitionCoordinator;)V
 
-    .line 232
     return-void
 .end method

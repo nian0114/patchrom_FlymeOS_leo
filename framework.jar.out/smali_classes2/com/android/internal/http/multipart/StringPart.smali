@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const-class v0, Lcom/android/internal/http/multipart/StringPart;
 
     invoke-static {v0}, Lorg/apache/commons/logging/LogFactory;->getLog(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;
@@ -47,12 +46,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/http/multipart/StringPart;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .param p3, "charset"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     const-string v0, "text/plain"
 
     if-nez p3, :cond_0
@@ -76,10 +72,8 @@
 
     invoke-direct {p0, p1, v0, p3, v1}, Lcom/android/internal/http/multipart/PartBase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     if-nez p2, :cond_1
 
-    .line 93
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Value may not be null"
@@ -88,7 +82,6 @@
 
     throw v0
 
-    .line 95
     :cond_1
     const/4 v0, 0x0
 
@@ -100,7 +93,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 97
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "NULs may not be present in string parts"
@@ -109,11 +101,9 @@
 
     throw v0
 
-    .line 99
     :cond_2
     iput-object p2, p0, Lcom/android/internal/http/multipart/StringPart;->value:Ljava/lang/String;
 
-    .line 100
     return-void
 .end method
 
@@ -121,12 +111,10 @@
     .locals 2
 
     .prologue
-    .line 119
     iget-object v0, p0, Lcom/android/internal/http/multipart/StringPart;->content:[B
 
     if-nez v0, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/android/internal/http/multipart/StringPart;->value:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/android/internal/http/multipart/StringPart;->getCharSet()Ljava/lang/String;
@@ -139,7 +127,6 @@
 
     iput-object v0, p0, Lcom/android/internal/http/multipart/StringPart;->content:[B
 
-    .line 122
     :cond_0
     iget-object v0, p0, Lcom/android/internal/http/multipart/StringPart;->content:[B
 
@@ -152,14 +139,12 @@
     .locals 2
 
     .prologue
-    .line 143
     sget-object v0, Lcom/android/internal/http/multipart/StringPart;->LOG:Lorg/apache/commons/logging/Log;
 
     const-string v1, "enter lengthOfData()"
 
     invoke-interface {v0, v1}, Lorg/apache/commons/logging/Log;->trace(Ljava/lang/Object;)V
 
-    .line 144
     invoke-direct {p0}, Lcom/android/internal/http/multipart/StringPart;->getContent()[B
 
     move-result-object v0
@@ -181,21 +166,18 @@
     .end annotation
 
     .prologue
-    .line 132
     sget-object v0, Lcom/android/internal/http/multipart/StringPart;->LOG:Lorg/apache/commons/logging/Log;
 
     const-string v1, "enter sendData(OutputStream)"
 
     invoke-interface {v0, v1}, Lorg/apache/commons/logging/Log;->trace(Ljava/lang/Object;)V
 
-    .line 133
     invoke-direct {p0}, Lcom/android/internal/http/multipart/StringPart;->getContent()[B
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 134
     return-void
 .end method
 
@@ -204,14 +186,11 @@
     .param p1, "charSet"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     invoke-super {p0, p1}, Lcom/android/internal/http/multipart/PartBase;->setCharSet(Ljava/lang/String;)V
 
-    .line 153
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/http/multipart/StringPart;->content:[B
 
-    .line 154
     return-void
 .end method

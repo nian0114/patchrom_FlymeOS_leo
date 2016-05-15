@@ -49,12 +49,10 @@
     .locals 1
 
     .prologue
-    .line 1169
     iput-object p1, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->this$0:Landroid/view/AccessibilityInteractionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1170
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mViewId:I
@@ -68,7 +66,6 @@
     .param p2, "x1"    # Landroid/view/AccessibilityInteractionController$1;
 
     .prologue
-    .line 1169
     invoke-direct {p0, p1}, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;-><init>(Landroid/view/AccessibilityInteractionController;)V
 
     return-void
@@ -81,7 +78,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1185
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
@@ -99,7 +95,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1186
     iget-object v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mInfos:Ljava/util/List;
 
     invoke-virtual {p1}, Landroid/view/View;->createAccessibilityNodeInfo()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -108,7 +103,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1188
     :cond_0
     const/4 v0, 0x0
 
@@ -119,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 1169
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->apply(Landroid/view/View;)Z
@@ -143,14 +136,11 @@
     .end annotation
 
     .prologue
-    .line 1174
     .local p2, "infos":Ljava/util/List;, "Ljava/util/List<Landroid/view/accessibility/AccessibilityNodeInfo;>;"
     iput p1, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mViewId:I
 
-    .line 1175
     iput-object p2, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mInfos:Ljava/util/List;
 
-    .line 1176
     return-void
 .end method
 
@@ -158,16 +148,13 @@
     .locals 1
 
     .prologue
-    .line 1179
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mViewId:I
 
-    .line 1180
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mInfos:Ljava/util/List;
 
-    .line 1181
     return-void
 .end method

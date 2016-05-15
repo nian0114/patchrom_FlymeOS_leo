@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 188
     iput-object p1, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate$1;->this$0:Landroid/media/projection/MediaProjectionManager$CallbackDelegate;
 
     iput-object p2, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate$1;->val$info:Landroid/media/projection/MediaProjectionInfo;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 191
     iget-object v0, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate$1;->this$0:Landroid/media/projection/MediaProjectionManager$CallbackDelegate;
 
     # getter for: Landroid/media/projection/MediaProjectionManager$CallbackDelegate;->mCallback:Landroid/media/projection/MediaProjectionManager$Callback;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/projection/MediaProjectionManager$Callback;->onStart(Landroid/media/projection/MediaProjectionInfo;)V
 
-    .line 192
     return-void
 .end method

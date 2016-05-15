@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 348
     iput-object p1, p0, Lcom/android/server/MountService$DefaultContainerConnection;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 352
     invoke-static {p2}, Lcom/android/internal/app/IMediaContainerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IMediaContainerService;
 
     move-result-object v0
 
-    .line 353
     .local v0, "imcs":Lcom/android/internal/app/IMediaContainerService;
     iget-object v1, p0, Lcom/android/server/MountService$DefaultContainerConnection;->this$0:Lcom/android/server/MountService;
 
@@ -71,7 +68,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/MountService$ObbActionHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 354
     return-void
 .end method
 
@@ -80,6 +76,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 359
     return-void
 .end method

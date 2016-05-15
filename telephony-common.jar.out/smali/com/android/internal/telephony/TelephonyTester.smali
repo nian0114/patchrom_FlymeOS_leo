@@ -25,30 +25,24 @@
     .param p1, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     new-instance v1, Lcom/android/internal/telephony/TelephonyTester$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/telephony/TelephonyTester$1;-><init>(Lcom/android/internal/telephony/TelephonyTester;)V
 
     iput-object v1, p0, Lcom/android/internal/telephony/TelephonyTester;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 80
     iput-object p1, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
-    .line 82
     sget-boolean v1, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v1, :cond_1
 
-    .line 83
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 85
     .local v0, "filter":Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -58,7 +52,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 86
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +78,6 @@
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
 
-    .line 88
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getActionAttached()Ljava/lang/String;
@@ -94,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 89
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +112,6 @@
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
 
-    .line 91
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getPhoneType()I
@@ -132,17 +122,14 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 92
     const-string v1, "register for intent action=com.android.internal.telephony.TestConferenceEventPackage"
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
 
-    .line 93
     const-string v1, "com.android.internal.telephony.TestConferenceEventPackage"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 96
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
 
@@ -160,7 +147,6 @@
 
     invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 98
     .end local v0    # "filter":Landroid/content/IntentFilter;
     :cond_1
     return-void
@@ -171,7 +157,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-static {p0}, Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
 
     return-void
@@ -182,7 +167,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/TelephonyTester;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     return-object v0
@@ -195,7 +179,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/TelephonyTester;->handleTestConferenceEventPackage(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
@@ -207,40 +190,32 @@
     .param p2, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     iget-object v3, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     check-cast v3, Lcom/android/internal/telephony/imsphone/ImsPhone;
 
-    .line 120
     .local v3, "imsPhone":Lcom/android/internal/telephony/imsphone/ImsPhone;
     if-nez v3, :cond_1
 
-    .line 150
     :cond_0
     :goto_0
     return-void
 
-    .line 124
     :cond_1
     invoke-virtual {v3}, Lcom/android/internal/telephony/imsphone/ImsPhone;->getForegroundCall()Lcom/android/internal/telephony/imsphone/ImsPhoneCall;
 
     move-result-object v4
 
-    .line 125
     .local v4, "imsPhoneCall":Lcom/android/internal/telephony/imsphone/ImsPhoneCall;
     if-eqz v4, :cond_0
 
-    .line 129
     invoke-virtual {v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCall;->getImsCall()Lcom/android/ims/ImsCall;
 
     move-result-object v1
 
-    .line 130
     .local v1, "imsCall":Lcom/android/ims/ImsCall;
     if-eqz v1, :cond_0
 
-    .line 134
     new-instance v6, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -249,7 +224,6 @@
 
     invoke-direct {v6, v8, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 137
     .local v6, "packageFile":Ljava/io/File;
     :try_start_0
     new-instance v5, Ljava/io/FileInputStream;
@@ -258,35 +232,29 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 143
     .local v5, "is":Ljava/io/FileInputStream;
     new-instance v7, Lcom/android/internal/telephony/test/TestConferenceEventPackageParser;
 
     invoke-direct {v7, v5}, Lcom/android/internal/telephony/test/TestConferenceEventPackageParser;-><init>(Ljava/io/InputStream;)V
 
-    .line 144
     .local v7, "parser":Lcom/android/internal/telephony/test/TestConferenceEventPackageParser;
     invoke-virtual {v7}, Lcom/android/internal/telephony/test/TestConferenceEventPackageParser;->parse()Lcom/android/ims/ImsConferenceState;
 
     move-result-object v2
 
-    .line 145
     .local v2, "imsConferenceState":Lcom/android/ims/ImsConferenceState;
     if-eqz v2, :cond_0
 
-    .line 149
     invoke-virtual {v1, v2}, Lcom/android/ims/ImsCall;->conferenceStateUpdated(Lcom/android/ims/ImsConferenceState;)V
 
     goto :goto_0
 
-    .line 138
     .end local v2    # "imsConferenceState":Lcom/android/ims/ImsConferenceState;
     .end local v5    # "is":Ljava/io/FileInputStream;
     .end local v7    # "parser":Lcom/android/internal/telephony/test/TestConferenceEventPackageParser;
     :catch_0
     move-exception v0
 
-    .line 139
     .local v0, "ex":Ljava/io/FileNotFoundException;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -320,12 +288,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     const-string v0, "TelephonyTester"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     return-void
 .end method
 
@@ -335,12 +301,10 @@
     .locals 2
 
     .prologue
-    .line 101
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
-    .line 102
     iget-object v0, p0, Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
@@ -351,7 +315,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 104
     :cond_0
     return-void
 .end method

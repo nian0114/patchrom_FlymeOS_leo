@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 287
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v4, 0x0
 
-    .line 290
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 291
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -60,7 +57,6 @@
 
     move-result v1
 
-    .line 293
     .local v1, "userHandle":I
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -78,7 +74,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 297
     :cond_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -90,7 +85,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 303
     :cond_1
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -108,7 +102,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 305
     :cond_2
     new-instance v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;
 
@@ -124,7 +117,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 307
     :cond_3
     const-string v2, "android.intent.action.USER_REMOVED"
 
@@ -134,17 +126,14 @@
 
     if-eqz v2, :cond_5
 
-    .line 308
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removeUserData(I)V
 
-    .line 327
     :cond_4
     :goto_0
     return-void
 
-    .line 309
     :cond_5
     const-string v2, "android.intent.action.USER_STARTED"
 
@@ -162,7 +151,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 312
     :cond_6
     const-string v2, "android.intent.action.USER_STARTED"
 
@@ -172,12 +160,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 314
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     monitor-enter v3
 
-    .line 315
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -185,12 +171,10 @@
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 316
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 318
     :cond_7
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -199,7 +183,6 @@
 
     goto :goto_0
 
-    .line 316
     :catchall_0
     move-exception v2
 
@@ -210,7 +193,6 @@
 
     throw v2
 
-    .line 319
     :cond_8
     const-string v2, "android.intent.action.PACKAGE_CHANGED"
 
@@ -236,7 +218,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 322
     :cond_9
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -253,7 +234,6 @@
 
     goto :goto_0
 
-    .line 323
     :cond_a
     const-string v2, "android.intent.action.PACKAGE_REMOVED"
 
@@ -271,7 +251,6 @@
 
     if-nez v2, :cond_4
 
-    .line 325
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;

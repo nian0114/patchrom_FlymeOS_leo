@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 134
     iput-object p1, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,19 +38,16 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 137
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     # invokes: Landroid/widget/TextClock;->chooseFormat()V
     invoke-static {v0}, Landroid/widget/TextClock;->access$000(Landroid/widget/TextClock;)V
 
-    .line 138
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     # invokes: Landroid/widget/TextClock;->onTimeChanged()V
     invoke-static {v0}, Landroid/widget/TextClock;->access$100(Landroid/widget/TextClock;)V
 
-    .line 139
     return-void
 .end method
 
@@ -61,18 +57,15 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     # invokes: Landroid/widget/TextClock;->chooseFormat()V
     invoke-static {v0}, Landroid/widget/TextClock;->access$000(Landroid/widget/TextClock;)V
 
-    .line 144
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     # invokes: Landroid/widget/TextClock;->onTimeChanged()V
     invoke-static {v0}, Landroid/widget/TextClock;->access$100(Landroid/widget/TextClock;)V
 
-    .line 145
     return-void
 .end method

@@ -23,16 +23,12 @@
     .param p2, "temp"    # Ljava/io/File;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
 
-    .line 38
     iput-object p2, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
-    .line 39
     return-void
 .end method
 
@@ -42,7 +38,6 @@
     .locals 3
 
     .prologue
-    .line 49
     iget-object v1, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -51,10 +46,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 50
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
 
-    .line 51
     .local v0, "result":Ljava/io/File;
     iget-object v1, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
@@ -64,18 +57,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 52
     iget-object v1, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 60
     .end local v0    # "result":Ljava/io/File;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 54
     :cond_1
     iget-object v1, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
@@ -85,10 +75,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 55
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
-    .line 56
     .restart local v0    # "result":Ljava/io/File;
     iget-object v1, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
@@ -98,7 +86,6 @@
 
     goto :goto_0
 
-    .line 58
     .end local v0    # "result":Ljava/io/File;
     :cond_2
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
@@ -110,12 +97,10 @@
     .locals 2
 
     .prologue
-    .line 72
     iget-boolean v0, p0, Lcom/android/internal/util/JournaledFile;->mWriting:Z
 
     if-eqz v0, :cond_0
 
-    .line 73
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "uncommitted write already in progress"
@@ -124,7 +109,6 @@
 
     throw v0
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
 
@@ -134,7 +118,6 @@
 
     if-nez v0, :cond_1
 
-    .line 82
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
 
@@ -142,7 +125,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
@@ -153,23 +135,19 @@
 
     if-eqz v0, :cond_2
 
-    .line 89
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 91
     :cond_2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/util/JournaledFile;->mWriting:Z
 
-    .line 92
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
     return-object v0
 
-    .line 83
     :catch_0
     move-exception v0
 
@@ -180,12 +158,10 @@
     .locals 2
 
     .prologue
-    .line 99
     iget-boolean v0, p0, Lcom/android/internal/util/JournaledFile;->mWriting:Z
 
     if-nez v0, :cond_0
 
-    .line 100
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "no file to commit"
@@ -194,20 +170,17 @@
 
     throw v0
 
-    .line 102
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/util/JournaledFile;->mWriting:Z
 
-    .line 103
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/internal/util/JournaledFile;->mReal:Ljava/io/File;
 
     invoke-virtual {v0, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 104
     return-void
 .end method
 
@@ -215,12 +188,10 @@
     .locals 2
 
     .prologue
-    .line 110
     iget-boolean v0, p0, Lcom/android/internal/util/JournaledFile;->mWriting:Z
 
     if-nez v0, :cond_0
 
-    .line 111
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "no file to roll back"
@@ -229,17 +200,14 @@
 
     throw v0
 
-    .line 113
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/util/JournaledFile;->mWriting:Z
 
-    .line 114
     iget-object v0, p0, Lcom/android/internal/util/JournaledFile;->mTemp:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 115
     return-void
 .end method

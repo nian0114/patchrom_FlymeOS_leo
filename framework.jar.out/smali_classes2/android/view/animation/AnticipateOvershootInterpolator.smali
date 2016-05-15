@@ -20,15 +20,12 @@
     .locals 1
 
     .prologue
-    .line 42
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 43
     const/high16 v0, 0x40400000    # 3.0f
 
     iput v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
-    .line 44
     return-void
 .end method
 
@@ -37,17 +34,14 @@
     .param p1, "tension"    # F
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 52
     const/high16 v0, 0x3fc00000    # 1.5f
 
     mul-float/2addr v0, p1
 
     iput v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
-    .line 53
     return-void
 .end method
 
@@ -57,15 +51,12 @@
     .param p2, "extraTension"    # F
 
     .prologue
-    .line 63
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 64
     mul-float v0, p1, p2
 
     iput v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
-    .line 65
     return-void
 .end method
 
@@ -75,7 +66,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 68
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -86,7 +76,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Landroid/view/animation/AnticipateOvershootInterpolator;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
 
-    .line 69
     return-void
 .end method
 
@@ -99,20 +88,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 72
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 74
     if-eqz p2, :cond_0
 
-    .line 75
     sget-object v1, Lcom/android/internal/R$styleable;->AnticipateOvershootInterpolator:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 80
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     const/high16 v1, 0x40000000    # 2.0f
@@ -133,20 +118,16 @@
 
     iput v1, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
-    .line 82
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->getChangingConfigurations()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroid/view/animation/AnticipateOvershootInterpolator;->setChangingConfiguration(I)V
 
-    .line 83
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 84
     return-void
 
-    .line 77
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->AnticipateOvershootInterpolator:[I
@@ -165,7 +146,6 @@
     .param p1, "s"    # F
 
     .prologue
-    .line 87
     mul-float v0, p0, p0
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -187,7 +167,6 @@
     .param p1, "s"    # F
 
     .prologue
-    .line 91
     mul-float v0, p0, p0
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -209,7 +188,6 @@
     .locals 2
 
     .prologue
-    .line 106
     iget v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
     invoke-static {v0}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createAnticipateOvershootInterpolator(F)J
@@ -228,7 +206,6 @@
 
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 99
     cmpg-float v0, p1, v3
 
     if-gez v0, :cond_0
@@ -243,7 +220,6 @@
 
     mul-float/2addr v0, v3
 
-    .line 100
     :goto_0
     return v0
 

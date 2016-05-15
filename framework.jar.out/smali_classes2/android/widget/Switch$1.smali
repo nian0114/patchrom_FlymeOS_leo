@@ -29,7 +29,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 1206
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Landroid/widget/Switch;
 
     .prologue
-    .line 1209
     # getter for: Landroid/widget/Switch;->mThumbPosition:F
     invoke-static {p1}, Landroid/widget/Switch;->access$000(Landroid/widget/Switch;)F
 
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 1206
     check-cast p1, Landroid/widget/Switch;
 
     invoke-virtual {p0, p1}, Landroid/widget/Switch$1;->get(Landroid/widget/Switch;)Ljava/lang/Float;
@@ -75,11 +72,9 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 1214
     # invokes: Landroid/widget/Switch;->setThumbPosition(F)V
     invoke-static {p1, p2}, Landroid/widget/Switch;->access$100(Landroid/widget/Switch;F)V
 
-    .line 1215
     return-void
 .end method
 
@@ -87,7 +82,6 @@
     .locals 0
 
     .prologue
-    .line 1206
     check-cast p1, Landroid/widget/Switch;
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/Switch$1;->setValue(Landroid/widget/Switch;F)V

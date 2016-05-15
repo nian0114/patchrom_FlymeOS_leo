@@ -16,14 +16,12 @@
     .prologue
     const/16 v1, 0xf
 
-    .line 32
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/hdmi/HdmiUtils;->ADDRESS_TO_TYPE:[I
 
-    .line 50
     new-array v0, v1, [Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -120,7 +118,6 @@
 
     return-void
 
-    .line 32
     :array_0
     .array-data 4
         0x0
@@ -145,7 +142,6 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -165,14 +161,12 @@
     .end annotation
 
     .prologue
-    .line 163
     new-instance v3, Ljava/util/ArrayList;
 
     array-length v5, p0
 
     invoke-direct {v3, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 164
     .local v3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     move-object v0, p0
 
@@ -188,7 +182,6 @@
 
     aget v4, v0, v1
 
-    .line 165
     .local v4, "type":I
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -196,12 +189,10 @@
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 164
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 167
     .end local v4    # "type":I
     :cond_0
     invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -218,16 +209,13 @@
     .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 136
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
 
     move-result v0
 
-    .line 137
     .local v0, "src":I
     if-eq v0, p1, :cond_0
 
-    .line 138
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,10 +252,8 @@
 
     invoke-static {p2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     const/4 v1, 0x0
 
-    .line 141
     :goto_0
     return v1
 
@@ -283,7 +269,6 @@
     .param p1, "newPowerStatus"    # I
 
     .prologue
-    .line 290
     new-instance v0, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getLogicalAddress()I
@@ -322,19 +307,16 @@
     .param p0, "address"    # I
 
     .prologue
-    .line 105
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils;->isValidAddress(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 106
     sget-object v0, Lcom/android/server/hdmi/HdmiUtils;->DEFAULT_NAMES:[Ljava/lang/String;
 
     aget-object v0, v0, p0
 
-    .line 108
     :goto_0
     return-object v0
 
@@ -349,19 +331,16 @@
     .param p0, "address"    # I
 
     .prologue
-    .line 90
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils;->isValidAddress(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 91
     sget-object v0, Lcom/android/server/hdmi/HdmiUtils;->ADDRESS_TO_TYPE:[I
 
     aget v0, v0, p0
 
-    .line 93
     :goto_0
     return v0
 
@@ -377,7 +356,6 @@
     .param p1, "newPath"    # I
 
     .prologue
-    .line 242
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -386,45 +364,36 @@
 
     if-gt v0, v3, :cond_0
 
-    .line 243
     shr-int v3, p1, v0
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 244
     .local v2, "nibble":I
     if-eqz v2, :cond_1
 
-    .line 245
     const v3, 0xfff0
 
     shl-int v1, v3, v0
 
-    .line 246
     .local v1, "mask":I
     and-int/2addr p1, v1
 
-    .line 250
     .end local v1    # "mask":I
     .end local v2    # "nibble":I
     :cond_0
     if-nez p1, :cond_2
 
-    .line 251
     const/4 v3, 0x1
 
-    .line 253
     :goto_1
     return v3
 
-    .line 242
     .restart local v2    # "nibble":I
     :cond_1
     add-int/lit8 v0, v0, 0x4
 
     goto :goto_0
 
-    .line 253
     .end local v2    # "nibble":I
     :cond_2
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiUtils;->isInActiveRoutingPath(II)Z
@@ -440,23 +409,19 @@
     .param p1, "newPath"    # I
 
     .prologue
-    .line 270
     const/16 v0, 0xc
 
     .local v0, "i":I
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 271
     shr-int v3, p0, v0
 
     and-int/lit8 v1, v3, 0xf
 
-    .line 272
     .local v1, "nibbleActive":I
     if-nez v1, :cond_1
 
-    .line 283
     .end local v1    # "nibbleActive":I
     :cond_0
     const/4 v3, 0x1
@@ -464,26 +429,21 @@
     :goto_1
     return v3
 
-    .line 275
     .restart local v1    # "nibbleActive":I
     :cond_1
     shr-int v3, p1, v0
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 276
     .local v2, "nibbleNew":I
     if-eqz v2, :cond_0
 
-    .line 279
     if-eq v1, v2, :cond_2
 
-    .line 280
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 270
     :cond_2
     add-int/lit8 v0, v0, -0x4
 
@@ -495,7 +455,6 @@
     .param p0, "address"    # I
 
     .prologue
-    .line 79
     if-ltz p0, :cond_0
 
     const/16 v0, 0xe
@@ -518,12 +477,10 @@
     .param p0, "language"    # Ljava/lang/String;
 
     .prologue
-    .line 303
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 304
     .local v0, "normalized":Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -577,7 +534,6 @@
     .end annotation
 
     .prologue
-    .line 210
     .local p0, "a":Ljava/util/List;, "Ljava/util/List<TT;>;"
     .local p1, "b":Ljava/util/List;, "Ljava/util/List<TT;>;"
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -592,16 +548,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 211
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 222
     :goto_0
     return-object v1
 
-    .line 213
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
@@ -609,14 +562,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 214
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 216
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -624,27 +575,22 @@
 
     if-eqz v1, :cond_2
 
-    .line 217
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 219
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 220
     .local v0, "newList":Ljava/util/List;, "Ljava/util/List<TT;>;"
     invoke-interface {v0, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 221
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 222
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
@@ -661,7 +607,6 @@
 
     const/4 v1, 0x0
 
-    .line 151
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object v2
@@ -694,13 +639,11 @@
     .end annotation
 
     .prologue
-    .line 202
     .local p0, "array":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TT;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 203
     .local v1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     const/4 v0, 0x0
 
@@ -712,19 +655,16 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 204
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 203
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 206
     :cond_0
     return-object v1
 .end method
@@ -734,7 +674,6 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 198
     const/4 v0, 0x0
 
     aget-byte v0, p0, v0
@@ -769,7 +708,6 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 177
     const/4 v0, 0x0
 
     aget-byte v0, p0, v0
@@ -795,7 +733,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 188
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff
@@ -819,16 +756,13 @@
     .param p1, "deviceType"    # I
 
     .prologue
-    .line 120
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils;->getTypeFromAddress(I)I
 
     move-result v0
 
-    .line 121
     .local v0, "actualDeviceType":I
     if-eq v0, p1, :cond_0
 
-    .line 122
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -863,7 +797,6 @@
 
     throw v1
 
-    .line 125
     :cond_0
     return-void
 .end method

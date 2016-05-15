@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 566
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$7;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiCecController$7;->val$cecMessage:Lcom/android/server/hdmi/HdmiCecMessage;
@@ -48,7 +47,6 @@
     .locals 9
 
     .prologue
-    .line 569
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +73,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 570
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecController$7;->val$cecMessage:Lcom/android/server/hdmi/HdmiCecMessage;
 
     invoke-virtual {v5}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
@@ -93,15 +90,12 @@
 
     move-result-object v0
 
-    .line 571
     .local v0, "body":[B
     const/4 v3, 0x0
 
-    .line 572
     .local v3, "i":I
     const/4 v1, 0x0
 
-    .line 574
     .local v1, "errorCode":I
     :goto_0
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecController$7;->this$0:Lcom/android/server/hdmi/HdmiCecController;
@@ -128,18 +122,14 @@
 
     move-result v1
 
-    .line 576
     if-nez v1, :cond_2
 
-    .line 581
     :goto_1
     move v2, v1
 
-    .line 582
     .local v2, "finalError":I
     if-eqz v2, :cond_0
 
-    .line 583
     const-string v5, "HdmiCecController"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -164,13 +154,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
     :cond_0
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecController$7;->val$callback:Lcom/android/server/hdmi/HdmiControlService$SendMessageCallback;
 
     if-eqz v5, :cond_1
 
-    .line 586
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecController$7;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     new-instance v6, Lcom/android/server/hdmi/HdmiCecController$7$1;
@@ -180,11 +168,9 @@
     # invokes: Lcom/android/server/hdmi/HdmiCecController;->runOnServiceThread(Ljava/lang/Runnable;)V
     invoke-static {v5, v6}, Lcom/android/server/hdmi/HdmiCecController;->access$400(Lcom/android/server/hdmi/HdmiCecController;Ljava/lang/Runnable;)V
 
-    .line 593
     :cond_1
     return-void
 
-    .line 579
     .end local v2    # "finalError":I
     :cond_2
     add-int/lit8 v4, v3, 0x1

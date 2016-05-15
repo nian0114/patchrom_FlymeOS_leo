@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 289
     invoke-static {}, Lcom/android/server/gesture/EdgeGestureInputFilter$State;->values()[Lcom/android/server/gesture/EdgeGestureInputFilter$State;
 
     move-result-object v0

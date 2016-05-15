@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 1519
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "x0"    # Lcom/android/server/TelephonyRegistry$1;
 
     .prologue
-    .line 1519
     invoke-direct {p0}, Lcom/android/server/TelephonyRegistry$LogSSC;-><init>()V
 
     return-void
@@ -59,7 +57,6 @@
     .param p5, "state"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 1527
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mTime:Landroid/text/format/Time;
 
     iput-object p2, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mS:Ljava/lang/String;
@@ -70,7 +67,6 @@
 
     iput-object p5, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mState:Landroid/telephony/ServiceState;
 
-    .line 1528
     return-void
 .end method
 
@@ -78,7 +74,6 @@
     .locals 2
 
     .prologue
-    .line 1532
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

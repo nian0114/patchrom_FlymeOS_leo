@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 398
     iput-object p1, p0, Landroid/media/tv/TvInputService$Session$5;->this$0:Landroid/media/tv/TvInputService$Session;
 
     iput p2, p0, Landroid/media/tv/TvInputService$Session$5;->val$type:I
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 403
     :try_start_0
     iget-object v1, p0, Landroid/media/tv/TvInputService$Session$5;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -59,7 +57,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 404
     iget-object v1, p0, Landroid/media/tv/TvInputService$Session$5;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # getter for: Landroid/media/tv/TvInputService$Session;->mSessionCallback:Landroid/media/tv/ITvInputSessionCallback;
@@ -75,16 +72,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 409
     :cond_0
     :goto_0
     return-void
 
-    .line 406
     :catch_0
     move-exception v0
 
-    .line 407
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TvInputService"
 

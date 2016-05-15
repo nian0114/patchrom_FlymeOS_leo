@@ -55,41 +55,33 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p1, "jpegSurfaceIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRepeatingRequest:Landroid/hardware/camera2/legacy/BurstHolder;
 
-    .line 37
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRequestQueue:Ljava/util/ArrayDeque;
 
-    .line 39
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentFrameNumber:J
 
-    .line 40
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
 
-    .line 41
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRequestId:I
 
-    .line 45
     iput-object p1, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mJpegSurfaceIds:Ljava/util/List;
 
-    .line 46
     return-void
 .end method
 
@@ -98,10 +90,8 @@
     .param p1, "requestId"    # I
 
     .prologue
-    .line 142
     iget-wide v2, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentFrameNumber:J
 
-    .line 143
     .local v2, "total":J
     iget-object v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRequestQueue:Ljava/util/ArrayDeque;
 
@@ -123,7 +113,6 @@
 
     check-cast v0, Landroid/hardware/camera2/legacy/BurstHolder;
 
-    .line 144
     .local v0, "b":Landroid/hardware/camera2/legacy/BurstHolder;
     invoke-virtual {v0}, Landroid/hardware/camera2/legacy/BurstHolder;->getNumberOfRequests()I
 
@@ -133,21 +122,18 @@
 
     add-long/2addr v2, v4
 
-    .line 145
     invoke-virtual {v0}, Landroid/hardware/camera2/legacy/BurstHolder;->getRequestId()I
 
     move-result v4
 
     if-ne v4, p1, :cond_0
 
-    .line 146
     const-wide/16 v4, 0x1
 
     sub-long v4, v2, v4
 
     return-wide v4
 
-    .line 149
     .end local v0    # "b":Landroid/hardware/camera2/legacy/BurstHolder;
     :cond_1
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -175,7 +161,6 @@
     .end annotation
 
     .prologue
-    .line 56
     monitor-enter p0
 
     :try_start_0
@@ -187,7 +172,6 @@
 
     check-cast v0, Landroid/hardware/camera2/legacy/BurstHolder;
 
-    .line 57
     .local v0, "next":Landroid/hardware/camera2/legacy/BurstHolder;
     if-nez v0, :cond_0
 
@@ -195,10 +179,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 58
     iget-object v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRepeatingRequest:Landroid/hardware/camera2/legacy/BurstHolder;
 
-    .line 59
     iget-wide v2, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentFrameNumber:J
 
     invoke-virtual {v0}, Landroid/hardware/camera2/legacy/BurstHolder;->getNumberOfRequests()I
@@ -213,20 +195,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     :cond_0
     if-nez v0, :cond_1
 
-    .line 64
     const/4 v1, 0x0
 
-    .line 69
     :goto_0
     monitor-exit p0
 
     return-object v1
 
-    .line 67
     :cond_1
     :try_start_1
     new-instance v1, Landroid/util/Pair;
@@ -239,7 +217,6 @@
 
     invoke-direct {v1, v0, v2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 68
     .local v1, "ret":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/hardware/camera2/legacy/BurstHolder;Ljava/lang/Long;>;"
     iget-wide v2, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentFrameNumber:J
 
@@ -257,7 +234,6 @@
 
     goto :goto_0
 
-    .line 56
     .end local v0    # "next":Landroid/hardware/camera2/legacy/BurstHolder;
     .end local v1    # "ret":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/hardware/camera2/legacy/BurstHolder;Ljava/lang/Long;>;"
     :catchall_0
@@ -272,7 +248,6 @@
     .locals 2
 
     .prologue
-    .line 100
     monitor-enter p0
 
     :try_start_0
@@ -280,7 +255,6 @@
 
     if-nez v0, :cond_0
 
-    .line 101
     const-string v0, "RequestQueue"
 
     const-string v1, "cancel failed: no repeating request exists."
@@ -289,10 +263,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 102
     const-wide/16 v0, -0x1
 
-    .line 104
     :goto_0
     monitor-exit p0
 
@@ -314,7 +286,6 @@
 
     goto :goto_0
 
-    .line 100
     :catchall_0
     move-exception v0
 
@@ -330,12 +301,10 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 80
     monitor-enter p0
 
     const-wide/16 v0, -0x1
 
-    .line 81
     .local v0, "ret":J
     :try_start_0
     iget-object v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRepeatingRequest:Landroid/hardware/camera2/legacy/BurstHolder;
@@ -350,12 +319,10 @@
 
     if-ne v4, p1, :cond_1
 
-    .line 82
     const/4 v4, 0x0
 
     iput-object v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRepeatingRequest:Landroid/hardware/camera2/legacy/BurstHolder;
 
-    .line 83
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
 
     cmp-long v4, v4, v2
@@ -364,13 +331,11 @@
 
     move-wide v0, v2
 
-    .line 85
     :goto_0
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
 
-    .line 86
     const-string v2, "RequestQueue"
 
     const-string v3, "Repeating capture request cancelled."
@@ -379,13 +344,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
     :goto_1
     monitor-exit p0
 
     return-wide v0
 
-    .line 83
     :cond_0
     :try_start_1
     iget-wide v2, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
@@ -396,7 +359,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_1
     const-string v2, "RequestQueue"
 
@@ -424,7 +386,6 @@
 
     goto :goto_1
 
-    .line 80
     :catchall_0
     move-exception v2
 
@@ -453,7 +414,6 @@
     .local p1, "requests":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/CaptureRequest;>;"
     const-wide/16 v4, -0x1
 
-    .line 122
     monitor-enter p0
 
     :try_start_0
@@ -463,7 +423,6 @@
 
     iput v6, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRequestId:I
 
-    .line 123
     .local v1, "requestId":I
     new-instance v0, Landroid/hardware/camera2/legacy/BurstHolder;
 
@@ -471,11 +430,9 @@
 
     invoke-direct {v0, v1, p2, p1, v6}, Landroid/hardware/camera2/legacy/BurstHolder;-><init>(IZLjava/util/List;Ljava/util/Collection;)V
 
-    .line 124
     .local v0, "burst":Landroid/hardware/camera2/legacy/BurstHolder;
     const-wide/16 v2, -0x1
 
-    .line 125
     .local v2, "ret":J
     invoke-virtual {v0}, Landroid/hardware/camera2/legacy/BurstHolder;->isRepeating()Z
 
@@ -483,19 +440,16 @@
 
     if-eqz v6, :cond_2
 
-    .line 126
     const-string v6, "RequestQueue"
 
     const-string v7, "Repeating capture request set."
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     iget-object v6, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRepeatingRequest:Landroid/hardware/camera2/legacy/BurstHolder;
 
     if-eqz v6, :cond_0
 
-    .line 128
     iget-wide v6, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
 
     cmp-long v6, v6, v4
@@ -504,28 +458,23 @@
 
     move-wide v2, v4
 
-    .line 131
     :cond_0
     :goto_0
     const-wide/16 v4, -0x1
 
     iput-wide v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
 
-    .line 132
     iput-object v0, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRepeatingRequest:Landroid/hardware/camera2/legacy/BurstHolder;
 
-    .line 137
     :goto_1
     invoke-virtual {p3, v2, v3}, Landroid/hardware/camera2/utils/LongParcelable;->setNumber(J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     monitor-exit p0
 
     return v1
 
-    .line 128
     :cond_1
     :try_start_1
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mCurrentRepeatingFrameNumber:J
@@ -536,13 +485,11 @@
 
     goto :goto_0
 
-    .line 134
     :cond_2
     iget-object v4, p0, Landroid/hardware/camera2/legacy/RequestQueue;->mRequestQueue:Ljava/util/ArrayDeque;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
 
-    .line 135
     invoke-virtual {v0}, Landroid/hardware/camera2/legacy/BurstHolder;->getRequestId()I
 
     move-result v4
@@ -555,7 +502,6 @@
 
     goto :goto_1
 
-    .line 122
     .end local v0    # "burst":Landroid/hardware/camera2/legacy/BurstHolder;
     .end local v1    # "requestId":I
     .end local v2    # "ret":J

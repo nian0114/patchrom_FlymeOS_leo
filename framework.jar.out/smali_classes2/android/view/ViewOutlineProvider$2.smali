@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 55
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -46,6 +44,5 @@
 
     invoke-virtual {p2, v2, v2, v0, v1}, Landroid/graphics/Outline;->setRect(IIII)V
 
-    .line 56
     return-void
 .end method

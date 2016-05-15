@@ -34,15 +34,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 18
     const-string v0, "android.service.wallpaper.IWallpaperService"
 
     invoke-virtual {p0, p0, v0}, Landroid/service/wallpaper/IWallpaperService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 19
     return-void
 .end method
 
@@ -51,17 +48,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 26
     if-nez p0, :cond_0
 
-    .line 27
     const/4 v0, 0x0
 
-    .line 33
     :goto_0
     return-object v0
 
-    .line 29
     :cond_0
     const-string v1, "android.service.wallpaper.IWallpaperService"
 
@@ -69,7 +62,6 @@
 
     move-result-object v0
 
-    .line 30
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -77,12 +69,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 31
     check-cast v0, Landroid/service/wallpaper/IWallpaperService;
 
     goto :goto_0
 
-    .line 33
     :cond_1
     new-instance v0, Landroid/service/wallpaper/IWallpaperService$Stub$Proxy;
 
@@ -98,7 +88,6 @@
     .locals 0
 
     .prologue
-    .line 37
     return-object p0
 .end method
 
@@ -117,10 +106,8 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 74
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v8
@@ -128,7 +115,6 @@
     :goto_0
     return v8
 
-    .line 45
     :sswitch_0
     const-string v0, "android.service.wallpaper.IWallpaperService"
 
@@ -136,13 +122,11 @@
 
     goto :goto_0
 
-    .line 50
     :sswitch_1
     const-string v0, "android.service.wallpaper.IWallpaperService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 52
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -151,19 +135,16 @@
 
     move-result-object v1
 
-    .line 54
     .local v1, "_arg0":Landroid/service/wallpaper/IWallpaperConnection;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
 
-    .line 56
     .local v2, "_arg1":Landroid/os/IBinder;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 58
     .local v3, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -173,20 +154,17 @@
 
     move v4, v8
 
-    .line 60
     .local v4, "_arg3":Z
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 62
     .local v5, "_arg4":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 64
     .local v6, "_arg5":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -194,7 +172,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 65
     sget-object v0, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -207,12 +184,10 @@
     :goto_2
     move-object v0, p0
 
-    .line 70
     invoke-virtual/range {v0 .. v7}, Landroid/service/wallpaper/IWallpaperService$Stub;->attach(Landroid/service/wallpaper/IWallpaperConnection;Landroid/os/IBinder;IZIILandroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 58
     .end local v4    # "_arg3":Z
     .end local v5    # "_arg4":I
     .end local v6    # "_arg5":I
@@ -222,7 +197,6 @@
 
     goto :goto_1
 
-    .line 68
     .restart local v4    # "_arg3":Z
     .restart local v5    # "_arg4":I
     .restart local v6    # "_arg5":I
@@ -232,7 +206,6 @@
     .restart local v7    # "_arg6":Landroid/graphics/Rect;
     goto :goto_2
 
-    .line 41
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

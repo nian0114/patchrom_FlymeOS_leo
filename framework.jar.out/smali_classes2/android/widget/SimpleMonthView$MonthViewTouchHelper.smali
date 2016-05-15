@@ -32,27 +32,22 @@
     .param p2, "host"    # Landroid/view/View;
 
     .prologue
-    .line 583
     iput-object p1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    .line 584
     invoke-direct {p0, p2}, Lcom/android/internal/widget/ExploreByTouchHelper;-><init>(Landroid/view/View;)V
 
-    .line 580
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->mTempRect:Landroid/graphics/Rect;
 
-    .line 581
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->mTempCalendar:Ljava/util/Calendar;
 
-    .line 585
     return-void
 .end method
 
@@ -62,7 +57,6 @@
     .param p2, "rect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 656
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     # getter for: Landroid/widget/SimpleMonthView;->mPadding:I
@@ -70,7 +64,6 @@
 
     move-result v4
 
-    .line 657
     .local v4, "offsetX":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
@@ -79,7 +72,6 @@
 
     move-result v5
 
-    .line 658
     .local v5, "offsetY":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
@@ -88,7 +80,6 @@
 
     move-result v0
 
-    .line 659
     .local v0, "cellHeight":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
@@ -117,7 +108,6 @@
 
     div-int v1, v9, v10
 
-    .line 660
     .local v1, "cellWidth":I
     add-int/lit8 v9, p1, -0x1
 
@@ -130,7 +120,6 @@
 
     add-int v3, v9, v10
 
-    .line 661
     .local v3, "index":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
@@ -141,7 +130,6 @@
 
     div-int v6, v3, v9
 
-    .line 662
     .local v6, "row":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
@@ -152,19 +140,16 @@
 
     rem-int v2, v3, v9
 
-    .line 663
     .local v2, "column":I
     mul-int v9, v2, v1
 
     add-int v7, v4, v9
 
-    .line 664
     .local v7, "x":I
     mul-int v9, v6, v0
 
     add-int v8, v5, v9
 
-    .line 666
     .local v8, "y":I
     add-int v9, v7, v1
 
@@ -172,7 +157,6 @@
 
     invoke-virtual {p2, v7, v8, v9, v10}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 667
     return-void
 .end method
 
@@ -181,7 +165,6 @@
     .param p1, "day"    # I
 
     .prologue
-    .line 678
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->mTempCalendar:Ljava/util/Calendar;
 
     iget-object v2, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
@@ -200,7 +183,6 @@
 
     invoke-virtual {v1, v2, v3, p1}, Ljava/util/Calendar;->set(III)V
 
-    .line 679
     const-string v1, "dd MMMM yyyy"
 
     iget-object v2, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->mTempCalendar:Ljava/util/Calendar;
@@ -213,7 +195,6 @@
 
     move-result-object v0
 
-    .line 682
     .local v0, "date":Ljava/lang/CharSequence;
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
@@ -224,7 +205,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 683
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     invoke-virtual {v1}, Landroid/widget/SimpleMonthView;->getContext()Landroid/content/Context;
@@ -245,7 +225,6 @@
 
     move-result-object v0
 
-    .line 686
     .end local v0    # "date":Ljava/lang/CharSequence;
     :cond_0
     return-object v0
@@ -257,18 +236,15 @@
     .locals 4
 
     .prologue
-    .line 593
     invoke-virtual {p0}, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->getFocusedVirtualView()I
 
     move-result v0
 
-    .line 594
     .local v0, "focusedVirtualView":I
     const/high16 v1, -0x80000000
 
     if-eq v0, v1, :cond_0
 
-    .line 595
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     invoke-virtual {p0, v1}, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
@@ -281,7 +257,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/view/accessibility/AccessibilityNodeProvider;->performAction(IILandroid/os/Bundle;)Z
 
-    .line 600
     :cond_0
     return-void
 .end method
@@ -292,7 +267,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 604
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     # invokes: Landroid/widget/SimpleMonthView;->getDayFromLocation(FF)I
@@ -300,11 +274,9 @@
 
     move-result v0
 
-    .line 605
     .local v0, "day":I
     if-ltz v0, :cond_0
 
-    .line 608
     .end local v0    # "day":I
     :goto_0
     return v0
@@ -321,7 +293,6 @@
     .param p1, "virtualViewIds"    # Landroid/util/IntArray;
 
     .prologue
-    .line 613
     const/4 v0, 0x1
 
     .local v0, "day":I
@@ -335,15 +306,12 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 614
     invoke-virtual {p1, v0}, Landroid/util/IntArray;->add(I)V
 
-    .line 613
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 616
     :cond_0
     return-void
 .end method
@@ -355,28 +323,23 @@
     .param p3, "arguments"    # Landroid/os/Bundle;
 
     .prologue
-    .line 640
     packed-switch p2, :pswitch_data_0
 
-    .line 646
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 642
     :pswitch_0
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     # invokes: Landroid/widget/SimpleMonthView;->onDayClick(I)V
     invoke-static {v0, p1}, Landroid/widget/SimpleMonthView;->access$300(Landroid/widget/SimpleMonthView;I)V
 
-    .line 643
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 640
     :pswitch_data_0
     .packed-switch 0x10
         :pswitch_0
@@ -389,14 +352,12 @@
     .param p2, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 620
     invoke-direct {p0, p1}, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->getItemDescription(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 621
     return-void
 .end method
 
@@ -406,29 +367,24 @@
     .param p2, "node"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 625
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->mTempRect:Landroid/graphics/Rect;
 
     invoke-direct {p0, p1, v0}, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->getItemBounds(ILandroid/graphics/Rect;)V
 
-    .line 627
     invoke-direct {p0, p1}, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->getItemDescription(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 628
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInParent(Landroid/graphics/Rect;)V
 
-    .line 629
     const/16 v0, 0x10
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(I)V
 
-    .line 631
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     # getter for: Landroid/widget/SimpleMonthView;->mSelectedDay:I
@@ -438,12 +394,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 632
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setSelected(Z)V
 
-    .line 635
     :cond_0
     return-void
 .end method
@@ -453,7 +407,6 @@
     .param p1, "virtualViewId"    # I
 
     .prologue
-    .line 588
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
     invoke-virtual {p0, v0}, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
@@ -466,6 +419,5 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/view/accessibility/AccessibilityNodeProvider;->performAction(IILandroid/os/Bundle;)Z
 
-    .line 590
     return-void
 .end method

@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput-object p1, p0, Landroid/hardware/display/IVirtualDisplayCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 73
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/hardware/display/IVirtualDisplayCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 80
     const-string v0, "android.hardware.display.IVirtualDisplayCallback"
 
     return-object v0
@@ -68,19 +63,16 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 92
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.hardware.display.IVirtualDisplayCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 93
     iget-object v1, p0, Landroid/hardware/display/IVirtualDisplayCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -93,13 +85,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 96
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 98
     return-void
 
-    .line 96
     :catchall_0
     move-exception v1
 
@@ -117,19 +106,16 @@
     .end annotation
 
     .prologue
-    .line 105
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 107
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.hardware.display.IVirtualDisplayCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 108
     iget-object v1, p0, Landroid/hardware/display/IVirtualDisplayCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -142,13 +128,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 111
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 113
     return-void
 
-    .line 111
     :catchall_0
     move-exception v1
 
@@ -166,19 +149,16 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 124
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.hardware.display.IVirtualDisplayCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 125
     iget-object v1, p0, Landroid/hardware/display/IVirtualDisplayCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -191,13 +171,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 130
     return-void
 
-    .line 128
     :catchall_0
     move-exception v1
 

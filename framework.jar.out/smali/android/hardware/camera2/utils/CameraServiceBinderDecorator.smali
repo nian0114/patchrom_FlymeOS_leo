@@ -20,10 +20,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/hardware/camera2/utils/CameraBinderDecorator;-><init>()V
 
-    .line 35
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .end annotation
 
     .prologue
-    .line 68
     .local p0, "obj":Ljava/lang/Object;, "TT;"
     new-instance v0, Landroid/hardware/camera2/utils/CameraServiceBinderDecorator$CameraServiceBinderDecoratorListener;
 

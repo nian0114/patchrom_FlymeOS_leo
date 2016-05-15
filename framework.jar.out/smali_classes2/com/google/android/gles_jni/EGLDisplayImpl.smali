@@ -13,13 +13,10 @@
     .param p1, "dpy"    # J
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljavax/microedition/khronos/egl/EGLDisplay;-><init>()V
 
-    .line 25
     iput-wide p1, p0, Lcom/google/android/gles_jni/EGLDisplayImpl;->mEGLDisplay:J
 
-    .line 26
     return-void
 .end method
 
@@ -34,15 +31,12 @@
 
     const/4 v2, 0x0
 
-    .line 30
     if-ne p0, p1, :cond_1
 
-    .line 35
     :cond_0
     :goto_0
     return v1
 
-    .line 31
     :cond_1
     if-eqz p1, :cond_2
 
@@ -64,10 +58,8 @@
     :cond_3
     move-object v0, p1
 
-    .line 33
     check-cast v0, Lcom/google/android/gles_jni/EGLDisplayImpl;
 
-    .line 35
     .local v0, "that":Lcom/google/android/gles_jni/EGLDisplayImpl;
     iget-wide v4, p0, Lcom/google/android/gles_jni/EGLDisplayImpl;->mEGLDisplay:J
 
@@ -86,10 +78,8 @@
     .locals 6
 
     .prologue
-    .line 45
     const/16 v0, 0x11
 
-    .line 46
     .local v0, "result":I
     iget-wide v2, p0, Lcom/google/android/gles_jni/EGLDisplayImpl;->mEGLDisplay:J
 
@@ -105,6 +95,5 @@
 
     add-int/lit16 v0, v1, 0x20f
 
-    .line 47
     return v0
 .end method

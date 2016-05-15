@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "x0"    # Landroid/widget/Filter$1;
 
     .prologue
-    .line 294
     invoke-direct {p0}, Landroid/widget/Filter$RequestArguments;-><init>()V
 
     return-void

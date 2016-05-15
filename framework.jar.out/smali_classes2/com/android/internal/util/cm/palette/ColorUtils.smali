@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,24 +24,20 @@
     .param p0, "hsl"    # [F
 
     .prologue
-    .line 172
     const/4 v10, 0x0
 
     aget v3, p0, v10
 
-    .line 173
     .local v3, "h":F
     const/4 v10, 0x1
 
     aget v8, p0, v10
 
-    .line 174
     .local v8, "s":F
     const/4 v10, 0x2
 
     aget v5, p0, v10
 
-    .line 176
     .local v5, "l":F
     const/high16 v10, 0x3f800000    # 1.0f
 
@@ -62,7 +57,6 @@
 
     mul-float v1, v10, v8
 
-    .line 177
     .local v1, "c":F
     const/high16 v10, 0x3f000000    # 0.5f
 
@@ -70,7 +64,6 @@
 
     sub-float v6, v5, v10
 
-    .line 178
     .local v6, "m":F
     const/high16 v10, 0x3f800000    # 1.0f
 
@@ -94,13 +87,11 @@
 
     mul-float v9, v1, v10
 
-    .line 180
     .local v9, "x":F
     float-to-int v10, v3
 
     div-int/lit8 v4, v10, 0x3c
 
-    .line 182
     .local v4, "hueSegment":I
     const/4 v7, 0x0
 
@@ -110,11 +101,9 @@
     .local v2, "g":I
     const/4 v0, 0x0
 
-    .line 184
     .local v0, "b":I
     packed-switch v4, :pswitch_data_0
 
-    .line 218
     :goto_0
     const/4 v10, 0x0
 
@@ -128,7 +117,6 @@
 
     move-result v7
 
-    .line 219
     const/4 v10, 0x0
 
     const/16 v11, 0xff
@@ -141,7 +129,6 @@
 
     move-result v2
 
-    .line 220
     const/4 v10, 0x0
 
     const/16 v11, 0xff
@@ -154,14 +141,12 @@
 
     move-result v0
 
-    .line 222
     invoke-static {v7, v2, v0}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v10
 
     return v10
 
-    .line 186
     :pswitch_0
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -173,7 +158,6 @@
 
     move-result v7
 
-    .line 187
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v9, v6
@@ -184,7 +168,6 @@
 
     move-result v2
 
-    .line 188
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -193,10 +176,8 @@
 
     move-result v0
 
-    .line 189
     goto :goto_0
 
-    .line 191
     :pswitch_1
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -208,7 +189,6 @@
 
     move-result v7
 
-    .line 192
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v1, v6
@@ -219,7 +199,6 @@
 
     move-result v2
 
-    .line 193
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -228,10 +207,8 @@
 
     move-result v0
 
-    .line 194
     goto :goto_0
 
-    .line 196
     :pswitch_2
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -241,7 +218,6 @@
 
     move-result v7
 
-    .line 197
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v1, v6
@@ -252,7 +228,6 @@
 
     move-result v2
 
-    .line 198
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v9, v6
@@ -263,10 +238,8 @@
 
     move-result v0
 
-    .line 199
     goto :goto_0
 
-    .line 201
     :pswitch_3
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -276,7 +249,6 @@
 
     move-result v7
 
-    .line 202
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v9, v6
@@ -287,7 +259,6 @@
 
     move-result v2
 
-    .line 203
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v1, v6
@@ -298,10 +269,8 @@
 
     move-result v0
 
-    .line 204
     goto/16 :goto_0
 
-    .line 206
     :pswitch_4
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -313,7 +282,6 @@
 
     move-result v7
 
-    .line 207
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -322,7 +290,6 @@
 
     move-result v2
 
-    .line 208
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v1, v6
@@ -333,10 +300,8 @@
 
     move-result v0
 
-    .line 209
     goto/16 :goto_0
 
-    .line 212
     :pswitch_5
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -348,7 +313,6 @@
 
     move-result v7
 
-    .line 213
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -357,7 +321,6 @@
 
     move-result v2
 
-    .line 214
     const/high16 v10, 0x437f0000    # 255.0f
 
     add-float v11, v9, v6
@@ -370,7 +333,6 @@
 
     goto/16 :goto_0
 
-    .line 184
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -391,14 +353,12 @@
     .param p3, "hsl"    # [F
 
     .prologue
-    .line 140
     int-to-float v9, p0
 
     const/high16 v10, 0x437f0000    # 255.0f
 
     div-float v7, v9, v10
 
-    .line 141
     .local v7, "rf":F
     int-to-float v9, p1
 
@@ -406,7 +366,6 @@
 
     div-float v2, v9, v10
 
-    .line 142
     .local v2, "gf":F
     int-to-float v9, p2
 
@@ -414,7 +373,6 @@
 
     div-float v0, v9, v10
 
-    .line 144
     .local v0, "bf":F
     invoke-static {v2, v0}, Ljava/lang/Math;->max(FF)F
 
@@ -424,7 +382,6 @@
 
     move-result v5
 
-    .line 145
     .local v5, "max":F
     invoke-static {v2, v0}, Ljava/lang/Math;->min(FF)F
 
@@ -434,11 +391,9 @@
 
     move-result v6
 
-    .line 146
     .local v6, "min":F
     sub-float v1, v5, v6
 
-    .line 149
     .local v1, "deltaMaxMin":F
     add-float v9, v5, v6
 
@@ -446,19 +401,16 @@
 
     div-float v4, v9, v10
 
-    .line 151
     .local v4, "l":F
     cmpl-float v9, v5, v6
 
     if-nez v9, :cond_0
 
-    .line 153
     const/4 v8, 0x0
 
     .local v8, "s":F
     move v3, v8
 
-    .line 166
     .local v3, "h":F
     :goto_0
     const/4 v9, 0x0
@@ -473,20 +425,16 @@
 
     aput v10, p3, v9
 
-    .line 167
     const/4 v9, 0x1
 
     aput v8, p3, v9
 
-    .line 168
     const/4 v9, 0x2
 
     aput v4, p3, v9
 
-    .line 169
     return-void
 
-    .line 155
     .end local v3    # "h":F
     .end local v8    # "s":F
     :cond_0
@@ -494,7 +442,6 @@
 
     if-nez v9, :cond_1
 
-    .line 156
     sub-float v9, v2, v0
 
     div-float/2addr v9, v1
@@ -503,7 +450,6 @@
 
     rem-float v3, v9, v10
 
-    .line 163
     .restart local v3    # "h":F
     :goto_1
     const/high16 v9, 0x3f800000    # 1.0f
@@ -527,7 +473,6 @@
     .restart local v8    # "s":F
     goto :goto_0
 
-    .line 157
     .end local v3    # "h":F
     .end local v8    # "s":F
     :cond_1
@@ -535,7 +480,6 @@
 
     if-nez v9, :cond_2
 
-    .line 158
     sub-float v9, v0, v7
 
     div-float/2addr v9, v1
@@ -547,7 +491,6 @@
     .restart local v3    # "h":F
     goto :goto_1
 
-    .line 160
     .end local v3    # "h":F
     :cond_2
     sub-float v9, v7, v2
@@ -572,14 +515,12 @@
 
     const-wide v6, 0x3fa999999999999aL    # 0.05
 
-    .line 68
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v4
 
     if-eq v4, v5, :cond_0
 
-    .line 69
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "background can not be translucent"
@@ -588,7 +529,6 @@
 
     throw v4
 
-    .line 71
     :cond_0
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
@@ -596,12 +536,10 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 73
     invoke-static {p0, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->compositeColors(II)I
 
     move-result p0
 
-    .line 76
     :cond_1
     invoke-static {p0}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateLuminance(I)D
 
@@ -609,7 +547,6 @@
 
     add-double v0, v4, v6
 
-    .line 77
     .local v0, "luminance1":D
     invoke-static {p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateLuminance(I)D
 
@@ -617,7 +554,6 @@
 
     add-double v2, v4, v6
 
-    .line 80
     .local v2, "luminance2":D
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(DD)D
 
@@ -637,7 +573,6 @@
     .param p0, "color"    # I
 
     .prologue
-    .line 50
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v6
@@ -648,7 +583,6 @@
 
     div-double v4, v6, v8
 
-    .line 51
     .local v4, "red":D
     const-wide v6, 0x3fa41c8216c61523L    # 0.03928
 
@@ -660,7 +594,6 @@
 
     div-double/2addr v4, v6
 
-    .line 53
     :goto_0
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
@@ -672,7 +605,6 @@
 
     div-double v2, v6, v8
 
-    .line 54
     .local v2, "green":D
     const-wide v6, 0x3fa41c8216c61523L    # 0.03928
 
@@ -684,7 +616,6 @@
 
     div-double/2addr v2, v6
 
-    .line 56
     :goto_1
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
@@ -696,7 +627,6 @@
 
     div-double v0, v6, v8
 
-    .line 57
     .local v0, "blue":D
     const-wide v6, 0x3fa41c8216c61523L    # 0.03928
 
@@ -708,7 +638,6 @@
 
     div-double/2addr v0, v6
 
-    .line 59
     :goto_2
     const-wide v6, 0x3fcb367a0f9096bcL    # 0.2126
 
@@ -728,7 +657,6 @@
 
     return-wide v6
 
-    .line 51
     .end local v0    # "blue":D
     .end local v2    # "green":D
     :cond_0
@@ -748,7 +676,6 @@
 
     goto :goto_0
 
-    .line 54
     .restart local v2    # "green":D
     :cond_1
     const-wide v6, 0x3fac28f5c28f5c29L    # 0.055
@@ -767,7 +694,6 @@
 
     goto :goto_1
 
-    .line 57
     .restart local v0    # "blue":D
     :cond_2
     const-wide v6, 0x3fac28f5c28f5c29L    # 0.055
@@ -797,7 +723,6 @@
 
     const/high16 v9, 0x3f800000    # 1.0f
 
-    .line 33
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v6
@@ -806,7 +731,6 @@
 
     div-float v1, v6, v7
 
-    .line 34
     .local v1, "alpha1":F
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
@@ -816,7 +740,6 @@
 
     div-float v2, v6, v7
 
-    .line 36
     .local v2, "alpha2":F
     add-float v6, v1, v2
 
@@ -824,7 +747,6 @@
 
     mul-float v0, v6, v7
 
-    .line 37
     .local v0, "a":F
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
@@ -848,7 +770,6 @@
 
     add-float v5, v6, v7
 
-    .line 38
     .local v5, "r":F
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
@@ -872,7 +793,6 @@
 
     add-float v4, v6, v7
 
-    .line 39
     .local v4, "g":F
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
@@ -896,7 +816,6 @@
 
     add-float v3, v6, v7
 
-    .line 41
     .local v3, "b":F
     float-to-int v6, v0
 
@@ -924,14 +843,12 @@
 
     const/16 v8, 0xa
 
-    .line 90
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v5
 
     if-eq v5, v9, :cond_0
 
-    .line 91
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     const-string v8, "background can not be translucent"
@@ -940,44 +857,35 @@
 
     throw v5
 
-    .line 95
     :cond_0
     invoke-static {p0, v9}, Lcom/android/internal/util/cm/palette/ColorUtils;->modifyAlpha(II)I
 
     move-result v4
 
-    .line 96
     .local v4, "testForeground":I
     invoke-static {v4, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateContrast(II)D
 
     move-result-wide v6
 
-    .line 97
     .local v6, "testRatio":D
     cmpg-double v5, v6, p2
 
     if-gez v5, :cond_2
 
-    .line 99
     const/4 v0, -0x1
 
-    .line 124
     :cond_1
     return v0
 
-    .line 103
     :cond_2
     const/4 v2, 0x0
 
-    .line 104
     .local v2, "numIterations":I
     const/4 v1, 0x0
 
-    .line 105
     .local v1, "minAlpha":I
     const/16 v0, 0xff
 
-    .line 107
     .local v0, "maxAlpha":I
     :goto_0
     if-gt v2, v8, :cond_1
@@ -986,38 +894,30 @@
 
     if-le v5, v8, :cond_1
 
-    .line 109
     add-int v5, v1, v0
 
     div-int/lit8 v3, v5, 0x2
 
-    .line 111
     .local v3, "testAlpha":I
     invoke-static {p0, v3}, Lcom/android/internal/util/cm/palette/ColorUtils;->modifyAlpha(II)I
 
     move-result v4
 
-    .line 112
     invoke-static {v4, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateContrast(II)D
 
     move-result-wide v6
 
-    .line 114
     cmpg-double v5, v6, p2
 
     if-gez v5, :cond_3
 
-    .line 115
     move v1, v3
 
-    .line 120
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
-    .line 121
     goto :goto_0
 
-    .line 117
     :cond_3
     move v0, v3
 
@@ -1031,23 +931,19 @@
     .param p2, "minContrastRatio"    # F
 
     .prologue
-    .line 128
     float-to-double v2, p2
 
     invoke-static {p1, p0, v2, v3}, Lcom/android/internal/util/cm/palette/ColorUtils;->findMinimumAlpha(IID)I
 
     move-result v0
 
-    .line 131
     .local v0, "minAlpha":I
     if-ltz v0, :cond_0
 
-    .line 132
     invoke-static {p1, v0}, Lcom/android/internal/util/cm/palette/ColorUtils;->modifyAlpha(II)I
 
     move-result v1
 
-    .line 136
     :goto_0
     return v1
 
@@ -1063,7 +959,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 229
     const v0, 0xffffff
 
     and-int/2addr v0, p0

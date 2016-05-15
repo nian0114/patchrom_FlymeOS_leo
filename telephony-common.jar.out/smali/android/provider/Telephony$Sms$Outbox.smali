@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 719
     const-string v0, "content://sms/outbox"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -45,10 +44,8 @@
     .locals 0
 
     .prologue
-    .line 713
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 714
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .param p7, "threadId"    # J
 
     .prologue
-    .line 762
     sget-object v3, Landroid/provider/Telephony$Sms$Outbox;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v8, 0x1
@@ -103,7 +99,6 @@
     .param p6, "threadId"    # J
 
     .prologue
-    .line 741
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()I
 
     move-result v1

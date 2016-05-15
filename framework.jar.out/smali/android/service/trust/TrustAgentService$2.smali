@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 251
     iput-object p1, p0, Landroid/service/trust/TrustAgentService$2;->this$0:Landroid/service/trust/TrustAgentService;
 
     iput-object p2, p0, Landroid/service/trust/TrustAgentService$2;->val$message:Ljava/lang/CharSequence;
@@ -52,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 254
     iget-object v0, p0, Landroid/service/trust/TrustAgentService$2;->this$0:Landroid/service/trust/TrustAgentService;
 
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$2;->val$message:Ljava/lang/CharSequence;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/service/trust/TrustAgentService;->grantTrust(Ljava/lang/CharSequence;JZ)V
 
-    .line 255
     return-void
 .end method

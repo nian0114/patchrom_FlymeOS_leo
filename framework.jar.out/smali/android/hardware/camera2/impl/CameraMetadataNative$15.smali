@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 942
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 945
     .local p2, "value":Ljava/lang/Object;, "TT;"
     check-cast p2, [I
 
@@ -54,6 +52,5 @@
     # invokes: Landroid/hardware/camera2/impl/CameraMetadataNative;->setAvailableFormats([I)Z
     invoke-static {p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->access$900(Landroid/hardware/camera2/impl/CameraMetadataNative;[I)Z
 
-    .line 946
     return-void
 .end method

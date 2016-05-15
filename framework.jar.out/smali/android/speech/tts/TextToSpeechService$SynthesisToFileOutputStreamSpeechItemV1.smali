@@ -32,16 +32,12 @@
     .param p8, "fileOutputStream"    # Ljava/io/FileOutputStream;
 
     .prologue
-    .line 970
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItemV1;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 971
     invoke-direct/range {p0 .. p7}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItemV1;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;IILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 972
     iput-object p8, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItemV1;->mFileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 973
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 977
     new-instance v0, Landroid/speech/tts/FileSynthesisCallback;
 
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItemV1;->mFileOutputStream:Ljava/io/FileOutputStream;
@@ -75,13 +70,10 @@
     .locals 3
 
     .prologue
-    .line 983
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItemV1;->dispatchOnStart()V
 
-    .line 984
     invoke-super {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItemV1;->playImpl()V
 
-    .line 986
     :try_start_0
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItemV1;->mFileOutputStream:Ljava/io/FileOutputStream;
 
@@ -89,15 +81,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 990
     :goto_0
     return-void
 
-    .line 987
     :catch_0
     move-exception v0
 
-    .line 988
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "TextToSpeechService"
 

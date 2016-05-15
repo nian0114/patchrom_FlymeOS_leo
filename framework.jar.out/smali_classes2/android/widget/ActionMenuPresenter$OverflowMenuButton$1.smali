@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 596
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iput-object p3, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->val$this$0:Landroid/widget/ActionMenuPresenter;
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 599
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
@@ -54,10 +52,8 @@
 
     if-nez v0, :cond_0
 
-    .line 600
     const/4 v0, 0x0
 
-    .line 603
     :goto_0
     return-object v0
 
@@ -82,14 +78,12 @@
     .locals 1
 
     .prologue
-    .line 608
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-virtual {v0}, Landroid/widget/ActionMenuPresenter;->showOverflowMenu()Z
 
-    .line 609
     const/4 v0, 0x1
 
     return v0
@@ -99,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 617
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
@@ -111,14 +104,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 618
     const/4 v0, 0x0
 
-    .line 622
     :goto_0
     return v0
 
-    .line 621
     :cond_0
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
@@ -126,7 +116,6 @@
 
     invoke-virtual {v0}, Landroid/widget/ActionMenuPresenter;->hideOverflowMenu()Z
 
-    .line 622
     const/4 v0, 0x1
 
     goto :goto_0

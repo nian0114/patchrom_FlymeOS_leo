@@ -41,10 +41,8 @@
     .locals 2
 
     .prologue
-    .line 48
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 86
     new-instance v0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper;
 
     const/4 v1, 0x0
@@ -53,7 +51,6 @@
 
     iput-object v0, p0, Landroid/service/carrier/CarrierMessagingService;->mWrapper:Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper;
 
-    .line 347
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 202
     const-string v0, "android.service.carrier.CarrierMessagingService"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -77,10 +73,8 @@
 
     if-nez v0, :cond_0
 
-    .line 203
     const/4 v0, 0x0
 
-    .line 205
     :goto_0
     return-object v0
 
@@ -109,7 +103,6 @@
     .end annotation
 
     .prologue
-    .line 195
     .local p4, "callback":Landroid/service/carrier/CarrierMessagingService$ResultCallback;, "Landroid/service/carrier/CarrierMessagingService$ResultCallback<Ljava/lang/Integer;>;"
     const/4 v0, 0x1
 
@@ -122,11 +115,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 198
     :goto_0
     return-void
 
-    .line 196
     :catch_0
     move-exception v0
 
@@ -153,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 102
     .local p5, "callback":Landroid/service/carrier/CarrierMessagingService$ResultCallback;, "Landroid/service/carrier/CarrierMessagingService$ResultCallback<Ljava/lang/Boolean;>;"
     const/4 v0, 0x1
 
@@ -166,11 +156,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 103
     :catch_0
     move-exception v0
 
@@ -196,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 139
     .local p5, "callback":Landroid/service/carrier/CarrierMessagingService$ResultCallback;, "Landroid/service/carrier/CarrierMessagingService$ResultCallback<Landroid/service/carrier/CarrierMessagingService$SendSmsResult;>;"
     :try_start_0
     new-instance v0, Landroid/service/carrier/CarrierMessagingService$SendSmsResult;
@@ -211,11 +198,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 142
     :goto_0
     return-void
 
-    .line 140
     :catch_0
     move-exception v0
 
@@ -241,7 +226,6 @@
     .end annotation
 
     .prologue
-    .line 176
     .local p4, "callback":Landroid/service/carrier/CarrierMessagingService$ResultCallback;, "Landroid/service/carrier/CarrierMessagingService$ResultCallback<Landroid/service/carrier/CarrierMessagingService$SendMmsResult;>;"
     :try_start_0
     new-instance v0, Landroid/service/carrier/CarrierMessagingService$SendMmsResult;
@@ -256,11 +240,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 179
     :goto_0
     return-void
 
-    .line 177
     :catch_0
     move-exception v0
 
@@ -287,7 +269,6 @@
     .end annotation
 
     .prologue
-    .line 157
     .local p1, "parts":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p4, "callback":Landroid/service/carrier/CarrierMessagingService$ResultCallback;, "Landroid/service/carrier/CarrierMessagingService$ResultCallback<Landroid/service/carrier/CarrierMessagingService$SendMultipartSmsResult;>;"
     :try_start_0
@@ -303,11 +284,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 161
     :goto_0
     return-void
 
-    .line 159
     :catch_0
     move-exception v0
 
@@ -333,7 +312,6 @@
     .end annotation
 
     .prologue
-    .line 120
     .local p4, "callback":Landroid/service/carrier/CarrierMessagingService$ResultCallback;, "Landroid/service/carrier/CarrierMessagingService$ResultCallback<Landroid/service/carrier/CarrierMessagingService$SendSmsResult;>;"
     :try_start_0
     new-instance v0, Landroid/service/carrier/CarrierMessagingService$SendSmsResult;
@@ -348,11 +326,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 123
     :goto_0
     return-void
 
-    .line 121
     :catch_0
     move-exception v0
 

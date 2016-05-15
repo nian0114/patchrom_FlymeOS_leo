@@ -27,16 +27,12 @@
     .param p2, "extraDataSize"    # I
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput p1, p0, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->mSourceType:I
 
-    .line 67
     iput p2, p0, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->mExtraDataSize:I
 
-    .line 68
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .param p1, "includeType"    # Z
 
     .prologue
-    .line 73
     if-eqz p1, :cond_0
 
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->mExtraDataSize:I
@@ -73,10 +68,8 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 77
     if-eqz p1, :cond_0
 
-    .line 86
     add-int/lit8 v0, p3, 0x1
 
     .end local p3    # "index":I
@@ -89,13 +82,11 @@
 
     move p3, v0
 
-    .line 88
     .end local v0    # "index":I
     .restart local p3    # "index":I
     :cond_0
     invoke-virtual {p0, p2, p3}, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->extraParamToByteArray([BI)I
 
-    .line 89
     invoke-virtual {p0, p1}, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->getDataSize(Z)I
 
     move-result v1

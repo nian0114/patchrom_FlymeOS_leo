@@ -41,38 +41,28 @@
 
     const/4 v4, 0x0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mPatterns:[Ljava/util/regex/Pattern;
 
-    .line 39
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mProfiles:[Ljava/lang/String;
 
-    .line 41
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mCurrentProfile:Ljava/lang/String;
 
-    .line 43
     iput-boolean v4, p0, Lcom/android/server/power/PerformanceManager;->mProfileSetByUser:Z
 
-    .line 44
     iput-boolean v4, p0, Lcom/android/server/power/PerformanceManager;->mProfilesEnabled:Z
 
-    .line 45
     iput-boolean v4, p0, Lcom/android/server/power/PerformanceManager;->mUsePowerHAL:Z
 
-    .line 47
     new-instance v5, Ljava/lang/Object;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mLock:Ljava/lang/Object;
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/power/PerformanceManager;->mContext:Landroid/content/Context;
 
-    .line 52
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -83,7 +73,6 @@
 
     move-result-object v0
 
-    .line 54
     .local v0, "activities":[Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -91,21 +80,18 @@
 
     if-lez v5, :cond_1
 
-    .line 55
     array-length v5, v0
 
     new-array v5, v5, [Ljava/util/regex/Pattern;
 
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mPatterns:[Ljava/util/regex/Pattern;
 
-    .line 56
     array-length v5, v0
 
     new-array v5, v5, [Ljava/lang/String;
 
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mProfiles:[Ljava/lang/String;
 
-    .line 57
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -114,7 +100,6 @@
 
     if-ge v1, v5, :cond_1
 
-    .line 58
     aget-object v5, v0, v1
 
     const-string v6, ","
@@ -123,7 +108,6 @@
 
     move-result-object v2
 
-    .line 59
     .local v2, "info":[Ljava/lang/String;
     array-length v5, v2
 
@@ -131,7 +115,6 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 60
     iget-object v5, p0, Lcom/android/server/power/PerformanceManager;->mPatterns:[Ljava/util/regex/Pattern;
 
     aget-object v6, v2, v4
@@ -142,20 +125,17 @@
 
     aput-object v6, v5, v1
 
-    .line 61
     iget-object v5, p0, Lcom/android/server/power/PerformanceManager;->mProfiles:[Ljava/lang/String;
 
     aget-object v6, v2, v3
 
     aput-object v6, v5, v1
 
-    .line 57
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 66
     .end local v1    # "i":I
     .end local v2    # "info":[Ljava/lang/String;
     :cond_1
@@ -171,7 +151,6 @@
 
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileDefault:Ljava/lang/String;
 
-    .line 68
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -184,7 +163,6 @@
 
     iput-object v5, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileProperty:Ljava/lang/String;
 
-    .line 70
     iget-object v5, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileDefault:Ljava/lang/String;
 
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -204,12 +182,10 @@
     :goto_1
     iput-boolean v3, p0, Lcom/android/server/power/PerformanceManager;->mProfilesEnabled:Z
 
-    .line 73
     iget-boolean v3, p0, Lcom/android/server/power/PerformanceManager;->mProfilesEnabled:Z
 
     if-eqz v3, :cond_2
 
-    .line 77
     const-string v3, "powerhal"
 
     iget-object v4, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileProperty:Ljava/lang/String;
@@ -220,14 +196,12 @@
 
     iput-boolean v3, p0, Lcom/android/server/power/PerformanceManager;->mUsePowerHAL:Z
 
-    .line 79
     :cond_2
     return-void
 
     :cond_3
     move v3, v4
 
-    .line 70
     goto :goto_1
 .end method
 
@@ -236,10 +210,8 @@
     .param p1, "componentName"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     if-eqz p1, :cond_1
 
-    .line 134
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -250,7 +222,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 135
     iget-object v1, p0, Lcom/android/server/power/PerformanceManager;->mPatterns:[Ljava/util/regex/Pattern;
 
     aget-object v1, v1, v0
@@ -265,24 +236,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 136
     iget-object v1, p0, Lcom/android/server/power/PerformanceManager;->mProfiles:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
-    .line 140
     .end local v0    # "i":I
     :goto_1
     return-object v1
 
-    .line 134
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 140
     .end local v0    # "i":I
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileDefault:Ljava/lang/String;
@@ -296,7 +263,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 99
     iget-boolean v1, p0, Lcom/android/server/power/PerformanceManager;->mProfilesEnabled:Z
 
     if-eqz v1, :cond_0
@@ -333,15 +299,12 @@
     .param p1, "profile"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lcom/android/server/power/PerformanceManager;->mCurrentProfile:Ljava/lang/String;
 
-    .line 92
     iget-boolean v0, p0, Lcom/android/server/power/PerformanceManager;->mUsePowerHAL:Z
 
     if-eqz v0, :cond_0
 
-    .line 93
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -352,11 +315,9 @@
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->nativeSetPowerProfile(I)V
 
-    .line 97
     :goto_0
     return-void
 
-    .line 95
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileProperty:Ljava/lang/String;
 
@@ -370,16 +331,13 @@
     .param p1, "profile"    # Ljava/lang/String;
 
     .prologue
-    .line 120
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 122
     .local v0, "token":J
     invoke-direct {p0, p1}, Lcom/android/server/power/PerformanceManager;->selectProfile(Ljava/lang/String;)V
 
-    .line 123
     iget-object v2, p0, Lcom/android/server/power/PerformanceManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -390,10 +348,8 @@
 
     invoke-static {v2, v3, p1}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 125
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 126
     return-void
 .end method
 
@@ -404,35 +360,29 @@
     .param p1, "componentName"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     invoke-direct {p0}, Lcom/android/server/power/PerformanceManager;->hasAppProfiles()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 161
     :goto_0
     return-void
 
-    .line 148
     :cond_0
     iget-object v2, p0, Lcom/android/server/power/PerformanceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 150
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/power/PerformanceManager;->mProfileSetByUser:Z
 
     if-eqz v1, :cond_1
 
-    .line 151
     monitor-exit v2
 
     goto :goto_0
 
-    .line 160
     :catchall_0
     move-exception v1
 
@@ -442,14 +392,12 @@
 
     throw v1
 
-    .line 154
     :cond_1
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/power/PerformanceManager;->getProfileForActivity(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 155
     .local v0, "forApp":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/power/PerformanceManager;->mCurrentProfile:Ljava/lang/String;
 
@@ -459,16 +407,13 @@
 
     if-eqz v1, :cond_2
 
-    .line 156
     monitor-exit v2
 
     goto :goto_0
 
-    .line 159
     :cond_2
     invoke-direct {p0, v0}, Lcom/android/server/power/PerformanceManager;->setPowerProfileLocked(Ljava/lang/String;)V
 
-    .line 160
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -480,7 +425,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/server/power/PerformanceManager;->mCurrentProfile:Ljava/lang/String;
 
     return-object v0
@@ -490,17 +434,14 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lcom/android/server/power/PerformanceManager;->mProfilesEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileDefault:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/power/PerformanceManager;->setPowerProfileLocked(Ljava/lang/String;)V
 
-    .line 87
     :cond_0
     return-void
 .end method
@@ -514,24 +455,20 @@
 
     const/4 v0, 0x0
 
-    .line 105
     iget-boolean v2, p0, Lcom/android/server/power/PerformanceManager;->mProfilesEnabled:Z
 
     if-nez v2, :cond_1
 
-    .line 106
     const-string v1, "PerformanceManager"
 
     const-string v2, "Power profiles not enabled on this device"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     :cond_0
     :goto_0
     return v0
 
-    .line 109
     :cond_1
     if-eqz p1, :cond_0
 
@@ -545,12 +482,10 @@
 
     if-nez v2, :cond_0
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/power/PerformanceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 113
     :try_start_0
     iget-object v3, p0, Lcom/android/server/power/PerformanceManager;->mPerfProfileDefault:Ljava/lang/String;
 
@@ -565,18 +500,14 @@
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/power/PerformanceManager;->mProfileSetByUser:Z
 
-    .line 114
     invoke-direct {p0, p1}, Lcom/android/server/power/PerformanceManager;->setPowerProfileLocked(Ljava/lang/String;)V
 
-    .line 115
     monitor-exit v2
 
     move v0, v1
 
-    .line 116
     goto :goto_0
 
-    .line 115
     :catchall_0
     move-exception v0
 

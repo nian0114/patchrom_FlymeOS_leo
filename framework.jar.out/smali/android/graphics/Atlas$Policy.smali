@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Landroid/graphics/Atlas$1;
 
     .prologue
-    .line 163
     invoke-direct {p0}, Landroid/graphics/Atlas$Policy;-><init>()V
 
     return-void

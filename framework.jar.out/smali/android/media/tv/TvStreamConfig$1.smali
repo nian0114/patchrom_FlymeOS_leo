@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 50
     :try_start_0
     new-instance v1, Landroid/media/tv/TvStreamConfig$Builder;
 
@@ -97,15 +95,12 @@
 
     move-result-object v1
 
-    .line 58
     :goto_0
     return-object v1
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Ljava/lang/Exception;
     sget-object v1, Landroid/media/tv/TvStreamConfig;->TAG:Ljava/lang/String;
 
@@ -113,7 +108,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 58
     const/4 v1, 0x0
 
     goto :goto_0
@@ -123,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Landroid/media/tv/TvStreamConfig$1;->createFromParcel(Landroid/os/Parcel;)Landroid/media/tv/TvStreamConfig;
 
     move-result-object v0
@@ -136,7 +129,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 64
     new-array v0, p1, [Landroid/media/tv/TvStreamConfig;
 
     return-object v0
@@ -146,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Landroid/media/tv/TvStreamConfig$1;->newArray(I)[Landroid/media/tv/TvStreamConfig;
 
     move-result-object v0

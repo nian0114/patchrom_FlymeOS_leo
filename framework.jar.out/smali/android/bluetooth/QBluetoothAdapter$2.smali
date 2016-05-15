@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 380
     iput-object p1, p0, Landroid/bluetooth/QBluetoothAdapter$2;->this$0:Landroid/bluetooth/QBluetoothAdapter;
 
     invoke-direct {p0}, Landroid/bluetooth/IQBluetoothManagerCallback$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 392
     iget-object v0, p0, Landroid/bluetooth/QBluetoothAdapter$2;->this$0:Landroid/bluetooth/QBluetoothAdapter;
 
     # getter for: Landroid/bluetooth/QBluetoothAdapter;->mManagerCallback:Landroid/bluetooth/IQBluetoothManagerCallback;
@@ -47,7 +45,6 @@
 
     monitor-enter v1
 
-    .line 393
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/QBluetoothAdapter$2;->this$0:Landroid/bluetooth/QBluetoothAdapter;
 
@@ -56,14 +53,13 @@
     # setter for: Landroid/bluetooth/QBluetoothAdapter;->mQService:Landroid/bluetooth/IQBluetooth;
     invoke-static {v0, v2}, Landroid/bluetooth/QBluetoothAdapter;->access$202(Landroid/bluetooth/QBluetoothAdapter;Landroid/bluetooth/IQBluetooth;)Landroid/bluetooth/IQBluetooth;
 
-    .line 394
     const-string v0, "QBluetoothAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onQBluetoothServiceDown: Adapter OFF: mService: "
+    const-string v3, "onQBluetoothServiceDown: Adapter OFF: mService: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,13 +99,10 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     monitor-exit v1
 
-    .line 396
     return-void
 
-    .line 395
     :catchall_0
     move-exception v0
 
@@ -125,7 +118,6 @@
     .param p1, "qcbluetoothService"    # Landroid/bluetooth/IQBluetooth;
 
     .prologue
-    .line 383
     iget-object v0, p0, Landroid/bluetooth/QBluetoothAdapter$2;->this$0:Landroid/bluetooth/QBluetoothAdapter;
 
     # getter for: Landroid/bluetooth/QBluetoothAdapter;->mManagerCallback:Landroid/bluetooth/IQBluetoothManagerCallback;
@@ -135,21 +127,19 @@
 
     monitor-enter v1
 
-    .line 385
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/QBluetoothAdapter$2;->this$0:Landroid/bluetooth/QBluetoothAdapter;
 
     # setter for: Landroid/bluetooth/QBluetoothAdapter;->mQService:Landroid/bluetooth/IQBluetooth;
     invoke-static {v0, p1}, Landroid/bluetooth/QBluetoothAdapter;->access$202(Landroid/bluetooth/QBluetoothAdapter;Landroid/bluetooth/IQBluetooth;)Landroid/bluetooth/IQBluetooth;
 
-    .line 386
     const-string v0, "QBluetoothAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onQBluetoothServiceUp: Adapter ON: mService: "
+    const-string v3, "onQBluetoothServiceUp: Adapter ON: mService: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -206,13 +196,10 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     monitor-exit v1
 
-    .line 388
     return-void
 
-    .line 387
     :catchall_0
     move-exception v0
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     return-void

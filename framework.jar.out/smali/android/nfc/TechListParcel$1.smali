@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 54
     .local v0, "count":I
     new-array v2, v0, [[Ljava/lang/String;
 
-    .line 55
     .local v2, "techLists":[[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -62,19 +58,16 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v1
 
-    .line 55
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 58
     :cond_0
     new-instance v3, Landroid/nfc/TechListParcel;
 
@@ -87,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 50
     invoke-virtual {p0, p1}, Landroid/nfc/TechListParcel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/TechListParcel;
 
     move-result-object v0
@@ -100,7 +92,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 63
     new-array v0, p1, [Landroid/nfc/TechListParcel;
 
     return-object v0
@@ -110,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 50
     invoke-virtual {p0, p1}, Landroid/nfc/TechListParcel$1;->newArray(I)[Landroid/nfc/TechListParcel;
 
     move-result-object v0

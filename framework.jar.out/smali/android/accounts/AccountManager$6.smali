@@ -29,7 +29,6 @@
     .param p3, "x1"    # Landroid/os/Handler;
 
     .prologue
-    .line 811
     .local p4, "x2":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$6;->this$0:Landroid/accounts/AccountManager;
 
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 813
     iget-object v0, p0, Landroid/accounts/AccountManager$6;->this$0:Landroid/accounts/AccountManager;
 
     # getter for: Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -74,10 +72,8 @@
     :goto_0
     invoke-interface {v1, v2, v3, v0}, Landroid/accounts/IAccountManager;->removeAccount(Landroid/accounts/IAccountManagerResponse;Landroid/accounts/Account;Z)V
 
-    .line 814
     return-void
 
-    .line 813
     :cond_0
     const/4 v0, 0x0
 

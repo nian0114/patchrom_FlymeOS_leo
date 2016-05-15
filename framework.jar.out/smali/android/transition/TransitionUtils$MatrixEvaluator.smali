@@ -42,20 +42,16 @@
     .prologue
     const/16 v1, 0x9
 
-    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 175
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempStartValues:[F
 
-    .line 177
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
-    .line 179
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -74,17 +70,14 @@
     .param p3, "endValue"    # Landroid/graphics/Matrix;
 
     .prologue
-    .line 183
     iget-object v2, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempStartValues:[F
 
     invoke-virtual {p2, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 184
     iget-object v2, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
     invoke-virtual {p3, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 185
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -93,7 +86,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 186
     iget-object v2, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
     aget v2, v2, v1
@@ -104,7 +96,6 @@
 
     sub-float v0, v2, v3
 
-    .line 187
     .local v0, "diff":F
     iget-object v2, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
@@ -118,12 +109,10 @@
 
     aput v3, v2, v1
 
-    .line 185
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 189
     .end local v0    # "diff":F
     :cond_0
     iget-object v2, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempMatrix:Landroid/graphics/Matrix;
@@ -132,7 +121,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Matrix;->setValues([F)V
 
-    .line 190
     iget-object v2, p0, Landroid/transition/TransitionUtils$MatrixEvaluator;->mTempMatrix:Landroid/graphics/Matrix;
 
     return-object v2
@@ -142,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 173
     check-cast p2, Landroid/graphics/Matrix;
 
     check-cast p3, Landroid/graphics/Matrix;

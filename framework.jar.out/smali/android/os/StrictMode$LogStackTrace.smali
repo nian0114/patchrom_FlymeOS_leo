@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1707
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Landroid/os/StrictMode$1;
 
     .prologue
-    .line 1707
     invoke-direct {p0}, Landroid/os/StrictMode$LogStackTrace;-><init>()V
 
     return-void

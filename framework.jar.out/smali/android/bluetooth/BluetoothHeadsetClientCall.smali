@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 191
     new-instance v0, Landroid/bluetooth/BluetoothHeadsetClientCall$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothHeadsetClientCall$1;-><init>()V
@@ -71,32 +70,24 @@
     .param p5, "outgoing"    # Z
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     iput p1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mId:I
 
-    .line 76
     iput p2, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mState:I
 
-    .line 77
     if-eqz p3, :cond_0
 
     .end local p3    # "number":Ljava/lang/String;
     :goto_0
     iput-object p3, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mNumber:Ljava/lang/String;
 
-    .line 78
     iput-boolean p4, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mMultiParty:Z
 
-    .line 79
     iput-boolean p5, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mOutgoing:Z
 
-    .line 80
     return-void
 
-    .line 77
     .restart local p3    # "number":Ljava/lang/String;
     :cond_0
     const-string p3, ""
@@ -110,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 216
     const/4 v0, 0x0
 
     return v0
@@ -120,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mId:I
 
     return v0
@@ -130,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mNumber:Ljava/lang/String;
 
     return-object v0
@@ -140,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mState:I
 
     return v0
@@ -150,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-boolean v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mMultiParty:Z
 
     return v0
@@ -160,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-boolean v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mOutgoing:Z
 
     return v0
@@ -171,10 +156,8 @@
     .param p1, "multiParty"    # Z
 
     .prologue
-    .line 113
     iput-boolean p1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mMultiParty:Z
 
-    .line 114
     return-void
 .end method
 
@@ -183,10 +166,8 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     iput-object p1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mNumber:Ljava/lang/String;
 
-    .line 102
     return-void
 .end method
 
@@ -195,10 +176,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 90
     iput p1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mState:I
 
-    .line 91
     return-void
 .end method
 
@@ -206,78 +185,64 @@
     .locals 2
 
     .prologue
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "BluetoothHeadsetClientCall{mId: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 165
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget v1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 166
     const-string v1, ", mState: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
     iget v1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mState:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 176
     iget v1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mState:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 178
     :goto_0
     const-string v1, ", mNumber: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 179
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mNumber:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
     const-string v1, ", mMultiParty: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
     iget-boolean v1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mMultiParty:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 182
     const-string v1, ", mOutgoing: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     iget-boolean v1, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mOutgoing:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 184
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 168
     :pswitch_0
     const-string v1, "ACTIVE"
 
@@ -285,7 +250,6 @@
 
     goto :goto_0
 
-    .line 169
     :pswitch_1
     const-string v1, "HELD"
 
@@ -293,7 +257,6 @@
 
     goto :goto_0
 
-    .line 170
     :pswitch_2
     const-string v1, "DIALING"
 
@@ -301,7 +264,6 @@
 
     goto :goto_0
 
-    .line 171
     :pswitch_3
     const-string v1, "ALERTING"
 
@@ -309,7 +271,6 @@
 
     goto :goto_0
 
-    .line 172
     :pswitch_4
     const-string v1, "INCOMING"
 
@@ -317,7 +278,6 @@
 
     goto :goto_0
 
-    .line 173
     :pswitch_5
     const-string v1, "WAITING"
 
@@ -325,7 +285,6 @@
 
     goto :goto_0
 
-    .line 174
     :pswitch_6
     const-string v1, "HELD_BY_RESPONSE_AND_HOLD"
 
@@ -333,7 +292,6 @@
 
     goto :goto_0
 
-    .line 175
     :pswitch_7
     const-string v1, "TERMINATED"
 
@@ -341,7 +299,6 @@
 
     goto :goto_0
 
-    .line 167
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -365,22 +322,18 @@
 
     const/4 v2, 0x0
 
-    .line 207
     iget v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 208
     iget v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 209
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mNumber:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 210
     iget-boolean v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mMultiParty:Z
 
     if-eqz v0, :cond_0
@@ -390,7 +343,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 211
     iget-boolean v0, p0, Landroid/bluetooth/BluetoothHeadsetClientCall;->mOutgoing:Z
 
     if-eqz v0, :cond_1
@@ -398,18 +350,15 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 212
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 210
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 211
     goto :goto_1
 .end method

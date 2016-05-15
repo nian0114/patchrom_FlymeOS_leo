@@ -27,7 +27,6 @@
     .locals 2
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$6;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     iput-wide p2, p0, Lcom/android/server/location/GpsStatusListenerHelper$6;->val$timestamp:J
@@ -53,14 +52,12 @@
     .end annotation
 
     .prologue
-    .line 111
     iget-wide v0, p0, Lcom/android/server/location/GpsStatusListenerHelper$6;->val$timestamp:J
 
     iget-object v2, p0, Lcom/android/server/location/GpsStatusListenerHelper$6;->val$nmea:Ljava/lang/String;
 
     invoke-interface {p1, v0, v1, v2}, Landroid/location/IGpsStatusListener;->onNmeaReceived(JLjava/lang/String;)V
 
-    .line 112
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 108
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/GpsStatusListenerHelper$6;->execute(Landroid/location/IGpsStatusListener;)V

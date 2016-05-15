@@ -47,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 751
     const/16 v0, 0x10
 
     new-array v0, v0, [Ljava/lang/String;
@@ -140,139 +139,137 @@
 
     sput-object v0, Landroid/media/CCParser$CCData;->mCtrlCodeMap:[Ljava/lang/String;
 
-    .line 758
     const/16 v0, 0x10
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "\u00ae"
+    const-string v1, "\u00ae"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "\u00b0"
+    const-string v1, "\u00b0"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "\u00bd"
+    const-string v1, "\u00bd"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "\u00bf"
+    const-string v1, "\u00bf"
 
     aput-object v1, v0, v6
 
-    const-string/jumbo v1, "\u2122"
+    const-string v1, "\u2122"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "\u00a2"
+    const-string v2, "\u00a2"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string/jumbo v2, "\u00a3"
+    const-string v2, "\u00a3"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string/jumbo v2, "\u266a"
+    const-string v2, "\u266a"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string/jumbo v2, "\u00e0"
+    const-string v2, "\u00e0"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string/jumbo v2, "\u00a0"
+    const-string v2, "\u00a0"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    const-string/jumbo v2, "\u00e8"
+    const-string v2, "\u00e8"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    const-string/jumbo v2, "\u00e2"
+    const-string v2, "\u00e2"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    const-string/jumbo v2, "\u00ea"
+    const-string v2, "\u00ea"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    const-string/jumbo v2, "\u00ee"
+    const-string v2, "\u00ee"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    const-string/jumbo v2, "\u00f4"
+    const-string v2, "\u00f4"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xf
 
-    const-string/jumbo v2, "\u00fb"
+    const-string v2, "\u00fb"
 
     aput-object v2, v0, v1
 
     sput-object v0, Landroid/media/CCParser$CCData;->mSpecialCharMap:[Ljava/lang/String;
 
-    .line 777
     const/16 v0, 0x20
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "\u00c1"
+    const-string v1, "\u00c1"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "\u00c9"
+    const-string v1, "\u00c9"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "\u00d3"
+    const-string v1, "\u00d3"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "\u00da"
+    const-string v1, "\u00da"
 
     aput-object v1, v0, v6
 
-    const-string/jumbo v1, "\u00dc"
+    const-string v1, "\u00dc"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "\u00fc"
+    const-string v2, "\u00fc"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string/jumbo v2, "\u2018"
+    const-string v2, "\u2018"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string/jumbo v2, "\u00a1"
+    const-string v2, "\u00a1"
 
     aput-object v2, v0, v1
 
@@ -290,196 +287,195 @@
 
     const/16 v1, 0xa
 
-    const-string/jumbo v2, "\u2014"
+    const-string v2, "\u2014"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    const-string/jumbo v2, "\u00a9"
+    const-string v2, "\u00a9"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    const-string/jumbo v2, "\u2120"
+    const-string v2, "\u2120"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    const-string/jumbo v2, "\u2022"
+    const-string v2, "\u2022"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    const-string/jumbo v2, "\u201c"
+    const-string v2, "\u201c"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xf
 
-    const-string/jumbo v2, "\u201d"
+    const-string v2, "\u201d"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x10
 
-    const-string/jumbo v2, "\u00c0"
+    const-string v2, "\u00c0"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    const-string/jumbo v2, "\u00c2"
+    const-string v2, "\u00c2"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
 
-    const-string/jumbo v2, "\u00c7"
+    const-string v2, "\u00c7"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x13
 
-    const-string/jumbo v2, "\u00c8"
+    const-string v2, "\u00c8"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x14
 
-    const-string/jumbo v2, "\u00ca"
+    const-string v2, "\u00ca"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x15
 
-    const-string/jumbo v2, "\u00cb"
+    const-string v2, "\u00cb"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x16
 
-    const-string/jumbo v2, "\u00eb"
+    const-string v2, "\u00eb"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x17
 
-    const-string/jumbo v2, "\u00ce"
+    const-string v2, "\u00ce"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x18
 
-    const-string/jumbo v2, "\u00cf"
+    const-string v2, "\u00cf"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x19
 
-    const-string/jumbo v2, "\u00ef"
+    const-string v2, "\u00ef"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1a
 
-    const-string/jumbo v2, "\u00d4"
+    const-string v2, "\u00d4"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1b
 
-    const-string/jumbo v2, "\u00d9"
+    const-string v2, "\u00d9"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1c
 
-    const-string/jumbo v2, "\u00f9"
+    const-string v2, "\u00f9"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1d
 
-    const-string/jumbo v2, "\u00db"
+    const-string v2, "\u00db"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1e
 
-    const-string/jumbo v2, "\u00ab"
+    const-string v2, "\u00ab"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1f
 
-    const-string/jumbo v2, "\u00bb"
+    const-string v2, "\u00bb"
 
     aput-object v2, v0, v1
 
     sput-object v0, Landroid/media/CCParser$CCData;->mSpanishCharMap:[Ljava/lang/String;
 
-    .line 814
     const/16 v0, 0x20
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "\u00c3"
+    const-string v1, "\u00c3"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "\u00e3"
+    const-string v1, "\u00e3"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "\u00cd"
+    const-string v1, "\u00cd"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "\u00cc"
+    const-string v1, "\u00cc"
 
     aput-object v1, v0, v6
 
-    const-string/jumbo v1, "\u00ec"
+    const-string v1, "\u00ec"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "\u00d2"
+    const-string v2, "\u00d2"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string/jumbo v2, "\u00f2"
+    const-string v2, "\u00f2"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string/jumbo v2, "\u00d5"
+    const-string v2, "\u00d5"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string/jumbo v2, "\u00f5"
+    const-string v2, "\u00f5"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string/jumbo v2, "{"
+    const-string v2, "{"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     aput-object v2, v0, v1
 
@@ -503,109 +499,109 @@
 
     const/16 v1, 0xe
 
-    const-string/jumbo v2, "|"
+    const-string v2, "|"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xf
 
-    const-string/jumbo v2, "~"
+    const-string v2, "~"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x10
 
-    const-string/jumbo v2, "\u00c4"
+    const-string v2, "\u00c4"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    const-string/jumbo v2, "\u00e4"
+    const-string v2, "\u00e4"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
 
-    const-string/jumbo v2, "\u00d6"
+    const-string v2, "\u00d6"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x13
 
-    const-string/jumbo v2, "\u00f6"
+    const-string v2, "\u00f6"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x14
 
-    const-string/jumbo v2, "\u00df"
+    const-string v2, "\u00df"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x15
 
-    const-string/jumbo v2, "\u00a5"
+    const-string v2, "\u00a5"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x16
 
-    const-string/jumbo v2, "\u00a4"
+    const-string v2, "\u00a4"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x17
 
-    const-string/jumbo v2, "\u2502"
+    const-string v2, "\u2502"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x18
 
-    const-string/jumbo v2, "\u00c5"
+    const-string v2, "\u00c5"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x19
 
-    const-string/jumbo v2, "\u00e5"
+    const-string v2, "\u00e5"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1a
 
-    const-string/jumbo v2, "\u00d8"
+    const-string v2, "\u00d8"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1b
 
-    const-string/jumbo v2, "\u00f8"
+    const-string v2, "\u00f8"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1c
 
-    const-string/jumbo v2, "\u250c"
+    const-string v2, "\u250c"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1d
 
-    const-string/jumbo v2, "\u2510"
+    const-string v2, "\u2510"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1e
 
-    const-string/jumbo v2, "\u2514"
+    const-string v2, "\u2514"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1f
 
-    const-string/jumbo v2, "\u2518"
+    const-string v2, "\u2518"
 
     aput-object v2, v0, v1
 
@@ -621,19 +617,14 @@
     .param p3, "data2"    # B
 
     .prologue
-    .line 864
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 865
     iput-byte p1, p0, Landroid/media/CCParser$CCData;->mType:B
 
-    .line 866
     iput-byte p2, p0, Landroid/media/CCParser$CCData;->mData1:B
 
-    .line 867
     iput-byte p3, p0, Landroid/media/CCParser$CCData;->mData2:B
 
-    .line 868
     return-void
 .end method
 
@@ -642,7 +633,6 @@
     .param p0, "x0"    # Landroid/media/CCParser$CCData;
 
     .prologue
-    .line 746
     invoke-direct {p0}, Landroid/media/CCParser$CCData;->isExtendedChar()Z
 
     move-result v0
@@ -655,7 +645,6 @@
     .param p1, "ctrlCode"    # I
 
     .prologue
-    .line 924
     sget-object v0, Landroid/media/CCParser$CCData;->mCtrlCodeMap:[Ljava/lang/String;
 
     add-int/lit8 v1, p1, -0x20
@@ -670,14 +659,12 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 852
     array-length v2, p0
 
     div-int/lit8 v2, v2, 0x3
 
     new-array v0, v2, [Landroid/media/CCParser$CCData;
 
-    .line 854
     .local v0, "ccData":[Landroid/media/CCParser$CCData;
     const/4 v1, 0x0
 
@@ -687,7 +674,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 855
     new-instance v2, Landroid/media/CCParser$CCData;
 
     mul-int/lit8 v3, v1, 0x3
@@ -710,12 +696,10 @@
 
     aput-object v2, v0, v1
 
-    .line 854
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 861
     :cond_0
     return-object v0
 .end method
@@ -725,18 +709,14 @@
     .param p1, "data"    # B
 
     .prologue
-    .line 945
     sparse-switch p1, :sswitch_data_0
 
-    .line 956
     int-to-char v0, p1
 
-    .line 958
     .local v0, "c":C
     :goto_0
     return v0
 
-    .line 946
     .end local v0    # "c":C
     :sswitch_0
     const/16 v0, 0xe1
@@ -744,7 +724,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 947
     .end local v0    # "c":C
     :sswitch_1
     const/16 v0, 0xe9
@@ -752,7 +731,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 948
     .end local v0    # "c":C
     :sswitch_2
     const/16 v0, 0xed
@@ -760,7 +738,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 949
     .end local v0    # "c":C
     :sswitch_3
     const/16 v0, 0xf3
@@ -768,7 +745,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 950
     .end local v0    # "c":C
     :sswitch_4
     const/16 v0, 0xfa
@@ -776,7 +752,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 951
     .end local v0    # "c":C
     :sswitch_5
     const/16 v0, 0xe7
@@ -784,7 +759,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 952
     .end local v0    # "c":C
     :sswitch_6
     const/16 v0, 0xf7
@@ -792,7 +766,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 953
     .end local v0    # "c":C
     :sswitch_7
     const/16 v0, 0xd1
@@ -800,7 +773,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 954
     .end local v0    # "c":C
     :sswitch_8
     const/16 v0, 0xf1
@@ -808,7 +780,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 955
     .end local v0    # "c":C
     :sswitch_9
     const/16 v0, 0x2588
@@ -816,7 +787,6 @@
     .restart local v0    # "c":C
     goto :goto_0
 
-    .line 945
     nop
 
     :sswitch_data_0
@@ -842,7 +812,6 @@
 
     const/16 v2, 0x20
 
-    .line 962
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     if-lt v1, v2, :cond_1
@@ -851,14 +820,12 @@
 
     if-gt v1, v3, :cond_1
 
-    .line 963
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 964
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData1:B
 
@@ -868,7 +835,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 965
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData2:B
 
     if-lt v1, v2, :cond_0
@@ -877,7 +843,6 @@
 
     if-gt v1, v3, :cond_0
 
-    .line 966
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData2:B
 
     invoke-direct {p0, v1}, Landroid/media/CCParser$CCData;->getBasicChar(B)C
@@ -886,13 +851,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 968
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 971
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     :goto_0
     return-object v1
@@ -911,7 +874,6 @@
 
     const/16 v2, 0x20
 
-    .line 984
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x12
@@ -933,7 +895,6 @@
 
     if-gt v0, v3, :cond_1
 
-    .line 987
     sget-object v0, Landroid/media/CCParser$CCData;->mSpanishCharMap:[Ljava/lang/String;
 
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData2:B
@@ -942,11 +903,9 @@
 
     aget-object v0, v0, v1
 
-    .line 994
     :goto_0
     return-object v0
 
-    .line 988
     :cond_1
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
@@ -969,7 +928,6 @@
 
     if-gt v0, v3, :cond_3
 
-    .line 991
     sget-object v0, Landroid/media/CCParser$CCData;->mProtugueseCharMap:[Ljava/lang/String;
 
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData2:B
@@ -980,7 +938,6 @@
 
     goto :goto_0
 
-    .line 994
     :cond_3
     const/4 v0, 0x0
 
@@ -991,7 +948,6 @@
     .locals 2
 
     .prologue
-    .line 975
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x11
@@ -1017,7 +973,6 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 977
     sget-object v0, Landroid/media/CCParser$CCData;->mSpecialCharMap:[Ljava/lang/String;
 
     iget-byte v1, p0, Landroid/media/CCParser$CCData;->mData2:B
@@ -1026,7 +981,6 @@
 
     aget-object v0, v0, v1
 
-    .line 980
     :goto_0
     return-object v0
 
@@ -1040,7 +994,6 @@
     .locals 2
 
     .prologue
-    .line 928
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x20
@@ -1068,7 +1021,6 @@
     .locals 2
 
     .prologue
-    .line 937
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x12
@@ -1121,7 +1073,6 @@
     .locals 2
 
     .prologue
-    .line 932
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x11
@@ -1164,7 +1115,6 @@
     .locals 2
 
     .prologue
-    .line 871
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x14
@@ -1190,10 +1140,8 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 873
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData2:B
 
-    .line 875
     :goto_0
     return v0
 
@@ -1207,29 +1155,23 @@
     .locals 1
 
     .prologue
-    .line 910
     invoke-direct {p0}, Landroid/media/CCParser$CCData;->getBasicChars()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 912
     .local v0, "str":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 913
     invoke-direct {p0}, Landroid/media/CCParser$CCData;->getSpecialChar()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 915
     if-nez v0, :cond_0
 
-    .line 916
     invoke-direct {p0}, Landroid/media/CCParser$CCData;->getExtendedChar()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 920
     :cond_0
     return-object v0
 .end method
@@ -1238,7 +1180,6 @@
     .locals 2
 
     .prologue
-    .line 881
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x11
@@ -1264,14 +1205,12 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 883
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData2:B
 
     invoke-static {v0}, Landroid/media/CCParser$StyleCode;->fromByte(B)Landroid/media/CCParser$StyleCode;
 
     move-result-object v0
 
-    .line 885
     :goto_0
     return-object v0
 
@@ -1285,7 +1224,6 @@
     .locals 2
 
     .prologue
-    .line 889
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     and-int/lit8 v0, v0, 0x70
@@ -1314,7 +1252,6 @@
 
     if-nez v0, :cond_1
 
-    .line 892
     :cond_0
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
@@ -1324,7 +1261,6 @@
 
     move-result-object v0
 
-    .line 894
     :goto_0
     return-object v0
 
@@ -1338,7 +1274,6 @@
     .locals 2
 
     .prologue
-    .line 898
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     const/16 v1, 0x17
@@ -1364,12 +1299,10 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 900
     iget-byte v0, p0, Landroid/media/CCParser$CCData;->mData2:B
 
     and-int/lit8 v0, v0, 0x3
 
-    .line 902
     :goto_0
     return v0
 
@@ -1383,7 +1316,6 @@
     .locals 1
 
     .prologue
-    .line 906
     invoke-direct {p0}, Landroid/media/CCParser$CCData;->isBasicChar()Z
 
     move-result v0
@@ -1428,7 +1360,6 @@
 
     const/4 v7, 0x0
 
-    .line 1001
     iget-byte v4, p0, Landroid/media/CCParser$CCData;->mData1:B
 
     if-ge v4, v5, :cond_0
@@ -1437,7 +1368,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 1003
     const-string v4, "[%d]Null: %02x %02x"
 
     new-array v5, v10, [Ljava/lang/Object;
@@ -1470,23 +1400,19 @@
 
     move-result-object v4
 
-    .line 1031
     :goto_0
     return-object v4
 
-    .line 1006
     :cond_0
     invoke-virtual {p0}, Landroid/media/CCParser$CCData;->getCtrlCode()I
 
     move-result v0
 
-    .line 1007
     .local v0, "ctrlCode":I
     const/4 v4, -0x1
 
     if-eq v0, v4, :cond_1
 
-    .line 1008
     const-string v4, "[%d]%s"
 
     new-array v5, v9, [Ljava/lang/Object;
@@ -1511,17 +1437,14 @@
 
     goto :goto_0
 
-    .line 1011
     :cond_1
     invoke-virtual {p0}, Landroid/media/CCParser$CCData;->getTabOffset()I
 
     move-result v3
 
-    .line 1012
     .local v3, "tabOffset":I
     if-lez v3, :cond_2
 
-    .line 1013
     const-string v4, "[%d]Tab%d"
 
     new-array v5, v9, [Ljava/lang/Object;
@@ -1546,17 +1469,14 @@
 
     goto :goto_0
 
-    .line 1016
     :cond_2
     invoke-virtual {p0}, Landroid/media/CCParser$CCData;->getPAC()Landroid/media/CCParser$PAC;
 
     move-result-object v2
 
-    .line 1017
     .local v2, "pac":Landroid/media/CCParser$PAC;
     if-eqz v2, :cond_3
 
-    .line 1018
     const-string v4, "[%d]PAC: %s"
 
     new-array v5, v9, [Ljava/lang/Object;
@@ -1581,17 +1501,14 @@
 
     goto :goto_0
 
-    .line 1021
     :cond_3
     invoke-virtual {p0}, Landroid/media/CCParser$CCData;->getMidRow()Landroid/media/CCParser$StyleCode;
 
     move-result-object v1
 
-    .line 1022
     .local v1, "m":Landroid/media/CCParser$StyleCode;
     if-eqz v1, :cond_4
 
-    .line 1023
     const-string v4, "[%d]Mid-row: %s"
 
     new-array v5, v9, [Ljava/lang/Object;
@@ -1616,7 +1533,6 @@
 
     goto :goto_0
 
-    .line 1026
     :cond_4
     invoke-virtual {p0}, Landroid/media/CCParser$CCData;->isDisplayableChar()Z
 
@@ -1624,7 +1540,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 1027
     const-string v4, "[%d]Displayable: %s (%02x %02x)"
 
     const/4 v5, 0x4
@@ -1667,7 +1582,6 @@
 
     goto/16 :goto_0
 
-    .line 1031
     :cond_5
     const-string v4, "[%d]Invalid: %02x %02x"
 

@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 93
     new-instance v0, Landroid/wipower/WipowerManager$PowerApplyEvent;
 
     const-string v1, "OFF"
@@ -49,7 +48,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$PowerApplyEvent;->OFF:Landroid/wipower/WipowerManager$PowerApplyEvent;
 
-    .line 94
     new-instance v0, Landroid/wipower/WipowerManager$PowerApplyEvent;
 
     const-string v1, "ON"
@@ -58,7 +56,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$PowerApplyEvent;->ON:Landroid/wipower/WipowerManager$PowerApplyEvent;
 
-    .line 92
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/wipower/WipowerManager$PowerApplyEvent;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 92
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     const-class v0, Landroid/wipower/WipowerManager$PowerApplyEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 92
     sget-object v0, Landroid/wipower/WipowerManager$PowerApplyEvent;->$VALUES:[Landroid/wipower/WipowerManager$PowerApplyEvent;
 
     invoke-virtual {v0}, [Landroid/wipower/WipowerManager$PowerApplyEvent;->clone()Ljava/lang/Object;

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,21 +50,17 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 157
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 158
     .local v1, "fingerprints":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/fingerprint/Fingerprint;>;"
     if-nez p0, :cond_1
 
-    .line 172
     :cond_0
     :goto_0
     return-object v1
 
-    .line 161
     :cond_1
     :try_start_0
     new-instance v3, Ljava/io/StringReader;
@@ -74,11 +69,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 160
     .local v3, "reader":Ljava/io/StringReader;
     const/4 v5, 0x0
 
-    .line 162
     :try_start_1
     new-instance v2, Landroid/util/JsonReader;
 
@@ -87,15 +80,12 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 160
     .local v2, "jsonReader":Landroid/util/JsonReader;
     const/4 v6, 0x0
 
-    .line 164
     :try_start_2
     invoke-virtual {v2}, Landroid/util/JsonReader;->beginArray()V
 
-    .line 165
     :goto_1
     invoke-virtual {v2}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -103,7 +93,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 166
     invoke-static {v2}, Landroid/hardware/fingerprint/Fingerprint$JsonSerializer;->readFingerprint(Landroid/util/JsonReader;)Landroid/hardware/fingerprint/Fingerprint;
 
     move-result-object v8
@@ -115,7 +104,6 @@
 
     goto :goto_1
 
-    .line 160
     :catch_0
     move-exception v5
 
@@ -124,7 +112,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 169
     :catchall_0
     move-exception v6
 
@@ -153,7 +140,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 160
     .end local v2    # "jsonReader":Landroid/util/JsonReader;
     :catch_1
     move-exception v5
@@ -163,7 +149,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 169
     :catchall_1
     move-exception v6
 
@@ -193,7 +178,6 @@
     :catch_2
     move-exception v0
 
-    .line 170
     .local v0, "e":Ljava/lang/Exception;
     # getter for: Landroid/hardware/fingerprint/Fingerprint;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/hardware/fingerprint/Fingerprint;->access$100()Ljava/lang/String;
@@ -222,7 +206,6 @@
 
     goto :goto_0
 
-    .line 168
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v2    # "jsonReader":Landroid/util/JsonReader;
     .restart local v3    # "reader":Ljava/io/StringReader;
@@ -233,7 +216,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 169
     if-eqz v2, :cond_5
 
     if-eqz v7, :cond_6
@@ -351,22 +333,17 @@
     .end annotation
 
     .prologue
-    .line 176
     const/4 v0, 0x0
 
-    .line 177
     .local v0, "fingerName":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 178
     .local v1, "id":I
     const/4 v3, 0x0
 
-    .line 179
     .local v3, "userId":I
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
-    .line 180
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -374,12 +351,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 181
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 182
     .local v2, "name":Ljava/lang/String;
     const-string v4, "fingerId"
 
@@ -397,14 +372,12 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 183
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 184
     :cond_0
     const-string v4, "fingerName"
 
@@ -422,16 +395,14 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 185
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 186
     :cond_1
-    const-string/jumbo v4, "userId"
+    const-string v4, "userId"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -439,25 +410,21 @@
 
     if-eqz v4, :cond_2
 
-    .line 187
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
     move-result v3
 
     goto :goto_0
 
-    .line 189
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 192
     .end local v2    # "name":Ljava/lang/String;
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
-    .line 194
     new-instance v4, Landroid/hardware/fingerprint/Fingerprint;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -490,10 +457,8 @@
     .local p0, "fingerprints":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/fingerprint/Fingerprint;>;"
     const/4 v9, 0x0
 
-    .line 130
     const/4 v3, 0x0
 
-    .line 132
     .local v3, "json":Ljava/lang/String;
     :try_start_0
     new-instance v5, Ljava/io/StringWriter;
@@ -502,11 +467,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 131
     .local v5, "writer":Ljava/io/Writer;
     const/4 v7, 0x0
 
-    .line 133
     :try_start_1
     new-instance v4, Landroid/util/JsonWriter;
 
@@ -515,15 +478,12 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 131
     .local v4, "jsonWriter":Landroid/util/JsonWriter;
     const/4 v8, 0x0
 
-    .line 135
     :try_start_2
     invoke-virtual {v4}, Landroid/util/JsonWriter;->beginArray()Landroid/util/JsonWriter;
 
-    .line 136
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -542,7 +502,6 @@
 
     check-cast v1, Landroid/hardware/fingerprint/Fingerprint;
 
-    .line 137
     .local v1, "fingerprint":Landroid/hardware/fingerprint/Fingerprint;
     invoke-static {v4, v1}, Landroid/hardware/fingerprint/Fingerprint$JsonSerializer;->writeFingerprint(Landroid/util/JsonWriter;Landroid/hardware/fingerprint/Fingerprint;)V
     :try_end_2
@@ -551,7 +510,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v1    # "fingerprint":Landroid/hardware/fingerprint/Fingerprint;
     .end local v2    # "i$":Ljava/util/Iterator;
     :catch_0
@@ -562,7 +520,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 141
     :catchall_0
     move-exception v8
 
@@ -591,7 +548,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 131
     .end local v4    # "jsonWriter":Landroid/util/JsonWriter;
     :catch_1
     move-exception v7
@@ -601,7 +557,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 141
     :catchall_1
     move-exception v8
 
@@ -631,7 +586,6 @@
     :catch_2
     move-exception v0
 
-    .line 142
     .local v0, "e":Ljava/io/IOException;
     # getter for: Landroid/hardware/fingerprint/Fingerprint;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/hardware/fingerprint/Fingerprint;->access$100()Ljava/lang/String;
@@ -642,13 +596,11 @@
 
     invoke-static {v7, v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 144
     .end local v0    # "e":Ljava/io/IOException;
     :cond_2
     :goto_5
     return-object v3
 
-    .line 139
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "jsonWriter":Landroid/util/JsonWriter;
     .restart local v5    # "writer":Ljava/io/Writer;
@@ -656,7 +608,6 @@
     :try_start_9
     invoke-virtual {v4}, Landroid/util/JsonWriter;->endArray()Landroid/util/JsonWriter;
 
-    .line 140
     invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
     :try_end_9
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
@@ -664,7 +615,6 @@
 
     move-result-object v3
 
-    .line 141
     if-eqz v4, :cond_4
 
     if-eqz v9, :cond_5
@@ -788,10 +738,8 @@
     .end annotation
 
     .prologue
-    .line 149
     invoke-virtual {p0}, Landroid/util/JsonWriter;->beginObject()Landroid/util/JsonWriter;
 
-    .line 150
     const-string v0, "fingerId"
 
     invoke-virtual {p0, v0}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
@@ -804,7 +752,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/JsonWriter;->value(Ljava/lang/Number;)Landroid/util/JsonWriter;
 
-    .line 151
     const-string v0, "fingerName"
 
     invoke-virtual {p0, v0}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
@@ -817,8 +764,7 @@
 
     invoke-virtual {v0, v1}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
 
-    .line 152
-    const-string/jumbo v0, "userId"
+    const-string v0, "userId"
 
     invoke-virtual {p0, v0}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
 
@@ -830,9 +776,7 @@
 
     invoke-virtual {v0, v1}, Landroid/util/JsonWriter;->value(Ljava/lang/Number;)Landroid/util/JsonWriter;
 
-    .line 153
     invoke-virtual {p0}, Landroid/util/JsonWriter;->endObject()Landroid/util/JsonWriter;
 
-    .line 154
     return-void
 .end method

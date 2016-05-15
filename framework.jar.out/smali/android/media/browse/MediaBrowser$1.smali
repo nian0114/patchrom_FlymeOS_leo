@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 157
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$1;->this$0:Landroid/media/browse/MediaBrowser;
 
     iput-object p2, p0, Landroid/media/browse/MediaBrowser$1;->val$thisConnection:Landroid/content/ServiceConnection;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$1;->val$thisConnection:Landroid/content/ServiceConnection;
 
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$1;->this$0:Landroid/media/browse/MediaBrowser;
@@ -56,13 +54,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 162
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$1;->this$0:Landroid/media/browse/MediaBrowser;
 
     # invokes: Landroid/media/browse/MediaBrowser;->forceCloseConnection()V
     invoke-static {v0}, Landroid/media/browse/MediaBrowser;->access$200(Landroid/media/browse/MediaBrowser;)V
 
-    .line 163
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$1;->this$0:Landroid/media/browse/MediaBrowser;
 
     # getter for: Landroid/media/browse/MediaBrowser;->mCallback:Landroid/media/browse/MediaBrowser$ConnectionCallback;
@@ -72,7 +68,6 @@
 
     invoke-virtual {v0}, Landroid/media/browse/MediaBrowser$ConnectionCallback;->onConnectionFailed()V
 
-    .line 165
     :cond_0
     return-void
 .end method

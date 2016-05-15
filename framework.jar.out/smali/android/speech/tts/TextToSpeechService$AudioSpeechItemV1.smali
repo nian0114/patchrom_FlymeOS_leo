@@ -31,13 +31,10 @@
     .param p7, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 997
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$AudioSpeechItemV1;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 998
     invoke-direct/range {p0 .. p6}, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;IILandroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 999
     new-instance v0, Landroid/speech/tts/AudioPlaybackQueueItem;
 
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$AudioSpeechItemV1;->getCallerIdentity()Ljava/lang/Object;
@@ -58,7 +55,6 @@
 
     iput-object v0, p0, Landroid/speech/tts/TextToSpeechService$AudioSpeechItemV1;->mItem:Landroid/speech/tts/AudioPlaybackQueueItem;
 
-    .line 1001
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .locals 2
 
     .prologue
-    .line 1025
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$AudioSpeechItemV1;->mParams:Landroid/os/Bundle;
 
     const/4 v1, 0x0
@@ -84,10 +79,9 @@
     .locals 3
 
     .prologue
-    .line 1020
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$AudioSpeechItemV1;->mParams:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "utteranceId"
+    const-string v1, "utteranceId"
 
     const/4 v2, 0x0
 
@@ -102,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 1005
     const/4 v0, 0x1
 
     return v0
@@ -112,7 +105,6 @@
     .locals 2
 
     .prologue
-    .line 1010
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$AudioSpeechItemV1;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     # getter for: Landroid/speech/tts/TextToSpeechService;->mAudioPlaybackHandler:Landroid/speech/tts/AudioPlaybackHandler;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v0, v1}, Landroid/speech/tts/AudioPlaybackHandler;->enqueue(Landroid/speech/tts/PlaybackQueueItem;)V
 
-    .line 1011
     return-void
 .end method
 
@@ -132,6 +123,5 @@
     .locals 0
 
     .prologue
-    .line 1016
     return-void
 .end method

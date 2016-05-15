@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 2931
     iput-object p1, p0, Landroid/widget/GridLayout$7$1;->this$0:Landroid/widget/GridLayout$7;
 
     const/4 v0, 0x0
@@ -46,7 +45,6 @@
     .param p5, "hrz"    # Z
 
     .prologue
-    .line 2959
     const/4 v0, 0x0
 
     invoke-super/range {p0 .. p5}, Landroid/widget/GridLayout$Bounds;->getOffset(Landroid/widget/GridLayout;Landroid/view/View;Landroid/widget/GridLayout$Alignment;IZ)I
@@ -66,10 +64,8 @@
     .param p2, "after"    # I
 
     .prologue
-    .line 2948
     invoke-super {p0, p1, p2}, Landroid/widget/GridLayout$Bounds;->include(II)V
 
-    .line 2949
     iget v0, p0, Landroid/widget/GridLayout$7$1;->size:I
 
     add-int v1, p1, p2
@@ -80,7 +76,6 @@
 
     iput v0, p0, Landroid/widget/GridLayout$7$1;->size:I
 
-    .line 2950
     return-void
 .end method
 
@@ -88,15 +83,12 @@
     .locals 1
 
     .prologue
-    .line 2942
     invoke-super {p0}, Landroid/widget/GridLayout$Bounds;->reset()V
 
-    .line 2943
     const/high16 v0, -0x80000000
 
     iput v0, p0, Landroid/widget/GridLayout$7$1;->size:I
 
-    .line 2944
     return-void
 .end method
 
@@ -105,7 +97,6 @@
     .param p1, "min"    # Z
 
     .prologue
-    .line 2954
     invoke-super {p0, p1}, Landroid/widget/GridLayout$Bounds;->size(Z)I
 
     move-result v0

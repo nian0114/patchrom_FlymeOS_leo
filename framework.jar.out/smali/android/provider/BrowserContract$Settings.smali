@@ -29,10 +29,9 @@
     .locals 2
 
     .prologue
-    .line 699
     sget-object v0, Landroid/provider/BrowserContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "settings"
+    const-string v1, "settings"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -47,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 694
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,10 +60,8 @@
 
     const/4 v8, 0x0
 
-    .line 720
     const/4 v6, 0x0
 
-    .line 722
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -80,7 +76,7 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "value"
+    const-string v4, "value"
 
     aput-object v4, v2, v3
 
@@ -92,7 +88,7 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v9, "sync_enabled"
+    const-string v9, "sync_enabled"
 
     aput-object v9, v4, v5
 
@@ -102,7 +98,6 @@
 
     move-result-object v6
 
-    .line 724
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -113,7 +108,6 @@
 
     if-nez v0, :cond_3
 
-    .line 729
     :cond_0
     if-eqz v6, :cond_1
 
@@ -126,7 +120,6 @@
     :goto_0
     return v0
 
-    .line 727
     :cond_3
     const/4 v0, 0x0
 
@@ -141,7 +134,6 @@
 
     move v0, v7
 
-    .line 729
     :goto_1
     if-eqz v6, :cond_2
 
@@ -152,10 +144,8 @@
     :cond_4
     move v0, v8
 
-    .line 727
     goto :goto_1
 
-    .line 729
     :catchall_0
     move-exception v0
 
@@ -173,21 +163,18 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 737
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 738
     .local v0, "values":Landroid/content/ContentValues;
     const-string v1, "key"
 
-    const-string/jumbo v2, "sync_enabled"
+    const-string v2, "sync_enabled"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 739
-    const-string/jumbo v2, "value"
+    const-string v2, "value"
 
     if-eqz p1, :cond_0
 
@@ -200,7 +187,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 740
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -209,10 +195,8 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 741
     return-void
 
-    .line 739
     :cond_0
     const/4 v1, 0x0
 

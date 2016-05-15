@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,12 +46,10 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 265
     new-instance v1, Landroid/net/nsd/NsdServiceInfo;
 
     invoke-direct {v1}, Landroid/net/nsd/NsdServiceInfo;-><init>()V
 
-    .line 266
     .local v1, "info":Landroid/net/nsd/NsdServiceInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -61,7 +58,6 @@
     # setter for: Landroid/net/nsd/NsdServiceInfo;->mServiceName:Ljava/lang/String;
     invoke-static {v1, v5}, Landroid/net/nsd/NsdServiceInfo;->access$002(Landroid/net/nsd/NsdServiceInfo;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 267
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -69,14 +65,12 @@
     # setter for: Landroid/net/nsd/NsdServiceInfo;->mServiceType:Ljava/lang/String;
     invoke-static {v1, v5}, Landroid/net/nsd/NsdServiceInfo;->access$102(Landroid/net/nsd/NsdServiceInfo;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 269
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
     if-ne v5, v7, :cond_0
 
-    .line 271
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
@@ -91,7 +85,6 @@
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 275
     :cond_0
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -101,12 +94,10 @@
     # setter for: Landroid/net/nsd/NsdServiceInfo;->mPort:I
     invoke-static {v1, v5}, Landroid/net/nsd/NsdServiceInfo;->access$302(Landroid/net/nsd/NsdServiceInfo;I)I
 
-    .line 278
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 279
     .local v2, "recordCount":I
     const/4 v0, 0x0
 
@@ -114,10 +105,8 @@
     :goto_1
     if-ge v0, v2, :cond_2
 
-    .line 280
     const/4 v3, 0x0
 
-    .line 281
     .local v3, "valueArray":[B
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -125,19 +114,15 @@
 
     if-ne v5, v7, :cond_1
 
-    .line 282
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 283
     .local v4, "valueLength":I
     new-array v3, v4, [B
 
-    .line 284
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 286
     .end local v4    # "valueLength":I
     :cond_1
     # getter for: Landroid/net/nsd/NsdServiceInfo;->mTxtRecord:Landroid/util/ArrayMap;
@@ -151,17 +136,14 @@
 
     invoke-virtual {v5, v6, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 279
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 288
     .end local v3    # "valueArray":[B
     :cond_2
     return-object v1
 
-    .line 272
     .end local v0    # "i":I
     .end local v2    # "recordCount":I
     :catch_0
@@ -174,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 263
     invoke-virtual {p0, p1}, Landroid/net/nsd/NsdServiceInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/nsd/NsdServiceInfo;
 
     move-result-object v0
@@ -187,7 +168,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 292
     new-array v0, p1, [Landroid/net/nsd/NsdServiceInfo;
 
     return-object v0
@@ -197,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 263
     invoke-virtual {p0, p1}, Landroid/net/nsd/NsdServiceInfo$1;->newArray(I)[Landroid/net/nsd/NsdServiceInfo;
 
     move-result-object v0

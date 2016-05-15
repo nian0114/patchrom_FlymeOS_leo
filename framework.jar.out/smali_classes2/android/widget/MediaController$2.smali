@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 200
     iput-object p1, p0, Landroid/widget/MediaController$2;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 202
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 203
     iget-object v0, p0, Landroid/widget/MediaController$2;->this$0:Landroid/widget/MediaController;
 
     # getter for: Landroid/widget/MediaController;->mShowing:Z
@@ -59,12 +56,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Landroid/widget/MediaController$2;->this$0:Landroid/widget/MediaController;
 
     invoke-virtual {v0}, Landroid/widget/MediaController;->hide()V
 
-    .line 207
     :cond_0
     const/4 v0, 0x0
 

@@ -43,23 +43,19 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/FontListParser$Config;->families:Ljava/util/List;
 
-    .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/FontListParser$Config;->aliases:Ljava/util/List;
 
-    .line 43
     return-void
 .end method

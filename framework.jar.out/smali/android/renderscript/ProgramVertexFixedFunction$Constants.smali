@@ -40,15 +40,12 @@
     .param p1, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 218
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
     invoke-static {p1}, Landroid/renderscript/ProgramVertexFixedFunction$Builder;->getConstantInputType(Landroid/renderscript/RenderScript;)Landroid/renderscript/Type;
 
     move-result-object v1
 
-    .line 220
     .local v1, "constInputType":Landroid/renderscript/Type;
     invoke-static {p1, v1}, Landroid/renderscript/Allocation;->createTyped(Landroid/renderscript/RenderScript;Landroid/renderscript/Type;)Landroid/renderscript/Allocation;
 
@@ -56,7 +53,6 @@
 
     iput-object v2, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mAlloc:Landroid/renderscript/Allocation;
 
-    .line 221
     invoke-virtual {v1}, Landroid/renderscript/Type;->getElement()Landroid/renderscript/Element;
 
     move-result-object v2
@@ -71,7 +67,6 @@
 
     mul-int v0, v2, v3
 
-    .line 223
     .local v0, "bufferSize":I
     new-instance v2, Landroid/renderscript/FieldPacker;
 
@@ -79,49 +74,42 @@
 
     iput-object v2, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mIOBuffer:Landroid/renderscript/FieldPacker;
 
-    .line 224
     new-instance v2, Landroid/renderscript/Matrix4f;
 
     invoke-direct {v2}, Landroid/renderscript/Matrix4f;-><init>()V
 
     iput-object v2, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mModel:Landroid/renderscript/Matrix4f;
 
-    .line 225
     new-instance v2, Landroid/renderscript/Matrix4f;
 
     invoke-direct {v2}, Landroid/renderscript/Matrix4f;-><init>()V
 
     iput-object v2, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mProjection:Landroid/renderscript/Matrix4f;
 
-    .line 226
     new-instance v2, Landroid/renderscript/Matrix4f;
 
     invoke-direct {v2}, Landroid/renderscript/Matrix4f;-><init>()V
 
     iput-object v2, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mTexture:Landroid/renderscript/Matrix4f;
 
-    .line 227
     new-instance v2, Landroid/renderscript/Matrix4f;
 
     invoke-direct {v2}, Landroid/renderscript/Matrix4f;-><init>()V
 
     invoke-virtual {p0, v2}, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->setModelview(Landroid/renderscript/Matrix4f;)V
 
-    .line 228
     new-instance v2, Landroid/renderscript/Matrix4f;
 
     invoke-direct {v2}, Landroid/renderscript/Matrix4f;-><init>()V
 
     invoke-virtual {p0, v2}, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->setProjection(Landroid/renderscript/Matrix4f;)V
 
-    .line 229
     new-instance v2, Landroid/renderscript/Matrix4f;
 
     invoke-direct {v2}, Landroid/renderscript/Matrix4f;-><init>()V
 
     invoke-virtual {p0, v2}, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->setTexture(Landroid/renderscript/Matrix4f;)V
 
-    .line 230
     return-void
 .end method
 
@@ -131,12 +119,10 @@
     .param p2, "m"    # Landroid/renderscript/Matrix4f;
 
     .prologue
-    .line 244
     iget-object v1, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mIOBuffer:Landroid/renderscript/FieldPacker;
 
     invoke-virtual {v1, p1}, Landroid/renderscript/FieldPacker;->reset(I)V
 
-    .line 245
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -145,7 +131,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 246
     iget-object v1, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mIOBuffer:Landroid/renderscript/FieldPacker;
 
     iget-object v2, p2, Landroid/renderscript/Matrix4f;->mMat:[F
@@ -154,12 +139,10 @@
 
     invoke-virtual {v1, v2}, Landroid/renderscript/FieldPacker;->addF32(F)V
 
-    .line 245
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 250
     :cond_0
     iget-object v1, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mIOBuffer:Landroid/renderscript/FieldPacker;
 
@@ -173,7 +156,6 @@
 
     invoke-virtual {v1, v2}, Landroid/renderscript/FieldPacker;->reset(I)V
 
-    .line 251
     iget-object v1, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mAlloc:Landroid/renderscript/Allocation;
 
     const/4 v2, 0x0
@@ -182,7 +164,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/renderscript/Allocation;->setFromFieldPacker(ILandroid/renderscript/FieldPacker;)V
 
-    .line 252
     return-void
 .end method
 
@@ -192,17 +173,14 @@
     .locals 1
 
     .prologue
-    .line 239
     iget-object v0, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mAlloc:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->destroy()V
 
-    .line 240
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mAlloc:Landroid/renderscript/Allocation;
 
-    .line 241
     return-void
 .end method
 
@@ -210,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mAlloc:Landroid/renderscript/Allocation;
 
     return-object v0
@@ -221,17 +198,14 @@
     .param p1, "m"    # Landroid/renderscript/Matrix4f;
 
     .prologue
-    .line 261
     iget-object v0, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mModel:Landroid/renderscript/Matrix4f;
 
     invoke-virtual {v0, p1}, Landroid/renderscript/Matrix4f;->load(Landroid/renderscript/Matrix4f;)V
 
-    .line 262
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->addToBuffer(ILandroid/renderscript/Matrix4f;)V
 
-    .line 263
     return-void
 .end method
 
@@ -240,17 +214,14 @@
     .param p1, "m"    # Landroid/renderscript/Matrix4f;
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mProjection:Landroid/renderscript/Matrix4f;
 
     invoke-virtual {v0, p1}, Landroid/renderscript/Matrix4f;->load(Landroid/renderscript/Matrix4f;)V
 
-    .line 273
     const/16 v0, 0x40
 
     invoke-direct {p0, v0, p1}, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->addToBuffer(ILandroid/renderscript/Matrix4f;)V
 
-    .line 274
     return-void
 .end method
 
@@ -259,16 +230,13 @@
     .param p1, "m"    # Landroid/renderscript/Matrix4f;
 
     .prologue
-    .line 286
     iget-object v0, p0, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->mTexture:Landroid/renderscript/Matrix4f;
 
     invoke-virtual {v0, p1}, Landroid/renderscript/Matrix4f;->load(Landroid/renderscript/Matrix4f;)V
 
-    .line 287
     const/16 v0, 0x80
 
     invoke-direct {p0, v0, p1}, Landroid/renderscript/ProgramVertexFixedFunction$Constants;->addToBuffer(ILandroid/renderscript/Matrix4f;)V
 
-    .line 288
     return-void
 .end method

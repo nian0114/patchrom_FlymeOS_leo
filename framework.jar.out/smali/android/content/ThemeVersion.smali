@@ -22,12 +22,10 @@
     .locals 1
 
     .prologue
-    .line 32
     const/4 v0, 0x3
 
     sput v0, Landroid/content/ThemeVersion;->THEME_VERSION:I
 
-    .line 39
     const/4 v0, 0x2
 
     sput v0, Landroid/content/ThemeVersion;->MIN_SUPPORTED_THEME_VERSION:I
@@ -39,9 +37,7 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     return-void
 .end method

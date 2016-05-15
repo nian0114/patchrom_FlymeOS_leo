@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 3092
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$4;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$4;->val$result:Landroid/os/RemoteCallback;
@@ -43,7 +42,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3096
     :try_start_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$4;->val$result:Landroid/os/RemoteCallback;
 
@@ -57,11 +55,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3099
     :goto_0
     return-void
 
-    .line 3097
     :catch_0
     move-exception v0
 

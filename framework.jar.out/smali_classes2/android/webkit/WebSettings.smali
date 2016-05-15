@@ -41,10 +41,8 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 168
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1229
     invoke-static {}, Landroid/webkit/WebViewFactory;->getProvider()Landroid/webkit/WebViewFactoryProvider;
 
     move-result-object v0
@@ -191,7 +188,6 @@
     .end annotation
 
     .prologue
-    .line 1171
     const-string v0, ""
 
     return-object v0
@@ -218,23 +214,19 @@
     .locals 9
 
     .prologue
-    .line 482
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 483
     .local v1, "closestSize":Landroid/webkit/WebSettings$TextSize;
     const v6, 0x7fffffff
 
-    .line 484
     .local v6, "smallestDelta":I
     :try_start_0
     invoke-virtual {p0}, Landroid/webkit/WebSettings;->getTextZoom()I
 
     move-result v7
 
-    .line 485
     .local v7, "textSize":I
     invoke-static {}, Landroid/webkit/WebSettings$TextSize;->values()[Landroid/webkit/WebSettings$TextSize;
 
@@ -252,7 +244,6 @@
 
     aget-object v5, v0, v3
 
-    .line 486
     .local v5, "size":Landroid/webkit/WebSettings$TextSize;
     iget v8, v5, Landroid/webkit/WebSettings$TextSize;->value:I
 
@@ -264,11 +255,9 @@
 
     move-result v2
 
-    .line 487
     .local v2, "delta":I
     if-nez v2, :cond_0
 
-    .line 495
     .end local v1    # "closestSize":Landroid/webkit/WebSettings$TextSize;
     .end local v2    # "delta":I
     .end local v5    # "size":Landroid/webkit/WebSettings$TextSize;
@@ -277,26 +266,21 @@
 
     return-object v5
 
-    .line 490
     .restart local v1    # "closestSize":Landroid/webkit/WebSettings$TextSize;
     .restart local v2    # "delta":I
     .restart local v5    # "size":Landroid/webkit/WebSettings$TextSize;
     :cond_0
     if-ge v2, v6, :cond_1
 
-    .line 491
     move v6, v2
 
-    .line 492
     move-object v1, v5
 
-    .line 485
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 495
     .end local v2    # "delta":I
     .end local v5    # "size":Landroid/webkit/WebSettings$TextSize;
     :cond_2
@@ -317,7 +301,6 @@
 
     goto :goto_2
 
-    .line 482
     .end local v0    # "arr$":[Landroid/webkit/WebSettings$TextSize;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -339,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 565
     const/4 v0, 0x0
 
     return v0
@@ -507,7 +489,6 @@
     .end annotation
 
     .prologue
-    .line 973
     return-void
 .end method
 
@@ -544,7 +525,6 @@
     .param p1, "t"    # Landroid/webkit/WebSettings$TextSize;
 
     .prologue
-    .line 469
     monitor-enter p0
 
     :try_start_0
@@ -554,12 +534,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 470
     monitor-exit p0
 
     return-void
 
-    .line 469
     :catchall_0
     move-exception v0
 
@@ -578,7 +556,6 @@
     .end annotation
 
     .prologue
-    .line 553
     return-void
 .end method
 

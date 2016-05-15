@@ -26,12 +26,9 @@
     .param p1, "_appVersion"    # I
 
     .prologue
-    .line 2896
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2897
     iput p1, p0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->appVersion:I
 
-    .line 2898
     return-void
 .end method

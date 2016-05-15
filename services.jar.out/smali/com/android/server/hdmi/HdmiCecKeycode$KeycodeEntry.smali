@@ -29,14 +29,12 @@
     .param p2, "cecKeycode"    # I
 
     .prologue
-    .line 204
     const/4 v0, 0x1
 
     sget-object v1, Llibcore/util/EmptyArray;->BYTE:[B
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ[B)V
 
-    .line 205
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p3, "x2"    # Lcom/android/server/hdmi/HdmiCecKeycode$1;
 
     .prologue
-    .line 181
     invoke-direct {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(II)V
 
     return-void
@@ -60,12 +57,10 @@
     .param p3, "isRepeatable"    # Z
 
     .prologue
-    .line 196
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ[B)V
 
-    .line 197
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .param p4, "x3"    # Lcom/android/server/hdmi/HdmiCecKeycode$1;
 
     .prologue
-    .line 181
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ)V
 
     return-void
@@ -93,16 +87,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 188
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
-    .line 189
     iput-boolean p3, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mIsRepeatable:Z
 
-    .line 190
     array-length v0, p4
 
     add-int/lit8 v0, v0, 0x1
@@ -111,7 +101,6 @@
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycodeAndParams:[B
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycodeAndParams:[B
 
     const/4 v1, 0x1
@@ -120,7 +109,6 @@
 
     invoke-static {p4, v3, v0, v1, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycodeAndParams:[B
 
     and-int/lit16 v1, p2, 0xff
@@ -129,7 +117,6 @@
 
     aput-byte v1, v0, v3
 
-    .line 193
     return-void
 .end method
 
@@ -142,7 +129,6 @@
     .param p5, "x4"    # Lcom/android/server/hdmi/HdmiCecKeycode$1;
 
     .prologue
-    .line 181
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ[B)V
 
     return-void
@@ -155,12 +141,10 @@
     .param p3, "cecParams"    # [B
 
     .prologue
-    .line 200
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ[B)V
 
-    .line 201
     return-void
 .end method
 
@@ -170,7 +154,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 181
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->toCecKeycodeAndParamIfMatched(I)[B
 
     move-result-object v0
@@ -184,7 +167,6 @@
     .param p1, "x1"    # [B
 
     .prologue
-    .line 181
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->toAndroidKeycodeIfMatched([B)I
 
     move-result v0
@@ -198,7 +180,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 181
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->isRepeatableIfMatched(I)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -211,19 +192,16 @@
     .param p1, "androidKeycode"    # I
 
     .prologue
-    .line 224
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
     if-ne v0, p1, :cond_0
 
-    .line 225
     iget-boolean v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mIsRepeatable:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 227
     :goto_0
     return-object v0
 
@@ -238,7 +216,6 @@
     .param p1, "cecKeycodeAndParams"    # [B
 
     .prologue
-    .line 216
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycodeAndParams:[B
 
     invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
@@ -247,10 +224,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 217
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
-    .line 219
     :goto_0
     return v0
 
@@ -265,15 +240,12 @@
     .param p1, "androidKeycode"    # I
 
     .prologue
-    .line 208
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
     if-ne v0, p1, :cond_0
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycodeAndParams:[B
 
-    .line 211
     :goto_0
     return-object v0
 

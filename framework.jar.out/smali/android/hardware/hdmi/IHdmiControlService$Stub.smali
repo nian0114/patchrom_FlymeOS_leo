@@ -98,15 +98,12 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 22
     const-string v0, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p0, p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 23
     return-void
 .end method
 
@@ -115,17 +112,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 30
     if-nez p0, :cond_0
 
-    .line 31
     const/4 v0, 0x0
 
-    .line 37
     :goto_0
     return-object v0
 
-    .line 33
     :cond_0
     const-string v1, "android.hardware.hdmi.IHdmiControlService"
 
@@ -133,7 +126,6 @@
 
     move-result-object v0
 
-    .line 34
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -141,12 +133,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 35
     check-cast v0, Landroid/hardware/hdmi/IHdmiControlService;
 
     goto :goto_0
 
-    .line 37
     :cond_1
     new-instance v0, Landroid/hardware/hdmi/IHdmiControlService$Stub$Proxy;
 
@@ -162,7 +152,6 @@
     .locals 0
 
     .prologue
-    .line 41
     return-object p0
 .end method
 
@@ -183,10 +172,8 @@
 
     const/4 v7, 0x1
 
-    .line 45
     sparse-switch p1, :sswitch_data_0
 
-    .line 389
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -194,7 +181,6 @@
     :goto_0
     return v7
 
-    .line 49
     :sswitch_0
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
@@ -202,67 +188,54 @@
 
     goto :goto_0
 
-    .line 54
     :sswitch_1
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 55
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->getSupportedTypes()[I
 
     move-result-object v4
 
-    .line 56
     .local v4, "_result":[I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 57
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeIntArray([I)V
 
     goto :goto_0
 
-    .line 62
     .end local v4    # "_result":[I
     :sswitch_2
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 63
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->getActiveSource()Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     move-result-object v4
 
-    .line 64
     .local v4, "_result":Landroid/hardware/hdmi/HdmiDeviceInfo;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 65
     if-eqz v4, :cond_0
 
-    .line 66
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 67
     invoke-virtual {v4, p3, v7}, Landroid/hardware/hdmi/HdmiDeviceInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 70
     :cond_0
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 76
     .end local v4    # "_result":Landroid/hardware/hdmi/HdmiDeviceInfo;
     :sswitch_3
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -271,23 +244,19 @@
 
     move-result-object v0
 
-    .line 79
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiControlCallback;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->oneTouchPlay(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 80
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 85
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiControlCallback;
     :sswitch_4
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 87
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -296,23 +265,19 @@
 
     move-result-object v0
 
-    .line 88
     .restart local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiControlCallback;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->queryDisplayStatus(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 89
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 94
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiControlCallback;
     :sswitch_5
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -321,23 +286,19 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiHotplugEventListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->addHotplugEventListener(Landroid/hardware/hdmi/IHdmiHotplugEventListener;)V
 
-    .line 98
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 103
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiHotplugEventListener;
     :sswitch_6
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -346,23 +307,19 @@
 
     move-result-object v0
 
-    .line 106
     .restart local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiHotplugEventListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->removeHotplugEventListener(Landroid/hardware/hdmi/IHdmiHotplugEventListener;)V
 
-    .line 107
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 112
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiHotplugEventListener;
     :sswitch_7
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -371,28 +328,23 @@
 
     move-result-object v0
 
-    .line 115
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiDeviceEventListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->addDeviceEventListener(Landroid/hardware/hdmi/IHdmiDeviceEventListener;)V
 
-    .line 116
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 121
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiDeviceEventListener;
     :sswitch_8
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 125
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -402,16 +354,13 @@
 
     move-result-object v1
 
-    .line 126
     .local v1, "_arg1":Landroid/hardware/hdmi/IHdmiControlCallback;
     invoke-virtual {p0, v0, v1}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->deviceSelect(ILandroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 127
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 132
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/hardware/hdmi/IHdmiControlCallback;
     :sswitch_9
@@ -419,12 +368,10 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 134
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 136
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -434,16 +381,13 @@
 
     move-result-object v1
 
-    .line 137
     .restart local v1    # "_arg1":Landroid/hardware/hdmi/IHdmiControlCallback;
     invoke-virtual {p0, v0, v1}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->portSelect(ILandroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 138
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 143
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/hardware/hdmi/IHdmiControlCallback;
     :sswitch_a
@@ -451,18 +395,15 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 145
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 147
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 149
     .local v1, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -472,12 +413,10 @@
 
     move v2, v7
 
-    .line 150
     .local v2, "_arg2":Z
     :goto_1
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->sendKeyEvent(IIZ)V
 
-    .line 151
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -486,10 +425,8 @@
     :cond_1
     move v2, v8
 
-    .line 149
     goto :goto_1
 
-    .line 156
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     :sswitch_b
@@ -497,37 +434,30 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 157
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->getPortInfo()Ljava/util/List;
 
     move-result-object v6
 
-    .line 158
     .local v6, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiPortInfo;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 159
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 164
     .end local v6    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiPortInfo;>;"
     :sswitch_c
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 165
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->canChangeSystemAudioMode()Z
 
     move-result v4
 
-    .line 166
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 167
     if-eqz v4, :cond_2
 
     move v8, v7
@@ -537,23 +467,19 @@
 
     goto/16 :goto_0
 
-    .line 172
     .end local v4    # "_result":Z
     :sswitch_d
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 173
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->getSystemAudioMode()Z
 
     move-result v4
 
-    .line 174
     .restart local v4    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 175
     if-eqz v4, :cond_3
 
     move v8, v7
@@ -563,14 +489,12 @@
 
     goto/16 :goto_0
 
-    .line 180
     .end local v4    # "_result":Z
     :sswitch_e
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 182
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
@@ -579,7 +503,6 @@
 
     move v0, v7
 
-    .line 184
     .local v0, "_arg0":Z
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
@@ -590,11 +513,9 @@
 
     move-result-object v1
 
-    .line 185
     .local v1, "_arg1":Landroid/hardware/hdmi/IHdmiControlCallback;
     invoke-virtual {p0, v0, v1}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setSystemAudioMode(ZLandroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 186
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -604,16 +525,13 @@
     :cond_4
     move v0, v8
 
-    .line 182
     goto :goto_2
 
-    .line 191
     :sswitch_f
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 193
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -622,23 +540,19 @@
 
     move-result-object v0
 
-    .line 194
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->addSystemAudioModeChangeListener(Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;)V
 
-    .line 195
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 200
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
     :sswitch_10
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 202
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -647,23 +561,19 @@
 
     move-result-object v0
 
-    .line 203
     .restart local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->removeSystemAudioModeChangeListener(Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;)V
 
-    .line 204
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 209
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
     :sswitch_11
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 211
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
@@ -672,12 +582,10 @@
 
     move v0, v7
 
-    .line 212
     .local v0, "_arg0":Z
     :goto_3
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setArcMode(Z)V
 
-    .line 213
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -686,16 +594,13 @@
     :cond_5
     move v0, v8
 
-    .line 211
     goto :goto_3
 
-    .line 218
     :sswitch_12
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 220
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
@@ -704,12 +609,10 @@
 
     move v0, v7
 
-    .line 221
     .restart local v0    # "_arg0":Z
     :goto_4
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setProhibitMode(Z)V
 
-    .line 222
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -718,42 +621,34 @@
     :cond_6
     move v0, v8
 
-    .line 220
     goto :goto_4
 
-    .line 227
     :sswitch_13
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 229
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 231
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 233
     .local v1, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 234
     .local v2, "_arg2":I
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setSystemAudioVolume(III)V
 
-    .line 235
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 240
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":I
@@ -762,7 +657,6 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
@@ -771,12 +665,10 @@
 
     move v0, v7
 
-    .line 243
     .local v0, "_arg0":Z
     :goto_5
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setSystemAudioMute(Z)V
 
-    .line 244
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -785,16 +677,13 @@
     :cond_7
     move v0, v8
 
-    .line 242
     goto :goto_5
 
-    .line 249
     :sswitch_15
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 251
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -803,82 +692,67 @@
 
     move-result-object v0
 
-    .line 252
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiInputChangeListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setInputChangeListener(Landroid/hardware/hdmi/IHdmiInputChangeListener;)V
 
-    .line 253
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 258
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiInputChangeListener;
     :sswitch_16
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 259
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->getInputDevices()Ljava/util/List;
 
     move-result-object v5
 
-    .line 260
     .local v5, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiDeviceInfo;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 261
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 266
     .end local v5    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiDeviceInfo;>;"
     :sswitch_17
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 267
     invoke-virtual {p0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->getDeviceList()Ljava/util/List;
 
     move-result-object v5
 
-    .line 268
     .restart local v5    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiDeviceInfo;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 269
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 274
     .end local v5    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiDeviceInfo;>;"
     :sswitch_18
     const-string v9, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 276
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 278
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 280
     .restart local v1    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v2
 
-    .line 282
     .local v2, "_arg2":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -888,12 +762,10 @@
 
     move v3, v7
 
-    .line 283
     .local v3, "_arg3":Z
     :goto_6
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->sendVendorCommand(II[BZ)V
 
-    .line 284
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -902,10 +774,8 @@
     :cond_8
     move v3, v8
 
-    .line 282
     goto :goto_6
 
-    .line 289
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":[B
@@ -914,7 +784,6 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 291
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -923,22 +792,18 @@
 
     move-result-object v0
 
-    .line 293
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiVendorCommandListener;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 294
     .restart local v1    # "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->addVendorCommandListener(Landroid/hardware/hdmi/IHdmiVendorCommandListener;I)V
 
-    .line 295
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 300
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiVendorCommandListener;
     .end local v1    # "_arg1":I
     :sswitch_1a
@@ -946,27 +811,22 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 302
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 304
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 305
     .restart local v1    # "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->sendStandby(II)V
 
-    .line 306
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 311
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     :sswitch_1b
@@ -974,7 +834,6 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 313
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -983,43 +842,35 @@
 
     move-result-object v0
 
-    .line 314
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiRecordListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->setHdmiRecordListener(Landroid/hardware/hdmi/IHdmiRecordListener;)V
 
-    .line 315
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 320
     .end local v0    # "_arg0":Landroid/hardware/hdmi/IHdmiRecordListener;
     :sswitch_1c
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 322
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 324
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v1
 
-    .line 325
     .local v1, "_arg1":[B
     invoke-virtual {p0, v0, v1}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->startOneTouchRecord(I[B)V
 
-    .line 326
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 331
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":[B
     :sswitch_1d
@@ -1027,54 +878,44 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 333
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 334
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->stopOneTouchRecord(I)V
 
-    .line 335
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 340
     .end local v0    # "_arg0":I
     :sswitch_1e
     const-string v8, "android.hardware.hdmi.IHdmiControlService"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 342
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 344
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 346
     .local v1, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v2
 
-    .line 347
     .restart local v2    # "_arg2":[B
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->startTimerRecording(II[B)V
 
-    .line 348
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 353
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":[B
@@ -1083,33 +924,27 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 355
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 357
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 359
     .restart local v1    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v2
 
-    .line 360
     .restart local v2    # "_arg2":[B
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->clearTimerRecording(II[B)V
 
-    .line 361
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 366
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":[B
@@ -1118,39 +953,32 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 368
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 370
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 372
     .restart local v1    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 374
     .local v2, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v3
 
-    .line 375
     .local v3, "_arg3":[B
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->sendMhlVendorCommand(III[B)V
 
-    .line 376
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 381
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":I
@@ -1160,7 +988,6 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 383
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -1169,16 +996,13 @@
 
     move-result-object v0
 
-    .line 384
     .local v0, "_arg0":Landroid/hardware/hdmi/IHdmiMhlVendorCommandListener;
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/IHdmiControlService$Stub;->addHdmiMhlVendorCommandListener(Landroid/hardware/hdmi/IHdmiMhlVendorCommandListener;)V
 
-    .line 385
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 45
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

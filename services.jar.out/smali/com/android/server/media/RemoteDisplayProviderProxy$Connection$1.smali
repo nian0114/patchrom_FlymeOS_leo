@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 337
     iput-object p1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection$1;->this$1:Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 340
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection$1;->this$1:Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;
 
     iget-object v0, v0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
@@ -50,6 +48,5 @@
     # invokes: Lcom/android/server/media/RemoteDisplayProviderProxy;->onConnectionReady(Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;)V
     invoke-static {v0, v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->access$300(Lcom/android/server/media/RemoteDisplayProviderProxy;Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;)V
 
-    .line 341
     return-void
 .end method

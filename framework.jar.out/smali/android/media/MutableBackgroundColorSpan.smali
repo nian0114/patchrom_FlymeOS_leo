@@ -17,13 +17,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 1049
     invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    .line 1050
     iput p1, p0, Landroid/media/MutableBackgroundColorSpan;->mColor:I
 
-    .line 1051
     return-void
 .end method
 
@@ -32,17 +29,14 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1052
     invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    .line 1053
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/MutableBackgroundColorSpan;->mColor:I
 
-    .line 1054
     return-void
 .end method
 
@@ -52,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 1067
     const/4 v0, 0x0
 
     return v0
@@ -62,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 1059
     iget v0, p0, Landroid/media/MutableBackgroundColorSpan;->mColor:I
 
     return v0
@@ -72,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 1063
     const/16 v0, 0xc
 
     return v0
@@ -83,10 +74,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 1056
     iput p1, p0, Landroid/media/MutableBackgroundColorSpan;->mColor:I
 
-    .line 1057
     return-void
 .end method
 
@@ -95,12 +84,10 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 1075
     iget v0, p0, Landroid/media/MutableBackgroundColorSpan;->mColor:I
 
     iput v0, p1, Landroid/text/TextPaint;->bgColor:I
 
-    .line 1076
     return-void
 .end method
 
@@ -110,11 +97,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1071
     iget v0, p0, Landroid/media/MutableBackgroundColorSpan;->mColor:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1072
     return-void
 .end method

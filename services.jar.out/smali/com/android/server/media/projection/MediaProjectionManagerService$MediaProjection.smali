@@ -38,21 +38,16 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-direct {p0}, Landroid/media/projection/IMediaProjection$Stub;-><init>()V
 
-    .line 357
     iput p2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mType:I
 
-    .line 358
     iput p3, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->uid:I
 
-    .line 359
     iput-object p4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->packageName:Ljava/lang/String;
 
-    .line 360
     new-instance v0, Landroid/os/UserHandle;
 
     invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
@@ -63,7 +58,6 @@
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->userHandle:Landroid/os/UserHandle;
 
-    .line 361
     return-void
 .end method
 
@@ -74,26 +68,21 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 382
     iget v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mType:I
 
     if-nez v1, :cond_0
 
-    .line 383
     and-int/lit8 p1, p1, -0x9
 
-    .line 384
     or-int/lit8 p1, p1, 0x12
 
     move v0, p1
 
-    .line 398
     .end local p1    # "flags":I
     .local v0, "flags":I
     :goto_0
     return v0
 
-    .line 387
     .end local v0    # "flags":I
     .restart local p1    # "flags":I
     :cond_0
@@ -103,20 +92,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 388
     and-int/lit8 p1, p1, -0x12
 
-    .line 390
     or-int/lit8 p1, p1, 0xa
 
     move v0, p1
 
-    .line 392
     .end local p1    # "flags":I
     .restart local v0    # "flags":I
     goto :goto_0
 
-    .line 393
     .end local v0    # "flags":I
     .restart local p1    # "flags":I
     :cond_1
@@ -126,20 +111,16 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 394
     and-int/lit8 p1, p1, -0x9
 
-    .line 395
     or-int/lit8 p1, p1, 0x13
 
     move v0, p1
 
-    .line 398
     .end local p1    # "flags":I
     .restart local v0    # "flags":I
     goto :goto_0
 
-    .line 400
     .end local v0    # "flags":I
     .restart local p1    # "flags":I
     :cond_2
@@ -158,7 +139,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 376
     iget v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mType:I
 
     if-eq v1, v0, :cond_0
@@ -183,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 371
     const/4 v0, 0x0
 
     return v0
@@ -195,7 +174,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 365
     iget v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mType:I
 
     if-eq v1, v0, :cond_0
@@ -219,7 +197,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 469
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +248,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 470
     return-void
 .end method
 
@@ -279,7 +255,6 @@
     .locals 3
 
     .prologue
-    .line 465
     new-instance v0, Landroid/media/projection/MediaProjectionInfo;
 
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->packageName:Ljava/lang/String;
@@ -296,10 +271,8 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionCallback;
 
     .prologue
-    .line 450
     if-nez p1, :cond_0
 
-    .line 451
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "callback must not be null"
@@ -308,7 +281,6 @@
 
     throw v0
 
-    .line 453
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
@@ -319,7 +291,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->add(Landroid/media/projection/IMediaProjectionCallback;)V
 
-    .line 454
     return-void
 .end method
 
@@ -328,10 +299,8 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionCallback;
 
     .prologue
-    .line 406
     if-nez p1, :cond_0
 
-    .line 407
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "callback must not be null"
@@ -340,7 +309,6 @@
 
     throw v1
 
-    .line 409
     :cond_0
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
@@ -351,7 +319,6 @@
 
     monitor-enter v2
 
-    .line 410
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
@@ -366,7 +333,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 411
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v3, "Cannot start already started MediaProjection"
@@ -375,7 +341,6 @@
 
     throw v1
 
-    .line 431
     :catchall_0
     move-exception v1
 
@@ -385,14 +350,12 @@
 
     throw v1
 
-    .line 414
     :cond_1
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->registerCallback(Landroid/media/projection/IMediaProjectionCallback;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 416
     :try_start_2
     invoke-interface {p1}, Landroid/media/projection/IMediaProjectionCallback;->asBinder()Landroid/os/IBinder;
 
@@ -400,14 +363,12 @@
 
     iput-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mToken:Landroid/os/IBinder;
 
-    .line 417
     new-instance v1, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;
 
     invoke-direct {v1, p0, p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;-><init>(Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;Landroid/media/projection/IMediaProjectionCallback;)V
 
     iput-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mDeathEater:Landroid/os/IBinder$DeathRecipient;
 
-    .line 424
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mToken:Landroid/os/IBinder;
 
     iget-object v3, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mDeathEater:Landroid/os/IBinder$DeathRecipient;
@@ -419,25 +380,20 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 430
     :try_start_3
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # invokes: Lcom/android/server/media/projection/MediaProjectionManagerService;->startProjectionLocked(Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;)V
     invoke-static {v1, p0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->access$1200(Lcom/android/server/media/projection/MediaProjectionManagerService;Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;)V
 
-    .line 431
     monitor-exit v2
 
-    .line 432
     :goto_0
     return-void
 
-    .line 425
     :catch_0
     move-exception v0
 
-    .line 426
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MediaProjectionManagerService"
 
@@ -445,7 +401,6 @@
 
     invoke-static {v1, v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 428
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -457,7 +412,6 @@
     .locals 4
 
     .prologue
-    .line 436
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # getter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mLock:Ljava/lang/Object;
@@ -467,7 +421,6 @@
 
     monitor-enter v1
 
-    .line 437
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
@@ -482,7 +435,6 @@
 
     if-nez v0, :cond_0
 
-    .line 438
     const-string v0, "MediaProjectionManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -535,14 +487,11 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     monitor-exit v1
 
-    .line 446
     :goto_0
     return-void
 
-    .line 443
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->mToken:Landroid/os/IBinder;
 
@@ -552,13 +501,11 @@
 
     invoke-interface {v0, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 444
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # invokes: Lcom/android/server/media/projection/MediaProjectionManagerService;->stopProjectionLocked(Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;)V
     invoke-static {v0, p0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->access$1300(Lcom/android/server/media/projection/MediaProjectionManagerService;Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;)V
 
-    .line 445
     monitor-exit v1
 
     goto :goto_0
@@ -578,10 +525,8 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionCallback;
 
     .prologue
-    .line 458
     if-nez p1, :cond_0
 
-    .line 459
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "callback must not be null"
@@ -590,7 +535,6 @@
 
     throw v0
 
-    .line 461
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
@@ -601,6 +545,5 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->remove(Landroid/media/projection/IMediaProjectionCallback;)V
 
-    .line 462
     return-void
 .end method

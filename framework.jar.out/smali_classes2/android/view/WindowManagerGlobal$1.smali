@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 161
     invoke-direct {p0}, Landroid/view/IWindowSessionCallback$Stub;-><init>()V
 
     return-void
@@ -32,9 +31,7 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 164
     invoke-static {p1}, Landroid/animation/ValueAnimator;->setDurationScale(F)V
 
-    .line 165
     return-void
 .end method

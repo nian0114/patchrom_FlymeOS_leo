@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1457
     const-string v0, "android.type.verbatim"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1458
     return-void
 .end method
 
@@ -42,13 +40,10 @@
     .param p1, "verbatim"    # Ljava/lang/String;
 
     .prologue
-    .line 1465
     invoke-direct {p0}, Landroid/text/style/TtsSpan$VerbatimBuilder;-><init>()V
 
-    .line 1466
     invoke-virtual {p0, p1}, Landroid/text/style/TtsSpan$VerbatimBuilder;->setVerbatim(Ljava/lang/String;)Landroid/text/style/TtsSpan$VerbatimBuilder;
 
-    .line 1467
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .param p1, "verbatim"    # Ljava/lang/String;
 
     .prologue
-    .line 1476
     const-string v0, "android.arg.verbatim"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$VerbatimBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;

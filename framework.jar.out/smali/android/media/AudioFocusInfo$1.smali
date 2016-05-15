@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 161
     new-instance v0, Landroid/media/AudioFocusInfo;
 
     sget-object v1, Landroid/media/AudioAttributes;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -85,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 158
     invoke-virtual {p0, p1}, Landroid/media/AudioFocusInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/media/AudioFocusInfo;
 
     move-result-object v0
@@ -98,7 +95,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 172
     new-array v0, p1, [Landroid/media/AudioFocusInfo;
 
     return-object v0
@@ -108,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 158
     invoke-virtual {p0, p1}, Landroid/media/AudioFocusInfo$1;->newArray(I)[Landroid/media/AudioFocusInfo;
 
     move-result-object v0

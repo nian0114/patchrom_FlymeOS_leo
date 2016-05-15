@@ -34,33 +34,23 @@
     .param p8, "_windowFlags"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/wm/StartingData;->pkg:Ljava/lang/String;
 
-    .line 35
     iput p2, p0, Lcom/android/server/wm/StartingData;->theme:I
 
-    .line 36
     iput-object p3, p0, Lcom/android/server/wm/StartingData;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 37
     iput-object p4, p0, Lcom/android/server/wm/StartingData;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 38
     iput p5, p0, Lcom/android/server/wm/StartingData;->labelRes:I
 
-    .line 39
     iput p6, p0, Lcom/android/server/wm/StartingData;->icon:I
 
-    .line 40
     iput p7, p0, Lcom/android/server/wm/StartingData;->logo:I
 
-    .line 41
     iput p8, p0, Lcom/android/server/wm/StartingData;->windowFlags:I
 
-    .line 42
     return-void
 .end method

@@ -30,7 +30,6 @@
     .locals 3
 
     .prologue
-    .line 31
     const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/String;
@@ -98,7 +97,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 44
     sget-object v0, Lcom/android/internal/util/cm/PowerMenuConstants;->ALL_ACTIONS:[Ljava/lang/String;
 
     return-object v0

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 687
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternView$4;->this$0:Lcom/android/internal/widget/LockPatternView;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternView$4;->val$state:Lcom/android/internal/widget/LockPatternView$CellState;
@@ -45,7 +44,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 690
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView$4;->val$state:Lcom/android/internal/widget/LockPatternView$CellState;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -60,11 +58,9 @@
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView$CellState;->size:F
 
-    .line 691
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView$4;->this$0:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
 
-    .line 692
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 651
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,24 +43,20 @@
     .param p4, "monthDay"    # I
 
     .prologue
-    .line 653
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->setDate(III)V
     invoke-static {v0, p2, p3, p4}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$600(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;III)V
 
-    .line 654
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->updateSpinners()V
     invoke-static {v0}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$700(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 655
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->notifyDateChanged()V
     invoke-static {v0}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$900(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 656
     return-void
 .end method

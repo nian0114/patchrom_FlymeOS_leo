@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 594
     iput-object p1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$3;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 597
     iget-object v0, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$3;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 
     # getter for: Lcom/android/internal/widget/ToolbarWidgetWrapper;->mToolbar:Landroid/widget/Toolbar;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Toolbar;->setVisibility(I)V
 
-    .line 598
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1107
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     iput p2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->val$requestId:I
@@ -52,7 +51,6 @@
     .locals 7
 
     .prologue
-    .line 1110
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     # invokes: Landroid/hardware/camera2/impl/CameraDeviceImpl;->isClosed()Z
@@ -62,7 +60,6 @@
 
     if-nez v2, :cond_3
 
-    .line 1111
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     # getter for: Landroid/hardware/camera2/impl/CameraDeviceImpl;->DEBUG:Z
@@ -72,7 +69,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1112
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     # getter for: Landroid/hardware/camera2/impl/CameraDeviceImpl;->TAG:Ljava/lang/String;
@@ -102,7 +98,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1117
     :cond_0
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->val$frameNumberRequestPair:Ljava/util/AbstractMap$SimpleEntry;
 
@@ -116,7 +111,6 @@
 
     move-result-wide v0
 
-    .line 1118
     .local v0, "lastFrameNumber":J
     const-wide/32 v2, -0x80000000
 
@@ -130,7 +124,6 @@
 
     if-lez v2, :cond_2
 
-    .line 1120
     :cond_1
     new-instance v2, Ljava/lang/AssertionError;
 
@@ -156,7 +149,6 @@
 
     throw v2
 
-    .line 1123
     :cond_2
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$10;->val$holder:Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;
 
@@ -170,7 +162,6 @@
 
     invoke-virtual {v2, v3, v4, v0, v1}, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraDevice;IJ)V
 
-    .line 1128
     .end local v0    # "lastFrameNumber":J
     :cond_3
     return-void

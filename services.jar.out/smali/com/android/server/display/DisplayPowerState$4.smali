@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 323
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 326
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     const/4 v1, 0x0
@@ -48,7 +46,6 @@
     # setter for: Lcom/android/server/display/DisplayPowerState;->mColorFadeDrawPending:Z
     invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerState;->access$902(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # getter for: Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
@@ -58,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # getter for: Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
@@ -75,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/ColorFade;->draw(F)Z
 
-    .line 332
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
@@ -84,12 +79,10 @@
     # setter for: Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
     invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerState;->access$1202(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 333
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # invokes: Lcom/android/server/display/DisplayPowerState;->invokeCleanListenerIfNeeded()V
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerState;->access$800(Lcom/android/server/display/DisplayPowerState;)V
 
-    .line 334
     return-void
 .end method

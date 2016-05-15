@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 392
     iput-object p1, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iput-object p2, p0, Lcom/android/server/notification/ManagedServices$1;->val$servicesBindingTag:Ljava/lang/String;
@@ -56,14 +55,11 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 397
     const/4 v7, 0x0
 
-    .line 398
     .local v7, "added":Z
     const/4 v8, 0x0
 
-    .line 399
     .local v8, "info":Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
@@ -71,7 +67,6 @@
 
     monitor-enter v9
 
-    .line 400
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
@@ -86,7 +81,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 402
     :try_start_1
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
@@ -96,7 +90,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->mService:Landroid/os/IInterface;
 
-    .line 403
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iget-object v1, p0, Lcom/android/server/notification/ManagedServices$1;->mService:Landroid/os/IInterface;
@@ -116,12 +109,10 @@
 
     move-result-object v8
 
-    .line 405
     const/4 v0, 0x0
 
     invoke-interface {p2, v8, v0}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 406
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iget-object v0, v0, Lcom/android/server/notification/ManagedServices;->mServices:Ljava/util/ArrayList;
@@ -133,26 +124,21 @@
 
     move-result v7
 
-    .line 410
     :goto_0
     :try_start_2
     monitor-exit v9
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 411
     if-eqz v7, :cond_0
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
     invoke-virtual {v0, v8}, Lcom/android/server/notification/ManagedServices;->onServiceAdded(Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;)V
 
-    .line 414
     :cond_0
     return-void
 
-    .line 410
     :catchall_0
     move-exception v0
 
@@ -163,7 +149,6 @@
 
     throw v0
 
-    .line 407
     :catch_0
     move-exception v0
 
@@ -175,7 +160,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 418
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$1;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iget-object v0, v0, Lcom/android/server/notification/ManagedServices;->TAG:Ljava/lang/String;
@@ -211,6 +195,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     return-void
 .end method

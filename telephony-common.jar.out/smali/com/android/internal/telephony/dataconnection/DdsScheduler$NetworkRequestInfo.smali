@@ -28,20 +28,16 @@
     .param p2, "req"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DdsScheduler$NetworkRequestInfo;->this$0:Lcom/android/internal/telephony/dataconnection/DdsScheduler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/dataconnection/DdsScheduler$NetworkRequestInfo;->mAccepted:Z
 
-    .line 80
     iput-object p2, p0, Lcom/android/internal/telephony/dataconnection/DdsScheduler$NetworkRequestInfo;->mRequest:Landroid/net/NetworkRequest;
 
-    .line 81
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -36,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 44
     const-class v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -45,7 +44,6 @@
 
     sput-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;->TAG:Ljava/lang/String;
 
-    .line 45
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -63,11 +61,9 @@
     .locals 0
 
     .prologue
-    .line 42
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     return-void
 .end method
 
@@ -75,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-boolean v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;->VERBOSE:Z
 
     return v0
@@ -85,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -107,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 171
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray$MarshalerArray;
@@ -129,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 177
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableArray<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getRawType()Ljava/lang/Class;

@@ -23,13 +23,10 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Landroid/content/UndoOwner;->mTag:Ljava/lang/String;
 
-    .line 37
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/content/UndoOwner;->mData:Ljava/lang/Object;
 
     return-object v0
@@ -49,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Landroid/content/UndoOwner;->mTag:Ljava/lang/String;
 
     return-object v0

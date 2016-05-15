@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,13 +42,11 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p0, "sizes":Ljava/util/List;, "Ljava/util/List<Landroid/util/Size;>;"
-    const-string/jumbo v0, "sizes must not be null"
+    const-string v0, "sizes must not be null"
 
     invoke-static {p0, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     new-instance v0, Landroid/hardware/camera2/utils/SizeAreaComparator;
 
     invoke-direct {v0}, Landroid/hardware/camera2/utils/SizeAreaComparator;-><init>()V
@@ -75,32 +72,26 @@
 
     const/4 v9, -0x1
 
-    .line 38
-    const-string/jumbo v10, "size must not be null"
+    const-string v10, "size must not be null"
 
     invoke-static {p1, v10}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
-    const-string/jumbo v10, "size2 must not be null"
+    const-string v10, "size2 must not be null"
 
     invoke-static {p2, v10}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     invoke-virtual {p1, p2}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
 
     move-result v10
 
     if-eqz v10, :cond_1
 
-    .line 42
     const/4 v8, 0x0
 
-    .line 54
     :cond_0
     :goto_0
     return v8
 
-    .line 45
     :cond_1
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
@@ -108,7 +99,6 @@
 
     int-to-long v4, v10
 
-    .line 46
     .local v4, "width":J
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
@@ -116,7 +106,6 @@
 
     int-to-long v6, v10
 
-    .line 47
     .local v6, "width2":J
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
@@ -126,7 +115,6 @@
 
     mul-long v0, v4, v10
 
-    .line 48
     .local v0, "area":J
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
@@ -136,13 +124,11 @@
 
     mul-long v2, v6, v10
 
-    .line 50
     .local v2, "area2":J
     cmp-long v10, v0, v2
 
     if-nez v10, :cond_2
 
-    .line 51
     cmp-long v10, v4, v6
 
     if-gtz v10, :cond_0
@@ -151,7 +137,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_2
     cmp-long v10, v0, v2
 
@@ -166,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 32
     check-cast p1, Landroid/util/Size;
 
     check-cast p2, Landroid/util/Size;

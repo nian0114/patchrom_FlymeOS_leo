@@ -32,21 +32,16 @@
     .param p4, "colInc"    # I
 
     .prologue
-    .line 1844
     iput-object p1, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->this$0:Landroid/media/MediaCodec$MediaImage;
 
     invoke-direct {p0}, Landroid/media/Image$Plane;-><init>()V
 
-    .line 1845
     iput-object p2, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->mData:Ljava/nio/ByteBuffer;
 
-    .line 1846
     iput p3, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->mRowInc:I
 
-    .line 1847
     iput p4, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->mColInc:I
 
-    .line 1848
     return-void
 .end method
 
@@ -56,13 +51,11 @@
     .locals 1
 
     .prologue
-    .line 1864
     iget-object v0, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->this$0:Landroid/media/MediaCodec$MediaImage;
 
     # invokes: Landroid/media/MediaCodec$MediaImage;->checkValid()V
     invoke-static {v0}, Landroid/media/MediaCodec$MediaImage;->access$900(Landroid/media/MediaCodec$MediaImage;)V
 
-    .line 1865
     iget-object v0, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->mData:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -72,13 +65,11 @@
     .locals 1
 
     .prologue
-    .line 1858
     iget-object v0, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->this$0:Landroid/media/MediaCodec$MediaImage;
 
     # invokes: Landroid/media/MediaCodec$MediaImage;->checkValid()V
     invoke-static {v0}, Landroid/media/MediaCodec$MediaImage;->access$900(Landroid/media/MediaCodec$MediaImage;)V
 
-    .line 1859
     iget v0, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->mColInc:I
 
     return v0
@@ -88,13 +79,11 @@
     .locals 1
 
     .prologue
-    .line 1852
     iget-object v0, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->this$0:Landroid/media/MediaCodec$MediaImage;
 
     # invokes: Landroid/media/MediaCodec$MediaImage;->checkValid()V
     invoke-static {v0}, Landroid/media/MediaCodec$MediaImage;->access$900(Landroid/media/MediaCodec$MediaImage;)V
 
-    .line 1853
     iget v0, p0, Landroid/media/MediaCodec$MediaImage$MediaPlane;->mRowInc:I
 
     return v0

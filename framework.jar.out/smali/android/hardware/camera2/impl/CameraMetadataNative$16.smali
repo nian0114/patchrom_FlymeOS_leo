@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 949
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 952
     .local p2, "value":Ljava/lang/Object;, "TT;"
     check-cast p2, [Landroid/graphics/Rect;
 
@@ -54,6 +52,5 @@
     # invokes: Landroid/hardware/camera2/impl/CameraMetadataNative;->setFaceRectangles([Landroid/graphics/Rect;)Z
     invoke-static {p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->access$1000(Landroid/hardware/camera2/impl/CameraMetadataNative;[Landroid/graphics/Rect;)Z
 
-    .line 953
     return-void
 .end method

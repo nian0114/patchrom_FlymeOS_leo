@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p1, "certificate"    # Landroid/net/http/SslCertificate;
 
     .prologue
-    .line 76
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .param p2, "len"    # I
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 70
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p2, "description"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .param p1, "error"    # Landroid/net/http/SslError;
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     return v0
@@ -72,7 +66,6 @@
     .param p1, "headers"    # Landroid/net/http/Headers;
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -82,7 +75,6 @@
     .param p2, "permanent"    # Z
 
     .prologue
-    .line 58
     return-void
 .end method
 
@@ -90,12 +82,10 @@
     .locals 1
 
     .prologue
-    .line 31
     const-string v0, "LoggingEventHandler:requestSent()"
 
     invoke-static {v0}, Landroid/net/http/HttpLog;->v(Ljava/lang/String;)V
 
-    .line 32
     return-void
 .end method
 
@@ -107,6 +97,5 @@
     .param p4, "reason_phrase"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     return-void
 .end method

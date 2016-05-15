@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 175
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$1;, "Landroid/content/pm/RegisteredServicesCache.1;"
     iput-object p1, p0, Landroid/content/pm/RegisteredServicesCache$1;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
@@ -43,18 +42,15 @@
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$1;, "Landroid/content/pm/RegisteredServicesCache.1;"
     const/4 v2, -0x1
 
-    .line 178
     const-string v1, "android.intent.extra.UID"
 
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 179
     .local v0, "uid":I
     if-eq v0, v2, :cond_0
 
-    .line 180
     iget-object v1, p0, Landroid/content/pm/RegisteredServicesCache$1;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -64,7 +60,6 @@
     # invokes: Landroid/content/pm/RegisteredServicesCache;->handlePackageEvent(Landroid/content/Intent;I)V
     invoke-static {v1, p2, v2}, Landroid/content/pm/RegisteredServicesCache;->access$100(Landroid/content/pm/RegisteredServicesCache;Landroid/content/Intent;I)V
 
-    .line 182
     :cond_0
     return-void
 .end method

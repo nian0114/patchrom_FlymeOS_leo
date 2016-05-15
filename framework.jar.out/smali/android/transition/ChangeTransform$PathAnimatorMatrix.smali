@@ -33,20 +33,16 @@
     .param p2, "values"    # [F
 
     .prologue
-    .line 510
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 504
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mMatrix:Landroid/graphics/Matrix;
 
-    .line 511
     iput-object p1, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mView:Landroid/view/View;
 
-    .line 512
     invoke-virtual {p2}, [F->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 
     iput-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
-    .line 513
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
     const/4 v1, 0x2
@@ -64,7 +59,6 @@
 
     iput v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mTranslationX:F
 
-    .line 514
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
     const/4 v1, 0x5
@@ -73,10 +67,8 @@
 
     iput v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mTranslationY:F
 
-    .line 515
     invoke-direct {p0}, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->setAnimationMatrix()V
 
-    .line 516
     return-void
 .end method
 
@@ -84,7 +76,6 @@
     .locals 3
 
     .prologue
-    .line 530
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
     const/4 v1, 0x2
@@ -93,7 +84,6 @@
 
     aput v2, v0, v1
 
-    .line 531
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
     const/4 v1, 0x5
@@ -102,21 +92,18 @@
 
     aput v2, v0, v1
 
-    .line 532
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mMatrix:Landroid/graphics/Matrix;
 
     iget-object v1, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->setValues([F)V
 
-    .line 533
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAnimationMatrix(Landroid/graphics/Matrix;)V
 
-    .line 534
     return-void
 .end method
 
@@ -126,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 537
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -137,20 +123,16 @@
     .param p1, "translation"    # Landroid/graphics/PointF;
 
     .prologue
-    .line 524
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     iput v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mTranslationX:F
 
-    .line 525
     iget v0, p1, Landroid/graphics/PointF;->y:F
 
     iput v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mTranslationY:F
 
-    .line 526
     invoke-direct {p0}, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->setAnimationMatrix()V
 
-    .line 527
     return-void
 .end method
 
@@ -161,16 +143,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 519
     iget-object v0, p0, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->mValues:[F
 
     array-length v1, p1
 
     invoke-static {p1, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 520
     invoke-direct {p0}, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->setAnimationMatrix()V
 
-    .line 521
     return-void
 .end method

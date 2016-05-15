@@ -31,12 +31,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->this$0:Lcom/android/server/job/controllers/IdleController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 114
     iget-object v1, p1, Lcom/android/server/job/controllers/IdleController;->mContext:Landroid/content/Context;
 
     const-string v2, "alarm"
@@ -49,7 +47,6 @@
 
     iput-object v1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mAlarm:Landroid/app/AlarmManager;
 
-    .line 116
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.android.server.task.controllers.IdleController.ACTION_TRIGGER_IDLE"
@@ -68,7 +65,6 @@
 
     move-result-object v0
 
-    .line 119
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p1, Lcom/android/server/job/controllers/IdleController;->mContext:Landroid/content/Context;
 
@@ -78,10 +74,8 @@
 
     iput-object v1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdleTriggerIntent:Landroid/app/PendingIntent;
 
-    .line 123
     iput-boolean v3, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
-    .line 124
     return-void
 .end method
 
@@ -91,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget-boolean v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
     return v0
@@ -103,12 +96,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 149
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 151
     .local v7, "action":Ljava/lang/String;
     const-string v0, "android.intent.action.SCREEN_ON"
 
@@ -126,37 +117,31 @@
 
     if-eqz v0, :cond_2
 
-    .line 154
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
     if-eqz v0, :cond_1
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mAlarm:Landroid/app/AlarmManager;
 
     iget-object v1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdleTriggerIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 159
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->this$0:Lcom/android/server/job/controllers/IdleController;
 
     iget-boolean v1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
     invoke-virtual {v0, v1}, Lcom/android/server/job/controllers/IdleController;->reportNewIdleState(Z)V
 
-    .line 185
     :cond_1
     :goto_0
     return-void
 
-    .line 162
     :cond_2
     const-string v0, "android.intent.action.SCREEN_OFF"
 
@@ -174,19 +159,16 @@
 
     if-eqz v0, :cond_4
 
-    .line 167
     :cond_3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 168
     .local v8, "nowElapsed":J
     const-wide/32 v0, 0x4100a0
 
     add-long v2, v8, v0
 
-    .line 173
     .local v2, "when":J
     iget-object v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mAlarm:Landroid/app/AlarmManager;
 
@@ -200,7 +182,6 @@
 
     goto :goto_0
 
-    .line 175
     .end local v2    # "when":J
     .end local v8    # "nowElapsed":J
     :cond_4
@@ -212,17 +193,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 177
     iget-boolean v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
     if-nez v0, :cond_1
 
-    .line 181
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->this$0:Lcom/android/server/job/controllers/IdleController;
 
     iget-boolean v1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->mIdle:Z
@@ -236,44 +214,36 @@
     .locals 2
 
     .prologue
-    .line 131
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 134
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 135
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 138
     const-string v1, "android.intent.action.DREAMING_STARTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 139
     const-string v1, "android.intent.action.DREAMING_STOPPED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 142
     const-string v1, "com.android.server.task.controllers.IdleController.ACTION_TRIGGER_IDLE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 144
     iget-object v1, p0, Lcom/android/server/job/controllers/IdleController$IdlenessTracker;->this$0:Lcom/android/server/job/controllers/IdleController;
 
     iget-object v1, v1, Lcom/android/server/job/controllers/IdleController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 145
     return-void
 .end method

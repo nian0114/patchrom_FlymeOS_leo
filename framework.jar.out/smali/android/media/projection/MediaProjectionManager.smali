@@ -50,20 +50,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-object p1, p0, Landroid/media/projection/MediaProjectionManager;->mContext:Landroid/content/Context;
 
-    .line 67
-    const-string/jumbo v1, "media_projection"
+    const-string v1, "media_projection"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 68
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/media/projection/IMediaProjectionManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/projection/IMediaProjectionManager;
 
@@ -71,14 +67,12 @@
 
     iput-object v1, p0, Landroid/media/projection/MediaProjectionManager;->mService:Landroid/media/projection/IMediaProjectionManager;
 
-    .line 69
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Landroid/media/projection/MediaProjectionManager;->mCallbacks:Ljava/util/Map;
 
-    .line 70
     return-void
 .end method
 
@@ -90,10 +84,8 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 137
     if-nez p1, :cond_0
 
-    .line 138
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "callback must not be null"
@@ -102,19 +94,16 @@
 
     throw v2
 
-    .line 140
     :cond_0
     new-instance v0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;
 
     invoke-direct {v0, p1, p2}, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;-><init>(Landroid/media/projection/MediaProjectionManager$Callback;Landroid/os/Handler;)V
 
-    .line 141
     .local v0, "delegate":Landroid/media/projection/MediaProjectionManager$CallbackDelegate;
     iget-object v2, p0, Landroid/media/projection/MediaProjectionManager;->mCallbacks:Ljava/util/Map;
 
     invoke-interface {v2, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
     :try_start_0
     iget-object v2, p0, Landroid/media/projection/MediaProjectionManager;->mService:Landroid/media/projection/IMediaProjectionManager;
 
@@ -122,15 +111,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
     :goto_0
     return-void
 
-    .line 144
     :catch_0
     move-exception v1
 
-    .line 145
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "MediaProjectionManager"
 
@@ -145,12 +131,10 @@
     .locals 3
 
     .prologue
-    .line 79
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 80
     .local v0, "i":Landroid/content/Intent;
     const-string v1, "com.android.systemui"
 
@@ -158,7 +142,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 82
     return-object v0
 .end method
 
@@ -166,7 +149,6 @@
     .locals 3
 
     .prologue
-    .line 112
     :try_start_0
     iget-object v1, p0, Landroid/media/projection/MediaProjectionManager;->mService:Landroid/media/projection/IMediaProjectionManager;
 
@@ -176,15 +158,12 @@
 
     move-result-object v1
 
-    .line 116
     :goto_0
     return-object v1
 
-    .line 113
     :catch_0
     move-exception v0
 
-    .line 114
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MediaProjectionManager"
 
@@ -192,7 +171,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 116
     const/4 v1, 0x0
 
     goto :goto_0
@@ -206,19 +184,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 96
     const/4 v2, -0x1
 
     if-ne p1, v2, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 103
     :cond_0
     :goto_0
     return-object v1
 
-    .line 99
     :cond_1
     const-string v2, "android.media.projection.extra.EXTRA_MEDIA_PROJECTION"
 
@@ -226,11 +201,9 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "projection":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 103
     new-instance v1, Landroid/media/projection/MediaProjection;
 
     iget-object v2, p0, Landroid/media/projection/MediaProjectionManager;->mContext:Landroid/content/Context;
@@ -249,10 +222,8 @@
     .param p1, "callback"    # Landroid/media/projection/MediaProjectionManager$Callback;
 
     .prologue
-    .line 154
     if-nez p1, :cond_0
 
-    .line 155
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "callback must not be null"
@@ -261,7 +232,6 @@
 
     throw v2
 
-    .line 157
     :cond_0
     iget-object v2, p0, Landroid/media/projection/MediaProjectionManager;->mCallbacks:Ljava/util/Map;
 
@@ -271,11 +241,9 @@
 
     check-cast v0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;
 
-    .line 159
     .local v0, "delegate":Landroid/media/projection/MediaProjectionManager$CallbackDelegate;
     if-eqz v0, :cond_1
 
-    .line 160
     :try_start_0
     iget-object v2, p0, Landroid/media/projection/MediaProjectionManager;->mService:Landroid/media/projection/IMediaProjectionManager;
 
@@ -283,16 +251,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
     :cond_1
     :goto_0
     return-void
 
-    .line 162
     :catch_0
     move-exception v1
 
-    .line 163
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "MediaProjectionManager"
 
@@ -307,7 +272,6 @@
     .locals 3
 
     .prologue
-    .line 125
     :try_start_0
     iget-object v1, p0, Landroid/media/projection/MediaProjectionManager;->mService:Landroid/media/projection/IMediaProjectionManager;
 
@@ -315,15 +279,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
     :goto_0
     return-void
 
-    .line 126
     :catch_0
     move-exception v0
 
-    .line 127
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MediaProjectionManager"
 

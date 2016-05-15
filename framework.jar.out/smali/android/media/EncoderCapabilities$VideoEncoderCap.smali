@@ -57,45 +57,31 @@
     .param p12, "maxHFRMode"    # I
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput p1, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mCodec:I
 
-    .line 62
     iput p2, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMinBitRate:I
 
-    .line 63
     iput p3, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxBitRate:I
 
-    .line 64
     iput p4, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMinFrameRate:I
 
-    .line 65
     iput p5, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxFrameRate:I
 
-    .line 66
     iput p6, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMinFrameWidth:I
 
-    .line 67
     iput p7, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxFrameWidth:I
 
-    .line 68
     iput p8, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMinFrameHeight:I
 
-    .line 69
     iput p9, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxFrameHeight:I
 
-    .line 70
     iput p10, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxHFRFrameWidth:I
 
-    .line 71
     iput p11, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxHFRFrameHeight:I
 
-    .line 72
     iput p12, p0, Landroid/media/EncoderCapabilities$VideoEncoderCap;->mMaxHFRMode:I
 
-    .line 73
     return-void
 .end method

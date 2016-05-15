@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 255
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 257
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 255
     invoke-virtual {p0, p1}, Landroid/net/wifi/SupplicantState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/SupplicantState;
 
     move-result-object v0
@@ -74,7 +71,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 261
     new-array v0, p1, [Landroid/net/wifi/SupplicantState;
 
     return-object v0
@@ -84,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 255
     invoke-virtual {p0, p1}, Landroid/net/wifi/SupplicantState$1;->newArray(I)[Landroid/net/wifi/SupplicantState;
 
     move-result-object v0

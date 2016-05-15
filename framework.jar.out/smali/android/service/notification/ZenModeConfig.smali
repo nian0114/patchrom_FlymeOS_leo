@@ -152,12 +152,10 @@
     .locals 1
 
     .prologue
-    .line 48
     const-string v0, "ZenModeConfig"
 
     sput-object v0, Landroid/service/notification/ZenModeConfig;->TAG:Ljava/lang/String;
 
-    .line 59
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -166,7 +164,6 @@
 
     sput-object v0, Landroid/service/notification/ZenModeConfig;->ALL_DAYS:[I
 
-    .line 61
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -175,7 +172,6 @@
 
     sput-object v0, Landroid/service/notification/ZenModeConfig;->WEEKNIGHT_DAYS:[I
 
-    .line 64
     const/16 v0, 0xa
 
     new-array v0, v0, [I
@@ -184,7 +180,6 @@
 
     sput-object v0, Landroid/service/notification/ZenModeConfig;->MINUTE_BUCKETS:[I
 
-    .line 456
     new-instance v0, Landroid/service/notification/ZenModeConfig$1;
 
     invoke-direct {v0}, Landroid/service/notification/ZenModeConfig$1;-><init>()V
@@ -193,7 +188,6 @@
 
     return-void
 
-    .line 59
     nop
 
     :array_0
@@ -207,7 +201,6 @@
         0x7
     .end array-data
 
-    .line 61
     :array_1
     .array-data 4
         0x1
@@ -217,7 +210,6 @@
         0x5
     .end array-data
 
-    .line 64
     :array_2
     .array-data 4
         0xf
@@ -237,20 +229,16 @@
     .locals 1
 
     .prologue
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
 
-    .line 105
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/service/notification/ZenModeConfig;->allowFrom:I
 
-    .line 118
     return-void
 .end method
 
@@ -265,16 +253,12 @@
 
     const/4 v2, 0x1
 
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     iput-boolean v2, p0, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
 
-    .line 105
     iput v3, p0, Landroid/service/notification/ZenModeConfig;->allowFrom:I
 
-    .line 121
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -286,7 +270,6 @@
     :goto_0
     iput-boolean v1, p0, Landroid/service/notification/ZenModeConfig;->allowCalls:Z
 
-    .line 122
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -298,7 +281,6 @@
     :goto_1
     iput-boolean v1, p0, Landroid/service/notification/ZenModeConfig;->allowMessages:Z
 
-    .line 123
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -310,21 +292,18 @@
     :goto_2
     iput-boolean v1, p0, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
 
-    .line 124
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     if-ne v1, v2, :cond_0
 
-    .line 125
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
-    .line 127
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -332,28 +311,24 @@
 
     iput v1, p0, Landroid/service/notification/ZenModeConfig;->sleepStartHour:I
 
-    .line 128
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/service/notification/ZenModeConfig;->sleepStartMinute:I
 
-    .line 129
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/service/notification/ZenModeConfig;->sleepEndHour:I
 
-    .line 130
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/service/notification/ZenModeConfig;->sleepEndMinute:I
 
-    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -363,49 +338,40 @@
     :goto_3
     iput-boolean v2, p0, Landroid/service/notification/ZenModeConfig;->sleepNone:Z
 
-    .line 132
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 133
     .local v0, "len":I
     if-lez v0, :cond_1
 
-    .line 134
     new-array v1, v0, [Landroid/content/ComponentName;
 
     iput-object v1, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
-    .line 135
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
     sget-object v2, Landroid/content/ComponentName;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
 
-    .line 137
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 138
     if-lez v0, :cond_2
 
-    .line 139
     new-array v1, v0, [Landroid/net/Uri;
 
     iput-object v1, p0, Landroid/service/notification/ZenModeConfig;->conditionIds:[Landroid/net/Uri;
 
-    .line 140
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->conditionIds:[Landroid/net/Uri;
 
     sget-object v2, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
 
-    .line 142
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -413,7 +379,6 @@
 
     iput v1, p0, Landroid/service/notification/ZenModeConfig;->allowFrom:I
 
-    .line 143
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -422,7 +387,6 @@
 
     iput-object v1, p0, Landroid/service/notification/ZenModeConfig;->exitCondition:Landroid/service/notification/Condition;
 
-    .line 144
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -431,32 +395,27 @@
 
     iput-object v1, p0, Landroid/service/notification/ZenModeConfig;->exitConditionComponent:Landroid/content/ComponentName;
 
-    .line 145
     return-void
 
     .end local v0    # "len":I
     :cond_3
     move v1, v3
 
-    .line 121
     goto :goto_0
 
     :cond_4
     move v1, v3
 
-    .line 122
     goto :goto_1
 
     :cond_5
     move v1, v3
 
-    .line 123
     goto :goto_2
 
     :cond_6
     move v2, v3
 
-    .line 131
     goto :goto_3
 .end method
 
@@ -465,7 +424,6 @@
     .param p0, "conditionId"    # Landroid/net/Uri;
 
     .prologue
-    .line 539
     invoke-static {p0}, Landroid/service/notification/ZenModeConfig;->tryParseCountdownConditionId(Landroid/net/Uri;)J
 
     move-result-wide v0
@@ -492,7 +450,6 @@
     .param p0, "conditionId"    # Landroid/net/Uri;
 
     .prologue
-    .line 586
     invoke-static {p0}, Landroid/service/notification/ZenModeConfig;->tryParseDowntimeConditionId(Landroid/net/Uri;)Landroid/service/notification/ZenModeConfig$DowntimeInfo;
 
     move-result-object v0
@@ -515,7 +472,6 @@
     .param p0, "val"    # I
 
     .prologue
-    .line 410
     if-ltz p0, :cond_0
 
     const/16 v0, 0x18
@@ -538,7 +494,6 @@
     .param p0, "val"    # I
 
     .prologue
-    .line 414
     if-ltz p0, :cond_0
 
     const/16 v0, 0x3c
@@ -561,10 +516,9 @@
     .param p0, "sleepMode"    # Ljava/lang/String;
 
     .prologue
-    .line 249
     if-eqz p0, :cond_0
 
-    const-string/jumbo v0, "nights"
+    const-string v0, "nights"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -572,7 +526,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "weeknights"
+    const-string v0, "weeknights"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -607,22 +561,19 @@
 
     const/4 v9, 0x0
 
-    .line 384
     const-string v0, "id"
 
     invoke-static {p0, v0}, Landroid/service/notification/ZenModeConfig;->safeUri(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 385
     .local v1, "id":Landroid/net/Uri;
-    const-string/jumbo v0, "summary"
+    const-string v0, "summary"
 
     invoke-interface {p0, v9, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 386
     .local v2, "summary":Ljava/lang/String;
     const-string v0, "line1"
 
@@ -630,7 +581,6 @@
 
     move-result-object v3
 
-    .line 387
     .local v3, "line1":Ljava/lang/String;
     const-string v0, "line2"
 
@@ -638,7 +588,6 @@
 
     move-result-object v4
 
-    .line 388
     .local v4, "line2":Ljava/lang/String;
     const-string v0, "icon"
 
@@ -646,15 +595,13 @@
 
     move-result v5
 
-    .line 389
     .local v5, "icon":I
-    const-string/jumbo v0, "state"
+    const-string v0, "state"
 
     invoke-static {p0, v0, v10}, Landroid/service/notification/ZenModeConfig;->safeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
 
-    .line 390
     .local v6, "state":I
     const-string v0, "flags"
 
@@ -662,7 +609,6 @@
 
     move-result v7
 
-    .line 392
     .local v7, "flags":I
     :try_start_0
     new-instance v0, Landroid/service/notification/Condition;
@@ -671,15 +617,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 395
     :goto_0
     return-object v0
 
-    .line 393
     :catch_0
     move-exception v8
 
-    .line 394
     .local v8, "e":Ljava/lang/IllegalArgumentException;
     sget-object v0, Landroid/service/notification/ZenModeConfig;->TAG:Ljava/lang/String;
 
@@ -689,7 +632,6 @@
 
     move-object v0, v9
 
-    .line 395
     goto :goto_0
 .end method
 
@@ -704,12 +646,10 @@
     .end annotation
 
     .prologue
-    .line 282
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v12
 
-    .line 283
     .local v12, "type":I
     const/4 v14, 0x2
 
@@ -717,20 +657,17 @@
 
     const/4 v8, 0x0
 
-    .line 298
     :cond_0
     :goto_0
     return-object v8
 
-    .line 284
     :cond_1
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 285
     .local v11, "tag":Ljava/lang/String;
-    const-string/jumbo v14, "zen"
+    const-string v14, "zen"
 
     invoke-virtual {v14, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -742,15 +679,13 @@
 
     goto :goto_0
 
-    .line 286
     :cond_2
     new-instance v8, Landroid/service/notification/ZenModeConfig;
 
     invoke-direct {v8}, Landroid/service/notification/ZenModeConfig;-><init>()V
 
-    .line 287
     .local v8, "rt":Landroid/service/notification/ZenModeConfig;
-    const-string/jumbo v14, "version"
+    const-string v14, "version"
 
     const/4 v15, 0x1
 
@@ -760,19 +695,16 @@
 
     move-result v13
 
-    .line 288
     .local v13, "version":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 289
     .local v2, "conditionComponents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentName;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 290
     .local v4, "conditionIds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/Uri;>;"
     :cond_3
     :goto_1
@@ -784,17 +716,15 @@
 
     if-eq v12, v14, :cond_e
 
-    .line 291
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 292
     const/4 v14, 0x3
 
     if-ne v12, v14, :cond_4
 
-    const-string/jumbo v14, "zen"
+    const-string v14, "zen"
 
     invoke-virtual {v14, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -802,14 +732,12 @@
 
     if-eqz v14, :cond_4
 
-    .line 293
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v14
 
     if-nez v14, :cond_0
 
-    .line 294
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v14
@@ -824,7 +752,6 @@
 
     iput-object v14, v8, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
-    .line 296
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v14
@@ -841,13 +768,11 @@
 
     goto :goto_0
 
-    .line 300
     :cond_4
     const/4 v14, 0x2
 
     if-ne v12, v14, :cond_3
 
-    .line 301
     const-string v14, "allow"
 
     invoke-virtual {v14, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -856,7 +781,6 @@
 
     if-eqz v14, :cond_6
 
-    .line 302
     const-string v14, "calls"
 
     const/4 v15, 0x0
@@ -869,8 +793,7 @@
 
     iput-boolean v14, v8, Landroid/service/notification/ZenModeConfig;->allowCalls:Z
 
-    .line 303
-    const-string/jumbo v14, "messages"
+    const-string v14, "messages"
 
     const/4 v15, 0x0
 
@@ -882,7 +805,6 @@
 
     iput-boolean v14, v8, Landroid/service/notification/ZenModeConfig;->allowMessages:Z
 
-    .line 304
     const-string v14, "events"
 
     const/4 v15, 0x1
@@ -895,7 +817,6 @@
 
     iput-boolean v14, v8, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
 
-    .line 305
     const-string v14, "from"
 
     const/4 v15, 0x0
@@ -908,7 +829,6 @@
 
     iput v14, v8, Landroid/service/notification/ZenModeConfig;->allowFrom:I
 
-    .line 306
     iget v14, v8, Landroid/service/notification/ZenModeConfig;->allowFrom:I
 
     if-ltz v14, :cond_5
@@ -919,7 +839,6 @@
 
     if-le v14, v15, :cond_3
 
-    .line 307
     :cond_5
     new-instance v14, Ljava/lang/IndexOutOfBoundsException;
 
@@ -949,9 +868,8 @@
 
     throw v14
 
-    .line 309
     :cond_6
-    const-string/jumbo v14, "sleep"
+    const-string v14, "sleep"
 
     invoke-virtual {v14, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -959,10 +877,9 @@
 
     if-eqz v14, :cond_c
 
-    .line 310
     const/4 v14, 0x0
 
-    const-string/jumbo v15, "mode"
+    const-string v15, "mode"
 
     move-object/from16 v0, p0
 
@@ -970,7 +887,6 @@
 
     move-result-object v7
 
-    .line 311
     .local v7, "mode":Ljava/lang/String;
     invoke-static {v7}, Landroid/service/notification/ZenModeConfig;->isValidSleepMode(Ljava/lang/String;)Z
 
@@ -982,8 +898,7 @@
     :goto_2
     iput-object v7, v8, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
-    .line 312
-    const-string/jumbo v14, "none"
+    const-string v14, "none"
 
     const/4 v15, 0x0
 
@@ -995,8 +910,7 @@
 
     iput-boolean v14, v8, Landroid/service/notification/ZenModeConfig;->sleepNone:Z
 
-    .line 313
-    const-string/jumbo v14, "startHour"
+    const-string v14, "startHour"
 
     const/4 v15, 0x0
 
@@ -1006,9 +920,8 @@
 
     move-result v9
 
-    .line 314
     .local v9, "startHour":I
-    const-string/jumbo v14, "startMin"
+    const-string v14, "startMin"
 
     const/4 v15, 0x0
 
@@ -1018,7 +931,6 @@
 
     move-result v10
 
-    .line 315
     .local v10, "startMinute":I
     const-string v14, "endHour"
 
@@ -1030,7 +942,6 @@
 
     move-result v5
 
-    .line 316
     .local v5, "endHour":I
     const-string v14, "endMin"
 
@@ -1042,7 +953,6 @@
 
     move-result v6
 
-    .line 317
     .local v6, "endMinute":I
     invoke-static {v9}, Landroid/service/notification/ZenModeConfig;->isValidHour(I)Z
 
@@ -1054,7 +964,6 @@
     :goto_3
     iput v9, v8, Landroid/service/notification/ZenModeConfig;->sleepStartHour:I
 
-    .line 318
     invoke-static {v10}, Landroid/service/notification/ZenModeConfig;->isValidMinute(I)Z
 
     move-result v14
@@ -1065,7 +974,6 @@
     :goto_4
     iput v10, v8, Landroid/service/notification/ZenModeConfig;->sleepStartMinute:I
 
-    .line 319
     invoke-static {v5}, Landroid/service/notification/ZenModeConfig;->isValidHour(I)Z
 
     move-result v14
@@ -1076,7 +984,6 @@
     :goto_5
     iput v5, v8, Landroid/service/notification/ZenModeConfig;->sleepEndHour:I
 
-    .line 320
     invoke-static {v6}, Landroid/service/notification/ZenModeConfig;->isValidMinute(I)Z
 
     move-result v14
@@ -1089,14 +996,12 @@
 
     goto/16 :goto_1
 
-    .line 311
     .restart local v7    # "mode":Ljava/lang/String;
     :cond_7
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 317
     .end local v7    # "mode":Ljava/lang/String;
     .restart local v5    # "endHour":I
     .restart local v6    # "endMinute":I
@@ -1107,28 +1012,24 @@
 
     goto :goto_3
 
-    .line 318
     .end local v9    # "startHour":I
     :cond_9
     const/4 v10, 0x0
 
     goto :goto_4
 
-    .line 319
     .end local v10    # "startMinute":I
     :cond_a
     const/4 v5, 0x0
 
     goto :goto_5
 
-    .line 320
     .end local v5    # "endHour":I
     :cond_b
     const/4 v6, 0x0
 
     goto :goto_6
 
-    .line 321
     .end local v6    # "endMinute":I
     :cond_c
     const-string v14, "condition"
@@ -1139,7 +1040,6 @@
 
     if-eqz v14, :cond_d
 
-    .line 322
     const-string v14, "component"
 
     move-object/from16 v0, p0
@@ -1148,7 +1048,6 @@
 
     move-result-object v1
 
-    .line 324
     .local v1, "component":Landroid/content/ComponentName;
     const-string v14, "id"
 
@@ -1158,21 +1057,17 @@
 
     move-result-object v3
 
-    .line 325
     .local v3, "conditionId":Landroid/net/Uri;
     if-eqz v1, :cond_3
 
     if-eqz v3, :cond_3
 
-    .line 326
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 327
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
-    .line 329
     .end local v1    # "component":Landroid/content/ComponentName;
     .end local v3    # "conditionId":Landroid/net/Uri;
     :cond_d
@@ -1184,19 +1079,16 @@
 
     if-eqz v14, :cond_3
 
-    .line 330
     invoke-static/range {p0 .. p0}, Landroid/service/notification/ZenModeConfig;->readConditionXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/service/notification/Condition;
 
     move-result-object v14
 
     iput-object v14, v8, Landroid/service/notification/ZenModeConfig;->exitCondition:Landroid/service/notification/Condition;
 
-    .line 331
     iget-object v14, v8, Landroid/service/notification/ZenModeConfig;->exitCondition:Landroid/service/notification/Condition;
 
     if-eqz v14, :cond_3
 
-    .line 332
     const-string v14, "component"
 
     move-object/from16 v0, p0
@@ -1209,7 +1101,6 @@
 
     goto/16 :goto_1
 
-    .line 338
     :cond_e
     new-instance v14, Ljava/lang/IllegalStateException;
 
@@ -1227,14 +1118,12 @@
     .param p2, "defValue"    # Z
 
     .prologue
-    .line 418
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 419
     .local v0, "val":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1242,7 +1131,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 420
     .end local p2    # "defValue":Z
     :goto_0
     return p2
@@ -1268,12 +1156,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 429
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 430
     .local v0, "val":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1281,7 +1167,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 431
     :goto_0
     return-object v1
 
@@ -1300,14 +1185,12 @@
     .param p2, "defValue"    # I
 
     .prologue
-    .line 424
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 425
     .local v0, "val":Ljava/lang/String;
     invoke-static {v0, p2}, Landroid/service/notification/ZenModeConfig;->tryParseInt(Ljava/lang/String;I)I
 
@@ -1324,12 +1207,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 435
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 436
     .local v0, "val":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1337,7 +1218,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 437
     :goto_0
     return-object v1
 
@@ -1354,34 +1234,28 @@
     .param p0, "source"    # I
 
     .prologue
-    .line 201
     packed-switch p0, :pswitch_data_0
 
-    .line 209
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 203
     :pswitch_0
     const-string v0, "anyone"
 
     goto :goto_0
 
-    .line 205
     :pswitch_1
     const-string v0, "contacts"
 
     goto :goto_0
 
-    .line 207
     :pswitch_2
-    const-string/jumbo v0, "stars"
+    const-string v0, "stars"
 
     goto :goto_0
 
-    .line 201
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1395,7 +1269,6 @@
     .param p0, "time"    # J
 
     .prologue
-    .line 519
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -1438,7 +1311,6 @@
     .param p0, "downtime"    # Landroid/service/notification/ZenModeConfig$DowntimeInfo;
 
     .prologue
-    .line 547
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -1461,7 +1333,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "start"
+    const-string v1, "start"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1525,7 +1397,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "mode"
+    const-string v1, "mode"
 
     iget-object v2, p0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->mode:Ljava/lang/String;
 
@@ -1533,7 +1405,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "none"
+    const-string v1, "none"
 
     iget-boolean v2, p0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->none:Z
 
@@ -1559,18 +1431,15 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 481
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 482
     .local v4, "now":J
     if-nez p1, :cond_0
 
     const-wide/16 v8, 0x2710
 
-    .line 483
     .local v8, "millis":J
     :goto_0
     add-long v1, v4, v8
@@ -1587,7 +1456,6 @@
 
     return-object v0
 
-    .line 482
     .end local v8    # "millis":J
     :cond_0
     const v0, 0xea60
@@ -1608,25 +1476,20 @@
     .param p6, "userHandle"    # I
 
     .prologue
-    .line 489
     const/16 v2, 0x3c
 
     move/from16 v0, p3
 
     if-ge v0, v2, :cond_0
 
-    .line 491
     move/from16 v12, p3
 
-    .line 492
     .local v12, "num":I
     const v16, 0x1140019
 
-    .line 493
     .local v16, "summaryResId":I
     const v11, 0x114001b
 
-    .line 500
     .local v11, "line1ResId":I
     :goto_0
     move-object/from16 v0, p0
@@ -1641,7 +1504,6 @@
 
     const-string v15, "Hm"
 
-    .line 501
     .local v15, "skeleton":Ljava/lang/String;
     :goto_1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -1652,7 +1514,6 @@
 
     move-result-object v13
 
-    .line 502
     .local v13, "pattern":Ljava/lang/String;
     move-wide/from16 v0, p1
 
@@ -1660,13 +1521,11 @@
 
     move-result-object v10
 
-    .line 503
     .local v10, "formattedTime":Ljava/lang/CharSequence;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v14
 
-    .line 504
     .local v14, "res":Landroid/content/res/Resources;
     const/4 v2, 0x2
 
@@ -1690,7 +1549,6 @@
 
     move-result-object v4
 
-    .line 505
     .local v4, "summary":Ljava/lang/String;
     const/4 v2, 0x2
 
@@ -1712,7 +1570,6 @@
 
     move-result-object v5
 
-    .line 506
     .local v5, "line1":Ljava/lang/String;
     const v2, 0x1040768
 
@@ -1728,13 +1585,11 @@
 
     move-result-object v6
 
-    .line 507
     .local v6, "line2":Ljava/lang/String;
     invoke-static/range {p1 .. p2}, Landroid/service/notification/ZenModeConfig;->toCountdownConditionId(J)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 508
     .local v3, "id":Landroid/net/Uri;
     new-instance v2, Landroid/service/notification/Condition;
 
@@ -1748,7 +1603,6 @@
 
     return-object v2
 
-    .line 496
     .end local v3    # "id":Landroid/net/Uri;
     .end local v4    # "summary":Ljava/lang/String;
     .end local v5    # "line1":Ljava/lang/String;
@@ -1773,18 +1627,15 @@
 
     move-result v12
 
-    .line 497
     .restart local v12    # "num":I
     const v16, 0x114001a
 
-    .line 498
     .restart local v16    # "summaryResId":I
     const v11, 0x114001c
 
     .restart local v11    # "line1ResId":I
     goto :goto_0
 
-    .line 500
     :cond_1
     const-string v15, "hma"
 
@@ -1798,7 +1649,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 527
     const-string v1, "android"
 
     invoke-static {p0, v1}, Landroid/service/notification/Condition;->isValidId(Landroid/net/Uri;Ljava/lang/String;)Z
@@ -1807,12 +1657,10 @@
 
     if-nez v1, :cond_1
 
-    .line 534
     :cond_0
     :goto_0
     return-wide v2
 
-    .line 528
     :cond_1
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -1844,7 +1692,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 531
     :try_start_0
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -1866,11 +1713,9 @@
 
     goto :goto_0
 
-    .line 532
     :catch_0
     move-exception v0
 
-    .line 533
     .local v0, "e":Ljava/lang/RuntimeException;
     sget-object v1, Landroid/service/notification/ZenModeConfig;->TAG:Ljava/lang/String;
 
@@ -1906,24 +1751,20 @@
 
     const/4 v4, 0x0
 
-    .line 254
     if-nez p0, :cond_1
 
     move-object v2, v4
 
-    .line 268
     :cond_0
     :goto_0
     return-object v2
 
-    .line 255
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 256
-    const-string/jumbo v5, "nights"
+    const-string v5, "nights"
 
     invoke-virtual {v5, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1935,9 +1776,8 @@
 
     goto :goto_0
 
-    .line 257
     :cond_2
-    const-string/jumbo v5, "weeknights"
+    const-string v5, "weeknights"
 
     invoke-virtual {v5, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1949,7 +1789,6 @@
 
     goto :goto_0
 
-    .line 258
     :cond_3
     const-string v5, "days:"
 
@@ -1963,7 +1802,6 @@
 
     goto :goto_0
 
-    .line 259
     :cond_4
     const-string v5, "days:"
 
@@ -1977,7 +1815,6 @@
 
     goto :goto_0
 
-    .line 260
     :cond_5
     const-string v5, "days:"
 
@@ -1995,7 +1832,6 @@
 
     move-result-object v3
 
-    .line 261
     .local v3, "tokens":[Ljava/lang/String;
     array-length v5, v3
 
@@ -2005,13 +1841,11 @@
 
     goto :goto_0
 
-    .line 262
     :cond_6
     array-length v5, v3
 
     new-array v2, v5, [I
 
-    .line 263
     .local v2, "rt":[I
     const/4 v1, 0x0
 
@@ -2021,14 +1855,12 @@
 
     if-ge v1, v5, :cond_0
 
-    .line 264
     aget-object v5, v3, v1
 
     invoke-static {v5, v7}, Landroid/service/notification/ZenModeConfig;->tryParseInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 265
     .local v0, "day":I
     if-ne v0, v7, :cond_7
 
@@ -2036,11 +1868,9 @@
 
     goto :goto_0
 
-    .line 266
     :cond_7
     aput v0, v2, v1
 
-    .line 263
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -2057,7 +1887,6 @@
 
     const/4 v5, 0x1
 
-    .line 558
     const-string v3, "android"
 
     invoke-static {p0, v3}, Landroid/service/notification/Condition;->isValidId(Landroid/net/Uri;Ljava/lang/String;)Z
@@ -2092,14 +1921,12 @@
 
     if-nez v3, :cond_1
 
-    .line 573
     :cond_0
     :goto_0
     return-object v0
 
-    .line 563
     :cond_1
-    const-string/jumbo v3, "start"
+    const-string v3, "start"
 
     invoke-virtual {p0, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2109,7 +1936,6 @@
 
     move-result-object v2
 
-    .line 564
     .local v2, "start":[I
     const-string v3, "end"
 
@@ -2121,40 +1947,33 @@
 
     move-result-object v1
 
-    .line 565
     .local v1, "end":[I
     if-eqz v2, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 566
     new-instance v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;
 
     invoke-direct {v0}, Landroid/service/notification/ZenModeConfig$DowntimeInfo;-><init>()V
 
-    .line 567
     .local v0, "downtime":Landroid/service/notification/ZenModeConfig$DowntimeInfo;
     aget v3, v2, v6
 
     iput v3, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->startHour:I
 
-    .line 568
     aget v3, v2, v5
 
     iput v3, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->startMinute:I
 
-    .line 569
     aget v3, v1, v6
 
     iput v3, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->endHour:I
 
-    .line 570
     aget v3, v1, v5
 
     iput v3, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->endMinute:I
 
-    .line 571
-    const-string/jumbo v3, "mode"
+    const-string v3, "mode"
 
     invoke-virtual {p0, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2162,12 +1981,11 @@
 
     iput-object v3, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->mode:Ljava/lang/String;
 
-    .line 572
     invoke-static {v5}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "none"
+    const-string v4, "none"
 
     invoke-virtual {p0, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2195,19 +2013,16 @@
 
     const/4 v3, 0x0
 
-    .line 577
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 582
     :cond_0
     :goto_0
     return-object v3
 
-    .line 578
     :cond_1
     const/16 v4, 0x2e
 
@@ -2215,7 +2030,6 @@
 
     move-result v1
 
-    .line 579
     .local v1, "i":I
     if-lt v1, v7, :cond_0
 
@@ -2227,7 +2041,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 580
     invoke-virtual {p0, v6, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
@@ -2236,7 +2049,6 @@
 
     move-result v0
 
-    .line 581
     .local v0, "hour":I
     add-int/lit8 v4, v1, 0x1
 
@@ -2248,7 +2060,6 @@
 
     move-result v2
 
-    .line 582
     .local v2, "minute":I
     invoke-static {v0}, Landroid/service/notification/ZenModeConfig;->isValidHour(I)Z
 
@@ -2279,19 +2090,16 @@
     .param p1, "defValue"    # I
 
     .prologue
-    .line 272
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 276
     .end local p1    # "defValue":I
     :goto_0
     return p1
 
-    .line 274
     .restart local p1    # "defValue":I
     :cond_0
     :try_start_0
@@ -2307,11 +2115,9 @@
 
     goto :goto_0
 
-    .line 275
     :catch_0
     move-exception v0
 
-    .line 276
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -2329,7 +2135,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 400
     const-string v0, "id"
 
     iget-object v1, p0, Landroid/service/notification/Condition;->id:Landroid/net/Uri;
@@ -2340,28 +2145,24 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 401
-    const-string/jumbo v0, "summary"
+    const-string v0, "summary"
 
     iget-object v1, p0, Landroid/service/notification/Condition;->summary:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 402
     const-string v0, "line1"
 
     iget-object v1, p0, Landroid/service/notification/Condition;->line1:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 403
     const-string v0, "line2"
 
     iget-object v1, p0, Landroid/service/notification/Condition;->line2:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 404
     const-string v0, "icon"
 
     iget v1, p0, Landroid/service/notification/Condition;->icon:I
@@ -2372,8 +2173,7 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 405
-    const-string/jumbo v0, "state"
+    const-string v0, "state"
 
     iget v1, p0, Landroid/service/notification/Condition;->state:I
 
@@ -2383,7 +2183,6 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 406
     const-string v0, "flags"
 
     iget v1, p0, Landroid/service/notification/Condition;->flags:I
@@ -2394,7 +2193,6 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 407
     return-void
 .end method
 
@@ -2404,31 +2202,26 @@
     .locals 2
 
     .prologue
-    .line 446
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 448
     .local v0, "parcel":Landroid/os/Parcel;
     const/4 v1, 0x0
 
     :try_start_0
     invoke-virtual {p0, v0, v1}, Landroid/service/notification/ZenModeConfig;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 449
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 450
     new-instance v1, Landroid/service/notification/ZenModeConfig;
 
     invoke-direct {v1, v0}, Landroid/service/notification/ZenModeConfig;-><init>(Landroid/os/Parcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 452
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object v1
@@ -2445,7 +2238,6 @@
     .locals 1
 
     .prologue
-    .line 442
     const/4 v0, 0x0
 
     return v0
@@ -2460,28 +2252,23 @@
 
     const/4 v2, 0x0
 
-    .line 215
     instance-of v3, p1, Landroid/service/notification/ZenModeConfig;
 
     if-nez v3, :cond_1
 
     move v1, v2
 
-    .line 218
     :cond_0
     :goto_0
     return v1
 
-    .line 216
     :cond_1
     if-eq p1, p0, :cond_0
 
     move-object v0, p1
 
-    .line 217
     check-cast v0, Landroid/service/notification/ZenModeConfig;
 
-    .line 218
     .local v0, "other":Landroid/service/notification/ZenModeConfig;
     iget-boolean v3, v0, Landroid/service/notification/ZenModeConfig;->allowCalls:Z
 
@@ -2597,7 +2384,6 @@
     .locals 3
 
     .prologue
-    .line 236
     const/16 v0, 0xe
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -2749,7 +2535,6 @@
     .locals 1
 
     .prologue
-    .line 243
     iget v0, p0, Landroid/service/notification/ZenModeConfig;->sleepStartHour:I
 
     invoke-static {v0}, Landroid/service/notification/ZenModeConfig;->isValidHour(I)Z
@@ -2805,43 +2590,35 @@
     .locals 2
 
     .prologue
-    .line 470
     new-instance v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;
 
     invoke-direct {v0}, Landroid/service/notification/ZenModeConfig$DowntimeInfo;-><init>()V
 
-    .line 471
     .local v0, "downtime":Landroid/service/notification/ZenModeConfig$DowntimeInfo;
     iget v1, p0, Landroid/service/notification/ZenModeConfig;->sleepStartHour:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->startHour:I
 
-    .line 472
     iget v1, p0, Landroid/service/notification/ZenModeConfig;->sleepStartMinute:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->startMinute:I
 
-    .line 473
     iget v1, p0, Landroid/service/notification/ZenModeConfig;->sleepEndHour:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->endHour:I
 
-    .line 474
     iget v1, p0, Landroid/service/notification/ZenModeConfig;->sleepEndMinute:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->endMinute:I
 
-    .line 475
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->mode:Ljava/lang/String;
 
-    .line 476
     iget-boolean v1, p0, Landroid/service/notification/ZenModeConfig;->sleepNone:Z
 
     iput-boolean v1, v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->none:Z
 
-    .line 477
     return-object v0
 .end method
 
@@ -2853,7 +2630,6 @@
 
     const/16 v3, 0x2e
 
-    .line 182
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-class v2, Landroid/service/notification/ZenModeConfig;
@@ -3091,7 +2867,6 @@
 
     const/4 v2, 0x0
 
-    .line 149
     iget-boolean v0, p0, Landroid/service/notification/ZenModeConfig;->allowCalls:Z
 
     if-eqz v0, :cond_0
@@ -3101,7 +2876,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 150
     iget-boolean v0, p0, Landroid/service/notification/ZenModeConfig;->allowMessages:Z
 
     if-eqz v0, :cond_1
@@ -3111,7 +2885,6 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 151
     iget-boolean v0, p0, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
 
     if-eqz v0, :cond_2
@@ -3121,41 +2894,33 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 152
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    .line 153
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 154
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 158
     :goto_3
     iget v0, p0, Landroid/service/notification/ZenModeConfig;->sleepStartHour:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 159
     iget v0, p0, Landroid/service/notification/ZenModeConfig;->sleepStartMinute:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
     iget v0, p0, Landroid/service/notification/ZenModeConfig;->sleepEndHour:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 161
     iget v0, p0, Landroid/service/notification/ZenModeConfig;->sleepEndMinute:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 162
     iget-boolean v0, p0, Landroid/service/notification/ZenModeConfig;->sleepNone:Z
 
     if-eqz v0, :cond_4
@@ -3163,7 +2928,6 @@
     :goto_4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 163
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
     if-eqz v0, :cond_5
@@ -3174,19 +2938,16 @@
 
     if-lez v0, :cond_5
 
-    .line 164
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 165
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 169
     :goto_5
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->conditionIds:[Landroid/net/Uri;
 
@@ -3198,56 +2959,46 @@
 
     if-lez v0, :cond_6
 
-    .line 170
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->conditionIds:[Landroid/net/Uri;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 171
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->conditionIds:[Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 175
     :goto_6
     iget v0, p0, Landroid/service/notification/ZenModeConfig;->allowFrom:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 176
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->exitCondition:Landroid/service/notification/Condition;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 177
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig;->exitConditionComponent:Landroid/content/ComponentName;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 178
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 149
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 150
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 151
     goto :goto_2
 
-    .line 156
     :cond_3
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -3256,16 +3007,13 @@
     :cond_4
     move v1, v2
 
-    .line 162
     goto :goto_4
 
-    .line 167
     :cond_5
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_5
 
-    .line 173
     :cond_6
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -3284,13 +3032,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 342
-    const-string/jumbo v1, "zen"
+    const-string v1, "zen"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 343
-    const-string/jumbo v1, "version"
+    const-string v1, "version"
 
     const/4 v2, 0x1
 
@@ -3300,12 +3046,10 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 345
     const-string v1, "allow"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 346
     const-string v1, "calls"
 
     iget-boolean v2, p0, Landroid/service/notification/ZenModeConfig;->allowCalls:Z
@@ -3316,8 +3060,7 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 347
-    const-string/jumbo v1, "messages"
+    const-string v1, "messages"
 
     iget-boolean v2, p0, Landroid/service/notification/ZenModeConfig;->allowMessages:Z
 
@@ -3327,7 +3070,6 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 348
     const-string v1, "events"
 
     iget-boolean v2, p0, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
@@ -3338,7 +3080,6 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 349
     const-string v1, "from"
 
     iget v2, p0, Landroid/service/notification/ZenModeConfig;->allowFrom:I
@@ -3349,31 +3090,26 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 350
     const-string v1, "allow"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 352
-    const-string/jumbo v1, "sleep"
+    const-string v1, "sleep"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 353
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 354
-    const-string/jumbo v1, "mode"
+    const-string v1, "mode"
 
     iget-object v2, p0, Landroid/service/notification/ZenModeConfig;->sleepMode:Ljava/lang/String;
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 356
     :cond_0
-    const-string/jumbo v1, "none"
+    const-string v1, "none"
 
     iget-boolean v2, p0, Landroid/service/notification/ZenModeConfig;->sleepNone:Z
 
@@ -3383,8 +3119,7 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 357
-    const-string/jumbo v1, "startHour"
+    const-string v1, "startHour"
 
     iget v2, p0, Landroid/service/notification/ZenModeConfig;->sleepStartHour:I
 
@@ -3394,8 +3129,7 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 358
-    const-string/jumbo v1, "startMin"
+    const-string v1, "startMin"
 
     iget v2, p0, Landroid/service/notification/ZenModeConfig;->sleepStartMinute:I
 
@@ -3405,7 +3139,6 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 359
     const-string v1, "endHour"
 
     iget v2, p0, Landroid/service/notification/ZenModeConfig;->sleepEndHour:I
@@ -3416,7 +3149,6 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 360
     const-string v1, "endMin"
 
     iget v2, p0, Landroid/service/notification/ZenModeConfig;->sleepEndMinute:I
@@ -3427,12 +3159,10 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 361
-    const-string/jumbo v1, "sleep"
+    const-string v1, "sleep"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 363
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
 
     if-eqz v1, :cond_1
@@ -3451,7 +3181,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 365
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3462,12 +3191,10 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 366
     const-string v1, "condition"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 367
     const-string v1, "component"
 
     iget-object v2, p0, Landroid/service/notification/ZenModeConfig;->conditionComponents:[Landroid/content/ComponentName;
@@ -3480,7 +3207,6 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 369
     const-string v1, "id"
 
     iget-object v2, p0, Landroid/service/notification/ZenModeConfig;->conditionIds:[Landroid/net/Uri;
@@ -3493,17 +3219,14 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 370
     const-string v1, "condition"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 365
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 373
     .end local v0    # "i":I
     :cond_1
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->exitCondition:Landroid/service/notification/Condition;
@@ -3514,12 +3237,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 374
     const-string v1, "exitCondition"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 375
     const-string v1, "component"
 
     iget-object v2, p0, Landroid/service/notification/ZenModeConfig;->exitConditionComponent:Landroid/content/ComponentName;
@@ -3530,22 +3251,18 @@
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 377
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig;->exitCondition:Landroid/service/notification/Condition;
 
     invoke-static {v1, p1}, Landroid/service/notification/ZenModeConfig;->writeConditionXml(Landroid/service/notification/Condition;Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 378
     const-string v1, "exitCondition"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 380
     :cond_2
-    const-string/jumbo v1, "zen"
+    const-string v1, "zen"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 381
     return-void
 .end method

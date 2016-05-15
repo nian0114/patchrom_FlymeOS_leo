@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Landroid/filterfw/geometry/Quad;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -23,7 +21,6 @@
     .param p4, "height"    # F
 
     .prologue
-    .line 32
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     invoke-direct {v0, p1, p2}, Landroid/filterfw/geometry/Point;-><init>(FF)V
@@ -50,7 +47,6 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroid/filterfw/geometry/Quad;-><init>(Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;)V
 
-    .line 36
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 39
     iget v0, p2, Landroid/filterfw/geometry/Point;->x:F
 
     invoke-virtual {p1, v0, v2}, Landroid/filterfw/geometry/Point;->plus(FF)Landroid/filterfw/geometry/Point;
@@ -85,7 +80,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/filterfw/geometry/Quad;-><init>(Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;)V
 
-    .line 43
     return-void
 .end method
 
@@ -97,10 +91,8 @@
     .param p4, "p3"    # Landroid/filterfw/geometry/Point;
 
     .prologue
-    .line 57
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/filterfw/geometry/Quad;-><init>(Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;Landroid/filterfw/geometry/Point;)V
 
-    .line 58
     return-void
 .end method
 
@@ -113,7 +105,6 @@
     .prologue
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 61
     iget v2, p2, Landroid/filterfw/geometry/Point;->y:F
 
     div-float/2addr v2, v4
@@ -122,7 +113,6 @@
 
     move-result-object v1
 
-    .line 62
     .local v1, "dy":Landroid/filterfw/geometry/Point;
     const/4 v2, 0x1
 
@@ -138,7 +128,6 @@
 
     move-result-object v0
 
-    .line 63
     .local v0, "dx":Landroid/filterfw/geometry/Point;
     new-instance v2, Landroid/filterfw/geometry/Rectangle;
 
@@ -188,7 +177,6 @@
     .prologue
     const/high16 v7, 0x40000000    # 2.0f
 
-    .line 46
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     iget v4, p0, Landroid/filterfw/geometry/Point;->x:F
@@ -209,7 +197,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/filterfw/geometry/Point;-><init>(FF)V
 
-    .line 47
     .local v0, "p0":Landroid/filterfw/geometry/Point;
     new-instance v1, Landroid/filterfw/geometry/Point;
 
@@ -231,7 +218,6 @@
 
     invoke-direct {v1, v4, v5}, Landroid/filterfw/geometry/Point;-><init>(FF)V
 
-    .line 48
     .local v1, "p1":Landroid/filterfw/geometry/Point;
     new-instance v2, Landroid/filterfw/geometry/Point;
 
@@ -253,7 +239,6 @@
 
     invoke-direct {v2, v4, v5}, Landroid/filterfw/geometry/Point;-><init>(FF)V
 
-    .line 49
     .local v2, "p2":Landroid/filterfw/geometry/Point;
     new-instance v3, Landroid/filterfw/geometry/Point;
 
@@ -275,7 +260,6 @@
 
     invoke-direct {v3, v4, v5}, Landroid/filterfw/geometry/Point;-><init>(FF)V
 
-    .line 50
     .local v3, "p3":Landroid/filterfw/geometry/Point;
     new-instance v4, Landroid/filterfw/geometry/Rectangle;
 
@@ -306,7 +290,6 @@
     .locals 2
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/filterfw/geometry/Rectangle;->p0:Landroid/filterfw/geometry/Point;
 
     iget-object v1, p0, Landroid/filterfw/geometry/Rectangle;->p1:Landroid/filterfw/geometry/Point;
@@ -340,7 +323,6 @@
     .locals 2
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/filterfw/geometry/Rectangle;->p2:Landroid/filterfw/geometry/Point;
 
     iget-object v1, p0, Landroid/filterfw/geometry/Rectangle;->p0:Landroid/filterfw/geometry/Point;
@@ -360,7 +342,6 @@
     .locals 2
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/filterfw/geometry/Rectangle;->p1:Landroid/filterfw/geometry/Point;
 
     iget-object v1, p0, Landroid/filterfw/geometry/Rectangle;->p0:Landroid/filterfw/geometry/Point;
@@ -380,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 26
     invoke-virtual {p0, p1}, Landroid/filterfw/geometry/Rectangle;->scaled(F)Landroid/filterfw/geometry/Rectangle;
 
     move-result-object v0
@@ -392,7 +372,6 @@
     .locals 1
 
     .prologue
-    .line 26
     invoke-virtual {p0, p1, p2}, Landroid/filterfw/geometry/Rectangle;->scaled(FF)Landroid/filterfw/geometry/Rectangle;
 
     move-result-object v0
@@ -405,7 +384,6 @@
     .param p1, "s"    # F
 
     .prologue
-    .line 83
     new-instance v0, Landroid/filterfw/geometry/Rectangle;
 
     iget-object v1, p0, Landroid/filterfw/geometry/Rectangle;->p0:Landroid/filterfw/geometry/Point;
@@ -443,7 +421,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 88
     new-instance v0, Landroid/filterfw/geometry/Rectangle;
 
     iget-object v1, p0, Landroid/filterfw/geometry/Rectangle;->p0:Landroid/filterfw/geometry/Point;

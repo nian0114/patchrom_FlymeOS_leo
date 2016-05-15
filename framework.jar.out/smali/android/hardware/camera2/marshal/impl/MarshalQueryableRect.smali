@@ -33,10 +33,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/graphics/Rect;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableRect$MarshalerRect;
 
@@ -86,7 +83,6 @@
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/graphics/Rect;>;"
     const/4 v0, 0x1
 
-    .line 74
     if-ne p2, v0, :cond_0
 
     const-class v1, Landroid/graphics/Rect;

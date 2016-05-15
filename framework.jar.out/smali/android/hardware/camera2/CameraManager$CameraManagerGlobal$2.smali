@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 716
     iput-object p1, p0, Landroid/hardware/camera2/CameraManager$CameraManagerGlobal$2;->this$0:Landroid/hardware/camera2/CameraManager$CameraManagerGlobal;
 
     iput-object p2, p0, Landroid/hardware/camera2/CameraManager$CameraManagerGlobal$2;->val$callback:Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
@@ -48,13 +47,11 @@
     .locals 2
 
     .prologue
-    .line 719
     iget-object v0, p0, Landroid/hardware/camera2/CameraManager$CameraManagerGlobal$2;->val$callback:Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
 
     iget-object v1, p0, Landroid/hardware/camera2/CameraManager$CameraManagerGlobal$2;->val$id:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;->onCameraUnavailable(Ljava/lang/String;)V
 
-    .line 720
     return-void
 .end method

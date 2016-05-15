@@ -27,16 +27,12 @@
     .param p2, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 336
     invoke-direct {p0}, Landroid/app/VoiceInteractor$Request;-><init>()V
 
-    .line 337
     iput-object p1, p0, Landroid/app/VoiceInteractor$CommandRequest;->mCommand:Ljava/lang/String;
 
-    .line 338
     iput-object p2, p0, Landroid/app/VoiceInteractor$CommandRequest;->mArgs:Landroid/os/Bundle;
 
-    .line 339
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 342
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 346
     iget-object v0, p0, Landroid/app/VoiceInteractor$CommandRequest;->mCommand:Ljava/lang/String;
 
     iget-object v1, p0, Landroid/app/VoiceInteractor$CommandRequest;->mArgs:Landroid/os/Bundle;

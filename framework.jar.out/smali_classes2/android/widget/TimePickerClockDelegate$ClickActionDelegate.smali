@@ -25,10 +25,8 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 220
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
 
-    .line 221
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     const/16 v1, 0x10
@@ -41,7 +39,6 @@
 
     iput-object v0, p0, Landroid/widget/TimePickerClockDelegate$ClickActionDelegate;->mClickAction:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    .line 223
     return-void
 .end method
 
@@ -53,14 +50,11 @@
     .param p2, "info"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 227
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 229
     iget-object v0, p0, Landroid/widget/TimePickerClockDelegate$ClickActionDelegate;->mClickAction:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
-    .line 230
     return-void
 .end method

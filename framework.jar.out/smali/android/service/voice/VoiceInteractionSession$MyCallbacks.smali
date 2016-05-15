@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 284
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,22 +41,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 288
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 346
     :goto_0
     return-void
 
-    .line 290
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 291
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     const-string v2, "VoiceInteractionSession"
 
@@ -65,7 +60,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onConfirm: req="
+    const-string v3, "onConfirm: req="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -111,7 +106,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     iget-object v5, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -134,14 +128,12 @@
 
     goto :goto_0
 
-    .line 297
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :sswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 298
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     const-string v2, "VoiceInteractionSession"
 
@@ -149,7 +141,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onCompleteVoice: req="
+    const-string v3, "onCompleteVoice: req="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -195,7 +187,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     iget-object v5, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -218,14 +209,12 @@
 
     goto/16 :goto_0
 
-    .line 304
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :sswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 305
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     const-string v2, "VoiceInteractionSession"
 
@@ -233,7 +222,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onAbortVoice: req="
+    const-string v3, "onAbortVoice: req="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -279,7 +268,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     iget-object v5, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -302,14 +290,12 @@
 
     goto/16 :goto_0
 
-    .line 311
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :sswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 312
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     const-string v2, "VoiceInteractionSession"
 
@@ -317,7 +303,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onCommand: req="
+    const-string v3, "onCommand: req="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -363,7 +349,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     iget-object v5, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -386,14 +371,12 @@
 
     goto/16 :goto_0
 
-    .line 318
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :sswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 319
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     const-string v1, "VoiceInteractionSession"
 
@@ -401,7 +384,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onGetSupportedCommands: cmds="
+    const-string v3, "onGetSupportedCommands: cmds="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -419,7 +402,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     iget-object v3, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -440,14 +422,12 @@
 
     goto/16 :goto_0
 
-    .line 323
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :sswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 324
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     const-string v2, "VoiceInteractionSession"
 
@@ -455,7 +435,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onCancel: req="
+    const-string v3, "onCancel: req="
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -477,7 +457,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     iget-object v2, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -488,7 +467,6 @@
 
     goto/16 :goto_0
 
-    .line 328
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :sswitch_6
     const-string v1, "VoiceInteractionSession"
@@ -497,7 +475,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onTaskStarted: intent="
+    const-string v3, "onTaskStarted: intent="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -527,7 +505,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     iget-object v2, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -540,7 +517,6 @@
 
     goto/16 :goto_0
 
-    .line 333
     :sswitch_7
     const-string v1, "VoiceInteractionSession"
 
@@ -548,7 +524,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onTaskFinished: intent="
+    const-string v3, "onTaskFinished: intent="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -578,7 +554,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     iget-object v2, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -591,22 +566,19 @@
 
     goto/16 :goto_0
 
-    .line 338
     :sswitch_8
     const-string v1, "VoiceInteractionSession"
 
-    const-string/jumbo v2, "onCloseSystemDialogs"
+    const-string v2, "onCloseSystemDialogs"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     invoke-virtual {v1}, Landroid/service/voice/VoiceInteractionSession;->onCloseSystemDialogs()V
 
     goto/16 :goto_0
 
-    .line 342
     :sswitch_9
     const-string v1, "VoiceInteractionSession"
 
@@ -614,14 +586,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     invoke-virtual {v1}, Landroid/service/voice/VoiceInteractionSession;->doDestroy()V
 
     goto/16 :goto_0
 
-    .line 288
     nop
 
     :sswitch_data_0
@@ -643,11 +613,9 @@
     .locals 1
 
     .prologue
-    .line 350
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$MyCallbacks;->this$0:Landroid/service/voice/VoiceInteractionSession;
 
     invoke-virtual {v0}, Landroid/service/voice/VoiceInteractionSession;->onBackPressed()V
 
-    .line 351
     return-void
 .end method

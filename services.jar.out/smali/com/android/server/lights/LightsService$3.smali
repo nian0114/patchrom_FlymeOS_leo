@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 215
     iput-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 218
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/lights/LightsService$LightImpl;
 
-    .line 219
     .local v0, "light":Lcom/android/server/lights/LightsService$LightImpl;
     # invokes: Lcom/android/server/lights/LightsService$LightImpl;->stopFlashing()V
     invoke-static {v0}, Lcom/android/server/lights/LightsService$LightImpl;->access$300(Lcom/android/server/lights/LightsService$LightImpl;)V
 
-    .line 220
     return-void
 .end method

@@ -38,25 +38,20 @@
     .param p2, "session"    # Landroid/service/voice/VoiceInteractionSession;
 
     .prologue
-    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 176
     new-instance v0, Landroid/service/voice/VoiceInteractionSession$Request$1;
 
     invoke-direct {v0, p0}, Landroid/service/voice/VoiceInteractionSession$Request$1;-><init>(Landroid/service/voice/VoiceInteractionSession$Request;)V
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
-    .line 190
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
-    .line 191
     iget-object v0, p2, Landroid/service/voice/VoiceInteractionSession;->mWeakRef:Ljava/lang/ref/WeakReference;
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mSession:Ljava/lang/ref/WeakReference;
 
-    .line 192
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .locals 5
 
     .prologue
-    .line 195
     iget-object v2, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mSession:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -75,11 +69,9 @@
 
     check-cast v1, Landroid/service/voice/VoiceInteractionSession;
 
-    .line 196
     .local v1, "session":Landroid/service/voice/VoiceInteractionSession;
     if-nez v1, :cond_0
 
-    .line 197
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "VoiceInteractionSession has been destroyed"
@@ -88,7 +80,6 @@
 
     throw v2
 
-    .line 199
     :cond_0
     iget-object v2, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
@@ -100,11 +91,9 @@
 
     move-result-object v0
 
-    .line 200
     .local v0, "req":Landroid/service/voice/VoiceInteractionSession$Request;
     if-nez v0, :cond_1
 
-    .line 201
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -129,11 +118,9 @@
 
     throw v2
 
-    .line 202
     :cond_1
     if-eq v0, p0, :cond_2
 
-    .line 203
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -168,7 +155,6 @@
 
     throw v2
 
-    .line 206
     :cond_2
     return-void
 .end method
@@ -178,7 +164,6 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 230
     :try_start_0
     const-string v0, "VoiceInteractionSession"
 
@@ -186,7 +171,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendConfirmResult: req="
+    const-string v2, "sendConfirmResult: req="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -214,10 +199,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionSession$Request;->finishRequest()V
 
-    .line 233
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
@@ -226,11 +209,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 236
     :goto_0
     return-void
 
-    .line 234
     :catch_0
     move-exception v0
 
@@ -241,7 +222,6 @@
     .locals 3
 
     .prologue
-    .line 250
     :try_start_0
     const-string v0, "VoiceInteractionSession"
 
@@ -249,7 +229,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendCancelResult: req="
+    const-string v2, "sendCancelResult: req="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -267,10 +247,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionSession$Request;->finishRequest()V
 
-    .line 252
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
@@ -279,11 +257,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 255
     :goto_0
     return-void
 
-    .line 253
     :catch_0
     move-exception v0
 
@@ -296,7 +272,6 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 240
     :try_start_0
     const-string v0, "VoiceInteractionSession"
 
@@ -304,7 +279,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendCommandResult: req="
+    const-string v2, "sendCommandResult: req="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -332,10 +307,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionSession$Request;->finishRequest()V
 
-    .line 243
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
@@ -344,11 +317,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 246
     :goto_0
     return-void
 
-    .line 244
     :catch_0
     move-exception v0
 
@@ -360,7 +331,6 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 220
     :try_start_0
     const-string v0, "VoiceInteractionSession"
 
@@ -368,7 +338,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendCompleteVoiceResult: req="
+    const-string v2, "sendCompleteVoiceResult: req="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -396,10 +366,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionSession$Request;->finishRequest()V
 
-    .line 223
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
@@ -408,11 +376,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 226
     :goto_0
     return-void
 
-    .line 224
     :catch_0
     move-exception v0
 
@@ -425,7 +391,6 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 210
     :try_start_0
     const-string v0, "VoiceInteractionSession"
 
@@ -433,7 +398,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendConfirmResult: req="
+    const-string v2, "sendConfirmResult: req="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -471,10 +436,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionSession$Request;->finishRequest()V
 
-    .line 213
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$Request;->mInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
@@ -483,11 +446,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 216
     :goto_0
     return-void
 
-    .line 214
     :catch_0
     move-exception v0
 

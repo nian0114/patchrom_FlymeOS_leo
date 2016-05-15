@@ -61,29 +61,24 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 1694
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1683
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->sessionTokens:Ljava/util/List;
 
-    .line 1687
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->inputList:Ljava/util/List;
 
-    .line 1695
     iput-object p2, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->component:Landroid/content/ComponentName;
 
-    .line 1696
     new-instance v0, Lcom/android/server/tv/TvInputManagerService$InputServiceConnection;
 
     const/4 v1, 0x0
@@ -92,7 +87,6 @@
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->connection:Landroid/content/ServiceConnection;
 
-    .line 1697
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/server/tv/TvInputManagerService;->access$4200(Lcom/android/server/tv/TvInputManagerService;)Landroid/content/Context;
 
@@ -109,7 +103,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->isHardware:Z
 
-    .line 1698
     return-void
 .end method
 
@@ -121,7 +114,6 @@
     .param p4, "x3"    # Lcom/android/server/tv/TvInputManagerService$1;
 
     .prologue
-    .line 1682
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/tv/TvInputManagerService$ServiceState;-><init>(Lcom/android/server/tv/TvInputManagerService;Landroid/content/ComponentName;I)V
 
     return-void
@@ -132,7 +124,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->inputList:Ljava/util/List;
 
     return-object v0
@@ -143,7 +134,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->callback:Lcom/android/server/tv/TvInputManagerService$ServiceCallback;
 
     return-object v0
@@ -155,7 +145,6 @@
     .param p1, "x1"    # Lcom/android/server/tv/TvInputManagerService$ServiceCallback;
 
     .prologue
-    .line 1682
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->callback:Lcom/android/server/tv/TvInputManagerService$ServiceCallback;
 
     return-object p1
@@ -166,7 +155,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->service:Landroid/media/tv/ITvInputService;
 
     return-object v0
@@ -178,7 +166,6 @@
     .param p1, "x1"    # Landroid/media/tv/ITvInputService;
 
     .prologue
-    .line 1682
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->service:Landroid/media/tv/ITvInputService;
 
     return-object p1
@@ -189,7 +176,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->connection:Landroid/content/ServiceConnection;
 
     return-object v0
@@ -200,7 +186,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->sessionTokens:Ljava/util/List;
 
     return-object v0
@@ -211,7 +196,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-boolean v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->isHardware:Z
 
     return v0
@@ -222,7 +206,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-boolean v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->reconnecting:Z
 
     return v0
@@ -234,7 +217,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 1682
     iput-boolean p1, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->reconnecting:Z
 
     return p1
@@ -245,7 +227,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-boolean v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->bound:Z
 
     return v0
@@ -257,7 +238,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 1682
     iput-boolean p1, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->bound:Z
 
     return p1
@@ -268,7 +248,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
     .prologue
-    .line 1682
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$ServiceState;->component:Landroid/content/ComponentName;
 
     return-object v0

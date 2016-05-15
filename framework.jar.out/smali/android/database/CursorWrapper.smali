@@ -16,13 +16,10 @@
     .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
-    .line 37
     return-void
 .end method
 
@@ -32,12 +29,10 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 50
     return-void
 .end method
 
@@ -47,12 +42,10 @@
     .param p2, "buffer"    # Landroid/database/CharArrayBuffer;
 
     .prologue
-    .line 118
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1, p2}, Landroid/database/Cursor;->copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
 
-    .line 119
     return-void
 .end method
 
@@ -60,12 +53,10 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->deactivate()V
 
-    .line 62
     return-void
 .end method
 
@@ -74,7 +65,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 122
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getBlob(I)[B
@@ -88,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getColumnCount()I
@@ -103,7 +92,6 @@
     .param p1, "columnName"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -123,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -138,7 +125,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnName(I)Ljava/lang/String;
@@ -152,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
@@ -166,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
@@ -181,7 +165,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getDouble(I)D
@@ -195,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getExtras()Landroid/os/Bundle;
@@ -210,7 +192,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getFloat(I)F
@@ -225,7 +206,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 102
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getInt(I)I
@@ -240,7 +220,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 106
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getLong(I)J
@@ -254,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 198
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getNotificationUri()Landroid/net/Uri;
@@ -268,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getPosition()I
@@ -283,7 +260,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 110
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getShort(I)S
@@ -298,7 +274,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 114
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -313,7 +288,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 146
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getType(I)I
@@ -327,7 +301,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getWantsAllOnMoveCalls()Z
@@ -341,7 +314,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     return-object v0
@@ -351,7 +323,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->isAfterLast()Z
@@ -365,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->isBeforeFirst()Z
@@ -379,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
@@ -393,7 +362,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->isFirst()Z
@@ -407,7 +375,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->isLast()Z
@@ -422,7 +389,6 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->isNull(I)Z
@@ -437,7 +403,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 158
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->move(I)Z
@@ -451,7 +416,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
@@ -465,7 +429,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToLast()Z
@@ -479,7 +442,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
@@ -494,7 +456,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 162
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
@@ -508,7 +469,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToPrevious()Z
@@ -523,12 +483,10 @@
     .param p1, "observer"    # Landroid/database/ContentObserver;
 
     .prologue
-    .line 178
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 179
     return-void
 .end method
 
@@ -537,12 +495,10 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 182
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 183
     return-void
 .end method
 
@@ -550,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->requery()Z
@@ -565,7 +520,6 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->respond(Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -581,12 +535,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 194
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1, p2}, Landroid/database/Cursor;->setNotificationUri(Landroid/content/ContentResolver;Landroid/net/Uri;)V
 
-    .line 195
     return-void
 .end method
 
@@ -595,12 +547,10 @@
     .param p1, "observer"    # Landroid/database/ContentObserver;
 
     .prologue
-    .line 202
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 203
     return-void
 .end method
 
@@ -609,11 +559,9 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/database/CursorWrapper;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 207
     return-void
 .end method

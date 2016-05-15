@@ -27,16 +27,12 @@
     .param p2, "defaultUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 788
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 789
     iput-object p1, p0, Landroid/media/MediaDrm$CertificateRequest;->mData:[B
 
-    .line 790
     iput-object p2, p0, Landroid/media/MediaDrm$CertificateRequest;->mDefaultUrl:Ljava/lang/String;
 
-    .line 791
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 796
     iget-object v0, p0, Landroid/media/MediaDrm$CertificateRequest;->mData:[B
 
     return-object v0
@@ -56,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 803
     iget-object v0, p0, Landroid/media/MediaDrm$CertificateRequest;->mDefaultUrl:Ljava/lang/String;
 
     return-object v0

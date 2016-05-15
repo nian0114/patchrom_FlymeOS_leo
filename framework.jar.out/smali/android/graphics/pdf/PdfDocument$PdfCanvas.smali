@@ -24,13 +24,10 @@
     .param p2, "nativeCanvas"    # J
 
     .prologue
-    .line 251
     iput-object p1, p0, Landroid/graphics/pdf/PdfDocument$PdfCanvas;->this$0:Landroid/graphics/pdf/PdfDocument;
 
-    .line 252
     invoke-direct {p0, p2, p3}, Landroid/graphics/Canvas;-><init>(J)V
 
-    .line 253
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 257
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

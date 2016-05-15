@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1199
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$DropDownItemClickListener;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/widget/AutoCompleteTextView$1;
 
     .prologue
-    .line 1199
     invoke-direct {p0, p1}, Landroid/widget/AutoCompleteTextView$DropDownItemClickListener;-><init>(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
@@ -56,12 +54,10 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 1201
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$DropDownItemClickListener;->this$0:Landroid/widget/AutoCompleteTextView;
 
     # invokes: Landroid/widget/AutoCompleteTextView;->performCompletion(Landroid/view/View;IJ)V
     invoke-static {v0, p2, p3, p4, p5}, Landroid/widget/AutoCompleteTextView;->access$500(Landroid/widget/AutoCompleteTextView;Landroid/view/View;IJ)V
 
-    .line 1202
     return-void
 .end method

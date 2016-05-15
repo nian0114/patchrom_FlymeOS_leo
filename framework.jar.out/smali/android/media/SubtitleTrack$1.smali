@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 345
     iput-object p1, p0, Landroid/media/SubtitleTrack$1;->this$0:Landroid/media/SubtitleTrack;
 
     iput-object p2, p0, Landroid/media/SubtitleTrack$1;->val$track:Landroid/media/SubtitleTrack;
@@ -48,12 +47,10 @@
     .locals 6
 
     .prologue
-    .line 351
     iget-object v1, p0, Landroid/media/SubtitleTrack$1;->val$track:Landroid/media/SubtitleTrack;
 
     monitor-enter v1
 
-    .line 352
     :try_start_0
     iget-object v0, p0, Landroid/media/SubtitleTrack$1;->this$0:Landroid/media/SubtitleTrack;
 
@@ -62,7 +59,6 @@
     # setter for: Landroid/media/SubtitleTrack;->mRunnable:Ljava/lang/Runnable;
     invoke-static {v0, v2}, Landroid/media/SubtitleTrack;->access$102(Landroid/media/SubtitleTrack;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 353
     iget-object v0, p0, Landroid/media/SubtitleTrack$1;->this$0:Landroid/media/SubtitleTrack;
 
     const/4 v2, 0x1
@@ -71,7 +67,6 @@
 
     invoke-virtual {v0, v2, v4, v5}, Landroid/media/SubtitleTrack;->updateActiveCues(ZJ)V
 
-    .line 354
     iget-object v0, p0, Landroid/media/SubtitleTrack$1;->this$0:Landroid/media/SubtitleTrack;
 
     iget-object v2, p0, Landroid/media/SubtitleTrack$1;->this$0:Landroid/media/SubtitleTrack;
@@ -80,13 +75,10 @@
 
     invoke-virtual {v0, v2}, Landroid/media/SubtitleTrack;->updateView(Ljava/util/Vector;)V
 
-    .line 355
     monitor-exit v1
 
-    .line 356
     return-void
 
-    .line 355
     :catchall_0
     move-exception v0
 

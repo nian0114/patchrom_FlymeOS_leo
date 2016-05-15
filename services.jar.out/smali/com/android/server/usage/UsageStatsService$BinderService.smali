@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 376
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/app/usage/IUsageStatsManager$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/usage/UsageStatsService$1;
 
     .prologue
-    .line 376
     invoke-direct {p0, p1}, Lcom/android/server/usage/UsageStatsService$BinderService;-><init>(Lcom/android/server/usage/UsageStatsService;)V
 
     return-void
@@ -52,23 +50,19 @@
 
     const/4 v2, 0x1
 
-    .line 379
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 380
     .local v0, "callingUid":I
     const/16 v4, 0x3e8
 
     if-ne v0, v4, :cond_1
 
-    .line 391
     :cond_0
     :goto_0
     return v2
 
-    .line 383
     :cond_1
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -80,13 +74,11 @@
 
     move-result v1
 
-    .line 385
     .local v1, "mode":I
     const/4 v4, 0x3
 
     if-ne v1, v4, :cond_2
 
-    .line 388
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v4}, Lcom/android/server/usage/UsageStatsService;->getContext()Landroid/content/Context;
@@ -105,7 +97,6 @@
 
     goto :goto_0
 
-    .line 391
     :cond_2
     if-eqz v1, :cond_0
 
@@ -123,7 +114,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 454
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v0}, Lcom/android/server/usage/UsageStatsService;->getContext()Landroid/content/Context;
@@ -138,7 +128,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 456
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,11 +178,9 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 462
     :goto_0
     return-void
 
-    .line 461
     :cond_0
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -227,7 +214,6 @@
     .end annotation
 
     .prologue
-    .line 418
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/usage/UsageStatsService$BinderService;->hasPermission(Ljava/lang/String;)Z
@@ -236,26 +222,21 @@
 
     if-nez v3, :cond_0
 
-    .line 419
     const/4 v3, 0x0
 
-    .line 434
     :goto_0
     return-object v3
 
-    .line 422
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 423
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 425
     .local v10, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -270,18 +251,15 @@
 
     move-result-object v2
 
-    .line 428
     .local v2, "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/ConfigurationStats;>;"
     if-eqz v2, :cond_1
 
-    .line 429
     new-instance v3, Landroid/content/pm/ParceledListSlice;
 
     invoke-direct {v3, v2}, Landroid/content/pm/ParceledListSlice;-><init>(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 432
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -289,12 +267,10 @@
     :cond_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 434
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 432
     .end local v2    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/ConfigurationStats;>;"
     :catchall_0
     move-exception v3
@@ -311,33 +287,27 @@
     .param p5, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 439
     invoke-direct {p0, p5}, Lcom/android/server/usage/UsageStatsService$BinderService;->hasPermission(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 440
     const/4 v0, 0x0
 
-    .line 448
     :goto_0
     return-object v0
 
-    .line 443
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 444
     .local v1, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 446
     .local v6, "token":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -352,7 +322,6 @@
 
     move-result-object v0
 
-    .line 448
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -384,7 +353,6 @@
     .end annotation
 
     .prologue
-    .line 397
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/usage/UsageStatsService$BinderService;->hasPermission(Ljava/lang/String;)Z
@@ -393,26 +361,21 @@
 
     if-nez v3, :cond_0
 
-    .line 398
     const/4 v3, 0x0
 
-    .line 412
     :goto_0
     return-object v3
 
-    .line 401
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 402
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 404
     .local v10, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -427,18 +390,15 @@
 
     move-result-object v2
 
-    .line 406
     .local v2, "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/UsageStats;>;"
     if-eqz v2, :cond_1
 
-    .line 407
     new-instance v3, Landroid/content/pm/ParceledListSlice;
 
     invoke-direct {v3, v2}, Landroid/content/pm/ParceledListSlice;-><init>(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 410
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -446,12 +406,10 @@
     :cond_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 412
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 410
     .end local v2    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/UsageStats;>;"
     :catchall_0
     move-exception v3

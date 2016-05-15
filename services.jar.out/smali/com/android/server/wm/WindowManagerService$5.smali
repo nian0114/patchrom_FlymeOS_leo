@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 897
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/app/AppOpsManager$OnOpChangedInternalListener;-><init>()V
@@ -39,11 +38,9 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 899
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->updateAppOpsState()V
 
-    .line 900
     return-void
 .end method

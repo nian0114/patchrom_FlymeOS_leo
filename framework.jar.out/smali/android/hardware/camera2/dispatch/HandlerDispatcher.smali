@@ -51,12 +51,10 @@
     .end annotation
 
     .prologue
-    .line 54
     .local p0, "this":Landroid/hardware/camera2/dispatch/HandlerDispatcher;, "Landroid/hardware/camera2/dispatch/HandlerDispatcher<TT;>;"
     .local p1, "dispatchTarget":Landroid/hardware/camera2/dispatch/Dispatchable;, "Landroid/hardware/camera2/dispatch/Dispatchable<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     const-string v0, "dispatchTarget must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -67,7 +65,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/dispatch/HandlerDispatcher;->mDispatchTarget:Landroid/hardware/camera2/dispatch/Dispatchable;
 
-    .line 56
     const-string v0, "handler must not be null"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -78,7 +75,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/dispatch/HandlerDispatcher;->mHandler:Landroid/os/Handler;
 
-    .line 57
     return-void
 .end method
 
@@ -87,7 +83,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/dispatch/HandlerDispatcher;
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/hardware/camera2/dispatch/HandlerDispatcher;->mDispatchTarget:Landroid/hardware/camera2/dispatch/Dispatchable;
 
     return-object v0
@@ -106,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 61
     .local p0, "this":Landroid/hardware/camera2/dispatch/HandlerDispatcher;, "Landroid/hardware/camera2/dispatch/HandlerDispatcher<TT;>;"
     iget-object v0, p0, Landroid/hardware/camera2/dispatch/HandlerDispatcher;->mHandler:Landroid/os/Handler;
 
@@ -116,7 +110,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 83
     const/4 v0, 0x0
 
     return-object v0

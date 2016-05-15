@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +48,10 @@
 
     const/4 v2, 0x1
 
-    .line 83
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pInfo;
 
     invoke-direct {v0}, Landroid/net/wifi/p2p/WifiP2pInfo;-><init>()V
 
-    .line 84
     .local v0, "info":Landroid/net/wifi/p2p/WifiP2pInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -67,7 +64,6 @@
     :goto_0
     iput-boolean v1, v0, Landroid/net/wifi/p2p/WifiP2pInfo;->groupFormed:Z
 
-    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -79,14 +75,12 @@
     :cond_0
     iput-boolean v3, v0, Landroid/net/wifi/p2p/WifiP2pInfo;->isGroupOwner:Z
 
-    .line 86
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
 
     if-ne v1, v2, :cond_1
 
-    .line 88
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
@@ -100,7 +94,6 @@
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 91
     :cond_1
     :goto_1
     return-object v0
@@ -108,10 +101,8 @@
     :cond_2
     move v1, v3
 
-    .line 84
     goto :goto_0
 
-    .line 89
     :catch_0
     move-exception v1
 
@@ -122,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 81
     invoke-virtual {p0, p1}, Landroid/net/wifi/p2p/WifiP2pInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/p2p/WifiP2pInfo;
 
     move-result-object v0
@@ -135,7 +125,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 95
     new-array v0, p1, [Landroid/net/wifi/p2p/WifiP2pInfo;
 
     return-object v0
@@ -145,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 81
     invoke-virtual {p0, p1}, Landroid/net/wifi/p2p/WifiP2pInfo$1;->newArray(I)[Landroid/net/wifi/p2p/WifiP2pInfo;
 
     move-result-object v0

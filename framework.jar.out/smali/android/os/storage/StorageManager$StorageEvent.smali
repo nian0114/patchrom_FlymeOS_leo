@@ -34,29 +34,24 @@
     .param p2, "what"    # I
 
     .prologue
-    .line 217
     iput-object p1, p0, Landroid/os/storage/StorageManager$StorageEvent;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$StorageEvent;->mMessage:Landroid/os/Message;
 
-    .line 219
     iget-object v0, p0, Landroid/os/storage/StorageManager$StorageEvent;->mMessage:Landroid/os/Message;
 
     iput p2, v0, Landroid/os/Message;->what:I
 
-    .line 220
     iget-object v0, p0, Landroid/os/storage/StorageManager$StorageEvent;->mMessage:Landroid/os/Message;
 
     iput-object p0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 221
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Landroid/os/storage/StorageManager$StorageEvent;->mMessage:Landroid/os/Message;
 
     return-object v0

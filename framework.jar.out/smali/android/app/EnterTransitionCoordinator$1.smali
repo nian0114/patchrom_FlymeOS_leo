@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 74
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$1;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     iput-object p2, p0, Landroid/app/EnterTransitionCoordinator$1;->val$decorView:Landroid/view/View;
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$1;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     # getter for: Landroid/app/EnterTransitionCoordinator;->mIsReadyForTransition:Z
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 78
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$1;->val$decorView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 80
     :cond_0
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$1;->this$0:Landroid/app/EnterTransitionCoordinator;
 

@@ -24,13 +24,10 @@
     .param p2, "l"    # Landroid/os/Looper;
 
     .prologue
-    .line 267
     iput-object p1, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread$CallbackHandler;->this$0:Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;
 
-    .line 268
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 269
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .prologue
     const-wide v14, 0xffffffffL
 
-    .line 274
     :try_start_0
     move-object/from16 v0, p1
 
@@ -51,7 +47,6 @@
 
     packed-switch v7, :pswitch_data_0
 
-    .line 299
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -82,11 +77,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 302
     :catch_0
     move-exception v2
 
-    .line 303
     .local v2, "e":Landroid/os/RemoteException;
     new-instance v7, Ljava/lang/IllegalStateException;
 
@@ -116,7 +109,6 @@
 
     throw v7
 
-    .line 276
     .end local v2    # "e":Landroid/os/RemoteException;
     :pswitch_0
     :try_start_1
@@ -124,7 +116,6 @@
 
     iget v3, v0, Landroid/os/Message;->arg1:I
 
-    .line 277
     .local v3, "errorCode":I
     move-object/from16 v0, p1
 
@@ -132,7 +123,6 @@
 
     check-cast v6, Landroid/hardware/camera2/impl/CaptureResultExtras;
 
-    .line 278
     .local v6, "resultExtras":Landroid/hardware/camera2/impl/CaptureResultExtras;
     move-object/from16 v0, p0
 
@@ -145,13 +135,11 @@
 
     invoke-interface {v7, v3, v6}, Landroid/hardware/camera2/ICameraDeviceCallbacks;->onDeviceError(ILandroid/hardware/camera2/impl/CaptureResultExtras;)V
 
-    .line 306
     .end local v3    # "errorCode":I
     .end local v6    # "resultExtras":Landroid/hardware/camera2/impl/CaptureResultExtras;
     :goto_0
     return-void
 
-    .line 282
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -166,7 +154,6 @@
 
     goto :goto_0
 
-    .line 285
     :pswitch_2
     move-object/from16 v0, p1
 
@@ -176,7 +163,6 @@
 
     and-long v8, v10, v14
 
-    .line 286
     .local v8, "timestamp":J
     const/16 v7, 0x20
 
@@ -192,14 +178,12 @@
 
     or-long v8, v10, v12
 
-    .line 287
     move-object/from16 v0, p1
 
     iget-object v6, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v6, Landroid/hardware/camera2/impl/CaptureResultExtras;
 
-    .line 288
     .restart local v6    # "resultExtras":Landroid/hardware/camera2/impl/CaptureResultExtras;
     move-object/from16 v0, p0
 
@@ -214,7 +198,6 @@
 
     goto :goto_0
 
-    .line 292
     .end local v6    # "resultExtras":Landroid/hardware/camera2/impl/CaptureResultExtras;
     .end local v8    # "timestamp":J
     :pswitch_3
@@ -230,7 +213,6 @@
 
     move-object v5, v0
 
-    .line 293
     .local v5, "resultArray":[Ljava/lang/Object;
     const/4 v7, 0x0
 
@@ -238,7 +220,6 @@
 
     check-cast v4, Landroid/hardware/camera2/impl/CameraMetadataNative;
 
-    .line 294
     .local v4, "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     const/4 v7, 0x1
 
@@ -246,7 +227,6 @@
 
     check-cast v6, Landroid/hardware/camera2/impl/CaptureResultExtras;
 
-    .line 295
     .restart local v6    # "resultExtras":Landroid/hardware/camera2/impl/CaptureResultExtras;
     move-object/from16 v0, p0
 
@@ -263,7 +243,6 @@
 
     goto :goto_0
 
-    .line 274
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

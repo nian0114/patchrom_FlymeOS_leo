@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$UserRemovedReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/usage/UsageStatsService$1;
 
     .prologue
-    .line 120
     invoke-direct {p0, p1}, Lcom/android/server/usage/UsageStatsService$UserRemovedReceiver;-><init>(Lcom/android/server/usage/UsageStatsService;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 124
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -66,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 125
     const-string v1, "android.intent.extra.user_handle"
 
     const/4 v2, -0x1
@@ -75,11 +71,9 @@
 
     move-result v0
 
-    .line 126
     .local v0, "userId":I
     if-ltz v0, :cond_0
 
-    .line 127
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$UserRemovedReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     iget-object v1, v1, Lcom/android/server/usage/UsageStatsService;->mHandler:Landroid/os/Handler;
@@ -94,7 +88,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 130
     .end local v0    # "userId":I
     :cond_0
     return-void

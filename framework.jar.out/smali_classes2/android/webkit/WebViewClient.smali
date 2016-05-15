@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,19 +51,15 @@
     .param p2, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 331
     invoke-virtual {p1}, Landroid/webkit/WebView;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v0
 
-    .line 332
     .local v0, "root":Landroid/view/ViewRootImpl;
     if-eqz v0, :cond_0
 
-    .line 333
     invoke-virtual {v0, p2}, Landroid/view/ViewRootImpl;->dispatchUnhandledInputEvent(Landroid/view/InputEvent;)V
 
-    .line 335
     :cond_0
     return-void
 .end method
@@ -78,7 +73,6 @@
     .param p3, "isReload"    # Z
 
     .prologue
-    .line 214
     return-void
 .end method
 
@@ -89,10 +83,8 @@
     .param p3, "resend"    # Landroid/os/Message;
 
     .prologue
-    .line 202
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 203
     return-void
 .end method
 
@@ -102,7 +94,6 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     return-void
 .end method
 
@@ -112,7 +103,6 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -123,7 +113,6 @@
     .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -133,10 +122,8 @@
     .param p2, "request"    # Landroid/webkit/ClientCertRequest;
 
     .prologue
-    .line 252
     invoke-virtual {p2}, Landroid/webkit/ClientCertRequest;->cancel()V
 
-    .line 253
     return-void
 .end method
 
@@ -148,7 +135,6 @@
     .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     return-void
 .end method
 
@@ -160,10 +146,8 @@
     .param p4, "realm"    # Ljava/lang/String;
 
     .prologue
-    .line 269
     invoke-virtual {p2}, Landroid/webkit/HttpAuthHandler;->cancel()V
 
-    .line 270
     return-void
 .end method
 
@@ -175,7 +159,6 @@
     .param p4, "args"    # Ljava/lang/String;
 
     .prologue
-    .line 360
     return-void
 .end method
 
@@ -186,10 +169,8 @@
     .param p3, "error"    # Landroid/net/http/SslError;
 
     .prologue
-    .line 230
     invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->cancel()V
 
-    .line 231
     return-void
 .end method
 
@@ -200,7 +181,6 @@
     .param p3, "newScale"    # F
 
     .prologue
-    .line 346
     return-void
 .end method
 
@@ -213,10 +193,8 @@
     .end annotation
 
     .prologue
-    .line 143
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 144
     return-void
 .end method
 
@@ -226,22 +204,18 @@
     .param p2, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 323
     instance-of v0, p2, Landroid/view/KeyEvent;
 
     if-eqz v0, :cond_0
 
-    .line 324
     check-cast p2, Landroid/view/KeyEvent;
 
     .end local p2    # "event":Landroid/view/InputEvent;
     invoke-virtual {p0, p1, p2}, Landroid/webkit/WebViewClient;->onUnhandledKeyEvent(Landroid/webkit/WebView;Landroid/view/KeyEvent;)V
 
-    .line 328
     :goto_0
     return-void
 
-    .line 327
     .restart local p2    # "event":Landroid/view/InputEvent;
     :cond_0
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebViewClient;->onUnhandledInputEventInternal(Landroid/webkit/WebView;Landroid/view/InputEvent;)V
@@ -257,10 +231,8 @@
     .end annotation
 
     .prologue
-    .line 301
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebViewClient;->onUnhandledInputEventInternal(Landroid/webkit/WebView;Landroid/view/InputEvent;)V
 
-    .line 302
     return-void
 .end method
 
@@ -270,7 +242,6 @@
     .param p2, "request"    # Landroid/webkit/WebResourceRequest;
 
     .prologue
-    .line 125
     invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
 
     move-result-object v0
@@ -294,7 +265,6 @@
     .end annotation
 
     .prologue
-    .line 105
     const/4 v0, 0x0
 
     return-object v0
@@ -306,7 +276,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 285
     const/4 v0, 0x0
 
     return v0
@@ -318,7 +287,6 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     return v0

@@ -620,10 +620,8 @@
     .locals 0
 
     .prologue
-    .line 335
     invoke-static {}, Landroid/opengl/GLES30;->_nativeClassInit()V
 
-    .line 336
     return-void
 .end method
 
@@ -631,7 +629,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Landroid/opengl/GLES20;-><init>()V
 
     return-void
@@ -1126,7 +1123,6 @@
     .param p4, "pointer"    # Ljava/nio/Buffer;
 
     .prologue
-    .line 941
     invoke-virtual {p4}, Ljava/nio/Buffer;->remaining()I
 
     move-result v5
@@ -1143,7 +1139,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES30;->glVertexAttribIPointerBounds(IIIILjava/nio/Buffer;I)V
 
-    .line 949
     return-void
 .end method
 

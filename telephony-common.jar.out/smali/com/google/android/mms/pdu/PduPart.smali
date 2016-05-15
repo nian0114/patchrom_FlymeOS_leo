@@ -124,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 96
     const-string v0, "from-data"
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -133,7 +132,6 @@
 
     sput-object v0, Lcom/google/android/mms/pdu/PduPart;->DISPOSITION_FROM_DATA:[B
 
-    .line 97
     const-string v0, "attachment"
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -142,7 +140,6 @@
 
     sput-object v0, Lcom/google/android/mms/pdu/PduPart;->DISPOSITION_ATTACHMENT:[B
 
-    .line 98
     const-string v0, "inline"
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -160,26 +157,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
-    .line 115
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mUri:Landroid/net/Uri;
 
-    .line 120
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
-    .line 128
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
-    .line 129
     return-void
 .end method
 
@@ -189,7 +180,6 @@
     .locals 4
 
     .prologue
-    .line 397
     iget-object v2, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v3, 0x97
@@ -208,11 +198,9 @@
 
     check-cast v1, [B
 
-    .line 398
     .local v1, "location":[B
     if-nez v1, :cond_0
 
-    .line 399
     iget-object v2, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v3, 0x98
@@ -231,10 +219,8 @@
 
     check-cast v1, [B
 
-    .line 401
     if-nez v1, :cond_0
 
-    .line 402
     iget-object v2, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v3, 0x8e
@@ -253,11 +239,9 @@
 
     check-cast v1, [B
 
-    .line 406
     :cond_0
     if-nez v1, :cond_1
 
-    .line 407
     iget-object v2, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v3, 0xc0
@@ -276,7 +260,6 @@
 
     check-cast v0, [B
 
-    .line 408
     .local v0, "contentId":[B
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -300,7 +283,6 @@
 
     move-result-object v2
 
-    .line 410
     .end local v0    # "contentId":[B
     :goto_0
     return-object v2
@@ -317,7 +299,6 @@
     .locals 3
 
     .prologue
-    .line 241
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v2, 0x81
@@ -332,14 +313,11 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 242
     .local v0, "charset":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 243
     const/4 v1, 0x0
 
-    .line 245
     :goto_0
     return v1
 
@@ -355,7 +333,6 @@
     .locals 2
 
     .prologue
-    .line 298
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0xc5
@@ -379,7 +356,6 @@
     .locals 2
 
     .prologue
-    .line 223
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0xc0
@@ -403,7 +379,6 @@
     .locals 2
 
     .prologue
-    .line 272
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0x8e
@@ -427,7 +402,6 @@
     .locals 2
 
     .prologue
-    .line 344
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0xc8
@@ -451,7 +425,6 @@
     .locals 2
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0x91
@@ -477,19 +450,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 151
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
     if-nez v1, :cond_0
 
-    .line 152
     const/4 v0, 0x0
 
-    .line 157
     :goto_0
     return-object v0
 
-    .line 155
     :cond_0
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
@@ -497,7 +466,6 @@
 
     new-array v0, v1, [B
 
-    .line 156
     .local v0, "byteArray":[B
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
@@ -514,17 +482,14 @@
     .locals 1
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
     if-eqz v0, :cond_0
 
-    .line 165
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
     array-length v0, v0
 
-    .line 167
     :goto_0
     return v0
 
@@ -538,7 +503,6 @@
     .locals 1
 
     .prologue
-    .line 187
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mUri:Landroid/net/Uri;
 
     return-object v0
@@ -548,7 +512,6 @@
     .locals 2
 
     .prologue
-    .line 390
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0x98
@@ -572,7 +535,6 @@
     .locals 2
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0x97
@@ -597,7 +559,6 @@
     .param p1, "charset"    # I
 
     .prologue
-    .line 232
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     const/16 v1, 0x81
@@ -612,7 +573,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
     return-void
 .end method
 
@@ -621,10 +581,8 @@
     .param p1, "contentDisposition"    # [B
 
     .prologue
-    .line 285
     if-nez p1, :cond_0
 
-    .line 286
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null content-disposition"
@@ -633,7 +591,6 @@
 
     throw v0
 
-    .line 289
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
@@ -645,7 +602,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 290
     return-void
 .end method
 
@@ -664,14 +620,12 @@
 
     const/4 v2, 0x0
 
-    .line 197
     if-eqz p1, :cond_0
 
     array-length v1, p1
 
     if-nez v1, :cond_1
 
-    .line 198
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -681,7 +635,6 @@
 
     throw v1
 
-    .line 202
     :cond_1
     array-length v1, p1
 
@@ -703,7 +656,6 @@
 
     if-ne v1, v5, :cond_2
 
-    .line 205
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -712,11 +664,9 @@
 
     invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     :goto_0
     return-void
 
-    .line 210
     :cond_2
     array-length v1, p1
 
@@ -724,23 +674,19 @@
 
     new-array v0, v1, [B
 
-    .line 211
     .local v0, "buffer":[B
     aput-byte v4, v0, v2
 
-    .line 212
     array-length v1, v0
 
     add-int/lit8 v1, v1, -0x1
 
     aput-byte v5, v0, v1
 
-    .line 213
     array-length v1, p1
 
     invoke-static {p1, v2, v0, v3, v1}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 214
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -757,10 +703,8 @@
     .param p1, "contentLocation"    # [B
 
     .prologue
-    .line 256
     if-nez p1, :cond_0
 
-    .line 257
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null content-location"
@@ -769,7 +713,6 @@
 
     throw v0
 
-    .line 260
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
@@ -781,7 +724,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     return-void
 .end method
 
@@ -790,10 +732,8 @@
     .param p1, "contentTransferEncoding"    # [B
 
     .prologue
-    .line 331
     if-nez p1, :cond_0
 
-    .line 332
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null content-transfer-encoding"
@@ -802,7 +742,6 @@
 
     throw v0
 
-    .line 335
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
@@ -814,7 +753,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 336
     return-void
 .end method
 
@@ -823,10 +761,8 @@
     .param p1, "contentType"    # [B
 
     .prologue
-    .line 308
     if-nez p1, :cond_0
 
-    .line 309
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null content-type"
@@ -835,7 +771,6 @@
 
     throw v0
 
-    .line 312
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
@@ -847,7 +782,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
     return-void
 .end method
 
@@ -858,14 +792,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 137
     if-nez p1, :cond_0
 
-    .line 143
     :goto_0
     return-void
 
-    .line 141
     :cond_0
     array-length v0, p1
 
@@ -873,7 +804,6 @@
 
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
-    .line 142
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartData:[B
 
     array-length v1, p1
@@ -888,10 +818,8 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lcom/google/android/mms/pdu/PduPart;->mUri:Landroid/net/Uri;
 
-    .line 179
     return-void
 .end method
 
@@ -900,10 +828,8 @@
     .param p1, "fileName"    # [B
 
     .prologue
-    .line 377
     if-nez p1, :cond_0
 
-    .line 378
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null content-id"
@@ -912,7 +838,6 @@
 
     throw v0
 
-    .line 381
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
@@ -924,7 +849,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 382
     return-void
 .end method
 
@@ -933,10 +857,8 @@
     .param p1, "name"    # [B
 
     .prologue
-    .line 354
     if-nez p1, :cond_0
 
-    .line 355
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null content-id"
@@ -945,7 +867,6 @@
 
     throw v0
 
-    .line 358
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduPart;->mPartHeader:Ljava/util/Map;
 
@@ -957,6 +878,5 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 359
     return-void
 .end method

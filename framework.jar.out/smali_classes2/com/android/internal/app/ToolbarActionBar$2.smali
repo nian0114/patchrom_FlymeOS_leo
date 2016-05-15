@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/internal/app/ToolbarActionBar$2;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$2;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     # getter for: Lcom/android/internal/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;

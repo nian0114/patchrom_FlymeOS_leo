@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 833
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 843
     iget-object v0, p0, Landroid/media/MediaDrm$Certificate;->mCertificateData:[B
 
     return-object v0
@@ -47,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 838
     iget-object v0, p0, Landroid/media/MediaDrm$Certificate;->mWrappedKey:[B
 
     return-object v0

@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/IccException;-><init>()V
 
-    .line 26
     return-void
 .end method
 
@@ -20,7 +18,6 @@
     .param p1, "ef"    # I
 
     .prologue
-    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,7 +42,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/IccException;-><init>(Ljava/lang/String;)V
 
-    .line 34
     return-void
 .end method
 
@@ -54,9 +50,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/IccException;-><init>(Ljava/lang/String;)V
 
-    .line 30
     return-void
 .end method

@@ -20,15 +20,12 @@
     .locals 3
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/PathMeasure;->mPath:Landroid/graphics/Path;
 
-    .line 33
     const-wide/16 v0, 0x0
 
     const/4 v2, 0x0
@@ -39,7 +36,6 @@
 
     iput-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
-    .line 34
     return-void
 .end method
 
@@ -49,13 +45,10 @@
     .param p2, "forceClosed"    # Z
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object p1, p0, Landroid/graphics/PathMeasure;->mPath:Landroid/graphics/Path;
 
-    .line 53
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()J
@@ -69,10 +62,8 @@
 
     iput-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
-    .line 55
     return-void
 
-    .line 53
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -117,12 +108,10 @@
     .end annotation
 
     .prologue
-    .line 144
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/PathMeasure;->native_destroy(J)V
 
-    .line 145
     return-void
 .end method
 
@@ -130,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 72
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/PathMeasure;->native_getLength(J)F
@@ -147,7 +135,6 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 108
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     iget-wide v3, p2, Landroid/graphics/Matrix;->native_instance:J
@@ -172,7 +159,6 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 87
     if-eqz p2, :cond_0
 
     array-length v0, p2
@@ -186,7 +172,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 89
     :cond_1
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -194,7 +179,6 @@
 
     throw v0
 
-    .line 91
     :cond_2
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
@@ -213,12 +197,10 @@
     .param p4, "startWithMoveTo"    # Z
 
     .prologue
-    .line 124
     const/4 v0, 0x0
 
     iput-boolean v0, p3, Landroid/graphics/Path;->isSimplePath:Z
 
-    .line 125
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     invoke-virtual {p3}, Landroid/graphics/Path;->ni()J
@@ -242,7 +224,6 @@
     .locals 2
 
     .prologue
-    .line 132
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/PathMeasure;->native_isClosed(J)Z
@@ -256,7 +237,6 @@
     .locals 2
 
     .prologue
-    .line 140
     iget-wide v0, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/PathMeasure;->native_nextContour(J)Z
@@ -272,10 +252,8 @@
     .param p2, "forceClosed"    # Z
 
     .prologue
-    .line 61
     iput-object p1, p0, Landroid/graphics/PathMeasure;->mPath:Landroid/graphics/Path;
 
-    .line 62
     iget-wide v2, p0, Landroid/graphics/PathMeasure;->native_instance:J
 
     if-eqz p1, :cond_0
@@ -287,10 +265,8 @@
     :goto_0
     invoke-static {v2, v3, v0, v1, p2}, Landroid/graphics/PathMeasure;->native_setPath(JJZ)V
 
-    .line 65
     return-void
 
-    .line 62
     :cond_0
     const-wide/16 v0, 0x0
 

@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1878
     .local p0, "this":Landroid/accounts/AccountManager$BaseFutureTask$1;, "Landroid/accounts/AccountManager$BaseFutureTask.1;"
     iput-object p1, p0, Landroid/accounts/AccountManager$BaseFutureTask$1;->val$this$0:Landroid/accounts/AccountManager;
 
@@ -60,11 +59,10 @@
     .end annotation
 
     .prologue
-    .line 1880
     .local p0, "this":Landroid/accounts/AccountManager$BaseFutureTask$1;, "Landroid/accounts/AccountManager$BaseFutureTask.1;"
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "this should never be called"
+    const-string v1, "this should never be called"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

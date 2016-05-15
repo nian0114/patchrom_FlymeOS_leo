@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 807
     iput-object p1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 810
     iget-object v1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     # getter for: Lcom/android/server/media/MediaSessionRecord;->mOptimisticVolume:I
@@ -59,7 +57,6 @@
 
     const/4 v0, 0x1
 
-    .line 811
     .local v0, "needUpdate":Z
     :goto_0
     iget-object v1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
@@ -69,20 +66,16 @@
     # setter for: Lcom/android/server/media/MediaSessionRecord;->mOptimisticVolume:I
     invoke-static {v1, v2}, Lcom/android/server/media/MediaSessionRecord;->access$202(Lcom/android/server/media/MediaSessionRecord;I)I
 
-    .line 812
     if-eqz v0, :cond_0
 
-    .line 813
     iget-object v1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     # invokes: Lcom/android/server/media/MediaSessionRecord;->pushVolumeUpdate()V
     invoke-static {v1}, Lcom/android/server/media/MediaSessionRecord;->access$400(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 815
     :cond_0
     return-void
 
-    .line 810
     .end local v0    # "needUpdate":Z
     :cond_1
     const/4 v0, 0x0

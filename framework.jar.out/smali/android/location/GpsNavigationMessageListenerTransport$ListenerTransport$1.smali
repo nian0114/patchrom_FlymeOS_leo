@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 56
     iput-object p1, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->this$1:Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport;
 
     iput-object p2, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->val$event:Landroid/location/GpsNavigationMessageEvent;
@@ -60,12 +59,10 @@
     .end annotation
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->val$event:Landroid/location/GpsNavigationMessageEvent;
 
     invoke-interface {p1, v0}, Landroid/location/GpsNavigationMessageEvent$Listener;->onGpsNavigationMessageReceived(Landroid/location/GpsNavigationMessageEvent;)V
 
-    .line 61
     return-void
 .end method
 
@@ -78,7 +75,6 @@
     .end annotation
 
     .prologue
-    .line 56
     check-cast p1, Landroid/location/GpsNavigationMessageEvent$Listener;
 
     invoke-virtual {p0, p1}, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->execute(Landroid/location/GpsNavigationMessageEvent$Listener;)V

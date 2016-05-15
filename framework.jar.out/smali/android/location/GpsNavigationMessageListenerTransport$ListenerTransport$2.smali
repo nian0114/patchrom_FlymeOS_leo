@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 69
     iput-object p1, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$2;->this$1:Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport;
 
     iput p2, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$2;->val$status:I
@@ -60,12 +59,10 @@
     .end annotation
 
     .prologue
-    .line 73
     iget v0, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$2;->val$status:I
 
     invoke-interface {p1, v0}, Landroid/location/GpsNavigationMessageEvent$Listener;->onStatusChanged(I)V
 
-    .line 74
     return-void
 .end method
 
@@ -78,7 +75,6 @@
     .end annotation
 
     .prologue
-    .line 69
     check-cast p1, Landroid/location/GpsNavigationMessageEvent$Listener;
 
     invoke-virtual {p0, p1}, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$2;->execute(Landroid/location/GpsNavigationMessageEvent$Listener;)V

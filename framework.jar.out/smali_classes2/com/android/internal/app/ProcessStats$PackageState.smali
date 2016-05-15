@@ -51,29 +51,23 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 3757
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3750
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$PackageState;->mProcesses:Landroid/util/ArrayMap;
 
-    .line 3752
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$PackageState;->mServices:Landroid/util/ArrayMap;
 
-    .line 3758
     iput p2, p0, Lcom/android/internal/app/ProcessStats$PackageState;->mUid:I
 
-    .line 3759
     iput-object p1, p0, Lcom/android/internal/app/ProcessStats$PackageState;->mPackageName:Ljava/lang/String;
 
-    .line 3760
     return-void
 .end method

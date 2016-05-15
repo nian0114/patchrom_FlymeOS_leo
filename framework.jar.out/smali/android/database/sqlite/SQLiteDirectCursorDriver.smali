@@ -27,22 +27,16 @@
     .param p4, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 38
     iput-object p3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mEditTable:Ljava/lang/String;
 
-    .line 39
     iput-object p2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mSql:Ljava/lang/String;
 
-    .line 40
     iput-object p4, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mCancellationSignal:Landroid/os/CancellationSignal;
 
-    .line 41
     return-void
 .end method
 
@@ -52,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -60,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -69,7 +61,6 @@
     .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -79,7 +70,6 @@
     .param p2, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 44
     new-instance v2, Landroid/database/sqlite/SQLiteQuery;
 
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -90,15 +80,12 @@
 
     invoke-direct {v2, v3, v4, v5}, Landroid/database/sqlite/SQLiteQuery;-><init>(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Landroid/os/CancellationSignal;)V
 
-    .line 47
     .local v2, "query":Landroid/database/sqlite/SQLiteQuery;
     :try_start_0
     invoke-virtual {v2, p2}, Landroid/database/sqlite/SQLiteQuery;->bindAllArgsAsStrings([Ljava/lang/String;)V
 
-    .line 49
     if-nez p1, :cond_0
 
-    .line 50
     new-instance v0, Landroid/database/sqlite/SQLiteCursor;
 
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mEditTable:Ljava/lang/String;
@@ -107,15 +94,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 59
     .local v0, "cursor":Landroid/database/Cursor;
     :goto_0
     iput-object v2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mQuery:Landroid/database/sqlite/SQLiteQuery;
 
-    .line 60
     return-object v0
 
-    .line 52
     .end local v0    # "cursor":Landroid/database/Cursor;
     :cond_0
     :try_start_1
@@ -132,16 +116,13 @@
     .restart local v0    # "cursor":Landroid/database/Cursor;
     goto :goto_0
 
-    .line 54
     .end local v0    # "cursor":Landroid/database/Cursor;
     :catch_0
     move-exception v1
 
-    .line 55
     .local v1, "ex":Ljava/lang/RuntimeException;
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteQuery;->close()V
 
-    .line 56
     throw v1
 .end method
 
@@ -150,12 +131,10 @@
     .param p1, "bindArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mQuery:Landroid/database/sqlite/SQLiteQuery;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteQuery;->bindAllArgsAsStrings([Ljava/lang/String;)V
 
-    .line 69
     return-void
 .end method
 
@@ -163,7 +142,6 @@
     .locals 2
 
     .prologue
-    .line 81
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

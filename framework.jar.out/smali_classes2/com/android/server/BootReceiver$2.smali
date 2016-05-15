@@ -31,7 +31,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 172
     iput-object p1, p0, Lcom/android/server/BootReceiver$2;->this$0:Lcom/android/server/BootReceiver;
 
     iput-object p4, p0, Lcom/android/server/BootReceiver$2;->val$db:Landroid/os/DropBoxManager;
@@ -53,7 +52,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 176
     :try_start_0
     new-instance v7, Ljava/io/File;
 
@@ -64,7 +62,6 @@
 
     invoke-direct {v7, v0, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 177
     .local v7, "file":Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->isFile()Z
 
@@ -72,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/BootReceiver$2;->val$db:Landroid/os/DropBoxManager;
 
     iget-object v1, p0, Lcom/android/server/BootReceiver$2;->val$prefs:Landroid/content/SharedPreferences;
@@ -95,17 +91,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 183
     .end local v7    # "file":Ljava/io/File;
     :cond_0
     :goto_0
     return-void
 
-    .line 180
     :catch_0
     move-exception v6
 
-    .line 181
     .local v6, "e":Ljava/io/IOException;
     const-string v0, "BootReceiver"
 

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 603
     invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
     return-void

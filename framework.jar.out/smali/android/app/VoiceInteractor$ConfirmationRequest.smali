@@ -27,16 +27,12 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 237
     invoke-direct {p0}, Landroid/app/VoiceInteractor$Request;-><init>()V
 
-    .line 238
     iput-object p1, p0, Landroid/app/VoiceInteractor$ConfirmationRequest;->mPrompt:Ljava/lang/CharSequence;
 
-    .line 239
     iput-object p2, p0, Landroid/app/VoiceInteractor$ConfirmationRequest;->mExtras:Landroid/os/Bundle;
 
-    .line 240
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 243
     return-void
 .end method
 
@@ -64,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 247
     iget-object v0, p0, Landroid/app/VoiceInteractor$ConfirmationRequest;->mPrompt:Ljava/lang/CharSequence;
 
     iget-object v1, p0, Landroid/app/VoiceInteractor$ConfirmationRequest;->mExtras:Landroid/os/Bundle;

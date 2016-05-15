@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 248
     iput-object p1, p0, Landroid/view/accessibility/CaptioningManager$2;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 251
     iget-object v0, p0, Landroid/view/accessibility/CaptioningManager$2;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     # invokes: Landroid/view/accessibility/CaptioningManager;->notifyUserStyleChanged()V
     invoke-static {v0}, Landroid/view/accessibility/CaptioningManager;->access$500(Landroid/view/accessibility/CaptioningManager;)V
 
-    .line 252
     return-void
 .end method

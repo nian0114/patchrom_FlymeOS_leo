@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1505
     iput-object p1, p0, Landroid/media/WebVttRenderingWidget$1;->this$0:Landroid/media/WebVttRenderingWidget;
 
     invoke-direct {p0}, Landroid/view/accessibility/CaptioningManager$CaptioningChangeListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "fontScale"    # F
 
     .prologue
-    .line 1508
     iget-object v1, p0, Landroid/media/WebVttRenderingWidget$1;->this$0:Landroid/media/WebVttRenderingWidget;
 
     invoke-virtual {v1}, Landroid/media/WebVttRenderingWidget;->getHeight()I
@@ -53,7 +51,6 @@
 
     mul-float v0, v1, v2
 
-    .line 1509
     .local v0, "fontSize":F
     iget-object v1, p0, Landroid/media/WebVttRenderingWidget$1;->this$0:Landroid/media/WebVttRenderingWidget;
 
@@ -67,7 +64,6 @@
     # invokes: Landroid/media/WebVttRenderingWidget;->setCaptionStyle(Landroid/view/accessibility/CaptioningManager$CaptionStyle;F)V
     invoke-static {v1, v2, v0}, Landroid/media/WebVttRenderingWidget;->access$200(Landroid/media/WebVttRenderingWidget;Landroid/view/accessibility/CaptioningManager$CaptionStyle;F)V
 
-    .line 1510
     return-void
 .end method
 
@@ -76,7 +72,6 @@
     .param p1, "userStyle"    # Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
     .prologue
-    .line 1514
     iget-object v0, p0, Landroid/media/WebVttRenderingWidget$1;->this$0:Landroid/media/WebVttRenderingWidget;
 
     iget-object v1, p0, Landroid/media/WebVttRenderingWidget$1;->this$0:Landroid/media/WebVttRenderingWidget;
@@ -89,6 +84,5 @@
     # invokes: Landroid/media/WebVttRenderingWidget;->setCaptionStyle(Landroid/view/accessibility/CaptioningManager$CaptionStyle;F)V
     invoke-static {v0, p1, v1}, Landroid/media/WebVttRenderingWidget;->access$200(Landroid/media/WebVttRenderingWidget;Landroid/view/accessibility/CaptioningManager$CaptionStyle;F)V
 
-    .line 1515
     return-void
 .end method

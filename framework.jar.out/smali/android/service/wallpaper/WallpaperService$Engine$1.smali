@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 197
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     invoke-direct {p0}, Lcom/android/internal/view/BaseSurfaceHolder;-><init>()V
 
-    .line 199
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->mRequestedFormat:I
 
-    .line 200
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     iget-boolean v0, v0, Landroid/service/wallpaper/WallpaperService$Engine;->mIsCreating:Z
@@ -55,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     iget-boolean v0, v0, Landroid/service/wallpaper/WallpaperService$Engine;->mDrawingAllowed:Z
@@ -67,7 +62,6 @@
     .locals 3
 
     .prologue
-    .line 209
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     iget-object v1, v1, Landroid/service/wallpaper/WallpaperService$Engine;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -78,7 +72,6 @@
 
     move-result-object v0
 
-    .line 210
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
@@ -86,7 +79,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 211
     return-void
 .end method
 
@@ -94,7 +86,6 @@
     .locals 3
 
     .prologue
-    .line 215
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     iget-object v1, v1, Landroid/service/wallpaper/WallpaperService$Engine;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -105,7 +96,6 @@
 
     move-result-object v0
 
-    .line 216
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
@@ -113,7 +103,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 217
     return-void
 .end method
 
@@ -123,14 +112,12 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     iget-boolean v0, v0, Landroid/service/wallpaper/WallpaperService$Engine;->mFixedSizeAllowed:Z
 
     if-nez v0, :cond_0
 
-    .line 229
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Wallpapers currently only support sizing from layout"
@@ -139,11 +126,9 @@
 
     throw v0
 
-    .line 232
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/internal/view/BaseSurfaceHolder;->setFixedSize(II)V
 
-    .line 233
     return-void
 .end method
 
@@ -152,7 +137,6 @@
     .param p1, "screenOn"    # Z
 
     .prologue
-    .line 236
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Wallpapers do not support keep screen on"

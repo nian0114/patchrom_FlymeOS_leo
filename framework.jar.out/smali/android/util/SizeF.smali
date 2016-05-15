@@ -16,11 +16,9 @@
     .param p2, "height"    # F
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
-    const-string/jumbo v0, "width"
+    const-string v0, "width"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentFinite(FLjava/lang/String;)F
 
@@ -28,7 +26,6 @@
 
     iput v0, p0, Landroid/util/SizeF;->mWidth:F
 
-    .line 44
     const-string v0, "height"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentFinite(FLjava/lang/String;)F
@@ -37,7 +34,6 @@
 
     iput v0, p0, Landroid/util/SizeF;->mHeight:F
 
-    .line 45
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 100
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -88,41 +83,34 @@
     .end annotation
 
     .prologue
-    .line 135
-    const-string/jumbo v2, "string must not be null"
+    const-string v2, "string must not be null"
 
     invoke-static {p0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     const/16 v2, 0x2a
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
-    .line 138
     .local v1, "sep_ix":I
     if-gez v1, :cond_0
 
-    .line 139
     const/16 v2, 0x78
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
-    .line 141
     :cond_0
     if-gez v1, :cond_1
 
-    .line 142
     invoke-static {p0}, Landroid/util/SizeF;->invalidSizeF(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
     move-result-object v2
 
     throw v2
 
-    .line 145
     :cond_1
     :try_start_0
     new-instance v2, Landroid/util/SizeF;
@@ -154,11 +142,9 @@
 
     return-object v2
 
-    .line 147
     :catch_0
     move-exception v0
 
-    .line 148
     .local v0, "e":Ljava/lang/NumberFormatException;
     invoke-static {p0}, Landroid/util/SizeF;->invalidSizeF(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
@@ -166,12 +152,10 @@
 
     throw v2
 
-    .line 149
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v0
 
-    .line 150
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     invoke-static {p0}, Landroid/util/SizeF;->invalidSizeF(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
@@ -191,24 +175,19 @@
 
     const/4 v2, 0x0
 
-    .line 76
     if-nez p1, :cond_1
 
-    .line 86
     :cond_0
     :goto_0
     return v2
 
-    .line 79
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 80
     goto :goto_0
 
-    .line 82
     :cond_2
     instance-of v3, p1, Landroid/util/SizeF;
 
@@ -216,10 +195,8 @@
 
     move-object v0, p1
 
-    .line 83
     check-cast v0, Landroid/util/SizeF;
 
-    .line 84
     .local v0, "other":Landroid/util/SizeF;
     iget v3, p0, Landroid/util/SizeF;->mWidth:F
 
@@ -252,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget v0, p0, Landroid/util/SizeF;->mHeight:F
 
     return v0
@@ -262,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget v0, p0, Landroid/util/SizeF;->mWidth:F
 
     return v0
@@ -272,7 +247,6 @@
     .locals 2
 
     .prologue
-    .line 159
     iget v0, p0, Landroid/util/SizeF;->mWidth:F
 
     invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -294,7 +268,6 @@
     .locals 2
 
     .prologue
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,7 +278,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

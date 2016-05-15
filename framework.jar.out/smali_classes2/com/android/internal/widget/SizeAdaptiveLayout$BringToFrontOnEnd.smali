@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 413
     const-class v0, Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -56,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 413
     iput-object p1, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -71,13 +69,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 429
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # operator++ for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mCanceledAnimationCount:I
     invoke-static {v0}, Lcom/android/internal/widget/SizeAdaptiveLayout;->access$008(Lcom/android/internal/widget/SizeAdaptiveLayout;)I
 
-    .line 430
     return-void
 .end method
 
@@ -90,7 +86,6 @@
 
     const/16 v1, 0x8
 
-    .line 416
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # getter for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mCanceledAnimationCount:I
@@ -100,7 +95,6 @@
 
     if-nez v0, :cond_0
 
-    .line 417
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # getter for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mLeavingView:Landroid/view/View;
@@ -110,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 418
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # getter for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mModestyPanel:Landroid/view/View;
@@ -120,7 +113,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 419
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # getter for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mEnteringView:Landroid/view/View;
@@ -130,23 +122,19 @@
 
     invoke-virtual {v0}, Landroid/view/View;->bringToFront()V
 
-    .line 420
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # setter for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mEnteringView:Landroid/view/View;
     invoke-static {v0, v2}, Lcom/android/internal/widget/SizeAdaptiveLayout;->access$302(Lcom/android/internal/widget/SizeAdaptiveLayout;Landroid/view/View;)Landroid/view/View;
 
-    .line 421
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
     # setter for: Lcom/android/internal/widget/SizeAdaptiveLayout;->mLeavingView:Landroid/view/View;
     invoke-static {v0, v2}, Lcom/android/internal/widget/SizeAdaptiveLayout;->access$102(Lcom/android/internal/widget/SizeAdaptiveLayout;Landroid/view/View;)Landroid/view/View;
 
-    .line 425
     :goto_0
     return-void
 
-    .line 423
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->this$0:Lcom/android/internal/widget/SizeAdaptiveLayout;
 
@@ -161,7 +149,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 435
     sget-boolean v0, Lcom/android/internal/widget/SizeAdaptiveLayout$BringToFrontOnEnd;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -172,7 +159,6 @@
 
     throw v0
 
-    .line 436
     :cond_0
     return-void
 .end method
@@ -182,6 +168,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 440
     return-void
 .end method

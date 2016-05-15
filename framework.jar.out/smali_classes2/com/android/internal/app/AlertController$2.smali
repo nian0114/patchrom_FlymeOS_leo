@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 436
     iput-object p1, p0, Lcom/android/internal/app/AlertController$2;->this$0:Lcom/android/internal/app/AlertController;
 
     iput-object p2, p0, Lcom/android/internal/app/AlertController$2;->val$parent:Landroid/view/View;
@@ -46,14 +45,12 @@
     .param p2, "insets"    # Landroid/view/WindowInsets;
 
     .prologue
-    .line 439
     invoke-virtual {p2}, Landroid/view/WindowInsets;->isRound()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 441
     iget-object v1, p0, Lcom/android/internal/app/AlertController$2;->this$0:Lcom/android/internal/app/AlertController;
 
     # getter for: Lcom/android/internal/app/AlertController;->mContext:Landroid/content/Context;
@@ -71,13 +68,11 @@
 
     move-result v0
 
-    .line 443
     .local v0, "roundOffset":I
     iget-object v1, p0, Lcom/android/internal/app/AlertController$2;->val$parent:Landroid/view/View;
 
     invoke-virtual {v1, v0, v0, v0, v0}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 445
     .end local v0    # "roundOffset":I
     :cond_0
     invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;

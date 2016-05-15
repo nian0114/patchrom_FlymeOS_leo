@@ -37,13 +37,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
-    .line 49
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
     const-string v2, "accessibility"
@@ -56,7 +53,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 51
     new-instance v1, Lcom/android/server/am/LockTaskNotify$H;
 
     const/4 v2, 0x0
@@ -65,18 +61,15 @@
 
     iput-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mHandler:Lcom/android/server/am/LockTaskNotify$H;
 
-    .line 52
     new-instance v0, Lcom/android/server/am/LockTaskNotify$SettingsObserver;
 
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mHandler:Lcom/android/server/am/LockTaskNotify$H;
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/am/LockTaskNotify$SettingsObserver;-><init>(Lcom/android/server/am/LockTaskNotify;Landroid/os/Handler;)V
 
-    .line 53
     .local v0, "observer":Lcom/android/server/am/LockTaskNotify$SettingsObserver;
     invoke-virtual {v0}, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->observe()V
 
-    .line 54
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -89,7 +82,6 @@
 
     iput-boolean v1, p0, Lcom/android/server/am/LockTaskNotify;->mHasNavigationBar:Z
 
-    .line 55
     return-void
 .end method
 
@@ -98,7 +90,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LockTaskNotify;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -110,7 +101,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 37
     iput-boolean p1, p0, Lcom/android/server/am/LockTaskNotify;->mDevForceNavbar:Z
 
     return p1
@@ -121,7 +111,6 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x1
@@ -130,7 +119,6 @@
 
     move-result-object v0
 
-    .line 87
     .local v0, "toast":Landroid/widget/Toast;
     invoke-virtual {v0}, Landroid/widget/Toast;->getWindowParams()Landroid/view/WindowManager$LayoutParams;
 
@@ -142,10 +130,8 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 89
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 90
     return-object v0
 .end method
 
@@ -156,25 +142,20 @@
     .param p1, "isLocked"    # Z
 
     .prologue
-    .line 63
     if-eqz p1, :cond_1
 
-    .line 64
     const v0, 0x104075f
 
-    .line 71
     .local v0, "textResId":I
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mLastToast:Landroid/widget/Toast;
 
     if-eqz v1, :cond_0
 
-    .line 72
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mLastToast:Landroid/widget/Toast;
 
     invoke-virtual {v1}, Landroid/widget/Toast;->cancel()V
 
-    .line 74
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
@@ -188,10 +169,8 @@
 
     iput-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mLastToast:Landroid/widget/Toast;
 
-    .line 75
     return-void
 
-    .line 65
     .end local v0    # "textResId":I
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -202,13 +181,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 66
     const v0, 0x104075e
 
     .restart local v0    # "textResId":I
     goto :goto_0
 
-    .line 68
     .end local v0    # "textResId":I
     :cond_2
     iget-boolean v1, p0, Lcom/android/server/am/LockTaskNotify;->mHasNavigationBar:Z
@@ -238,17 +215,13 @@
     .param p1, "starting"    # Z
 
     .prologue
-    .line 78
     const v0, 0x1040761
 
-    .line 79
     .local v0, "showString":I
     if-eqz p1, :cond_0
 
-    .line 80
     const v0, 0x1040760
 
-    .line 82
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
@@ -258,7 +231,6 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/am/LockTaskNotify;->makeAllUserToastAndShow(Ljava/lang/String;)Landroid/widget/Toast;
 
-    .line 83
     return-void
 .end method
 
@@ -269,7 +241,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 58
     iget-object v2, p0, Lcom/android/server/am/LockTaskNotify;->mHandler:Lcom/android/server/am/LockTaskNotify$H;
 
     const/4 v3, 0x3
@@ -285,12 +256,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 59
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 58
     goto :goto_0
 .end method

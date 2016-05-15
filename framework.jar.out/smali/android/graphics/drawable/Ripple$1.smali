@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 563
     iput-object p1, p0, Landroid/graphics/drawable/Ripple$1;->this$0:Landroid/graphics/drawable/Ripple;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 566
     iget-object v0, p0, Landroid/graphics/drawable/Ripple$1;->this$0:Landroid/graphics/drawable/Ripple;
 
     # invokes: Landroid/graphics/drawable/Ripple;->removeSelf()V
     invoke-static {v0}, Landroid/graphics/drawable/Ripple;->access$100(Landroid/graphics/drawable/Ripple;)V
 
-    .line 567
     return-void
 .end method

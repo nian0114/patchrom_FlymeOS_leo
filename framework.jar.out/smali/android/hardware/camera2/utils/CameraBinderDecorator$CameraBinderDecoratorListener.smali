@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .param p3, "result"    # Ljava/lang/Object;
 
     .prologue
-    .line 71
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object v1
@@ -46,7 +44,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 72
     check-cast p3, Ljava/lang/Integer;
 
     .end local p3    # "result":Ljava/lang/Object;
@@ -54,11 +51,9 @@
 
     move-result v0
 
-    .line 73
     .local v0, "returnValue":I
     invoke-static {v0}, Landroid/hardware/camera2/utils/CameraBinderDecorator;->throwOnError(I)V
 
-    .line 75
     .end local v0    # "returnValue":I
     :cond_0
     return-void
@@ -70,7 +65,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -81,12 +75,10 @@
     .param p3, "t"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 80
     instance-of v0, p3, Landroid/os/DeadObjectException;
 
     if-eqz v0, :cond_0
 
-    .line 81
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
     const/4 v1, 0x2
@@ -97,13 +89,11 @@
 
     throw v0
 
-    .line 84
     :cond_0
     instance-of v0, p3, Landroid/os/RemoteException;
 
     if-eqz v0, :cond_1
 
-    .line 85
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "An unknown RemoteException was thrown which should never happen."
@@ -112,7 +102,6 @@
 
     throw v0
 
-    .line 89
     :cond_1
     const/4 v0, 0x0
 
@@ -125,6 +114,5 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 94
     return-void
 .end method

@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,21 +31,17 @@
     .end annotation
 
     .prologue
-    .line 40
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 42
     iget-wide v0, p0, Landroid/graphics/ColorFilter;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/ColorFilter;->destroyFilter(J)V
 
-    .line 44
     return-void
 
-    .line 42
     :catchall_0
     move-exception v0
 

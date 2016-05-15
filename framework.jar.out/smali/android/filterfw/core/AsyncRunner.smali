@@ -39,15 +39,12 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 152
     invoke-direct {p0, p1}, Landroid/filterfw/core/GraphRunner;-><init>(Landroid/filterfw/core/FilterContext;)V
 
-    .line 154
     const-class v0, Landroid/filterfw/core/SimpleScheduler;
 
     iput-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mSchedulerClass:Ljava/lang/Class;
 
-    .line 155
     const-string v0, "AsyncRunner"
 
     const/4 v1, 0x2
@@ -58,7 +55,6 @@
 
     iput-boolean v0, p0, Landroid/filterfw/core/AsyncRunner;->mLogVerbose:Z
 
-    .line 156
     return-void
 .end method
 
@@ -68,13 +64,10 @@
     .param p2, "schedulerClass"    # Ljava/lang/Class;
 
     .prologue
-    .line 140
     invoke-direct {p0, p1}, Landroid/filterfw/core/GraphRunner;-><init>(Landroid/filterfw/core/FilterContext;)V
 
-    .line 142
     iput-object p2, p0, Landroid/filterfw/core/AsyncRunner;->mSchedulerClass:Ljava/lang/Class;
 
-    .line 143
     const-string v0, "AsyncRunner"
 
     const/4 v1, 0x2
@@ -85,7 +78,6 @@
 
     iput-boolean v0, p0, Landroid/filterfw/core/AsyncRunner;->mLogVerbose:Z
 
-    .line 144
     return-void
 .end method
 
@@ -94,7 +86,6 @@
     .param p0, "x0"    # Landroid/filterfw/core/AsyncRunner;
 
     .prologue
-    .line 27
     iget-boolean v0, p0, Landroid/filterfw/core/AsyncRunner;->mLogVerbose:Z
 
     return v0
@@ -106,7 +97,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Landroid/filterfw/core/AsyncRunner;->setRunning(Z)V
 
     return-void
@@ -118,7 +108,6 @@
     .param p1, "x1"    # Ljava/lang/Exception;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Landroid/filterfw/core/AsyncRunner;->setException(Ljava/lang/Exception;)V
 
     return-void
@@ -129,7 +118,6 @@
     .param p0, "x0"    # Landroid/filterfw/core/AsyncRunner;
 
     .prologue
-    .line 27
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunner:Landroid/filterfw/core/SyncRunner;
 
     return-object v0
@@ -140,7 +128,6 @@
     .param p0, "x0"    # Landroid/filterfw/core/AsyncRunner;
 
     .prologue
-    .line 27
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mDoneListener:Landroid/filterfw/core/GraphRunner$OnRunnerDoneListener;
 
     return-object v0
@@ -151,7 +138,6 @@
     .param p1, "exception"    # Ljava/lang/Exception;
 
     .prologue
-    .line 236
     monitor-enter p0
 
     :try_start_0
@@ -159,12 +145,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 237
     monitor-exit p0
 
     return-void
 
-    .line 236
     :catchall_0
     move-exception v0
 
@@ -178,7 +162,6 @@
     .param p1, "running"    # Z
 
     .prologue
-    .line 232
     monitor-enter p0
 
     :try_start_0
@@ -186,12 +169,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 233
     monitor-exit p0
 
     return-void
 
-    .line 232
     :catchall_0
     move-exception v0
 
@@ -206,7 +187,6 @@
     .locals 2
 
     .prologue
-    .line 213
     monitor-enter p0
 
     :try_start_0
@@ -216,7 +196,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 214
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Cannot close graph while it is running!"
@@ -227,7 +206,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 213
     :catchall_0
     move-exception v0
 
@@ -235,7 +213,6 @@
 
     throw v0
 
-    .line 216
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Landroid/filterfw/core/AsyncRunner;->mLogVerbose:Z
@@ -248,7 +225,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :cond_1
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunner:Landroid/filterfw/core/SyncRunner;
 
@@ -256,7 +232,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 218
     monitor-exit p0
 
     return-void
@@ -266,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 228
     monitor-enter p0
 
     :try_start_0
@@ -290,7 +264,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunner:Landroid/filterfw/core/SyncRunner;
 
     if-eqz v0, :cond_0
@@ -314,7 +287,6 @@
     .locals 1
 
     .prologue
-    .line 223
     monitor-enter p0
 
     :try_start_0
@@ -338,7 +310,6 @@
     .locals 4
 
     .prologue
-    .line 185
     monitor-enter p0
 
     :try_start_0
@@ -352,20 +323,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     :cond_0
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/filterfw/core/AsyncRunner;->setException(Ljava/lang/Exception;)V
 
-    .line 188
     invoke-virtual {p0}, Landroid/filterfw/core/AsyncRunner;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 189
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Graph is already running!"
@@ -376,7 +344,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 185
     :catchall_0
     move-exception v0
 
@@ -384,14 +351,12 @@
 
     throw v0
 
-    .line 191
     :cond_1
     :try_start_1
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunner:Landroid/filterfw/core/SyncRunner;
 
     if-nez v0, :cond_2
 
-    .line 192
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Cannot run before a graph is set!"
@@ -400,7 +365,6 @@
 
     throw v0
 
-    .line 194
     :cond_2
     new-instance v0, Landroid/filterfw/core/AsyncRunner$AsyncRunnerTask;
 
@@ -410,12 +374,10 @@
 
     iput-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunTask:Landroid/filterfw/core/AsyncRunner$AsyncRunnerTask;
 
-    .line 196
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/filterfw/core/AsyncRunner;->setRunning(Z)V
 
-    .line 197
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunTask:Landroid/filterfw/core/AsyncRunner$AsyncRunnerTask;
 
     const/4 v1, 0x1
@@ -432,7 +394,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 198
     monitor-exit p0
 
     return-void
@@ -443,10 +404,8 @@
     .param p1, "listener"    # Landroid/filterfw/core/GraphRunner$OnRunnerDoneListener;
 
     .prologue
-    .line 164
     iput-object p1, p0, Landroid/filterfw/core/AsyncRunner;->mDoneListener:Landroid/filterfw/core/GraphRunner$OnRunnerDoneListener;
 
-    .line 165
     return-void
 .end method
 
@@ -455,7 +414,6 @@
     .param p1, "graph"    # Landroid/filterfw/core/FilterGraph;
 
     .prologue
-    .line 171
     monitor-enter p0
 
     :try_start_0
@@ -465,7 +423,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 172
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Graph is already running!"
@@ -476,7 +433,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 171
     :catchall_0
     move-exception v0
 
@@ -484,7 +440,6 @@
 
     throw v0
 
-    .line 174
     :cond_0
     :try_start_1
     new-instance v0, Landroid/filterfw/core/SyncRunner;
@@ -499,7 +454,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 175
     monitor-exit p0
 
     return-void
@@ -509,7 +463,6 @@
     .locals 2
 
     .prologue
-    .line 205
     monitor-enter p0
 
     :try_start_0
@@ -525,7 +478,6 @@
 
     if-nez v0, :cond_1
 
-    .line 206
     iget-boolean v0, p0, Landroid/filterfw/core/AsyncRunner;->mLogVerbose:Z
 
     if-eqz v0, :cond_0
@@ -536,7 +488,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     :cond_0
     iget-object v0, p0, Landroid/filterfw/core/AsyncRunner;->mRunTask:Landroid/filterfw/core/AsyncRunner$AsyncRunnerTask;
 
@@ -546,13 +497,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 209
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 205
     :catchall_0
     move-exception v0
 

@@ -44,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 378
     new-instance v0, Landroid/util/Pools$SimplePool;
 
     const/16 v1, 0x20
@@ -60,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 376
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +70,6 @@
     .param p1, "policyFlags"    # I
 
     .prologue
-    .line 387
     sget-object v1, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->sPool:Landroid/util/Pools$SimplePool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SimplePool;->acquire()Ljava/lang/Object;
@@ -81,17 +78,14 @@
 
     check-cast v0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
 
-    .line 388
     .local v0, "holder":Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
     if-nez v0, :cond_0
 
-    .line 389
     new-instance v0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
 
     .end local v0    # "holder":Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
     invoke-direct {v0}, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;-><init>()V
 
-    .line 391
     .restart local v0    # "holder":Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
     :cond_0
     invoke-static {p0}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
@@ -100,10 +94,8 @@
 
     iput-object v1, v0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->event:Landroid/view/MotionEvent;
 
-    .line 392
     iput p1, v0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->policyFlags:I
 
-    .line 393
     return-object v0
 .end method
 
@@ -115,30 +107,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 397
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->event:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 398
     iput-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->event:Landroid/view/MotionEvent;
 
-    .line 399
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->policyFlags:I
 
-    .line 400
     iput-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->next:Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
 
-    .line 401
     iput-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->previous:Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
 
-    .line 402
     sget-object v0, Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;->sPool:Landroid/util/Pools$SimplePool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SimplePool;->release(Ljava/lang/Object;)Z
 
-    .line 403
     return-void
 .end method

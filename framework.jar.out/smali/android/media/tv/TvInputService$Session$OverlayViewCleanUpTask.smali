@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1145
     iput-object p1, p0, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;->this$0:Landroid/media/tv/TvInputService$Session;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -48,7 +47,6 @@
     .param p2, "x1"    # Landroid/media/tv/TvInputService$1;
 
     .prologue
-    .line 1145
     invoke-direct {p0, p1}, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;-><init>(Landroid/media/tv/TvInputService$Session;)V
 
     return-void
@@ -60,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 1145
     check-cast p1, [Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;->doInBackground([Landroid/view/View;)Ljava/lang/Void;
@@ -77,12 +74,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1148
     const/4 v2, 0x0
 
     aget-object v1, p1, v2
 
-    .line 1150
     .local v1, "overlayViewParent":Landroid/view/View;
     const-wide/16 v2, 0x1388
 
@@ -91,27 +86,22 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1154
     invoke-virtual {p0}, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;->isCancelled()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1162
     :cond_0
     :goto_0
     return-object v5
 
-    .line 1151
     :catch_0
     move-exception v0
 
-    .line 1152
     .local v0, "e":Ljava/lang/InterruptedException;
     goto :goto_0
 
-    .line 1157
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :cond_1
     invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
@@ -120,7 +110,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1158
     const-string v2, "TvInputService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -151,7 +140,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1160
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2

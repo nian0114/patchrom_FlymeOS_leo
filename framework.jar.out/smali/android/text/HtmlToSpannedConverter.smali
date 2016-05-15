@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 418
     const/4 v0, 0x6
 
     new-array v0, v0, [F
@@ -79,29 +78,22 @@
     .param p4, "parser"    # Lorg/ccil/cowan/tagsoup/Parser;
 
     .prologue
-    .line 430
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 431
     iput-object p1, p0, Landroid/text/HtmlToSpannedConverter;->mSource:Ljava/lang/String;
 
-    .line 432
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
     iput-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
-    .line 433
     iput-object p2, p0, Landroid/text/HtmlToSpannedConverter;->mImageGetter:Landroid/text/Html$ImageGetter;
 
-    .line 434
     iput-object p3, p0, Landroid/text/HtmlToSpannedConverter;->mTagHandler:Landroid/text/Html$TagHandler;
 
-    .line 435
     iput-object p4, p0, Landroid/text/HtmlToSpannedConverter;->mReader:Lorg/xml/sax/XMLReader;
 
-    .line 436
     return-void
 .end method
 
@@ -112,36 +104,29 @@
     .param p2, "repl"    # Ljava/lang/Object;
 
     .prologue
-    .line 617
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 618
     .local v0, "len":I
     invoke-static {p0, p1}, Landroid/text/HtmlToSpannedConverter;->getLast(Landroid/text/Spanned;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 619
     .local v1, "obj":Ljava/lang/Object;
     invoke-virtual {p0, v1}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v2
 
-    .line 621
     .local v2, "where":I
     invoke-virtual {p0, v1}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 623
     if-eq v2, v0, :cond_0
 
-    .line 624
     const/16 v3, 0x21
 
     invoke-virtual {p0, p2, v2, v0, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 626
     :cond_0
     return-void
 .end method
@@ -151,12 +136,10 @@
     .param p0, "text"    # Landroid/text/SpannableStringBuilder;
 
     .prologue
-    .line 705
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 706
     .local v1, "len":I
     const-class v4, Landroid/text/HtmlToSpannedConverter$Href;
 
@@ -164,31 +147,25 @@
 
     move-result-object v2
 
-    .line 707
     .local v2, "obj":Ljava/lang/Object;
     invoke-virtual {p0, v2}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v3
 
-    .line 709
     .local v3, "where":I
     invoke-virtual {p0, v2}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 711
     if-eq v3, v1, :cond_0
 
     move-object v0, v2
 
-    .line 712
     check-cast v0, Landroid/text/HtmlToSpannedConverter$Href;
 
-    .line 714
     .local v0, "h":Landroid/text/HtmlToSpannedConverter$Href;
     iget-object v4, v0, Landroid/text/HtmlToSpannedConverter$Href;->mHref:Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 715
     new-instance v4, Landroid/text/style/URLSpan;
 
     iget-object v5, v0, Landroid/text/HtmlToSpannedConverter$Href;->mHref:Ljava/lang/String;
@@ -199,7 +176,6 @@
 
     invoke-virtual {p0, v4, v3, v1, v5}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 719
     .end local v0    # "h":Landroid/text/HtmlToSpannedConverter$Href;
     :cond_0
     return-void
@@ -216,12 +192,10 @@
 
     const/16 v14, 0x21
 
-    .line 660
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v9
 
-    .line 661
     .local v9, "len":I
     const-class v0, Landroid/text/HtmlToSpannedConverter$Font;
 
@@ -229,25 +203,20 @@
 
     move-result-object v11
 
-    .line 662
     .local v11, "obj":Ljava/lang/Object;
     invoke-virtual {p0, v11}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v13
 
-    .line 664
     .local v13, "where":I
     invoke-virtual {p0, v11}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 666
     if-eq v13, v9, :cond_1
 
     move-object v8, v11
 
-    .line 667
     check-cast v8, Landroid/text/HtmlToSpannedConverter$Font;
 
-    .line 669
     .local v8, "f":Landroid/text/HtmlToSpannedConverter$Font;
     iget-object v0, v8, Landroid/text/HtmlToSpannedConverter$Font;->mColor:Ljava/lang/String;
 
@@ -257,7 +226,6 @@
 
     if-nez v0, :cond_0
 
-    .line 670
     iget-object v0, v8, Landroid/text/HtmlToSpannedConverter$Font;->mColor:Ljava/lang/String;
 
     const-string v3, "@"
@@ -268,12 +236,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 671
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v12
 
-    .line 672
     .local v12, "res":Landroid/content/res/Resources;
     iget-object v0, v8, Landroid/text/HtmlToSpannedConverter$Font;->mColor:Ljava/lang/String;
 
@@ -283,7 +249,6 @@
 
     move-result-object v10
 
-    .line 673
     .local v10, "name":Ljava/lang/String;
     const-string v0, "color"
 
@@ -293,16 +258,13 @@
 
     move-result v7
 
-    .line 674
     .local v7, "colorRes":I
     if-eqz v7, :cond_0
 
-    .line 675
     invoke-virtual {v12, v7}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v4
 
-    .line 676
     .local v4, "colors":Landroid/content/res/ColorStateList;
     new-instance v0, Landroid/text/style/TextAppearanceSpan;
 
@@ -314,7 +276,6 @@
 
     invoke-virtual {p0, v0, v13, v9, v14}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 690
     .end local v4    # "colors":Landroid/content/res/ColorStateList;
     .end local v7    # "colorRes":I
     .end local v10    # "name":Ljava/lang/String;
@@ -325,7 +286,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 691
     new-instance v0, Landroid/text/style/TypefaceSpan;
 
     iget-object v1, v8, Landroid/text/HtmlToSpannedConverter$Font;->mFace:Ljava/lang/String;
@@ -334,12 +294,10 @@
 
     invoke-virtual {p0, v0, v13, v9, v14}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 695
     .end local v8    # "f":Landroid/text/HtmlToSpannedConverter$Font;
     :cond_1
     return-void
 
-    .line 681
     .restart local v8    # "f":Landroid/text/HtmlToSpannedConverter$Font;
     :cond_2
     iget-object v0, v8, Landroid/text/HtmlToSpannedConverter$Font;->mColor:Ljava/lang/String;
@@ -348,13 +306,11 @@
 
     move-result v6
 
-    .line 682
     .local v6, "c":I
     const/4 v0, -0x1
 
     if-eq v6, v0, :cond_0
 
-    .line 683
     new-instance v0, Landroid/text/style/ForegroundColorSpan;
 
     const/high16 v1, -0x1000000
@@ -375,12 +331,10 @@
     .prologue
     const/16 v7, 0x21
 
-    .line 722
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 723
     .local v1, "len":I
     const-class v4, Landroid/text/HtmlToSpannedConverter$Header;
 
@@ -388,17 +342,14 @@
 
     move-result-object v2
 
-    .line 725
     .local v2, "obj":Ljava/lang/Object;
     invoke-virtual {p0, v2}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v3
 
-    .line 727
     .local v3, "where":I
     invoke-virtual {p0, v2}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 730
     :goto_0
     if-le v1, v3, :cond_0
 
@@ -412,21 +363,17 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 731
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 734
     :cond_0
     if-eq v3, v1, :cond_1
 
     move-object v0, v2
 
-    .line 735
     check-cast v0, Landroid/text/HtmlToSpannedConverter$Header;
 
-    .line 737
     .local v0, "h":Landroid/text/HtmlToSpannedConverter$Header;
     new-instance v4, Landroid/text/style/RelativeSizeSpan;
 
@@ -443,7 +390,6 @@
 
     invoke-virtual {p0, v4, v3, v1, v7}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 739
     new-instance v4, Landroid/text/style/StyleSpan;
 
     const/4 v5, 0x1
@@ -452,7 +398,6 @@
 
     invoke-virtual {p0, v4, v3, v1, v7}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 742
     .end local v0    # "h":Landroid/text/HtmlToSpannedConverter$Header;
     :cond_1
     return-void
@@ -464,7 +409,6 @@
     .param p1, "kind"    # Ljava/lang/Class;
 
     .prologue
-    .line 601
     const/4 v1, 0x0
 
     invoke-interface {p0}, Landroid/text/Spanned;->length()I
@@ -475,16 +419,13 @@
 
     move-result-object v0
 
-    .line 603
     .local v0, "objs":[Ljava/lang/Object;
     array-length v1, v0
 
     if-nez v1, :cond_0
 
-    .line 604
     const/4 v1, 0x0
 
-    .line 606
     :goto_0
     return-object v1
 
@@ -503,12 +444,10 @@
     .param p0, "text"    # Landroid/text/SpannableStringBuilder;
 
     .prologue
-    .line 593
     const-string v0, "\n"
 
     invoke-virtual {p0, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 594
     return-void
 .end method
 
@@ -523,7 +462,6 @@
 
     const/4 v3, 0x2
 
-    .line 527
     const-string v0, "br"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -532,19 +470,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 528
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleBr(Landroid/text/SpannableStringBuilder;)V
 
-    .line 573
     :cond_0
     :goto_0
     return-void
 
-    .line 529
     :cond_1
-    const-string/jumbo v0, "p"
+    const-string v0, "p"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -552,14 +487,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 530
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
     goto :goto_0
 
-    .line 531
     :cond_2
     const-string v0, "div"
 
@@ -569,16 +502,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 532
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
     goto :goto_0
 
-    .line 533
     :cond_3
-    const-string/jumbo v0, "strong"
+    const-string v0, "strong"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -586,7 +517,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 534
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Bold;
@@ -599,7 +529,6 @@
 
     goto :goto_0
 
-    .line 535
     :cond_4
     const-string v0, "b"
 
@@ -609,7 +538,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 536
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Bold;
@@ -622,7 +550,6 @@
 
     goto :goto_0
 
-    .line 537
     :cond_5
     const-string v0, "em"
 
@@ -632,7 +559,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 538
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -645,7 +571,6 @@
 
     goto :goto_0
 
-    .line 539
     :cond_6
     const-string v0, "cite"
 
@@ -655,7 +580,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 540
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -668,7 +592,6 @@
 
     goto :goto_0
 
-    .line 541
     :cond_7
     const-string v0, "dfn"
 
@@ -678,7 +601,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 542
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -691,7 +613,6 @@
 
     goto/16 :goto_0
 
-    .line 543
     :cond_8
     const-string v0, "i"
 
@@ -701,7 +622,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 544
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -714,7 +634,6 @@
 
     goto/16 :goto_0
 
-    .line 545
     :cond_9
     const-string v0, "big"
 
@@ -724,7 +643,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 546
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Big;
@@ -739,9 +657,8 @@
 
     goto/16 :goto_0
 
-    .line 547
     :cond_a
-    const-string/jumbo v0, "small"
+    const-string v0, "small"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -749,7 +666,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 548
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Small;
@@ -764,7 +680,6 @@
 
     goto/16 :goto_0
 
-    .line 549
     :cond_b
     const-string v0, "font"
 
@@ -774,14 +689,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 550
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->endFont(Landroid/text/SpannableStringBuilder;)V
 
     goto/16 :goto_0
 
-    .line 551
     :cond_c
     const-string v0, "blockquote"
 
@@ -791,12 +704,10 @@
 
     if-eqz v0, :cond_d
 
-    .line 552
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
-    .line 553
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Blockquote;
@@ -809,9 +720,8 @@
 
     goto/16 :goto_0
 
-    .line 554
     :cond_d
-    const-string/jumbo v0, "tt"
+    const-string v0, "tt"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -819,14 +729,13 @@
 
     if-eqz v0, :cond_e
 
-    .line 555
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Monospace;
 
     new-instance v2, Landroid/text/style/TypefaceSpan;
 
-    const-string/jumbo v3, "monospace"
+    const-string v3, "monospace"
 
     invoke-direct {v2, v3}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
 
@@ -834,7 +743,6 @@
 
     goto/16 :goto_0
 
-    .line 557
     :cond_e
     const-string v0, "a"
 
@@ -844,16 +752,14 @@
 
     if-eqz v0, :cond_f
 
-    .line 558
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->endA(Landroid/text/SpannableStringBuilder;)V
 
     goto/16 :goto_0
 
-    .line 559
     :cond_f
-    const-string/jumbo v0, "u"
+    const-string v0, "u"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -861,7 +767,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 560
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Underline;
@@ -874,9 +779,8 @@
 
     goto/16 :goto_0
 
-    .line 561
     :cond_10
-    const-string/jumbo v0, "sup"
+    const-string v0, "sup"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -884,7 +788,6 @@
 
     if-eqz v0, :cond_11
 
-    .line 562
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Super;
@@ -897,9 +800,8 @@
 
     goto/16 :goto_0
 
-    .line 563
     :cond_11
-    const-string/jumbo v0, "sub"
+    const-string v0, "sub"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -907,7 +809,6 @@
 
     if-eqz v0, :cond_12
 
-    .line 564
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const-class v1, Landroid/text/HtmlToSpannedConverter$Sub;
@@ -920,7 +821,6 @@
 
     goto/16 :goto_0
 
-    .line 565
     :cond_12
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -956,25 +856,21 @@
 
     if-gt v0, v1, :cond_13
 
-    .line 568
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
-    .line 569
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->endHeader(Landroid/text/SpannableStringBuilder;)V
 
     goto/16 :goto_0
 
-    .line 570
     :cond_13
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mTagHandler:Landroid/text/Html$TagHandler;
 
     if-eqz v0, :cond_0
 
-    .line 571
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mTagHandler:Landroid/text/Html$TagHandler;
 
     iget-object v1, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
@@ -993,12 +889,10 @@
     .prologue
     const/16 v2, 0xa
 
-    .line 576
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 578
     .local v0, "len":I
     const/4 v1, 0x1
 
@@ -1012,7 +906,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 579
     const/4 v1, 0x2
 
     if-lt v0, v1, :cond_1
@@ -1025,12 +918,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 590
     :cond_0
     :goto_0
     return-void
 
-    .line 583
     :cond_1
     const-string v1, "\n"
 
@@ -1038,11 +929,9 @@
 
     goto :goto_0
 
-    .line 587
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 588
     const-string v1, "\n\n"
 
     invoke-virtual {p0, v1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
@@ -1060,7 +949,6 @@
 
     const/4 v2, 0x0
 
-    .line 476
     const-string v0, "br"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1069,14 +957,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 524
     :cond_0
     :goto_0
     return-void
 
-    .line 479
     :cond_1
-    const-string/jumbo v0, "p"
+    const-string v0, "p"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1084,14 +970,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 480
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
     goto :goto_0
 
-    .line 481
     :cond_2
     const-string v0, "div"
 
@@ -1101,16 +985,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 482
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
     goto :goto_0
 
-    .line 483
     :cond_3
-    const-string/jumbo v0, "strong"
+    const-string v0, "strong"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1118,7 +1000,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 484
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Bold;
@@ -1129,7 +1010,6 @@
 
     goto :goto_0
 
-    .line 485
     :cond_4
     const-string v0, "b"
 
@@ -1139,7 +1019,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 486
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Bold;
@@ -1150,7 +1029,6 @@
 
     goto :goto_0
 
-    .line 487
     :cond_5
     const-string v0, "em"
 
@@ -1160,7 +1038,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 488
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -1171,7 +1048,6 @@
 
     goto :goto_0
 
-    .line 489
     :cond_6
     const-string v0, "cite"
 
@@ -1181,7 +1057,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 490
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -1192,7 +1067,6 @@
 
     goto :goto_0
 
-    .line 491
     :cond_7
     const-string v0, "dfn"
 
@@ -1202,7 +1076,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 492
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -1213,7 +1086,6 @@
 
     goto :goto_0
 
-    .line 493
     :cond_8
     const-string v0, "i"
 
@@ -1223,7 +1095,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 494
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Italic;
@@ -1234,7 +1105,6 @@
 
     goto/16 :goto_0
 
-    .line 495
     :cond_9
     const-string v0, "big"
 
@@ -1244,7 +1114,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 496
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Big;
@@ -1255,9 +1124,8 @@
 
     goto/16 :goto_0
 
-    .line 497
     :cond_a
-    const-string/jumbo v0, "small"
+    const-string v0, "small"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1265,7 +1133,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 498
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Small;
@@ -1276,7 +1143,6 @@
 
     goto/16 :goto_0
 
-    .line 499
     :cond_b
     const-string v0, "font"
 
@@ -1286,14 +1152,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 500
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0, p2}, Landroid/text/HtmlToSpannedConverter;->startFont(Landroid/text/SpannableStringBuilder;Lorg/xml/sax/Attributes;)V
 
     goto/16 :goto_0
 
-    .line 501
     :cond_c
     const-string v0, "blockquote"
 
@@ -1303,12 +1167,10 @@
 
     if-eqz v0, :cond_d
 
-    .line 502
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
-    .line 503
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Blockquote;
@@ -1319,9 +1181,8 @@
 
     goto/16 :goto_0
 
-    .line 504
     :cond_d
-    const-string/jumbo v0, "tt"
+    const-string v0, "tt"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1329,7 +1190,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 505
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Monospace;
@@ -1340,7 +1200,6 @@
 
     goto/16 :goto_0
 
-    .line 506
     :cond_e
     const-string v0, "a"
 
@@ -1350,16 +1209,14 @@
 
     if-eqz v0, :cond_f
 
-    .line 507
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0, p2}, Landroid/text/HtmlToSpannedConverter;->startA(Landroid/text/SpannableStringBuilder;Lorg/xml/sax/Attributes;)V
 
     goto/16 :goto_0
 
-    .line 508
     :cond_f
-    const-string/jumbo v0, "u"
+    const-string v0, "u"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1367,7 +1224,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 509
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Underline;
@@ -1378,9 +1234,8 @@
 
     goto/16 :goto_0
 
-    .line 510
     :cond_10
-    const-string/jumbo v0, "sup"
+    const-string v0, "sup"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1388,7 +1243,6 @@
 
     if-eqz v0, :cond_11
 
-    .line 511
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Super;
@@ -1399,9 +1253,8 @@
 
     goto/16 :goto_0
 
-    .line 512
     :cond_11
-    const-string/jumbo v0, "sub"
+    const-string v0, "sub"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1409,7 +1262,6 @@
 
     if-eqz v0, :cond_12
 
-    .line 513
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Sub;
@@ -1420,7 +1272,6 @@
 
     goto/16 :goto_0
 
-    .line 514
     :cond_12
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -1460,12 +1311,10 @@
 
     if-gt v0, v1, :cond_13
 
-    .line 517
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v0}, Landroid/text/HtmlToSpannedConverter;->handleP(Landroid/text/SpannableStringBuilder;)V
 
-    .line 518
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     new-instance v1, Landroid/text/HtmlToSpannedConverter$Header;
@@ -1482,7 +1331,6 @@
 
     goto/16 :goto_0
 
-    .line 519
     :cond_13
     const-string v0, "img"
 
@@ -1492,7 +1340,6 @@
 
     if-eqz v0, :cond_14
 
-    .line 520
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     iget-object v1, p0, Landroid/text/HtmlToSpannedConverter;->mImageGetter:Landroid/text/Html$ImageGetter;
@@ -1501,13 +1348,11 @@
 
     goto/16 :goto_0
 
-    .line 521
     :cond_14
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mTagHandler:Landroid/text/Html$TagHandler;
 
     if-eqz v0, :cond_0
 
-    .line 522
     iget-object v0, p0, Landroid/text/HtmlToSpannedConverter;->mTagHandler:Landroid/text/Html$TagHandler;
 
     iget-object v1, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
@@ -1525,18 +1370,15 @@
     .param p1, "mark"    # Ljava/lang/Object;
 
     .prologue
-    .line 611
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 612
     .local v0, "len":I
     const/16 v1, 0x11
 
     invoke-virtual {p0, p1, v0, v0, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 613
     return-void
 .end method
 
@@ -1546,7 +1388,6 @@
     .param p1, "attributes"    # Lorg/xml/sax/Attributes;
 
     .prologue
-    .line 698
     const-string v2, ""
 
     const-string v3, "href"
@@ -1555,13 +1396,11 @@
 
     move-result-object v0
 
-    .line 700
     .local v0, "href":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 701
     .local v1, "len":I
     new-instance v2, Landroid/text/HtmlToSpannedConverter$Href;
 
@@ -1571,7 +1410,6 @@
 
     invoke-virtual {p0, v2, v1, v1, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 702
     return-void
 .end method
 
@@ -1581,7 +1419,6 @@
     .param p1, "attributes"    # Lorg/xml/sax/Attributes;
 
     .prologue
-    .line 652
     const-string v3, ""
 
     const-string v4, "color"
@@ -1590,7 +1427,6 @@
 
     move-result-object v0
 
-    .line 653
     .local v0, "color":Ljava/lang/String;
     const-string v3, ""
 
@@ -1600,13 +1436,11 @@
 
     move-result-object v1
 
-    .line 655
     .local v1, "face":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v2
 
-    .line 656
     .local v2, "len":I
     new-instance v3, Landroid/text/HtmlToSpannedConverter$Font;
 
@@ -1616,7 +1450,6 @@
 
     invoke-virtual {p0, v3, v2, v2, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 657
     return-void
 .end method
 
@@ -1629,33 +1462,27 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 630
     const-string v3, ""
 
-    const-string/jumbo v4, "src"
+    const-string v4, "src"
 
     invoke-interface {p1, v3, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 631
     .local v2, "src":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 633
     .local v0, "d":Landroid/graphics/drawable/Drawable;
     if-eqz p2, :cond_0
 
-    .line 634
     invoke-interface {p2, v2}, Landroid/text/Html$ImageGetter;->getDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 637
     :cond_0
     if-nez v0, :cond_1
 
-    .line 638
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -1666,7 +1493,6 @@
 
     move-result-object v0
 
-    .line 640
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
@@ -1677,19 +1503,16 @@
 
     invoke-virtual {v0, v5, v5, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 643
     :cond_1
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 644
     .local v1, "len":I
-    const-string/jumbo v3, "\ufffc"
+    const-string v3, "\ufffc"
 
     invoke-virtual {p0, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 646
     new-instance v3, Landroid/text/style/ImageSpan;
 
     invoke-direct {v3, v0, v2}, Landroid/text/style/ImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
@@ -1702,7 +1525,6 @@
 
     invoke-virtual {p0, v3, v1, v4, v5}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 648
     return-void
 .end method
 
@@ -1724,12 +1546,10 @@
 
     const/16 v7, 0x20
 
-    .line 769
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 776
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -1737,51 +1557,41 @@
     :goto_0
     if-ge v1, p3, :cond_5
 
-    .line 777
     add-int v5, v1, p2
 
     aget-char v0, p1, v5
 
-    .line 779
     .local v0, "c":C
     if-eq v0, v7, :cond_0
 
     if-ne v0, v8, :cond_4
 
-    .line 781
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
-    .line 783
     .local v2, "len":I
     if-nez v2, :cond_3
 
-    .line 784
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-virtual {v5}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v2
 
-    .line 786
     if-nez v2, :cond_2
 
-    .line 787
     const/16 v3, 0xa
 
-    .line 795
     .local v3, "pred":C
     :goto_1
     if-eq v3, v7, :cond_1
 
     if-eq v3, v8, :cond_1
 
-    .line 796
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 776
     .end local v2    # "len":I
     .end local v3    # "pred":C
     :cond_1
@@ -1790,7 +1600,6 @@
 
     goto :goto_0
 
-    .line 789
     .restart local v2    # "len":I
     :cond_2
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
@@ -1804,7 +1613,6 @@
     .restart local v3    # "pred":C
     goto :goto_1
 
-    .line 792
     .end local v3    # "pred":C
     :cond_3
     add-int/lit8 v5, v2, -0x1
@@ -1816,7 +1624,6 @@
     .restart local v3    # "pred":C
     goto :goto_1
 
-    .line 799
     .end local v2    # "len":I
     .end local v3    # "pred":C
     :cond_4
@@ -1824,14 +1631,12 @@
 
     goto :goto_2
 
-    .line 803
     .end local v0    # "c":C
     :cond_5
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-virtual {v5, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 804
     return-void
 .end method
 
@@ -1841,12 +1646,10 @@
     .prologue
     const/16 v9, 0xa
 
-    .line 440
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mReader:Lorg/xml/sax/XMLReader;
 
     invoke-interface {v5, p0}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 442
     :try_start_0
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mReader:Lorg/xml/sax/XMLReader;
 
@@ -1865,7 +1668,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lorg/xml/sax/SAXException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 452
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     const/4 v6, 0x0
@@ -1882,7 +1684,6 @@
 
     move-result-object v3
 
-    .line 453
     .local v3, "obj":[Ljava/lang/Object;
     const/4 v2, 0x0
 
@@ -1892,7 +1693,6 @@
 
     if-ge v2, v5, :cond_2
 
-    .line 454
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     aget-object v6, v3, v2
@@ -1901,7 +1701,6 @@
 
     move-result v4
 
-    .line 455
     .local v4, "start":I
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
@@ -1911,13 +1710,11 @@
 
     move-result v1
 
-    .line 458
     .local v1, "end":I
     add-int/lit8 v5, v1, -0x2
 
     if-ltz v5, :cond_0
 
-    .line 459
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     add-int/lit8 v6, v1, -0x1
@@ -1938,27 +1735,22 @@
 
     if-ne v5, v9, :cond_0
 
-    .line 461
     add-int/lit8 v1, v1, -0x1
 
-    .line 465
     :cond_0
     if-ne v1, v4, :cond_1
 
-    .line 466
     iget-object v5, p0, Landroid/text/HtmlToSpannedConverter;->mSpannableStringBuilder:Landroid/text/SpannableStringBuilder;
 
     aget-object v6, v3, v2
 
     invoke-virtual {v5, v6}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 453
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 443
     .end local v1    # "end":I
     .end local v2    # "i":I
     .end local v3    # "obj":[Ljava/lang/Object;
@@ -1966,7 +1758,6 @@
     :catch_0
     move-exception v0
 
-    .line 445
     .local v0, "e":Ljava/io/IOException;
     new-instance v5, Ljava/lang/RuntimeException;
 
@@ -1974,12 +1765,10 @@
 
     throw v5
 
-    .line 446
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 448
     .local v0, "e":Lorg/xml/sax/SAXException;
     new-instance v5, Ljava/lang/RuntimeException;
 
@@ -1987,7 +1776,6 @@
 
     throw v5
 
-    .line 468
     .end local v0    # "e":Lorg/xml/sax/SAXException;
     .restart local v1    # "end":I
     .restart local v2    # "i":I
@@ -2004,7 +1792,6 @@
 
     goto :goto_1
 
-    .line 472
     .end local v1    # "end":I
     .end local v4    # "start":I
     :cond_2
@@ -2022,7 +1809,6 @@
     .end annotation
 
     .prologue
-    .line 751
     return-void
 .end method
 
@@ -2038,10 +1824,8 @@
     .end annotation
 
     .prologue
-    .line 765
     invoke-direct {p0, p2}, Landroid/text/HtmlToSpannedConverter;->handleEndTag(Ljava/lang/String;)V
 
-    .line 766
     return-void
 .end method
 
@@ -2055,7 +1839,6 @@
     .end annotation
 
     .prologue
-    .line 757
     return-void
 .end method
 
@@ -2071,7 +1854,6 @@
     .end annotation
 
     .prologue
-    .line 807
     return-void
 .end method
 
@@ -2086,7 +1868,6 @@
     .end annotation
 
     .prologue
-    .line 810
     return-void
 .end method
 
@@ -2095,7 +1876,6 @@
     .param p1, "locator"    # Lorg/xml/sax/Locator;
 
     .prologue
-    .line 745
     return-void
 .end method
 
@@ -2109,7 +1889,6 @@
     .end annotation
 
     .prologue
-    .line 813
     return-void
 .end method
 
@@ -2122,7 +1901,6 @@
     .end annotation
 
     .prologue
-    .line 748
     return-void
 .end method
 
@@ -2139,10 +1917,8 @@
     .end annotation
 
     .prologue
-    .line 761
     invoke-direct {p0, p2, p4}, Landroid/text/HtmlToSpannedConverter;->handleStartTag(Ljava/lang/String;Lorg/xml/sax/Attributes;)V
 
-    .line 762
     return-void
 .end method
 
@@ -2157,6 +1933,5 @@
     .end annotation
 
     .prologue
-    .line 754
     return-void
 .end method

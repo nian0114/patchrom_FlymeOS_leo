@@ -28,17 +28,14 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 120
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     const-string v17, "EXTERNAL_STORAGE"
 
     invoke-static/range {v17 .. v17}, Ljava/lang/System;->getenv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 123
     .local v12, "rawExternalStorage":Ljava/lang/String;
     const-string v17, "EMULATED_STORAGE_SOURCE"
 
@@ -46,7 +43,6 @@
 
     move-result-object v10
 
-    .line 124
     .local v10, "rawEmulatedSource":Ljava/lang/String;
     const-string v17, "EMULATED_STORAGE_TARGET"
 
@@ -54,7 +50,6 @@
 
     move-result-object v11
 
-    .line 126
     .local v11, "rawEmulatedTarget":Ljava/lang/String;
     const-string v17, "MEDIA_STORAGE"
 
@@ -62,7 +57,6 @@
 
     move-result-object v13
 
-    .line 127
     .local v13, "rawMediaStorage":Ljava/lang/String;
     invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -70,22 +64,18 @@
 
     if-eqz v17, :cond_0
 
-    .line 128
     const-string v13, "/data/media"
 
-    .line 131
     :cond_0
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v6
 
-    .line 132
     .local v6, "externalForVold":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/io/File;>;"
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 134
     .local v5, "externalForApp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/io/File;>;"
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -93,30 +83,25 @@
 
     if-nez v17, :cond_1
 
-    .line 137
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 138
     .local v15, "rawUserId":Ljava/lang/String;
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 139
     .local v3, "emulatedSourceBase":Ljava/io/File;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 140
     .local v4, "emulatedTargetBase":Ljava/io/File;
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 143
     .local v9, "mediaBase":Ljava/io/File;
     const/16 v17, 0x1
 
@@ -140,7 +125,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 144
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -163,7 +147,6 @@
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 146
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -188,7 +171,6 @@
 
     iput-object v0, v1, Landroid/os/Environment$UserEnvironment;->mEmulatedDirForDirect:Ljava/io/File;
 
-    .line 163
     .end local v3    # "emulatedSourceBase":Ljava/io/File;
     .end local v4    # "emulatedTargetBase":Ljava/io/File;
     .end local v9    # "mediaBase":Ljava/io/File;
@@ -200,7 +182,6 @@
 
     move-result-object v14
 
-    .line 164
     .local v14, "rawSecondaryStorage":Ljava/lang/String;
     invoke-static {v14}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -210,7 +191,6 @@
 
     if-nez p1, :cond_3
 
-    .line 165
     const-string v17, ":"
 
     move-object/from16 v0, v17
@@ -231,7 +211,6 @@
 
     aget-object v16, v2, v7
 
-    .line 166
     .local v16, "secondaryPath":Ljava/lang/String;
     new-instance v17, Ljava/io/File;
 
@@ -245,7 +224,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     new-instance v17, Ljava/io/File;
 
     move-object/from16 v0, v17
@@ -258,12 +236,10 @@
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 165
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 150
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v7    # "i$":I
     .end local v8    # "len$":I
@@ -276,17 +252,14 @@
 
     if-eqz v17, :cond_2
 
-    .line 151
     const-string v17, "Environment"
 
     const-string v18, "EXTERNAL_STORAGE undefined; falling back to default"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     const-string v12, "/storage/sdcard0"
 
-    .line 156
     :cond_2
     new-instance v17, Ljava/io/File;
 
@@ -298,7 +271,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
     new-instance v17, Ljava/io/File;
 
     move-object/from16 v0, v17
@@ -309,7 +281,6 @@
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 159
     new-instance v17, Ljava/io/File;
 
     move-object/from16 v0, v17
@@ -324,7 +295,6 @@
 
     goto :goto_0
 
-    .line 171
     .restart local v14    # "rawSecondaryStorage":Ljava/lang/String;
     :cond_3
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
@@ -351,7 +321,6 @@
 
     iput-object v0, v1, Landroid/os/Environment$UserEnvironment;->mExternalDirsForVold:[Ljava/io/File;
 
-    .line 172
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v17
@@ -376,7 +345,6 @@
 
     iput-object v0, v1, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
-    .line 173
     return-void
 .end method
 
@@ -386,7 +354,6 @@
     .locals 4
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x2
@@ -416,7 +383,6 @@
     .locals 4
 
     .prologue
-    .line 212
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x2
@@ -431,7 +397,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "obb"
+    const-string v3, "obb"
 
     aput-object v3, v1, v2
 
@@ -446,7 +412,6 @@
     .locals 4
 
     .prologue
-    .line 216
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForVold:[Ljava/io/File;
 
     const/4 v1, 0x2
@@ -461,7 +426,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "obb"
+    const-string v3, "obb"
 
     aput-object v3, v1, v2
 
@@ -477,7 +442,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 248
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x4
@@ -518,7 +482,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x3
@@ -553,7 +516,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 224
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForVold:[Ljava/io/File;
 
     const/4 v1, 0x3
@@ -588,7 +550,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 244
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x4
@@ -629,7 +590,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 228
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x3
@@ -644,7 +604,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "media"
+    const-string v3, "media"
 
     aput-object v3, v1, v2
 
@@ -664,7 +624,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForVold:[Ljava/io/File;
 
     const/4 v1, 0x3
@@ -679,7 +638,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "media"
+    const-string v3, "media"
 
     aput-object v3, v1, v2
 
@@ -699,7 +658,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 236
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x3
@@ -714,7 +672,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "obb"
+    const-string v3, "obb"
 
     aput-object v3, v1, v2
 
@@ -734,7 +692,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForVold:[Ljava/io/File;
 
     const/4 v1, 0x3
@@ -749,7 +706,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "obb"
+    const-string v3, "obb"
 
     aput-object v3, v1, v2
 
@@ -769,7 +726,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x1
@@ -791,7 +747,6 @@
     .locals 1
 
     .prologue
-    .line 196
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     return-object v0
@@ -801,7 +756,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForVold:[Ljava/io/File;
 
     return-object v0
@@ -813,7 +767,6 @@
     .end annotation
 
     .prologue
-    .line 177
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     const/4 v1, 0x0
@@ -830,7 +783,6 @@
     .end annotation
 
     .prologue
-    .line 188
     invoke-virtual {p0, p1}, Landroid/os/Environment$UserEnvironment;->buildExternalStoragePublicDirs(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v0
@@ -846,7 +798,6 @@
     .locals 1
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mEmulatedDirForDirect:Ljava/io/File;
 
     return-object v0
@@ -858,7 +809,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 182
     iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mExternalDirsForApp:[Ljava/io/File;
 
     array-length v0, v0

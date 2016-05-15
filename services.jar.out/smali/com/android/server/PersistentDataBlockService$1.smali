@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 322
     iput-object p1, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     invoke-direct {p0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 449
     iget-object v2, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # getter for: Lcom/android/server/PersistentDataBlockService;->mContext:Landroid/content/Context;
@@ -55,7 +53,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 451
     iget-object v2, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -65,7 +62,6 @@
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceUid(I)V
     invoke-static {v2, v4}, Lcom/android/server/PersistentDataBlockService;->access$000(Lcom/android/server/PersistentDataBlockService;I)V
 
-    .line 456
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/DataInputStream;
@@ -89,7 +85,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 463
     .local v1, "inputStream":Ljava/io/DataInputStream;
     :try_start_1
     iget-object v2, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
@@ -104,7 +99,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 464
     :try_start_2
     iget-object v2, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
@@ -117,18 +111,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 470
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     .end local v1    # "inputStream":Ljava/io/DataInputStream;
     :goto_0
     return v2
 
-    .line 457
     :catch_0
     move-exception v0
 
-    .line 458
     .local v0, "e":Ljava/io/FileNotFoundException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -141,10 +132,8 @@
 
     move v2, v3
 
-    .line 459
     goto :goto_0
 
-    .line 465
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     .restart local v1    # "inputStream":Ljava/io/DataInputStream;
     :catchall_0
@@ -161,11 +150,9 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 466
     :catch_1
     move-exception v0
 
-    .line 467
     .local v0, "e":Ljava/io/IOException;
     :try_start_5
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
@@ -179,7 +166,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 470
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     move v2, v3
@@ -201,7 +187,6 @@
     .prologue
     const-wide/32 v2, 0x19000
 
-    .line 476
     iget-object v4, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->getBlockDeviceSize()J
@@ -217,7 +202,6 @@
 
     sub-long v0, v4, v6
 
-    .line 477
     .local v0, "actualSize":J
     cmp-long v4, v0, v2
 
@@ -238,13 +222,11 @@
     .locals 1
 
     .prologue
-    .line 443
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceOemUnlockPermission()V
     invoke-static {v0}, Lcom/android/server/PersistentDataBlockService;->access$800(Lcom/android/server/PersistentDataBlockService;)V
 
-    .line 444
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->doGetOemUnlockEnabled()Z
@@ -263,7 +245,6 @@
 
     const/4 v8, 0x0
 
-    .line 370
     iget-object v6, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -273,7 +254,6 @@
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceUid(I)V
     invoke-static {v6, v7}, Lcom/android/server/PersistentDataBlockService;->access$000(Lcom/android/server/PersistentDataBlockService;I)V
 
-    .line 371
     iget-object v6, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceChecksumValidity()Z
@@ -283,14 +263,11 @@
 
     if-nez v6, :cond_0
 
-    .line 372
     new-array v0, v8, [B
 
-    .line 409
     :goto_0
     return-object v0
 
-    .line 377
     :cond_0
     :try_start_0
     new-instance v2, Ljava/io/DataInputStream;
@@ -314,7 +291,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 384
     .local v2, "inputStream":Ljava/io/DataInputStream;
     :try_start_1
     iget-object v6, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
@@ -329,7 +305,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 385
     :try_start_2
     iget-object v6, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
@@ -338,11 +313,9 @@
 
     move-result v4
 
-    .line 387
     .local v4, "totalDataSize":I
     if-nez v4, :cond_1
 
-    .line 388
     const/4 v6, 0x0
 
     new-array v0, v6, [B
@@ -351,7 +324,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 406
     :try_start_3
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
     :try_end_3
@@ -359,11 +331,9 @@
 
     goto :goto_0
 
-    .line 407
     :catch_0
     move-exception v1
 
-    .line 408
     .local v1, "e":Ljava/io/IOException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -376,14 +346,12 @@
 
     goto :goto_0
 
-    .line 378
     .end local v1    # "e":Ljava/io/IOException;
     .end local v2    # "inputStream":Ljava/io/DataInputStream;
     .end local v4    # "totalDataSize":I
     :catch_1
     move-exception v1
 
-    .line 379
     .local v1, "e":Ljava/io/FileNotFoundException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -396,10 +364,8 @@
 
     move-object v0, v5
 
-    .line 380
     goto :goto_0
 
-    .line 391
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     .restart local v2    # "inputStream":Ljava/io/DataInputStream;
     .restart local v4    # "totalDataSize":I
@@ -407,7 +373,6 @@
     :try_start_4
     new-array v0, v4, [B
 
-    .line 392
     .local v0, "data":[B
     const/4 v6, 0x0
 
@@ -415,11 +380,9 @@
 
     move-result v3
 
-    .line 393
     .local v3, "read":I
     if-ge v3, v4, :cond_2
 
-    .line 395
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
 
@@ -455,12 +418,10 @@
 
     invoke-static {v6, v8}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     monitor-exit v7
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 406
     :try_start_5
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
     :try_end_5
@@ -469,14 +430,11 @@
     :goto_1
     move-object v0, v5
 
-    .line 409
     goto :goto_0
 
-    .line 407
     :catch_2
     move-exception v1
 
-    .line 408
     .local v1, "e":Ljava/io/IOException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -489,7 +447,6 @@
 
     goto :goto_1
 
-    .line 399
     .end local v1    # "e":Ljava/io/IOException;
     :cond_2
     :try_start_6
@@ -497,7 +454,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 406
     :try_start_7
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
     :try_end_7
@@ -505,11 +461,9 @@
 
     goto/16 :goto_0
 
-    .line 407
     :catch_3
     move-exception v1
 
-    .line 408
     .restart local v1    # "e":Ljava/io/IOException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -522,7 +476,6 @@
 
     goto/16 :goto_0
 
-    .line 400
     .end local v0    # "data":[B
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "read":I
@@ -541,11 +494,9 @@
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 401
     :catch_4
     move-exception v1
 
-    .line 402
     .restart local v1    # "e":Ljava/io/IOException;
     :try_start_a
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
@@ -559,7 +510,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 406
     :try_start_b
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
     :try_end_b
@@ -568,14 +518,11 @@
     :goto_2
     move-object v0, v5
 
-    .line 409
     goto/16 :goto_0
 
-    .line 407
     :catch_5
     move-exception v1
 
-    .line 408
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
 
@@ -587,26 +534,21 @@
 
     goto :goto_2
 
-    .line 405
     .end local v1    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v5
 
-    .line 406
     :try_start_c
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_6
 
-    .line 409
     :goto_3
     throw v5
 
-    .line 407
     :catch_6
     move-exception v1
 
-    .line 408
     .restart local v1    # "e":Ljava/io/IOException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -625,31 +567,26 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 429
     invoke-static {}, Landroid/app/ActivityManager;->isUserAMonkey()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 439
     :goto_0
     return-void
 
-    .line 432
     :cond_0
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceOemUnlockPermission()V
     invoke-static {v0}, Lcom/android/server/PersistentDataBlockService;->access$800(Lcom/android/server/PersistentDataBlockService;)V
 
-    .line 433
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceIsOwner()V
     invoke-static {v0}, Lcom/android/server/PersistentDataBlockService;->access$1000(Lcom/android/server/PersistentDataBlockService;)V
 
-    .line 435
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # getter for: Lcom/android/server/PersistentDataBlockService;->mLock:Ljava/lang/Object;
@@ -659,20 +596,17 @@
 
     monitor-enter v1
 
-    .line 436
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->doSetOemUnlockEnabledLocked(Z)V
     invoke-static {v0, p1}, Lcom/android/server/PersistentDataBlockService;->access$1100(Lcom/android/server/PersistentDataBlockService;Z)V
 
-    .line 437
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->computeAndWriteDigestLocked()Z
     invoke-static {v0}, Lcom/android/server/PersistentDataBlockService;->access$500(Lcom/android/server/PersistentDataBlockService;)Z
 
-    .line 438
     monitor-exit v1
 
     goto :goto_0
@@ -691,13 +625,11 @@
     .locals 4
 
     .prologue
-    .line 415
     iget-object v1, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceOemUnlockPermission()V
     invoke-static {v1}, Lcom/android/server/PersistentDataBlockService;->access$800(Lcom/android/server/PersistentDataBlockService;)V
 
-    .line 417
     iget-object v1, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # getter for: Lcom/android/server/PersistentDataBlockService;->mLock:Ljava/lang/Object;
@@ -707,7 +639,6 @@
 
     monitor-enter v2
 
-    .line 418
     :try_start_0
     iget-object v1, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
@@ -723,11 +654,9 @@
 
     move-result v0
 
-    .line 420
     .local v0, "ret":I
     if-gez v0, :cond_0
 
-    .line 421
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
 
@@ -737,14 +666,11 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     :cond_0
     monitor-exit v2
 
-    .line 424
     return-void
 
-    .line 423
     .end local v0    # "ret":I
     :catchall_0
     move-exception v1
@@ -768,7 +694,6 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 325
     iget-object v7, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -778,7 +703,6 @@
     # invokes: Lcom/android/server/PersistentDataBlockService;->enforceUid(I)V
     invoke-static {v7, v8}, Lcom/android/server/PersistentDataBlockService;->access$000(Lcom/android/server/PersistentDataBlockService;I)V
 
-    .line 328
     iget-object v7, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->getBlockDeviceSize()J
@@ -794,7 +718,6 @@
 
     sub-long v4, v8, v10
 
-    .line 329
     .local v4, "maxBlockSize":J
     array-length v7, p1
 
@@ -804,16 +727,13 @@
 
     if-lez v7, :cond_0
 
-    .line 331
     neg-long v6, v4
 
     long-to-int v6, v6
 
-    .line 363
     :goto_0
     return v6
 
-    .line 336
     :cond_0
     :try_start_0
     new-instance v3, Ljava/io/DataOutputStream;
@@ -837,7 +757,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 342
     .local v3, "outputStream":Ljava/io/DataOutputStream;
     array-length v7, p1
 
@@ -847,21 +766,17 @@
 
     move-result-object v2
 
-    .line 343
     .local v2, "headerAndData":Ljava/nio/ByteBuffer;
     const v7, 0x19901873
 
     invoke-virtual {v2, v7}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 344
     array-length v7, p1
 
     invoke-virtual {v2, v7}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 345
     invoke-virtual {v2, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 347
     iget-object v7, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # getter for: Lcom/android/server/PersistentDataBlockService;->mLock:Ljava/lang/Object;
@@ -871,13 +786,11 @@
 
     monitor-enter v7
 
-    .line 349
     const/16 v8, 0x20
 
     :try_start_1
     new-array v0, v8, [B
 
-    .line 350
     .local v0, "checksum":[B
     const/4 v8, 0x0
 
@@ -885,24 +798,20 @@
 
     invoke-virtual {v3, v0, v8, v9}, Ljava/io/DataOutputStream;->write([BII)V
 
-    .line 351
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v8
 
     invoke-virtual {v3, v8}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 352
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->flush()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 357
     :try_start_2
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 360
     iget-object v8, p0, Lcom/android/server/PersistentDataBlockService$1;->this$0:Lcom/android/server/PersistentDataBlockService;
 
     # invokes: Lcom/android/server/PersistentDataBlockService;->computeAndWriteDigestLocked()Z
@@ -912,14 +821,12 @@
 
     if-eqz v8, :cond_1
 
-    .line 361
     array-length v6, p1
 
     monitor-exit v7
 
     goto :goto_0
 
-    .line 365
     .end local v0    # "checksum":[B
     :catchall_0
     move-exception v6
@@ -930,13 +837,11 @@
 
     throw v6
 
-    .line 337
     .end local v2    # "headerAndData":Ljava/nio/ByteBuffer;
     .end local v3    # "outputStream":Ljava/io/DataOutputStream;
     :catch_0
     move-exception v1
 
-    .line 338
     .local v1, "e":Ljava/io/FileNotFoundException;
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/PersistentDataBlockService;->access$300()Ljava/lang/String;
@@ -949,14 +854,12 @@
 
     goto :goto_0
 
-    .line 353
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     .restart local v2    # "headerAndData":Ljava/nio/ByteBuffer;
     .restart local v3    # "outputStream":Ljava/io/DataOutputStream;
     :catch_1
     move-exception v1
 
-    .line 354
     .local v1, "e":Ljava/io/IOException;
     :try_start_3
     # getter for: Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
@@ -970,7 +873,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 357
     :try_start_4
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -986,7 +888,6 @@
 
     throw v6
 
-    .line 363
     .restart local v0    # "checksum":[B
     :cond_1
     monitor-exit v7

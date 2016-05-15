@@ -29,17 +29,14 @@
     .param p4, "asyncHandler"    # Z
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     if-eqz p2, :cond_0
 
     .end local p2    # "looper":Landroid/os/Looper;
     :goto_0
     iput-object p2, p0, Lcom/android/internal/os/HandlerCaller;->mMainLooper:Landroid/os/Looper;
 
-    .line 48
     new-instance v0, Lcom/android/internal/os/HandlerCaller$MyHandler;
 
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mMainLooper:Landroid/os/Looper;
@@ -48,13 +45,10 @@
 
     iput-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
-    .line 49
     iput-object p3, p0, Lcom/android/internal/os/HandlerCaller;->mCallback:Lcom/android/internal/os/HandlerCaller$Callback;
 
-    .line 50
     return-void
 
-    .line 47
     .restart local p2    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -71,7 +65,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 60
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -80,19 +73,15 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 61
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mCallback:Lcom/android/internal/os/HandlerCaller$Callback;
 
     invoke-interface {v0, p1}, Lcom/android/internal/os/HandlerCaller$Callback;->executeMessage(Landroid/os/Message;)V
 
-    .line 62
     invoke-virtual {p1}, Landroid/os/Message;->recycle()V
 
-    .line 67
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
@@ -105,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     return-object v0
@@ -116,7 +104,6 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->hasMessages(I)Z
@@ -131,7 +118,6 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -150,7 +136,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 114
     iget-object v2, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     if-eqz p2, :cond_0
@@ -180,19 +165,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 118
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 119
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 120
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 121
     iget-object v3, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     if-eqz p2, :cond_0
@@ -218,7 +199,6 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -237,7 +217,6 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
@@ -258,25 +237,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 205
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 206
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 207
     iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 208
     iput p4, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 209
     iput p5, v0, Lcom/android/internal/os/SomeArgs;->argi4:I
 
-    .line 210
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -299,31 +272,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 215
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 216
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 217
     iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 218
     iput p4, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 219
     iput p5, v0, Lcom/android/internal/os/SomeArgs;->argi4:I
 
-    .line 220
     iput p6, v0, Lcom/android/internal/os/SomeArgs;->argi5:I
 
-    .line 221
     iput p7, v0, Lcom/android/internal/os/SomeArgs;->argi6:I
 
-    .line 222
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -345,28 +310,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 227
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 228
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p6, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 229
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 230
     iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 231
     iput p4, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 232
     iput p5, v0, Lcom/android/internal/os/SomeArgs;->argi4:I
 
-    .line 233
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -384,7 +342,6 @@
     .param p4, "arg3"    # Ljava/lang/Object;
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -403,19 +360,15 @@
     .param p5, "arg4"    # Ljava/lang/Object;
 
     .prologue
-    .line 146
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 147
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 148
     iput-object p5, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 149
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, p2, p3, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -432,7 +385,6 @@
     .param p3, "arg2"    # Ljava/lang/Object;
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -452,19 +404,15 @@
     .param p4, "arg3"    # Ljava/lang/Object;
 
     .prologue
-    .line 153
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 154
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 155
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 156
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -485,22 +433,17 @@
     .param p5, "arg4"    # Ljava/lang/Object;
 
     .prologue
-    .line 160
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 161
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 162
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 163
     iput-object p5, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 164
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -520,7 +463,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 125
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, v1, v1, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -539,19 +481,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 168
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 169
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 170
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 171
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -571,22 +509,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 175
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 176
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 177
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 178
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 179
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -607,25 +540,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 184
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 185
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 186
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 187
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 188
     iput-object p5, v0, Lcom/android/internal/os/SomeArgs;->arg4:Ljava/lang/Object;
 
-    .line 189
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -647,28 +574,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 194
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 195
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 196
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 197
     iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 198
     iput-object p5, v0, Lcom/android/internal/os/SomeArgs;->arg4:Ljava/lang/Object;
 
-    .line 199
     iput-object p6, v0, Lcom/android/internal/os/SomeArgs;->arg5:Ljava/lang/Object;
 
-    .line 200
     iget-object v1, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -683,12 +603,10 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 79
     return-void
 .end method
 
@@ -698,12 +616,10 @@
     .param p2, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 83
     return-void
 .end method
 
@@ -712,12 +628,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 87
     return-void
 .end method
 
@@ -728,7 +642,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 90
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
@@ -741,7 +654,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 91
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Can\'t wait on same thread as looper"
@@ -750,25 +662,20 @@
 
     throw v2
 
-    .line 93
     :cond_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 94
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput v4, v0, Lcom/android/internal/os/SomeArgs;->mWaitState:I
 
-    .line 95
     iget-object v2, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v2, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 96
     monitor-enter v0
 
-    .line 97
     :goto_0
     :try_start_0
     iget v2, v0, Lcom/android/internal/os/SomeArgs;->mWaitState:I
@@ -777,7 +684,6 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 99
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -786,11 +692,9 @@
 
     goto :goto_0
 
-    .line 100
     :catch_0
     move-exception v1
 
-    .line 101
     .local v1, "e":Ljava/lang/InterruptedException;
     const/4 v2, 0x0
 
@@ -799,27 +703,23 @@
 
     move-object v0, v2
 
-    .line 106
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     .end local v1    # "e":Ljava/lang/InterruptedException;
     :goto_1
     return-object v0
 
-    .line 104
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :cond_1
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 105
     const/4 v2, 0x0
 
     iput v2, v0, Lcom/android/internal/os/SomeArgs;->mWaitState:I
 
     goto :goto_1
 
-    .line 104
     :catchall_0
     move-exception v2
 
@@ -837,11 +737,9 @@
     .param p2, "delayMillis"    # J
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/internal/os/HandlerCaller;->mH:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 71
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 176
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 184
     new-instance v1, Landroid/bluetooth/le/AdvertiseData$Builder;
 
     invoke-direct {v1}, Landroid/bluetooth/le/AdvertiseData$Builder;-><init>()V
 
-    .line 186
     .local v1, "builder":Landroid/bluetooth/le/AdvertiseData$Builder;
     const-class v14, Landroid/os/ParcelUuid;
 
@@ -64,11 +61,9 @@
 
     move-result-object v13
 
-    .line 187
     .local v13, "uuids":Ljava/util/List;, "Ljava/util/List<Landroid/os/ParcelUuid;>;"
     if-eqz v13, :cond_0
 
-    .line 188
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -87,13 +82,11 @@
 
     check-cast v12, Landroid/os/ParcelUuid;
 
-    .line 189
     .local v12, "uuid":Landroid/os/ParcelUuid;
     invoke-virtual {v1, v12}, Landroid/bluetooth/le/AdvertiseData$Builder;->addServiceUuid(Landroid/os/ParcelUuid;)Landroid/bluetooth/le/AdvertiseData$Builder;
 
     goto :goto_0
 
-    .line 192
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v12    # "uuid":Landroid/os/ParcelUuid;
     :cond_0
@@ -101,7 +94,6 @@
 
     move-result v7
 
-    .line 193
     .local v7, "manufacturerSize":I
     const/4 v2, 0x0
 
@@ -109,12 +101,10 @@
     :goto_1
     if-ge v2, v7, :cond_2
 
-    .line 194
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 195
     .local v6, "manufacturerId":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -124,25 +114,20 @@
 
     if-ne v14, v15, :cond_1
 
-    .line 196
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 197
     .local v5, "manufacturerDataLength":I
     new-array v4, v5, [B
 
-    .line 198
     .local v4, "manufacturerData":[B
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 199
     invoke-virtual {v1, v6, v4}, Landroid/bluetooth/le/AdvertiseData$Builder;->addManufacturerData(I[B)Landroid/bluetooth/le/AdvertiseData$Builder;
 
-    .line 193
     .end local v4    # "manufacturerData":[B
     .end local v5    # "manufacturerDataLength":I
     :cond_1
@@ -150,21 +135,18 @@
 
     goto :goto_1
 
-    .line 202
     .end local v6    # "manufacturerId":I
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 203
     .local v10, "serviceDataSize":I
     const/4 v2, 0x0
 
     :goto_2
     if-ge v2, v10, :cond_4
 
-    .line 204
     const-class v14, Landroid/os/ParcelUuid;
 
     invoke-virtual {v14}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -179,7 +161,6 @@
 
     check-cast v11, Landroid/os/ParcelUuid;
 
-    .line 206
     .local v11, "serviceDataUuid":Landroid/os/ParcelUuid;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -189,25 +170,20 @@
 
     if-ne v14, v15, :cond_3
 
-    .line 207
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 208
     .local v9, "serviceDataLength":I
     new-array v8, v9, [B
 
-    .line 209
     .local v8, "serviceData":[B
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 210
     invoke-virtual {v1, v11, v8}, Landroid/bluetooth/le/AdvertiseData$Builder;->addServiceData(Landroid/os/ParcelUuid;[B)Landroid/bluetooth/le/AdvertiseData$Builder;
 
-    .line 203
     .end local v8    # "serviceData":[B
     .end local v9    # "serviceDataLength":I
     :cond_3
@@ -215,7 +191,6 @@
 
     goto :goto_2
 
-    .line 213
     .end local v11    # "serviceDataUuid":Landroid/os/ParcelUuid;
     :cond_4
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
@@ -231,7 +206,6 @@
     :goto_3
     invoke-virtual {v1, v14}, Landroid/bluetooth/le/AdvertiseData$Builder;->setIncludeTxPowerLevel(Z)Landroid/bluetooth/le/AdvertiseData$Builder;
 
-    .line 214
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v14
@@ -245,20 +219,17 @@
     :goto_4
     invoke-virtual {v1, v14}, Landroid/bluetooth/le/AdvertiseData$Builder;->setIncludeDeviceName(Z)Landroid/bluetooth/le/AdvertiseData$Builder;
 
-    .line 215
     invoke-virtual {v1}, Landroid/bluetooth/le/AdvertiseData$Builder;->build()Landroid/bluetooth/le/AdvertiseData;
 
     move-result-object v14
 
     return-object v14
 
-    .line 213
     :cond_5
     const/4 v14, 0x0
 
     goto :goto_3
 
-    .line 214
     :cond_6
     const/4 v14, 0x0
 
@@ -269,7 +240,6 @@
     .locals 1
 
     .prologue
-    .line 176
     invoke-virtual {p0, p1}, Landroid/bluetooth/le/AdvertiseData$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/le/AdvertiseData;
 
     move-result-object v0
@@ -282,7 +252,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 179
     new-array v0, p1, [Landroid/bluetooth/le/AdvertiseData;
 
     return-object v0
@@ -292,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 176
     invoke-virtual {p0, p1}, Landroid/bluetooth/le/AdvertiseData$1;->newArray(I)[Landroid/bluetooth/le/AdvertiseData;
 
     move-result-object v0

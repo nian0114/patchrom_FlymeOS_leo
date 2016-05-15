@@ -22,20 +22,16 @@
     .locals 2
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 41
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
 
-    .line 42
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     iput-wide v0, p0, Landroid/view/animation/AccelerateInterpolator;->mDoubleFactor:D
 
-    .line 43
     return-void
 .end method
 
@@ -44,13 +40,10 @@
     .param p1, "factor"    # F
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 54
     iput p1, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
 
-    .line 55
     const/high16 v0, 0x40000000    # 2.0f
 
     iget v1, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
@@ -61,7 +54,6 @@
 
     iput-wide v0, p0, Landroid/view/animation/AccelerateInterpolator;->mDoubleFactor:D
 
-    .line 56
     return-void
 .end method
 
@@ -71,7 +63,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 59
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -82,7 +73,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Landroid/view/animation/AccelerateInterpolator;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
 
-    .line 60
     return-void
 .end method
 
@@ -95,20 +85,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 63
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 65
     if-eqz p2, :cond_0
 
-    .line 66
     sget-object v1, Lcom/android/internal/R$styleable;->AccelerateInterpolator:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 71
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     const/high16 v1, 0x3f800000    # 1.0f
@@ -119,7 +105,6 @@
 
     iput v1, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
 
-    .line 72
     const/high16 v1, 0x40000000    # 2.0f
 
     iget v2, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
@@ -130,20 +115,16 @@
 
     iput-wide v2, p0, Landroid/view/animation/AccelerateInterpolator;->mDoubleFactor:D
 
-    .line 73
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->getChangingConfigurations()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroid/view/animation/AccelerateInterpolator;->setChangingConfiguration(I)V
 
-    .line 74
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 75
     return-void
 
-    .line 68
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->AccelerateInterpolator:[I
@@ -162,7 +143,6 @@
     .locals 2
 
     .prologue
-    .line 88
     iget v0, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
 
     invoke-static {v0}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createAccelerateInterpolator(F)J
@@ -177,7 +157,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/view/animation/AccelerateInterpolator;->mFactor:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -186,10 +165,8 @@
 
     if-nez v0, :cond_0
 
-    .line 79
     mul-float v0, p1, p1
 
-    .line 81
     :goto_0
     return v0
 

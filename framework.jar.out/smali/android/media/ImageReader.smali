@@ -51,15 +51,12 @@
     .locals 1
 
     .prologue
-    .line 762
-    const-string/jumbo v0, "media_jni"
+    const-string v0, "media_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 763
     invoke-static {}, Landroid/media/ImageReader;->nativeClassInit()V
 
-    .line 764
     return-void
 .end method
 
@@ -73,34 +70,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 524
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/media/ImageReader;->mListenerLock:Ljava/lang/Object;
 
-    .line 107
     iput p1, p0, Landroid/media/ImageReader;->mWidth:I
 
-    .line 108
     iput p2, p0, Landroid/media/ImageReader;->mHeight:I
 
-    .line 109
     iput p3, p0, Landroid/media/ImageReader;->mFormat:I
 
-    .line 110
     iput p4, p0, Landroid/media/ImageReader;->mMaxImages:I
 
-    .line 112
     if-lt p1, v1, :cond_0
 
     if-ge p2, v1, :cond_1
 
-    .line 113
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -110,13 +99,11 @@
 
     throw v0
 
-    .line 116
     :cond_1
     iget v0, p0, Landroid/media/ImageReader;->mMaxImages:I
 
     if-ge v0, v1, :cond_2
 
-    .line 117
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Maximum outstanding image count must be at least 1"
@@ -125,13 +112,11 @@
 
     throw v0
 
-    .line 121
     :cond_2
     const/16 v0, 0x11
 
     if-ne p3, v0, :cond_3
 
-    .line 122
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "NV21 format is not supported"
@@ -140,7 +125,6 @@
 
     throw v0
 
-    .line 126
     :cond_3
     invoke-direct {p0}, Landroid/media/ImageReader;->getNumPlanesFromFormat()I
 
@@ -148,7 +132,6 @@
 
     iput v0, p0, Landroid/media/ImageReader;->mNumPlanes:I
 
-    .line 128
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -165,14 +148,12 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/media/ImageReader;->nativeInit(Ljava/lang/Object;IIII)V
 
-    .line 130
     invoke-direct {p0}, Landroid/media/ImageReader;->nativeGetSurface()Landroid/view/Surface;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/ImageReader;->mSurface:Landroid/view/Surface;
 
-    .line 131
     return-void
 .end method
 
@@ -181,7 +162,6 @@
     .param p0, "x0"    # Landroid/media/ImageReader;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/media/ImageReader;->mListenerLock:Ljava/lang/Object;
 
     return-object v0
@@ -192,7 +172,6 @@
     .param p0, "x0"    # Landroid/media/ImageReader;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/media/ImageReader;->mListener:Landroid/media/ImageReader$OnImageAvailableListener;
 
     return-object v0
@@ -204,7 +183,6 @@
     .param p1, "x1"    # Landroid/media/Image;
 
     .prologue
-    .line 51
     invoke-direct {p0, p1}, Landroid/media/ImageReader;->releaseImage(Landroid/media/Image;)V
 
     return-void
@@ -215,7 +193,6 @@
     .param p0, "x0"    # Landroid/media/ImageReader;
 
     .prologue
-    .line 51
     iget v0, p0, Landroid/media/ImageReader;->mFormat:I
 
     return v0
@@ -226,7 +203,6 @@
     .param p0, "x0"    # Landroid/media/ImageReader;
 
     .prologue
-    .line 51
     iget v0, p0, Landroid/media/ImageReader;->mNumPlanes:I
 
     return v0
@@ -237,16 +213,13 @@
     .param p1, "si"    # Landroid/media/ImageReader$SurfaceImage;
 
     .prologue
-    .line 298
     invoke-direct {p0, p1}, Landroid/media/ImageReader;->nativeImageSetup(Landroid/media/Image;)I
 
     move-result v0
 
-    .line 300
     .local v0, "status":I
     packed-switch v0, :pswitch_data_0
 
-    .line 308
     new-instance v1, Ljava/lang/AssertionError;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -271,22 +244,18 @@
 
     throw v1
 
-    .line 302
     :pswitch_0
     # invokes: Landroid/media/ImageReader$SurfaceImage;->createSurfacePlanes()V
     invoke-static {p1}, Landroid/media/ImageReader$SurfaceImage;->access$000(Landroid/media/ImageReader$SurfaceImage;)V
 
-    .line 303
     const/4 v1, 0x1
 
     # invokes: Landroid/media/ImageReader$SurfaceImage;->setImageValid(Z)V
     invoke-static {p1, v1}, Landroid/media/ImageReader$SurfaceImage;->access$100(Landroid/media/ImageReader$SurfaceImage;Z)V
 
-    .line 311
     :pswitch_1
     return v0
 
-    .line 300
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -301,12 +270,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 469
     iget v1, p0, Landroid/media/ImageReader;->mFormat:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 488
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
     const-string v2, "Invalid format specified %d"
@@ -331,22 +298,18 @@
 
     throw v1
 
-    .line 473
     :sswitch_0
     const/4 v0, 0x3
 
-    .line 486
     :goto_0
     :sswitch_1
     return v0
 
-    .line 475
     :sswitch_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 469
     nop
 
     :sswitch_data_0
@@ -394,7 +357,6 @@
     .param p3, "maxImages"    # I
 
     .prologue
-    .line 100
     new-instance v0, Landroid/media/ImageReader;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroid/media/ImageReader;-><init>(IIII)V
@@ -407,12 +369,10 @@
     .param p0, "selfRef"    # Ljava/lang/Object;
 
     .prologue
-    .line 501
     move-object v2, p0
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 502
     .local v2, "weakSelf":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/media/ImageReader;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -420,42 +380,34 @@
 
     check-cast v1, Landroid/media/ImageReader;
 
-    .line 503
     .local v1, "ir":Landroid/media/ImageReader;
     if-nez v1, :cond_1
 
-    .line 514
     :cond_0
     :goto_0
     return-void
 
-    .line 508
     :cond_1
     iget-object v4, v1, Landroid/media/ImageReader;->mListenerLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 509
     :try_start_0
     iget-object v0, v1, Landroid/media/ImageReader;->mListenerHandler:Landroid/media/ImageReader$ListenerHandler;
 
-    .line 510
     .local v0, "handler":Landroid/os/Handler;
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 511
     if-eqz v0, :cond_0
 
-    .line 512
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_0
 
-    .line 510
     .end local v0    # "handler":Landroid/os/Handler;
     :catchall_0
     move-exception v3
@@ -473,12 +425,10 @@
     .param p1, "i"    # Landroid/media/Image;
 
     .prologue
-    .line 365
     instance-of v1, p1, Landroid/media/ImageReader$SurfaceImage;
 
     if-nez v1, :cond_0
 
-    .line 366
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "This image was not produced by an ImageReader"
@@ -490,10 +440,8 @@
     :cond_0
     move-object v0, p1
 
-    .line 369
     check-cast v0, Landroid/media/ImageReader$SurfaceImage;
 
-    .line 370
     .local v0, "si":Landroid/media/ImageReader$SurfaceImage;
     invoke-virtual {v0}, Landroid/media/ImageReader$SurfaceImage;->getReader()Landroid/media/ImageReader;
 
@@ -501,7 +449,6 @@
 
     if-eq v1, p0, :cond_1
 
-    .line 371
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "This image was not produced by this ImageReader"
@@ -510,21 +457,17 @@
 
     throw v1
 
-    .line 375
     :cond_1
     # invokes: Landroid/media/ImageReader$SurfaceImage;->clearSurfacePlanes()V
     invoke-static {v0}, Landroid/media/ImageReader$SurfaceImage;->access$200(Landroid/media/ImageReader$SurfaceImage;)V
 
-    .line 376
     invoke-direct {p0, p1}, Landroid/media/ImageReader;->nativeReleaseImage(Landroid/media/Image;)V
 
-    .line 377
     const/4 v1, 0x0
 
     # invokes: Landroid/media/ImageReader$SurfaceImage;->setImageValid(Z)V
     invoke-static {v0, v1}, Landroid/media/ImageReader$SurfaceImage;->access$100(Landroid/media/ImageReader$SurfaceImage;Z)V
 
-    .line 378
     return-void
 .end method
 
@@ -534,33 +477,26 @@
     .locals 4
 
     .prologue
-    .line 248
     invoke-virtual {p0}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object v0
 
-    .line 249
     .local v0, "image":Landroid/media/Image;
     if-nez v0, :cond_2
 
-    .line 250
     const/4 v2, 0x0
 
-    .line 265
     :cond_0
     :goto_0
     return-object v2
 
-    .line 260
     .local v1, "next":Landroid/media/Image;
     :cond_1
     :try_start_0
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
-    .line 261
     move-object v0, v1
 
-    .line 254
     .end local v1    # "next":Landroid/media/Image;
     :cond_2
     invoke-virtual {p0}, Landroid/media/ImageReader;->acquireNextImageNoThrowISE()Landroid/media/Image;
@@ -569,26 +505,20 @@
 
     move-result-object v1
 
-    .line 255
     .restart local v1    # "next":Landroid/media/Image;
     if-nez v1, :cond_1
 
-    .line 256
     move-object v2, v0
 
-    .line 257
     .local v2, "result":Landroid/media/Image;
     const/4 v0, 0x0
 
-    .line 264
     if-eqz v0, :cond_0
 
-    .line 265
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
     goto :goto_0
 
-    .line 264
     .end local v1    # "next":Landroid/media/Image;
     .end local v2    # "result":Landroid/media/Image;
     :catchall_0
@@ -596,7 +526,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 265
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
     :cond_3
@@ -607,22 +536,18 @@
     .locals 7
 
     .prologue
-    .line 343
     new-instance v0, Landroid/media/ImageReader$SurfaceImage;
 
     invoke-direct {v0, p0}, Landroid/media/ImageReader$SurfaceImage;-><init>(Landroid/media/ImageReader;)V
 
-    .line 344
     .local v0, "si":Landroid/media/ImageReader$SurfaceImage;
     invoke-direct {p0, v0}, Landroid/media/ImageReader;->acquireNextSurfaceImage(Landroid/media/ImageReader$SurfaceImage;)I
 
     move-result v1
 
-    .line 346
     .local v1, "status":I
     packed-switch v1, :pswitch_data_0
 
-    .line 357
     new-instance v2, Ljava/lang/AssertionError;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -647,7 +572,6 @@
 
     throw v2
 
-    .line 350
     :pswitch_0
     const/4 v0, 0x0
 
@@ -655,12 +579,11 @@
     :pswitch_1
     return-object v0
 
-    .line 352
     .restart local v0    # "si":Landroid/media/ImageReader$SurfaceImage;
     :pswitch_2
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v3, "maxImages (%d) has already been acquired, call #close before acquiring more."
+    const-string v3, "maxImages (%d) has already been acquired, call #close before acquiring more."
 
     const/4 v4, 0x1
 
@@ -684,7 +607,6 @@
 
     throw v2
 
-    .line 346
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -697,12 +619,10 @@
     .locals 2
 
     .prologue
-    .line 278
     new-instance v0, Landroid/media/ImageReader$SurfaceImage;
 
     invoke-direct {v0, p0}, Landroid/media/ImageReader$SurfaceImage;-><init>(Landroid/media/ImageReader;)V
 
-    .line 279
     .local v0, "si":Landroid/media/ImageReader$SurfaceImage;
     invoke-direct {p0, v0}, Landroid/media/ImageReader;->acquireNextSurfaceImage(Landroid/media/ImageReader$SurfaceImage;)I
 
@@ -727,13 +647,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 445
     invoke-virtual {p0, v0, v0}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
 
-    .line 446
     invoke-direct {p0}, Landroid/media/ImageReader;->nativeClose()V
 
-    .line 447
     return-void
 .end method
 
@@ -746,19 +663,15 @@
     .end annotation
 
     .prologue
-    .line 452
     :try_start_0
     invoke-virtual {p0}, Landroid/media/ImageReader;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 454
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 456
     return-void
 
-    .line 454
     :catchall_0
     move-exception v0
 
@@ -771,7 +684,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget v0, p0, Landroid/media/ImageReader;->mHeight:I
 
     return v0
@@ -781,7 +693,6 @@
     .locals 1
 
     .prologue
-    .line 175
     iget v0, p0, Landroid/media/ImageReader;->mFormat:I
 
     return v0
@@ -791,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 196
     iget v0, p0, Landroid/media/ImageReader;->mMaxImages:I
 
     return v0
@@ -801,7 +711,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Landroid/media/ImageReader;->mSurface:Landroid/view/Surface;
 
     return-object v0
@@ -811,7 +720,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget v0, p0, Landroid/media/ImageReader;->mWidth:I
 
     return v0
@@ -823,15 +731,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 393
     iget-object v2, p0, Landroid/media/ImageReader;->mListenerLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 394
     if-eqz p1, :cond_4
 
-    .line 395
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -839,12 +744,10 @@
 
     move-result-object v0
 
-    .line 396
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     if-nez v0, :cond_1
 
-    .line 397
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "handler is null but the current thread is not a looper"
@@ -853,7 +756,6 @@
 
     throw v1
 
-    .line 408
     .end local v0    # "looper":Landroid/os/Looper;
     :catchall_0
     move-exception v1
@@ -864,7 +766,6 @@
 
     throw v1
 
-    .line 395
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -873,7 +774,6 @@
 
     goto :goto_0
 
-    .line 400
     .restart local v0    # "looper":Landroid/os/Looper;
     :cond_1
     iget-object v1, p0, Landroid/media/ImageReader;->mListenerHandler:Landroid/media/ImageReader$ListenerHandler;
@@ -888,7 +788,6 @@
 
     if-eq v1, v0, :cond_3
 
-    .line 401
     :cond_2
     new-instance v1, Landroid/media/ImageReader$ListenerHandler;
 
@@ -896,25 +795,20 @@
 
     iput-object v1, p0, Landroid/media/ImageReader;->mListenerHandler:Landroid/media/ImageReader$ListenerHandler;
 
-    .line 403
     :cond_3
     iput-object p1, p0, Landroid/media/ImageReader;->mListener:Landroid/media/ImageReader$OnImageAvailableListener;
 
-    .line 408
     .end local v0    # "looper":Landroid/os/Looper;
     :goto_1
     monitor-exit v2
 
-    .line 409
     return-void
 
-    .line 405
     :cond_4
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/ImageReader;->mListener:Landroid/media/ImageReader$OnImageAvailableListener;
 
-    .line 406
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/ImageReader;->mListenerHandler:Landroid/media/ImageReader$ListenerHandler;

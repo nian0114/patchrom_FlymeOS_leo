@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 389
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$5;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     iput-object p2, p0, Landroid/app/EnterTransitionCoordinator$5;->val$decorView:Landroid/view/View;
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 392
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$5;->val$decorView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -57,7 +55,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 393
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$5;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     new-instance v1, Landroid/app/EnterTransitionCoordinator$5$1;
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/EnterTransitionCoordinator;->startTransition(Ljava/lang/Runnable;)V
 
-    .line 399
     const/4 v0, 0x0
 
     return v0

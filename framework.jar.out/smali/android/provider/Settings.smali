@@ -184,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 1028
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -198,10 +197,8 @@
     .locals 0
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8502
     return-void
 .end method
 
@@ -209,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 69
     sget-object v0, Landroid/provider/Settings;->mLocationSettingsLock:Ljava/lang/Object;
 
     return-object v0
@@ -220,7 +216,6 @@
     .param p0, "androidId"    # J
 
     .prologue
-    .line 8707
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

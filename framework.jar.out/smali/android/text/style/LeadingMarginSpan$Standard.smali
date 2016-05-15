@@ -30,10 +30,8 @@
     .param p1, "every"    # I
 
     .prologue
-    .line 119
     invoke-direct {p0, p1, p1}, Landroid/text/style/LeadingMarginSpan$Standard;-><init>(II)V
 
-    .line 120
     return-void
 .end method
 
@@ -43,16 +41,12 @@
     .param p2, "rest"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
     iput p1, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mFirst:I
 
-    .line 111
     iput p2, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mRest:I
 
-    .line 112
     return-void
 .end method
 
@@ -61,24 +55,20 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mFirst:I
 
-    .line 124
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mRest:I
 
-    .line 125
     return-void
 .end method
 
@@ -88,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 132
     const/4 v0, 0x0
 
     return v0
@@ -110,7 +99,6 @@
     .param p12, "layout"    # Landroid/text/Layout;
 
     .prologue
-    .line 150
     return-void
 .end method
 
@@ -119,7 +107,6 @@
     .param p1, "first"    # Z
 
     .prologue
-    .line 141
     if-eqz p1, :cond_0
 
     iget v0, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mFirst:I
@@ -137,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 128
     const/16 v0, 0xa
 
     return v0
@@ -149,16 +135,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 136
     iget v0, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mFirst:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 137
     iget v0, p0, Landroid/text/style/LeadingMarginSpan$Standard;->mRest:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 138
     return-void
 .end method

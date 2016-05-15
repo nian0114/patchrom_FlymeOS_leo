@@ -10,10 +10,8 @@
     .param p2, "locator"    # Lorg/xml/sax/Locator;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Lorg/xml/sax/SAXParseException;-><init>(Ljava/lang/String;Lorg/xml/sax/Locator;)V
 
-    .line 29
     return-void
 .end method
 
@@ -23,7 +21,6 @@
     .locals 2
 
     .prologue
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

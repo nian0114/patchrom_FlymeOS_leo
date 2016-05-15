@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -74,72 +73,58 @@
 
     const/4 v6, -0x1
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconWidth:I
 
-    .line 46
     iput v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconHeight:I
 
-    .line 47
     iput v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureWidth:I
 
-    .line 48
     iput v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureHeight:I
 
-    .line 50
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mPaint:Landroid/graphics/Paint;
 
-    .line 51
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mBlurPaint:Landroid/graphics/Paint;
 
-    .line 52
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorPressedPaint:Landroid/graphics/Paint;
 
-    .line 53
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorFocusedPaint:Landroid/graphics/Paint;
 
-    .line 54
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mOldBounds:Landroid/graphics/Rect;
 
-    .line 55
     new-instance v6, Landroid/graphics/Canvas;
 
     invoke-direct {v6}, Landroid/graphics/Canvas;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 58
     iput v9, p0, Lcom/android/internal/policy/impl/IconUtilities;->mColorIndex:I
 
-    .line 61
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 62
     .local v4, "resources":Landroid/content/res/Resources;
     invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -147,17 +132,14 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/IconUtilities;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 63
     .local v3, "metrics":Landroid/util/DisplayMetrics;
     iget v2, v3, Landroid/util/DisplayMetrics;->density:F
 
-    .line 64
     .local v2, "density":F
     const/high16 v6, 0x40a00000    # 5.0f
 
     mul-float v0, v6, v2
 
-    .line 66
     .local v0, "blurPx":F
     const/high16 v6, 0x1050000
 
@@ -171,7 +153,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconWidth:I
 
-    .line 67
     iget v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconWidth:I
 
     const/high16 v7, 0x40000000    # 2.0f
@@ -186,7 +167,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureWidth:I
 
-    .line 69
     iget-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mBlurPaint:Landroid/graphics/Paint;
 
     new-instance v7, Landroid/graphics/BlurMaskFilter;
@@ -197,12 +177,10 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setMaskFilter(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;
 
-    .line 71
     new-instance v5, Landroid/util/TypedValue;
 
     invoke-direct {v5}, Landroid/util/TypedValue;-><init>()V
 
-    .line 72
     .local v5, "value":Landroid/util/TypedValue;
     iget-object v7, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorPressedPaint:Landroid/graphics/Paint;
 
@@ -223,7 +201,6 @@
     :goto_0
     invoke-virtual {v7, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 74
     iget-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorPressedPaint:Landroid/graphics/Paint;
 
     invoke-static {v9, v11}, Landroid/graphics/TableMaskFilter;->CreateClipTable(II)Landroid/graphics/TableMaskFilter;
@@ -232,7 +209,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setMaskFilter(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;
 
-    .line 75
     iget-object v7, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorFocusedPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -252,7 +228,6 @@
     :goto_1
     invoke-virtual {v7, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 77
     iget-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorFocusedPaint:Landroid/graphics/Paint;
 
     invoke-static {v9, v11}, Landroid/graphics/TableMaskFilter;->CreateClipTable(II)Landroid/graphics/TableMaskFilter;
@@ -261,18 +236,15 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setMaskFilter(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;
 
-    .line 79
     new-instance v1, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v1}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 80
     .local v1, "cm":Landroid/graphics/ColorMatrix;
     const v6, 0x3e4ccccd    # 0.2f
 
     invoke-virtual {v1, v6}, Landroid/graphics/ColorMatrix;->setSaturation(F)V
 
-    .line 82
     iget-object v6, p0, Lcom/android/internal/policy/impl/IconUtilities;->mCanvas:Landroid/graphics/Canvas;
 
     new-instance v7, Landroid/graphics/PaintFlagsDrawFilter;
@@ -285,17 +257,14 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 84
     return-void
 
-    .line 72
     .end local v1    # "cm":Landroid/graphics/ColorMatrix;
     :cond_0
     const/16 v6, -0x3d00
 
     goto :goto_0
 
-    .line 75
     :cond_1
     const/16 v6, -0x7200
 
@@ -307,18 +276,15 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 106
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/android/internal/policy/impl/IconUtilities;->mIconWidth:I
 
-    .line 107
     .local v13, "width":I
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/policy/impl/IconUtilities;->mIconHeight:I
 
-    .line 109
     .local v4, "height":I
     move-object/from16 v0, p1
 
@@ -328,17 +294,13 @@
 
     move-object/from16 v6, p1
 
-    .line 110
     check-cast v6, Landroid/graphics/drawable/PaintDrawable;
 
-    .line 111
     .local v6, "painter":Landroid/graphics/drawable/PaintDrawable;
     invoke-virtual {v6, v13}, Landroid/graphics/drawable/PaintDrawable;->setIntrinsicWidth(I)V
 
-    .line 112
     invoke-virtual {v6, v4}, Landroid/graphics/drawable/PaintDrawable;->setIntrinsicHeight(I)V
 
-    .line 121
     .end local v6    # "painter":Landroid/graphics/drawable/PaintDrawable;
     :cond_0
     :goto_0
@@ -346,24 +308,20 @@
 
     move-result v9
 
-    .line 122
     .local v9, "sourceWidth":I
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v8
 
-    .line 124
     .local v8, "sourceHeight":I
     if-lez v9, :cond_2
 
     if-lez v8, :cond_2
 
-    .line 126
     if-lt v13, v9, :cond_1
 
     if-ge v4, v8, :cond_5
 
-    .line 128
     :cond_1
     int-to-float v14, v9
 
@@ -371,18 +329,15 @@
 
     div-float v7, v14, v15
 
-    .line 129
     .local v7, "ratio":F
     if-le v9, v8, :cond_4
 
-    .line 130
     int-to-float v14, v13
 
     div-float/2addr v14, v7
 
     float-to-int v4, v14
 
-    .line 142
     .end local v7    # "ratio":F
     :cond_2
     :goto_1
@@ -390,13 +345,11 @@
 
     iget v11, v0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureWidth:I
 
-    .line 143
     .local v11, "textureWidth":I
     move-object/from16 v0, p0
 
     iget v10, v0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureHeight:I
 
-    .line 145
     .local v10, "textureHeight":I
     sget-object v14, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -404,28 +357,23 @@
 
     move-result-object v1
 
-    .line 147
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/impl/IconUtilities;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 148
     .local v3, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v3, v1}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 150
     sub-int v14, v11, v13
 
     div-int/lit8 v5, v14, 0x2
 
-    .line 151
     .local v5, "left":I
     sub-int v14, v10, v4
 
     div-int/lit8 v12, v14, 0x2
 
-    .line 162
     .local v12, "top":I
     move-object/from16 v0, p0
 
@@ -437,7 +385,6 @@
 
     invoke-virtual {v14, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 163
     add-int v14, v5, v13
 
     add-int v15, v12, v4
@@ -446,12 +393,10 @@
 
     invoke-virtual {v0, v5, v12, v14, v15}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 164
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v3}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 165
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/impl/IconUtilities;->mOldBounds:Landroid/graphics/Rect;
@@ -460,10 +405,8 @@
 
     invoke-virtual {v0, v14}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 167
     return-object v1
 
-    .line 113
     .end local v1    # "bitmap":Landroid/graphics/Bitmap;
     .end local v3    # "canvas":Landroid/graphics/Canvas;
     .end local v5    # "left":I
@@ -481,16 +424,13 @@
 
     move-object/from16 v2, p1
 
-    .line 115
     check-cast v2, Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 116
     .local v2, "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {v2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 117
     .restart local v1    # "bitmap":Landroid/graphics/Bitmap;
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getDensity()I
 
@@ -498,7 +438,6 @@
 
     if-nez v14, :cond_0
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/impl/IconUtilities;->mDisplayMetrics:Landroid/util/DisplayMetrics;
@@ -507,7 +446,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v1    # "bitmap":Landroid/graphics/Bitmap;
     .end local v2    # "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     .restart local v7    # "ratio":F
@@ -516,7 +454,6 @@
     :cond_4
     if-le v8, v9, :cond_2
 
-    .line 132
     int-to-float v14, v4
 
     mul-float/2addr v14, v7
@@ -525,17 +462,14 @@
 
     goto :goto_1
 
-    .line 134
     .end local v7    # "ratio":F
     :cond_5
     if-ge v9, v13, :cond_2
 
     if-ge v8, v4, :cond_2
 
-    .line 136
     move v13, v9
 
-    .line 137
     move v4, v8
 
     goto :goto_1
@@ -551,7 +485,6 @@
 
     const/4 v7, 0x0
 
-    .line 171
     iget v4, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureWidth:I
 
     iget v5, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureHeight:I
@@ -562,24 +495,20 @@
 
     move-result-object v2
 
-    .line 173
     .local v2, "result":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 175
     .local v0, "dest":Landroid/graphics/Canvas;
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, v8, v4}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 177
     const/4 v4, 0x2
 
     new-array v3, v4, [I
 
-    .line 178
     .local v3, "xy":[I
     iget-object v4, p0, Lcom/android/internal/policy/impl/IconUtilities;->mBlurPaint:Landroid/graphics/Paint;
 
@@ -587,7 +516,6 @@
 
     move-result-object v1
 
-    .line 180
     .local v1, "mask":Landroid/graphics/Bitmap;
     aget v4, v3, v8
 
@@ -606,23 +534,18 @@
     :goto_0
     invoke-virtual {v0, v1, v5, v6, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 183
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 185
     iget-object v4, p0, Lcom/android/internal/policy/impl/IconUtilities;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1, v7, v7, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 186
     const/4 v4, 0x0
 
     invoke-virtual {v0, v4}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 188
     return-object v2
 
-    .line 180
     :cond_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/IconUtilities;->mGlowColorFocusedPaint:Landroid/graphics/Paint;
 
@@ -640,18 +563,15 @@
 
     const/4 v5, 0x0
 
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/IconUtilities;->createIconBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 89
     .local v1, "scaled":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 91
     .local v0, "result":Landroid/graphics/drawable/StateListDrawable;
     new-array v2, v6, [I
 
@@ -669,7 +589,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 93
     new-array v2, v6, [I
 
     const v3, 0x10100a7
@@ -686,7 +605,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 95
     new-array v2, v5, [I
 
     new-instance v3, Landroid/graphics/drawable/BitmapDrawable;
@@ -695,13 +613,11 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 97
     iget v2, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureWidth:I
 
     iget v3, p0, Lcom/android/internal/policy/impl/IconUtilities;->mIconTextureHeight:I
 
     invoke-virtual {v0, v5, v5, v2, v3}, Landroid/graphics/drawable/StateListDrawable;->setBounds(IIII)V
 
-    .line 98
     return-object v0
 .end method

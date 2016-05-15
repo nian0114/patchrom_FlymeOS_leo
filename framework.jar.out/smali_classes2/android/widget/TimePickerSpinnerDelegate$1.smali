@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput-object p1, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,13 +46,11 @@
 
     const/16 v1, 0xb
 
-    .line 96
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->updateInputState()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$000(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 97
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     invoke-virtual {v0}, Landroid/widget/TimePickerSpinnerDelegate;->is24HourView()Z
@@ -62,7 +59,6 @@
 
     if-nez v0, :cond_2
 
-    .line 98
     if-ne p2, v1, :cond_0
 
     if-eq p3, v2, :cond_1
@@ -72,7 +68,6 @@
 
     if-ne p3, v1, :cond_2
 
-    .line 100
     :cond_1
     iget-object v1, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
@@ -91,23 +86,19 @@
     # setter for: Landroid/widget/TimePickerSpinnerDelegate;->mIsAm:Z
     invoke-static {v1, v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$102(Landroid/widget/TimePickerSpinnerDelegate;Z)Z
 
-    .line 101
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->updateAmPmControl()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$200(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 104
     :cond_2
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->onTimeChanged()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$300(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 105
     return-void
 
-    .line 100
     :cond_3
     const/4 v0, 0x0
 

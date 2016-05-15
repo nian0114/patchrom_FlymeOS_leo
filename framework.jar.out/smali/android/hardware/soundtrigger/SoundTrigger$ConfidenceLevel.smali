@@ -41,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 740
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel$1;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel$1;-><init>()V
@@ -57,16 +56,12 @@
     .param p2, "confidenceLevel"    # I
 
     .prologue
-    .line 735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 736
     iput p1, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->userId:I
 
-    .line 737
     iput p2, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->confidenceLevel:I
 
-    .line 738
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 731
     invoke-static {p0}, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->fromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
     move-result-object v0
@@ -88,18 +82,15 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 752
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 753
     .local v1, "userId":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 754
     .local v0, "confidenceLevel":I
     new-instance v2, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
@@ -114,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 765
     const/4 v0, 0x0
 
     return v0
@@ -129,24 +119,19 @@
 
     const/4 v2, 0x0
 
-    .line 779
     if-ne p0, p1, :cond_1
 
-    .line 790
     :cond_0
     :goto_0
     return v1
 
-    .line 781
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 782
     goto :goto_0
 
-    .line 783
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -160,16 +145,13 @@
 
     move v1, v2
 
-    .line 784
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 785
     check-cast v0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
-    .line 786
     .local v0, "other":Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->confidenceLevel:I
 
@@ -179,10 +161,8 @@
 
     move v1, v2
 
-    .line 787
     goto :goto_0
 
-    .line 788
     :cond_4
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->userId:I
 
@@ -192,7 +172,6 @@
 
     move v1, v2
 
-    .line 789
     goto :goto_0
 .end method
 
@@ -200,27 +179,22 @@
     .locals 4
 
     .prologue
-    .line 770
     const/16 v0, 0x1f
 
-    .line 771
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 772
     .local v1, "result":I
     iget v2, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->confidenceLevel:I
 
     add-int/lit8 v1, v2, 0x1f
 
-    .line 773
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->userId:I
 
     add-int v1, v2, v3
 
-    .line 774
     return v1
 .end method
 
@@ -228,7 +202,6 @@
     .locals 2
 
     .prologue
-    .line 795
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,16 +249,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 759
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->userId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 760
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->confidenceLevel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 761
     return-void
 .end method

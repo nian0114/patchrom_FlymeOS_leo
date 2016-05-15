@@ -50,15 +50,12 @@
     .end annotation
 
     .prologue
-    .line 34
     .local p0, "this":Landroid/util/FastImmutableArraySet;, "Landroid/util/FastImmutableArraySet<TT;>;"
     .local p1, "contents":[Ljava/lang/Object;, "[TT;"
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
-    .line 35
     iput-object p1, p0, Landroid/util/FastImmutableArraySet;->mContents:[Ljava/lang/Object;
 
-    .line 36
     return-void
 .end method
 
@@ -75,15 +72,12 @@
     .end annotation
 
     .prologue
-    .line 40
     .local p0, "this":Landroid/util/FastImmutableArraySet;, "Landroid/util/FastImmutableArraySet<TT;>;"
     iget-object v0, p0, Landroid/util/FastImmutableArraySet;->mIterator:Landroid/util/FastImmutableArraySet$FastIterator;
 
-    .line 41
     .local v0, "it":Landroid/util/FastImmutableArraySet$FastIterator;, "Landroid/util/FastImmutableArraySet$FastIterator<TT;>;"
     if-nez v0, :cond_0
 
-    .line 42
     new-instance v0, Landroid/util/FastImmutableArraySet$FastIterator;
 
     .end local v0    # "it":Landroid/util/FastImmutableArraySet$FastIterator;, "Landroid/util/FastImmutableArraySet$FastIterator<TT;>;"
@@ -91,15 +85,12 @@
 
     invoke-direct {v0, v1}, Landroid/util/FastImmutableArraySet$FastIterator;-><init>([Ljava/lang/Object;)V
 
-    .line 43
     .restart local v0    # "it":Landroid/util/FastImmutableArraySet$FastIterator;, "Landroid/util/FastImmutableArraySet$FastIterator<TT;>;"
     iput-object v0, p0, Landroid/util/FastImmutableArraySet;->mIterator:Landroid/util/FastImmutableArraySet$FastIterator;
 
-    .line 47
     :goto_0
     return-object v0
 
-    .line 45
     :cond_0
     const/4 v1, 0x0
 
@@ -112,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 52
     .local p0, "this":Landroid/util/FastImmutableArraySet;, "Landroid/util/FastImmutableArraySet<TT;>;"
     iget-object v0, p0, Landroid/util/FastImmutableArraySet;->mContents:[Ljava/lang/Object;
 

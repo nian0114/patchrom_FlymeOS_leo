@@ -14,10 +14,8 @@
     .param p6, "gains"    # [Landroid/media/AudioGain;
 
     .prologue
-    .line 31
     invoke-direct/range {p0 .. p6}, Landroid/media/AudioPort;-><init>(Landroid/media/AudioHandle;I[I[I[I[Landroid/media/AudioGain;)V
 
-    .line 32
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .param p4, "gain"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 40
     new-instance v0, Landroid/media/AudioMixPortConfig;
 
     move-object v1, p0
@@ -53,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/AudioMixPort;->buildConfig(IIILandroid/media/AudioGainConfig;)Landroid/media/AudioMixPortConfig;
 
     move-result-object v0
@@ -66,18 +62,15 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 45
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Landroid/media/AudioMixPort;
 
     if-nez v0, :cond_1
 
-    .line 46
     :cond_0
     const/4 v0, 0x0
 
-    .line 48
     :goto_0
     return v0
 

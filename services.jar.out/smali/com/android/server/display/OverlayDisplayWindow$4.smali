@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 350
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -41,24 +40,20 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 354
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     # -= operator for: Lcom/android/server/display/OverlayDisplayWindow;->mLiveTranslationX:F
     invoke-static {v0, p3}, Lcom/android/server/display/OverlayDisplayWindow;->access$724(Lcom/android/server/display/OverlayDisplayWindow;F)F
 
-    .line 355
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     # -= operator for: Lcom/android/server/display/OverlayDisplayWindow;->mLiveTranslationY:F
     invoke-static {v0, p4}, Lcom/android/server/display/OverlayDisplayWindow;->access$824(Lcom/android/server/display/OverlayDisplayWindow;F)F
 
-    .line 356
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->relayout()V
 
-    .line 357
     const/4 v0, 0x1
 
     return v0

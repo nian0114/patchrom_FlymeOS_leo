@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 110
     new-instance v0, Landroid/print/PrintJobId$1;
 
     invoke-direct {v0}, Landroid/print/PrintJobId$1;-><init>()V
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 37
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -53,7 +51,6 @@
 
     invoke-direct {p0, v0}, Landroid/print/PrintJobId;-><init>(Ljava/lang/String;)V
 
-    .line 38
     return-void
 .end method
 
@@ -62,13 +59,10 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Landroid/print/PrintJobId;->mValue:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -77,7 +71,6 @@
     .param p0, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     new-instance v0, Landroid/print/PrintJobId;
 
     invoke-direct {v0, p0}, Landroid/print/PrintJobId;-><init>(Ljava/lang/String;)V
@@ -91,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const/4 v0, 0x0
 
     return v0
@@ -106,24 +98,19 @@
 
     const/4 v2, 0x0
 
-    .line 61
     if-ne p0, p1, :cond_1
 
-    .line 74
     :cond_0
     :goto_0
     return v1
 
-    .line 64
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 65
     goto :goto_0
 
-    .line 67
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -137,16 +124,13 @@
 
     move v1, v2
 
-    .line 68
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 70
     check-cast v0, Landroid/print/PrintJobId;
 
-    .line 71
     .local v0, "other":Landroid/print/PrintJobId;
     iget-object v3, p0, Landroid/print/PrintJobId;->mValue:Ljava/lang/String;
 
@@ -160,7 +144,6 @@
 
     move v1, v2
 
-    .line 72
     goto :goto_0
 .end method
 
@@ -168,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/print/PrintJobId;->mValue:Ljava/lang/String;
 
     return-object v0
@@ -178,14 +160,11 @@
     .locals 3
 
     .prologue
-    .line 53
     const/16 v0, 0x1f
 
-    .line 54
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 55
     .local v1, "result":I
     iget-object v2, p0, Landroid/print/PrintJobId;->mValue:Ljava/lang/String;
 
@@ -200,10 +179,8 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 56
     return v1
 
-    .line 55
     :cond_0
     const/4 v2, 0x0
 
@@ -216,11 +193,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 79
     iget-object v0, p0, Landroid/print/PrintJobId;->mValue:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 80
     return-void
 .end method

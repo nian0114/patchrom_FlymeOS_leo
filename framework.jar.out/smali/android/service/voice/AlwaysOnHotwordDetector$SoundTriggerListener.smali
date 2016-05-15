@@ -24,13 +24,10 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 614
     invoke-direct {p0}, Landroid/hardware/soundtrigger/IRecognitionStatusCallback$Stub;-><init>()V
 
-    .line 615
     iput-object p1, p0, Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;->mHandler:Landroid/os/Handler;
 
-    .line 616
     return-void
 .end method
 
@@ -41,14 +38,12 @@
     .param p1, "event"    # Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionEvent;
 
     .prologue
-    .line 623
     const-string v0, "AlwaysOnHotwordDetector"
 
-    const-string/jumbo v1, "onDetected"
+    const-string v1, "onDetected"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 625
     iget-object v7, p0, Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;->mHandler:Landroid/os/Handler;
 
     const/4 v8, 0x2
@@ -75,7 +70,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 629
     return-void
 .end method
 
@@ -84,14 +78,13 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 633
     const-string v0, "AlwaysOnHotwordDetector"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onError: "
+    const-string v2, "onError: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -107,14 +100,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 635
     return-void
 .end method
 
@@ -122,21 +113,18 @@
     .locals 2
 
     .prologue
-    .line 639
     const-string v0, "AlwaysOnHotwordDetector"
 
-    const-string/jumbo v1, "onRecognitionPaused"
+    const-string v1, "onRecognitionPaused"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 640
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 641
     return-void
 .end method
 
@@ -144,20 +132,17 @@
     .locals 2
 
     .prologue
-    .line 645
     const-string v0, "AlwaysOnHotwordDetector"
 
-    const-string/jumbo v1, "onRecognitionResumed"
+    const-string v1, "onRecognitionResumed"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 647
     return-void
 .end method

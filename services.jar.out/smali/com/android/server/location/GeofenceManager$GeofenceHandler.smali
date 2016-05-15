@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 426
     iput-object p1, p0, Lcom/android/server/location/GeofenceManager$GeofenceHandler;->this$0:Lcom/android/server/location/GeofenceManager;
 
-    .line 427
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Z)V
 
-    .line 428
     return-void
 .end method
 
@@ -42,16 +39,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 432
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 438
     :goto_0
     return-void
 
-    .line 434
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/location/GeofenceManager$GeofenceHandler;->this$0:Lcom/android/server/location/GeofenceManager;
 
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 432
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

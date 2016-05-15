@@ -59,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 994
     const-string v0, "content://contacts/phones"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -68,7 +67,6 @@
 
     sput-object v0, Landroid/provider/Contacts$Phones;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1002
     const-string v0, "content://contacts/phones/filter"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -84,7 +82,6 @@
     .locals 0
 
     .prologue
-    .line 953
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -99,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 986
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Landroid/provider/Contacts$Phones;->getDisplayLabel(Landroid/content/Context;ILjava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -119,19 +115,15 @@
     .end annotation
 
     .prologue
-    .line 961
     const-string v0, ""
 
-    .line 963
     .local v0, "display":Ljava/lang/CharSequence;
     if-eqz p1, :cond_2
 
-    .line 964
     if-eqz p3, :cond_1
 
     move-object v2, p3
 
-    .line 968
     .local v2, "labels":[Ljava/lang/CharSequence;
     :goto_0
     add-int/lit8 v3, p1, -0x1
@@ -141,13 +133,11 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 977
     .end local v2    # "labels":[Ljava/lang/CharSequence;
     :cond_0
     :goto_1
     return-object v0
 
-    .line 964
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -161,12 +151,10 @@
 
     goto :goto_0
 
-    .line 969
     .restart local v2    # "labels":[Ljava/lang/CharSequence;
     :catch_0
     move-exception v1
 
-    .line 970
     .local v1, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     const/4 v3, 0x0
 
@@ -174,7 +162,6 @@
 
     goto :goto_1
 
-    .line 973
     .end local v1    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v2    # "labels":[Ljava/lang/CharSequence;
     :cond_2
@@ -184,7 +171,6 @@
 
     if-nez v3, :cond_0
 
-    .line 974
     move-object v0, p2
 
     goto :goto_1

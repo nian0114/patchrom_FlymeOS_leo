@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/android/server/clipboard/ClipboardService$1;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 121
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 122
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.USER_REMOVED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 123
     iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$1;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
     const-string v2, "android.intent.extra.user_handle"
@@ -68,7 +64,6 @@
     # invokes: Lcom/android/server/clipboard/ClipboardService;->removeClipboard(I)V
     invoke-static {v1, v2}, Lcom/android/server/clipboard/ClipboardService;->access$000(Lcom/android/server/clipboard/ClipboardService;I)V
 
-    .line 125
     :cond_0
     return-void
 .end method

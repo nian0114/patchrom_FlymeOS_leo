@@ -42,24 +42,20 @@
     .locals 1
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 72
     new-instance v0, Landroid/service/voice/VoiceInteractionService$1;
 
     invoke-direct {v0, p0}, Landroid/service/voice/VoiceInteractionService$1;-><init>(Landroid/service/voice/VoiceInteractionService;)V
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mInterface:Landroid/service/voice/IVoiceInteractionService;
 
-    .line 88
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mLock:Ljava/lang/Object;
 
-    .line 98
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .param p0, "x0"    # Landroid/service/voice/VoiceInteractionService;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/service/voice/VoiceInteractionService;->onShutdownInternal()V
 
     return-void
@@ -79,7 +74,6 @@
     .param p0, "x0"    # Landroid/service/voice/VoiceInteractionService;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/service/voice/VoiceInteractionService;->onSoundModelsChangedInternal()V
 
     return-void
@@ -93,18 +87,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 122
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "voice_interaction_service"
+    const-string v4, "voice_interaction_service"
 
     invoke-static {v3, v4}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 124
     .local v0, "cur":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -114,22 +106,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 131
     :cond_0
     :goto_0
     return v2
 
-    .line 127
     :cond_1
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 128
     .local v1, "curComp":Landroid/content/ComponentName;
     if-eqz v1, :cond_0
 
-    .line 131
     invoke-virtual {v1, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -141,13 +129,10 @@
     .locals 0
 
     .prologue
-    .line 176
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionService;->onShutdown()V
 
-    .line 182
     invoke-direct {p0}, Landroid/service/voice/VoiceInteractionService;->safelyShutdownHotwordDetector()V
 
-    .line 183
     return-void
 .end method
 
@@ -155,28 +140,22 @@
     .locals 1
 
     .prologue
-    .line 194
     monitor-enter p0
 
-    .line 195
     :try_start_0
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     if-eqz v0, :cond_0
 
-    .line 197
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-virtual {v0}, Landroid/service/voice/AlwaysOnHotwordDetector;->onSoundModelsChanged()V
 
-    .line 199
     :cond_0
     monitor-exit p0
 
-    .line 200
     return-void
 
-    .line 199
     :catchall_0
     move-exception v0
 
@@ -191,7 +170,6 @@
     .locals 2
 
     .prologue
-    .line 238
     :try_start_0
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionService;->mLock:Ljava/lang/Object;
 
@@ -199,36 +177,29 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 239
     :try_start_1
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     if-eqz v0, :cond_0
 
-    .line 240
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-virtual {v0}, Landroid/service/voice/AlwaysOnHotwordDetector;->stopRecognition()Z
 
-    .line 241
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-virtual {v0}, Landroid/service/voice/AlwaysOnHotwordDetector;->invalidate()V
 
-    .line 242
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
-    .line 244
     :cond_0
     monitor-exit v1
 
-    .line 248
     :goto_0
     return-void
 
-    .line 244
     :catchall_0
     move-exception v0
 
@@ -241,7 +212,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 245
     :catch_0
     move-exception v0
 
@@ -257,12 +227,10 @@
     .param p3, "callback"    # Landroid/service/voice/AlwaysOnHotwordDetector$Callback;
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mSystemService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-nez v0, :cond_0
 
-    .line 216
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Not available until onReady() is called"
@@ -271,17 +239,14 @@
 
     throw v0
 
-    .line 218
     :cond_0
     iget-object v7, p0, Landroid/service/voice/VoiceInteractionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 220
     :try_start_0
     invoke-direct {p0}, Landroid/service/voice/VoiceInteractionService;->safelyShutdownHotwordDetector()V
 
-    .line 221
     new-instance v0, Landroid/service/voice/AlwaysOnHotwordDetector;
 
     iget-object v4, p0, Landroid/service/voice/VoiceInteractionService;->mKeyphraseEnrollmentInfo:Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
@@ -300,17 +265,14 @@
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
-    .line 223
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 224
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     return-object v0
 
-    .line 223
     :catchall_0
     move-exception v0
 
@@ -329,40 +291,32 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 252
     const-string v0, "VOICE INTERACTION"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 253
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 254
     :try_start_0
     const-string v0, "  AlwaysOnHotwordDetector"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 255
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     if-nez v0, :cond_0
 
-    .line 256
     const-string v0, "    NULL"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 260
     :goto_0
     monitor-exit v1
 
-    .line 261
     return-void
 
-    .line 258
     :cond_0
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHotwordDetector:Landroid/service/voice/AlwaysOnHotwordDetector;
 
@@ -372,7 +326,6 @@
 
     goto :goto_0
 
-    .line 260
     :catchall_0
     move-exception v0
 
@@ -387,7 +340,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mKeyphraseEnrollmentInfo:Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
 
     return-object v0
@@ -398,7 +350,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 156
     const-string v0, "android.service.voice.VoiceInteractionService"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -411,14 +362,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mInterface:Landroid/service/voice/IVoiceInteractionService;
 
     invoke-interface {v0}, Landroid/service/voice/IVoiceInteractionService;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 159
     :goto_0
     return-object v0
 
@@ -432,17 +381,14 @@
     .locals 1
 
     .prologue
-    .line 150
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 151
     new-instance v0, Landroid/service/voice/VoiceInteractionService$MyHandler;
 
     invoke-direct {v0, p0}, Landroid/service/voice/VoiceInteractionService$MyHandler;-><init>(Landroid/service/voice/VoiceInteractionService;)V
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mHandler:Landroid/service/voice/VoiceInteractionService$MyHandler;
 
-    .line 152
     return-void
 .end method
 
@@ -450,8 +396,7 @@
     .locals 2
 
     .prologue
-    .line 170
-    const-string/jumbo v0, "voiceinteraction"
+    const-string v0, "voiceinteraction"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -463,7 +408,6 @@
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mSystemService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
-    .line 172
     new-instance v0, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
 
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionService;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -474,7 +418,6 @@
 
     iput-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mKeyphraseEnrollmentInfo:Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
 
-    .line 173
     return-void
 .end method
 
@@ -482,7 +425,6 @@
     .locals 0
 
     .prologue
-    .line 191
     return-void
 .end method
 
@@ -491,12 +433,10 @@
     .param p1, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 139
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mSystemService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-nez v0, :cond_0
 
-    .line 140
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Not available until onReady() is called"
@@ -505,7 +445,6 @@
 
     throw v0
 
-    .line 143
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService;->mSystemService:Lcom/android/internal/app/IVoiceInteractionManagerService;
@@ -516,11 +455,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 146
     :goto_0
     return-void
 
-    .line 144
     :catch_0
     move-exception v0
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 318
     iput-object p1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 321
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 322
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 323
     iget-object v1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     const-string v2, "android.intent.extra.user_handle"
@@ -68,12 +64,10 @@
     # invokes: Lcom/android/server/LocationManagerService;->switchUser(I)V
     invoke-static {v1, v2}, Lcom/android/server/LocationManagerService;->access$400(Lcom/android/server/LocationManagerService;I)V
 
-    .line 328
     :cond_0
     :goto_0
     return-void
 
-    .line 324
     :cond_1
     const-string v1, "android.intent.action.MANAGED_PROFILE_ADDED"
 
@@ -91,7 +85,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 326
     :cond_2
     iget-object v1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 

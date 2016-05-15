@@ -25,10 +25,8 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     return-void
 .end method
 
@@ -37,13 +35,10 @@
     .param p1, "reuseArray"    # [I
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Landroid/animation/IntArrayEvaluator;->mArray:[I
 
-    .line 49
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 25
     check-cast p2, [I
 
     check-cast p3, [I
@@ -72,19 +66,15 @@
     .param p3, "endValue"    # [I
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/animation/IntArrayEvaluator;->mArray:[I
 
-    .line 65
     .local v0, "array":[I
     if-nez v0, :cond_0
 
-    .line 66
     array-length v4, p2
 
     new-array v0, v4, [I
 
-    .line 68
     :cond_0
     const/4 v2, 0x0
 
@@ -94,14 +84,11 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 69
     aget v3, p2, v2
 
-    .line 70
     .local v3, "start":I
     aget v1, p3, v2
 
-    .line 71
     .local v1, "end":I
     int-to-float v4, v3
 
@@ -117,12 +104,10 @@
 
     aput v4, v0, v2
 
-    .line 68
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 73
     .end local v1    # "end":I
     .end local v3    # "start":I
     :cond_1

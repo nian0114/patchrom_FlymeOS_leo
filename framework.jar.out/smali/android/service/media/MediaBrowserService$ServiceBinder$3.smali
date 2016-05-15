@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 225
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$3;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$3;->val$callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
@@ -48,14 +47,12 @@
     .locals 5
 
     .prologue
-    .line 228
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$3;->val$callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     invoke-interface {v2}, Landroid/service/media/IMediaBrowserServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 231
     .local v0, "b":Landroid/os/IBinder;
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$3;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
@@ -72,11 +69,9 @@
 
     check-cast v1, Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
-    .line 232
     .local v1, "connection":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     if-nez v1, :cond_0
 
-    .line 233
     const-string v2, "MediaBrowserService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -101,11 +96,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     :goto_0
     return-void
 
-    .line 238
     :cond_0
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$3;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 

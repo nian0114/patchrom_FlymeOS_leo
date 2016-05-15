@@ -22,18 +22,15 @@
     .param p4, "durationNs"    # J
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     invoke-static {p1}, Landroid/hardware/camera2/params/StreamConfigurationMap;->checkArgumentFormatInternal(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mFormat:I
 
-    .line 58
-    const-string/jumbo v0, "width must be positive"
+    const-string v0, "width must be positive"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentPositive(ILjava/lang/String;)I
 
@@ -41,7 +38,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mWidth:I
 
-    .line 59
     const-string v0, "height must be positive"
 
     invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentPositive(ILjava/lang/String;)I
@@ -50,7 +46,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mHeight:I
 
-    .line 60
     const-string v0, "durationNs must be non-negative"
 
     invoke-static {p4, p5, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(JLjava/lang/String;)J
@@ -59,7 +54,6 @@
 
     iput-wide v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mDurationNs:J
 
-    .line 61
     return-void
 .end method
 
@@ -74,24 +68,19 @@
 
     const/4 v2, 0x0
 
-    .line 122
     if-nez p1, :cond_1
 
-    .line 135
     :cond_0
     :goto_0
     return v2
 
-    .line 125
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 126
     goto :goto_0
 
-    .line 128
     :cond_2
     instance-of v3, p1, Landroid/hardware/camera2/params/StreamConfigurationDuration;
 
@@ -99,10 +88,8 @@
 
     move-object v0, p1
 
-    .line 129
     check-cast v0, Landroid/hardware/camera2/params/StreamConfigurationDuration;
 
-    .line 130
     .local v0, "other":Landroid/hardware/camera2/params/StreamConfigurationDuration;
     iget v3, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mFormat:I
 
@@ -145,7 +132,6 @@
     .locals 2
 
     .prologue
-    .line 109
     iget-wide v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mDurationNs:J
 
     return-wide v0
@@ -155,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mFormat:I
 
     return v0
@@ -165,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mHeight:I
 
     return v0
@@ -175,7 +159,6 @@
     .locals 3
 
     .prologue
-    .line 100
     new-instance v0, Landroid/util/Size;
 
     iget v1, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mWidth:I
@@ -191,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mWidth:I
 
     return v0
@@ -201,7 +183,6 @@
     .locals 7
 
     .prologue
-    .line 143
     iget v0, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mFormat:I
 
     iget v1, p0, Landroid/hardware/camera2/params/StreamConfigurationDuration;->mWidth:I

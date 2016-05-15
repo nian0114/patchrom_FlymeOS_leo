@@ -36,15 +36,12 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 20
     const-string v0, "android.app.trust.ITrustListener"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/trust/ITrustListener$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -53,17 +50,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     if-nez p0, :cond_0
 
-    .line 29
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 31
     :cond_0
     const-string v1, "android.app.trust.ITrustListener"
 
@@ -71,7 +64,6 @@
 
     move-result-object v0
 
-    .line 32
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -79,12 +71,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 33
     check-cast v0, Landroid/app/trust/ITrustListener;
 
     goto :goto_0
 
-    .line 35
     :cond_1
     new-instance v0, Landroid/app/trust/ITrustListener$Stub$Proxy;
 
@@ -100,7 +90,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-object p0
 .end method
 
@@ -121,10 +110,8 @@
 
     const/4 v3, 0x1
 
-    .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 73
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -132,7 +119,6 @@
     :goto_0
     return v3
 
-    .line 47
     :sswitch_0
     const-string v4, "android.app.trust.ITrustListener"
 
@@ -140,13 +126,11 @@
 
     goto :goto_0
 
-    .line 52
     :sswitch_1
     const-string v5, "android.app.trust.ITrustListener"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -155,14 +139,12 @@
 
     move v0, v3
 
-    .line 56
     .local v0, "_arg0":Z
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 58
     .local v1, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -172,7 +154,6 @@
 
     move v2, v3
 
-    .line 59
     .local v2, "_arg2":Z
     :goto_2
     invoke-virtual {p0, v0, v1, v2}, Landroid/app/trust/ITrustListener$Stub;->onTrustChanged(ZIZ)V
@@ -185,7 +166,6 @@
     :cond_0
     move v0, v4
 
-    .line 54
     goto :goto_1
 
     .restart local v0    # "_arg0":Z
@@ -193,10 +173,8 @@
     :cond_1
     move v2, v4
 
-    .line 58
     goto :goto_2
 
-    .line 64
     .end local v0    # "_arg0":Z
     .end local v1    # "_arg1":I
     :sswitch_2
@@ -204,7 +182,6 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -213,14 +190,12 @@
 
     move v0, v3
 
-    .line 68
     .restart local v0    # "_arg0":Z
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 69
     .restart local v1    # "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/app/trust/ITrustListener$Stub;->onTrustManagedChanged(ZI)V
 
@@ -231,10 +206,8 @@
     :cond_2
     move v0, v4
 
-    .line 66
     goto :goto_3
 
-    .line 43
     nop
 
     :sswitch_data_0

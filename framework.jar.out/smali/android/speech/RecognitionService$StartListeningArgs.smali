@@ -29,17 +29,13 @@
     .param p3, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 159
     iput-object p1, p0, Landroid/speech/RecognitionService$StartListeningArgs;->this$0:Landroid/speech/RecognitionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 160
     iput-object p2, p0, Landroid/speech/RecognitionService$StartListeningArgs;->mIntent:Landroid/content/Intent;
 
-    .line 161
     iput-object p3, p0, Landroid/speech/RecognitionService$StartListeningArgs;->mListener:Landroid/speech/IRecognitionListener;
 
-    .line 162
     return-void
 .end method

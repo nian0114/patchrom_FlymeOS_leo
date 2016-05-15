@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Landroid/hardware/camera2/legacy/SurfaceTextureRenderer$EGLSurfaceHolder;->this$0:Landroid/hardware/camera2/legacy/SurfaceTextureRenderer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .param p2, "x1"    # Landroid/hardware/camera2/legacy/SurfaceTextureRenderer$1;
 
     .prologue
-    .line 70
     invoke-direct {p0, p1}, Landroid/hardware/camera2/legacy/SurfaceTextureRenderer$EGLSurfaceHolder;-><init>(Landroid/hardware/camera2/legacy/SurfaceTextureRenderer;)V
 
     return-void

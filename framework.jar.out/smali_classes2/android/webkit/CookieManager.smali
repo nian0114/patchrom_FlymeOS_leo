@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
     .locals 1
 
     .prologue
-    .line 243
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
@@ -34,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 42
     const-class v1, Landroid/webkit/CookieManager;
 
     monitor-enter v1
@@ -67,14 +64,12 @@
     .param p0, "accept"    # Z
 
     .prologue
-    .line 267
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/webkit/CookieManager;->setAcceptFileSchemeCookiesImpl(Z)V
 
-    .line 268
     return-void
 .end method
 
@@ -98,7 +93,6 @@
     .end annotation
 
     .prologue
-    .line 30
     new-instance v0, Ljava/lang/CloneNotSupportedException;
 
     const-string v1, "doesn\'t implement Cloneable"
@@ -116,7 +110,6 @@
     .param p1, "uri"    # Landroid/net/WebAddress;
 
     .prologue
-    .line 156
     monitor-enter p0
 
     :try_start_0

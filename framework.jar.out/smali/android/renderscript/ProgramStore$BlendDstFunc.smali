@@ -62,7 +62,6 @@
 
     const/4 v4, 0x0
 
-    .line 121
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "ZERO"
@@ -71,7 +70,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->ZERO:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 122
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "ONE"
@@ -80,7 +78,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->ONE:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 123
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "SRC_COLOR"
@@ -89,7 +86,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->SRC_COLOR:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 124
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "ONE_MINUS_SRC_COLOR"
@@ -98,7 +94,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->ONE_MINUS_SRC_COLOR:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 125
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "SRC_ALPHA"
@@ -107,7 +102,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->SRC_ALPHA:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 126
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "ONE_MINUS_SRC_ALPHA"
@@ -120,7 +114,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->ONE_MINUS_SRC_ALPHA:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 127
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "DST_ALPHA"
@@ -133,7 +126,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->DST_ALPHA:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 128
     new-instance v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     const-string v1, "ONE_MINUS_DST_ALPHA"
@@ -146,7 +138,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->ONE_MINUS_DST_ALPHA:Landroid/renderscript/ProgramStore$BlendDstFunc;
 
-    .line 120
     const/16 v0, 0x8
 
     new-array v0, v0, [Landroid/renderscript/ProgramStore$BlendDstFunc;
@@ -204,13 +195,10 @@
     .end annotation
 
     .prologue
-    .line 131
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 132
     iput p3, p0, Landroid/renderscript/ProgramStore$BlendDstFunc;->mID:I
 
-    .line 133
     return-void
 .end method
 
@@ -219,7 +207,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 120
     const-class v0, Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -235,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 120
     sget-object v0, Landroid/renderscript/ProgramStore$BlendDstFunc;->$VALUES:[Landroid/renderscript/ProgramStore$BlendDstFunc;
 
     invoke-virtual {v0}, [Landroid/renderscript/ProgramStore$BlendDstFunc;->clone()Ljava/lang/Object;

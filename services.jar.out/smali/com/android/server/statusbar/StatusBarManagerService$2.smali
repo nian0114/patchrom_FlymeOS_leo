@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 219
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService$2;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     iput p2, p0, Lcom/android/server/statusbar/StatusBarManagerService$2;->val$net:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 221
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$2;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     # getter for: Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -56,6 +54,5 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/notification/NotificationDelegate;->onSetDisabled(I)V
 
-    .line 222
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 324
     iput-object p1, p0, Landroid/webkit/WebViewFactory$1;->val$abi:Ljava/lang/String;
 
     iput-boolean p2, p0, Landroid/webkit/WebViewFactory$1;->val$is64Bit:Z
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 328
     :try_start_0
     const-string v1, "WebViewFactory"
 
@@ -76,7 +74,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     # invokes: Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
     invoke-static {}, Landroid/webkit/WebViewFactory;->access$000()Landroid/webkit/IWebViewUpdateService;
 
@@ -90,15 +87,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 333
     :goto_0
     return-void
 
-    .line 330
     :catch_0
     move-exception v0
 
-    .line 331
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "WebViewFactory"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 132
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/16 v4, -0x2710
 
-    .line 134
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/appwidget/AppWidgetServiceImpl;->DEBUG:Z
     invoke-static {}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$000()Z
@@ -55,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 137
     const-string v1, "AppWidgetServiceImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -78,7 +74,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     :cond_0
     const-string v1, "android.intent.action.CONFIGURATION_CHANGED"
 
@@ -88,17 +83,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 141
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     # invokes: Lcom/android/server/appwidget/AppWidgetServiceImpl;->onConfigurationChanged()V
     invoke-static {v1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$100(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
 
-    .line 152
     :goto_0
     return-void
 
-    .line 142
     :cond_1
     const-string v1, "android.intent.action.USER_STARTED"
 
@@ -108,7 +100,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     const-string v2, "android.intent.extra.user_handle"
@@ -122,7 +113,6 @@
 
     goto :goto_0
 
-    .line 145
     :cond_2
     const-string v1, "android.intent.action.USER_STOPPED"
 
@@ -132,7 +122,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     const-string v2, "android.intent.extra.user_handle"
@@ -146,7 +135,6 @@
 
     goto :goto_0
 
-    .line 149
     :cond_3
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1464
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,17 +44,14 @@
     .param p1, "p"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1472
     # invokes: Landroid/graphics/Bitmap;->nativeCreateFromParcel(Landroid/os/Parcel;)Landroid/graphics/Bitmap;
     invoke-static {p1}, Landroid/graphics/Bitmap;->access$100(Landroid/os/Parcel;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1473
     .local v0, "bm":Landroid/graphics/Bitmap;
     if-nez v0, :cond_0
 
-    .line 1474
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Failed to unparcel Bitmap"
@@ -64,7 +60,6 @@
 
     throw v1
 
-    .line 1476
     :cond_0
     return-object v0
 .end method
@@ -73,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 1464
     invoke-virtual {p0, p1}, Landroid/graphics/Bitmap$1;->createFromParcel(Landroid/os/Parcel;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -86,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1479
     new-array v0, p1, [Landroid/graphics/Bitmap;
 
     return-object v0
@@ -96,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 1464
     invoke-virtual {p0, p1}, Landroid/graphics/Bitmap$1;->newArray(I)[Landroid/graphics/Bitmap;
 
     move-result-object v0

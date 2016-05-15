@@ -46,15 +46,12 @@
     .end annotation
 
     .prologue
-    .line 153
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     .local p1, "nativeKey":Landroid/hardware/camera2/impl/CameraMetadataNative$Key;, "Landroid/hardware/camera2/impl/CameraMetadataNative$Key<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     iput-object p1, p0, Landroid/hardware/camera2/CaptureRequest$Key;->mKey:Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
-    .line 155
     return-void
 .end method
 
@@ -71,19 +68,16 @@
     .end annotation
 
     .prologue
-    .line 103
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     new-instance v0, Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
     invoke-direct {v0, p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative$Key;-><init>(Ljava/lang/String;Landroid/hardware/camera2/utils/TypeReference;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/CaptureRequest$Key;->mKey:Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
-    .line 105
     return-void
 .end method
 
@@ -100,19 +94,16 @@
     .end annotation
 
     .prologue
-    .line 94
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     .local p2, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     new-instance v0, Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
     invoke-direct {v0, p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative$Key;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/CaptureRequest$Key;->mKey:Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
-    .line 96
     return-void
 .end method
 
@@ -123,7 +114,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 138
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     instance-of v0, p1, Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -157,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 121
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     iget-object v0, p0, Landroid/hardware/camera2/CaptureRequest$Key;->mKey:Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
@@ -179,7 +168,6 @@
     .end annotation
 
     .prologue
-    .line 149
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     iget-object v0, p0, Landroid/hardware/camera2/CaptureRequest$Key;->mKey:Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
@@ -190,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 129
     .local p0, "this":Landroid/hardware/camera2/CaptureRequest$Key;, "Landroid/hardware/camera2/CaptureRequest$Key<TT;>;"
     iget-object v0, p0, Landroid/hardware/camera2/CaptureRequest$Key;->mKey:Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 

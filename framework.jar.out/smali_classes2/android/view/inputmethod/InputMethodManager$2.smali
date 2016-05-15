@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1166
     iput-object p1, p0, Landroid/view/inputmethod/InputMethodManager$2;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1169
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager$2;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, v2, v2, v2}, Landroid/view/inputmethod/InputMethodManager;->startInputInner(Landroid/os/IBinder;III)Z
 
-    .line 1170
     return-void
 .end method

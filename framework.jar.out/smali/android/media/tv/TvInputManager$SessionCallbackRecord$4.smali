@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 373
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     iput-object p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->val$tracks:Ljava/util/List;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 376
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSessionCallback:Landroid/media/tv/TvInputManager$SessionCallback;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/tv/TvInputManager$SessionCallback;->onTracksChanged(Landroid/media/tv/TvInputManager$Session;Ljava/util/List;)V
 
-    .line 377
     return-void
 .end method

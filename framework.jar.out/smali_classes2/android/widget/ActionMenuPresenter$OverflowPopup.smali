@@ -27,10 +27,8 @@
     .param p5, "overflowOnly"    # Z
 
     .prologue
-    .line 679
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/ActionMenuPresenter;
 
-    .line 680
     const v5, 0x1010444
 
     move-object v0, p0
@@ -45,17 +43,14 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuPopupHelper;-><init>(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;Landroid/view/View;ZI)V
 
-    .line 682
     const v0, 0x800005
 
     invoke-virtual {p0, v0}, Landroid/widget/ActionMenuPresenter$OverflowPopup;->setGravity(I)V
 
-    .line 683
     iget-object v0, p1, Landroid/widget/ActionMenuPresenter;->mPopupPresenterCallback:Landroid/widget/ActionMenuPresenter$PopupPresenterCallback;
 
     invoke-virtual {p0, v0}, Landroid/widget/ActionMenuPresenter$OverflowPopup;->setCallback(Lcom/android/internal/view/menu/MenuPresenter$Callback;)V
 
-    .line 684
     return-void
 .end method
 
@@ -65,10 +60,8 @@
     .locals 2
 
     .prologue
-    .line 688
     invoke-super {p0}, Lcom/android/internal/view/menu/MenuPopupHelper;->onDismiss()V
 
-    .line 689
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -78,7 +71,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->close()V
 
-    .line 690
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/ActionMenuPresenter;
 
     const/4 v1, 0x0
@@ -86,6 +78,5 @@
     # setter for: Landroid/widget/ActionMenuPresenter;->mOverflowPopup:Landroid/widget/ActionMenuPresenter$OverflowPopup;
     invoke-static {v0, v1}, Landroid/widget/ActionMenuPresenter;->access$202(Landroid/widget/ActionMenuPresenter;Landroid/widget/ActionMenuPresenter$OverflowPopup;)Landroid/widget/ActionMenuPresenter$OverflowPopup;
 
-    .line 691
     return-void
 .end method

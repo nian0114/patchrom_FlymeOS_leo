@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 380
     iput-object p1, p0, Landroid/transition/ChangeBounds$8;->this$0:Landroid/transition/ChangeBounds;
 
     iput-object p2, p0, Landroid/transition/ChangeBounds$8;->val$view:Landroid/view/View;
@@ -64,12 +63,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 385
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/transition/ChangeBounds$8;->mIsCanceled:Z
 
-    .line 386
     return-void
 .end method
 
@@ -78,19 +75,16 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 390
     iget-boolean v0, p0, Landroid/transition/ChangeBounds$8;->mIsCanceled:Z
 
     if-nez v0, :cond_0
 
-    .line 391
     iget-object v0, p0, Landroid/transition/ChangeBounds$8;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Landroid/transition/ChangeBounds$8;->val$finalClip:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 392
     iget-object v0, p0, Landroid/transition/ChangeBounds$8;->val$view:Landroid/view/View;
 
     iget v1, p0, Landroid/transition/ChangeBounds$8;->val$endLeft:I
@@ -103,7 +97,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
 
-    .line 395
     :cond_0
     return-void
 .end method

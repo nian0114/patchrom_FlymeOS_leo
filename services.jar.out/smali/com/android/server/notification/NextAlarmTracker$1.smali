@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 225
     iput-object p1, p0, Lcom/android/server/notification/NextAlarmTracker$1;->this$0:Lcom/android/server/notification/NextAlarmTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 228
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 229
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/notification/NextAlarmTracker;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/NextAlarmTracker;->access$100()Z
@@ -75,11 +72,9 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 231
     .local v2, "delay":J
     const-string v1, "android.app.action.NEXT_ALARM_CLOCK_CHANGED"
 
@@ -89,10 +84,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 232
     const-wide/16 v2, 0x3e8
 
-    .line 233
     # getter for: Lcom/android/server/notification/NextAlarmTracker;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/NextAlarmTracker;->access$100()Z
 
@@ -157,7 +150,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     :cond_1
     :goto_0
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker$1;->this$0:Lcom/android/server/notification/NextAlarmTracker;
@@ -169,7 +161,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/notification/NextAlarmTracker$H;->postEvaluate(J)V
 
-    .line 240
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker$1;->this$0:Lcom/android/server/notification/NextAlarmTracker;
 
     # getter for: Lcom/android/server/notification/NextAlarmTracker;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -183,10 +174,8 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 241
     return-void
 
-    .line 236
     :cond_2
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -196,7 +185,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 237
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker$1;->this$0:Lcom/android/server/notification/NextAlarmTracker;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

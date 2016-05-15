@@ -36,17 +36,14 @@
     .locals 1
 
     .prologue
-    .line 598
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 597
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$PermissionInfoComparator;->sCollator:Ljava/text/Collator;
 
-    .line 599
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p2, "b"    # Landroid/widget/AppSecurityPermissions$MyPermissionInfo;
 
     .prologue
-    .line 601
     iget-object v0, p0, Landroid/widget/AppSecurityPermissions$PermissionInfoComparator;->sCollator:Ljava/text/Collator;
 
     iget-object v1, p1, Landroid/widget/AppSecurityPermissions$MyPermissionInfo;->mLabel:Ljava/lang/CharSequence;
@@ -76,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 596
     check-cast p1, Landroid/widget/AppSecurityPermissions$MyPermissionInfo;
 
     check-cast p2, Landroid/widget/AppSecurityPermissions$MyPermissionInfo;

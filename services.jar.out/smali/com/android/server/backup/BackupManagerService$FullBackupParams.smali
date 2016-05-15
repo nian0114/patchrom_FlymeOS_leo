@@ -56,44 +56,31 @@
     .param p12, "ignoreEncryptionCheck"    # Z
 
     .prologue
-    .line 533
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0, p1}, Lcom/android/server/backup/BackupManagerService$FullParams;-><init>(Lcom/android/server/backup/BackupManagerService;)V
 
-    .line 534
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 535
     iput-boolean p3, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->includeApks:Z
 
-    .line 536
     iput-boolean p4, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->includeObbs:Z
 
-    .line 537
     iput-boolean p5, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->includeShared:Z
 
-    .line 538
     iput-boolean p6, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->doWidgets:Z
 
-    .line 539
     iput-boolean p7, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->allApps:Z
 
-    .line 540
     iput-boolean p8, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->includeSystem:Z
 
-    .line 541
     iput-boolean p9, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->doCompress:Z
 
-    .line 542
     iput-object p10, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->packages:[Ljava/lang/String;
 
-    .line 543
     iput-boolean p11, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->shouldKillAfterBackup:Z
 
-    .line 544
     iput-boolean p12, p0, Lcom/android/server/backup/BackupManagerService$FullBackupParams;->ignoreEncryptionPasswordCheck:Z
 
-    .line 545
     return-void
 .end method

@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 142
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 72
     invoke-static {}, Landroid/webkit/WebViewFactory;->getProvider()Landroid/webkit/WebViewFactoryProvider;
 
     move-result-object v0
@@ -45,7 +43,6 @@
     .param p1, "origin"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p1, "origin"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .locals 0
 
     .prologue
-    .line 131
     return-void
 .end method
 
@@ -81,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 106
     .local p2, "callback":Landroid/webkit/ValueCallback;, "Landroid/webkit/ValueCallback<Ljava/lang/Boolean;>;"
     return-void
 .end method
@@ -101,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 91
     .local p1, "callback":Landroid/webkit/ValueCallback;, "Landroid/webkit/ValueCallback<Ljava/util/Set<Ljava/lang/String;>;>;"
     return-void
 .end method

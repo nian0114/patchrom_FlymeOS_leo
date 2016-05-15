@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,14 +52,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 87
     const-string v2, "authority"
 
     invoke-interface {p1, v3, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 88
     .local v1, "authority":Ljava/lang/String;
     const-string v2, "accountType"
 
@@ -68,7 +65,6 @@
 
     move-result-object v0
 
-    .line 89
     .local v0, "accountType":Ljava/lang/String;
     invoke-static {v1, v0}, Landroid/content/SyncAdapterType;->newKey(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SyncAdapterType;
 
@@ -87,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 79
     invoke-virtual {p0, p1}, Landroid/content/SyncAdaptersCache$MySerializer;->createFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/content/SyncAdapterType;
 
     move-result-object v0
@@ -108,21 +103,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 81
     const-string v0, "authority"
 
     iget-object v1, p1, Landroid/content/SyncAdapterType;->authority:Ljava/lang/String;
 
     invoke-interface {p2, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 82
     const-string v0, "accountType"
 
     iget-object v1, p1, Landroid/content/SyncAdapterType;->accountType:Ljava/lang/String;
 
     invoke-interface {p2, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 83
     return-void
 .end method
 
@@ -135,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 79
     check-cast p1, Landroid/content/SyncAdapterType;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/SyncAdaptersCache$MySerializer;->writeAsXml(Landroid/content/SyncAdapterType;Lorg/xmlpull/v1/XmlSerializer;)V

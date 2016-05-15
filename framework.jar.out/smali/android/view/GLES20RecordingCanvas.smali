@@ -27,7 +27,6 @@
     .locals 2
 
     .prologue
-    .line 34
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0x19
@@ -43,10 +42,8 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/view/GLES20Canvas;-><init>()V
 
-    .line 41
     return-void
 .end method
 
@@ -55,18 +52,16 @@
     .param p0, "node"    # Landroid/view/RenderNode;
 
     .prologue
-    .line 44
     if-nez p0, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "node cannot be null"
+    const-string v2, "node cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 45
     :cond_0
     sget-object v1, Landroid/view/GLES20RecordingCanvas;->sPool:Landroid/util/Pools$SynchronizedPool;
 
@@ -76,22 +71,18 @@
 
     check-cast v0, Landroid/view/GLES20RecordingCanvas;
 
-    .line 46
     .local v0, "canvas":Landroid/view/GLES20RecordingCanvas;
     if-nez v0, :cond_1
 
-    .line 47
     new-instance v0, Landroid/view/GLES20RecordingCanvas;
 
     .end local v0    # "canvas":Landroid/view/GLES20RecordingCanvas;
     invoke-direct {v0}, Landroid/view/GLES20RecordingCanvas;-><init>()V
 
-    .line 49
     .restart local v0    # "canvas":Landroid/view/GLES20RecordingCanvas;
     :cond_1
     iput-object p0, v0, Landroid/view/GLES20RecordingCanvas;->mNode:Landroid/view/RenderNode;
 
-    .line 50
     return-object v0
 .end method
 
@@ -101,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 59
     iget-wide v0, p0, Landroid/view/GLES20RecordingCanvas;->mRenderer:J
 
     invoke-static {v0, v1}, Landroid/view/GLES20RecordingCanvas;->nFinishRecording(J)J
@@ -116,7 +106,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/view/GLES20RecordingCanvas;->mNode:Landroid/view/RenderNode;
 
     if-ne p1, v0, :cond_0
@@ -136,16 +125,13 @@
     .locals 1
 
     .prologue
-    .line 54
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/GLES20RecordingCanvas;->mNode:Landroid/view/RenderNode;
 
-    .line 55
     sget-object v0, Landroid/view/GLES20RecordingCanvas;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 56
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 190
     .local p0, "this":Landroid/hardware/camera2/utils/TaskDrainer$1;, "Landroid/hardware/camera2/utils/TaskDrainer.1;"
     iput-object p1, p0, Landroid/hardware/camera2/utils/TaskDrainer$1;->this$0:Landroid/hardware/camera2/utils/TaskDrainer;
 
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 193
     .local p0, "this":Landroid/hardware/camera2/utils/TaskDrainer$1;, "Landroid/hardware/camera2/utils/TaskDrainer.1;"
     iget-object v0, p0, Landroid/hardware/camera2/utils/TaskDrainer$1;->this$0:Landroid/hardware/camera2/utils/TaskDrainer;
 
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 194
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,11 +81,10 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "onDrained"
+    const-string v1, "onDrained"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     :cond_0
     iget-object v0, p0, Landroid/hardware/camera2/utils/TaskDrainer$1;->this$0:Landroid/hardware/camera2/utils/TaskDrainer;
 
@@ -99,6 +95,5 @@
 
     invoke-interface {v0}, Landroid/hardware/camera2/utils/TaskDrainer$DrainListener;->onDrained()V
 
-    .line 198
     return-void
 .end method

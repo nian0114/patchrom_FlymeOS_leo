@@ -24,10 +24,8 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 920
     iput-object p1, p0, Landroid/app/UiAutomation$IAccessibilityServiceClientImpl;->this$0:Landroid/app/UiAutomation;
 
-    .line 921
     const/4 v0, 0x0
 
     new-instance v1, Landroid/app/UiAutomation$IAccessibilityServiceClientImpl$1;
@@ -36,6 +34,5 @@
 
     invoke-direct {p0, v0, p2, v1}, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;-><init>(Landroid/content/Context;Landroid/os/Looper;Landroid/accessibilityservice/AccessibilityService$Callbacks;)V
 
-    .line 967
     return-void
 .end method

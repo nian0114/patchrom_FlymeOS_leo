@@ -23,14 +23,12 @@
     .locals 2
 
     .prologue
-    .line 111
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;-><init>(II)V
 
-    .line 112
     return-void
 .end method
 
@@ -39,7 +37,6 @@
     .param p1, "x0"    # Landroid/hardware/hdmi/HdmiRecordSources$1;
 
     .prologue
-    .line 107
     invoke-direct {p0}, Landroid/hardware/hdmi/HdmiRecordSources$OwnSource;-><init>()V
 
     return-void
@@ -53,7 +50,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0

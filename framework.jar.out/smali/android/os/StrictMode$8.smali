@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1868
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1870
     new-instance v0, Landroid/os/StrictMode$ThreadSpanState;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1868
     invoke-virtual {p0}, Landroid/os/StrictMode$8;->initialValue()Landroid/os/StrictMode$ThreadSpanState;
 
     move-result-object v0

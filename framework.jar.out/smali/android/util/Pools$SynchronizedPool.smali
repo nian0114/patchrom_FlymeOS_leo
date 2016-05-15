@@ -34,18 +34,15 @@
     .param p1, "maxPoolSize"    # I
 
     .prologue
-    .line 148
     .local p0, "this":Landroid/util/Pools$SynchronizedPool;, "Landroid/util/Pools$SynchronizedPool<TT;>;"
     invoke-direct {p0, p1}, Landroid/util/Pools$SimplePool;-><init>(I)V
 
-    .line 138
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/util/Pools$SynchronizedPool;->mLock:Ljava/lang/Object;
 
-    .line 149
     return-void
 .end method
 
@@ -60,13 +57,11 @@
     .end annotation
 
     .prologue
-    .line 153
     .local p0, "this":Landroid/util/Pools$SynchronizedPool;, "Landroid/util/Pools$SynchronizedPool<TT;>;"
     iget-object v1, p0, Landroid/util/Pools$SynchronizedPool;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 154
     :try_start_0
     invoke-super {p0}, Landroid/util/Pools$SimplePool;->acquire()Ljava/lang/Object;
 
@@ -76,7 +71,6 @@
 
     return-object v0
 
-    .line 155
     :catchall_0
     move-exception v0
 
@@ -96,14 +90,12 @@
     .end annotation
 
     .prologue
-    .line 160
     .local p0, "this":Landroid/util/Pools$SynchronizedPool;, "Landroid/util/Pools$SynchronizedPool<TT;>;"
     .local p1, "element":Ljava/lang/Object;, "TT;"
     iget-object v1, p0, Landroid/util/Pools$SynchronizedPool;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 161
     :try_start_0
     invoke-super {p0, p1}, Landroid/util/Pools$SimplePool;->release(Ljava/lang/Object;)Z
 
@@ -113,7 +105,6 @@
 
     return v0
 
-    .line 162
     :catchall_0
     move-exception v0
 

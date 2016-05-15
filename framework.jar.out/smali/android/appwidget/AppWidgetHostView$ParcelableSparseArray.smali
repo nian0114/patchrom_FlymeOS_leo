@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 611
     new-instance v0, Landroid/appwidget/AppWidgetHostView$ParcelableSparseArray$1;
 
     invoke-direct {v0}, Landroid/appwidget/AppWidgetHostView$ParcelableSparseArray$1;-><init>()V
@@ -59,7 +58,6 @@
     .locals 0
 
     .prologue
-    .line 597
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
     return-void
@@ -70,7 +68,6 @@
     .param p1, "x0"    # Landroid/appwidget/AppWidgetHostView$1;
 
     .prologue
-    .line 597
     invoke-direct {p0}, Landroid/appwidget/AppWidgetHostView$ParcelableSparseArray;-><init>()V
 
     return-void
@@ -82,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 599
     const/4 v0, 0x0
 
     return v0
@@ -94,30 +90,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 603
     invoke-virtual {p0}, Landroid/appwidget/AppWidgetHostView$ParcelableSparseArray;->size()I
 
     move-result v0
 
-    .line 604
     .local v0, "count":I
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 605
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 606
     invoke-virtual {p0, v1}, Landroid/appwidget/AppWidgetHostView$ParcelableSparseArray;->keyAt(I)I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 607
     invoke-virtual {p0, v1}, Landroid/appwidget/AppWidgetHostView$ParcelableSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -128,12 +119,10 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 605
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 609
     :cond_0
     return-void
 .end method

@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 27
     const-string v0, "com.android.ims.internal.IImsVideoCallCallback"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 28
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 35
     if-nez p0, :cond_0
 
-    .line 36
     const/4 v0, 0x0
 
-    .line 42
     :goto_0
     return-object v0
 
-    .line 38
     :cond_0
     const-string v1, "com.android.ims.internal.IImsVideoCallCallback"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 39
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 40
     check-cast v0, Lcom/android/ims/internal/IImsVideoCallCallback;
 
     goto :goto_0
 
-    .line 42
     :cond_1
     new-instance v0, Lcom/android/ims/internal/IImsVideoCallCallback$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 46
     return-object p0
 .end method
 
@@ -129,10 +118,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 50
     sparse-switch p1, :sswitch_data_0
 
-    .line 140
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -140,7 +127,6 @@
     :goto_0
     return v3
 
-    .line 54
     :sswitch_0
     const-string v4, "com.android.ims.internal.IImsVideoCallCallback"
 
@@ -148,20 +134,17 @@
 
     goto :goto_0
 
-    .line 59
     :sswitch_1
     const-string v4, "com.android.ims.internal.IImsVideoCallCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 62
     sget-object v4, Landroid/telecom/VideoProfile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -170,14 +153,12 @@
 
     check-cast v0, Landroid/telecom/VideoProfile;
 
-    .line 67
     .local v0, "_arg0":Landroid/telecom/VideoProfile;
     :goto_1
     invoke-virtual {p0, v0}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->receiveSessionModifyRequest(Landroid/telecom/VideoProfile;)V
 
     goto :goto_0
 
-    .line 65
     .end local v0    # "_arg0":Landroid/telecom/VideoProfile;
     :cond_0
     const/4 v0, 0x0
@@ -185,19 +166,16 @@
     .restart local v0    # "_arg0":Landroid/telecom/VideoProfile;
     goto :goto_1
 
-    .line 72
     .end local v0    # "_arg0":Landroid/telecom/VideoProfile;
     :sswitch_2
     const-string v4, "com.android.ims.internal.IImsVideoCallCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 76
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -205,7 +183,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 77
     sget-object v4, Landroid/telecom/VideoProfile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -214,7 +191,6 @@
 
     check-cast v1, Landroid/telecom/VideoProfile;
 
-    .line 83
     .local v1, "_arg1":Landroid/telecom/VideoProfile;
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -223,7 +199,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 84
     sget-object v4, Landroid/telecom/VideoProfile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -232,14 +207,12 @@
 
     check-cast v2, Landroid/telecom/VideoProfile;
 
-    .line 89
     .local v2, "_arg2":Landroid/telecom/VideoProfile;
     :goto_3
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->receiveSessionModifyResponse(ILandroid/telecom/VideoProfile;Landroid/telecom/VideoProfile;)V
 
     goto :goto_0
 
-    .line 80
     .end local v1    # "_arg1":Landroid/telecom/VideoProfile;
     .end local v2    # "_arg2":Landroid/telecom/VideoProfile;
     :cond_1
@@ -248,14 +221,12 @@
     .restart local v1    # "_arg1":Landroid/telecom/VideoProfile;
     goto :goto_2
 
-    .line 87
     :cond_2
     const/4 v2, 0x0
 
     .restart local v2    # "_arg2":Landroid/telecom/VideoProfile;
     goto :goto_3
 
-    .line 94
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/telecom/VideoProfile;
     .end local v2    # "_arg2":Landroid/telecom/VideoProfile;
@@ -264,42 +235,35 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 97
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->handleCallSessionEvent(I)V
 
     goto :goto_0
 
-    .line 102
     .end local v0    # "_arg0":I
     :sswitch_4
     const-string v4, "com.android.ims.internal.IImsVideoCallCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 104
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 106
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 107
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->changePeerDimensions(II)V
 
     goto :goto_0
 
-    .line 112
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     :sswitch_5
@@ -307,32 +271,27 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 115
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->changeCallDataUsage(I)V
 
     goto :goto_0
 
-    .line 120
     .end local v0    # "_arg0":I
     :sswitch_6
     const-string v4, "com.android.ims.internal.IImsVideoCallCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 123
     sget-object v4, Landroid/telecom/CameraCapabilities;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -341,14 +300,12 @@
 
     check-cast v0, Landroid/telecom/CameraCapabilities;
 
-    .line 128
     .local v0, "_arg0":Landroid/telecom/CameraCapabilities;
     :goto_4
     invoke-virtual {p0, v0}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->changeCameraCapabilities(Landroid/telecom/CameraCapabilities;)V
 
     goto/16 :goto_0
 
-    .line 126
     .end local v0    # "_arg0":Landroid/telecom/CameraCapabilities;
     :cond_3
     const/4 v0, 0x0
@@ -356,25 +313,21 @@
     .restart local v0    # "_arg0":Landroid/telecom/CameraCapabilities;
     goto :goto_4
 
-    .line 133
     .end local v0    # "_arg0":Landroid/telecom/CameraCapabilities;
     :sswitch_7
     const-string v4, "com.android.ims.internal.IImsVideoCallCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 135
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 136
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/ims/internal/IImsVideoCallCallback$Stub;->changeVideoQuality(I)V
 
     goto/16 :goto_0
 
-    .line 50
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

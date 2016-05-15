@@ -63,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     sput v0, Landroid/media/PlayerRecord;->sLastRccId:I
@@ -80,30 +79,22 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 220
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput v1, p0, Landroid/media/PlayerRecord;->mRccId:I
 
-    .line 221
     iput-object p1, p0, Landroid/media/PlayerRecord;->mMediaIntent:Landroid/app/PendingIntent;
 
-    .line 222
     iput-object p2, p0, Landroid/media/PlayerRecord;->mReceiverComponent:Landroid/content/ComponentName;
 
-    .line 223
     iput-object p3, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
-    .line 224
     iput v1, p0, Landroid/media/PlayerRecord;->mCallingUid:I
 
-    .line 225
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/PlayerRecord;->mRcClient:Landroid/media/IRemoteControlClient;
 
-    .line 226
     sget v1, Landroid/media/PlayerRecord;->sLastRccId:I
 
     add-int/lit8 v1, v1, 0x1
@@ -112,7 +103,6 @@
 
     iput v1, p0, Landroid/media/PlayerRecord;->mRccId:I
 
-    .line 227
     new-instance v1, Landroid/media/PlayerRecord$RccPlaybackState;
 
     const/4 v2, 0x1
@@ -125,15 +115,12 @@
 
     iput-object v1, p0, Landroid/media/PlayerRecord;->mPlaybackState:Landroid/media/PlayerRecord$RccPlaybackState;
 
-    .line 232
     invoke-virtual {p0}, Landroid/media/PlayerRecord;->resetPlaybackInfo()V
 
-    .line 233
     iget-object v1, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
     if-eqz v1, :cond_0
 
-    .line 235
     :try_start_0
     iget-object v1, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
@@ -143,16 +130,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 240
     :cond_0
     :goto_0
     return-void
 
-    .line 236
     :catch_0
     move-exception v0
 
-    .line 237
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/media/PlayerRecord;->sController:Landroid/media/MediaFocusControl;
 
@@ -168,10 +152,8 @@
     .param p0, "mfc"    # Landroid/media/MediaFocusControl;
 
     .prologue
-    .line 215
     sput-object p0, Landroid/media/PlayerRecord;->sController:Landroid/media/MediaFocusControl;
 
-    .line 216
     return-void
 .end method
 
@@ -181,14 +163,12 @@
     .locals 2
 
     .prologue
-    .line 349
     sget-object v0, Landroid/media/PlayerRecord;->sController:Landroid/media/MediaFocusControl;
 
     iget-object v1, p0, Landroid/media/PlayerRecord;->mMediaIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaFocusControl;->unregisterMediaButtonIntentAsync(Landroid/app/PendingIntent;)V
 
-    .line 350
     return-void
 .end method
 
@@ -196,27 +176,22 @@
     .locals 2
 
     .prologue
-    .line 340
     invoke-virtual {p0}, Landroid/media/PlayerRecord;->unlinkToRcClientDeath()V
 
-    .line 341
     iget-object v0, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 342
     iget-object v0, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 343
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
-    .line 345
     :cond_0
     return-void
 .end method
@@ -227,10 +202,8 @@
     .param p2, "registrationInfo"    # Z
 
     .prologue
-    .line 192
     if-eqz p2, :cond_0
 
-    .line 193
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -325,11 +298,9 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 211
     :goto_0
     return-void
 
-    .line 202
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -449,13 +420,10 @@
     .end annotation
 
     .prologue
-    .line 354
     invoke-virtual {p0}, Landroid/media/PlayerRecord;->destroy()V
 
-    .line 355
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 356
     return-void
 .end method
 
@@ -463,7 +431,6 @@
     .locals 1
 
     .prologue
-    .line 257
     iget-object v0, p0, Landroid/media/PlayerRecord;->mMediaIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -473,7 +440,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/media/PlayerRecord;->mReceiverComponent:Landroid/content/ComponentName;
 
     return-object v0
@@ -483,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-object v0, p0, Landroid/media/PlayerRecord;->mRcClient:Landroid/media/IRemoteControlClient;
 
     return-object v0
@@ -493,7 +458,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget v0, p0, Landroid/media/PlayerRecord;->mRccId:I
 
     return v0
@@ -504,29 +468,24 @@
     .param p1, "pi"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 261
     iget-object v0, p0, Landroid/media/PlayerRecord;->mToken:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 262
     iget-object v0, p0, Landroid/media/PlayerRecord;->mMediaIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, p1}, Landroid/app/PendingIntent;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 267
     :goto_0
     return v0
 
-    .line 264
     :cond_0
     iget-object v0, p0, Landroid/media/PlayerRecord;->mReceiverComponent:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_1
 
-    .line 265
     iget-object v0, p0, Landroid/media/PlayerRecord;->mReceiverComponent:Landroid/content/ComponentName;
 
     invoke-virtual {p1}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
@@ -543,7 +502,6 @@
 
     goto :goto_0
 
-    .line 267
     :cond_1
     const/4 v0, 0x0
 
@@ -554,7 +512,6 @@
     .locals 1
 
     .prologue
-    .line 273
     iget-object v0, p0, Landroid/media/PlayerRecord;->mPlaybackState:Landroid/media/PlayerRecord$RccPlaybackState;
 
     iget v0, v0, Landroid/media/PlayerRecord$RccPlaybackState;->mState:I
@@ -572,16 +529,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 309
     invoke-virtual {p0}, Landroid/media/PlayerRecord;->unlinkToRcClientDeath()V
 
-    .line 311
     iput-object v0, p0, Landroid/media/PlayerRecord;->mRcClient:Landroid/media/IRemoteControlClient;
 
-    .line 312
     iput-object v0, p0, Landroid/media/PlayerRecord;->mCallingPackageName:Ljava/lang/String;
 
-    .line 313
     return-void
 .end method
 
@@ -592,35 +545,26 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 281
     iget-object v3, p0, Landroid/media/PlayerRecord;->mRcClientDeathHandler:Landroid/media/PlayerRecord$RcClientDeathHandler;
 
     if-eqz v3, :cond_0
 
-    .line 283
     invoke-virtual {p0}, Landroid/media/PlayerRecord;->unlinkToRcClientDeath()V
 
-    .line 286
     :cond_0
     iput-object p1, p0, Landroid/media/PlayerRecord;->mRcClient:Landroid/media/IRemoteControlClient;
 
-    .line 287
     iput-object p2, p0, Landroid/media/PlayerRecord;->mCallingPackageName:Ljava/lang/String;
 
-    .line 288
     iput p3, p0, Landroid/media/PlayerRecord;->mCallingUid:I
 
-    .line 289
     if-nez p1, :cond_1
 
-    .line 291
     invoke-virtual {p0}, Landroid/media/PlayerRecord;->resetPlaybackInfo()V
 
-    .line 305
     :goto_0
     return-void
 
-    .line 293
     :cond_1
     iget-object v3, p0, Landroid/media/PlayerRecord;->mRcClient:Landroid/media/IRemoteControlClient;
 
@@ -628,7 +572,6 @@
 
     move-result-object v0
 
-    .line 294
     .local v0, "b":Landroid/os/IBinder;
     new-instance v2, Landroid/media/PlayerRecord$RcClientDeathHandler;
 
@@ -636,7 +579,6 @@
 
     invoke-direct {v2, p0, v0, v3}, Landroid/media/PlayerRecord$RcClientDeathHandler;-><init>(Landroid/media/PlayerRecord;Landroid/os/IBinder;Landroid/app/PendingIntent;)V
 
-    .line 297
     .local v2, "rcdh":Landroid/media/PlayerRecord$RcClientDeathHandler;
     const/4 v3, 0x0
 
@@ -645,17 +587,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
     :goto_1
     iput-object v2, p0, Landroid/media/PlayerRecord;->mRcClientDeathHandler:Landroid/media/PlayerRecord$RcClientDeathHandler;
 
     goto :goto_0
 
-    .line 298
     :catch_0
     move-exception v1
 
-    .line 300
     .local v1, "e":Landroid/os/RemoteException;
     const-string v3, "MediaFocusControl"
 
@@ -663,7 +602,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "registerRemoteControlClient() has a dead client "
+    const-string v5, "registerRemoteControlClient() has a dead client "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -679,7 +618,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     const/4 v3, 0x0
 
     iput-object v3, p0, Landroid/media/PlayerRecord;->mRcClient:Landroid/media/IRemoteControlClient;
@@ -693,38 +631,30 @@
     .prologue
     const/16 v1, 0xf
 
-    .line 316
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/media/PlayerRecord;->mPlaybackType:I
 
-    .line 317
     iput v1, p0, Landroid/media/PlayerRecord;->mPlaybackVolume:I
 
-    .line 318
     iput v1, p0, Landroid/media/PlayerRecord;->mPlaybackVolumeMax:I
 
-    .line 319
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/PlayerRecord;->mPlaybackVolumeHandling:I
 
-    .line 320
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/media/PlayerRecord;->mPlaybackStream:I
 
-    .line 321
     iget-object v0, p0, Landroid/media/PlayerRecord;->mPlaybackState:Landroid/media/PlayerRecord$RccPlaybackState;
 
     invoke-virtual {v0}, Landroid/media/PlayerRecord$RccPlaybackState;->reset()V
 
-    .line 322
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/PlayerRecord;->mRemoteVolumeObs:Landroid/media/IRemoteVolumeObserver;
 
-    .line 323
     return-void
 .end method
 
@@ -732,7 +662,6 @@
     .locals 4
 
     .prologue
-    .line 327
     iget-object v1, p0, Landroid/media/PlayerRecord;->mRcClientDeathHandler:Landroid/media/PlayerRecord$RcClientDeathHandler;
 
     if-eqz v1, :cond_0
@@ -746,7 +675,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 329
     :try_start_0
     iget-object v1, p0, Landroid/media/PlayerRecord;->mRcClientDeathHandler:Landroid/media/PlayerRecord$RcClientDeathHandler;
 
@@ -761,23 +689,19 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 330
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/PlayerRecord;->mRcClientDeathHandler:Landroid/media/PlayerRecord$RcClientDeathHandler;
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 336
     :cond_0
     :goto_0
     return-void
 
-    .line 331
     :catch_0
     move-exception v0
 
-    .line 333
     .local v0, "e":Ljava/util/NoSuchElementException;
     const-string v1, "MediaFocusControl"
 

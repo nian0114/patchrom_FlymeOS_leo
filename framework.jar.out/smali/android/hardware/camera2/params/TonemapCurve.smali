@@ -53,75 +53,60 @@
 
     const/4 v1, 0x0
 
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 350
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mHashCalculated:Z
 
-    .line 106
-    const-string/jumbo v0, "red must not be null"
+    const-string v0, "red must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     const-string v0, "green must not be null"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     const-string v0, "blue must not be null"
 
     invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
-    const-string/jumbo v0, "red"
+    const-string v0, "red"
 
     invoke-static {p1, v3, v0}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentArrayLengthDivisibleBy([FILjava/lang/String;)V
 
-    .line 111
     const-string v0, "green"
 
     invoke-static {p2, v3, v0}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentArrayLengthDivisibleBy([FILjava/lang/String;)V
 
-    .line 112
     const-string v0, "blue"
 
     invoke-static {p3, v3, v0}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentArrayLengthDivisibleBy([FILjava/lang/String;)V
 
-    .line 114
-    const-string/jumbo v0, "red"
+    const-string v0, "red"
 
     invoke-static {p1, v4, v0}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentArrayLengthNoLessThan([FILjava/lang/String;)V
 
-    .line 115
     const-string v0, "green"
 
     invoke-static {p2, v4, v0}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentArrayLengthNoLessThan([FILjava/lang/String;)V
 
-    .line 116
     const-string v0, "blue"
 
     invoke-static {p3, v4, v0}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentArrayLengthNoLessThan([FILjava/lang/String;)V
 
-    .line 118
-    const-string/jumbo v0, "red"
+    const-string v0, "red"
 
     invoke-static {p1, v1, v2, v0}, Lcom/android/internal/util/Preconditions;->checkArrayElementsInRange([FFFLjava/lang/String;)[F
 
-    .line 119
     const-string v0, "green"
 
     invoke-static {p2, v1, v2, v0}, Lcom/android/internal/util/Preconditions;->checkArrayElementsInRange([FFFLjava/lang/String;)[F
 
-    .line 120
     const-string v0, "blue"
 
     invoke-static {p3, v1, v2, v0}, Lcom/android/internal/util/Preconditions;->checkArrayElementsInRange([FFFLjava/lang/String;)[F
 
-    .line 122
     array-length v0, p1
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([FI)[F
@@ -130,7 +115,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mRed:[F
 
-    .line 123
     array-length v0, p2
 
     invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([FI)[F
@@ -139,7 +123,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mGreen:[F
 
-    .line 124
     array-length v0, p3
 
     invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([FI)[F
@@ -148,7 +131,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mBlue:[F
 
-    .line 125
     return-void
 .end method
 
@@ -159,14 +141,12 @@
     .param p2, "arrayName"    # Ljava/lang/String;
 
     .prologue
-    .line 129
     array-length v0, p0
 
     rem-int/2addr v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 130
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -195,7 +175,6 @@
 
     throw v0
 
-    .line 133
     :cond_0
     return-void
 .end method
@@ -207,12 +186,10 @@
     .param p2, "arrayName"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     array-length v0, p0
 
     if-ge v0, p1, :cond_0
 
-    .line 151
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -241,7 +218,6 @@
 
     throw v0
 
-    .line 154
     :cond_0
     return-void
 .end method
@@ -251,10 +227,8 @@
     .param p0, "colorChannel"    # I
 
     .prologue
-    .line 136
     packed-switch p0, :pswitch_data_0
 
-    .line 142
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "colorChannel out of range"
@@ -263,11 +237,9 @@
 
     throw v0
 
-    .line 145
     :pswitch_0
     return p0
 
-    .line 136
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -281,29 +253,24 @@
     .param p1, "colorChannel"    # I
 
     .prologue
-    .line 310
     invoke-static {p1}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentColorChannel(I)I
 
-    .line 311
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "["
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 312
     .local v4, "sb":Ljava/lang/StringBuilder;
     invoke-direct {p0, p1}, Landroid/hardware/camera2/params/TonemapCurve;->getCurve(I)[F
 
     move-result-object v0
 
-    .line 313
     .local v0, "curve":[F
     array-length v5, v0
 
     div-int/lit8 v3, v5, 0x2
 
-    .line 314
     .local v3, "pointCount":I
     const/4 v1, 0x0
 
@@ -314,41 +281,34 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 315
     const-string v5, "("
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 316
     aget v5, v0, v2
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 317
     const-string v5, ", "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 318
     add-int/lit8 v5, v2, 0x1
 
     aget v5, v0, v5
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 319
     const-string v5, "), "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 314
     add-int/lit8 v1, v1, 0x1
 
     add-int/lit8 v2, v2, 0x2
 
     goto :goto_0
 
-    .line 322
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
@@ -358,12 +318,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 323
     const-string v5, "]"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 324
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -376,10 +334,8 @@
     .param p1, "colorChannel"    # I
 
     .prologue
-    .line 328
     packed-switch p1, :pswitch_data_0
 
-    .line 336
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "colorChannel out of range"
@@ -388,27 +344,22 @@
 
     throw v0
 
-    .line 330
     :pswitch_0
     iget-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mRed:[F
 
-    .line 334
     :goto_0
     return-object v0
 
-    .line 332
     :pswitch_1
     iget-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mGreen:[F
 
     goto :goto_0
 
-    .line 334
     :pswitch_2
     iget-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mBlue:[F
 
     goto :goto_0
 
-    .line 328
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -426,17 +377,14 @@
     .param p3, "offset"    # I
 
     .prologue
-    .line 234
-    const-string/jumbo v1, "offset must not be negative"
+    const-string v1, "offset must not be negative"
 
     invoke-static {p3, v1}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
-    .line 235
     const-string v1, "destination must not be null"
 
     invoke-static {p2, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     array-length v1, p2
 
     add-int/2addr v1, p3
@@ -449,7 +397,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 238
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     const-string v2, "destination too small to fit elements"
@@ -458,13 +405,11 @@
 
     throw v1
 
-    .line 241
     :cond_0
     invoke-direct {p0, p1}, Landroid/hardware/camera2/params/TonemapCurve;->getCurve(I)[F
 
     move-result-object v0
 
-    .line 242
     .local v0, "curve":[F
     const/4 v1, 0x0
 
@@ -472,7 +417,6 @@
 
     invoke-static {v0, v1, p2, p3, v2}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 243
     return-void
 .end method
 
@@ -485,24 +429,19 @@
 
     const/4 v2, 0x0
 
-    .line 255
     if-nez p1, :cond_1
 
-    .line 267
     :cond_0
     :goto_0
     return v2
 
-    .line 258
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 259
     goto :goto_0
 
-    .line 261
     :cond_2
     instance-of v3, p1, Landroid/hardware/camera2/params/TonemapCurve;
 
@@ -510,10 +449,8 @@
 
     move-object v0, p1
 
-    .line 262
     check-cast v0, Landroid/hardware/camera2/params/TonemapCurve;
 
-    .line 263
     .local v0, "other":Landroid/hardware/camera2/params/TonemapCurve;
     iget-object v3, p0, Landroid/hardware/camera2/params/TonemapCurve;->mRed:[F
 
@@ -562,10 +499,8 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 189
     invoke-static {p1}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentColorChannel(I)I
 
-    .line 190
     if-ltz p2, :cond_0
 
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/TonemapCurve;->getPointCount(I)I
@@ -574,7 +509,6 @@
 
     if-lt p2, v3, :cond_1
 
-    .line 191
     :cond_0
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -584,13 +518,11 @@
 
     throw v3
 
-    .line 194
     :cond_1
     invoke-direct {p0, p1}, Landroid/hardware/camera2/params/TonemapCurve;->getCurve(I)[F
 
     move-result-object v0
 
-    .line 196
     .local v0, "curve":[F
     mul-int/lit8 v3, p2, 0x2
 
@@ -598,7 +530,6 @@
 
     aget v1, v0, v3
 
-    .line 197
     .local v1, "pIn":F
     mul-int/lit8 v3, p2, 0x2
 
@@ -606,7 +537,6 @@
 
     aget v2, v0, v3
 
-    .line 199
     .local v2, "pOut":F
     new-instance v3, Landroid/graphics/PointF;
 
@@ -620,10 +550,8 @@
     .param p1, "colorChannel"    # I
 
     .prologue
-    .line 165
     invoke-static {p1}, Landroid/hardware/camera2/params/TonemapCurve;->checkArgumentColorChannel(I)I
 
-    .line 167
     invoke-direct {p0, p1}, Landroid/hardware/camera2/params/TonemapCurve;->getCurve(I)[F
 
     move-result-object v0
@@ -639,19 +567,15 @@
     .locals 3
 
     .prologue
-    .line 275
     iget-boolean v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mHashCalculated:Z
 
     if-eqz v0, :cond_0
 
-    .line 277
     iget v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mHashCode:I
 
-    .line 283
     :goto_0
     return v0
 
-    .line 280
     :cond_0
     iget-object v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mRed:[F
 
@@ -665,12 +589,10 @@
 
     iput v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mHashCode:I
 
-    .line 281
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mHashCalculated:Z
 
-    .line 283
     iget v0, p0, Landroid/hardware/camera2/params/TonemapCurve;->mHashCode:I
 
     goto :goto_0
@@ -680,20 +602,17 @@
     .locals 2
 
     .prologue
-    .line 298
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "TonemapCurve{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 299
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "R:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Landroid/hardware/camera2/params/TonemapCurve;->curveToString(I)Ljava/lang/String;
@@ -702,12 +621,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 301
     const-string v1, ", G:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 302
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Landroid/hardware/camera2/params/TonemapCurve;->curveToString(I)Ljava/lang/String;
@@ -716,12 +633,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 303
     const-string v1, ", B:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 304
     const/4 v1, 0x2
 
     invoke-direct {p0, v1}, Landroid/hardware/camera2/params/TonemapCurve;->curveToString(I)Ljava/lang/String;
@@ -730,12 +645,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 305
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 306
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

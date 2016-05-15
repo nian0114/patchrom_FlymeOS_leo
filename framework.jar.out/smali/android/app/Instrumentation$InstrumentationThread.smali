@@ -24,13 +24,10 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1840
     iput-object p1, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
-    .line 1841
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 1842
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 1845
     const/4 v1, -0x8
 
     :try_start_0
@@ -48,7 +44,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1850
     :goto_0
     iget-object v1, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
@@ -59,25 +54,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 1851
     iget-object v1, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
     invoke-virtual {v1}, Landroid/app/Instrumentation;->startPerformanceSnapshot()V
 
-    .line 1853
     :cond_0
     iget-object v1, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
     invoke-virtual {v1}, Landroid/app/Instrumentation;->onStart()V
 
-    .line 1854
     return-void
 
-    .line 1846
     :catch_0
     move-exception v0
 
-    .line 1847
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string v1, "Instrumentation"
 

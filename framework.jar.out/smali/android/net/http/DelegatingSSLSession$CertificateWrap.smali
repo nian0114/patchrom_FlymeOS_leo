@@ -24,13 +24,10 @@
     .param p1, "certificate"    # Ljava/security/cert/Certificate;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Landroid/net/http/DelegatingSSLSession;-><init>()V
 
-    .line 43
     iput-object p1, p0, Landroid/net/http/DelegatingSSLSession$CertificateWrap;->mCertificate:Ljava/security/cert/Certificate;
 
-    .line 44
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 48
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/security/cert/Certificate;

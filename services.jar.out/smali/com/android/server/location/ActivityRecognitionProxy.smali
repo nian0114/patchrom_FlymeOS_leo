@@ -24,18 +24,14 @@
     .param p6, "initialPackageNameResId"    # I
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object p3, p0, Lcom/android/server/location/ActivityRecognitionProxy;->mActivityRecognitionHardware:Landroid/hardware/location/ActivityRecognitionHardware;
 
-    .line 48
     new-instance v7, Lcom/android/server/location/ActivityRecognitionProxy$1;
 
     invoke-direct {v7, p0}, Lcom/android/server/location/ActivityRecognitionProxy$1;-><init>(Lcom/android/server/location/ActivityRecognitionProxy;)V
 
-    .line 56
     .local v7, "newServiceWork":Ljava/lang/Runnable;
     new-instance v0, Lcom/android/server/ServiceWatcher;
 
@@ -57,7 +53,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/ActivityRecognitionProxy;->mServiceWatcher:Lcom/android/server/ServiceWatcher;
 
-    .line 65
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .param p0, "x0"    # Lcom/android/server/location/ActivityRecognitionProxy;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/server/location/ActivityRecognitionProxy;->mActivityRecognitionHardware:Landroid/hardware/location/ActivityRecognitionHardware;
 
     return-object v0
@@ -78,7 +72,6 @@
     .param p1, "x1"    # Landroid/hardware/location/ActivityRecognitionHardware;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/location/ActivityRecognitionProxy;->bindProvider(Landroid/hardware/location/ActivityRecognitionHardware;)V
 
     return-void
@@ -89,7 +82,6 @@
     .param p1, "activityRecognitionHardware"    # Landroid/hardware/location/ActivityRecognitionHardware;
 
     .prologue
-    .line 100
     iget-object v2, p0, Lcom/android/server/location/ActivityRecognitionProxy;->mServiceWatcher:Lcom/android/server/ServiceWatcher;
 
     invoke-virtual {v2}, Lcom/android/server/ServiceWatcher;->getBinder()Landroid/os/IBinder;
@@ -100,22 +92,18 @@
 
     move-result-object v1
 
-    .line 102
     .local v1, "watcher":Landroid/hardware/location/IActivityRecognitionHardwareWatcher;
     if-nez v1, :cond_0
 
-    .line 103
     const-string v2, "ActivityRecognitionProxy"
 
     const-string v3, "No provider instance found on connection."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :goto_0
     return-void
 
-    .line 108
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/location/ActivityRecognitionProxy;->mActivityRecognitionHardware:Landroid/hardware/location/ActivityRecognitionHardware;
@@ -126,11 +114,9 @@
 
     goto :goto_0
 
-    .line 109
     :catch_0
     move-exception v0
 
-    .line 110
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "ActivityRecognitionProxy"
 
@@ -151,7 +137,6 @@
     .param p5, "initialPackageNameResId"    # I
 
     .prologue
-    .line 79
     new-instance v0, Lcom/android/server/location/ActivityRecognitionProxy;
 
     move-object v1, p0
@@ -168,7 +153,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/ActivityRecognitionProxy;-><init>(Landroid/content/Context;Landroid/os/Handler;Landroid/hardware/location/ActivityRecognitionHardware;III)V
 
-    .line 88
     .local v0, "activityRecognitionProxy":Lcom/android/server/location/ActivityRecognitionProxy;
     iget-object v1, v0, Lcom/android/server/location/ActivityRecognitionProxy;->mServiceWatcher:Lcom/android/server/ServiceWatcher;
 
@@ -178,17 +162,14 @@
 
     if-nez v1, :cond_0
 
-    .line 89
     const-string v1, "ActivityRecognitionProxy"
 
     const-string v2, "ServiceWatcher could not start."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     const/4 v0, 0x0
 
-    .line 93
     .end local v0    # "activityRecognitionProxy":Lcom/android/server/location/ActivityRecognitionProxy;
     :cond_0
     return-object v0

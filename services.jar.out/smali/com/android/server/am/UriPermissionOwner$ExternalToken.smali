@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/android/server/am/UriPermissionOwner$ExternalToken;->this$0:Lcom/android/server/am/UriPermissionOwner;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/am/UriPermissionOwner$ExternalToken;->this$0:Lcom/android/server/am/UriPermissionOwner;
 
     return-object v0

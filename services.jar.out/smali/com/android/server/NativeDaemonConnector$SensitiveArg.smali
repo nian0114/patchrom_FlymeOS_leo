@@ -24,13 +24,10 @@
     .param p1, "arg"    # Ljava/lang/Object;
 
     .prologue
-    .line 262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
     iput-object p1, p0, Lcom/android/server/NativeDaemonConnector$SensitiveArg;->mArg:Ljava/lang/Object;
 
-    .line 264
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 268
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnector$SensitiveArg;->mArg:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

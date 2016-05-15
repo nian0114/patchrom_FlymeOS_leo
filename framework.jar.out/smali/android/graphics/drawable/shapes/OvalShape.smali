@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
 
     return-void
@@ -22,14 +21,12 @@
     .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 36
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/OvalShape;->rect()Landroid/graphics/RectF;
 
     move-result-object v0
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawOval(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 37
     return-void
 .end method
 
@@ -38,12 +35,10 @@
     .param p1, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 41
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/OvalShape;->rect()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 42
     .local v0, "rect":Landroid/graphics/RectF;
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
@@ -87,6 +82,5 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Outline;->setOval(IIII)V
 
-    .line 44
     return-void
 .end method

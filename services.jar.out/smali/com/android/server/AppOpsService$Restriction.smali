@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 1455
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -61,10 +60,8 @@
     .locals 1
 
     .prologue
-    .line 1454
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1457
     sget-object v0, Lcom/android/server/AppOpsService$Restriction;->NO_EXCEPTIONS:Landroid/util/ArraySet;
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$Restriction;->exceptionPackages:Landroid/util/ArraySet;
@@ -77,7 +74,6 @@
     .param p1, "x0"    # Lcom/android/server/AppOpsService$1;
 
     .prologue
-    .line 1454
     invoke-direct {p0}, Lcom/android/server/AppOpsService$Restriction;-><init>()V
 
     return-void

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 3
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     # invokes: Lcom/android/internal/widget/ActionBarOverlayLayout;->haltActionBarHideOffsetAnimations()V
     invoke-static {v0}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$300(Lcom/android/internal/widget/ActionBarOverlayLayout;)V
 
-    .line 136
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     iget-object v1, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
@@ -93,7 +90,6 @@
     # setter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mCurrentActionBarTopAnimator:Landroid/view/ViewPropertyAnimator;
     invoke-static {v0, v1}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$002(Lcom/android/internal/widget/ActionBarOverlayLayout;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 139
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     # getter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBarBottom:Lcom/android/internal/widget/ActionBarContainer;
@@ -118,7 +114,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 140
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     iget-object v1, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$4;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
@@ -163,7 +158,6 @@
     # setter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mCurrentActionBarBottomAnimator:Landroid/view/ViewPropertyAnimator;
     invoke-static {v0, v1}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$202(Lcom/android/internal/widget/ActionBarOverlayLayout;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 144
     :cond_0
     return-void
 .end method

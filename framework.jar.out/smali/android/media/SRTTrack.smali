@@ -26,15 +26,12 @@
     .param p2, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 74
     invoke-direct {p0, p1, p2}, Landroid/media/WebVttTrack;-><init>(Landroid/media/WebVttRenderingWidget;Landroid/media/MediaFormat;)V
 
-    .line 75
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/SRTTrack;->mEventHandler:Landroid/os/Handler;
 
-    .line 76
     return-void
 .end method
 
@@ -44,15 +41,12 @@
     .param p2, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p2}, Landroid/media/WebVttTrack;-><init>(Landroid/media/WebVttRenderingWidget;Landroid/media/MediaFormat;)V
 
-    .line 80
     iput-object p1, p0, Landroid/media/SRTTrack;->mEventHandler:Landroid/os/Handler;
 
-    .line 81
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .param p0, "in"    # Ljava/lang/String;
 
     .prologue
-    .line 194
     const-string v8, ":"
 
     invoke-virtual {p0, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -80,7 +73,6 @@
 
     move-result-wide v0
 
-    .line 195
     .local v0, "hours":J
     const-string v8, ":"
 
@@ -100,7 +92,6 @@
 
     move-result-wide v4
 
-    .line 196
     .local v4, "minutes":J
     const-string v8, ":"
 
@@ -130,7 +121,6 @@
 
     move-result-wide v6
 
-    .line 197
     .local v6, "seconds":J
     const-string v8, ":"
 
@@ -160,7 +150,6 @@
 
     move-result-wide v2
 
-    .line 199
     .local v2, "millies":J
     const-wide/16 v8, 0x3c
 
@@ -202,13 +191,11 @@
     .param p1, "data"    # Landroid/media/SubtitleData;
 
     .prologue
-    .line 86
     :try_start_0
     new-instance v3, Landroid/media/TextTrackCue;
 
     invoke-direct {v3}, Landroid/media/TextTrackCue;-><init>()V
 
-    .line 87
     .local v3, "cue":Landroid/media/TextTrackCue;
     invoke-virtual/range {p1 .. p1}, Landroid/media/SubtitleData;->getStartTimeUs()J
 
@@ -220,7 +207,6 @@
 
     iput-wide v14, v3, Landroid/media/TextTrackCue;->mStartTimeMs:J
 
-    .line 88
     invoke-virtual/range {p1 .. p1}, Landroid/media/SubtitleData;->getStartTimeUs()J
 
     move-result-wide v14
@@ -237,7 +223,6 @@
 
     iput-wide v14, v3, Landroid/media/TextTrackCue;->mEndTimeMs:J
 
-    .line 91
     new-instance v11, Ljava/lang/String;
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/SubtitleData;->getData()[B
@@ -248,7 +233,6 @@
 
     invoke-direct {v11, v13, v14}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 92
     .local v11, "paragraph":Ljava/lang/String;
     const-string v13, "\\r?\\n"
 
@@ -256,7 +240,6 @@
 
     move-result-object v10
 
-    .line 93
     .local v10, "lines":[Ljava/lang/String;
     array-length v13, v10
 
@@ -264,10 +247,8 @@
 
     iput-object v13, v3, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
-    .line 95
     const/4 v5, 0x0
 
-    .line 96
     .local v5, "i":I
     move-object v2, v10
 
@@ -287,7 +268,6 @@
 
     aget-object v9, v2, v7
 
-    .line 97
     .local v9, "line":Ljava/lang/String;
     const/4 v13, 0x1
 
@@ -305,7 +285,6 @@
 
     aput-object v14, v12, v13
 
-    .line 100
     .local v12, "span":[Landroid/media/TextTrackCueSpan;
     iget-object v13, v3, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
@@ -315,7 +294,6 @@
     .restart local v5    # "i":I
     aput-object v12, v13, v6
 
-    .line 96
     add-int/lit8 v7, v7, 0x1
 
     move v6, v5
@@ -324,7 +302,6 @@
     .restart local v6    # "i":I
     goto :goto_0
 
-    .line 103
     .end local v9    # "line":Ljava/lang/String;
     .end local v12    # "span":[Landroid/media/TextTrackCueSpan;
     :cond_0
@@ -334,7 +311,6 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 107
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v3    # "cue":Landroid/media/TextTrackCue;
     .end local v6    # "i":I
@@ -345,11 +321,9 @@
     :goto_1
     return-void
 
-    .line 104
     :catch_0
     move-exception v4
 
-    .line 105
     .local v4, "e":Ljava/io/UnsupportedEncodingException;
     const-string v13, "SRTTrack"
 
@@ -357,7 +331,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "subtitle data is not UTF-8 encoded: "
+    const-string v15, "subtitle data is not UTF-8 encoded: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -383,7 +357,6 @@
     .param p3, "runID"    # J
 
     .prologue
-    .line 113
     :try_start_0
     new-instance v14, Ljava/io/InputStreamReader;
 
@@ -403,13 +376,11 @@
 
     invoke-direct {v14, v0, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 114
     .local v14, "r":Ljava/io/Reader;
     new-instance v4, Ljava/io/BufferedReader;
 
     invoke-direct {v4, v14}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 117
     .local v4, "br":Ljava/io/BufferedReader;
     :goto_0
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -419,15 +390,12 @@
     .local v7, "header":Ljava/lang/String;
     if-eqz v7, :cond_0
 
-    .line 119
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 120
     if-nez v7, :cond_1
 
-    .line 155
     .end local v4    # "br":Ljava/io/BufferedReader;
     .end local v7    # "header":Ljava/lang/String;
     .end local v14    # "r":Ljava/io/Reader;
@@ -435,7 +403,6 @@
     :goto_1
     return-void
 
-    .line 124
     .restart local v4    # "br":Ljava/io/BufferedReader;
     .restart local v7    # "header":Ljava/lang/String;
     .restart local v14    # "r":Ljava/io/Reader;
@@ -444,7 +411,6 @@
 
     invoke-direct {v5}, Landroid/media/TextTrackCue;-><init>()V
 
-    .line 125
     .local v5, "cue":Landroid/media/TextTrackCue;
     const-string v18, "-->"
 
@@ -454,7 +420,6 @@
 
     move-result-object v17
 
-    .line 126
     .local v17, "startEnd":[Ljava/lang/String;
     const/16 v18, 0x0
 
@@ -468,7 +433,6 @@
 
     iput-wide v0, v5, Landroid/media/TextTrackCue;->mStartTimeMs:J
 
-    .line 127
     const/16 v18, 0x1
 
     aget-object v18, v17, v18
@@ -481,12 +445,10 @@
 
     iput-wide v0, v5, Landroid/media/TextTrackCue;->mEndTimeMs:J
 
-    .line 130
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 131
     .local v13, "paragraph":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_2
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -508,7 +470,6 @@
 
     if-nez v18, :cond_2
 
-    .line 132
     invoke-interface {v13, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
@@ -516,7 +477,6 @@
 
     goto :goto_2
 
-    .line 149
     .end local v4    # "br":Ljava/io/BufferedReader;
     .end local v5    # "cue":Landroid/media/TextTrackCue;
     .end local v7    # "header":Ljava/lang/String;
@@ -527,7 +487,6 @@
     :catch_0
     move-exception v6
 
-    .line 150
     .local v6, "e":Ljava/io/UnsupportedEncodingException;
     const-string v18, "SRTTrack"
 
@@ -535,7 +494,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "subtitle data is not UTF-8 encoded: "
+    const-string v20, "subtitle data is not UTF-8 encoded: "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -555,7 +514,6 @@
 
     goto :goto_1
 
-    .line 135
     .end local v6    # "e":Ljava/io/UnsupportedEncodingException;
     .restart local v4    # "br":Ljava/io/BufferedReader;
     .restart local v5    # "cue":Landroid/media/TextTrackCue;
@@ -567,7 +525,6 @@
     :cond_2
     const/4 v8, 0x0
 
-    .line 136
     .local v8, "i":I
     :try_start_1
     invoke-interface {v13}, Ljava/util/List;->size()I
@@ -584,7 +541,6 @@
 
     iput-object v0, v5, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
-    .line 137
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -605,7 +561,6 @@
 
     iput-object v0, v5, Landroid/media/TextTrackCue;->mStrings:[Ljava/lang/String;
 
-    .line 138
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
@@ -628,7 +583,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 139
     .local v12, "line":Ljava/lang/String;
     const/16 v18, 0x1
 
@@ -652,7 +606,6 @@
 
     aput-object v19, v16, v18
 
-    .line 142
     .local v16, "span":[Landroid/media/TextTrackCueSpan;
     iget-object v0, v5, Landroid/media/TextTrackCue;->mStrings:[Ljava/lang/String;
 
@@ -660,7 +613,6 @@
 
     aput-object v12, v18, v9
 
-    .line 143
     iget-object v0, v5, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
     move-object/from16 v18, v0
@@ -673,12 +625,10 @@
 
     move v9, v8
 
-    .line 144
     .end local v8    # "i":I
     .restart local v9    # "i":I
     goto :goto_3
 
-    .line 146
     .end local v12    # "line":Ljava/lang/String;
     .end local v16    # "span":[Landroid/media/TextTrackCueSpan;
     :cond_3
@@ -691,7 +641,6 @@
 
     goto/16 :goto_0
 
-    .line 151
     .end local v4    # "br":Ljava/io/BufferedReader;
     .end local v5    # "cue":Landroid/media/TextTrackCue;
     .end local v7    # "header":Ljava/lang/String;
@@ -704,7 +653,6 @@
     :catch_1
     move-exception v11
 
-    .line 153
     .local v11, "ioe":Ljava/io/IOException;
     const-string v18, "SRTTrack"
 
@@ -734,7 +682,6 @@
     .end annotation
 
     .prologue
-    .line 159
     .local p1, "activeCues":Ljava/util/Vector;, "Ljava/util/Vector<Landroid/media/SubtitleTrack$Cue;>;"
     invoke-virtual/range {p0 .. p0}, Landroid/media/SRTTrack;->getRenderingWidget()Landroid/media/WebVttRenderingWidget;
 
@@ -742,15 +689,12 @@
 
     if-eqz v14, :cond_1
 
-    .line 160
     invoke-super/range {p0 .. p1}, Landroid/media/WebVttTrack;->updateView(Ljava/util/Vector;)V
 
-    .line 191
     :cond_0
     :goto_0
     return-void
 
-    .line 164
     :cond_1
     move-object/from16 v0, p0
 
@@ -758,10 +702,8 @@
 
     if-eqz v14, :cond_0
 
-    .line 168
     const/4 v2, 0x0
 
-    .line 169
     .local v2, "_":I
     invoke-virtual/range {p1 .. p1}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
@@ -783,44 +725,36 @@
     .local v5, "cue":Landroid/media/SubtitleTrack$Cue;
     move-object v13, v5
 
-    .line 170
     check-cast v13, Landroid/media/TextTrackCue;
 
-    .line 172
     .local v13, "ttc":Landroid/media/TextTrackCue;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v11
 
-    .line 173
     .local v11, "parcel":Landroid/os/Parcel;
     const/16 v14, 0x66
 
     invoke-virtual {v11, v14}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 174
     const/4 v14, 0x7
 
     invoke-virtual {v11, v14}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 175
     iget-wide v14, v5, Landroid/media/SubtitleTrack$Cue;->mStartTimeMs:J
 
     long-to-int v14, v14
 
     invoke-virtual {v11, v14}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
     const/16 v14, 0x10
 
     invoke-virtual {v11, v14}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 178
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 179
     .local v12, "sb":Ljava/lang/StringBuilder;
     iget-object v3, v13, Landroid/media/TextTrackCue;->mStrings:[Ljava/lang/String;
 
@@ -836,7 +770,6 @@
 
     aget-object v9, v3, v7
 
-    .line 180
     .local v9, "line":Ljava/lang/String;
     invoke-virtual {v12, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -846,12 +779,10 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 179
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 183
     .end local v9    # "line":Ljava/lang/String;
     :cond_2
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -862,16 +793,13 @@
 
     move-result-object v4
 
-    .line 184
     .local v4, "buf":[B
     array-length v14, v4
 
     invoke-virtual {v11, v14}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 185
     invoke-virtual {v11, v4}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 187
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/media/SRTTrack;->mEventHandler:Landroid/os/Handler;
@@ -890,7 +818,6 @@
 
     move-result-object v10
 
-    .line 188
     .local v10, "msg":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -900,7 +827,6 @@
 
     goto :goto_1
 
-    .line 190
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v4    # "buf":[B
     .end local v5    # "cue":Landroid/media/SubtitleTrack$Cue;

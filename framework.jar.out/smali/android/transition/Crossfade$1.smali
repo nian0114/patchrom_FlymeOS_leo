@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 204
     iput-object p1, p0, Landroid/transition/Crossfade$1;->this$0:Landroid/transition/Crossfade;
 
     iput-object p2, p0, Landroid/transition/Crossfade$1;->val$view:Landroid/view/View;
@@ -49,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/transition/Crossfade$1;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Landroid/transition/Crossfade$1;->val$startDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
 
-    .line 209
     return-void
 .end method

@@ -33,10 +33,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 66
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/hardware/camera2/params/RggbChannelVector;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableRggbChannelVector$MarshalerRggbChannelVector;
 
@@ -83,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 72
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/hardware/camera2/params/RggbChannelVector;>;"
     const/4 v0, 0x2
 

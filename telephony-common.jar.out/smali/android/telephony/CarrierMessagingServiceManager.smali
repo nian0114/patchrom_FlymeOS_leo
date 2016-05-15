@@ -21,10 +21,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 59
     iget-object v1, p0, Landroid/telephony/CarrierMessagingServiceManager;->mCarrierMessagingServiceConnection:Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
     if-nez v1, :cond_0
@@ -48,18 +45,15 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 61
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.service.carrier.CarrierMessagingService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 62
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 63
     new-instance v1, Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
     const/4 v3, 0x0
@@ -68,7 +62,6 @@
 
     iput-object v1, p0, Landroid/telephony/CarrierMessagingServiceManager;->mCarrierMessagingServiceConnection:Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
-    .line 64
     iget-object v1, p0, Landroid/telephony/CarrierMessagingServiceManager;->mCarrierMessagingServiceConnection:Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
@@ -77,7 +70,6 @@
 
     return v1
 
-    .line 59
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     const/4 v1, 0x0
@@ -90,22 +82,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/telephony/CarrierMessagingServiceManager;->mCarrierMessagingServiceConnection:Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     iget-object v0, p0, Landroid/telephony/CarrierMessagingServiceManager;->mCarrierMessagingServiceConnection:Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 76
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/telephony/CarrierMessagingServiceManager;->mCarrierMessagingServiceConnection:Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;
 
-    .line 77
     return-void
 .end method
 

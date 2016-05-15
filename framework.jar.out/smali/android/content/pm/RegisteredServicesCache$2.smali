@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 185
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$2;, "Landroid/content/pm/RegisteredServicesCache.2;"
     iput-object p1, p0, Landroid/content/pm/RegisteredServicesCache$2;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
@@ -40,7 +39,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 189
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$2;, "Landroid/content/pm/RegisteredServicesCache.2;"
     iget-object v0, p0, Landroid/content/pm/RegisteredServicesCache$2;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
@@ -49,6 +47,5 @@
     # invokes: Landroid/content/pm/RegisteredServicesCache;->handlePackageEvent(Landroid/content/Intent;I)V
     invoke-static {v0, p2, v1}, Landroid/content/pm/RegisteredServicesCache;->access$100(Landroid/content/pm/RegisteredServicesCache;Landroid/content/Intent;I)V
 
-    .line 190
     return-void
 .end method

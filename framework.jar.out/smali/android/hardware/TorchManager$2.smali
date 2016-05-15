@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 169
     iput-object p1, p0, Landroid/hardware/TorchManager$2;->this$0:Landroid/hardware/TorchManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 173
     :try_start_0
     iget-object v1, p0, Landroid/hardware/TorchManager$2;->this$0:Landroid/hardware/TorchManager;
 
@@ -53,15 +51,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 177
     :goto_0
     return-void
 
-    .line 174
     :catch_0
     move-exception v0
 
-    .line 175
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

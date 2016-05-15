@@ -30,10 +30,8 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-static {p0}, Lcom/android/internal/content/NativeLibraryHelper;->nativeOpenApk(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -55,7 +52,6 @@
     .param p0, "x0"    # J
 
     .prologue
-    .line 53
     invoke-static {p0, p1}, Lcom/android/internal/content/NativeLibraryHelper;->nativeClose(J)V
 
     return-void
@@ -70,7 +66,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 169
     iget-object v2, p0, Lcom/android/internal/content/NativeLibraryHelper$Handle;->apkHandles:[J
 
     .local v2, "arr$":[J
@@ -85,7 +80,6 @@
 
     aget-wide v0, v2, v3
 
-    .line 170
     .local v0, "apkHandle":J
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -95,17 +89,14 @@
 
     move-result v5
 
-    .line 171
     .local v5, "res":I
     if-eq v5, v6, :cond_0
 
-    .line 175
     .end local v0    # "apkHandle":J
     .end local v5    # "res":I
     :goto_1
     return v5
 
-    .line 169
     .restart local v0    # "apkHandle":J
     .restart local v5    # "res":I
     :cond_0
@@ -118,7 +109,6 @@
     :cond_1
     move v5, v6
 
-    .line 175
     goto :goto_1
 .end method
 
@@ -135,42 +125,33 @@
     .end annotation
 
     .prologue
-    .line 286
     invoke-static {p1}, Lcom/android/internal/content/NativeLibraryHelper;->createNativeLibrarySubdir(Ljava/io/File;)V
 
-    .line 292
     invoke-static {p0, p2}, Lcom/android/internal/content/NativeLibraryHelper;->findSupportedAbi(Lcom/android/internal/content/NativeLibraryHelper$Handle;[Ljava/lang/String;)I
 
     move-result v0
 
-    .line 293
     .local v0, "abi":I
     if-ltz v0, :cond_1
 
-    .line 298
     aget-object v5, p2, v0
 
     invoke-static {v5}, Ldalvik/system/VMRuntime;->getInstructionSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 300
     .local v2, "instructionSet":Ljava/lang/String;
     if-eqz p3, :cond_0
 
-    .line 301
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 302
     .local v3, "isaSubdir":Ljava/io/File;
     invoke-static {v3}, Lcom/android/internal/content/NativeLibraryHelper;->createNativeLibrarySubdir(Ljava/io/File;)V
 
-    .line 303
     move-object v4, v3
 
-    .line 308
     .end local v3    # "isaSubdir":Ljava/io/File;
     .local v4, "subDir":Ljava/io/File;
     :goto_0
@@ -180,20 +161,17 @@
 
     move-result v1
 
-    .line 309
     .local v1, "copyRet":I
     const/4 v5, 0x1
 
     if-eq v1, v5, :cond_1
 
-    .line 314
     .end local v1    # "copyRet":I
     .end local v2    # "instructionSet":Ljava/lang/String;
     .end local v4    # "subDir":Ljava/io/File;
     :goto_1
     return v1
 
-    .line 305
     .restart local v2    # "instructionSet":Ljava/lang/String;
     :cond_0
     move-object v4, p1
@@ -206,7 +184,6 @@
     :cond_1
     move v1, v0
 
-    .line 314
     goto :goto_1
 .end method
 
@@ -223,13 +200,11 @@
 
     const/4 v4, 0x1
 
-    .line 320
     :try_start_0
     iget-boolean v5, p0, Lcom/android/internal/content/NativeLibraryHelper$Handle;->multiArch:Z
 
     if-eqz v5, :cond_2
 
-    .line 324
     if-eqz p2, :cond_0
 
     const-string v5, "-"
@@ -240,18 +215,15 @@
 
     if-nez v5, :cond_0
 
-    .line 325
     const-string v5, "NativeHelper"
 
     const-string v6, "Ignoring abiOverride for multi arch application."
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     :cond_0
     const/16 v1, -0x72
 
-    .line 329
     .local v1, "copyRet":I
     sget-object v5, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
@@ -259,7 +231,6 @@
 
     if-lez v5, :cond_1
 
-    .line 330
     sget-object v5, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
     const/4 v6, 0x1
@@ -268,14 +239,12 @@
 
     move-result v1
 
-    .line 332
     if-gez v1, :cond_1
 
     if-eq v1, v7, :cond_1
 
     if-eq v1, v8, :cond_1
 
-    .line 334
     const-string v4, "NativeHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -298,12 +267,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     .end local v1    # "copyRet":I
     :goto_0
     return v1
 
-    .line 339
     .restart local v1    # "copyRet":I
     :cond_1
     sget-object v5, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
@@ -312,7 +279,6 @@
 
     if-lez v5, :cond_7
 
-    .line 340
     sget-object v5, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
 
     const/4 v6, 0x1
@@ -321,14 +287,12 @@
 
     move-result v1
 
-    .line 342
     if-gez v1, :cond_7
 
     if-eq v1, v7, :cond_7
 
     if-eq v1, v8, :cond_7
 
-    .line 344
     const-string v4, "NativeHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -355,12 +319,10 @@
 
     goto :goto_0
 
-    .line 372
     .end local v1    # "copyRet":I
     :catch_0
     move-exception v3
 
-    .line 373
     .local v3, "e":Ljava/io/IOException;
     const-string v4, "NativeHelper"
 
@@ -368,17 +330,14 @@
 
     invoke-static {v4, v5, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 374
     const/16 v1, -0x6e
 
     goto :goto_0
 
-    .line 349
     .end local v3    # "e":Ljava/io/IOException;
     :cond_2
     const/4 v2, 0x0
 
-    .line 350
     .local v2, "cpuAbiOverride":Ljava/lang/String;
     :try_start_1
     const-string v5, "-"
@@ -389,10 +348,8 @@
 
     if-eqz v5, :cond_5
 
-    .line 351
     const/4 v2, 0x0
 
-    .line 356
     :cond_3
     :goto_1
     if-eqz v2, :cond_6
@@ -405,7 +362,6 @@
 
     aput-object v2, v0, v5
 
-    .line 358
     .local v0, "abiList":[Ljava/lang/String;
     :goto_2
     sget-object v5, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
@@ -422,10 +378,8 @@
 
     if-eqz v5, :cond_4
 
-    .line 360
     sget-object v0, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
-    .line 363
     :cond_4
     const/4 v5, 0x1
 
@@ -433,13 +387,11 @@
 
     move-result v1
 
-    .line 365
     .restart local v1    # "copyRet":I
     if-gez v1, :cond_7
 
     if-eq v1, v7, :cond_7
 
-    .line 366
     const-string v4, "NativeHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -470,18 +422,15 @@
 
     goto :goto_0
 
-    .line 352
     .end local v0    # "abiList":[Ljava/lang/String;
     .end local v1    # "copyRet":I
     :cond_5
     if-eqz p2, :cond_3
 
-    .line 353
     move-object v2, p2
 
     goto :goto_1
 
-    .line 356
     :cond_6
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
     :try_end_1
@@ -494,7 +443,6 @@
     :cond_7
     move v1, v4
 
-    .line 371
     goto/16 :goto_0
 .end method
 
@@ -508,24 +456,20 @@
     .end annotation
 
     .prologue
-    .line 257
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 258
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
-    .line 260
     invoke-virtual {p0}, Ljava/io/File;->mkdir()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 261
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -554,7 +498,6 @@
 
     throw v1
 
-    .line 265
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -583,15 +526,12 @@
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 273
     :cond_1
     return-void
 
-    .line 266
     :catch_0
     move-exception v0
 
-    .line 267
     .local v0, "e":Landroid/system/ErrnoException;
     new-instance v1, Ljava/io/IOException;
 
@@ -621,7 +561,6 @@
 
     throw v1
 
-    .line 270
     .end local v0    # "e":Landroid/system/ErrnoException;
     :cond_2
     invoke-static {p0}, Landroid/os/SELinux;->restorecon(Ljava/io/File;)Z
@@ -630,7 +569,6 @@
 
     if-nez v1, :cond_1
 
-    .line 271
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -666,10 +604,8 @@
     .param p1, "supportedAbis"    # [Ljava/lang/String;
 
     .prologue
-    .line 186
     const/16 v3, -0x72
 
-    .line 187
     .local v3, "finalRes":I
     iget-object v2, p0, Lcom/android/internal/content/NativeLibraryHelper$Handle;->apkHandles:[J
 
@@ -685,49 +621,40 @@
 
     aget-wide v0, v2, v4
 
-    .line 188
     .local v0, "apkHandle":J
     invoke-static {v0, v1, p1}, Lcom/android/internal/content/NativeLibraryHelper;->nativeFindSupportedAbi(J[Ljava/lang/String;)I
 
     move-result v6
 
-    .line 189
     .local v6, "res":I
     const/16 v7, -0x72
 
     if-ne v6, v7, :cond_1
 
-    .line 187
     :cond_0
     :goto_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 191
     :cond_1
     const/16 v7, -0x71
 
     if-ne v6, v7, :cond_2
 
-    .line 194
     if-gez v3, :cond_0
 
-    .line 195
     const/16 v3, -0x71
 
     goto :goto_1
 
-    .line 197
     :cond_2
     if-ltz v6, :cond_5
 
-    .line 199
     if-ltz v3, :cond_3
 
     if-ge v6, v3, :cond_0
 
-    .line 200
     :cond_3
     move v3, v6
 
@@ -738,7 +665,6 @@
     :cond_4
     move v6, v3
 
-    .line 207
     :cond_5
     return v6
 .end method
@@ -758,7 +684,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 422
     iget-object v2, p0, Lcom/android/internal/content/NativeLibraryHelper$Handle;->apkHandles:[J
 
     .local v2, "arr$":[J
@@ -773,17 +698,14 @@
 
     aget-wide v0, v2, v3
 
-    .line 423
     .local v0, "apkHandle":J
     invoke-static {v0, v1}, Lcom/android/internal/content/NativeLibraryHelper;->hasRenderscriptBitcode(J)I
 
     move-result v5
 
-    .line 424
     .local v5, "res":I
     if-gez v5, :cond_0
 
-    .line 425
     new-instance v6, Ljava/io/IOException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -808,17 +730,14 @@
 
     throw v6
 
-    .line 426
     :cond_0
     if-ne v5, v6, :cond_1
 
-    .line 430
     .end local v0    # "apkHandle":J
     .end local v5    # "res":I
     :goto_1
     return v6
 
-    .line 422
     .restart local v0    # "apkHandle":J
     .restart local v5    # "res":I
     :cond_1
@@ -826,7 +745,6 @@
 
     goto :goto_0
 
-    .line 430
     .end local v0    # "apkHandle":J
     .end local v5    # "res":I
     :cond_2
@@ -856,23 +774,19 @@
     .param p1, "deleteRootDir"    # Z
 
     .prologue
-    .line 231
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 232
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
-    .line 233
     .local v0, "files":[Ljava/io/File;
     if-eqz v0, :cond_2
 
-    .line 234
     const/4 v1, 0x0
 
     .local v1, "nn":I
@@ -881,7 +795,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 239
     aget-object v2, v0, v1
 
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
@@ -890,21 +803,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 240
     aget-object v2, v0, v1
 
     const/4 v3, 0x1
 
     invoke-static {v2, v3}, Lcom/android/internal/content/NativeLibraryHelper;->removeNativeBinariesFromDirLI(Ljava/io/File;Z)V
 
-    .line 234
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 241
     :cond_1
     aget-object v2, v0, v1
 
@@ -914,7 +824,6 @@
 
     if-nez v2, :cond_0
 
-    .line 242
     const-string v2, "NativeHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -945,19 +854,16 @@
 
     goto :goto_1
 
-    .line 248
     .end local v1    # "nn":I
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 249
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 250
     const-string v2, "NativeHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -984,7 +890,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     .end local v0    # "files":[Ljava/io/File;
     :cond_3
     return-void
@@ -995,14 +900,11 @@
     .param p0, "nativeLibraryPath"    # Ljava/lang/String;
 
     .prologue
-    .line 214
     if-nez p0, :cond_0
 
-    .line 216
     :goto_0
     return-void
 
-    .line 215
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -1021,10 +923,8 @@
     .param p1, "abi"    # Ljava/lang/String;
 
     .prologue
-    .line 153
     const-wide/16 v6, 0x0
 
-    .line 154
     .local v6, "sum":J
     iget-object v2, p0, Lcom/android/internal/content/NativeLibraryHelper$Handle;->apkHandles:[J
 
@@ -1040,7 +940,6 @@
 
     aget-wide v0, v2, v3
 
-    .line 155
     .local v0, "apkHandle":J
     invoke-static {v0, v1, p1}, Lcom/android/internal/content/NativeLibraryHelper;->nativeSumNativeBinaries(JLjava/lang/String;)J
 
@@ -1048,12 +947,10 @@
 
     add-long/2addr v6, v8
 
-    .line 154
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 157
     .end local v0    # "apkHandle":J
     :cond_0
     return-wide v6
@@ -1065,23 +962,19 @@
     .param p1, "abiList"    # [Ljava/lang/String;
 
     .prologue
-    .line 276
     invoke-static {p0, p1}, Lcom/android/internal/content/NativeLibraryHelper;->findSupportedAbi(Lcom/android/internal/content/NativeLibraryHelper$Handle;[Ljava/lang/String;)I
 
     move-result v0
 
-    .line 277
     .local v0, "abi":I
     if-ltz v0, :cond_0
 
-    .line 278
     aget-object v1, p1, v0
 
     invoke-static {p0, v1}, Lcom/android/internal/content/NativeLibraryHelper;->sumNativeBinaries(Lcom/android/internal/content/NativeLibraryHelper$Handle;Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 280
     :goto_0
     return-wide v2
 
@@ -1102,16 +995,13 @@
     .end annotation
 
     .prologue
-    .line 380
     const-wide/16 v2, 0x0
 
-    .line 381
     .local v2, "sum":J
     iget-boolean v4, p0, Lcom/android/internal/content/NativeLibraryHelper$Handle;->multiArch:Z
 
     if-eqz v4, :cond_3
 
-    .line 385
     if-eqz p1, :cond_0
 
     const-string v4, "-"
@@ -1122,14 +1012,12 @@
 
     if-nez v4, :cond_0
 
-    .line 386
     const-string v4, "NativeHelper"
 
     const-string v5, "Ignoring abiOverride for multi arch application."
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     :cond_0
     sget-object v4, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
@@ -1137,7 +1025,6 @@
 
     if-lez v4, :cond_1
 
-    .line 390
     sget-object v4, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
     invoke-static {p0, v4}, Lcom/android/internal/content/NativeLibraryHelper;->sumNativeBinariesForSupportedAbi(Lcom/android/internal/content/NativeLibraryHelper$Handle;[Ljava/lang/String;)J
@@ -1146,7 +1033,6 @@
 
     add-long/2addr v2, v4
 
-    .line 393
     :cond_1
     sget-object v4, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
 
@@ -1154,7 +1040,6 @@
 
     if-lez v4, :cond_2
 
-    .line 394
     sget-object v4, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
 
     invoke-static {p0, v4}, Lcom/android/internal/content/NativeLibraryHelper;->sumNativeBinariesForSupportedAbi(Lcom/android/internal/content/NativeLibraryHelper$Handle;[Ljava/lang/String;)J
@@ -1163,16 +1048,13 @@
 
     add-long/2addr v2, v4
 
-    .line 413
     :cond_2
     :goto_0
     return-wide v2
 
-    .line 397
     :cond_3
     const/4 v1, 0x0
 
-    .line 398
     .local v1, "cpuAbiOverride":Ljava/lang/String;
     const-string v4, "-"
 
@@ -1182,10 +1064,8 @@
 
     if-eqz v4, :cond_6
 
-    .line 399
     const/4 v1, 0x0
 
-    .line 404
     :cond_4
     :goto_1
     if-eqz v1, :cond_7
@@ -1198,7 +1078,6 @@
 
     aput-object v1, v0, v4
 
-    .line 406
     .local v0, "abiList":[Ljava/lang/String;
     :goto_2
     sget-object v4, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
@@ -1215,10 +1094,8 @@
 
     if-eqz v4, :cond_5
 
-    .line 408
     sget-object v0, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
-    .line 411
     :cond_5
     invoke-static {p0, v0}, Lcom/android/internal/content/NativeLibraryHelper;->sumNativeBinariesForSupportedAbi(Lcom/android/internal/content/NativeLibraryHelper$Handle;[Ljava/lang/String;)J
 
@@ -1228,17 +1105,14 @@
 
     goto :goto_0
 
-    .line 400
     .end local v0    # "abiList":[Ljava/lang/String;
     :cond_6
     if-eqz p1, :cond_4
 
-    .line 401
     move-object v1, p1
 
     goto :goto_1
 
-    .line 404
     :cond_7
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
 

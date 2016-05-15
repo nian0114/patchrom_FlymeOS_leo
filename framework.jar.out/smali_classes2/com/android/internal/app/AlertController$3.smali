@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 609
     iput-object p1, p0, Lcom/android/internal/app/AlertController$3;->this$0:Lcom/android/internal/app/AlertController;
 
     iput-object p2, p0, Lcom/android/internal/app/AlertController$3;->val$indicatorUp:Landroid/view/View;
@@ -53,7 +52,6 @@
     .param p5, "oldScrollY"    # I
 
     .prologue
-    .line 613
     iget-object v0, p0, Lcom/android/internal/app/AlertController$3;->val$indicatorUp:Landroid/view/View;
 
     iget-object v1, p0, Lcom/android/internal/app/AlertController$3;->val$indicatorDown:Landroid/view/View;
@@ -61,6 +59,5 @@
     # invokes: Lcom/android/internal/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     invoke-static {p1, v0, v1}, Lcom/android/internal/app/AlertController;->access$900(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    .line 614
     return-void
 .end method

@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 23
     new-instance v0, Lcom/google/android/gles_jni/EGLImpl;
 
     invoke-direct {v0}, Lcom/google/android/gles_jni/EGLImpl;-><init>()V
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-object v0, Ljavax/microedition/khronos/egl/EGLContext;->EGL_INSTANCE:Ljavax/microedition/khronos/egl/EGL;
 
     return-object v0

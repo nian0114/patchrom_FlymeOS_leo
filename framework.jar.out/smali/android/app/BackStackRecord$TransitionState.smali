@@ -39,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 1729
     iput-object p1, p0, Landroid/app/BackStackRecord$TransitionState;->this$0:Landroid/app/BackStackRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1730
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V

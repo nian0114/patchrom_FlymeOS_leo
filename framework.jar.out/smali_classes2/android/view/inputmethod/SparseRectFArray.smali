@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 295
     new-instance v0, Landroid/view/inputmethod/SparseRectFArray$1;
 
     invoke-direct {v0}, Landroid/view/inputmethod/SparseRectFArray$1;-><init>()V
@@ -55,31 +54,26 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
-    .line 60
     invoke-virtual {p1}, Landroid/os/Parcel;->createFloatArray()[F
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
-    .line 61
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
-    .line 62
     return-void
 .end method
 
@@ -92,10 +86,8 @@
 
     const/4 v3, 0x0
 
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mCount:I
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$100(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)I
 
@@ -103,20 +95,15 @@
 
     if-nez v0, :cond_0
 
-    .line 247
     iput-object v1, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
-    .line 248
     iput-object v1, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
-    .line 249
     iput-object v1, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
-    .line 258
     :goto_0
     return-void
 
-    .line 251
     :cond_0
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mCount:I
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$100(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)I
@@ -127,7 +114,6 @@
 
     iput-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
-    .line 252
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mCount:I
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$100(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)I
 
@@ -139,7 +125,6 @@
 
     iput-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
-    .line 253
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mCount:I
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$100(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)I
 
@@ -149,7 +134,6 @@
 
     iput-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
-    .line 254
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mKeys:[I
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$200(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)[I
 
@@ -164,7 +148,6 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy([II[III)V
 
-    .line 255
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mCoordinates:[F
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$300(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)[F
 
@@ -181,7 +164,6 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 256
     # getter for: Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->mFlagsArray:[I
     invoke-static {p1}, Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;->access$400(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)[I
 
@@ -205,7 +187,6 @@
     .param p2, "x1"    # Landroid/view/inputmethod/SparseRectFArray$1;
 
     .prologue
-    .line 35
     invoke-direct {p0, p1}, Landroid/view/inputmethod/SparseRectFArray;-><init>(Landroid/view/inputmethod/SparseRectFArray$SparseRectFArrayBuilder;)V
 
     return-void
@@ -217,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 309
     const/4 v0, 0x0
 
     return v0
@@ -232,24 +212,19 @@
 
     const/4 v2, 0x0
 
-    .line 96
     if-nez p1, :cond_1
 
-    .line 107
     :cond_0
     :goto_0
     return v2
 
-    .line 99
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 100
     goto :goto_0
 
-    .line 102
     :cond_2
     instance-of v3, p1, Landroid/view/inputmethod/SparseRectFArray;
 
@@ -257,10 +232,8 @@
 
     move-object v0, p1
 
-    .line 105
     check-cast v0, Landroid/view/inputmethod/SparseRectFArray;
 
-    .line 107
     .local v0, "that":Landroid/view/inputmethod/SparseRectFArray;
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
@@ -310,35 +283,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 261
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     if-nez v3, :cond_1
 
-    .line 272
     :cond_0
     :goto_0
     return-object v2
 
-    .line 264
     :cond_1
     if-ltz p1, :cond_0
 
-    .line 267
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     invoke-static {v3, p1}, Ljava/util/Arrays;->binarySearch([II)I
 
     move-result v0
 
-    .line 268
     .local v0, "arrayIndex":I
     if-ltz v0, :cond_0
 
-    .line 271
     mul-int/lit8 v1, v0, 0x4
 
-    .line 272
     .local v1, "baseCoordIndex":I
     new-instance v2, Landroid/graphics/RectF;
 
@@ -375,34 +341,28 @@
     .param p2, "valueIfKeyNotFound"    # I
 
     .prologue
-    .line 279
     iget-object v1, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     if-nez v1, :cond_1
 
-    .line 289
     .end local p2    # "valueIfKeyNotFound":I
     :cond_0
     :goto_0
     return p2
 
-    .line 282
     .restart local p2    # "valueIfKeyNotFound":I
     :cond_1
     if-ltz p1, :cond_0
 
-    .line 285
     iget-object v1, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     invoke-static {v1, p1}, Ljava/util/Arrays;->binarySearch([II)I
 
     move-result v0
 
-    .line 286
     .local v0, "arrayIndex":I
     if-ltz v0, :cond_0
 
-    .line 289
     iget-object v1, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
     aget p2, v1, v0
@@ -416,7 +376,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 80
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     if-eqz v3, :cond_0
@@ -430,17 +389,14 @@
     :cond_0
     move v0, v2
 
-    .line 91
     :goto_0
     return v0
 
-    .line 83
     :cond_1
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     array-length v0, v3
 
-    .line 85
     .local v0, "hash":I
     const/4 v1, 0x0
 
@@ -450,10 +406,8 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 86
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 87
     int-to-float v3, v0
 
     iget-object v4, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
@@ -464,23 +418,19 @@
 
     float-to-int v0, v3
 
-    .line 85
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 89
     :cond_2
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 90
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
     aget v2, v3, v2
 
     add-int/2addr v0, v2
 
-    .line 91
     goto :goto_0
 .end method
 
@@ -488,7 +438,6 @@
     .locals 5
 
     .prologue
-    .line 113
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     if-eqz v3, :cond_0
@@ -501,27 +450,22 @@
 
     if-nez v3, :cond_1
 
-    .line 114
     :cond_0
     const-string v3, "SparseRectFArray{}"
 
-    .line 136
     :goto_0
     return-object v3
 
-    .line 116
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 117
     .local v2, "sb":Ljava/lang/StringBuilder;
     const-string v3, "SparseRectFArray{"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 118
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -532,19 +476,15 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 119
     if-eqz v1, :cond_2
 
-    .line 120
     const-string v3, ", "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 122
     :cond_2
     mul-int/lit8 v0, v1, 0x4
 
-    .line 123
     .local v0, "baseIndex":I
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
@@ -552,12 +492,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 124
     const-string v3, ":["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 125
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
     add-int/lit8 v4, v0, 0x0
@@ -566,12 +504,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 126
     const-string v3, ","
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 127
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
     add-int/lit8 v4, v0, 0x1
@@ -580,12 +516,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 128
     const-string v3, "],["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 129
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
     add-int/lit8 v4, v0, 0x2
@@ -594,12 +528,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 130
     const-string v3, ","
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
     add-int/lit8 v4, v0, 0x3
@@ -608,31 +540,26 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 132
     const-string v3, "]:flagsArray="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
     iget-object v3, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
     aget v3, v3, v1
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 118
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 135
     .end local v0    # "baseIndex":I
     :cond_3
     const-string v3, "}"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -646,21 +573,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mKeys:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 73
     iget-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mCoordinates:[F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    .line 74
     iget-object v0, p0, Landroid/view/inputmethod/SparseRectFArray;->mFlagsArray:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 75
     return-void
 .end method

@@ -14,13 +14,10 @@
     .param p2, "detailMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 27
     iput p1, p0, Lcom/android/server/pm/PackageManagerException;->error:I
 
-    .line 28
     return-void
 .end method
 
@@ -31,13 +28,10 @@
     .param p3, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 31
     invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 32
     iput p1, p0, Lcom/android/server/pm/PackageManagerException;->error:I
 
-    .line 33
     return-void
 .end method
 
@@ -51,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 37
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
     iget v1, p0, Landroid/content/pm/PackageParser$PackageParserException;->error:I

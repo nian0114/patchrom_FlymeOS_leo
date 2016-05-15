@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
     .param p1, "virtualViewId"    # I
 
     .prologue
-    .line 101
     const/4 v0, 0x0
 
     return-object v0
@@ -48,7 +46,6 @@
     .end annotation
 
     .prologue
-    .line 138
     const/4 v0, 0x0
 
     return-object v0
@@ -59,7 +56,6 @@
     .param p1, "focus"    # I
 
     .prologue
-    .line 153
     const/4 v0, 0x0
 
     return-object v0
@@ -72,7 +68,6 @@
     .param p3, "arguments"    # Landroid/os/Bundle;
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     return v0

@@ -23,16 +23,12 @@
     .param p3, "callback"    # Landroid/hardware/hdmi/IHdmiControlCallback;
 
     .prologue
-    .line 53
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
-    .line 54
     iput p2, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mTargetAddress:I
 
-    .line 55
     iput-object p3, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mCallback:Landroid/hardware/hdmi/IHdmiControlCallback;
 
-    .line 56
     return-void
 .end method
 
@@ -43,12 +39,10 @@
     .param p2, "callback"    # Landroid/hardware/hdmi/IHdmiControlCallback;
 
     .prologue
-    .line 44
     if-eqz p0, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 45
     :cond_0
     const-string v0, "DevicePowerStatusAction"
 
@@ -56,10 +50,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     const/4 v0, 0x0
 
-    .line 48
     :goto_0
     return-object v0
 
@@ -76,7 +68,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 100
     :try_start_0
     iget-object v1, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mCallback:Landroid/hardware/hdmi/IHdmiControlCallback;
 
@@ -84,15 +75,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 104
     :goto_0
     return-void
 
-    .line 101
     :catch_0
     move-exception v0
 
-    .line 102
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "DevicePowerStatusAction"
 
@@ -123,7 +111,6 @@
     .locals 2
 
     .prologue
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->getSourceAddress()I
 
     move-result v0
@@ -136,7 +123,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->sendCommand(Lcom/android/server/hdmi/HdmiCecMessage;)V
 
-    .line 69
     return-void
 .end method
 
@@ -147,28 +133,23 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 88
     iget v0, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mState:I
 
     if-eq v0, p1, :cond_1
 
-    .line 96
     :cond_0
     :goto_0
     return-void
 
-    .line 91
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 93
     const/4 v0, -0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->invokeCallback(I)V
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->finish()V
 
     goto :goto_0
@@ -183,7 +164,6 @@
 
     const/4 v2, 0x0
 
-    .line 73
     iget v3, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mState:I
 
     if-ne v3, v1, :cond_0
@@ -199,11 +179,9 @@
     :cond_0
     move v1, v2
 
-    .line 83
     :goto_0
     return v1
 
-    .line 77
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -213,18 +191,15 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 78
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object v3
 
     aget-byte v0, v3, v2
 
-    .line 79
     .local v0, "status":I
     invoke-direct {p0, v0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->invokeCallback(I)V
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->finish()V
 
     goto :goto_0
@@ -233,7 +208,6 @@
     :cond_2
     move v1, v2
 
-    .line 83
     goto :goto_0
 .end method
 
@@ -243,19 +217,15 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 60
     invoke-direct {p0}, Lcom/android/server/hdmi/DevicePowerStatusAction;->queryDevicePowerStatus()V
 
-    .line 61
     iput v2, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mState:I
 
-    .line 62
     iget v0, p0, Lcom/android/server/hdmi/DevicePowerStatusAction;->mState:I
 
     const/16 v1, 0x7d0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/hdmi/DevicePowerStatusAction;->addTimer(II)V
 
-    .line 63
     return v2
 .end method

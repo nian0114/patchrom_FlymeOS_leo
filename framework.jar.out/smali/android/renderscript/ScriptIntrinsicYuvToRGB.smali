@@ -14,10 +14,8 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/ScriptIntrinsic;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 32
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .param p1, "e"    # Landroid/renderscript/Element;
 
     .prologue
-    .line 46
     const/4 v3, 0x6
 
     invoke-virtual {p1, p0}, Landroid/renderscript/Element;->getID(Landroid/renderscript/RenderScript;)J
@@ -38,13 +35,11 @@
 
     move-result-wide v0
 
-    .line 47
     .local v0, "id":J
     new-instance v2, Landroid/renderscript/ScriptIntrinsicYuvToRGB;
 
     invoke-direct {v2, v0, v1, p0}, Landroid/renderscript/ScriptIntrinsicYuvToRGB;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 48
     .local v2, "si":Landroid/renderscript/ScriptIntrinsicYuvToRGB;
     return-object v2
 .end method
@@ -58,7 +53,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 69
     const/4 v2, 0x0
 
     move-object v0, v1
@@ -67,7 +61,6 @@
 
     invoke-virtual {p0, v2, v0, p1, v1}, Landroid/renderscript/ScriptIntrinsicYuvToRGB;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;)V
 
-    .line 70
     return-void
 .end method
 
@@ -75,7 +68,6 @@
     .locals 2
 
     .prologue
-    .line 87
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -93,7 +85,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 78
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -110,14 +101,11 @@
     .param p1, "ain"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 58
     iput-object p1, p0, Landroid/renderscript/ScriptIntrinsicYuvToRGB;->mInput:Landroid/renderscript/Allocation;
 
-    .line 59
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Landroid/renderscript/ScriptIntrinsicYuvToRGB;->setVar(ILandroid/renderscript/BaseObj;)V
 
-    .line 60
     return-void
 .end method

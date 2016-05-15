@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 6153
     iput-object p1, p0, Landroid/widget/AbsListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0, p1}, Landroid/widget/AdapterView$AdapterDataSetObserver;-><init>(Landroid/widget/AdapterView;)V
@@ -46,10 +45,8 @@
     .locals 1
 
     .prologue
-    .line 6156
     invoke-super {p0}, Landroid/widget/AdapterView$AdapterDataSetObserver;->onChanged()V
 
-    .line 6157
     iget-object v0, p0, Landroid/widget/AbsListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mFastScroll:Landroid/widget/FastScroller;
@@ -59,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6158
     iget-object v0, p0, Landroid/widget/AbsListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mFastScroll:Landroid/widget/FastScroller;
@@ -69,7 +65,6 @@
 
     invoke-virtual {v0}, Landroid/widget/FastScroller;->onSectionsChanged()V
 
-    .line 6160
     :cond_0
     return-void
 .end method
@@ -78,10 +73,8 @@
     .locals 1
 
     .prologue
-    .line 6164
     invoke-super {p0}, Landroid/widget/AdapterView$AdapterDataSetObserver;->onInvalidated()V
 
-    .line 6165
     iget-object v0, p0, Landroid/widget/AbsListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mFastScroll:Landroid/widget/FastScroller;
@@ -91,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6166
     iget-object v0, p0, Landroid/widget/AbsListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mFastScroll:Landroid/widget/FastScroller;
@@ -101,7 +93,6 @@
 
     invoke-virtual {v0}, Landroid/widget/FastScroller;->onSectionsChanged()V
 
-    .line 6168
     :cond_0
     return-void
 .end method

@@ -18,9 +18,7 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 40
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/Program;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 41
     return-void
 .end method

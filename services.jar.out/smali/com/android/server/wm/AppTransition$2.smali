@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcom/android/server/wm/AppTransition$2;->this$0:Lcom/android/server/wm/AppTransition;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,15 +42,12 @@
     .prologue
     const v1, 0x3e99999a    # 0.3f
 
-    .line 200
     cmpg-float v0, p1, v1
 
     if-gez v0, :cond_0
 
-    .line 201
     div-float v0, p1, v1
 
-    .line 203
     :goto_0
     return v0
 

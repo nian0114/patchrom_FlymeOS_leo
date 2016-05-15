@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 30
     const v0, 0x111d6
 
     const/4 v1, 0x2
@@ -55,7 +53,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 31
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .locals 2
 
     .prologue
-    .line 34
     const v0, 0x11206
 
     const/4 v1, 0x0
@@ -72,7 +68,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 35
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .param p2, "time"    # J
 
     .prologue
-    .line 26
     const v0, 0x111d5
 
     const/4 v1, 0x3
@@ -116,7 +110,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 27
     return-void
 .end method
 
@@ -125,11 +118,9 @@
     .param p0, "appSignature"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     const v0, 0x11207
 
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 39
     return-void
 .end method

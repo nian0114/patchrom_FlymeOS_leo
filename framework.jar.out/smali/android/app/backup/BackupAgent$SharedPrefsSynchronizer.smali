@@ -28,12 +28,10 @@
     .locals 2
 
     .prologue
-    .line 145
     iput-object p1, p0, Landroid/app/backup/BackupAgent$SharedPrefsSynchronizer;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 146
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -51,14 +49,11 @@
     .locals 1
 
     .prologue
-    .line 150
     invoke-static {}, Landroid/app/QueuedWork;->waitToFinish()V
 
-    .line 151
     iget-object v0, p0, Landroid/app/backup/BackupAgent$SharedPrefsSynchronizer;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 152
     return-void
 .end method

@@ -22,10 +22,8 @@
     .locals 1
 
     .prologue
-    .line 240
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 241
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -38,10 +36,8 @@
     .param p0, "nativeType"    # I
 
     .prologue
-    .line 208
     packed-switch p0, :pswitch_data_0
 
-    .line 218
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,11 +62,9 @@
 
     throw v0
 
-    .line 215
     :pswitch_0
     return p0
 
-    .line 208
     nop
 
     :pswitch_data_0
@@ -90,10 +84,8 @@
     .param p1, "actualNativeType"    # I
 
     .prologue
-    .line 231
     if-eq p0, p1, :cond_0
 
-    .line 232
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Expected native type %d, but got %d"
@@ -126,7 +118,6 @@
 
     throw v0
 
-    .line 237
     :cond_0
     return p1
 .end method
@@ -146,23 +137,19 @@
     .end annotation
 
     .prologue
-    .line 87
     .local p0, "klass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const-string v0, "klass must not be null"
 
     invoke-static {p0, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     invoke-static {p0}, Landroid/hardware/camera2/marshal/MarshalHelpers;->isPrimitiveClass(Ljava/lang/Class;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 90
     return-object p0
 
-    .line 93
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -204,10 +191,8 @@
 
     const/16 v1, 0x8
 
-    .line 55
     packed-switch p0, :pswitch_data_0
 
-    .line 70
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -232,11 +217,9 @@
 
     throw v0
 
-    .line 57
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 67
     :goto_0
     :pswitch_1
     return v0
@@ -244,22 +227,18 @@
     :pswitch_2
     move v0, v1
 
-    .line 63
     goto :goto_0
 
     :pswitch_3
     move v0, v1
 
-    .line 65
     goto :goto_0
 
     :pswitch_4
     move v0, v1
 
-    .line 67
     goto :goto_0
 
-    .line 55
     nop
 
     :pswitch_data_0
@@ -291,15 +270,12 @@
 
     const/4 v1, 0x1
 
-    .line 118
     if-nez p0, :cond_1
 
-    .line 136
     :cond_0
     :goto_0
     return v0
 
-    .line 122
     :cond_1
     sget-object v2, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
@@ -312,10 +288,8 @@
     :cond_2
     move v0, v1
 
-    .line 123
     goto :goto_0
 
-    .line 124
     :cond_3
     sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
@@ -328,10 +302,8 @@
     :cond_4
     move v0, v1
 
-    .line 125
     goto :goto_0
 
-    .line 126
     :cond_5
     sget-object v2, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -344,10 +316,8 @@
     :cond_6
     move v0, v1
 
-    .line 127
     goto :goto_0
 
-    .line 128
     :cond_7
     sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -360,10 +330,8 @@
     :cond_8
     move v0, v1
 
-    .line 129
     goto :goto_0
 
-    .line 130
     :cond_9
     sget-object v2, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -376,10 +344,8 @@
     :cond_a
     move v0, v1
 
-    .line 131
     goto :goto_0
 
-    .line 132
     :cond_b
     const-class v2, Landroid/util/Rational;
 
@@ -387,7 +353,6 @@
 
     move v0, v1
 
-    .line 133
     goto :goto_0
 .end method
 
@@ -396,10 +361,8 @@
     .param p0, "nativeType"    # I
 
     .prologue
-    .line 179
     packed-switch p0, :pswitch_data_0
 
-    .line 194
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -427,43 +390,36 @@
     :goto_0
     return-object v0
 
-    .line 181
     :pswitch_0
     const-string v0, "TYPE_BYTE"
 
     goto :goto_0
 
-    .line 183
     :pswitch_1
     const-string v0, "TYPE_INT32"
 
     goto :goto_0
 
-    .line 185
     :pswitch_2
     const-string v0, "TYPE_FLOAT"
 
     goto :goto_0
 
-    .line 187
     :pswitch_3
     const-string v0, "TYPE_INT64"
 
     goto :goto_0
 
-    .line 189
     :pswitch_4
     const-string v0, "TYPE_DOUBLE"
 
     goto :goto_0
 
-    .line 191
     :pswitch_5
     const-string v0, "TYPE_RATIONAL"
 
     goto :goto_0
 
-    .line 179
     nop
 
     :pswitch_data_0
@@ -492,62 +448,51 @@
     .end annotation
 
     .prologue
-    .line 154
     .local p0, "klass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_1
 
-    .line 155
     const-class p0, Ljava/lang/Byte;
 
-    .line 166
     .end local p0    # "klass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     :cond_0
     :goto_0
     return-object p0
 
-    .line 156
     .restart local p0    # "klass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     :cond_1
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_2
 
-    .line 157
     const-class p0, Ljava/lang/Integer;
 
     goto :goto_0
 
-    .line 158
     :cond_2
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_3
 
-    .line 159
     const-class p0, Ljava/lang/Float;
 
     goto :goto_0
 
-    .line 160
     :cond_3
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_4
 
-    .line 161
     const-class p0, Ljava/lang/Long;
 
     goto :goto_0
 
-    .line 162
     :cond_4
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_0
 
-    .line 163
     const-class p0, Ljava/lang/Double;
 
     goto :goto_0

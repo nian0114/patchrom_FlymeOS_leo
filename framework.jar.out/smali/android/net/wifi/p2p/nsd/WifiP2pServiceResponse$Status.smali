@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,40 +39,33 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 91
     packed-switch p0, :pswitch_data_0
 
-    .line 101
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 93
     :pswitch_0
     const-string v0, "SUCCESS"
 
     goto :goto_0
 
-    .line 95
     :pswitch_1
     const-string v0, "SERVICE_PROTOCOL_NOT_AVAILABLE"
 
     goto :goto_0
 
-    .line 97
     :pswitch_2
     const-string v0, "REQUESTED_INFORMATION_NOT_AVAILABLE"
 
     goto :goto_0
 
-    .line 99
     :pswitch_3
     const-string v0, "BAD_REQUEST"
 
     goto :goto_0
 
-    .line 91
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

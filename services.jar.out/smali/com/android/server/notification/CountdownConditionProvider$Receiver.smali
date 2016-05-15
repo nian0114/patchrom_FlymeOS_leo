@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/android/server/notification/CountdownConditionProvider$Receiver;->this$0:Lcom/android/server/notification/CountdownConditionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/notification/CountdownConditionProvider$1;
 
     .prologue
-    .line 124
     invoke-direct {p0, p1}, Lcom/android/server/notification/CountdownConditionProvider$Receiver;-><init>(Lcom/android/server/notification/CountdownConditionProvider;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 127
     # getter for: Lcom/android/server/notification/CountdownConditionProvider;->ACTION:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/notification/CountdownConditionProvider;->access$100()Ljava/lang/String;
 
@@ -67,7 +64,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 128
     const-string v1, "condition_id"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -76,13 +72,11 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 129
     .local v0, "conditionId":Landroid/net/Uri;
     invoke-static {v0}, Landroid/service/notification/ZenModeConfig;->tryParseCountdownConditionId(Landroid/net/Uri;)J
 
     move-result-wide v2
 
-    .line 130
     .local v2, "time":J
     # getter for: Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/CountdownConditionProvider;->access$200()Z
@@ -113,7 +107,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_0
     const-wide/16 v4, 0x0
 
@@ -121,7 +114,6 @@
 
     if-lez v1, :cond_1
 
-    .line 132
     iget-object v1, p0, Lcom/android/server/notification/CountdownConditionProvider$Receiver;->this$0:Lcom/android/server/notification/CountdownConditionProvider;
 
     const/4 v4, 0x0
@@ -133,7 +125,6 @@
 
     invoke-virtual {v1, v4}, Lcom/android/server/notification/CountdownConditionProvider;->notifyCondition(Landroid/service/notification/Condition;)V
 
-    .line 135
     .end local v0    # "conditionId":Landroid/net/Uri;
     .end local v2    # "time":J
     :cond_1

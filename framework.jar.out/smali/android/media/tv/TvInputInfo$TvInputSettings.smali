@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 591
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 587
     invoke-static {p0, p1, p2}, Landroid/media/tv/TvInputInfo$TvInputSettings;->isHidden(Landroid/content/Context;Ljava/lang/String;I)Z
 
     move-result v0
@@ -53,7 +51,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 587
     invoke-static {p0, p1, p2}, Landroid/media/tv/TvInputInfo$TvInputSettings;->getCustomLabel(Landroid/content/Context;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -66,14 +63,12 @@
     .param p0, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 704
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 705
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -98,7 +93,6 @@
 
     throw v0
 
-    .line 707
     :cond_0
     return-void
 .end method
@@ -110,7 +104,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 598
     invoke-static {p0, p2}, Landroid/media/tv/TvInputInfo$TvInputSettings;->getCustomLabels(Landroid/content/Context;I)Ljava/util/Map;
 
     move-result-object v0
@@ -142,24 +135,21 @@
     .end annotation
 
     .prologue
-    .line 632
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
-    const-string/jumbo v9, "tv_input_custom_labels"
+    const-string v9, "tv_input_custom_labels"
 
     invoke-static {v8, v9, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 634
     .local v2, "labelsString":Ljava/lang/String;
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 635
     .local v4, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -167,11 +157,9 @@
 
     if-eqz v8, :cond_1
 
-    .line 643
     :cond_0
     return-object v4
 
-    .line 638
     :cond_1
     const-string v8, ":"
 
@@ -179,7 +167,6 @@
 
     move-result-object v7
 
-    .line 639
     .local v7, "pairs":[Ljava/lang/String;
     move-object v0, v7
 
@@ -195,7 +182,6 @@
 
     aget-object v6, v0, v1
 
-    .line 640
     .local v6, "pairString":Ljava/lang/String;
     const-string v8, ","
 
@@ -203,7 +189,6 @@
 
     move-result-object v5
 
-    .line 641
     .local v5, "pair":[Ljava/lang/String;
     const/4 v8, 0x0
 
@@ -223,7 +208,6 @@
 
     invoke-interface {v4, v8, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 639
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -246,24 +230,21 @@
     .end annotation
 
     .prologue
-    .line 610
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
-    const-string/jumbo v8, "tv_input_hidden_inputs"
+    const-string v8, "tv_input_hidden_inputs"
 
     invoke-static {v7, v8, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 612
     .local v1, "hiddenIdsString":Ljava/lang/String;
     new-instance v6, Ljava/util/HashSet;
 
     invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
 
-    .line 613
     .local v6, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -271,11 +252,9 @@
 
     if-eqz v7, :cond_1
 
-    .line 620
     :cond_0
     return-object v6
 
-    .line 616
     :cond_1
     const-string v7, ":"
 
@@ -283,7 +262,6 @@
 
     move-result-object v4
 
-    .line 617
     .local v4, "ids":[Ljava/lang/String;
     move-object v0, v4
 
@@ -299,7 +277,6 @@
 
     aget-object v3, v0, v2
 
-    .line 618
     .local v3, "id":Ljava/lang/String;
     invoke-static {v3}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
 
@@ -307,7 +284,6 @@
 
     invoke-interface {v6, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 617
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -320,7 +296,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 594
     invoke-static {p0, p2}, Landroid/media/tv/TvInputInfo$TvInputSettings;->getHiddenTvInputIds(Landroid/content/Context;I)Ljava/util/Set;
 
     move-result-object v0
@@ -349,17 +324,14 @@
     .end annotation
 
     .prologue
-    .line 685
     .local p1, "customLabels":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 686
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v2, 0x1
 
-    .line 687
     .local v2, "firstItem":Z
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -383,7 +355,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 688
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -393,7 +364,6 @@
 
     invoke-static {v4}, Landroid/media/tv/TvInputInfo$TvInputSettings;->ensureValidField(Ljava/lang/String;)V
 
-    .line 689
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -402,13 +372,10 @@
 
     invoke-static {v4}, Landroid/media/tv/TvInputInfo$TvInputSettings;->ensureValidField(Ljava/lang/String;)V
 
-    .line 690
     if-eqz v2, :cond_0
 
-    .line 691
     const/4 v2, 0x0
 
-    .line 695
     :goto_1
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -422,12 +389,10 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 696
     const-string v4, ","
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 697
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -442,7 +407,6 @@
 
     goto :goto_0
 
-    .line 693
     :cond_0
     const-string v4, ":"
 
@@ -450,14 +414,13 @@
 
     goto :goto_1
 
-    .line 699
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    const-string/jumbo v5, "tv_input_custom_labels"
+    const-string v5, "tv_input_custom_labels"
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -465,7 +428,6 @@
 
     invoke-static {v4, v5, v6, p2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 701
     return-void
 .end method
 
@@ -485,17 +447,14 @@
     .end annotation
 
     .prologue
-    .line 658
     .local p1, "hiddenInputIds":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 659
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v1, 0x1
 
-    .line 660
     .local v1, "firstItem":Z
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -515,17 +474,13 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 661
     .local v3, "inputId":Ljava/lang/String;
     invoke-static {v3}, Landroid/media/tv/TvInputInfo$TvInputSettings;->ensureValidField(Ljava/lang/String;)V
 
-    .line 662
     if-eqz v1, :cond_0
 
-    .line 663
     const/4 v1, 0x0
 
-    .line 667
     :goto_1
     invoke-static {v3}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
@@ -535,7 +490,6 @@
 
     goto :goto_0
 
-    .line 665
     :cond_0
     const-string v4, ":"
 
@@ -543,14 +497,13 @@
 
     goto :goto_1
 
-    .line 669
     .end local v3    # "inputId":Ljava/lang/String;
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    const-string/jumbo v5, "tv_input_hidden_inputs"
+    const-string v5, "tv_input_hidden_inputs"
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -558,6 +511,5 @@
 
     invoke-static {v4, v5, v6, p2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 671
     return-void
 .end method

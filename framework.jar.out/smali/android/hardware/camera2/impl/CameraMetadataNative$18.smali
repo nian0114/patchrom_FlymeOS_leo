@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 962
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 965
     .local p2, "value":Ljava/lang/Object;, "TT;"
     check-cast p2, Landroid/hardware/camera2/params/TonemapCurve;
 
@@ -52,6 +50,5 @@
     # invokes: Landroid/hardware/camera2/impl/CameraMetadataNative;->setTonemapCurve(Landroid/hardware/camera2/params/TonemapCurve;)Z
     invoke-static {p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->access$1200(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/params/TonemapCurve;)Z
 
-    .line 966
     return-void
 .end method

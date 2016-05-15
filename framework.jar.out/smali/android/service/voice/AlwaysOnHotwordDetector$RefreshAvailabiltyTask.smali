@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 682
     iput-object p1, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -48,7 +47,6 @@
     .prologue
     const/4 v2, -0x3
 
-    .line 715
     iget-object v3, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     # getter for: Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
@@ -58,7 +56,6 @@
 
     monitor-enter v3
 
-    .line 717
     :try_start_0
     iget-object v4, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
@@ -69,23 +66,18 @@
 
     if-ne v4, v2, :cond_0
 
-    .line 718
     monitor-exit v3
 
-    .line 737
     :goto_0
     return v2
 
-    .line 720
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 722
     const/4 v0, 0x0
 
-    .line 724
     .local v0, "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     :try_start_1
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
@@ -108,16 +100,13 @@
 
     move-result-object v0
 
-    .line 730
     :goto_1
     if-nez v0, :cond_1
 
-    .line 731
     const/4 v2, -0x2
 
     goto :goto_0
 
-    .line 720
     .end local v0    # "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     :catchall_0
     move-exception v2
@@ -129,12 +118,10 @@
 
     throw v2
 
-    .line 726
     .restart local v0    # "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     :catch_0
     move-exception v1
 
-    .line 727
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "AlwaysOnHotwordDetector"
 
@@ -144,7 +131,6 @@
 
     goto :goto_1
 
-    .line 734
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
@@ -156,12 +142,10 @@
 
     if-nez v2, :cond_2
 
-    .line 735
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 737
     :cond_2
     const/4 v2, 0x0
 
@@ -174,7 +158,6 @@
     .param p2, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 745
     :try_start_0
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
@@ -200,15 +183,12 @@
 
     move-result v1
 
-    .line 750
     :goto_0
     return v1
 
-    .line 747
     :catch_0
     move-exception v0
 
-    .line 748
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AlwaysOnHotwordDetector"
 
@@ -216,7 +196,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 750
     const/4 v1, 0x0
 
     goto :goto_0
@@ -228,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 682
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -243,16 +221,13 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 686
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->internalGetInitialAvailability()I
 
     move-result v0
 
-    .line 687
     .local v0, "availability":I
     const/4 v1, 0x0
 
-    .line 689
     .local v1, "enrolled":Z
     if-eqz v0, :cond_0
 
@@ -264,7 +239,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 692
     :cond_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
@@ -286,13 +260,10 @@
 
     move-result v1
 
-    .line 693
     if-nez v1, :cond_2
 
-    .line 694
     const/4 v0, 0x1
 
-    .line 700
     :cond_1
     :goto_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
@@ -304,34 +275,28 @@
 
     monitor-enter v3
 
-    .line 705
     :try_start_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     # setter for: Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
     invoke-static {v2, v0}, Landroid/service/voice/AlwaysOnHotwordDetector;->access$202(Landroid/service/voice/AlwaysOnHotwordDetector;I)I
 
-    .line 706
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     # invokes: Landroid/service/voice/AlwaysOnHotwordDetector;->notifyStateChangedLocked()V
     invoke-static {v2}, Landroid/service/voice/AlwaysOnHotwordDetector;->access$600(Landroid/service/voice/AlwaysOnHotwordDetector;)V
 
-    .line 707
     monitor-exit v3
 
-    .line 708
     const/4 v2, 0x0
 
     return-object v2
 
-    .line 696
     :cond_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 707
     :catchall_0
     move-exception v2
 

@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 101
     new-instance v0, Landroid/telecom/StatusHints$1;
 
     invoke-direct {v0}, Landroid/telecom/StatusHints$1;-><init>()V
@@ -52,22 +51,16 @@
     .param p4, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Landroid/telecom/StatusHints;->mPackageName:Landroid/content/ComponentName;
 
-    .line 46
     iput-object p2, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
-    .line 47
     iput p3, p0, Landroid/telecom/StatusHints;->mIconResId:I
 
-    .line 48
     iput-object p4, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
-    .line 49
     return-void
 .end method
 
@@ -76,10 +69,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 113
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -96,21 +87,18 @@
 
     iput-object v0, p0, Landroid/telecom/StatusHints;->mPackageName:Landroid/content/ComponentName;
 
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
-    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telecom/StatusHints;->mIconResId:I
 
-    .line 116
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -127,7 +115,6 @@
 
     iput-object v0, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
-    .line 117
     return-void
 .end method
 
@@ -137,7 +124,6 @@
     .param p2, "x1"    # Landroid/telecom/StatusHints$1;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Landroid/telecom/StatusHints;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -155,7 +141,6 @@
 
     const/4 v6, 0x0
 
-    .line 122
     :try_start_0
     iget-object v3, p0, Landroid/telecom/StatusHints;->mPackageName:Landroid/content/ComponentName;
 
@@ -171,7 +156,6 @@
 
     move-result-object v1
 
-    .line 128
     .local v1, "packageContext":Landroid/content/Context;
     :try_start_1
     invoke-virtual {v1, p2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -180,16 +164,13 @@
 
     move-result-object v2
 
-    .line 132
     .end local v1    # "packageContext":Landroid/content/Context;
     :goto_0
     return-object v2
 
-    .line 123
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "Cannot find package %s"
 
@@ -207,13 +188,11 @@
 
     goto :goto_0
 
-    .line 129
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v1    # "packageContext":Landroid/content/Context;
     :catch_1
     move-exception v0
 
-    .line 130
     .local v0, "e":Ljava/util/MissingResourceException;
     const-string v3, "Cannot find icon %d in package %s"
 
@@ -246,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     return v0
@@ -259,7 +237,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 138
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Landroid/telecom/StatusHints;
@@ -268,10 +245,8 @@
 
     move-object v0, p1
 
-    .line 139
     check-cast v0, Landroid/telecom/StatusHints;
 
-    .line 140
     .local v0, "otherHints":Landroid/telecom/StatusHints;
     invoke-virtual {v0}, Landroid/telecom/StatusHints;->getPackageName()Landroid/content/ComponentName;
 
@@ -327,7 +302,6 @@
 
     const/4 v1, 0x1
 
-    .line 145
     .end local v0    # "otherHints":Landroid/telecom/StatusHints;
     :cond_0
     return v1
@@ -337,7 +311,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -348,7 +321,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/telecom/StatusHints;->mIconResId:I
 
     invoke-direct {p0, p1, v0}, Landroid/telecom/StatusHints;->getIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -362,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget v0, p0, Landroid/telecom/StatusHints;->mIconResId:I
 
     return v0
@@ -372,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -382,7 +352,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/telecom/StatusHints;->mPackageName:Landroid/content/ComponentName;
 
     return-object v0
@@ -392,7 +361,6 @@
     .locals 2
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/telecom/StatusHints;->mPackageName:Landroid/content/ComponentName;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -428,28 +396,23 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/telecom/StatusHints;->mPackageName:Landroid/content/ComponentName;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 96
     iget-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 97
     iget v0, p0, Landroid/telecom/StatusHints;->mIconResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
     iget-object v0, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 99
     return-void
 .end method

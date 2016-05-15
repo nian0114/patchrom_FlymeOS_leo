@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Landroid/speech/tts/UtteranceProgressListener$1;->val$listener:Landroid/speech/tts/TextToSpeech$OnUtteranceCompletedListener;
 
     invoke-direct {p0}, Landroid/speech/tts/UtteranceProgressListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "utteranceId"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     monitor-enter p0
 
     :try_start_0
@@ -48,12 +46,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     monitor-exit p0
 
     return-void
 
-    .line 73
     :catchall_0
     move-exception v0
 
@@ -67,12 +63,10 @@
     .param p1, "utteranceId"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/speech/tts/UtteranceProgressListener$1;->val$listener:Landroid/speech/tts/TextToSpeech$OnUtteranceCompletedListener;
 
     invoke-interface {v0, p1}, Landroid/speech/tts/TextToSpeech$OnUtteranceCompletedListener;->onUtteranceCompleted(Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method
 
@@ -81,6 +75,5 @@
     .param p1, "utteranceId"    # Ljava/lang/String;
 
     .prologue
-    .line 85
     return-void
 .end method

@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 397
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$3;->this$1:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
     iput-object p3, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$3;->val$this$0:Lcom/android/server/usb/UsbDeviceManager;
@@ -43,12 +42,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 400
     iget-object v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$3;->this$1:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
     # invokes: Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateAdbNotification()V
     invoke-static {v0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->access$800(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)V
 
-    .line 401
     return-void
 .end method

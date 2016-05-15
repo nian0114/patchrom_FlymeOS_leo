@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 22
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 23
     const-string v0, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p0, p0, v0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 24
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 31
     if-nez p0, :cond_0
 
-    .line 32
     const/4 v0, 0x0
 
-    .line 38
     :goto_0
     return-object v0
 
-    .line 34
     :cond_0
     const-string v1, "android.service.persistentdata.IPersistentDataBlockService"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 35
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 36
     check-cast v0, Landroid/service/persistentdata/IPersistentDataBlockService;
 
     goto :goto_0
 
-    .line 38
     :cond_1
     new-instance v0, Landroid/service/persistentdata/IPersistentDataBlockService$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 42
     return-object p0
 .end method
 
@@ -131,10 +120,8 @@
 
     const/4 v1, 0x1
 
-    .line 46
     sparse-switch p1, :sswitch_data_0
 
-    .line 112
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -142,7 +129,6 @@
     :goto_0
     return v1
 
-    .line 50
     :sswitch_0
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
@@ -150,33 +136,27 @@
 
     goto :goto_0
 
-    .line 55
     :sswitch_1
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 57
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 58
     .local v0, "_arg0":[B
     invoke-virtual {p0, v0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->write([B)I
 
     move-result v2
 
-    .line 59
     .local v2, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 60
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 65
     .end local v0    # "_arg0":[B
     .end local v2    # "_result":I
     :sswitch_2
@@ -184,84 +164,68 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->read()[B
 
     move-result-object v2
 
-    .line 67
     .local v2, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 68
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
-    .line 73
     .end local v2    # "_result":[B
     :sswitch_3
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->wipe()V
 
-    .line 75
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 80
     :sswitch_4
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->getDataBlockSize()I
 
     move-result v2
 
-    .line 82
     .local v2, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 83
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 88
     .end local v2    # "_result":I
     :sswitch_5
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual {p0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->getMaximumDataBlockSize()J
 
     move-result-wide v2
 
-    .line 90
     .local v2, "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 91
     invoke-virtual {p3, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
     goto :goto_0
 
-    .line 96
     .end local v2    # "_result":J
     :sswitch_6
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -270,33 +234,27 @@
 
     move v0, v1
 
-    .line 99
     .local v0, "_arg0":Z
     :cond_0
     invoke-virtual {p0, v0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->setOemUnlockEnabled(Z)V
 
-    .line 100
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 105
     .end local v0    # "_arg0":Z
     :sswitch_7
     const-string v4, "android.service.persistentdata.IPersistentDataBlockService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p0}, Landroid/service/persistentdata/IPersistentDataBlockService$Stub;->getOemUnlockEnabled()Z
 
     move-result v2
 
-    .line 107
     .local v2, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 108
     if-eqz v2, :cond_1
 
     move v0, v1
@@ -306,7 +264,6 @@
 
     goto :goto_0
 
-    .line 46
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

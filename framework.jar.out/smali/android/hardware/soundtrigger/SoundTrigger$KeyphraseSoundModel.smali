@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 388
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel$1;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel$1;-><init>()V
@@ -57,15 +56,12 @@
     .param p4, "keyphrases"    # [Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
     .prologue
-    .line 384
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;-><init>(Ljava/util/UUID;Ljava/util/UUID;I[B)V
 
-    .line 385
     iput-object p4, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->keyphrases:[Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
-    .line 386
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 378
     invoke-static {p0}, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->fromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
 
     move-result-object v0
@@ -87,7 +82,6 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 400
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -96,21 +90,17 @@
 
     move-result-object v3
 
-    .line 401
     .local v3, "uuid":Ljava/util/UUID;
     const/4 v4, 0x0
 
-    .line 402
     .local v4, "vendorUuid":Ljava/util/UUID;
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 403
     .local v2, "length":I
     if-ltz v2, :cond_0
 
-    .line 404
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -119,13 +109,11 @@
 
     move-result-object v4
 
-    .line 406
     :cond_0
     invoke-virtual {p0}, Landroid/os/Parcel;->readBlob()[B
 
     move-result-object v0
 
-    .line 407
     .local v0, "data":[B
     sget-object v5, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -135,7 +123,6 @@
 
     check-cast v1, [Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
-    .line 408
     .local v1, "keyphrases":[Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
     new-instance v5, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
 
@@ -150,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 413
     const/4 v0, 0x0
 
     return v0
@@ -165,15 +151,12 @@
 
     const/4 v2, 0x0
 
-    .line 446
     if-ne p0, p1, :cond_1
 
-    .line 455
     :cond_0
     :goto_0
     return v1
 
-    .line 448
     :cond_1
     invoke-super {p0, p1}, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;->equals(Ljava/lang/Object;)Z
 
@@ -183,10 +166,8 @@
 
     move v1, v2
 
-    .line 449
     goto :goto_0
 
-    .line 450
     :cond_2
     instance-of v3, p1, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
 
@@ -194,16 +175,13 @@
 
     move v1, v2
 
-    .line 451
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 452
     check-cast v0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
 
-    .line 453
     .local v0, "other":Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->keyphrases:[Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
@@ -217,7 +195,6 @@
 
     move v1, v2
 
-    .line 454
     goto :goto_0
 .end method
 
@@ -225,16 +202,13 @@
     .locals 4
 
     .prologue
-    .line 438
     const/16 v0, 0x1f
 
-    .line 439
     .local v0, "prime":I
     invoke-super {p0}, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;->hashCode()I
 
     move-result v1
 
-    .line 440
     .local v1, "result":I
     mul-int/lit8 v2, v1, 0x1f
 
@@ -246,7 +220,6 @@
 
     add-int v1, v2, v3
 
-    .line 441
     return v1
 .end method
 
@@ -254,7 +227,6 @@
     .locals 2
 
     .prologue
-    .line 431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -354,7 +326,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 418
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->uuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
@@ -363,31 +334,25 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 419
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->vendorUuid:Ljava/util/UUID;
 
     if-nez v0, :cond_0
 
-    .line 420
     const/4 v0, -0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 425
     :goto_0
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->data:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBlob([B)V
 
-    .line 426
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->keyphrases:[Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 427
     return-void
 
-    .line 422
     :cond_0
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->vendorUuid:Ljava/util/UUID;
 
@@ -401,7 +366,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 423
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->vendorUuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;

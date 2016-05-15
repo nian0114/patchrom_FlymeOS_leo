@@ -47,19 +47,16 @@
     .locals 1
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     sput-object v0, Landroid/hardware/location/ActivityRecognitionHardware;->sSingletonInstance:Landroid/hardware/location/ActivityRecognitionHardware;
 
-    .line 40
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/hardware/location/ActivityRecognitionHardware;->sSingletonInstanceLock:Ljava/lang/Object;
 
-    .line 212
     invoke-static {}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeClassInit()V
 
     return-void
@@ -70,30 +67,24 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Landroid/hardware/location/IActivityRecognitionHardware$Stub;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSinks:Landroid/os/RemoteCallbackList;
 
-    .line 55
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeInitialize()V
 
-    .line 57
     iput-object p1, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mContext:Landroid/content/Context;
 
-    .line 58
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->fetchSupportedActivities()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSupportedActivities:[Ljava/lang/String;
 
-    .line 59
     return-void
 .end method
 
@@ -101,7 +92,6 @@
     .locals 5
 
     .prologue
-    .line 196
     const-string v1, "Permission \'%s\' not granted to access ActivityRecognitionHardware"
 
     const/4 v2, 0x1
@@ -118,7 +108,6 @@
 
     move-result-object v0
 
-    .line 199
     .local v0, "message":Ljava/lang/String;
     iget-object v1, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mContext:Landroid/content/Context;
 
@@ -126,7 +115,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 200
     return-void
 .end method
 
@@ -134,16 +122,13 @@
     .locals 2
 
     .prologue
-    .line 203
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeGetSupportedActivities()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 204
     .local v0, "supportedActivities":[Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 208
     .end local v0    # "supportedActivities":[Ljava/lang/String;
     :goto_0
     return-object v0
@@ -162,7 +147,6 @@
     .param p1, "activityType"    # I
 
     .prologue
-    .line 168
     if-ltz p1, :cond_0
 
     iget-object v1, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSupportedActivities:[Ljava/lang/String;
@@ -171,7 +155,6 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 169
     :cond_0
     const-string v1, "Invalid ActivityType: %d, SupportedActivities: %d"
 
@@ -203,16 +186,13 @@
 
     move-result-object v0
 
-    .line 173
     .local v0, "message":Ljava/lang/String;
     const-string v1, "ActivityRecognitionHardware"
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     const/4 v1, 0x0
 
-    .line 177
     .end local v0    # "message":Ljava/lang/String;
     :goto_0
     return-object v1
@@ -232,7 +212,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 181
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -241,18 +220,15 @@
 
     move v0, v2
 
-    .line 192
     :cond_0
     :goto_0
     return v0
 
-    .line 185
     :cond_1
     iget-object v3, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSupportedActivities:[Ljava/lang/String;
 
     array-length v1, v3
 
-    .line 186
     .local v1, "supportedActivitiesLength":I
     const/4 v0, 0x0
 
@@ -260,7 +236,6 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 187
     iget-object v3, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSupportedActivities:[Ljava/lang/String;
 
     aget-object v3, v3, v0
@@ -271,7 +246,6 @@
 
     if-nez v3, :cond_0
 
-    .line 186
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -279,7 +253,6 @@
     :cond_2
     move v0, v2
 
-    .line 192
     goto :goto_0
 .end method
 
@@ -288,25 +261,21 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 62
     sget-object v1, Landroid/hardware/location/ActivityRecognitionHardware;->sSingletonInstanceLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 63
     :try_start_0
     sget-object v0, Landroid/hardware/location/ActivityRecognitionHardware;->sSingletonInstance:Landroid/hardware/location/ActivityRecognitionHardware;
 
     if-nez v0, :cond_0
 
-    .line 64
     new-instance v0, Landroid/hardware/location/ActivityRecognitionHardware;
 
     invoke-direct {v0, p0}, Landroid/hardware/location/ActivityRecognitionHardware;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/hardware/location/ActivityRecognitionHardware;->sSingletonInstance:Landroid/hardware/location/ActivityRecognitionHardware;
 
-    .line 67
     :cond_0
     sget-object v0, Landroid/hardware/location/ActivityRecognitionHardware;->sSingletonInstance:Landroid/hardware/location/ActivityRecognitionHardware;
 
@@ -314,7 +283,6 @@
 
     return-object v0
 
-    .line 68
     :catchall_0
     move-exception v0
 
@@ -329,7 +297,6 @@
     .locals 1
 
     .prologue
-    .line 72
     invoke-static {}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeIsSupported()Z
 
     move-result v0
@@ -366,14 +333,12 @@
     .param p1, "events"    # [Landroid/hardware/location/ActivityRecognitionHardware$Event;
 
     .prologue
-    .line 137
     if-eqz p1, :cond_0
 
     array-length v9, p1
 
     if-nez v9, :cond_1
 
-    .line 138
     :cond_0
     const-string v9, "ActivityRecognitionHardware"
 
@@ -381,19 +346,15 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     :goto_0
     return-void
 
-    .line 142
     :cond_1
     array-length v5, p1
 
-    .line 143
     .local v5, "eventsLength":I
     new-array v2, v5, [Landroid/hardware/location/ActivityRecognitionEvent;
 
-    .line 145
     .local v2, "activityRecognitionEventArray":[Landroid/hardware/location/ActivityRecognitionEvent;
     const/4 v6, 0x0
 
@@ -401,10 +362,8 @@
     :goto_1
     if-ge v6, v5, :cond_2
 
-    .line 146
     aget-object v4, p1, v6
 
-    .line 147
     .local v4, "event":Landroid/hardware/location/ActivityRecognitionHardware$Event;
     iget v9, v4, Landroid/hardware/location/ActivityRecognitionHardware$Event;->activity:I
 
@@ -412,7 +371,6 @@
 
     move-result-object v1
 
-    .line 148
     .local v1, "activityName":Ljava/lang/String;
     new-instance v9, Landroid/hardware/location/ActivityRecognitionEvent;
 
@@ -424,12 +382,10 @@
 
     aput-object v9, v2, v6
 
-    .line 145
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 151
     .end local v1    # "activityName":Ljava/lang/String;
     .end local v4    # "event":Landroid/hardware/location/ActivityRecognitionHardware$Event;
     :cond_2
@@ -437,7 +393,6 @@
 
     invoke-direct {v0, v2}, Landroid/hardware/location/ActivityChangedEvent;-><init>([Landroid/hardware/location/ActivityRecognitionEvent;)V
 
-    .line 154
     .local v0, "activityChangedEvent":Landroid/hardware/location/ActivityChangedEvent;
     iget-object v9, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSinks:Landroid/os/RemoteCallbackList;
 
@@ -445,14 +400,12 @@
 
     move-result v8
 
-    .line 155
     .local v8, "size":I
     const/4 v6, 0x0
 
     :goto_2
     if-ge v6, v8, :cond_3
 
-    .line 156
     iget-object v9, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSinks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v9, v6}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
@@ -461,24 +414,20 @@
 
     check-cast v7, Landroid/hardware/location/IActivityRecognitionHardwareSink;
 
-    .line 158
     .local v7, "sink":Landroid/hardware/location/IActivityRecognitionHardwareSink;
     :try_start_0
     invoke-interface {v7, v0}, Landroid/hardware/location/IActivityRecognitionHardwareSink;->onActivityChanged(Landroid/hardware/location/ActivityChangedEvent;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 155
     :goto_3
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 159
     :catch_0
     move-exception v3
 
-    .line 160
     .local v3, "e":Landroid/os/RemoteException;
     const-string v9, "ActivityRecognitionHardware"
 
@@ -488,7 +437,6 @@
 
     goto :goto_3
 
-    .line 163
     .end local v3    # "e":Landroid/os/RemoteException;
     .end local v7    # "sink":Landroid/hardware/location/IActivityRecognitionHardwareSink;
     :cond_3
@@ -509,32 +457,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 115
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 117
     invoke-direct {p0, p1}, Landroid/hardware/location/ActivityRecognitionHardware;->getActivityType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 118
     .local v0, "activityType":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_1
 
-    .line 123
     :cond_0
     :goto_0
     return v2
 
-    .line 122
     :cond_1
     invoke-direct {p0, v0, p2}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeDisableActivityEvent(II)I
 
     move-result v1
 
-    .line 123
     .local v1, "result":I
     if-nez v1, :cond_0
 
@@ -552,32 +494,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 102
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 104
     invoke-direct {p0, p1}, Landroid/hardware/location/ActivityRecognitionHardware;->getActivityType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 105
     .local v0, "activityType":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_1
 
-    .line 110
     :cond_0
     :goto_0
     return v2
 
-    .line 109
     :cond_1
     invoke-direct {p0, v0, p2, p3, p4}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeEnableActivityEvent(IIJ)I
 
     move-result v1
 
-    .line 110
     .local v1, "result":I
     if-nez v1, :cond_0
 
@@ -590,15 +526,12 @@
     .locals 2
 
     .prologue
-    .line 128
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 129
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->nativeFlush()I
 
     move-result v0
 
-    .line 130
     .local v0, "result":I
     if-nez v0, :cond_0
 
@@ -617,10 +550,8 @@
     .locals 1
 
     .prologue
-    .line 77
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 78
     iget-object v0, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSupportedActivities:[Ljava/lang/String;
 
     return-object v0
@@ -631,15 +562,12 @@
     .param p1, "activity"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 84
     invoke-direct {p0, p1}, Landroid/hardware/location/ActivityRecognitionHardware;->getActivityType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 85
     .local v0, "activityType":I
     const/4 v1, -0x1
 
@@ -661,10 +589,8 @@
     .param p1, "sink"    # Landroid/hardware/location/IActivityRecognitionHardwareSink;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 91
     iget-object v0, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSinks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
@@ -679,10 +605,8 @@
     .param p1, "sink"    # Landroid/hardware/location/IActivityRecognitionHardwareSink;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Landroid/hardware/location/ActivityRecognitionHardware;->checkPermissions()V
 
-    .line 97
     iget-object v0, p0, Landroid/hardware/location/ActivityRecognitionHardware;->mSinks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z

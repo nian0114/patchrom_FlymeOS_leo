@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 100
     new-instance v0, Landroid/telecom/VideoProfile$1;
 
     invoke-direct {v0}, Landroid/telecom/VideoProfile$1;-><init>()V
@@ -63,12 +62,10 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 62
     const/4 v0, 0x4
 
     invoke-direct {p0, p1, v0}, Landroid/telecom/VideoProfile;-><init>(II)V
 
-    .line 63
     return-void
 .end method
 
@@ -78,16 +75,12 @@
     .param p2, "quality"    # I
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput p1, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
-    .line 73
     iput p2, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
-    .line 74
     return-void
 .end method
 
@@ -97,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 132
     const/4 v0, 0x0
 
     return v0
@@ -107,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
     return v0
@@ -117,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
     return v0
@@ -129,16 +119,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 144
     iget v0, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 145
     iget v0, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 146
     return-void
 .end method

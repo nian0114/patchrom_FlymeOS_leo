@@ -16,19 +16,14 @@
     .param p2, "mode"    # Landroid/graphics/PorterDuff$Mode;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/graphics/ColorFilter;-><init>()V
 
-    .line 38
     iput p1, p0, Landroid/graphics/PorterDuffColorFilter;->mColor:I
 
-    .line 39
     iput-object p2, p0, Landroid/graphics/PorterDuffColorFilter;->mMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 40
     invoke-direct {p0}, Landroid/graphics/PorterDuffColorFilter;->update()V
 
-    .line 41
     return-void
 .end method
 
@@ -39,12 +34,10 @@
     .locals 2
 
     .prologue
-    .line 102
     iget-wide v0, p0, Landroid/graphics/PorterDuffColorFilter;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/PorterDuffColorFilter;->destroyFilter(J)V
 
-    .line 103
     iget v0, p0, Landroid/graphics/PorterDuffColorFilter;->mColor:I
 
     iget-object v1, p0, Landroid/graphics/PorterDuffColorFilter;->mMode:Landroid/graphics/PorterDuff$Mode;
@@ -57,7 +50,6 @@
 
     iput-wide v0, p0, Landroid/graphics/PorterDuffColorFilter;->native_instance:J
 
-    .line 104
     return-void
 .end method
 
@@ -72,15 +64,12 @@
 
     const/4 v2, 0x0
 
-    .line 108
     if-ne p0, p1, :cond_1
 
-    .line 118
     :cond_0
     :goto_0
     return v1
 
-    .line 111
     :cond_1
     if-eqz p1, :cond_2
 
@@ -97,16 +86,13 @@
     :cond_2
     move v1, v2
 
-    .line 112
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 114
     check-cast v0, Landroid/graphics/PorterDuffColorFilter;
 
-    .line 115
     .local v0, "other":Landroid/graphics/PorterDuffColorFilter;
     iget v3, p0, Landroid/graphics/PorterDuffColorFilter;->mColor:I
 
@@ -123,7 +109,6 @@
     :cond_4
     move v1, v2
 
-    .line 116
     goto :goto_0
 .end method
 
@@ -131,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget v0, p0, Landroid/graphics/PorterDuffColorFilter;->mColor:I
 
     return v0
@@ -141,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/graphics/PorterDuffColorFilter;->mMode:Landroid/graphics/PorterDuff$Mode;
 
     return-object v0
@@ -151,7 +134,6 @@
     .locals 2
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/graphics/PorterDuffColorFilter;->mMode:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0}, Landroid/graphics/PorterDuff$Mode;->hashCode()I
@@ -172,13 +154,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 69
     iput p1, p0, Landroid/graphics/PorterDuffColorFilter;->mColor:I
 
-    .line 70
     invoke-direct {p0}, Landroid/graphics/PorterDuffColorFilter;->update()V
 
-    .line 71
     return-void
 .end method
 
@@ -187,12 +166,9 @@
     .param p1, "mode"    # Landroid/graphics/PorterDuff$Mode;
 
     .prologue
-    .line 97
     iput-object p1, p0, Landroid/graphics/PorterDuffColorFilter;->mMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 98
     invoke-direct {p0}, Landroid/graphics/PorterDuffColorFilter;->update()V
 
-    .line 99
     return-void
 .end method

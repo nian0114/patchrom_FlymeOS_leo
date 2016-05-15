@@ -50,10 +50,9 @@
     .locals 2
 
     .prologue
-    .line 76
     const-string v0, "http.keepAlive"
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -65,7 +64,6 @@
 
     sput-boolean v0, Landroid/net/Network;->httpKeepAlive:Z
 
-    .line 78
     sget-boolean v0, Landroid/net/Network;->httpKeepAlive:Z
 
     if-eqz v0, :cond_0
@@ -85,7 +83,6 @@
     :goto_0
     sput v0, Landroid/net/Network;->httpMaxConnections:I
 
-    .line 80
     const-string v0, "http.keepAliveDuration"
 
     const-string v1, "300000"
@@ -100,7 +97,6 @@
 
     sput-wide v0, Landroid/net/Network;->httpKeepAliveDurationMs:J
 
-    .line 349
     new-instance v0, Landroid/net/Network$2;
 
     invoke-direct {v0}, Landroid/net/Network$2;-><init>()V
@@ -109,7 +105,6 @@
 
     return-void
 
-    .line 78
     :cond_0
     const/4 v0, 0x0
 
@@ -123,29 +118,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object v0, p0, Landroid/net/Network;->mNetworkBoundSocketFactory:Landroid/net/Network$NetworkBoundSocketFactory;
 
-    .line 68
     iput-object v0, p0, Landroid/net/Network;->mConnectionPool:Lcom/android/okhttp/ConnectionPool;
 
-    .line 69
     iput-object v0, p0, Landroid/net/Network;->mHostResolver:Lcom/android/okhttp/HostResolver;
 
-    .line 70
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/net/Network;->mLock:Ljava/lang/Object;
 
-    .line 87
     iput p1, p0, Landroid/net/Network;->netId:I
 
-    .line 88
     return-void
 .end method
 
@@ -156,31 +144,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object v0, p0, Landroid/net/Network;->mNetworkBoundSocketFactory:Landroid/net/Network$NetworkBoundSocketFactory;
 
-    .line 68
     iput-object v0, p0, Landroid/net/Network;->mConnectionPool:Lcom/android/okhttp/ConnectionPool;
 
-    .line 69
     iput-object v0, p0, Landroid/net/Network;->mHostResolver:Lcom/android/okhttp/HostResolver;
 
-    .line 70
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/net/Network;->mLock:Ljava/lang/Object;
 
-    .line 94
     iget v0, p1, Landroid/net/Network;->netId:I
 
     iput v0, p0, Landroid/net/Network;->netId:I
 
-    .line 95
     return-void
 .end method
 
@@ -194,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 333
     invoke-virtual {p1}, Ljava/io/FileDescriptor;->getInt$()I
 
     move-result v1
@@ -205,11 +185,9 @@
 
     move-result v0
 
-    .line 334
     .local v0, "err":I
     if-eqz v0, :cond_0
 
-    .line 336
     new-instance v1, Landroid/system/ErrnoException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -242,7 +220,6 @@
 
     throw v1
 
-    .line 339
     :cond_0
     return-void
 .end method
@@ -251,31 +228,26 @@
     .locals 6
 
     .prologue
-    .line 222
     iget-object v1, p0, Landroid/net/Network;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 223
     :try_start_0
     iget-object v0, p0, Landroid/net/Network;->mHostResolver:Lcom/android/okhttp/HostResolver;
 
     if-nez v0, :cond_0
 
-    .line 224
     new-instance v0, Landroid/net/Network$1;
 
     invoke-direct {v0, p0}, Landroid/net/Network$1;-><init>(Landroid/net/Network;)V
 
     iput-object v0, p0, Landroid/net/Network;->mHostResolver:Lcom/android/okhttp/HostResolver;
 
-    .line 231
     :cond_0
     iget-object v0, p0, Landroid/net/Network;->mConnectionPool:Lcom/android/okhttp/ConnectionPool;
 
     if-nez v0, :cond_1
 
-    .line 232
     new-instance v0, Lcom/android/okhttp/ConnectionPool;
 
     sget v2, Landroid/net/Network;->httpMaxConnections:I
@@ -286,14 +258,11 @@
 
     iput-object v0, p0, Landroid/net/Network;->mConnectionPool:Lcom/android/okhttp/ConnectionPool;
 
-    .line 235
     :cond_1
     monitor-exit v1
 
-    .line 236
     return-void
 
-    .line 235
     :catchall_0
     move-exception v0
 
@@ -316,14 +285,12 @@
     .end annotation
 
     .prologue
-    .line 307
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->isConnected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 308
     new-instance v0, Ljava/net/SocketException;
 
     const-string v1, "Socket is connected"
@@ -332,18 +299,15 @@
 
     throw v0
 
-    .line 312
     :cond_0
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->getReuseAddress()Z
 
-    .line 313
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->getFileDescriptor$()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/net/Network;->bindSocketFd(Ljava/io/FileDescriptor;)V
 
-    .line 314
     return-void
 .end method
 
@@ -357,14 +321,12 @@
     .end annotation
 
     .prologue
-    .line 323
     invoke-virtual {p1}, Ljava/net/Socket;->isConnected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 324
     new-instance v0, Ljava/net/SocketException;
 
     const-string v1, "Socket is connected"
@@ -373,18 +335,15 @@
 
     throw v0
 
-    .line 328
     :cond_0
     invoke-virtual {p1}, Ljava/net/Socket;->getReuseAddress()Z
 
-    .line 329
     invoke-virtual {p1}, Ljava/net/Socket;->getFileDescriptor$()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/net/Network;->bindSocketFd(Ljava/io/FileDescriptor;)V
 
-    .line 330
     return-void
 .end method
 
@@ -392,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 343
     const/4 v0, 0x0
 
     return v0
@@ -405,12 +363,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 364
     instance-of v2, p1, Landroid/net/Network;
 
     if-nez v2, :cond_1
 
-    .line 366
     :cond_0
     :goto_0
     return v1
@@ -418,10 +374,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 365
     check-cast v0, Landroid/net/Network;
 
-    .line 366
     .local v0, "other":Landroid/net/Network;
     iget v2, p0, Landroid/net/Network;->netId:I
 
@@ -444,7 +398,6 @@
     .end annotation
 
     .prologue
-    .line 106
     iget v0, p0, Landroid/net/Network;->netId:I
 
     invoke-static {p1, v0}, Ljava/net/InetAddress;->getAllByNameOnNet(Ljava/lang/String;I)[Ljava/net/InetAddress;
@@ -464,7 +417,6 @@
     .end annotation
 
     .prologue
-    .line 120
     iget v0, p0, Landroid/net/Network;->netId:I
 
     invoke-static {p1, v0}, Ljava/net/InetAddress;->getByNameOnNet(Ljava/lang/String;I)Ljava/net/InetAddress;
@@ -478,23 +430,19 @@
     .locals 3
 
     .prologue
-    .line 196
     iget-object v0, p0, Landroid/net/Network;->mNetworkBoundSocketFactory:Landroid/net/Network$NetworkBoundSocketFactory;
 
     if-nez v0, :cond_1
 
-    .line 197
     iget-object v1, p0, Landroid/net/Network;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 198
     :try_start_0
     iget-object v0, p0, Landroid/net/Network;->mNetworkBoundSocketFactory:Landroid/net/Network$NetworkBoundSocketFactory;
 
     if-nez v0, :cond_0
 
-    .line 199
     new-instance v0, Landroid/net/Network$NetworkBoundSocketFactory;
 
     iget v2, p0, Landroid/net/Network;->netId:I
@@ -503,19 +451,16 @@
 
     iput-object v0, p0, Landroid/net/Network;->mNetworkBoundSocketFactory:Landroid/net/Network$NetworkBoundSocketFactory;
 
-    .line 201
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 203
     :cond_1
     iget-object v0, p0, Landroid/net/Network;->mNetworkBoundSocketFactory:Landroid/net/Network$NetworkBoundSocketFactory;
 
     return-object v0
 
-    .line 201
     :catchall_0
     move-exception v0
 
@@ -531,7 +476,6 @@
     .locals 1
 
     .prologue
-    .line 371
     iget v0, p0, Landroid/net/Network;->netId:I
 
     mul-int/lit8 v0, v0, 0xb
@@ -549,27 +493,22 @@
     .end annotation
 
     .prologue
-    .line 248
     invoke-static {}, Landroid/net/ConnectivityManager;->getInstance()Landroid/net/ConnectivityManager;
 
     move-result-object v0
 
-    .line 250
     .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getGlobalProxy()Landroid/net/ProxyInfo;
 
     move-result-object v3
 
-    .line 251
     .local v3, "proxyInfo":Landroid/net/ProxyInfo;
     if-nez v3, :cond_0
 
-    .line 253
     invoke-virtual {v0, p0}, Landroid/net/ConnectivityManager;->getLinkProperties(Landroid/net/Network;)Landroid/net/LinkProperties;
 
     move-result-object v1
 
-    .line 254
     .local v1, "lp":Landroid/net/LinkProperties;
     if-eqz v1, :cond_0
 
@@ -577,21 +516,17 @@
 
     move-result-object v3
 
-    .line 256
     .end local v1    # "lp":Landroid/net/LinkProperties;
     :cond_0
     const/4 v2, 0x0
 
-    .line 257
     .local v2, "proxy":Ljava/net/Proxy;
     if-eqz v3, :cond_1
 
-    .line 258
     invoke-virtual {v3}, Landroid/net/ProxyInfo;->makeProxy()Ljava/net/Proxy;
 
     move-result-object v2
 
-    .line 262
     :goto_0
     invoke-virtual {p0, p1, v2}, Landroid/net/Network;->openConnection(Ljava/net/URL;Ljava/net/Proxy;)Ljava/net/URLConnection;
 
@@ -599,7 +534,6 @@
 
     return-object v4
 
-    .line 260
     :cond_1
     sget-object v2, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
@@ -617,27 +551,23 @@
     .end annotation
 
     .prologue
-    .line 278
     if-nez p2, :cond_0
 
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "proxy is null"
+    const-string v3, "proxy is null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 279
     :cond_0
     invoke-direct {p0}, Landroid/net/Network;->maybeInitHttpClient()V
 
-    .line 280
     invoke-virtual {p1}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 284
     .local v1, "protocol":Ljava/lang/String;
     const-string v2, "http"
 
@@ -647,12 +577,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 285
     invoke-static {p2}, Lcom/android/okhttp/HttpHandler;->createHttpOkHttpClient(Ljava/net/Proxy;)Lcom/android/okhttp/OkHttpClient;
 
     move-result-object v0
 
-    .line 293
     .local v0, "client":Lcom/android/okhttp/OkHttpClient;
     :goto_0
     invoke-virtual {p0}, Landroid/net/Network;->getSocketFactory()Ljavax/net/SocketFactory;
@@ -681,7 +609,6 @@
 
     return-object v2
 
-    .line 286
     .end local v0    # "client":Lcom/android/okhttp/OkHttpClient;
     :cond_1
     const-string v2, "https"
@@ -692,7 +619,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 287
     invoke-static {p2}, Lcom/android/okhttp/HttpsHandler;->createHttpsOkHttpClient(Ljava/net/Proxy;)Lcom/android/okhttp/OkHttpClient;
 
     move-result-object v0
@@ -700,7 +626,6 @@
     .restart local v0    # "client":Lcom/android/okhttp/OkHttpClient;
     goto :goto_0
 
-    .line 291
     .end local v0    # "client":Lcom/android/okhttp/OkHttpClient;
     :cond_2
     new-instance v2, Ljava/net/MalformedURLException;
@@ -732,7 +657,6 @@
     .locals 1
 
     .prologue
-    .line 376
     iget v0, p0, Landroid/net/Network;->netId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -748,11 +672,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 346
     iget v0, p0, Landroid/net/Network;->netId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 347
     return-void
 .end method

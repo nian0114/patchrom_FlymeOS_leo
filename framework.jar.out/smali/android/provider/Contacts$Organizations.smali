@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 1786
     const-string v0, "content://contacts/organizations"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -59,7 +58,6 @@
     .locals 0
 
     .prologue
-    .line 1755
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,14 +72,11 @@
     .end annotation
 
     .prologue
-    .line 1763
     const-string v0, ""
 
-    .line 1765
     .local v0, "display":Ljava/lang/CharSequence;
     if-eqz p1, :cond_1
 
-    .line 1766
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -92,7 +87,6 @@
 
     move-result-object v2
 
-    .line 1769
     .local v2, "labels":[Ljava/lang/CharSequence;
     add-int/lit8 v3, p1, -0x1
 
@@ -101,18 +95,15 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1778
     .end local v2    # "labels":[Ljava/lang/CharSequence;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1770
     .restart local v2    # "labels":[Ljava/lang/CharSequence;
     :catch_0
     move-exception v1
 
-    .line 1771
     .local v1, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     const/4 v3, 0x0
 
@@ -120,7 +111,6 @@
 
     goto :goto_0
 
-    .line 1774
     .end local v1    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v2    # "labels":[Ljava/lang/CharSequence;
     :cond_1
@@ -130,7 +120,6 @@
 
     if-nez v3, :cond_0
 
-    .line 1775
     move-object v0, p2
 
     goto :goto_0

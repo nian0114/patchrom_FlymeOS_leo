@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1419
     iput-object p1, p0, Landroid/net/ConnectivityManager$1;->this$0:Landroid/net/ConnectivityManager;
 
     iput-object p2, p0, Landroid/net/ConnectivityManager$1;->val$l:Landroid/net/ConnectivityManager$OnNetworkActiveListener;
@@ -46,11 +45,9 @@
     .end annotation
 
     .prologue
-    .line 1422
     iget-object v0, p0, Landroid/net/ConnectivityManager$1;->val$l:Landroid/net/ConnectivityManager$OnNetworkActiveListener;
 
     invoke-interface {v0}, Landroid/net/ConnectivityManager$OnNetworkActiveListener;->onNetworkActive()V
 
-    .line 1423
     return-void
 .end method

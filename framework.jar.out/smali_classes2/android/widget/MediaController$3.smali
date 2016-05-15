@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 404
     iput-object p1, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 408
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 420
     :cond_0
     :goto_0
     return-void
 
-    .line 410
     :pswitch_0
     iget-object v1, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 413
     :pswitch_1
     iget-object v1, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
@@ -65,7 +60,6 @@
 
     move-result v0
 
-    .line 414
     .local v0, "pos":I
     iget-object v1, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
@@ -98,14 +92,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 415
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1}, Landroid/widget/MediaController$3;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 416
     rem-int/lit16 v1, v0, 0x3e8
 
     rsub-int v1, v1, 0x3e8
@@ -116,7 +108,6 @@
 
     goto :goto_0
 
-    .line 408
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

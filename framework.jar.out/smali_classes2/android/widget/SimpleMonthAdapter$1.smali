@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 197
     iput-object p1, p0, Landroid/widget/SimpleMonthAdapter$1;->this$0:Landroid/widget/SimpleMonthAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "day"    # Ljava/util/Calendar;
 
     .prologue
-    .line 200
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter$1;->this$0:Landroid/widget/SimpleMonthAdapter;
@@ -54,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 201
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter$1;->this$0:Landroid/widget/SimpleMonthAdapter;
 
     invoke-virtual {v0, p2}, Landroid/widget/SimpleMonthAdapter;->setSelectedDay(Ljava/util/Calendar;)V
 
-    .line 203
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter$1;->this$0:Landroid/widget/SimpleMonthAdapter;
 
     # getter for: Landroid/widget/SimpleMonthAdapter;->mOnDaySelectedListener:Landroid/widget/SimpleMonthAdapter$OnDaySelectedListener;
@@ -69,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter$1;->this$0:Landroid/widget/SimpleMonthAdapter;
 
     # getter for: Landroid/widget/SimpleMonthAdapter;->mOnDaySelectedListener:Landroid/widget/SimpleMonthAdapter$OnDaySelectedListener;
@@ -81,7 +76,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/widget/SimpleMonthAdapter$OnDaySelectedListener;->onDaySelected(Landroid/widget/SimpleMonthAdapter;Ljava/util/Calendar;)V
 
-    .line 207
     :cond_0
     return-void
 .end method

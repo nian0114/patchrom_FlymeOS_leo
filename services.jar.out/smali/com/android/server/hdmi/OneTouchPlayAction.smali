@@ -27,21 +27,16 @@
     .param p3, "callback"    # Landroid/hardware/hdmi/IHdmiControlCallback;
 
     .prologue
-    .line 67
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
-    .line 52
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mPowerStatusCounter:I
 
-    .line 68
     iput p2, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mTargetAddress:I
 
-    .line 69
     iput-object p3, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mCallback:Landroid/hardware/hdmi/IHdmiControlCallback;
 
-    .line 70
     return-void
 .end method
 
@@ -49,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 83
     invoke-virtual {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->getSourceAddress()I
 
     move-result v0
@@ -64,7 +58,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/OneTouchPlayAction;->sendCommand(Lcom/android/server/hdmi/HdmiCecMessage;)V
 
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->playback()Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     move-result-object v0
@@ -73,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;->setActiveSource(Z)V
 
-    .line 86
     return-void
 .end method
 
@@ -84,12 +76,10 @@
     .param p2, "callback"    # Landroid/hardware/hdmi/IHdmiControlCallback;
 
     .prologue
-    .line 57
     if-eqz p0, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 58
     :cond_0
     const-string v0, "OneTouchPlayAction"
 
@@ -97,10 +87,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     const/4 v0, 0x0
 
-    .line 61
     :goto_0
     return-object v0
 
@@ -117,7 +105,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 130
     :try_start_0
     iget-object v1, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mCallback:Landroid/hardware/hdmi/IHdmiControlCallback;
 
@@ -125,15 +112,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 134
     :goto_0
     return-void
 
-    .line 131
     :catch_0
     move-exception v0
 
-    .line 132
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "OneTouchPlayAction"
 
@@ -164,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->getSourceAddress()I
 
     move-result v0
@@ -177,7 +160,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/OneTouchPlayAction;->sendCommand(Lcom/android/server/hdmi/HdmiCecMessage;)V
 
-    .line 91
     return-void
 .end method
 
@@ -190,21 +172,17 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 113
     iget v0, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mState:I
 
     if-eq v0, p1, :cond_1
 
-    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 116
     :cond_1
     if-ne p1, v2, :cond_0
 
-    .line 117
     iget v0, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mPowerStatusCounter:I
 
     add-int/lit8 v1, v0, 0x1
@@ -215,10 +193,8 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 118
     invoke-direct {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->queryDevicePowerStatus()V
 
-    .line 119
     iget v0, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mState:I
 
     const/16 v1, 0x7d0
@@ -227,11 +203,9 @@
 
     goto :goto_0
 
-    .line 122
     :cond_2
     invoke-direct {p0, v2}, Lcom/android/server/hdmi/OneTouchPlayAction;->invokeCallback(I)V
 
-    .line 123
     invoke-virtual {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->finish()V
 
     goto :goto_0
@@ -246,7 +220,6 @@
 
     const/4 v2, 0x0
 
-    .line 95
     iget v3, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mState:I
 
     if-ne v3, v1, :cond_0
@@ -262,12 +235,10 @@
     :cond_0
     move v1, v2
 
-    .line 108
     :cond_1
     :goto_0
     return v1
 
-    .line 99
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -277,24 +248,19 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 100
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object v3
 
     aget-byte v0, v3, v2
 
-    .line 101
     .local v0, "status":I
     if-nez v0, :cond_1
 
-    .line 102
     invoke-direct {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->broadcastActiveSource()V
 
-    .line 103
     invoke-direct {p0, v2}, Lcom/android/server/hdmi/OneTouchPlayAction;->invokeCallback(I)V
 
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->finish()V
 
     goto :goto_0
@@ -303,7 +269,6 @@
     :cond_3
     move v1, v2
 
-    .line 108
     goto :goto_0
 .end method
 
@@ -313,7 +278,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->getSourceAddress()I
 
     move-result v0
@@ -326,22 +290,17 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/OneTouchPlayAction;->sendCommand(Lcom/android/server/hdmi/HdmiCecMessage;)V
 
-    .line 75
     invoke-direct {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->broadcastActiveSource()V
 
-    .line 76
     invoke-direct {p0}, Lcom/android/server/hdmi/OneTouchPlayAction;->queryDevicePowerStatus()V
 
-    .line 77
     iput v2, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mState:I
 
-    .line 78
     iget v0, p0, Lcom/android/server/hdmi/OneTouchPlayAction;->mState:I
 
     const/16 v1, 0x7d0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/hdmi/OneTouchPlayAction;->addTimer(II)V
 
-    .line 79
     return v2
 .end method

@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 159
     new-instance v0, Lcom/android/server/gesture/EdgeGestureInputFilter$State;
 
     const-string v1, "LISTEN"
@@ -105,7 +104,6 @@
 
     sput-object v0, Lcom/android/server/gesture/EdgeGestureInputFilter$State;->DROP:Lcom/android/server/gesture/EdgeGestureInputFilter$State;
 
-    .line 158
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/server/gesture/EdgeGestureInputFilter$State;
@@ -150,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 158
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -161,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     const-class v0, Lcom/android/server/gesture/EdgeGestureInputFilter$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 158
     sget-object v0, Lcom/android/server/gesture/EdgeGestureInputFilter$State;->$VALUES:[Lcom/android/server/gesture/EdgeGestureInputFilter$State;
 
     invoke-virtual {v0}, [Lcom/android/server/gesture/EdgeGestureInputFilter$State;->clone()Ljava/lang/Object;

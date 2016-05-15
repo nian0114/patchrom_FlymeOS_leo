@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +48,10 @@
 
     const/4 v3, 0x0
 
-    .line 79
     new-instance v0, Landroid/net/wifi/WifiChannel;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiChannel;-><init>()V
 
-    .line 80
     .local v0, "channel":Landroid/net/wifi/WifiChannel;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -62,14 +59,12 @@
 
     iput v1, v0, Landroid/net/wifi/WifiChannel;->freqMHz:I
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/net/wifi/WifiChannel;->channelNum:I
 
-    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -81,7 +76,6 @@
     :goto_0
     iput-boolean v1, v0, Landroid/net/wifi/WifiChannel;->isDFS:Z
 
-    .line 83
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -91,19 +85,16 @@
     :goto_1
     iput-boolean v2, v0, Landroid/net/wifi/WifiChannel;->ibssAllowed:Z
 
-    .line 84
     return-object v0
 
     :cond_0
     move v1, v3
 
-    .line 82
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 83
     goto :goto_1
 .end method
 
@@ -111,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 76
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiChannel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WifiChannel;
 
     move-result-object v0
@@ -124,7 +114,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 89
     new-array v0, p1, [Landroid/net/wifi/WifiChannel;
 
     return-object v0
@@ -134,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 76
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiChannel$1;->newArray(I)[Landroid/net/wifi/WifiChannel;
 
     move-result-object v0

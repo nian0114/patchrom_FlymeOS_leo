@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 246
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/animation/PathKeyframes$SimpleKeyframes;-><init>(Landroid/animation/PathKeyframes$1;)V
@@ -35,7 +34,6 @@
     .param p1, "x0"    # Landroid/animation/PathKeyframes$1;
 
     .prologue
-    .line 246
     invoke-direct {p0}, Landroid/animation/PathKeyframes$FloatKeyframesBase;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 250
     const-class v0, Ljava/lang/Float;
 
     return-object v0
@@ -58,7 +55,6 @@
     .param p1, "fraction"    # F
 
     .prologue
-    .line 255
     invoke-virtual {p0, p1}, Landroid/animation/PathKeyframes$FloatKeyframesBase;->getFloatValue(F)F
 
     move-result v0

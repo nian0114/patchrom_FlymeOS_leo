@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 350
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
-    .line 351
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 352
     return-void
 .end method
 
@@ -41,19 +38,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 356
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 370
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 373
     :goto_0
     return-void
 
-    .line 358
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -67,7 +60,6 @@
 
     goto :goto_0
 
-    .line 362
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -75,7 +67,6 @@
 
     goto :goto_0
 
-    .line 366
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -85,7 +76,6 @@
 
     goto :goto_0
 
-    .line 356
     nop
 
     :pswitch_data_0

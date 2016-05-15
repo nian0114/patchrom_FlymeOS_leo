@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {p0, p0, v0}, Landroid/content/pm/IPackageInstallerCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -59,17 +56,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.content.pm.IPackageInstallerCallback"
 
@@ -77,7 +70,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -85,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/content/pm/IPackageInstallerCallback;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;
 
@@ -106,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -127,10 +116,8 @@
 
     const/4 v2, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 93
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -138,7 +125,6 @@
     :goto_0
     return v2
 
-    .line 43
     :sswitch_0
     const-string v3, "android.content.pm.IPackageInstallerCallback"
 
@@ -146,54 +132,45 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v3, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 51
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/content/pm/IPackageInstallerCallback$Stub;->onSessionCreated(I)V
 
     goto :goto_0
 
-    .line 56
     .end local v0    # "_arg0":I
     :sswitch_2
     const-string v3, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 59
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/content/pm/IPackageInstallerCallback$Stub;->onSessionBadgingChanged(I)V
 
     goto :goto_0
 
-    .line 64
     .end local v0    # "_arg0":I
     :sswitch_3
     const-string v3, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 68
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -203,14 +180,12 @@
 
     move v1, v2
 
-    .line 69
     .local v1, "_arg1":Z
     :cond_0
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/IPackageInstallerCallback$Stub;->onSessionActiveChanged(IZ)V
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Z
     :sswitch_4
@@ -218,24 +193,20 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 76
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 78
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
-    .line 79
     .local v1, "_arg1":F
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/IPackageInstallerCallback$Stub;->onSessionProgressChanged(IF)V
 
     goto :goto_0
 
-    .line 84
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":F
     :sswitch_5
@@ -243,12 +214,10 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 88
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -258,14 +227,12 @@
 
     move v1, v2
 
-    .line 89
     .local v1, "_arg1":Z
     :cond_1
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/IPackageInstallerCallback$Stub;->onSessionFinished(IZ)V
 
     goto :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

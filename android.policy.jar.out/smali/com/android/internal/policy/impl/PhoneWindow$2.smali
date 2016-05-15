@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4299
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "layout"    # Lcom/android/internal/widget/SwipeDismissLayout;
 
     .prologue
-    .line 4302
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindow;->dispatchOnWindowDismissed()V
 
-    .line 4303
     return-void
 .end method

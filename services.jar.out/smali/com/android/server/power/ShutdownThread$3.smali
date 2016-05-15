@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 425
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$3;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,11 +38,9 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 428
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$3;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-virtual {v0}, Lcom/android/server/power/ShutdownThread;->actionDone()V
 
-    .line 429
     return-void
 .end method

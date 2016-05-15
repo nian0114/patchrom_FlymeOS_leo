@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 433
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 433
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -53,12 +51,10 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 438
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mAttempt:I
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v1, 0x82006
@@ -74,7 +70,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(III)V
 
-    .line 440
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
@@ -84,7 +79,6 @@
 
     if-eq v0, v4, :cond_0
 
-    .line 441
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
@@ -94,13 +88,11 @@
 
     invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsUid(I)V
 
-    .line 442
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
     invoke-static {v0, v4}, Lcom/android/server/connectivity/NetworkMonitor;->access$1502(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 444
     :cond_0
     return-void
 .end method
@@ -109,10 +101,8 @@
     .locals 0
 
     .prologue
-    .line 503
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsUid()V
 
-    .line 504
     return-void
 .end method
 
@@ -125,7 +115,6 @@
 
     const/4 v2, 0x1
 
-    .line 448
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -154,7 +143,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 449
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
@@ -162,13 +150,11 @@
     :pswitch_0
     move v2, v3
 
-    .line 497
     :cond_0
     :goto_0
     :pswitch_1
     return v2
 
-    .line 451
     :pswitch_2
     iget v4, p1, Landroid/os/Message;->arg1:I
 
@@ -181,7 +167,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 470
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mDefaultRequest:Landroid/net/NetworkRequest;
@@ -206,7 +191,6 @@
 
     if-nez v4, :cond_1
 
-    .line 472
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -221,7 +205,6 @@
 
     goto :goto_0
 
-    .line 481
     :cond_1
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -230,13 +213,11 @@
 
     move-result v0
 
-    .line 482
     .local v0, "httpResponseCode":I
     const/16 v4, 0xcc
 
     if-ne v0, v4, :cond_2
 
-    .line 483
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -251,7 +232,6 @@
 
     goto :goto_0
 
-    .line 484
     :cond_2
     const/16 v4, 0xc8
 
@@ -261,7 +241,6 @@
 
     if-gt v0, v4, :cond_3
 
-    .line 485
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -276,7 +255,6 @@
 
     goto :goto_0
 
-    .line 486
     :cond_3
     iget v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mAttempt:I
 
@@ -293,7 +271,6 @@
 
     if-le v4, v5, :cond_4
 
-    .line 487
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -308,7 +285,6 @@
 
     goto :goto_0
 
-    .line 488
     :cond_4
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -319,7 +295,6 @@
 
     if-ltz v4, :cond_0
 
-    .line 489
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v5, 0x82006
@@ -335,7 +310,6 @@
 
     move-result-object v1
 
-    .line 490
     .local v1, "msg":Landroid/os/Message;
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -352,7 +326,6 @@
 
     goto/16 :goto_0
 
-    .line 449
     :pswitch_data_0
     .packed-switch 0x82006
         :pswitch_2

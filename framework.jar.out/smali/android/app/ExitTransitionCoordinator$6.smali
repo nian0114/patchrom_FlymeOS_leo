@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 241
     iput-object p1, p0, Landroid/app/ExitTransitionCoordinator$6;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "drawComplete"    # Z
 
     .prologue
-    .line 244
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$6;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     # getter for: Landroid/app/ExitTransitionCoordinator;->mIsCanceled:Z
@@ -51,13 +49,11 @@
 
     if-nez v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$6;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     # invokes: Landroid/app/ExitTransitionCoordinator;->fadeOutBackground()V
     invoke-static {v0}, Landroid/app/ExitTransitionCoordinator;->access$700(Landroid/app/ExitTransitionCoordinator;)V
 
-    .line 247
     :cond_0
     return-void
 .end method

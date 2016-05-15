@@ -27,15 +27,11 @@
     .param p2, "_uid"    # I
 
     .prologue
-    .line 266
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 267
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionSession$Caller;->packageName:Ljava/lang/String;
 
-    .line 268
     iput p2, p0, Landroid/service/voice/VoiceInteractionSession$Caller;->uid:I
 
-    .line 269
     return-void
 .end method

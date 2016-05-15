@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1136
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -49,18 +48,15 @@
     .param p1, "params"    # [Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1139
     const/4 v1, 0x0
 
     aget-object v0, p1, v1
 
-    .line 1140
     .local v0, "info":Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
     iget-object v1, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_0
 
-    .line 1141
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->ri:Landroid/content/pm/ResolveInfo;
@@ -71,7 +67,6 @@
 
     iput-object v1, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 1143
     :cond_0
     return-object v0
 .end method
@@ -80,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 1136
     check-cast p1, [Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->doInBackground([Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;)Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
@@ -95,7 +89,6 @@
     .param p1, "info"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1148
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mProfileView:Landroid/view/View;
@@ -118,12 +111,10 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1149
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->bindProfileView()V
 
-    .line 1151
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -134,7 +125,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->notifyDataSetChanged()V
 
-    .line 1152
     return-void
 .end method
 
@@ -142,7 +132,6 @@
     .locals 0
 
     .prologue
-    .line 1136
     check-cast p1, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->onPostExecute(Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;)V

@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 126
     new-instance v0, Landroid/bluetooth/BluetoothRemoteDiRecord$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothRemoteDiRecord$1;-><init>()V
@@ -57,32 +56,24 @@
     .param p5, "specificationId"    # I
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mObject:Ljava/lang/Object;
 
-    .line 65
     iput p1, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mVendorId:I
 
-    .line 66
     iput p2, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mVendorIdSource:I
 
-    .line 67
     iput p3, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mProductId:I
 
-    .line 68
     iput p4, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mProductVersion:I
 
-    .line 69
     iput p5, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mSpecificationId:I
 
-    .line 70
     return-void
 .end method
 
@@ -92,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 144
     const/4 v0, 0x0
 
     return v0
@@ -102,12 +92,10 @@
     .locals 2
 
     .prologue
-    .line 94
     iget-object v1, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 95
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mProductId:I
 
@@ -115,7 +103,6 @@
 
     return v0
 
-    .line 96
     :catchall_0
     move-exception v0
 
@@ -130,12 +117,10 @@
     .locals 2
 
     .prologue
-    .line 103
     iget-object v1, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 104
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mProductVersion:I
 
@@ -143,7 +128,6 @@
 
     return v0
 
-    .line 105
     :catchall_0
     move-exception v0
 
@@ -158,12 +142,10 @@
     .locals 2
 
     .prologue
-    .line 112
     iget-object v1, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 113
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mSpecificationId:I
 
@@ -171,7 +153,6 @@
 
     return v0
 
-    .line 114
     :catchall_0
     move-exception v0
 
@@ -186,12 +167,10 @@
     .locals 2
 
     .prologue
-    .line 76
     iget-object v1, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 77
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mVendorId:I
 
@@ -199,7 +178,6 @@
 
     return v0
 
-    .line 78
     :catchall_0
     move-exception v0
 
@@ -214,12 +192,10 @@
     .locals 2
 
     .prologue
-    .line 85
     iget-object v1, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 86
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mVendorIdSource:I
 
@@ -227,7 +203,6 @@
 
     return v0
 
-    .line 87
     :catchall_0
     move-exception v0
 
@@ -244,31 +219,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 119
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mVendorId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 120
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mVendorIdSource:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 121
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mProductId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 122
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mProductVersion:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 123
     iget v0, p0, Landroid/bluetooth/BluetoothRemoteDiRecord;->mSpecificationId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 124
     return-void
 .end method

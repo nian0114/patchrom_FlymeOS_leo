@@ -29,18 +29,14 @@
     .param p4, "scope"    # I
 
     .prologue
-    .line 631
     iput-object p1, p0, Landroid/media/session/MediaSession$PlayItemToken;->this$0:Landroid/media/session/MediaSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 632
     iput-wide p2, p0, Landroid/media/session/MediaSession$PlayItemToken;->mUid:J
 
-    .line 633
     iput p4, p0, Landroid/media/session/MediaSession$PlayItemToken;->mScope:I
 
-    .line 634
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 636
     iget v0, p0, Landroid/media/session/MediaSession$PlayItemToken;->mScope:I
 
     return v0
@@ -60,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 639
     iget-wide v0, p0, Landroid/media/session/MediaSession$PlayItemToken;->mUid:J
 
     return-wide v0

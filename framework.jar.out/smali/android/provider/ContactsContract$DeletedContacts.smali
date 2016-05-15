@@ -30,7 +30,6 @@
     .locals 2
 
     .prologue
-    .line 2197
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "deleted_contacts"
@@ -48,9 +47,7 @@
     .locals 0
 
     .prologue
-    .line 2190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2191
     return-void
 .end method

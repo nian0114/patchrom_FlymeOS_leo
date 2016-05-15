@@ -25,16 +25,12 @@
     .param p2, "files"    # [Ljava/lang/String;
 
     .prologue
-    .line 46
     invoke-direct {p0, p1}, Landroid/app/backup/FileBackupHelperBase;-><init>(Landroid/content/Context;)V
 
-    .line 48
     iput-object p1, p0, Landroid/app/backup/AbsoluteFileBackupHelper;->mContext:Landroid/content/Context;
 
-    .line 49
     iput-object p2, p0, Landroid/app/backup/AbsoluteFileBackupHelper;->mFiles:[Ljava/lang/String;
 
-    .line 50
     return-void
 .end method
 
@@ -47,14 +43,12 @@
     .param p3, "newState"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/app/backup/AbsoluteFileBackupHelper;->mFiles:[Ljava/lang/String;
 
     iget-object v1, p0, Landroid/app/backup/AbsoluteFileBackupHelper;->mFiles:[Ljava/lang/String;
 
     invoke-static {p1, p2, p3, v0, v1}, Landroid/app/backup/AbsoluteFileBackupHelper;->performBackup_checked(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -63,12 +57,10 @@
     .param p1, "data"    # Landroid/app/backup/BackupDataInputStream;
 
     .prologue
-    .line 68
     invoke-virtual {p1}, Landroid/app/backup/BackupDataInputStream;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 69
     .local v1, "key":Ljava/lang/String;
     iget-object v2, p0, Landroid/app/backup/AbsoluteFileBackupHelper;->mFiles:[Ljava/lang/String;
 
@@ -78,16 +70,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 70
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 71
     .local v0, "f":Ljava/io/File;
     invoke-virtual {p0, v0, p1}, Landroid/app/backup/AbsoluteFileBackupHelper;->writeFile(Ljava/io/File;Landroid/app/backup/BackupDataInputStream;)Z
 
-    .line 73
     .end local v0    # "f":Ljava/io/File;
     :cond_0
     return-void
@@ -97,7 +86,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-super {p0, p1}, Landroid/app/backup/FileBackupHelperBase;->writeNewStateDescription(Landroid/os/ParcelFileDescriptor;)V
 
     return-void

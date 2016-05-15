@@ -30,19 +30,14 @@
     .param p3, "accessType"    # J
 
     .prologue
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;->certificateHash:[B
 
-    .line 128
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;->packageName:Ljava/lang/String;
 
-    .line 129
     iput-wide p3, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;->accessType:J
 
-    .line 130
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;->certificateHash:[B
@@ -93,7 +87,6 @@
     .locals 4
 
     .prologue
-    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

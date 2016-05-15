@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 132
     iput-object p1, p0, Landroid/app/VoiceInteractor$2;->this$0:Landroid/app/VoiceInteractor;
 
     invoke-direct {p0}, Lcom/android/internal/app/IVoiceInteractorCallback$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 148
     iget-object v0, p0, Landroid/app/VoiceInteractor$2;->this$0:Landroid/app/VoiceInteractor;
 
     iget-object v0, v0, Landroid/app/VoiceInteractor;->mHandlerCaller:Lcom/android/internal/os/HandlerCaller;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 150
     return-void
 .end method
 
@@ -70,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/app/VoiceInteractor$2;->this$0:Landroid/app/VoiceInteractor;
 
     iget-object v0, v0, Landroid/app/VoiceInteractor;->mHandlerCaller:Lcom/android/internal/os/HandlerCaller;
@@ -87,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 163
     return-void
 .end method
 
@@ -98,7 +93,6 @@
     .param p3, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/app/VoiceInteractor$2;->this$0:Landroid/app/VoiceInteractor;
 
     iget-object v1, v0, Landroid/app/VoiceInteractor;->mHandlerCaller:Lcom/android/internal/os/HandlerCaller;
@@ -120,10 +114,8 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 157
     return-void
 
-    .line 155
     :cond_0
     const/4 v0, 0x0
 
@@ -136,7 +128,6 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 142
     iget-object v0, p0, Landroid/app/VoiceInteractor$2;->this$0:Landroid/app/VoiceInteractor;
 
     iget-object v0, v0, Landroid/app/VoiceInteractor;->mHandlerCaller:Lcom/android/internal/os/HandlerCaller;
@@ -153,7 +144,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 144
     return-void
 .end method
 
@@ -166,7 +156,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 136
     iget-object v0, p0, Landroid/app/VoiceInteractor$2;->this$0:Landroid/app/VoiceInteractor;
 
     iget-object v2, v0, Landroid/app/VoiceInteractor;->mHandlerCaller:Lcom/android/internal/os/HandlerCaller;
@@ -186,10 +175,8 @@
 
     invoke-virtual {v2, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 138
     return-void
 
-    .line 136
     :cond_0
     const/4 v0, 0x0
 

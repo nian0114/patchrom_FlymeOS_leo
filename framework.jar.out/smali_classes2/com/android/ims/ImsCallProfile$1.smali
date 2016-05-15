@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 307
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 310
     new-instance v0, Lcom/android/ims/ImsCallProfile;
 
     invoke-direct {v0, p1}, Lcom/android/ims/ImsCallProfile;-><init>(Landroid/os/Parcel;)V
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 307
     invoke-virtual {p0, p1}, Lcom/android/ims/ImsCallProfile$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/ims/ImsCallProfile;
 
     move-result-object v0
@@ -70,7 +67,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 315
     new-array v0, p1, [Lcom/android/ims/ImsCallProfile;
 
     return-object v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 307
     invoke-virtual {p0, p1}, Lcom/android/ims/ImsCallProfile$1;->newArray(I)[Lcom/android/ims/ImsCallProfile;
 
     move-result-object v0

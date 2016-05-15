@@ -44,18 +44,14 @@
     .end annotation
 
     .prologue
-    .line 61
     .local p0, "this":Landroid/util/Property;, "Landroid/util/Property<TT;TV;>;"
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TV;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object p2, p0, Landroid/util/Property;->mName:Ljava/lang/String;
 
-    .line 63
     iput-object p1, p0, Landroid/util/Property;->mType:Ljava/lang/Class;
 
-    .line 64
     return-void
 .end method
 
@@ -81,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 55
     .local p0, "hostType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     .local p1, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<TV;>;"
     new-instance v0, Landroid/util/ReflectiveProperty;
@@ -105,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 97
     .local p0, "this":Landroid/util/Property;, "Landroid/util/Property<TT;TV;>;"
     iget-object v0, p0, Landroid/util/Property;->mName:Ljava/lang/String;
 
@@ -123,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 104
     .local p0, "this":Landroid/util/Property;, "Landroid/util/Property<TT;TV;>;"
     iget-object v0, p0, Landroid/util/Property;->mType:Ljava/lang/Class;
 
@@ -134,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 76
     .local p0, "this":Landroid/util/Property;, "Landroid/util/Property<TT;TV;>;"
     const/4 v0, 0x0
 
@@ -150,7 +142,6 @@
     .end annotation
 
     .prologue
-    .line 85
     .local p0, "this":Landroid/util/Property;, "Landroid/util/Property<TT;TV;>;"
     .local p1, "object":Ljava/lang/Object;, "TT;"
     .local p2, "value":Ljava/lang/Object;, "TV;"

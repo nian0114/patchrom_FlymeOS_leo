@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 68
     new-instance v0, Landroid/hardware/input/InputDeviceIdentifier$1;
 
     invoke-direct {v0}, Landroid/hardware/input/InputDeviceIdentifier$1;-><init>()V
@@ -47,31 +46,26 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mDescriptor:Ljava/lang/String;
 
-    .line 40
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mVendorId:I
 
-    .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mProductId:I
 
-    .line 42
     return-void
 .end method
 
@@ -81,7 +75,6 @@
     .param p2, "x1"    # Landroid/hardware/input/InputDeviceIdentifier$1;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Landroid/hardware/input/InputDeviceIdentifier;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -94,19 +87,14 @@
     .param p3, "productId"    # I
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/hardware/input/InputDeviceIdentifier;->mDescriptor:Ljava/lang/String;
 
-    .line 34
     iput p2, p0, Landroid/hardware/input/InputDeviceIdentifier;->mVendorId:I
 
-    .line 35
     iput p3, p0, Landroid/hardware/input/InputDeviceIdentifier;->mProductId:I
 
-    .line 36
     return-void
 .end method
 
@@ -116,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     return v0
@@ -126,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mDescriptor:Ljava/lang/String;
 
     return-object v0
@@ -136,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mProductId:I
 
     return v0
@@ -146,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mVendorId:I
 
     return v0
@@ -158,21 +142,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mDescriptor:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 52
     iget v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mVendorId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 53
     iget v0, p0, Landroid/hardware/input/InputDeviceIdentifier;->mProductId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 54
     return-void
 .end method

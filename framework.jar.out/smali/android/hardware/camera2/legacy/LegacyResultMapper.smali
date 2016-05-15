@@ -20,7 +20,6 @@
     .locals 2
 
     .prologue
-    .line 45
     const-string v0, "LegacyResultMapper"
 
     const/4 v1, 0x2
@@ -40,13 +39,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-object v0, p0, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mCachedRequest:Landroid/hardware/camera2/legacy/LegacyRequest;
 
-    .line 48
     iput-object v0, p0, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mCachedResult:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     return-void
@@ -67,22 +63,18 @@
 
     const/4 v0, 0x0
 
-    .line 452
     if-nez p0, :cond_0
 
-    .line 453
     const-string v1, "LegacyResultMapper"
 
     const-string v2, "convertLegacyAfMode - no AF mode, default to OFF"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
     :goto_0
     :pswitch_0
     return v0
 
-    .line 457
     :cond_0
     const/4 v5, -0x1
 
@@ -96,7 +88,6 @@
     :goto_1
     packed-switch v5, :pswitch_data_0
 
-    .line 473
     const-string v1, "LegacyResultMapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -127,7 +118,6 @@
 
     goto :goto_0
 
-    .line 457
     :sswitch_0
     const-string v6, "auto"
 
@@ -181,7 +171,7 @@
     goto :goto_1
 
     :sswitch_4
-    const-string/jumbo v6, "macro"
+    const-string v6, "macro"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -222,22 +212,18 @@
     :pswitch_1
     move v0, v1
 
-    .line 459
     goto :goto_0
 
     :pswitch_2
     move v0, v2
 
-    .line 461
     goto :goto_0
 
     :pswitch_3
     move v0, v3
 
-    .line 463
     goto :goto_0
 
-    .line 465
     :pswitch_4
     const/4 v0, 0x5
 
@@ -246,10 +232,8 @@
     :pswitch_5
     move v0, v4
 
-    .line 467
     goto :goto_0
 
-    .line 457
     :sswitch_data_0
     .sparse-switch
         -0xb99cbc3 -> :sswitch_2
@@ -288,15 +272,12 @@
 
     const/4 v0, 0x1
 
-    .line 479
     if-nez p0, :cond_0
 
-    .line 503
     :goto_0
     :pswitch_0
     return v0
 
-    .line 484
     :cond_0
     const/4 v5, -0x1
 
@@ -310,7 +291,6 @@
     :goto_1
     packed-switch v5, :pswitch_data_0
 
-    .line 502
     const-string v1, "LegacyResultMapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -335,7 +315,6 @@
 
     goto :goto_0
 
-    .line 484
     :sswitch_0
     const-string v6, "auto"
 
@@ -376,7 +355,7 @@
     goto :goto_1
 
     :sswitch_3
-    const-string/jumbo v6, "warm-fluorescent"
+    const-string v6, "warm-fluorescent"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -415,7 +394,7 @@
     goto :goto_1
 
     :sswitch_6
-    const-string/jumbo v6, "twilight"
+    const-string v6, "twilight"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -428,7 +407,7 @@
     goto :goto_1
 
     :sswitch_7
-    const-string/jumbo v6, "shade"
+    const-string v6, "shade"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -443,46 +422,38 @@
     :pswitch_1
     move v0, v1
 
-    .line 488
     goto :goto_0
 
     :pswitch_2
     move v0, v2
 
-    .line 490
     goto :goto_0
 
     :pswitch_3
     move v0, v3
 
-    .line 492
     goto :goto_0
 
     :pswitch_4
     move v0, v4
 
-    .line 494
     goto :goto_0
 
-    .line 496
     :pswitch_5
     const/4 v0, 0x6
 
     goto/16 :goto_0
 
-    .line 498
     :pswitch_6
     const/4 v0, 0x7
 
     goto/16 :goto_0
 
-    .line 500
     :pswitch_7
     const/16 v0, 0x8
 
     goto/16 :goto_0
 
-    .line 484
     nop
 
     :sswitch_data_0
@@ -515,36 +486,30 @@
     .param p0, "legacyRequest"    # Landroid/hardware/camera2/legacy/LegacyRequest;
 
     .prologue
-    .line 110
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->characteristics:Landroid/hardware/camera2/CameraCharacteristics;
 
-    .line 111
     .local v2, "characteristics":Landroid/hardware/camera2/CameraCharacteristics;
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->captureRequest:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 112
     .local v3, "request":Landroid/hardware/camera2/CaptureRequest;
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->previewSize:Landroid/util/Size;
 
-    .line 113
     .local v12, "previewSize":Landroid/util/Size;
     move-object/from16 v0, p0
 
     iget-object v6, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->parameters:Landroid/hardware/Camera$Parameters;
 
-    .line 115
     .local v6, "params":Landroid/hardware/Camera$Parameters;
     new-instance v1, Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-direct {v1}, Landroid/hardware/camera2/impl/CameraMetadataNative;-><init>()V
 
-    .line 117
     .local v1, "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     sget-object v15, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -554,7 +519,6 @@
 
     check-cast v4, Landroid/graphics/Rect;
 
-    .line 119
     .local v4, "activeArraySize":Landroid/graphics/Rect;
     sget-object v15, Landroid/hardware/camera2/CaptureRequest;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -568,7 +532,6 @@
 
     move-result-object v5
 
-    .line 128
     .local v5, "zoomData":Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_ABERRATION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -582,16 +545,12 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 138
     invoke-static/range {v1 .. v6}, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mapAe(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/CameraCharacteristics;Landroid/hardware/camera2/CaptureRequest;Landroid/graphics/Rect;Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;Landroid/hardware/Camera$Parameters;)V
 
-    .line 143
     invoke-static {v1, v4, v5, v6}, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mapAf(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/graphics/Rect;Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;Landroid/hardware/Camera$Parameters;)V
 
-    .line 148
     invoke-static {v1, v6}, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mapAwb(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/Camera$Parameters;)V
 
-    .line 154
     sget-object v15, Landroid/hardware/camera2/CaptureRequest;->CONTROL_CAPTURE_INTENT:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/16 v16, 0x1
@@ -612,13 +571,11 @@
 
     move-result v7
 
-    .line 158
     .local v7, "captureIntent":I
     invoke-static {v7}, Landroid/hardware/camera2/legacy/LegacyRequestMapper;->filterSupportedCaptureIntent(I)I
 
     move-result v7
 
-    .line 160
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_CAPTURE_INTENT:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -629,7 +586,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 167
     sget-object v15, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/16 v16, 0x1
@@ -650,13 +606,11 @@
 
     move-result v8
 
-    .line 169
     .local v8, "controlMode":I
     const/4 v15, 0x2
 
     if-ne v8, v15, :cond_1
 
-    .line 170
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/16 v16, 0x2
@@ -669,25 +623,21 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 180
     :goto_0
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->getSceneMode()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 181
     .local v10, "legacySceneMode":Ljava/lang/String;
     invoke-static {v10}, Landroid/hardware/camera2/legacy/LegacyMetadataMapper;->convertSceneModeFromLegacy(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 182
     .local v11, "mode":I
     const/4 v15, -0x1
 
     if-eq v11, v15, :cond_2
 
-    .line 183
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -698,24 +648,20 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 197
     :goto_1
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->getColorEffect()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 198
     .local v9, "legacyEffectMode":Ljava/lang/String;
     invoke-static {v9}, Landroid/hardware/camera2/legacy/LegacyMetadataMapper;->convertEffectModeFromLegacy(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 199
     const/4 v15, -0x1
 
     if-eq v11, v15, :cond_3
 
-    .line 200
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_EFFECT_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -726,7 +672,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 210
     :goto_2
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->isVideoStabilizationSupported()Z
 
@@ -742,7 +687,6 @@
 
     const/4 v14, 0x1
 
-    .line 214
     .local v14, "stabMode":I
     :goto_3
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_VIDEO_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
@@ -755,7 +699,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 229
     const-string v15, "infinity"
 
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->getFocusMode()Ljava/lang/String;
@@ -768,7 +711,6 @@
 
     if-eqz v15, :cond_0
 
-    .line 230
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/16 v16, 0x0
@@ -781,7 +723,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 235
     :cond_0
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -797,7 +738,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 241
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->REQUEST_PIPELINE_DEPTH:Landroid/hardware/camera2/CaptureResult$Key;
 
     sget-object v16, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_PIPELINE_MAX_DEPTH:Landroid/hardware/camera2/CameraCharacteristics$Key;
@@ -812,10 +752,8 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 247
     invoke-static {v1, v5, v6}, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mapScaler(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;Landroid/hardware/Camera$Parameters;)V
 
-    .line 255
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->SENSOR_TEST_PATTERN_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/16 v16, 0x0
@@ -828,7 +766,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 262
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_LOCATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     sget-object v16, Landroid/hardware/camera2/CaptureRequest;->JPEG_GPS_LOCATION:Landroid/hardware/camera2/CaptureRequest$Key;
@@ -843,7 +780,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 265
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->JPEG_ORIENTATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     sget-object v16, Landroid/hardware/camera2/CaptureRequest;->JPEG_ORIENTATION:Landroid/hardware/camera2/CaptureRequest$Key;
@@ -858,7 +794,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 268
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->JPEG_QUALITY:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->getJpegQuality()I
@@ -879,7 +814,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 271
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->JPEG_THUMBNAIL_QUALITY:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->getJpegThumbnailQuality()I
@@ -900,16 +834,13 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 274
     invoke-virtual {v6}, Landroid/hardware/Camera$Parameters;->getJpegThumbnailSize()Landroid/hardware/Camera$Size;
 
     move-result-object v13
 
-    .line 275
     .local v13, "s":Landroid/hardware/Camera$Size;
     if-eqz v13, :cond_5
 
-    .line 276
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->JPEG_THUMBNAIL_SIZE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v13}, Landroid/hardware/camera2/legacy/ParameterUtils;->convertSize(Landroid/hardware/Camera$Size;)Landroid/util/Size;
@@ -920,7 +851,6 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 285
     :goto_4
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -934,10 +864,8 @@
 
     invoke-virtual {v1, v15, v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 287
     return-object v1
 
-    .line 172
     .end local v9    # "legacyEffectMode":Ljava/lang/String;
     .end local v10    # "legacySceneMode":Ljava/lang/String;
     .end local v11    # "mode":I
@@ -958,7 +886,6 @@
 
     goto/16 :goto_0
 
-    .line 187
     .restart local v10    # "legacySceneMode":Ljava/lang/String;
     .restart local v11    # "mode":I
     :cond_2
@@ -992,7 +919,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/16 v16, 0x0
@@ -1007,7 +933,6 @@
 
     goto/16 :goto_1
 
-    .line 202
     .restart local v9    # "legacyEffectMode":Ljava/lang/String;
     :cond_3
     const-string v15, "LegacyResultMapper"
@@ -1040,7 +965,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     sget-object v15, Landroid/hardware/camera2/CaptureResult;->CONTROL_EFFECT_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/16 v16, 0x0
@@ -1055,13 +979,11 @@
 
     goto/16 :goto_2
 
-    .line 210
     :cond_4
     const/4 v14, 0x0
 
     goto/16 :goto_3
 
-    .line 278
     .restart local v13    # "s":Landroid/hardware/Camera$Size;
     .restart local v14    # "stabMode":I
     :cond_5
@@ -1095,17 +1017,14 @@
     .end annotation
 
     .prologue
-    .line 384
     .local p2, "meteringAreaList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Area;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 385
     .local v2, "meteringRectList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/params/MeteringRectangle;>;"
     if-eqz p2, :cond_0
 
-    .line 386
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1124,13 +1043,11 @@
 
     check-cast v0, Landroid/hardware/Camera$Area;
 
-    .line 387
     .local v0, "area":Landroid/hardware/Camera$Area;
     invoke-static {p0, p1, v0}, Landroid/hardware/camera2/legacy/ParameterUtils;->convertCameraAreaToActiveArrayRectangle(Landroid/graphics/Rect;Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;Landroid/hardware/Camera$Area;)Landroid/hardware/camera2/legacy/ParameterUtils$WeightedRectangle;
 
     move-result-object v3
 
-    .line 391
     .local v3, "rect":Landroid/hardware/camera2/legacy/ParameterUtils$WeightedRectangle;
     invoke-virtual {v3}, Landroid/hardware/camera2/legacy/ParameterUtils$WeightedRectangle;->toMetering()Landroid/hardware/camera2/params/MeteringRectangle;
 
@@ -1140,7 +1057,6 @@
 
     goto :goto_0
 
-    .line 395
     .end local v0    # "area":Landroid/hardware/Camera$Area;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "rect":Landroid/hardware/camera2/legacy/ParameterUtils$WeightedRectangle;
@@ -1149,7 +1065,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 396
     const-string v4, "LegacyResultMapper"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1186,7 +1101,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     :cond_1
     const/4 v4, 0x0
 
@@ -1211,7 +1125,6 @@
     .param p5, "p"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 295
     invoke-virtual {p5}, Landroid/hardware/Camera$Parameters;->getAntibanding()Ljava/lang/String;
 
     move-result-object v5
@@ -1220,7 +1133,6 @@
 
     move-result v0
 
-    .line 297
     .local v0, "antiBandingMode":I
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_ANTIBANDING_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -1230,7 +1142,6 @@
 
     invoke-virtual {p0, v5, v6}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 302
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p5}, Landroid/hardware/Camera$Parameters;->getExposureCompensation()I
@@ -1243,7 +1154,6 @@
 
     invoke-virtual {p0, v5, v6}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 307
     invoke-virtual {p5}, Landroid/hardware/Camera$Parameters;->isAutoExposureLockSupported()Z
 
     move-result v5
@@ -1254,7 +1164,6 @@
 
     move-result v1
 
-    .line 308
     .local v1, "lock":Z
     :goto_0
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_LOCK:Landroid/hardware/camera2/CaptureResult$Key;
@@ -1265,19 +1174,17 @@
 
     invoke-virtual {p0, v5, v6}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 309
     sget-boolean v5, Landroid/hardware/camera2/legacy/LegacyResultMapper;->VERBOSE:Z
 
     if-eqz v5, :cond_0
 
-    .line 310
     const-string v5, "LegacyResultMapper"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "mapAe - android.control.aeLock = "
+    const-string v7, "mapAe - android.control.aeLock = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1307,7 +1214,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     :cond_0
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_LOCK:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -1317,7 +1223,6 @@
 
     check-cast v4, Ljava/lang/Boolean;
 
-    .line 316
     .local v4, "requestLock":Ljava/lang/Boolean;
     if-eqz v4, :cond_1
 
@@ -1327,14 +1232,13 @@
 
     if-eq v5, v1, :cond_1
 
-    .line 317
     const-string v5, "LegacyResultMapper"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "mapAe - android.control.aeLock was requested to "
+    const-string v7, "mapAe - android.control.aeLock was requested to "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1360,30 +1264,25 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     :cond_1
     invoke-static {p0, p1, p5}, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mapAeAndFlashMode(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/CameraCharacteristics;Landroid/hardware/Camera$Parameters;)V
 
-    .line 334
     invoke-virtual {p5}, Landroid/hardware/Camera$Parameters;->getMaxNumMeteringAreas()I
 
     move-result v5
 
     if-lez v5, :cond_3
 
-    .line 335
     sget-boolean v5, Landroid/hardware/camera2/legacy/LegacyResultMapper;->VERBOSE:Z
 
     if-eqz v5, :cond_2
 
-    .line 336
-    const-string/jumbo v5, "metering-areas"
+    const-string v5, "metering-areas"
 
     invoke-virtual {p5, v5}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 337
     .local v2, "meteringAreas":Ljava/lang/String;
     const-string v5, "LegacyResultMapper"
 
@@ -1391,7 +1290,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "mapAe - parameter dump; metering-areas: "
+    const-string v7, "mapAe - parameter dump; metering-areas: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1407,7 +1306,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     .end local v2    # "meteringAreas":Ljava/lang/String;
     :cond_2
     invoke-virtual {p5}, Landroid/hardware/Camera$Parameters;->getMeteringAreas()Ljava/util/List;
@@ -1420,18 +1318,15 @@
 
     move-result-object v3
 
-    .line 343
     .local v3, "meteringRectArray":[Landroid/hardware/camera2/params/MeteringRectangle;
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p0, v5, v3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 346
     .end local v3    # "meteringRectArray":[Landroid/hardware/camera2/params/MeteringRectangle;
     :cond_3
     return-void
 
-    .line 307
     .end local v1    # "lock":Z
     .end local v4    # "requestLock":Ljava/lang/Boolean;
     :cond_4
@@ -1451,10 +1346,8 @@
 
     const/4 v6, 0x3
 
-    .line 408
     const/4 v1, 0x0
 
-    .line 411
     .local v1, "flashMode":I
     sget-object v4, Landroid/hardware/camera2/CameraCharacteristics;->FLASH_INFO_AVAILABLE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -1472,22 +1365,18 @@
 
     const/4 v3, 0x0
 
-    .line 413
     .local v3, "flashState":Ljava/lang/Integer;
     :goto_0
     const/4 v0, 0x1
 
-    .line 415
     .local v0, "aeMode":I
     invoke-virtual {p2}, Landroid/hardware/Camera$Parameters;->getFlashMode()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 417
     .local v2, "flashModeSetting":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 418
     const/4 v4, -0x1
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -1500,14 +1389,13 @@
     :goto_1
     packed-switch v4, :pswitch_data_0
 
-    .line 438
     const-string v4, "LegacyResultMapper"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "mapAeAndFlashMode - Ignoring unknown flash mode "
+    const-string v6, "mapAeAndFlashMode - Ignoring unknown flash mode "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1527,7 +1415,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     :cond_1
     :goto_2
     :pswitch_0
@@ -1535,7 +1422,6 @@
 
     invoke-virtual {p0, v4, v3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 446
     sget-object v4, Landroid/hardware/camera2/CaptureResult;->FLASH_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1544,7 +1430,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 448
     sget-object v4, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1553,10 +1438,8 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 449
     return-void
 
-    .line 411
     .end local v0    # "aeMode":I
     .end local v2    # "flashModeSetting":Ljava/lang/String;
     .end local v3    # "flashState":Ljava/lang/Integer;
@@ -1567,12 +1450,11 @@
 
     goto :goto_0
 
-    .line 418
     .restart local v0    # "aeMode":I
     .restart local v2    # "flashModeSetting":Ljava/lang/String;
     .restart local v3    # "flashState":Ljava/lang/Integer;
     :sswitch_0
-    const-string/jumbo v7, "off"
+    const-string v7, "off"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1598,7 +1480,7 @@
     goto :goto_1
 
     :sswitch_2
-    const-string/jumbo v5, "on"
+    const-string v5, "on"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1611,7 +1493,7 @@
     goto :goto_1
 
     :sswitch_3
-    const-string/jumbo v5, "red-eye"
+    const-string v5, "red-eye"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1624,7 +1506,7 @@
     goto :goto_1
 
     :sswitch_4
-    const-string/jumbo v5, "torch"
+    const-string v5, "torch"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1636,48 +1518,36 @@
 
     goto :goto_1
 
-    .line 422
     :pswitch_1
     const/4 v0, 0x2
 
-    .line 423
     goto :goto_2
 
-    .line 426
     :pswitch_2
     const/4 v1, 0x1
 
-    .line 427
     const/4 v0, 0x3
 
-    .line 428
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 429
     goto :goto_2
 
-    .line 431
     :pswitch_3
     const/4 v0, 0x4
 
-    .line 432
     goto :goto_2
 
-    .line 434
     :pswitch_4
     const/4 v1, 0x2
 
-    .line 435
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 436
     goto :goto_2
 
-    .line 418
     nop
 
     :sswitch_data_0
@@ -1707,7 +1577,6 @@
     .param p3, "p"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 351
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p3}, Landroid/hardware/Camera$Parameters;->getFocusMode()Ljava/lang/String;
@@ -1724,26 +1593,22 @@
 
     invoke-virtual {p0, v2, v3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 354
     invoke-virtual {p3}, Landroid/hardware/Camera$Parameters;->getMaxNumFocusAreas()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
-    .line 355
     sget-boolean v2, Landroid/hardware/camera2/legacy/LegacyResultMapper;->VERBOSE:Z
 
     if-eqz v2, :cond_0
 
-    .line 356
     const-string v2, "focus-areas"
 
     invoke-virtual {p3, v2}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 357
     .local v0, "focusAreas":Ljava/lang/String;
     const-string v2, "LegacyResultMapper"
 
@@ -1751,7 +1616,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mapAe - parameter dump; focus-areas: "
+    const-string v4, "mapAe - parameter dump; focus-areas: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1767,7 +1632,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     .end local v0    # "focusAreas":Ljava/lang/String;
     :cond_0
     invoke-virtual {p3}, Landroid/hardware/Camera$Parameters;->getFocusAreas()Ljava/util/List;
@@ -1780,13 +1644,11 @@
 
     move-result-object v1
 
-    .line 363
     .local v1, "meteringRectArray":[Landroid/hardware/camera2/params/MeteringRectangle;
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p0, v2, v1}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 365
     .end local v1    # "meteringRectArray":[Landroid/hardware/camera2/params/MeteringRectangle;
     :cond_1
     return-void
@@ -1798,7 +1660,6 @@
     .param p1, "p"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 370
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->isAutoWhiteBalanceLockSupported()Z
 
     move-result v2
@@ -1809,7 +1670,6 @@
 
     move-result v1
 
-    .line 372
     .local v1, "lock":Z
     :goto_0
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_LOCK:Landroid/hardware/camera2/CaptureResult$Key;
@@ -1820,7 +1680,6 @@
 
     invoke-virtual {p0, v2, v3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 377
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getWhiteBalance()Ljava/lang/String;
 
     move-result-object v2
@@ -1829,7 +1688,6 @@
 
     move-result v0
 
-    .line 378
     .local v0, "awbMode":I
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -1839,10 +1697,8 @@
 
     invoke-virtual {p0, v2, v3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 380
     return-void
 
-    .line 370
     .end local v0    # "awbMode":I
     .end local v1    # "lock":Z
     :cond_0
@@ -1858,14 +1714,12 @@
     .param p2, "p"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 515
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureResult$Key;
 
     iget-object v1, p1, Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;->reportedCrop:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 517
     return-void
 .end method
 
@@ -1877,7 +1731,6 @@
     .param p2, "timestamp"    # J
 
     .prologue
-    .line 70
     iget-object v2, p0, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mCachedRequest:Landroid/hardware/camera2/legacy/LegacyRequest;
 
     if-eqz v2, :cond_1
@@ -1894,18 +1747,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 71
     new-instance v1, Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     iget-object v2, p0, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mCachedResult:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-direct {v1, v2}, Landroid/hardware/camera2/impl/CameraMetadataNative;-><init>(Landroid/hardware/camera2/impl/CameraMetadataNative;)V
 
-    .line 72
     .local v1, "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     const/4 v0, 0x1
 
-    .line 88
     .local v0, "cached":Z
     :goto_0
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
@@ -1916,12 +1766,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 91
     sget-boolean v2, Landroid/hardware/camera2/legacy/LegacyResultMapper;->VERBOSE:Z
 
     if-eqz v2, :cond_0
 
-    .line 92
     const-string v2, "LegacyResultMapper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1954,28 +1802,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     const-string v2, "LegacyResultMapper"
 
     const-string v3, "----- beginning of result dump ------"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     invoke-virtual {v1}, Landroid/hardware/camera2/impl/CameraMetadataNative;->dumpToLog()V
 
-    .line 97
     const-string v2, "LegacyResultMapper"
 
     const-string v3, "----- end of result dump ------"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :cond_0
     return-object v1
 
-    .line 74
     .end local v0    # "cached":Z
     .end local v1    # "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     :cond_1
@@ -1983,15 +1826,12 @@
 
     move-result-object v1
 
-    .line 75
     .restart local v1    # "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     const/4 v0, 0x0
 
-    .line 79
     .restart local v0    # "cached":Z
     iput-object p1, p0, Landroid/hardware/camera2/legacy/LegacyResultMapper;->mCachedRequest:Landroid/hardware/camera2/legacy/LegacyRequest;
 
-    .line 80
     new-instance v2, Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-direct {v2, v1}, Landroid/hardware/camera2/impl/CameraMetadataNative;-><init>(Landroid/hardware/camera2/impl/CameraMetadataNative;)V

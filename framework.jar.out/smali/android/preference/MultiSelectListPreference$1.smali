@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 180
     iput-object p1, p0, Landroid/preference/MultiSelectListPreference$1;->this$0:Landroid/preference/MultiSelectListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p3, "isChecked"    # Z
 
     .prologue
-    .line 182
     if-eqz p3, :cond_0
 
-    .line 183
     iget-object v0, p0, Landroid/preference/MultiSelectListPreference$1;->this$0:Landroid/preference/MultiSelectListPreference;
 
     iget-object v1, p0, Landroid/preference/MultiSelectListPreference$1;->this$0:Landroid/preference/MultiSelectListPreference;
@@ -76,11 +73,9 @@
     # |= operator for: Landroid/preference/MultiSelectListPreference;->mPreferenceChanged:Z
     invoke-static {v0, v1}, Landroid/preference/MultiSelectListPreference;->access$076(Landroid/preference/MultiSelectListPreference;I)Z
 
-    .line 187
     :goto_0
     return-void
 
-    .line 185
     :cond_0
     iget-object v0, p0, Landroid/preference/MultiSelectListPreference$1;->this$0:Landroid/preference/MultiSelectListPreference;
 

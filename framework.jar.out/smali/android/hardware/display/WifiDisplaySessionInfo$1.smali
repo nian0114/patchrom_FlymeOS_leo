@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -54,32 +52,27 @@
 
     const/4 v1, 0x1
 
-    .line 44
     .local v1, "client":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 45
     .local v2, "session":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 46
     .local v3, "group":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 47
     .local v4, "pp":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 49
     .local v5, "ip":Ljava/lang/String;
     new-instance v0, Landroid/hardware/display/WifiDisplaySessionInfo;
 
@@ -87,7 +80,6 @@
 
     return-object v0
 
-    .line 43
     .end local v1    # "client":Z
     .end local v2    # "session":I
     .end local v3    # "group":Ljava/lang/String;
@@ -103,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-virtual {p0, p1}, Landroid/hardware/display/WifiDisplaySessionInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/display/WifiDisplaySessionInfo;
 
     move-result-object v0
@@ -116,7 +107,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 54
     new-array v0, p1, [Landroid/hardware/display/WifiDisplaySessionInfo;
 
     return-object v0
@@ -126,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-virtual {p0, p1}, Landroid/hardware/display/WifiDisplaySessionInfo$1;->newArray(I)[Landroid/hardware/display/WifiDisplaySessionInfo;
 
     move-result-object v0

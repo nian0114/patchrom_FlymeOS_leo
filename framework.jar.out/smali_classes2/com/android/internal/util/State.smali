@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     return-void
 .end method
 
@@ -24,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -32,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 46
     return-void
 .end method
 
@@ -40,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 70
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -49,7 +44,6 @@
 
     move-result-object v1
 
-    .line 71
     .local v1, "name":Ljava/lang/String;
     const/16 v2, 0x24
 
@@ -57,7 +51,6 @@
 
     move-result v0
 
-    .line 72
     .local v0, "lastDollar":I
     add-int/lit8 v2, v0, 0x1
 
@@ -73,7 +66,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 53
     const/4 v0, 0x0
 
     return v0

@@ -22,10 +22,8 @@
     .param p3, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 248
     invoke-direct {p0, p1, p2, p3}, Landroid/graphics/drawable/LayerDrawable$LayerState;-><init>(Landroid/graphics/drawable/LayerDrawable$LayerState;Landroid/graphics/drawable/LayerDrawable;Landroid/content/res/Resources;)V
 
-    .line 249
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget v0, p0, Landroid/graphics/drawable/TransitionDrawable$TransitionState;->mChangingConfigurations:I
 
     return v0
@@ -47,7 +44,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 253
     new-instance v2, Landroid/graphics/drawable/TransitionDrawable;
 
     move-object v0, v1
@@ -64,7 +60,6 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 258
     new-instance v0, Landroid/graphics/drawable/TransitionDrawable;
 
     const/4 v1, 0x0

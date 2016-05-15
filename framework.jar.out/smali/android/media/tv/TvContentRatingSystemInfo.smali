@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 83
     new-instance v0, Landroid/media/tv/TvContentRatingSystemInfo$1;
 
     invoke-direct {v0}, Landroid/media/tv/TvContentRatingSystemInfo$1;-><init>()V
@@ -46,16 +45,12 @@
     .param p2, "applicationInfo"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mXmlUri:Landroid/net/Uri;
 
-    .line 58
     iput-object p2, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 59
     return-void
 .end method
 
@@ -66,10 +61,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -78,7 +71,6 @@
 
     iput-object v0, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mXmlUri:Landroid/net/Uri;
 
-    .line 98
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -87,7 +79,6 @@
 
     iput-object v0, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 99
     return-void
 .end method
 
@@ -97,7 +88,6 @@
     .param p2, "x1"    # Landroid/media/tv/TvContentRatingSystemInfo$1;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Landroid/media/tv/TvContentRatingSystemInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -109,7 +99,6 @@
     .param p1, "applicationInfo"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
-    .line 48
     new-instance v1, Landroid/net/Uri$Builder;
 
     invoke-direct {v1}, Landroid/net/Uri$Builder;-><init>()V
@@ -138,7 +127,6 @@
 
     move-result-object v0
 
-    .line 53
     .local v0, "uri":Landroid/net/Uri;
     new-instance v1, Landroid/media/tv/TvContentRatingSystemInfo;
 
@@ -153,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     return v0
@@ -163,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mXmlUri:Landroid/net/Uri;
 
     return-object v0
@@ -173,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -199,16 +184,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 103
     iget-object v0, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mXmlUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 104
     iget-object v0, p0, Landroid/media/tv/TvContentRatingSystemInfo;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 105
     return-void
 .end method

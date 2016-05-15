@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 514
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "info"    # Landroid/media/session/MediaController$PlaybackInfo;
 
     .prologue
-    .line 585
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 577
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .param p1, "metadata"    # Landroid/media/MediaMetadata;
 
     .prologue
-    .line 548
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .param p1, "success"    # Z
 
     .prologue
-    .line 609
     return-void
 .end method
 
@@ -68,7 +63,6 @@
     .param p1, "state"    # Landroid/media/session/PlaybackState;
 
     .prologue
-    .line 539
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .end annotation
 
     .prologue
-    .line 559
     .local p1, "queue":Ljava/util/List;, "Ljava/util/List<Landroid/media/session/MediaSession$QueueItem;>;"
     return-void
 .end method
@@ -95,7 +88,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 568
     return-void
 .end method
 
@@ -103,7 +95,6 @@
     .locals 0
 
     .prologue
-    .line 520
     return-void
 .end method
 
@@ -113,7 +104,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 531
     return-void
 .end method
 
@@ -122,7 +112,6 @@
     .param p1, "stringUri"    # Ljava/lang/String;
 
     .prologue
-    .line 591
     return-void
 .end method
 
@@ -130,7 +119,6 @@
     .locals 0
 
     .prologue
-    .line 603
     return-void
 .end method
 
@@ -139,6 +127,5 @@
     .param p1, "playList"    # [J
 
     .prologue
-    .line 597
     return-void
 .end method

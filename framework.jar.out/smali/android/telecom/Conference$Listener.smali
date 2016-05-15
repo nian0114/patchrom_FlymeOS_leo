@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .end annotation
 
     .prologue
-    .line 46
     .local p2, "conferenceableConnections":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/Connection;>;"
     return-void
 .end method
@@ -53,7 +51,6 @@
     .param p2, "connection"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .param p2, "connectionCapabilities"    # I
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p2, "connection"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 44
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .param p1, "conference"    # Landroid/telecom/Conference;
 
     .prologue
-    .line 47
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p2, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 42
     return-void
 .end method
 
@@ -103,7 +96,6 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -113,7 +105,6 @@
     .param p2, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 49
     return-void
 .end method
 
@@ -123,6 +114,5 @@
     .param p2, "videoState"    # I
 
     .prologue
-    .line 48
     return-void
 .end method

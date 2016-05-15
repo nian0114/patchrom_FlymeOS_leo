@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1857
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Landroid/app/Instrumentation$1;
 
     .prologue
-    .line 1857
     invoke-direct {p0}, Landroid/app/Instrumentation$EmptyRunnable;-><init>()V
 
     return-void
@@ -45,6 +43,5 @@
     .locals 0
 
     .prologue
-    .line 1859
     return-void
 .end method

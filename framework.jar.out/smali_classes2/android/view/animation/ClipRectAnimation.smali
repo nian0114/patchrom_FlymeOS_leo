@@ -16,29 +16,24 @@
     .param p2, "toClip"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    .line 29
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/animation/ClipRectAnimation;->mFromRect:Landroid/graphics/Rect;
 
-    .line 30
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/animation/ClipRectAnimation;->mToRect:Landroid/graphics/Rect;
 
-    .line 39
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 40
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -48,18 +43,15 @@
 
     throw v0
 
-    .line 42
     :cond_1
     iget-object v0, p0, Landroid/view/animation/ClipRectAnimation;->mFromRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 43
     iget-object v0, p0, Landroid/view/animation/ClipRectAnimation;->mToRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 44
     return-void
 .end method
 
@@ -71,7 +63,6 @@
     .param p2, "tr"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 48
     iget-object v4, p0, Landroid/view/animation/ClipRectAnimation;->mFromRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
@@ -94,7 +85,6 @@
 
     add-int v1, v4, v5
 
-    .line 49
     .local v1, "l":I
     iget-object v4, p0, Landroid/view/animation/ClipRectAnimation;->mFromRect:Landroid/graphics/Rect;
 
@@ -118,7 +108,6 @@
 
     add-int v3, v4, v5
 
-    .line 50
     .local v3, "t":I
     iget-object v4, p0, Landroid/view/animation/ClipRectAnimation;->mFromRect:Landroid/graphics/Rect;
 
@@ -142,7 +131,6 @@
 
     add-int v2, v4, v5
 
-    .line 51
     .local v2, "r":I
     iget-object v4, p0, Landroid/view/animation/ClipRectAnimation;->mFromRect:Landroid/graphics/Rect;
 
@@ -166,11 +154,9 @@
 
     add-int v0, v4, v5
 
-    .line 52
     .local v0, "b":I
     invoke-virtual {p2, v1, v3, v2, v0}, Landroid/view/animation/Transformation;->setClipRect(IIII)V
 
-    .line 53
     return-void
 .end method
 
@@ -178,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
     return v0

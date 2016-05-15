@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 154
     iput-object p1, p0, Landroid/app/trust/TrustManager$2;->this$0:Landroid/app/trust/TrustManager;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -43,16 +42,13 @@
 
     const/4 v3, 0x0
 
-    .line 157
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 168
     :goto_0
     return-void
 
-    .line 159
     :pswitch_0
     invoke-virtual {p1}, Landroid/os/Message;->peekData()Landroid/os/Bundle;
 
@@ -74,7 +70,6 @@
 
     move v0, v2
 
-    .line 161
     .local v0, "initiatedByUser":Z
     :goto_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -96,17 +91,14 @@
     :cond_0
     move v0, v3
 
-    .line 159
     goto :goto_1
 
     .restart local v0    # "initiatedByUser":Z
     :cond_1
     move v2, v3
 
-    .line 161
     goto :goto_2
 
-    .line 166
     .end local v0    # "initiatedByUser":Z
     :pswitch_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -129,7 +121,6 @@
 
     goto :goto_3
 
-    .line 157
     nop
 
     :pswitch_data_0

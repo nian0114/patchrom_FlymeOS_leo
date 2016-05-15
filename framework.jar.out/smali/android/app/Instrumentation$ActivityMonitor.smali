@@ -38,30 +38,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 437
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mHits:I
 
-    .line 440
     iput-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 457
     iput-object p1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mWhich:Landroid/content/IntentFilter;
 
-    .line 458
     iput-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mClass:Ljava/lang/String;
 
-    .line 459
     iput-object p2, p0, Landroid/app/Instrumentation$ActivityMonitor;->mResult:Landroid/app/Instrumentation$ActivityResult;
 
-    .line 460
     iput-boolean p3, p0, Landroid/app/Instrumentation$ActivityMonitor;->mBlock:Z
 
-    .line 461
     return-void
 .end method
 
@@ -74,30 +66,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 477
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 437
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mHits:I
 
-    .line 440
     iput-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 478
     iput-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mWhich:Landroid/content/IntentFilter;
 
-    .line 479
     iput-object p1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mClass:Ljava/lang/String;
 
-    .line 480
     iput-object p2, p0, Landroid/app/Instrumentation$ActivityMonitor;->mResult:Landroid/app/Instrumentation$ActivityResult;
 
-    .line 481
     iput-boolean p3, p0, Landroid/app/Instrumentation$ActivityMonitor;->mBlock:Z
 
-    .line 482
     return-void
 .end method
 
@@ -107,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 488
     iget-object v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mWhich:Landroid/content/IntentFilter;
 
     return-object v0
@@ -117,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 511
     iget v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mHits:I
 
     return v0
@@ -127,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 519
     iget-object v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
     return-object v0
@@ -137,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 496
     iget-object v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mResult:Landroid/app/Instrumentation$ActivityResult;
 
     return-object v0
@@ -147,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 504
     iget-boolean v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mBlock:Z
 
     return v0
@@ -164,10 +143,8 @@
 
     const/4 v1, 0x0
 
-    .line 572
     monitor-enter p0
 
-    .line 573
     :try_start_0
     iget-object v3, p0, Landroid/app/Instrumentation$ActivityMonitor;->mWhich:Landroid/content/IntentFilter;
 
@@ -189,27 +166,21 @@
 
     if-gez v3, :cond_0
 
-    .line 576
     monitor-exit p0
 
-    .line 593
     :goto_0
     return v1
 
-    .line 578
     :cond_0
     iget-object v3, p0, Landroid/app/Instrumentation$ActivityMonitor;->mClass:Ljava/lang/String;
 
     if-eqz v3, :cond_4
 
-    .line 579
     const/4 v0, 0x0
 
-    .line 580
     .local v0, "cls":Ljava/lang/String;
     if-eqz p2, :cond_3
 
-    .line 581
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -218,7 +189,6 @@
 
     move-result-object v0
 
-    .line 585
     :cond_1
     :goto_1
     if-eqz v0, :cond_2
@@ -231,13 +201,11 @@
 
     if-nez v3, :cond_4
 
-    .line 586
     :cond_2
     monitor-exit p0
 
     goto :goto_0
 
-    .line 594
     .end local v0    # "cls":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -248,7 +216,6 @@
 
     throw v1
 
-    .line 582
     .restart local v0    # "cls":Ljava/lang/String;
     :cond_3
     :try_start_1
@@ -258,7 +225,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 583
     invoke-virtual {p3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v3
@@ -269,18 +235,14 @@
 
     goto :goto_1
 
-    .line 589
     .end local v0    # "cls":Ljava/lang/String;
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 590
     iput-object p2, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 591
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 593
     :cond_5
     monitor-exit p0
     :try_end_1
@@ -295,10 +257,8 @@
     .locals 2
 
     .prologue
-    .line 529
     monitor-enter p0
 
-    .line 530
     :goto_0
     :try_start_0
     iget-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
@@ -307,7 +267,6 @@
 
     if-nez v1, :cond_0
 
-    .line 532
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -316,29 +275,24 @@
 
     goto :goto_0
 
-    .line 533
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 536
     :cond_0
     :try_start_2
     iget-object v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 537
     .local v0, "res":Landroid/app/Activity;
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 538
     monitor-exit p0
 
     return-object v0
 
-    .line 539
     .end local v0    # "res":Landroid/app/Activity;
     :catchall_0
     move-exception v1
@@ -357,10 +311,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 552
     monitor-enter p0
 
-    .line 553
     :try_start_0
     iget-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
     :try_end_0
@@ -368,14 +320,12 @@
 
     if-nez v1, :cond_0
 
-    .line 555
     :try_start_1
     invoke-virtual {p0, p1, p2}, Ljava/lang/Object;->wait(J)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 559
     :cond_0
     :goto_0
     :try_start_2
@@ -383,29 +333,23 @@
 
     if-nez v1, :cond_1
 
-    .line 560
     monitor-exit p0
 
-    .line 564
     :goto_1
     return-object v0
 
-    .line 562
     :cond_1
     iget-object v0, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 563
     .local v0, "res":Landroid/app/Activity;
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/app/Instrumentation$ActivityMonitor;->mLastActivity:Landroid/app/Activity;
 
-    .line 564
     monitor-exit p0
 
     goto :goto_1
 
-    .line 566
     .end local v0    # "res":Landroid/app/Activity;
     :catchall_0
     move-exception v1
@@ -416,7 +360,6 @@
 
     throw v1
 
-    .line 556
     :catch_0
     move-exception v1
 

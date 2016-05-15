@@ -39,13 +39,10 @@
     .param p1, "f"    # Ljava/io/File;
 
     .prologue
-    .line 522
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 523
     iput-object p1, p0, Lcom/android/internal/backup/LocalTransport$DecodedFilename;->file:Ljava/io/File;
 
-    .line 524
     new-instance v0, Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lcom/android/internal/backup/LocalTransport$DecodedFilename;->key:Ljava/lang/String;
 
-    .line 525
     return-void
 .end method
 
@@ -71,7 +67,6 @@
     .param p1, "other"    # Lcom/android/internal/backup/LocalTransport$DecodedFilename;
 
     .prologue
-    .line 530
     iget-object v0, p0, Lcom/android/internal/backup/LocalTransport$DecodedFilename;->key:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/android/internal/backup/LocalTransport$DecodedFilename;->key:Ljava/lang/String;
@@ -87,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 518
     check-cast p1, Lcom/android/internal/backup/LocalTransport$DecodedFilename;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/backup/LocalTransport$DecodedFilename;->compareTo(Lcom/android/internal/backup/LocalTransport$DecodedFilename;)I

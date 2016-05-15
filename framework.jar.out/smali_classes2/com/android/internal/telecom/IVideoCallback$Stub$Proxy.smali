@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 142
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     iput-object p1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 144
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -59,22 +55,18 @@
     .end annotation
 
     .prologue
-    .line 224
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 226
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 227
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 228
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x5
@@ -87,13 +79,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 231
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 233
     return-void
 
-    .line 231
     :catchall_0
     move-exception v1
 
@@ -112,32 +101,26 @@
     .end annotation
 
     .prologue
-    .line 236
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 238
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 239
     if-eqz p1, :cond_0
 
-    .line 240
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 241
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/telecom/CameraCapabilities;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 246
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -151,13 +134,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 249
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 251
     return-void
 
-    .line 244
     :cond_0
     const/4 v1, 0x0
 
@@ -168,7 +148,6 @@
 
     goto :goto_0
 
-    .line 249
     :catchall_0
     move-exception v1
 
@@ -188,25 +167,20 @@
     .end annotation
 
     .prologue
-    .line 211
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 213
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 214
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 215
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 216
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -219,13 +193,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 219
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 221
     return-void
 
-    .line 219
     :catchall_0
     move-exception v1
 
@@ -244,22 +215,18 @@
     .end annotation
 
     .prologue
-    .line 254
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 256
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 257
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x7
@@ -272,13 +239,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 261
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 263
     return-void
 
-    .line 261
     :catchall_0
     move-exception v1
 
@@ -291,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 151
     const-string v0, "com.android.internal.telecom.IVideoCallback"
 
     return-object v0
@@ -307,22 +270,18 @@
     .end annotation
 
     .prologue
-    .line 199
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 201
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 202
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -335,13 +294,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 206
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 208
     return-void
 
-    .line 206
     :catchall_0
     move-exception v1
 
@@ -360,32 +316,26 @@
     .end annotation
 
     .prologue
-    .line 155
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 157
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 158
     if-eqz p1, :cond_0
 
-    .line 159
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/telecom/VideoProfile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 165
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -399,13 +349,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 168
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 170
     return-void
 
-    .line 163
     :cond_0
     const/4 v1, 0x0
 
@@ -416,7 +363,6 @@
 
     goto :goto_0
 
-    .line 168
     :catchall_0
     move-exception v1
 
@@ -437,49 +383,39 @@
     .end annotation
 
     .prologue
-    .line 173
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 175
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.android.internal.telecom.IVideoCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 176
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
     if-eqz p2, :cond_0
 
-    .line 178
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 179
     const/4 v1, 0x0
 
     invoke-virtual {p2, v0, v1}, Landroid/telecom/VideoProfile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 184
     :goto_0
     if-eqz p3, :cond_1
 
-    .line 185
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 186
     const/4 v1, 0x0
 
     invoke-virtual {p3, v0, v1}, Landroid/telecom/VideoProfile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 191
     :goto_1
     iget-object v1, p0, Lcom/android/internal/telecom/IVideoCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -493,13 +429,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 194
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 196
     return-void
 
-    .line 182
     :cond_0
     const/4 v1, 0x0
 
@@ -510,7 +443,6 @@
 
     goto :goto_0
 
-    .line 194
     :catchall_0
     move-exception v1
 
@@ -518,7 +450,6 @@
 
     throw v1
 
-    .line 189
     :cond_1
     const/4 v1, 0x0
 

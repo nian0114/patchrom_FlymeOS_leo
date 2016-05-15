@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 1939
     new-instance v0, Landroid/text/Layout$Alignment;
 
     const-string v1, "ALIGN_NORMAL"
@@ -61,7 +60,6 @@
 
     sput-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    .line 1940
     new-instance v0, Landroid/text/Layout$Alignment;
 
     const-string v1, "ALIGN_OPPOSITE"
@@ -70,7 +68,6 @@
 
     sput-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
 
-    .line 1941
     new-instance v0, Landroid/text/Layout$Alignment;
 
     const-string v1, "ALIGN_CENTER"
@@ -79,7 +76,6 @@
 
     sput-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
-    .line 1943
     new-instance v0, Landroid/text/Layout$Alignment;
 
     const-string v1, "ALIGN_LEFT"
@@ -88,7 +84,6 @@
 
     sput-object v0, Landroid/text/Layout$Alignment;->ALIGN_LEFT:Landroid/text/Layout$Alignment;
 
-    .line 1945
     new-instance v0, Landroid/text/Layout$Alignment;
 
     const-string v1, "ALIGN_RIGHT"
@@ -97,7 +92,6 @@
 
     sput-object v0, Landroid/text/Layout$Alignment;->ALIGN_RIGHT:Landroid/text/Layout$Alignment;
 
-    .line 1938
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/text/Layout$Alignment;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 1938
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1938
     const-class v0, Landroid/text/Layout$Alignment;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 1938
     sget-object v0, Landroid/text/Layout$Alignment;->$VALUES:[Landroid/text/Layout$Alignment;
 
     invoke-virtual {v0}, [Landroid/text/Layout$Alignment;->clone()Ljava/lang/Object;

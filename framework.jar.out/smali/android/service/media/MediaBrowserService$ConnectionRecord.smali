@@ -42,12 +42,10 @@
     .locals 1
 
     .prologue
-    .line 85
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$ConnectionRecord;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -63,7 +61,6 @@
     .param p2, "x1"    # Landroid/service/media/MediaBrowserService$1;
 
     .prologue
-    .line 85
     invoke-direct {p0, p1}, Landroid/service/media/MediaBrowserService$ConnectionRecord;-><init>(Landroid/service/media/MediaBrowserService;)V
 
     return-void

@@ -108,71 +108,60 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1644
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1612
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->inputMap:Ljava/util/Map;
 
-    .line 1615
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->packageSet:Ljava/util/Set;
 
-    .line 1618
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->contentRatingSystemList:Ljava/util/List;
 
-    .line 1622
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->clientStateMap:Ljava/util/Map;
 
-    .line 1626
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->serviceStateMap:Ljava/util/Map;
 
-    .line 1630
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->sessionStateMap:Ljava/util/Map;
 
-    .line 1634
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->callbackSet:Ljava/util/Set;
 
-    .line 1638
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->mainSessionToken:Landroid/os/IBinder;
 
-    .line 1645
     new-instance v0, Lcom/android/server/tv/PersistentDataStore;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/tv/PersistentDataStore;-><init>(Landroid/content/Context;I)V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->persistentDataStore:Lcom/android/server/tv/PersistentDataStore;
 
-    .line 1646
     return-void
 .end method
 
@@ -183,7 +172,6 @@
     .param p3, "x2"    # Lcom/android/server/tv/TvInputManagerService$1;
 
     .prologue
-    .line 1610
     invoke-direct {p0, p1, p2}, Lcom/android/server/tv/TvInputManagerService$UserState;-><init>(Landroid/content/Context;I)V
 
     return-void
@@ -194,7 +182,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->serviceStateMap:Ljava/util/Map;
 
     return-object v0
@@ -205,7 +192,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->inputMap:Ljava/util/Map;
 
     return-object v0
@@ -217,7 +203,6 @@
     .param p1, "x1"    # Ljava/util/Map;
 
     .prologue
-    .line 1610
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->inputMap:Ljava/util/Map;
 
     return-object p1
@@ -228,7 +213,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->contentRatingSystemList:Ljava/util/List;
 
     return-object v0
@@ -239,7 +223,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->sessionStateMap:Ljava/util/Map;
 
     return-object v0
@@ -250,7 +233,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->clientStateMap:Ljava/util/Map;
 
     return-object v0
@@ -261,7 +243,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->callbackSet:Ljava/util/Set;
 
     return-object v0
@@ -272,7 +253,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->mainSessionToken:Landroid/os/IBinder;
 
     return-object v0
@@ -284,7 +264,6 @@
     .param p1, "x1"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1610
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->mainSessionToken:Landroid/os/IBinder;
 
     return-object p1
@@ -295,7 +274,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->persistentDataStore:Lcom/android/server/tv/PersistentDataStore;
 
     return-object v0
@@ -306,7 +284,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$UserState;
 
     .prologue
-    .line 1610
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$UserState;->packageSet:Ljava/util/Set;
 
     return-object v0

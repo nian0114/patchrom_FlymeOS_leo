@@ -67,7 +67,6 @@
     .locals 0
 
     .prologue
-    .line 3233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,7 +77,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnLayoutChangeListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -90,7 +88,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnLayoutChangeListeners:Ljava/util/ArrayList;
 
     return-object p1
@@ -101,7 +98,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnSystemUiVisibilityChangeListener:Landroid/view/View$OnSystemUiVisibilityChangeListener;
 
     return-object v0
@@ -113,7 +109,6 @@
     .param p1, "x1"    # Landroid/view/View$OnSystemUiVisibilityChangeListener;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnSystemUiVisibilityChangeListener:Landroid/view/View$OnSystemUiVisibilityChangeListener;
 
     return-object p1
@@ -124,7 +119,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnAttachStateChangeListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -136,7 +130,6 @@
     .param p1, "x1"    # Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnAttachStateChangeListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object p1
@@ -147,7 +140,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnKeyListener:Landroid/view/View$OnKeyListener;
 
     return-object v0
@@ -159,7 +151,6 @@
     .param p1, "x1"    # Landroid/view/View$OnKeyListener;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnKeyListener:Landroid/view/View$OnKeyListener;
 
     return-object p1
@@ -170,7 +161,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnTouchListener:Landroid/view/View$OnTouchListener;
 
     return-object v0
@@ -182,7 +172,6 @@
     .param p1, "x1"    # Landroid/view/View$OnTouchListener;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnTouchListener:Landroid/view/View$OnTouchListener;
 
     return-object p1
@@ -193,7 +182,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnGenericMotionListener:Landroid/view/View$OnGenericMotionListener;
 
     return-object v0
@@ -205,7 +193,6 @@
     .param p1, "x1"    # Landroid/view/View$OnGenericMotionListener;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnGenericMotionListener:Landroid/view/View$OnGenericMotionListener;
 
     return-object p1
@@ -216,7 +203,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnHoverListener:Landroid/view/View$OnHoverListener;
 
     return-object v0
@@ -228,7 +214,6 @@
     .param p1, "x1"    # Landroid/view/View$OnHoverListener;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnHoverListener:Landroid/view/View$OnHoverListener;
 
     return-object p1
@@ -239,7 +224,6 @@
     .param p0, "x0"    # Landroid/view/View$ListenerInfo;
 
     .prologue
-    .line 3233
     iget-object v0, p0, Landroid/view/View$ListenerInfo;->mOnDragListener:Landroid/view/View$OnDragListener;
 
     return-object v0
@@ -251,7 +235,6 @@
     .param p1, "x1"    # Landroid/view/View$OnDragListener;
 
     .prologue
-    .line 3233
     iput-object p1, p0, Landroid/view/View$ListenerInfo;->mOnDragListener:Landroid/view/View$OnDragListener;
 
     return-object p1

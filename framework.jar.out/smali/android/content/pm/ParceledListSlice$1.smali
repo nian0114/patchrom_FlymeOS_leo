@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 164
     .local p0, "this":Landroid/content/pm/ParceledListSlice$1;, "Landroid/content/pm/ParceledListSlice.1;"
     iput-object p1, p0, Landroid/content/pm/ParceledListSlice$1;->this$0:Landroid/content/pm/ParceledListSlice;
 
@@ -62,26 +61,21 @@
     .local p0, "this":Landroid/content/pm/ParceledListSlice$1;, "Landroid/content/pm/ParceledListSlice.1;"
     const/4 v2, 0x1
 
-    .line 168
     if-eq p1, v2, :cond_1
 
-    .line 169
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
-    .line 187
     :cond_0
     :goto_0
     return v2
 
-    .line 171
     :cond_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 172
     .local v0, "i":I
     # getter for: Landroid/content/pm/ParceledListSlice;->DEBUG:Z
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->access$000()Z
@@ -127,7 +121,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :cond_2
     :goto_1
     iget v3, p0, Landroid/content/pm/ParceledListSlice$1;->val$N:I
@@ -142,10 +135,8 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 174
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 176
     iget-object v3, p0, Landroid/content/pm/ParceledListSlice$1;->this$0:Landroid/content/pm/ParceledListSlice;
 
     # getter for: Landroid/content/pm/ParceledListSlice;->mList:Ljava/util/List;
@@ -159,7 +150,6 @@
 
     check-cast v1, Landroid/os/Parcelable;
 
-    .line 177
     .local v1, "parcelable":Landroid/os/Parcelable;, "TT;"
     iget-object v3, p0, Landroid/content/pm/ParceledListSlice$1;->val$listElementClass:Ljava/lang/Class;
 
@@ -170,12 +160,10 @@
     # invokes: Landroid/content/pm/ParceledListSlice;->verifySameType(Ljava/lang/Class;Ljava/lang/Class;)V
     invoke-static {v3, v4}, Landroid/content/pm/ParceledListSlice;->access$300(Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 178
     iget v3, p0, Landroid/content/pm/ParceledListSlice$1;->val$callFlags:I
 
     invoke-interface {v1, p3, v3}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 180
     # getter for: Landroid/content/pm/ParceledListSlice;->DEBUG:Z
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->access$000()Z
 
@@ -229,21 +217,17 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
-    .line 182
     goto :goto_1
 
-    .line 183
     .end local v1    # "parcelable":Landroid/os/Parcelable;, "TT;"
     :cond_4
     iget v3, p0, Landroid/content/pm/ParceledListSlice$1;->val$N:I
 
     if-ge v0, v3, :cond_0
 
-    .line 184
     # getter for: Landroid/content/pm/ParceledListSlice;->DEBUG:Z
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->access$000()Z
 
@@ -288,7 +272,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_5
     const/4 v3, 0x0
 

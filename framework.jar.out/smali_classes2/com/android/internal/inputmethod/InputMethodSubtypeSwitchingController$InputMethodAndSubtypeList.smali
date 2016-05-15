@@ -45,10 +45,8 @@
     .param p2, "settings"    # Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;
 
     .prologue
-    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 176
     new-instance v1, Ljava/util/TreeMap;
 
     new-instance v2, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList$1;
@@ -59,20 +57,16 @@
 
     iput-object v1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mSortedImmis:Ljava/util/TreeMap;
 
-    .line 169
     iput-object p1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mContext:Landroid/content/Context;
 
-    .line 170
     iput-object p2, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mSettings:Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;
 
-    .line 171
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 172
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -83,7 +77,6 @@
 
     iget-object v0, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 173
     .local v0, "locale":Ljava/util/Locale;
     if-eqz v0, :cond_0
 
@@ -94,10 +87,8 @@
     :goto_0
     iput-object v1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mSystemLocaleStr:Ljava/lang/String;
 
-    .line 174
     return-void
 
-    .line 173
     :cond_0
     const-string v1, ""
 
@@ -109,7 +100,6 @@
     .param p0, "x0"    # Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
 
     .prologue
-    .line 161
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mPm:Landroid/content/pm/PackageManager;
 
     return-object v0
@@ -132,7 +122,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 195
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, v1, v1}, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->getSortedInputMethodAndSubtypeList(ZZZ)Ljava/util/List;
@@ -158,12 +147,10 @@
     .end annotation
 
     .prologue
-    .line 200
     new-instance v17, Ljava/util/ArrayList;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 202
     .local v17, "imList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ImeSubtypeListItem;>;"
     move-object/from16 v0, p0
 
@@ -177,7 +164,6 @@
 
     move-result-object v18
 
-    .line 205
     .local v18, "immis":Ljava/util/HashMap;, "Ljava/util/HashMap<Landroid/view/inputmethod/InputMethodInfo;Ljava/util/List<Landroid/view/inputmethod/InputMethodSubtype;>;>;"
     if-eqz v18, :cond_0
 
@@ -187,18 +173,15 @@
 
     if-nez v1, :cond_1
 
-    .line 206
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v17
 
-    .line 250
     .end local v17    # "imList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ImeSubtypeListItem;>;"
     :goto_0
     return-object v17
 
-    .line 208
     .restart local v17    # "imList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ImeSubtypeListItem;>;"
     :cond_1
     move-object/from16 v0, p0
@@ -207,7 +190,6 @@
 
     invoke-virtual {v1}, Ljava/util/TreeMap;->clear()V
 
-    .line 209
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mSortedImmis:Ljava/util/TreeMap;
@@ -216,7 +198,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/TreeMap;->putAll(Ljava/util/Map;)V
 
-    .line 210
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->mSortedImmis:Ljava/util/TreeMap;
@@ -243,11 +224,9 @@
 
     check-cast v4, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 211
     .local v4, "imi":Landroid/view/inputmethod/InputMethodInfo;
     if-eqz v4, :cond_2
 
-    .line 214
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -256,13 +235,11 @@
 
     check-cast v14, Ljava/util/List;
 
-    .line 215
     .local v14, "explicitlyOrImplicitlyEnabledSubtypeList":Ljava/util/List;, "Ljava/util/List<Landroid/view/inputmethod/InputMethodSubtype;>;"
     new-instance v13, Ljava/util/HashSet;
 
     invoke-direct {v13}, Ljava/util/HashSet;-><init>()V
 
-    .line 216
     .local v13, "enabledSubtypeSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -282,7 +259,6 @@
 
     check-cast v19, Landroid/view/inputmethod/InputMethodSubtype;
 
-    .line 217
     .local v19, "subtype":Landroid/view/inputmethod/InputMethodSubtype;
     invoke-virtual/range {v19 .. v19}, Landroid/view/inputmethod/InputMethodSubtype;->hashCode()I
 
@@ -296,7 +272,6 @@
 
     goto :goto_2
 
-    .line 219
     .end local v19    # "subtype":Landroid/view/inputmethod/InputMethodSubtype;
     :cond_3
     move-object/from16 v0, p0
@@ -307,7 +282,6 @@
 
     move-result-object v2
 
-    .line 220
     .local v2, "imeLabel":Ljava/lang/CharSequence;
     if-eqz p1, :cond_8
 
@@ -317,12 +291,10 @@
 
     if-lez v1, :cond_8
 
-    .line 221
     invoke-virtual {v4}, Landroid/view/inputmethod/InputMethodInfo;->getSubtypeCount()I
 
     move-result v20
 
-    .line 225
     .local v20, "subtypeCount":I
     const/4 v5, 0x0
 
@@ -332,12 +304,10 @@
 
     if-ge v5, v0, :cond_2
 
-    .line 226
     invoke-virtual {v4, v5}, Landroid/view/inputmethod/InputMethodInfo;->getSubtypeAt(I)Landroid/view/inputmethod/InputMethodSubtype;
 
     move-result-object v19
 
-    .line 227
     .restart local v19    # "subtype":Landroid/view/inputmethod/InputMethodSubtype;
     invoke-virtual/range {v19 .. v19}, Landroid/view/inputmethod/InputMethodSubtype;->hashCode()I
 
@@ -347,7 +317,6 @@
 
     move-result-object v21
 
-    .line 229
     .local v21, "subtypeHashCode":Ljava/lang/String;
     move-object/from16 v0, v21
 
@@ -368,7 +337,6 @@
 
     if-nez v1, :cond_6
 
-    .line 231
     :cond_5
     invoke-virtual/range {v19 .. v19}, Landroid/view/inputmethod/InputMethodSubtype;->overridesImplicitlyEnabledSubtype()Z
 
@@ -378,7 +346,6 @@
 
     const/4 v3, 0x0
 
-    .line 235
     .local v3, "subtypeLabel":Ljava/lang/CharSequence;
     :goto_4
     new-instance v1, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ImeSubtypeListItem;
@@ -397,19 +364,16 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 241
     move-object/from16 v0, v21
 
     invoke-virtual {v13, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 225
     .end local v3    # "subtypeLabel":Ljava/lang/CharSequence;
     :cond_6
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 231
     :cond_7
     move-object/from16 v0, p0
 
@@ -433,7 +397,6 @@
 
     goto :goto_4
 
-    .line 245
     .end local v5    # "j":I
     .end local v19    # "subtype":Landroid/view/inputmethod/InputMethodSubtype;
     .end local v20    # "subtypeCount":I
@@ -463,7 +426,6 @@
 
     goto/16 :goto_1
 
-    .line 249
     .end local v2    # "imeLabel":Ljava/lang/CharSequence;
     .end local v4    # "imi":Landroid/view/inputmethod/InputMethodInfo;
     .end local v13    # "enabledSubtypeSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"

@@ -27,15 +27,11 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput p1, p0, Landroid/util/EventLogTags$Description;->mTag:I
 
-    .line 34
     iput-object p2, p0, Landroid/util/EventLogTags$Description;->mName:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method

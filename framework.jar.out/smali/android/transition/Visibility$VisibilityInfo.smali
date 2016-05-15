@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .param p1, "x0"    # Landroid/transition/Visibility$1;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Landroid/transition/Visibility$VisibilityInfo;-><init>()V
 
     return-void

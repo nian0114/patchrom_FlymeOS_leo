@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 274
     new-instance v0, Landroid/hardware/usb/UsbDevice$1;
 
     invoke-direct {v0}, Landroid/hardware/usb/UsbDevice$1;-><init>()V
@@ -73,37 +72,26 @@
     .param p9, "serialNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Landroid/hardware/usb/UsbDevice;->mName:Ljava/lang/String;
 
-    .line 66
     iput p2, p0, Landroid/hardware/usb/UsbDevice;->mVendorId:I
 
-    .line 67
     iput p3, p0, Landroid/hardware/usb/UsbDevice;->mProductId:I
 
-    .line 68
     iput p4, p0, Landroid/hardware/usb/UsbDevice;->mClass:I
 
-    .line 69
     iput p5, p0, Landroid/hardware/usb/UsbDevice;->mSubclass:I
 
-    .line 70
     iput p6, p0, Landroid/hardware/usb/UsbDevice;->mProtocol:I
 
-    .line 71
     iput-object p7, p0, Landroid/hardware/usb/UsbDevice;->mManufacturerName:Ljava/lang/String;
 
-    .line 72
     iput-object p8, p0, Landroid/hardware/usb/UsbDevice;->mProductName:Ljava/lang/String;
 
-    .line 73
     iput-object p9, p0, Landroid/hardware/usb/UsbDevice;->mSerialNumber:Ljava/lang/String;
 
-    .line 74
     return-void
 .end method
 
@@ -112,7 +100,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 316
     invoke-static {p0}, Landroid/hardware/usb/UsbDevice;->native_get_device_id(Ljava/lang/String;)I
 
     move-result v0
@@ -125,7 +112,6 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 320
     invoke-static {p0}, Landroid/hardware/usb/UsbDevice;->native_get_device_name(I)Ljava/lang/String;
 
     move-result-object v0
@@ -137,21 +123,17 @@
     .locals 9
 
     .prologue
-    .line 191
     iget-object v7, p0, Landroid/hardware/usb/UsbDevice;->mInterfaces:[Landroid/hardware/usb/UsbInterface;
 
     if-nez v7, :cond_2
 
-    .line 192
     iget-object v7, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     array-length v1, v7
 
-    .line 193
     .local v1, "configurationCount":I
     const/4 v3, 0x0
 
-    .line 194
     .local v3, "interfaceCount":I
     const/4 v2, 0x0
 
@@ -159,14 +141,12 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 195
     iget-object v7, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     aget-object v0, v7, v2
 
     check-cast v0, Landroid/hardware/usb/UsbConfiguration;
 
-    .line 196
     .local v0, "configuration":Landroid/hardware/usb/UsbConfiguration;
     invoke-virtual {v0}, Landroid/hardware/usb/UsbConfiguration;->getInterfaceCount()I
 
@@ -174,42 +154,35 @@
 
     add-int/2addr v3, v7
 
-    .line 194
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 199
     .end local v0    # "configuration":Landroid/hardware/usb/UsbConfiguration;
     :cond_0
     new-array v7, v3, [Landroid/hardware/usb/UsbInterface;
 
     iput-object v7, p0, Landroid/hardware/usb/UsbDevice;->mInterfaces:[Landroid/hardware/usb/UsbInterface;
 
-    .line 200
     const/4 v5, 0x0
 
-    .line 201
     .local v5, "offset":I
     const/4 v2, 0x0
 
     :goto_1
     if-ge v2, v1, :cond_2
 
-    .line 202
     iget-object v7, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     aget-object v0, v7, v2
 
     check-cast v0, Landroid/hardware/usb/UsbConfiguration;
 
-    .line 203
     .restart local v0    # "configuration":Landroid/hardware/usb/UsbConfiguration;
     invoke-virtual {v0}, Landroid/hardware/usb/UsbConfiguration;->getInterfaceCount()I
 
     move-result v3
 
-    .line 204
     const/4 v4, 0x0
 
     .local v4, "j":I
@@ -220,7 +193,6 @@
     :goto_2
     if-ge v4, v3, :cond_1
 
-    .line 205
     iget-object v7, p0, Landroid/hardware/usb/UsbDevice;->mInterfaces:[Landroid/hardware/usb/UsbInterface;
 
     add-int/lit8 v5, v6, 0x1
@@ -233,7 +205,6 @@
 
     aput-object v8, v7, v6
 
-    .line 204
     add-int/lit8 v4, v4, 0x1
 
     move v6, v5
@@ -242,7 +213,6 @@
     .restart local v6    # "offset":I
     goto :goto_2
 
-    .line 201
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
@@ -252,7 +222,6 @@
     .restart local v5    # "offset":I
     goto :goto_1
 
-    .line 210
     .end local v0    # "configuration":Landroid/hardware/usb/UsbConfiguration;
     .end local v1    # "configurationCount":I
     .end local v2    # "i":I
@@ -277,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 299
     const/4 v0, 0x0
 
     return v0
@@ -288,12 +256,10 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 245
     instance-of v0, p1, Landroid/hardware/usb/UsbDevice;
 
     if-eqz v0, :cond_0
 
-    .line 246
     check-cast p1, Landroid/hardware/usb/UsbDevice;
 
     .end local p1    # "o":Ljava/lang/Object;
@@ -305,18 +271,15 @@
 
     move-result v0
 
-    .line 250
     :goto_0
     return v0
 
-    .line 247
     .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 248
     check-cast p1, Ljava/lang/String;
 
     .end local p1    # "o":Ljava/lang/Object;
@@ -328,7 +291,6 @@
 
     goto :goto_0
 
-    .line 250
     .restart local p1    # "o":Ljava/lang/Object;
     :cond_1
     const/4 v0, 0x0
@@ -341,7 +303,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 187
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     aget-object v0, v0, p1
@@ -355,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 178
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     array-length v0, v0
@@ -367,7 +327,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mClass:I
 
     return v0
@@ -377,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/hardware/usb/UsbDevice;->getDeviceId(Ljava/lang/String;)I
@@ -391,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mName:Ljava/lang/String;
 
     return-object v0
@@ -401,7 +358,6 @@
     .locals 1
 
     .prologue
-    .line 169
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mProtocol:I
 
     return v0
@@ -411,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mSubclass:I
 
     return v0
@@ -422,7 +377,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 232
     invoke-direct {p0}, Landroid/hardware/usb/UsbDevice;->getInterfaceList()[Landroid/hardware/usb/UsbInterface;
 
     move-result-object v0
@@ -436,7 +390,6 @@
     .locals 1
 
     .prologue
-    .line 221
     invoke-direct {p0}, Landroid/hardware/usb/UsbDevice;->getInterfaceList()[Landroid/hardware/usb/UsbInterface;
 
     move-result-object v0
@@ -450,7 +403,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mManufacturerName:Ljava/lang/String;
 
     return-object v0
@@ -460,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mProductId:I
 
     return v0
@@ -470,7 +421,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mProductName:Ljava/lang/String;
 
     return-object v0
@@ -480,7 +430,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mSerialNumber:Ljava/lang/String;
 
     return-object v0
@@ -490,7 +439,6 @@
     .locals 1
 
     .prologue
-    .line 132
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mVendorId:I
 
     return v0
@@ -500,7 +448,6 @@
     .locals 1
 
     .prologue
-    .line 256
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mName:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -515,10 +462,8 @@
     .param p1, "configuration"    # [Landroid/os/Parcelable;
 
     .prologue
-    .line 240
     iput-object p1, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
-    .line 241
     return-void
 .end method
 
@@ -526,7 +471,6 @@
     .locals 4
 
     .prologue
-    .line 261
     new-instance v0, Ljava/lang/StringBuilder;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -653,7 +597,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 266
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -665,12 +608,10 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 267
     const-string v2, "\n"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 268
     iget-object v2, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     aget-object v2, v2, v1
@@ -681,18 +622,15 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 266
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 270
     :cond_0
     const-string v2, "]"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 271
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -706,58 +644,47 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 303
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 304
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mVendorId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 305
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mProductId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 306
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mClass:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 307
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mSubclass:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 308
     iget v0, p0, Landroid/hardware/usb/UsbDevice;->mProtocol:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 309
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mManufacturerName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 310
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mProductName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 311
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mSerialNumber:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 312
     iget-object v0, p0, Landroid/hardware/usb/UsbDevice;->mConfigurations:[Landroid/os/Parcelable;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 313
     return-void
 .end method

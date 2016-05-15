@@ -22,15 +22,12 @@
     .locals 2
 
     .prologue
-    .line 33
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
-    .line 41
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/AppsFailureReceiver;->mStartTime:J
@@ -43,7 +40,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 101
     const-string v4, "notification"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -52,7 +48,6 @@
 
     check-cast v1, Landroid/app/NotificationManager;
 
-    .line 103
     .local v1, "nm":Landroid/app/NotificationManager;
     const v4, 0x1040091
 
@@ -60,7 +55,6 @@
 
     move-result-object v3
 
-    .line 104
     .local v3, "title":Ljava/lang/String;
     const v4, 0x1040092
 
@@ -68,7 +62,6 @@
 
     move-result-object v0
 
-    .line 105
     .local v0, "body":Ljava/lang/String;
     new-instance v4, Landroid/app/Notification$Builder;
 
@@ -136,13 +129,11 @@
 
     move-result-object v2
 
-    .line 116
     .local v2, "notice":Landroid/app/Notification;
     const v4, 0x4641494c
 
     invoke-virtual {v1, v4, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 117
     return-void
 .end method
 
@@ -154,12 +145,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 50
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 51
     .local v0, "action":Ljava/lang/String;
     const-string v7, "com.tmobile.intent.action.APP_FAILURE"
 
@@ -169,12 +158,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 52
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 53
     .local v2, "currentTime":J
     const-string v7, "package"
 
@@ -182,7 +169,6 @@
 
     move-result-object v4
 
-    .line 54
     .local v4, "pkgName":Ljava/lang/String;
     iget-wide v8, p0, Lcom/android/server/AppsFailureReceiver;->mStartTime:J
 
@@ -194,15 +180,12 @@
 
     if-lez v7, :cond_0
 
-    .line 56
     iput-wide v2, p0, Lcom/android/server/AppsFailureReceiver;->mStartTime:J
 
-    .line 57
     const/4 v7, 0x0
 
     iput v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
-    .line 59
     :cond_0
     iget v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
@@ -210,21 +193,18 @@
 
     if-gt v7, v8, :cond_1
 
-    .line 60
     iget v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
-    .line 61
     iget v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
     const/4 v8, 0x3
 
     if-ne v7, v8, :cond_1
 
-    .line 63
     const-string v7, "themes"
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -233,17 +213,14 @@
 
     check-cast v6, Landroid/content/res/ThemeManager;
 
-    .line 65
     .local v6, "tm":Landroid/content/res/ThemeManager;
     const-string v5, "system"
 
-    .line 66
     .local v5, "themePkgName":Ljava/lang/String;
     new-instance v1, Landroid/content/res/ThemeChangeRequest$Builder;
 
     invoke-direct {v1}, Landroid/content/res/ThemeChangeRequest$Builder;-><init>()V
 
-    .line 67
     .local v1, "builder":Landroid/content/res/ThemeChangeRequest$Builder;
     const-string v7, "system"
 
@@ -315,7 +292,6 @@
 
     invoke-virtual {v7, v8}, Landroid/content/res/ThemeChangeRequest$Builder;->setRequestType(Landroid/content/res/ThemeChangeRequest$RequestType;)Landroid/content/res/ThemeChangeRequest$Builder;
 
-    .line 81
     invoke-virtual {v1}, Landroid/content/res/ThemeChangeRequest$Builder;->build()Landroid/content/res/ThemeChangeRequest;
 
     move-result-object v7
@@ -324,10 +300,8 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/content/res/ThemeManager;->requestThemeChange(Landroid/content/res/ThemeChangeRequest;Z)V
 
-    .line 82
     invoke-direct {p0, p1}, Lcom/android/server/AppsFailureReceiver;->postThemeResetNotification(Landroid/content/Context;)V
 
-    .line 94
     .end local v1    # "builder":Landroid/content/res/ThemeChangeRequest$Builder;
     .end local v2    # "currentTime":J
     .end local v4    # "pkgName":Ljava/lang/String;
@@ -337,7 +311,6 @@
     :goto_0
     return-void
 
-    .line 85
     :cond_2
     const-string v7, "com.tmobile.intent.action.APP_FAILURE_RESET"
 
@@ -355,13 +328,11 @@
 
     if-eqz v7, :cond_4
 
-    .line 87
     :cond_3
     const/4 v7, 0x0
 
     iput v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
-    .line 88
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
@@ -370,7 +341,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_4
     const-string v7, "android.intent.action.PACKAGE_ADDED"
 
@@ -388,13 +358,11 @@
 
     if-eqz v7, :cond_1
 
-    .line 91
     :cond_5
     const/4 v7, 0x0
 
     iput v7, p0, Lcom/android/server/AppsFailureReceiver;->mFailuresCount:I
 
-    .line 92
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8

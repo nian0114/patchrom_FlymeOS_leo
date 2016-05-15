@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$3;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     const/4 v0, 0x0
@@ -45,10 +44,8 @@
     .end annotation
 
     .prologue
-    .line 64
     invoke-interface {p1}, Landroid/location/IGpsStatusListener;->onGpsStopped()V
 
-    .line 65
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 61
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/GpsStatusListenerHelper$3;->execute(Landroid/location/IGpsStatusListener;)V

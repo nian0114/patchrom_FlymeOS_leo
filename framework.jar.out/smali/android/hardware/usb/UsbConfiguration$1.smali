@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,30 +44,25 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 156
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 157
     .local v2, "id":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 158
     .local v5, "name":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 159
     .local v0, "attributes":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 160
     .local v4, "maxPower":I
     const-class v6, Landroid/hardware/usb/UsbInterface;
 
@@ -80,17 +74,14 @@
 
     move-result-object v3
 
-    .line 161
     .local v3, "interfaces":[Landroid/os/Parcelable;
     new-instance v1, Landroid/hardware/usb/UsbConfiguration;
 
     invoke-direct {v1, v2, v5, v0, v4}, Landroid/hardware/usb/UsbConfiguration;-><init>(ILjava/lang/String;II)V
 
-    .line 162
     .local v1, "configuration":Landroid/hardware/usb/UsbConfiguration;
     invoke-virtual {v1, v3}, Landroid/hardware/usb/UsbConfiguration;->setInterfaces([Landroid/os/Parcelable;)V
 
-    .line 163
     return-object v1
 .end method
 
@@ -98,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 154
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbConfiguration$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/UsbConfiguration;
 
     move-result-object v0
@@ -111,7 +101,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 167
     new-array v0, p1, [Landroid/hardware/usb/UsbConfiguration;
 
     return-object v0
@@ -121,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 154
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbConfiguration$1;->newArray(I)[Landroid/hardware/usb/UsbConfiguration;
 
     move-result-object v0

@@ -52,15 +52,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/view/IInputMethodSession$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -69,17 +66,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "com.android.internal.view.IInputMethodSession"
 
@@ -87,7 +80,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -95,12 +87,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Lcom/android/internal/view/IInputMethodSession;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Lcom/android/internal/view/IInputMethodSession$Stub$Proxy;
 
@@ -116,7 +106,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -135,10 +124,8 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 162
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -146,7 +133,6 @@
     :goto_0
     return v7
 
-    .line 46
     :sswitch_0
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
@@ -154,29 +140,24 @@
 
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/internal/view/IInputMethodSession$Stub;->finishInput()V
 
     goto :goto_0
 
-    .line 57
     :sswitch_2
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 59
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 61
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -184,7 +165,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     sget-object v0, Landroid/view/inputmethod/ExtractedText;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -193,14 +173,12 @@
 
     check-cast v2, Landroid/view/inputmethod/ExtractedText;
 
-    .line 67
     .local v2, "_arg1":Landroid/view/inputmethod/ExtractedText;
     :goto_1
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/view/IInputMethodSession$Stub;->updateExtractedText(ILandroid/view/inputmethod/ExtractedText;)V
 
     goto :goto_0
 
-    .line 65
     .end local v2    # "_arg1":Landroid/view/inputmethod/ExtractedText;
     :cond_0
     const/4 v2, 0x0
@@ -208,7 +186,6 @@
     .restart local v2    # "_arg1":Landroid/view/inputmethod/ExtractedText;
     goto :goto_1
 
-    .line 72
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":Landroid/view/inputmethod/ExtractedText;
     :sswitch_3
@@ -216,36 +193,30 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 76
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 78
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 80
     .local v3, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 82
     .local v4, "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 84
     .local v5, "_arg4":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -254,12 +225,10 @@
     .local v6, "_arg5":I
     move-object v0, p0
 
-    .line 85
     invoke-virtual/range {v0 .. v6}, Lcom/android/internal/view/IInputMethodSession$Stub;->updateSelection(IIIIII)V
 
     goto :goto_0
 
-    .line 90
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -271,7 +240,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -280,34 +248,29 @@
 
     move v1, v7
 
-    .line 93
     .local v1, "_arg0":Z
     :goto_2
     invoke-virtual {p0, v1}, Lcom/android/internal/view/IInputMethodSession$Stub;->viewClicked(Z)V
 
     goto :goto_0
 
-    .line 92
     .end local v1    # "_arg0":Z
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 98
     :sswitch_5
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 100
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 101
     sget-object v0, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -316,14 +279,12 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 106
     .local v1, "_arg0":Landroid/graphics/Rect;
     :goto_3
     invoke-virtual {p0, v1}, Lcom/android/internal/view/IInputMethodSession$Stub;->updateCursor(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 104
     .end local v1    # "_arg0":Landroid/graphics/Rect;
     :cond_2
     const/4 v1, 0x0
@@ -331,14 +292,12 @@
     .restart local v1    # "_arg0":Landroid/graphics/Rect;
     goto :goto_3
 
-    .line 111
     .end local v1    # "_arg0":Landroid/graphics/Rect;
     :sswitch_6
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 113
     sget-object v0, Landroid/view/inputmethod/CompletionInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -347,25 +306,21 @@
 
     check-cast v1, [Landroid/view/inputmethod/CompletionInfo;
 
-    .line 114
     .local v1, "_arg0":[Landroid/view/inputmethod/CompletionInfo;
     invoke-virtual {p0, v1}, Lcom/android/internal/view/IInputMethodSession$Stub;->displayCompletions([Landroid/view/inputmethod/CompletionInfo;)V
 
     goto/16 :goto_0
 
-    .line 119
     .end local v1    # "_arg0":[Landroid/view/inputmethod/CompletionInfo;
     :sswitch_7
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 121
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 123
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -373,7 +328,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 124
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -382,14 +336,12 @@
 
     check-cast v2, Landroid/os/Bundle;
 
-    .line 129
     .local v2, "_arg1":Landroid/os/Bundle;
     :goto_4
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/view/IInputMethodSession$Stub;->appPrivateCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto/16 :goto_0
 
-    .line 127
     .end local v2    # "_arg1":Landroid/os/Bundle;
     :cond_3
     const/4 v2, 0x0
@@ -397,7 +349,6 @@
     .restart local v2    # "_arg1":Landroid/os/Bundle;
     goto :goto_4
 
-    .line 134
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Landroid/os/Bundle;
     :sswitch_8
@@ -405,24 +356,20 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 136
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 138
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 139
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/view/IInputMethodSession$Stub;->toggleSoftInput(II)V
 
     goto/16 :goto_0
 
-    .line 144
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     :sswitch_9
@@ -430,25 +377,21 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 145
     invoke-virtual {p0}, Lcom/android/internal/view/IInputMethodSession$Stub;->finishSession()V
 
     goto/16 :goto_0
 
-    .line 150
     :sswitch_a
     const-string v0, "com.android.internal.view.IInputMethodSession"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 153
     sget-object v0, Landroid/view/inputmethod/CursorAnchorInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -457,14 +400,12 @@
 
     check-cast v1, Landroid/view/inputmethod/CursorAnchorInfo;
 
-    .line 158
     .local v1, "_arg0":Landroid/view/inputmethod/CursorAnchorInfo;
     :goto_5
     invoke-virtual {p0, v1}, Lcom/android/internal/view/IInputMethodSession$Stub;->updateCursorAnchorInfo(Landroid/view/inputmethod/CursorAnchorInfo;)V
 
     goto/16 :goto_0
 
-    .line 156
     .end local v1    # "_arg0":Landroid/view/inputmethod/CursorAnchorInfo;
     :cond_4
     const/4 v1, 0x0
@@ -472,7 +413,6 @@
     .restart local v1    # "_arg0":Landroid/view/inputmethod/CursorAnchorInfo;
     goto :goto_5
 
-    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

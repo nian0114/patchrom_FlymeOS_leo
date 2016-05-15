@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 1406
     iput-object p1, p0, Lcom/android/server/wm/WindowState$2;->this$0:Lcom/android/server/wm/WindowState;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowState$2;->val$frame:Landroid/graphics/Rect;
@@ -68,7 +67,6 @@
     .locals 8
 
     .prologue
-    .line 1410
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowState$2;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -92,11 +90,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1415
     :goto_0
     return-void
 
-    .line 1412
     :catch_0
     move-exception v0
 

@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 60
     new-instance v0, Landroid/service/notification/NotificationRankingUpdate$1;
 
     invoke-direct {v0}, Landroid/service/notification/NotificationRankingUpdate$1;-><init>()V
@@ -49,38 +48,32 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mKeys:[Ljava/lang/String;
 
-    .line 42
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mFirstAmbientIndex:I
 
-    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mInterceptedKeys:[Ljava/lang/String;
 
-    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mVisibilityOverrides:Landroid/os/Bundle;
 
-    .line 45
     return-void
 .end method
 
@@ -92,22 +85,16 @@
     .param p4, "firstAmbientIndex"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Landroid/service/notification/NotificationRankingUpdate;->mKeys:[Ljava/lang/String;
 
-    .line 35
     iput p4, p0, Landroid/service/notification/NotificationRankingUpdate;->mFirstAmbientIndex:I
 
-    .line 36
     iput-object p2, p0, Landroid/service/notification/NotificationRankingUpdate;->mInterceptedKeys:[Ljava/lang/String;
 
-    .line 37
     iput-object p3, p0, Landroid/service/notification/NotificationRankingUpdate;->mVisibilityOverrides:Landroid/os/Bundle;
 
-    .line 38
     return-void
 .end method
 
@@ -117,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     return v0
@@ -127,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mFirstAmbientIndex:I
 
     return v0
@@ -137,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mInterceptedKeys:[Ljava/lang/String;
 
     return-object v0
@@ -147,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mKeys:[Ljava/lang/String;
 
     return-object v0
@@ -157,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mVisibilityOverrides:Landroid/os/Bundle;
 
     return-object v0
@@ -169,26 +151,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 54
     iget-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mKeys:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 55
     iget v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mFirstAmbientIndex:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 56
     iget-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mInterceptedKeys:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 57
     iget-object v0, p0, Landroid/service/notification/NotificationRankingUpdate;->mVisibilityOverrides:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 58
     return-void
 .end method

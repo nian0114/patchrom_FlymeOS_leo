@@ -110,19 +110,14 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 407
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 408
     iput-object p1, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
-    .line 409
     iput-object p2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
-    .line 410
     iput-object p3, p0, Landroid/os/PowerManager;->mHandler:Landroid/os/Handler;
 
-    .line 412
     invoke-virtual {p0}, Landroid/os/PowerManager;->getDefaultPowerProfile()Ljava/lang/String;
 
     move-result-object v0
@@ -156,10 +151,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/os/PowerManager;->mHasPowerProfilesSupport:Z
 
-    .line 415
     return-void
 
-    .line 412
     :cond_0
     const/4 v0, 0x0
 
@@ -170,8 +163,7 @@
     .locals 2
 
     .prologue
-    .line 454
-    const-string/jumbo v0, "persist.power.usetwilightadj"
+    const-string v0, "persist.power.usetwilightadj"
 
     const/4 v1, 0x0
 
@@ -188,14 +180,12 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 518
     const v0, 0xffff
 
     and-int/2addr v0, p0
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 527
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must specify a valid wake lock level."
@@ -204,11 +194,9 @@
 
     throw v0
 
-    .line 529
     :sswitch_0
     if-nez p1, :cond_0
 
-    .line 530
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The tag must not be null."
@@ -217,11 +205,9 @@
 
     throw v0
 
-    .line 532
     :cond_0
     return-void
 
-    .line 518
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -240,10 +226,8 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1006
     const/4 v1, 0x0
 
-    .line 1007
     .local v1, "ret":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/os/PowerManager;->hasPowerProfiles()Z
 
@@ -251,7 +235,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1009
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -259,16 +242,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 1010
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 1011
     .local v0, "cn":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 1012
     iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
@@ -279,13 +259,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1019
     .end local v0    # "cn":Landroid/content/ComponentName;
     :cond_0
     :goto_0
     return-void
 
-    .line 1015
     :catch_0
     move-exception v2
 
@@ -297,7 +275,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 734
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -305,11 +282,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 737
     :goto_0
     return-void
 
-    .line 735
     :catch_0
     move-exception v0
 
@@ -321,25 +296,21 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 894
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v0, :cond_0
 
-    .line 895
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v0, p1}, Landroid/os/IPowerManager;->cpuBoost(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 899
     :cond_0
     :goto_0
     return-void
 
-    .line 897
     :catch_0
     move-exception v0
 
@@ -350,7 +321,6 @@
     .locals 2
 
     .prologue
-    .line 1299
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -370,7 +340,6 @@
     .locals 2
 
     .prologue
-    .line 1308
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -390,7 +359,6 @@
     .locals 2
 
     .prologue
-    .line 955
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -410,7 +378,6 @@
     .locals 2
 
     .prologue
-    .line 444
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -430,7 +397,6 @@
     .locals 2
 
     .prologue
-    .line 435
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -450,7 +416,6 @@
     .locals 2
 
     .prologue
-    .line 424
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -470,10 +435,8 @@
     .locals 2
 
     .prologue
-    .line 988
     const/4 v0, 0x0
 
-    .line 989
     .local v0, "ret":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/os/PowerManager;->hasPowerProfiles()Z
 
@@ -481,13 +444,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 991
     :try_start_0
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v1, :cond_0
 
-    .line 992
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v1}, Landroid/os/IPowerManager;->getPowerProfile()Ljava/lang/String;
@@ -496,12 +457,10 @@
 
     move-result-object v0
 
-    .line 998
     :cond_0
     :goto_0
     return-object v0
 
-    .line 994
     :catch_0
     move-exception v1
 
@@ -515,10 +474,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 619
     invoke-virtual {p0, p1, p2, v0, v0}, Landroid/os/PowerManager;->goToSleep(JII)V
 
-    .line 620
     return-void
 .end method
 
@@ -529,7 +486,6 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 645
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -537,11 +493,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 648
     :goto_0
     return-void
 
-    .line 646
     :catch_0
     move-exception v0
 
@@ -552,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 944
     iget-boolean v0, p0, Landroid/os/PowerManager;->mHasPowerProfilesSupport:Z
 
     return v0
@@ -562,7 +515,6 @@
     .locals 2
 
     .prologue
-    .line 828
     :try_start_0
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -572,15 +524,12 @@
 
     move-result v1
 
-    .line 830
     :goto_0
     return v1
 
-    .line 829
     :catch_0
     move-exception v0
 
-    .line 830
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -591,7 +540,6 @@
     .locals 2
 
     .prologue
-    .line 860
     :try_start_0
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -601,15 +549,12 @@
 
     move-result v1
 
-    .line 862
     :goto_0
     return v1
 
-    .line 861
     :catch_0
     move-exception v0
 
-    .line 862
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -622,7 +567,6 @@
     .end annotation
 
     .prologue
-    .line 789
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result v0
@@ -635,7 +579,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 764
     :try_start_0
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -645,15 +588,12 @@
 
     move-result v1
 
-    .line 766
     :goto_0
     return v1
 
-    .line 765
     :catch_0
     move-exception v0
 
-    .line 766
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -664,25 +604,21 @@
     .locals 1
 
     .prologue
-    .line 910
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v0, :cond_0
 
-    .line 911
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v0}, Landroid/os/IPowerManager;->launchBoost()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 915
     :cond_0
     :goto_0
     return-void
 
-    .line 913
     :catch_0
     move-exception v0
 
@@ -694,7 +630,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 712
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -702,11 +637,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 715
     :goto_0
     return-void
 
-    .line 713
     :catch_0
     move-exception v0
 
@@ -719,10 +652,8 @@
     .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 512
     invoke-static {p1, p2}, Landroid/os/PowerManager;->validateWakeLockParameters(ILjava/lang/String;)V
 
-    .line 513
     new-instance v0, Landroid/os/PowerManager$WakeLock;
 
     iget-object v1, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
@@ -741,7 +672,6 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 845
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -753,11 +683,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 848
     :goto_0
     return-void
 
-    .line 846
     :catch_0
     move-exception v0
 
@@ -769,7 +697,6 @@
     .param p1, "brightness"    # I
 
     .prologue
-    .line 751
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -777,11 +704,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 754
     :goto_0
     return-void
 
-    .line 752
     :catch_0
     move-exception v0
 
@@ -794,7 +719,6 @@
     .param p2, "key"    # I
 
     .prologue
-    .line 1289
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -802,11 +726,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1292
     :goto_0
     return-void
 
-    .line 1290
     :catch_0
     move-exception v0
 
@@ -818,25 +740,21 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 1271
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v0, :cond_0
 
-    .line 1272
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v0, p1}, Landroid/os/IPowerManager;->setKeyboardVisibility(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1276
     :cond_0
     :goto_0
     return-void
 
-    .line 1274
     :catch_0
     move-exception v0
 
@@ -848,14 +766,12 @@
     .param p1, "profile"    # Ljava/lang/String;
 
     .prologue
-    .line 966
     invoke-virtual {p0}, Landroid/os/PowerManager;->hasPowerProfiles()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 967
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Power profiles not enabled on this system!"
@@ -864,18 +780,15 @@
 
     throw v2
 
-    .line 970
     :cond_0
     const/4 v0, 0x0
 
-    .line 972
     .local v0, "changed":Z
     :try_start_0
     iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v2, :cond_1
 
-    .line 973
     iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v2, p1}, Landroid/os/IPowerManager;->setPowerProfile(Ljava/lang/String;)Z
@@ -884,15 +797,12 @@
 
     move-result v0
 
-    .line 978
     :cond_1
     return v0
 
-    .line 975
     :catch_0
     move-exception v1
 
-    .line 976
     .local v1, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -906,7 +816,6 @@
     .param p1, "mode"    # Z
 
     .prologue
-    .line 877
     :try_start_0
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -916,15 +825,12 @@
 
     move-result v1
 
-    .line 879
     :goto_0
     return v1
 
-    .line 878
     :catch_0
     move-exception v0
 
-    .line 879
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -938,7 +844,6 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 594
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -946,11 +851,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 597
     :goto_0
     return-void
 
-    .line 595
     :catch_0
     move-exception v0
 
@@ -967,7 +870,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 563
     if-eqz p3, :cond_0
 
     const/4 v0, 0x1
@@ -975,13 +877,11 @@
     :goto_0
     invoke-virtual {p0, p1, p2, v1, v0}, Landroid/os/PowerManager;->userActivity(JII)V
 
-    .line 565
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 563
     goto :goto_0
 .end method
 
@@ -990,7 +890,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 671
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -998,11 +897,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 674
     :goto_0
     return-void
 
-    .line 672
     :catch_0
     move-exception v0
 
@@ -1014,7 +911,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 684
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -1022,11 +918,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 687
     :goto_0
     return-void
 
-    .line 685
     :catch_0
     move-exception v0
 

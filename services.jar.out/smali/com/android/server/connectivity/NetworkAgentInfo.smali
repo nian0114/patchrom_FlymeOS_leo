@@ -94,75 +94,58 @@
     .param p10, "defaultRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->isCneWqeEnabled:Z
 
-    .line 95
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
-    .line 99
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkLingered:Ljava/util/ArrayList;
 
-    .line 110
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->messenger:Landroid/os/Messenger;
 
-    .line 111
     iput-object p2, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 112
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
-    .line 113
     iput-object p3, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 114
     iput-object p4, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 115
     iput-object p5, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 116
     iput p6, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->currentScore:I
 
-    .line 117
     new-instance v1, Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {v1, p7, p8, p0, p10}, Lcom/android/server/connectivity/NetworkMonitor;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkRequest;)V
 
     iput-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
-    .line 118
     iput-object p9, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
-    .line 119
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
-    .line 120
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->validated:Z
 
-    .line 121
     iput-object p7, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->mContext:Landroid/content/Context;
 
-    .line 122
     const-string v1, "persist.cne.feature"
 
     const/4 v2, 0x0
@@ -171,13 +154,11 @@
 
     move-result v0
 
-    .line 123
     .local v0, "val":I
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 124
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/android/server/connectivity/NetworkAgentInfo$1;
@@ -192,18 +173,15 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 138
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->everValidated:Z
 
-    .line 139
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
-    .line 140
     return-void
 .end method
 
@@ -215,7 +193,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/connectivity/NetworkAgentInfo;->handlePrefChange(III)V
 
     return-void
@@ -226,10 +203,8 @@
     .param p1, "pretendValidated"    # Z
 
     .prologue
-    .line 162
     iget v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->currentScore:I
 
-    .line 163
     .local v0, "score":I
     iget-boolean v2, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->isCneWqeEnabled:Z
 
@@ -237,13 +212,11 @@
 
     move v1, v0
 
-    .line 170
     .end local v0    # "score":I
     .local v1, "score":I
     :goto_0
     return v1
 
-    .line 165
     .end local v1    # "score":I
     .restart local v0    # "score":I
     :cond_0
@@ -255,13 +228,11 @@
 
     add-int/lit8 v0, v0, -0x28
 
-    .line 166
     :cond_1
     if-gez v0, :cond_2
 
     const/4 v0, 0x0
 
-    .line 168
     :cond_2
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
@@ -274,7 +245,6 @@
     :cond_3
     move v1, v0
 
-    .line 170
     .end local v0    # "score":I
     .restart local v1    # "score":I
     goto :goto_0
@@ -289,29 +259,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 206
     if-ne p1, v1, :cond_0
 
     if-ne p2, v1, :cond_0
 
-    .line 207
     const/4 v0, 0x2
 
     if-ne p3, v0, :cond_1
 
-    .line 208
     iput-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->isCneWqeEnabled:Z
 
-    .line 213
     :cond_0
     :goto_0
     return-void
 
-    .line 209
     :cond_1
     if-ne p3, v1, :cond_0
 
-    .line 210
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->isCneWqeEnabled:Z
@@ -326,14 +290,12 @@
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     iget v1, p1, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 144
     return-void
 .end method
 
@@ -341,7 +303,6 @@
     .locals 1
 
     .prologue
-    .line 176
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore(Z)I
@@ -355,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 182
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore(Z)I
@@ -369,7 +329,6 @@
     .locals 2
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 v1, 0x4
@@ -385,7 +344,6 @@
     .locals 2
 
     .prologue
-    .line 200
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,7 +424,6 @@
     .param p1, "request"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 148
     iget-boolean v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-eqz v0, :cond_0
@@ -497,10 +454,8 @@
     .param p1, "newScore"    # I
 
     .prologue
-    .line 186
     iput p1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->currentScore:I
 
-    .line 187
     return-void
 .end method
 
@@ -508,7 +463,6 @@
     .locals 2
 
     .prologue
-    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 498
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimCdmaHomeLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 498
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimCdmaHomeLoaded;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 501
     const-string v0, "EF_CSIM_CDMAHOME"
 
     return-object v0
@@ -65,12 +62,10 @@
     .prologue
     const/16 v10, 0x2c
 
-    .line 507
     iget-object v1, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 508
     .local v1, "dataList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimCdmaHomeLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -98,30 +93,25 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 509
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 529
     :goto_0
     return-void
 
-    .line 512
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 513
     .local v6, "sidBuf":Ljava/lang/StringBuilder;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 515
     .local v4, "nidBuf":Ljava/lang/StringBuilder;
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -142,7 +132,6 @@
 
     check-cast v0, [B
 
-    .line 516
     .local v0, "data":[B
     array-length v7, v0
 
@@ -150,7 +139,6 @@
 
     if-ne v7, v8, :cond_1
 
-    .line 517
     const/4 v7, 0x1
 
     aget-byte v7, v0, v7
@@ -167,7 +155,6 @@
 
     or-int v5, v7, v8
 
-    .line 518
     .local v5, "sid":I
     const/4 v7, 0x3
 
@@ -185,7 +172,6 @@
 
     or-int v3, v7, v8
 
-    .line 519
     .local v3, "nid":I
     invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -193,7 +179,6 @@
 
     invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 520
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v7
@@ -202,7 +187,6 @@
 
     goto :goto_1
 
-    .line 524
     .end local v0    # "data":[B
     .end local v3    # "nid":I
     .end local v5    # "sid":I
@@ -215,7 +199,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 525
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
@@ -224,7 +207,6 @@
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 527
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimCdmaHomeLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -234,7 +216,6 @@
     # setter for: Lcom/android/internal/telephony/uicc/RuimRecords;->mHomeSystemId:Ljava/lang/String;
     invoke-static {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->access$502(Lcom/android/internal/telephony/uicc/RuimRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 528
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimCdmaHomeLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

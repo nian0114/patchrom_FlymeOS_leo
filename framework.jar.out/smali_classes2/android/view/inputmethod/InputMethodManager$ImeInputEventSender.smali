@@ -25,13 +25,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2179
     iput-object p1, p0, Landroid/view/inputmethod/InputMethodManager$ImeInputEventSender;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
-    .line 2180
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventSender;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 2181
     return-void
 .end method
 
@@ -43,13 +40,11 @@
     .param p2, "handled"    # Z
 
     .prologue
-    .line 2185
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager$ImeInputEventSender;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, p2, v1}, Landroid/view/inputmethod/InputMethodManager;->finishedInputEvent(IZZ)V
 
-    .line 2186
     return-void
 .end method

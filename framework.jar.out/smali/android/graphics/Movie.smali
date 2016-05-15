@@ -13,30 +13,25 @@
     .param p1, "nativeMovie"    # J
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 28
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v1, "native movie creation failed"
+    const-string v1, "native movie creation failed"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 30
     :cond_0
     iput-wide p1, p0, Landroid/graphics/Movie;->mNativeMovie:J
 
-    .line 31
     return-void
 .end method
 
@@ -48,7 +43,6 @@
     .param p0, "pathName"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -56,7 +50,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 73
     .local v1, "is":Ljava/io/InputStream;
     invoke-static {v1}, Landroid/graphics/Movie;->decodeTempStream(Ljava/io/InputStream;)Landroid/graphics/Movie;
 
@@ -66,11 +59,9 @@
     :goto_0
     return-object v2
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/io/FileNotFoundException;
     const/4 v2, 0x0
 
@@ -82,23 +73,18 @@
     .param p0, "is"    # Ljava/io/InputStream;
 
     .prologue
-    .line 47
     if-nez p0, :cond_0
 
-    .line 48
     const/4 v2, 0x0
 
-    .line 55
     :goto_0
     return-object v2
 
-    .line 50
     :cond_0
     instance-of v2, p0, Landroid/content/res/AssetManager$AssetInputStream;
 
     if-eqz v2, :cond_1
 
-    .line 51
     check-cast p0, Landroid/content/res/AssetManager$AssetInputStream;
 
     .end local p0    # "is":Ljava/io/InputStream;
@@ -106,7 +92,6 @@
 
     move-result-wide v0
 
-    .line 52
     .local v0, "asset":J
     invoke-static {v0, v1}, Landroid/graphics/Movie;->nativeDecodeAsset(J)Landroid/graphics/Movie;
 
@@ -114,7 +99,6 @@
 
     goto :goto_0
 
-    .line 55
     .end local v0    # "asset":J
     .restart local p0    # "is":Ljava/io/InputStream;
     :cond_1
@@ -130,26 +114,21 @@
     .param p0, "is"    # Ljava/io/InputStream;
 
     .prologue
-    .line 86
     const/4 v0, 0x0
 
-    .line 88
     .local v0, "moov":Landroid/graphics/Movie;
     :try_start_0
     invoke-static {p0}, Landroid/graphics/Movie;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Movie;
 
     move-result-object v0
 
-    .line 89
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
     :goto_0
     return-object v0
 
-    .line 91
     :catch_0
     move-exception v1
 
@@ -174,12 +153,10 @@
     .param p3, "y"    # F
 
     .prologue
-    .line 43
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Landroid/graphics/Movie;->draw(Landroid/graphics/Canvas;FFLandroid/graphics/Paint;)V
 
-    .line 44
     return-void
 .end method
 
@@ -198,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 79
     :try_start_0
     iget-wide v0, p0, Landroid/graphics/Movie;->mNativeMovie:J
 
@@ -206,13 +182,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 81
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 83
     return-void
 
-    .line 81
     :catchall_0
     move-exception v0
 

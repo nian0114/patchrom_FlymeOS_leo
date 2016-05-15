@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 282
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase$1;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase$1;-><init>()V
@@ -66,25 +65,18 @@
     .param p5, "users"    # [I
 
     .prologue
-    .line 274
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 275
     iput p1, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->id:I
 
-    .line 276
     iput p2, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->recognitionModes:I
 
-    .line 277
     iput-object p3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
 
-    .line 278
     iput-object p4, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
-    .line 279
     iput-object p5, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->users:[I
 
-    .line 280
     return-void
 .end method
 
@@ -93,7 +85,6 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 257
     invoke-static {p0}, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->fromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
     move-result-object v0
@@ -106,50 +97,40 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 294
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 295
     .local v1, "id":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 296
     .local v2, "recognitionModes":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 297
     .local v3, "locale":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 298
     .local v4, "text":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 299
     .local v5, "users":[I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 300
     .local v6, "numUsers":I
     if-ltz v6, :cond_0
 
-    .line 301
     new-array v5, v6, [I
 
-    .line 302
     invoke-virtual {p0, v5}, Landroid/os/Parcel;->readIntArray([I)V
 
-    .line 304
     :cond_0
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
@@ -164,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 323
     const/4 v0, 0x0
 
     return v0
@@ -179,24 +159,19 @@
 
     const/4 v2, 0x0
 
-    .line 340
     if-ne p0, p1, :cond_1
 
-    .line 363
     :cond_0
     :goto_0
     return v1
 
-    .line 342
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 343
     goto :goto_0
 
-    .line 344
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -210,32 +185,26 @@
 
     move v1, v2
 
-    .line 345
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 346
     check-cast v0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
-    .line 347
     .local v0, "other":Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
     if-nez v3, :cond_4
 
-    .line 348
     iget-object v3, v0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
     if-eqz v3, :cond_5
 
     move v1, v2
 
-    .line 349
     goto :goto_0
 
-    .line 350
     :cond_4
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
@@ -249,10 +218,8 @@
 
     move v1, v2
 
-    .line 351
     goto :goto_0
 
-    .line 352
     :cond_5
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->id:I
 
@@ -262,26 +229,21 @@
 
     move v1, v2
 
-    .line 353
     goto :goto_0
 
-    .line 354
     :cond_6
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
 
     if-nez v3, :cond_7
 
-    .line 355
     iget-object v3, v0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
 
     if-eqz v3, :cond_8
 
     move v1, v2
 
-    .line 356
     goto :goto_0
 
-    .line 357
     :cond_7
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
 
@@ -295,10 +257,8 @@
 
     move v1, v2
 
-    .line 358
     goto :goto_0
 
-    .line 359
     :cond_8
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->recognitionModes:I
 
@@ -308,10 +268,8 @@
 
     move v1, v2
 
-    .line 360
     goto :goto_0
 
-    .line 361
     :cond_9
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->users:[I
 
@@ -325,7 +283,6 @@
 
     move v1, v2
 
-    .line 362
     goto :goto_0
 .end method
 
@@ -335,14 +292,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 328
     const/16 v0, 0x1f
 
-    .line 329
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 330
     .local v1, "result":I
     iget-object v2, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
@@ -353,14 +307,12 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 331
     mul-int/lit8 v2, v1, 0x1f
 
     iget v4, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->id:I
 
     add-int v1, v2, v4
 
-    .line 332
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v4, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
@@ -370,14 +322,12 @@
     :goto_1
     add-int v1, v2, v3
 
-    .line 333
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->recognitionModes:I
 
     add-int v1, v2, v3
 
-    .line 334
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->users:[I
@@ -388,10 +338,8 @@
 
     add-int v1, v2, v3
 
-    .line 335
     return v1
 
-    .line 330
     :cond_0
     iget-object v2, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
@@ -401,7 +349,6 @@
 
     goto :goto_0
 
-    .line 332
     :cond_1
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
 
@@ -416,7 +363,6 @@
     .locals 2
 
     .prologue
-    .line 368
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -504,48 +450,39 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 309
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 310
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->recognitionModes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 311
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->locale:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 312
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->text:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 313
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->users:[I
 
     if-eqz v0, :cond_0
 
-    .line 314
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->users:[I
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 315
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->users:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 319
     :goto_0
     return-void
 
-    .line 317
     :cond_0
     const/4 v0, -0x1
 

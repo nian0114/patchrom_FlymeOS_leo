@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 744
     iput-object p1, p0, Landroid/app/Activity$1;->this$0:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 747
     iget-object v0, p0, Landroid/app/Activity$1;->this$0:Landroid/app/Activity;
 
     invoke-virtual {v0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -55,14 +53,12 @@
     .locals 2
 
     .prologue
-    .line 751
     iget-object v1, p0, Landroid/app/Activity$1;->this$0:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    .line 752
     .local v0, "window":Landroid/view/Window;
     if-eqz v0, :cond_0
 

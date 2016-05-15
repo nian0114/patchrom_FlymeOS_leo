@@ -58,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 150
     new-instance v0, Landroid/bluetooth/le/ScanSettings$1;
 
     invoke-direct {v0}, Landroid/bluetooth/le/ScanSettings$1;-><init>()V
@@ -76,22 +75,16 @@
     .param p4, "reportDelayMillis"    # J
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     iput p1, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
-    .line 124
     iput p2, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
-    .line 125
     iput p3, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
-    .line 126
     iput-wide p4, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
-    .line 127
     return-void
 .end method
 
@@ -104,7 +97,6 @@
     .param p6, "x4"    # Landroid/bluetooth/le/ScanSettings$1;
 
     .prologue
-    .line 27
     invoke-direct/range {p0 .. p5}, Landroid/bluetooth/le/ScanSettings;-><init>(IIIJ)V
 
     return-void
@@ -115,38 +107,32 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
-    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
-    .line 132
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
-    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
-    .line 134
     return-void
 .end method
 
@@ -156,7 +142,6 @@
     .param p2, "x1"    # Landroid/bluetooth/le/ScanSettings$1;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Landroid/bluetooth/le/ScanSettings;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -168,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 146
     const/4 v0, 0x0
 
     return v0
@@ -178,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
     return v0
@@ -188,7 +171,6 @@
     .locals 2
 
     .prologue
-    .line 118
     iget-wide v0, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
     return-wide v0
@@ -198,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
     return v0
@@ -208,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
     return v0
@@ -220,26 +200,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 138
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 139
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 140
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 141
     iget-wide v0, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 142
     return-void
 .end method

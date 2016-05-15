@@ -32,15 +32,12 @@
     .locals 1
 
     .prologue
-    .line 54
     invoke-direct {p0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
-    .line 42
     const-string v0, "DdsSchedulerAc"
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DdsSchedulerAc;->TAG:Ljava/lang/String;
 
-    .line 55
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .param p1, "req"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 58
     const-string v0, "DdsSchedulerAc"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,12 +70,10 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     const v0, 0x84005
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/dataconnection/DdsSchedulerAc;->sendMessage(ILjava/lang/Object;)V
 
-    .line 60
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .param p1, "req"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 63
     const-string v0, "DdsSchedulerAc"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -111,11 +104,9 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     const v0, 0x84006
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/dataconnection/DdsSchedulerAc;->sendMessage(ILjava/lang/Object;)V
 
-    .line 65
     return-void
 .end method

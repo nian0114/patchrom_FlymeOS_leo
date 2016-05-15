@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 330
     iput-object p1, p0, Landroid/os/MemoryFile$MemoryOutputStream;->this$0:Landroid/os/MemoryFile;
 
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    .line 332
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mOffset:I
@@ -46,7 +44,6 @@
     .param p2, "x1"    # Landroid/os/MemoryFile$1;
 
     .prologue
-    .line 330
     invoke-direct {p0, p1}, Landroid/os/MemoryFile$MemoryOutputStream;-><init>(Landroid/os/MemoryFile;)V
 
     return-void
@@ -68,17 +65,14 @@
 
     const/4 v2, 0x0
 
-    .line 343
     iget-object v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mSingleByte:[B
 
     if-nez v0, :cond_0
 
-    .line 344
     new-array v0, v3, [B
 
     iput-object v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mSingleByte:[B
 
-    .line 346
     :cond_0
     iget-object v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mSingleByte:[B
 
@@ -86,12 +80,10 @@
 
     aput-byte v1, v0, v2
 
-    .line 347
     iget-object v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mSingleByte:[B
 
     invoke-virtual {p0, v0, v2, v3}, Landroid/os/MemoryFile$MemoryOutputStream;->write([BII)V
 
-    .line 348
     return-void
 .end method
 
@@ -107,20 +99,17 @@
     .end annotation
 
     .prologue
-    .line 337
     iget-object v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->this$0:Landroid/os/MemoryFile;
 
     iget v1, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mOffset:I
 
     invoke-virtual {v0, p1, p2, v1, p3}, Landroid/os/MemoryFile;->writeBytes([BIII)V
 
-    .line 338
     iget v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mOffset:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Landroid/os/MemoryFile$MemoryOutputStream;->mOffset:I
 
-    .line 339
     return-void
 .end method

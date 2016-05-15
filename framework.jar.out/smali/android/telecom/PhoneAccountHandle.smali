@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 145
     new-instance v0, Landroid/telecom/PhoneAccountHandle$1;
 
     invoke-direct {v0}, Landroid/telecom/PhoneAccountHandle$1;-><init>()V
@@ -48,14 +47,12 @@
     .param p2, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/telecom/PhoneAccountHandle;-><init>(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 54
     return-void
 .end method
 
@@ -66,19 +63,14 @@
     .param p3, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-object p1, p0, Landroid/telecom/PhoneAccountHandle;->mComponentName:Landroid/content/ComponentName;
 
-    .line 62
     iput-object p2, p0, Landroid/telecom/PhoneAccountHandle;->mId:Ljava/lang/String;
 
-    .line 63
     iput-object p3, p0, Landroid/telecom/PhoneAccountHandle;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 64
     return-void
 .end method
 
@@ -87,7 +79,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 158
     sget-object v0, Landroid/content/ComponentName;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -110,7 +101,6 @@
 
     invoke-direct {p0, v0, v2, v1}, Landroid/telecom/PhoneAccountHandle;-><init>(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 161
     return-void
 .end method
 
@@ -120,7 +110,6 @@
     .param p2, "x1"    # Landroid/telecom/PhoneAccountHandle$1;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1}, Landroid/telecom/PhoneAccountHandle;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -132,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
     return v0
@@ -143,7 +131,6 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 121
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Landroid/telecom/PhoneAccountHandle;
@@ -218,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/telecom/PhoneAccountHandle;->mComponentName:Landroid/content/ComponentName;
 
     return-object v0
@@ -228,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Landroid/telecom/PhoneAccountHandle;->mId:Ljava/lang/String;
 
     return-object v0
@@ -238,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Landroid/telecom/PhoneAccountHandle;->mUserHandle:Landroid/os/UserHandle;
 
     return-object v0
@@ -248,7 +232,6 @@
     .locals 3
 
     .prologue
-    .line 104
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -282,7 +265,6 @@
     .locals 2
 
     .prologue
-    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -334,21 +316,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/telecom/PhoneAccountHandle;->mComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 141
     iget-object v0, p0, Landroid/telecom/PhoneAccountHandle;->mId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 142
     iget-object v0, p0, Landroid/telecom/PhoneAccountHandle;->mUserHandle:Landroid/os/UserHandle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/UserHandle;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 143
     return-void
 .end method

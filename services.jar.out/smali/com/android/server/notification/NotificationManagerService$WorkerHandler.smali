@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2734
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/notification/NotificationManagerService$1;
 
     .prologue
-    .line 2734
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -50,17 +48,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2739
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2757
     :goto_0
     :pswitch_0
     return-void
 
-    .line 2742
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 2745
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -82,7 +76,6 @@
 
     goto :goto_0
 
-    .line 2748
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 2751
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -102,7 +94,6 @@
 
     goto :goto_0
 
-    .line 2754
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -113,7 +104,6 @@
 
     goto :goto_0
 
-    .line 2739
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1

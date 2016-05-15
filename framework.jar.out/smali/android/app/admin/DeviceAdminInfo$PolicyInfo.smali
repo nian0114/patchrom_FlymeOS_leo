@@ -33,21 +33,15 @@
     .param p4, "descriptionIn"    # I
 
     .prologue
-    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 173
     iput p1, p0, Landroid/app/admin/DeviceAdminInfo$PolicyInfo;->ident:I
 
-    .line 174
     iput-object p2, p0, Landroid/app/admin/DeviceAdminInfo$PolicyInfo;->tag:Ljava/lang/String;
 
-    .line 175
     iput p3, p0, Landroid/app/admin/DeviceAdminInfo$PolicyInfo;->label:I
 
-    .line 176
     iput p4, p0, Landroid/app/admin/DeviceAdminInfo$PolicyInfo;->description:I
 
-    .line 177
     return-void
 .end method

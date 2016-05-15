@@ -56,38 +56,32 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 105
     invoke-direct {p0}, Landroid/net/BaseNetworkStateTracker;-><init>()V
 
-    .line 70
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mReconnectRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 71
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mIsProxyAvailable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 72
     new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v1, v5}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mDefaultGatewayAddr:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 74
     new-instance v1, Landroid/net/ProxyDataTracker$1;
 
     invoke-direct {v1, p0}, Landroid/net/ProxyDataTracker$1;-><init>(Landroid/net/ProxyDataTracker;)V
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mProxyStatusServiceListener:Landroid/content/BroadcastReceiver;
 
-    .line 106
     new-instance v1, Landroid/net/NetworkInfo;
 
     const/16 v2, 0x10
@@ -100,28 +94,24 @@
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 107
     new-instance v1, Landroid/net/LinkProperties;
 
     invoke-direct {v1}, Landroid/net/LinkProperties;-><init>()V
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
-    .line 108
     new-instance v1, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v1}, Landroid/net/NetworkCapabilities;-><init>()V
 
     iput-object v1, p0, Landroid/net/ProxyDataTracker;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 109
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 111
     :try_start_0
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
@@ -133,7 +123,6 @@
 
     invoke-virtual {v1, v2}, Landroid/net/LinkProperties;->addDnsServer(Ljava/net/InetAddress;)Z
 
-    .line 112
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     const-string v2, "8.8.4.4"
@@ -144,7 +133,6 @@
 
     invoke-virtual {v1, v2}, Landroid/net/LinkProperties;->addDnsServer(Ljava/net/InetAddress;)Z
 
-    .line 113
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     const-string v2, "ifb0"
@@ -153,15 +141,12 @@
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 117
     :goto_0
     return-void
 
-    .line 114
     :catch_0
     move-exception v0
 
-    .line 115
     .local v0, "e":Ljava/net/UnknownHostException;
     const-string v1, "ProxyDataTracker"
 
@@ -177,7 +162,6 @@
     .param p0, "x0"    # Landroid/net/ProxyDataTracker;
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/net/ProxyDataTracker;->mIsProxyAvailable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -189,7 +173,6 @@
     .param p1, "x1"    # Landroid/os/Messenger;
 
     .prologue
-    .line 44
     iput-object p1, p0, Landroid/net/ProxyDataTracker;->mProxyStatusService:Landroid/os/Messenger;
 
     return-object p1
@@ -200,7 +183,6 @@
     .param p0, "x0"    # Landroid/net/ProxyDataTracker;
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/net/ProxyDataTracker;->mReconnectRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -214,7 +196,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2, p3}, Landroid/net/ProxyDataTracker;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -227,12 +208,10 @@
     .param p3, "extraInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 203
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v1, p1, p2, p3}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 204
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mTarget:Landroid/os/Handler;
 
     const/high16 v2, 0x70000
@@ -243,11 +222,9 @@
 
     move-result-object v0
 
-    .line 205
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 206
     return-void
 .end method
 
@@ -262,7 +239,6 @@
     .end annotation
 
     .prologue
-    .line 121
     new-instance v0, Ljava/lang/CloneNotSupportedException;
 
     invoke-direct {v0}, Ljava/lang/CloneNotSupportedException;-><init>()V
@@ -274,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/net/ProxyDataTracker;->mDefaultGatewayAddr:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -288,8 +263,7 @@
     .locals 1
 
     .prologue
-    .line 189
-    const-string/jumbo v0, "net.tcp.buffersize.wifi"
+    const-string v0, "net.tcp.buffersize.wifi"
 
     return-object v0
 .end method
@@ -304,15 +278,12 @@
 
     const/4 v6, 0x0
 
-    .line 156
     iget-object v3, p0, Landroid/net/ProxyDataTracker;->mReconnectRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 157
     invoke-virtual {p0, v1}, Landroid/net/ProxyDataTracker;->setTeardownRequested(Z)V
 
-    .line 158
     iget-object v3, p0, Landroid/net/ProxyDataTracker;->mIsProxyAvailable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -321,18 +292,15 @@
 
     if-nez v3, :cond_0
 
-    .line 159
     const-string v2, "ProxyDataTracker"
 
     const-string v3, "Reconnect requested even though proxy service is not up. Bailing."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     :goto_0
     return v1
 
-    .line 162
     :cond_0
     sget-object v3, Landroid/net/NetworkInfo$DetailedState;->CONNECTING:Landroid/net/NetworkInfo$DetailedState;
 
@@ -340,7 +308,6 @@
 
     invoke-direct {p0, v3, v4, v6}, Landroid/net/ProxyDataTracker;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
     :try_start_0
     iget-object v3, p0, Landroid/net/ProxyDataTracker;->mProxyStatusService:Landroid/os/Messenger;
 
@@ -356,7 +323,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 173
     sget-object v1, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     const-string v3, "enabled"
@@ -365,14 +331,11 @@
 
     move v1, v2
 
-    .line 174
     goto :goto_0
 
-    .line 166
     :catch_0
     move-exception v0
 
-    .line 167
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "ProxyDataTracker"
 
@@ -380,10 +343,9 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 168
     sget-object v2, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
-    const-string/jumbo v3, "proxy_down"
+    const-string v3, "proxy_down"
 
     invoke-direct {p0, v2, v3, v6}, Landroid/net/ProxyDataTracker;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -396,13 +358,10 @@
     .param p2, "target"    # Landroid/os/Handler;
 
     .prologue
-    .line 126
     iput-object p1, p0, Landroid/net/ProxyDataTracker;->mContext:Landroid/content/Context;
 
-    .line 127
     iput-object p2, p0, Landroid/net/ProxyDataTracker;->mTarget:Landroid/os/Handler;
 
-    .line 128
     iget-object v0, p0, Landroid/net/ProxyDataTracker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/net/ProxyDataTracker;->mProxyStatusServiceListener:Landroid/content/BroadcastReceiver;
@@ -419,7 +378,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 132
     return-void
 .end method
 
@@ -433,15 +391,12 @@
 
     const/4 v1, 0x1
 
-    .line 138
     invoke-virtual {p0, v1}, Landroid/net/ProxyDataTracker;->setTeardownRequested(Z)V
 
-    .line 139
     iget-object v3, p0, Landroid/net/ProxyDataTracker;->mReconnectRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 141
     :try_start_0
     iget-object v3, p0, Landroid/net/ProxyDataTracker;->mIsProxyAvailable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -455,7 +410,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 142
     iget-object v3, p0, Landroid/net/ProxyDataTracker;->mProxyStatusService:Landroid/os/Messenger;
 
     const/4 v4, 0x0
@@ -470,7 +424,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     :cond_0
     sget-object v2, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
@@ -478,15 +431,12 @@
 
     invoke-direct {p0, v2, v3, v6}, Landroid/net/ProxyDataTracker;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     :goto_0
     return v1
 
-    .line 144
     :catch_0
     move-exception v0
 
-    .line 145
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "ProxyDataTracker"
 
@@ -496,6 +446,5 @@
 
     move v1, v2
 
-    .line 146
     goto :goto_0
 .end method

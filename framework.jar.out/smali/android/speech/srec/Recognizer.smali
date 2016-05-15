@@ -62,12 +62,10 @@
     .locals 1
 
     .prologue
-    .line 105
-    const-string/jumbo v0, "srec_jni"
+    const-string v0, "srec_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 108
     const-string v0, "Recognizer"
 
     sput-object v0, Landroid/speech/srec/Recognizer;->TAG:Ljava/lang/String;
@@ -89,47 +87,36 @@
 
     const/4 v0, 0x0
 
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 126
     iput-wide v2, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
-    .line 129
     iput-wide v2, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 132
     iput-object v0, p0, Landroid/speech/srec/Recognizer;->mActiveGrammar:Landroid/speech/srec/Recognizer$Grammar;
 
-    .line 318
     iput-object v0, p0, Landroid/speech/srec/Recognizer;->mPutAudioBuffer:[B
 
-    .line 164
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemInit()V
 
-    .line 165
     invoke-static {p1}, Landroid/speech/srec/Recognizer;->SR_SessionCreate(Ljava/lang/String;)V
 
-    .line 166
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_RecognizerCreate()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 167
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_RecognizerSetup(J)V
 
-    .line 168
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_VocabularyLoad()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
-    .line 169
     return-void
 .end method
 
@@ -303,7 +290,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     invoke-static {p0}, Landroid/speech/srec/Recognizer;->SR_GrammarLoad(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -316,7 +302,6 @@
     .param p0, "x0"    # Landroid/speech/srec/Recognizer;
 
     .prologue
-    .line 103
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
     return-wide v0
@@ -327,7 +312,6 @@
     .param p0, "x0"    # J
 
     .prologue
-    .line 103
     invoke-static {p0, p1}, Landroid/speech/srec/Recognizer;->SR_GrammarDestroy(J)V
 
     return-void
@@ -339,7 +323,6 @@
     .param p2, "x1"    # J
 
     .prologue
-    .line 103
     invoke-static {p0, p1, p2, p3}, Landroid/speech/srec/Recognizer;->SR_GrammarSetupVocabulary(JJ)V
 
     return-void
@@ -350,7 +333,6 @@
     .param p0, "x0"    # J
 
     .prologue
-    .line 103
     invoke-static {p0, p1}, Landroid/speech/srec/Recognizer;->SR_GrammarResetAllSlots(J)V
 
     return-void
@@ -366,7 +348,6 @@
     .param p6, "x5"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     invoke-static/range {p0 .. p6}, Landroid/speech/srec/Recognizer;->SR_GrammarAddWordToSlot(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -377,7 +358,6 @@
     .param p0, "x0"    # J
 
     .prologue
-    .line 103
     invoke-static {p0, p1}, Landroid/speech/srec/Recognizer;->SR_GrammarCompile(J)V
 
     return-void
@@ -388,7 +368,6 @@
     .param p0, "x0"    # Landroid/speech/srec/Recognizer;
 
     .prologue
-    .line 103
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     return-wide v0
@@ -400,7 +379,6 @@
     .param p2, "x1"    # J
 
     .prologue
-    .line 103
     invoke-static {p0, p1, p2, p3}, Landroid/speech/srec/Recognizer;->SR_GrammarSetupRecognizer(JJ)V
 
     return-void
@@ -412,7 +390,6 @@
     .param p1, "x1"    # Landroid/speech/srec/Recognizer$Grammar;
 
     .prologue
-    .line 103
     iput-object p1, p0, Landroid/speech/srec/Recognizer;->mActiveGrammar:Landroid/speech/srec/Recognizer$Grammar;
 
     return-object p1
@@ -424,7 +401,6 @@
     .param p2, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     invoke-static {p0, p1, p2}, Landroid/speech/srec/Recognizer;->SR_GrammarSave(JLjava/lang/String;)V
 
     return-void
@@ -435,10 +411,8 @@
     .param p0, "event"    # I
 
     .prologue
-    .line 570
     packed-switch p0, :pswitch_data_0
 
-    .line 598
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -460,85 +434,71 @@
     :goto_0
     return-object v0
 
-    .line 572
     :pswitch_0
     const-string v0, "EVENT_INVALID"
 
     goto :goto_0
 
-    .line 574
     :pswitch_1
     const-string v0, "EVENT_NO_MATCH"
 
     goto :goto_0
 
-    .line 576
     :pswitch_2
     const-string v0, "EVENT_INCOMPLETE"
 
     goto :goto_0
 
-    .line 578
     :pswitch_3
     const-string v0, "EVENT_STARTED"
 
     goto :goto_0
 
-    .line 580
     :pswitch_4
     const-string v0, "EVENT_STOPPED"
 
     goto :goto_0
 
-    .line 582
     :pswitch_5
     const-string v0, "EVENT_START_OF_VOICING"
 
     goto :goto_0
 
-    .line 584
     :pswitch_6
     const-string v0, "EVENT_END_OF_VOICING"
 
     goto :goto_0
 
-    .line 586
     :pswitch_7
     const-string v0, "EVENT_SPOKE_TOO_SOON"
 
     goto :goto_0
 
-    .line 588
     :pswitch_8
     const-string v0, "EVENT_RECOGNITION_RESULT"
 
     goto :goto_0
 
-    .line 590
     :pswitch_9
     const-string v0, "EVENT_START_OF_UTTERANCE_TIMEOUT"
 
     goto :goto_0
 
-    .line 592
     :pswitch_a
     const-string v0, "EVENT_RECOGNITION_TIMEOUT"
 
     goto :goto_0
 
-    .line 594
     :pswitch_b
     const-string v0, "EVENT_NEED_MORE_AUDIO"
 
     goto :goto_0
 
-    .line 596
     :pswitch_c
     const-string v0, "EVENT_MAX_SPEECH"
 
     goto :goto_0
 
-    .line 570
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -562,12 +522,10 @@
     .param p0, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 144
     if-nez p0, :cond_0
 
     sget-object p0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 145
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -605,7 +563,6 @@
 
     move-result-object v0
 
-    .line 147
     .local v0, "dir":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -617,7 +574,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 148
     .end local v0    # "dir":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -635,7 +591,6 @@
     .locals 2
 
     .prologue
-    .line 282
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_RecognizerAdvance(J)I
@@ -651,7 +606,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 402
     :try_start_0
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
@@ -665,11 +619,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_7
 
-    .line 404
     :cond_0
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
-    .line 406
     :try_start_1
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
@@ -683,7 +635,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 409
     :cond_1
     :try_start_2
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
@@ -698,23 +649,18 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 411
     :cond_2
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_3
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
-    .line 420
     return-void
 
-    .line 415
     :catchall_0
     move-exception v0
 
@@ -722,19 +668,16 @@
 
     throw v0
 
-    .line 411
     :catchall_1
     move-exception v0
 
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_4
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -746,11 +689,9 @@
 
     throw v0
 
-    .line 408
     :catchall_3
     move-exception v0
 
-    .line 409
     :try_start_5
     iget-wide v2, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
@@ -764,17 +705,14 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_5
 
-    .line 411
     :cond_3
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_6
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -786,19 +724,16 @@
 
     throw v0
 
-    .line 411
     :catchall_5
     move-exception v0
 
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_7
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_6
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -810,13 +745,11 @@
 
     throw v0
 
-    .line 404
     :catchall_7
     move-exception v0
 
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
-    .line 406
     :try_start_8
     iget-wide v2, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
@@ -830,7 +763,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_b
 
-    .line 409
     :cond_4
     :try_start_9
     iget-wide v2, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
@@ -845,17 +777,14 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_9
 
-    .line 411
     :cond_5
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_a
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_8
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -867,19 +796,16 @@
 
     throw v0
 
-    .line 411
     :catchall_9
     move-exception v0
 
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_b
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_a
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -891,11 +817,9 @@
 
     throw v0
 
-    .line 408
     :catchall_b
     move-exception v0
 
-    .line 409
     :try_start_c
     iget-wide v2, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
@@ -909,17 +833,14 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_d
 
-    .line 411
     :cond_6
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_d
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_c
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -931,19 +852,16 @@
 
     throw v0
 
-    .line 411
     :catchall_d
     move-exception v0
 
     iput-wide v4, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
-    .line 413
     :try_start_e
     invoke-static {}, Landroid/speech/srec/Recognizer;->SR_SessionDestroy()V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_e
 
-    .line 415
     invoke-static {}, Landroid/speech/srec/Recognizer;->PMemShutdown()V
 
     throw v0
@@ -967,7 +885,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 426
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mVocabulary:J
 
     cmp-long v0, v0, v2
@@ -980,20 +897,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 427
     :cond_0
     invoke-virtual {p0}, Landroid/speech/srec/Recognizer;->destroy()V
 
-    .line 428
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "someone forgot to destroy Recognizer"
+    const-string v1, "someone forgot to destroy Recognizer"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 430
     :cond_1
     return-void
 .end method
@@ -1002,7 +916,6 @@
     .locals 2
 
     .prologue
-    .line 394
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_AcousticStateGet(J)Ljava/lang/String;
@@ -1018,7 +931,6 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 357
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1, p1, p2}, Landroid/speech/srec/Recognizer;->SR_RecognizerResultGetValue(JILjava/lang/String;)Ljava/lang/String;
@@ -1032,7 +944,6 @@
     .locals 2
 
     .prologue
-    .line 328
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_RecognizerResultGetSize(J)I
@@ -1047,7 +958,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 340
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1, p1}, Landroid/speech/srec/Recognizer;->SR_RecognizerResultGetKeyList(JI)[Ljava/lang/String;
@@ -1065,7 +975,6 @@
     .param p4, "isLast"    # Z
 
     .prologue
-    .line 294
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     move-object v2, p1
@@ -1095,7 +1004,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 304
     iget-object v0, p0, Landroid/speech/srec/Recognizer;->mPutAudioBuffer:[B
 
     if-nez v0, :cond_0
@@ -1106,7 +1014,6 @@
 
     iput-object v0, p0, Landroid/speech/srec/Recognizer;->mPutAudioBuffer:[B
 
-    .line 306
     :cond_0
     iget-object v0, p0, Landroid/speech/srec/Recognizer;->mPutAudioBuffer:[B
 
@@ -1114,13 +1021,11 @@
 
     move-result v4
 
-    .line 308
     .local v4, "nbytes":I
     const/4 v0, -0x1
 
     if-ne v4, v0, :cond_2
 
-    .line 309
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     iget-object v2, p0, Landroid/speech/srec/Recognizer;->mPutAudioBuffer:[B
@@ -1131,12 +1036,10 @@
 
     invoke-static/range {v0 .. v5}, Landroid/speech/srec/Recognizer;->SR_RecognizerPutAudio(J[BIIZ)I
 
-    .line 315
     .end local v4    # "nbytes":I
     :cond_1
     return-void
 
-    .line 312
     .restart local v4    # "nbytes":I
     :cond_2
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
@@ -1151,7 +1054,6 @@
 
     if-eq v4, v0, :cond_1
 
-    .line 313
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1181,12 +1083,10 @@
     .locals 2
 
     .prologue
-    .line 374
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_AcousticStateReset(J)V
 
-    .line 375
     return-void
 .end method
 
@@ -1195,12 +1095,10 @@
     .param p1, "state"    # Ljava/lang/String;
 
     .prologue
-    .line 384
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1, p1}, Landroid/speech/srec/Recognizer;->SR_AcousticStateSet(JLjava/lang/String;)V
 
-    .line 385
     return-void
 .end method
 
@@ -1208,7 +1106,6 @@
     .locals 6
 
     .prologue
-    .line 258
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     iget-object v2, p0, Landroid/speech/srec/Recognizer;->mActiveGrammar:Landroid/speech/srec/Recognizer$Grammar;
@@ -1218,18 +1115,16 @@
 
     move-result-wide v2
 
-    const-string/jumbo v4, "trash"
+    const-string v4, "trash"
 
     const/4 v5, 0x1
 
     invoke-static/range {v0 .. v5}, Landroid/speech/srec/Recognizer;->SR_RecognizerActivateRule(JJLjava/lang/String;I)V
 
-    .line 259
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_RecognizerStart(J)V
 
-    .line 260
     return-void
 .end method
 
@@ -1237,12 +1132,10 @@
     .locals 5
 
     .prologue
-    .line 364
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->SR_RecognizerStop(J)V
 
-    .line 365
     iget-wide v0, p0, Landroid/speech/srec/Recognizer;->mRecognizer:J
 
     iget-object v2, p0, Landroid/speech/srec/Recognizer;->mActiveGrammar:Landroid/speech/srec/Recognizer$Grammar;
@@ -1252,10 +1145,9 @@
 
     move-result-wide v2
 
-    const-string/jumbo v4, "trash"
+    const-string v4, "trash"
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/speech/srec/Recognizer;->SR_RecognizerDeactivateRule(JJLjava/lang/String;)V
 
-    .line 366
     return-void
 .end method

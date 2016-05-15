@@ -55,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 594
     new-instance v0, Landroid/widget/TimePickerClockDelegate$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/TimePickerClockDelegate$SavedState$1;-><init>()V
@@ -74,24 +73,20 @@
 
     const/4 v1, 0x1
 
-    .line 549
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 550
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mHour:I
 
-    .line 551
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mMinute:I
 
-    .line 552
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -103,7 +98,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mIs24HourMode:Z
 
-    .line 553
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -113,7 +107,6 @@
     :goto_1
     iput-boolean v1, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mInKbMode:Z
 
-    .line 554
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -128,26 +121,22 @@
 
     iput-object v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mTypedTimes:Ljava/util/ArrayList;
 
-    .line 555
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mCurrentItemShowing:I
 
-    .line 556
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 552
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 553
     goto :goto_1
 .end method
 
@@ -157,7 +146,6 @@
     .param p2, "x1"    # Landroid/widget/TimePickerClockDelegate$1;
 
     .prologue
-    .line 527
     invoke-direct {p0, p1}, Landroid/widget/TimePickerClockDelegate$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -184,29 +172,21 @@
     .end annotation
 
     .prologue
-    .line 539
     .local p6, "typedTimes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 540
     iput p2, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mHour:I
 
-    .line 541
     iput p3, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mMinute:I
 
-    .line 542
     iput-boolean p4, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mIs24HourMode:Z
 
-    .line 543
     iput-boolean p5, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mInKbMode:Z
 
-    .line 544
     iput-object p6, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mTypedTimes:Ljava/util/ArrayList;
 
-    .line 545
     iput p7, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mCurrentItemShowing:I
 
-    .line 546
     return-void
 .end method
 
@@ -222,7 +202,6 @@
     .param p8, "x7"    # Landroid/widget/TimePickerClockDelegate$1;
 
     .prologue
-    .line 527
     invoke-direct/range {p0 .. p7}, Landroid/widget/TimePickerClockDelegate$SavedState;-><init>(Landroid/os/Parcelable;IIZZLjava/util/ArrayList;I)V
 
     return-void
@@ -234,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 579
     iget v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mCurrentItemShowing:I
 
     return v0
@@ -244,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 559
     iget v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mHour:I
 
     return v0
@@ -254,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 563
     iget v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mMinute:I
 
     return v0
@@ -273,7 +249,6 @@
     .end annotation
 
     .prologue
-    .line 575
     iget-object v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mTypedTimes:Ljava/util/ArrayList;
 
     return-object v0
@@ -283,7 +258,6 @@
     .locals 1
 
     .prologue
-    .line 571
     iget-boolean v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mInKbMode:Z
 
     return v0
@@ -293,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 567
     iget-boolean v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mIs24HourMode:Z
 
     return v0
@@ -309,20 +282,16 @@
 
     const/4 v2, 0x0
 
-    .line 584
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 585
     iget v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mHour:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 586
     iget v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mMinute:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 587
     iget-boolean v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mIs24HourMode:Z
 
     if-eqz v0, :cond_0
@@ -332,7 +301,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 588
     iget-boolean v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mInKbMode:Z
 
     if-eqz v0, :cond_1
@@ -340,28 +308,23 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 589
     iget-object v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mTypedTimes:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 590
     iget v0, p0, Landroid/widget/TimePickerClockDelegate$SavedState;->mCurrentItemShowing:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 591
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 587
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 588
     goto :goto_1
 .end method

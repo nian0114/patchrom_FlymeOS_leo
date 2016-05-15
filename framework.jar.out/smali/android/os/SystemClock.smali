@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     return-void
 .end method
 
@@ -41,28 +39,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 143
     const-string v4, "alarm"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 144
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/app/IAlarmManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IAlarmManager;
 
     move-result-object v2
 
-    .line 145
     .local v2, "mgr":Landroid/app/IAlarmManager;
     if-nez v2, :cond_0
 
-    .line 157
     :goto_0
     return v3
 
-    .line 150
     :cond_0
     :try_start_0
     invoke-interface {v2, p0, p1}, Landroid/app/IAlarmManager;->setTime(J)Z
@@ -74,11 +67,9 @@
 
     goto :goto_0
 
-    .line 151
     :catch_0
     move-exception v1
 
-    .line 152
     .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "SystemClock"
 
@@ -88,12 +79,10 @@
 
     goto :goto_0
 
-    .line 153
     .end local v1    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 154
     .local v1, "e":Ljava/lang/SecurityException;
     const-string v4, "SystemClock"
 
@@ -109,20 +98,16 @@
     .param p0, "ms"    # J
 
     .prologue
-    .line 115
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 116
     .local v4, "start":J
     move-wide v0, p0
 
-    .line 117
     .local v0, "duration":J
     const/4 v3, 0x0
 
-    .line 120
     .local v3, "interrupted":Z
     :cond_0
     :try_start_0
@@ -130,7 +115,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 125
     :goto_0
     add-long v6, v4, p0
 
@@ -140,32 +124,26 @@
 
     sub-long v0, v6, v8
 
-    .line 126
     const-wide/16 v6, 0x0
 
     cmp-long v6, v0, v6
 
     if-gtz v6, :cond_0
 
-    .line 128
     if-eqz v3, :cond_1
 
-    .line 132
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v6
 
     invoke-virtual {v6}, Ljava/lang/Thread;->interrupt()V
 
-    .line 134
     :cond_1
     return-void
 
-    .line 122
     :catch_0
     move-exception v2
 
-    .line 123
     .local v2, "e":Ljava/lang/InterruptedException;
     const/4 v3, 0x1
 

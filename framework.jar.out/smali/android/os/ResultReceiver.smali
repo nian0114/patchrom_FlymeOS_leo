@@ -41,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 128
     new-instance v0, Landroid/os/ResultReceiver$1;
 
     invoke-direct {v0}, Landroid/os/ResultReceiver$1;-><init>()V
@@ -56,18 +55,14 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/os/ResultReceiver;->mLocal:Z
 
-    .line 71
     iput-object p1, p0, Landroid/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 72
     return-void
 .end method
 
@@ -76,20 +71,16 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/os/ResultReceiver;->mLocal:Z
 
-    .line 124
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 125
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -100,7 +91,6 @@
 
     iput-object v0, p0, Landroid/os/ResultReceiver;->mReceiver:Lcom/android/internal/os/IResultReceiver;
 
-    .line 126
     return-void
 .end method
 
@@ -110,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     return v0
@@ -122,7 +111,6 @@
     .param p2, "resultData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 107
     return-void
 .end method
 
@@ -132,17 +120,14 @@
     .param p2, "resultData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Landroid/os/ResultReceiver;->mLocal:Z
 
     if-eqz v0, :cond_2
 
-    .line 83
     iget-object v0, p0, Landroid/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_1
 
-    .line 84
     iget-object v0, p0, Landroid/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/os/ResultReceiver$MyRunnable;
@@ -151,24 +136,20 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 97
     :cond_0
     :goto_0
     return-void
 
-    .line 86
     :cond_1
     invoke-virtual {p0, p1, p2}, Landroid/os/ResultReceiver;->onReceiveResult(ILandroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 91
     :cond_2
     iget-object v0, p0, Landroid/os/ResultReceiver;->mReceiver:Lcom/android/internal/os/IResultReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 93
     :try_start_0
     iget-object v0, p0, Landroid/os/ResultReceiver;->mReceiver:Lcom/android/internal/os/IResultReceiver;
 
@@ -178,7 +159,6 @@
 
     goto :goto_0
 
-    .line 94
     :catch_0
     move-exception v0
 
@@ -191,23 +171,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 114
     monitor-enter p0
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Landroid/os/ResultReceiver;->mReceiver:Lcom/android/internal/os/IResultReceiver;
 
     if-nez v0, :cond_0
 
-    .line 116
     new-instance v0, Landroid/os/ResultReceiver$MyResultReceiver;
 
     invoke-direct {v0, p0}, Landroid/os/ResultReceiver$MyResultReceiver;-><init>(Landroid/os/ResultReceiver;)V
 
     iput-object v0, p0, Landroid/os/ResultReceiver;->mReceiver:Lcom/android/internal/os/IResultReceiver;
 
-    .line 118
     :cond_0
     iget-object v0, p0, Landroid/os/ResultReceiver;->mReceiver:Lcom/android/internal/os/IResultReceiver;
 
@@ -217,13 +193,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 119
     monitor-exit p0
 
-    .line 120
     return-void
 
-    .line 119
     :catchall_0
     move-exception v0
 

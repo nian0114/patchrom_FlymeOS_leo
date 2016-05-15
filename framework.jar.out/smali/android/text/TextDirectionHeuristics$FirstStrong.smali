@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 199
     new-instance v0, Landroid/text/TextDirectionHeuristics$FirstStrong;
 
     invoke-direct {v0}, Landroid/text/TextDirectionHeuristics$FirstStrong;-><init>()V
@@ -40,10 +39,8 @@
     .locals 0
 
     .prologue
-    .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 197
     return-void
 .end method
 
@@ -56,10 +53,8 @@
     .param p3, "count"    # I
 
     .prologue
-    .line 189
     const/4 v2, 0x2
 
-    .line 190
     .local v2, "result":I
     move v1, p2
 
@@ -74,7 +69,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 191
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -88,12 +82,10 @@
 
     move-result v2
 
-    .line 190
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 193
     :cond_0
     return v2
 .end method

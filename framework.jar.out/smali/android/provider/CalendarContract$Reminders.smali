@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 2098
     const-string v0, "content://com.android.calendar/reminders"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 2103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +57,6 @@
     .param p3, "projection"    # [Ljava/lang/String;
 
     .prologue
-    .line 2115
     const/4 v0, 0x1
 
     new-array v4, v0, [Ljava/lang/String;
@@ -72,7 +69,6 @@
 
     aput-object v1, v4, v0
 
-    .line 2116
     .local v4, "remArgs":[Ljava/lang/String;
     sget-object v1, Landroid/provider/CalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 

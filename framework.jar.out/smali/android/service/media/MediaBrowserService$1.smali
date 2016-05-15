@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 335
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$1;->this$0:Landroid/service/media/MediaBrowserService;
 
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$1;->val$token:Landroid/media/session/MediaSession$Token;
@@ -44,7 +43,6 @@
     .locals 8
 
     .prologue
-    .line 338
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$1;->this$0:Landroid/service/media/MediaBrowserService;
 
     # getter for: Landroid/service/media/MediaBrowserService;->mConnections:Landroid/util/ArrayMap;
@@ -74,7 +72,6 @@
 
     check-cast v3, Landroid/os/IBinder;
 
-    .line 339
     .local v3, "key":Landroid/os/IBinder;
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$1;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -89,7 +86,6 @@
 
     check-cast v0, Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
-    .line 341
     .local v0, "connection":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     :try_start_0
     iget-object v4, v0, Landroid/service/media/MediaBrowserService$ConnectionRecord;->callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
@@ -114,11 +110,9 @@
 
     goto :goto_0
 
-    .line 343
     :catch_0
     move-exception v1
 
-    .line 344
     .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "MediaBrowserService"
 
@@ -150,7 +144,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$1;->this$0:Landroid/service/media/MediaBrowserService;
 
     # getter for: Landroid/service/media/MediaBrowserService;->mConnections:Landroid/util/ArrayMap;
@@ -162,7 +155,6 @@
 
     goto :goto_0
 
-    .line 348
     .end local v0    # "connection":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v3    # "key":Landroid/os/IBinder;

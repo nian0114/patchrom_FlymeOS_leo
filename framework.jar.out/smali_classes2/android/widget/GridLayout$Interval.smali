@@ -27,16 +27,12 @@
     .param p2, "max"    # I
 
     .prologue
-    .line 2464
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2465
     iput p1, p0, Landroid/widget/GridLayout$Interval;->min:I
 
-    .line 2466
     iput p2, p0, Landroid/widget/GridLayout$Interval;->max:I
 
-    .line 2467
     return-void
 .end method
 
@@ -51,15 +47,12 @@
 
     const/4 v2, 0x0
 
-    .line 2489
     if-ne p0, p1, :cond_1
 
-    .line 2506
     :cond_0
     :goto_0
     return v1
 
-    .line 2492
     :cond_1
     if-eqz p1, :cond_2
 
@@ -76,16 +69,13 @@
     :cond_2
     move v1, v2
 
-    .line 2493
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 2496
     check-cast v0, Landroid/widget/GridLayout$Interval;
 
-    .line 2498
     .local v0, "interval":Landroid/widget/GridLayout$Interval;
     iget v3, p0, Landroid/widget/GridLayout$Interval;->max:I
 
@@ -95,10 +85,8 @@
 
     move v1, v2
 
-    .line 2499
     goto :goto_0
 
-    .line 2502
     :cond_4
     iget v3, p0, Landroid/widget/GridLayout$Interval;->min:I
 
@@ -108,7 +96,6 @@
 
     move v1, v2
 
-    .line 2503
     goto :goto_0
 .end method
 
@@ -116,10 +103,8 @@
     .locals 3
 
     .prologue
-    .line 2511
     iget v0, p0, Landroid/widget/GridLayout$Interval;->min:I
 
-    .line 2512
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -127,7 +112,6 @@
 
     add-int v0, v1, v2
 
-    .line 2513
     return v0
 .end method
 
@@ -135,7 +119,6 @@
     .locals 3
 
     .prologue
-    .line 2474
     new-instance v0, Landroid/widget/GridLayout$Interval;
 
     iget v1, p0, Landroid/widget/GridLayout$Interval;->max:I
@@ -151,7 +134,6 @@
     .locals 2
 
     .prologue
-    .line 2470
     iget v0, p0, Landroid/widget/GridLayout$Interval;->max:I
 
     iget v1, p0, Landroid/widget/GridLayout$Interval;->min:I
@@ -165,7 +147,6 @@
     .locals 2
 
     .prologue
-    .line 2518
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

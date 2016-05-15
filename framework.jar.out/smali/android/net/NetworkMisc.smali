@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 75
     new-instance v0, Landroid/net/NetworkMisc$1;
 
     invoke-direct {v0}, Landroid/net/NetworkMisc$1;-><init>()V
@@ -46,10 +45,8 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     return-void
 .end method
 
@@ -58,28 +55,22 @@
     .param p1, "nm"    # Landroid/net/NetworkMisc;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     if-eqz p1, :cond_0
 
-    .line 57
     iget-boolean v0, p1, Landroid/net/NetworkMisc;->allowBypass:Z
 
     iput-boolean v0, p0, Landroid/net/NetworkMisc;->allowBypass:Z
 
-    .line 58
     iget-boolean v0, p1, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
     iput-boolean v0, p0, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
-    .line 59
     iget-object v0, p1, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
-    .line 61
     :cond_0
     return-void
 .end method
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 65
     const/4 v0, 0x0
 
     return v0
@@ -106,7 +96,6 @@
 
     const/4 v2, 0x0
 
-    .line 70
     iget-boolean v0, p0, Landroid/net/NetworkMisc;->allowBypass:Z
 
     if-eqz v0, :cond_0
@@ -116,7 +105,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 71
     iget-boolean v0, p0, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
     if-eqz v0, :cond_1
@@ -124,23 +112,19 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 72
     iget-object v0, p0, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 73
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 70
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 71
     goto :goto_1
 .end method

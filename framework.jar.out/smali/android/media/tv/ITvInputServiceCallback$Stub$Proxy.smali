@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     iput-object p1, p0, Landroid/media/tv/ITvInputServiceCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 97
     return-void
 .end method
 
@@ -50,35 +47,28 @@
     .end annotation
 
     .prologue
-    .line 108
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 110
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.media.tv.ITvInputServiceCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 111
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 112
     if-eqz p2, :cond_0
 
-    .line 113
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 114
     const/4 v1, 0x0
 
     invoke-virtual {p2, v0, v1}, Landroid/media/tv/TvInputInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 119
     :goto_0
     iget-object v1, p0, Landroid/media/tv/ITvInputServiceCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -92,13 +82,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 124
     return-void
 
-    .line 117
     :cond_0
     const/4 v1, 0x0
 
@@ -109,7 +96,6 @@
 
     goto :goto_0
 
-    .line 122
     :catchall_0
     move-exception v1
 
@@ -129,35 +115,28 @@
     .end annotation
 
     .prologue
-    .line 127
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 129
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.media.tv.ITvInputServiceCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 131
     if-eqz p2, :cond_0
 
-    .line 132
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 133
     const/4 v1, 0x0
 
     invoke-virtual {p2, v0, v1}, Landroid/media/tv/TvInputInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 138
     :goto_0
     iget-object v1, p0, Landroid/media/tv/ITvInputServiceCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -171,13 +150,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 141
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 143
     return-void
 
-    .line 136
     :cond_0
     const/4 v1, 0x0
 
@@ -188,7 +164,6 @@
 
     goto :goto_0
 
-    .line 141
     :catchall_0
     move-exception v1
 
@@ -201,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/media/tv/ITvInputServiceCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -211,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 104
     const-string v0, "android.media.tv.ITvInputServiceCallback"
 
     return-object v0
@@ -227,22 +200,18 @@
     .end annotation
 
     .prologue
-    .line 146
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 148
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.media.tv.ITvInputServiceCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 149
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 150
     iget-object v1, p0, Landroid/media/tv/ITvInputServiceCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -255,13 +224,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 153
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 155
     return-void
 
-    .line 153
     :catchall_0
     move-exception v1
 

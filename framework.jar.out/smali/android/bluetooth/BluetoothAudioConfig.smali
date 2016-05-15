@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 67
     new-instance v0, Landroid/bluetooth/BluetoothAudioConfig$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothAudioConfig$1;-><init>()V
@@ -49,19 +48,14 @@
     .param p3, "audioFormat"    # I
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput p1, p0, Landroid/bluetooth/BluetoothAudioConfig;->mSampleRate:I
 
-    .line 37
     iput p2, p0, Landroid/bluetooth/BluetoothAudioConfig;->mChannelConfig:I
 
-    .line 38
     iput p3, p0, Landroid/bluetooth/BluetoothAudioConfig;->mAudioFormat:I
 
-    .line 39
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 64
     const/4 v0, 0x0
 
     return v0
@@ -84,17 +77,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 43
     instance-of v2, p1, Landroid/bluetooth/BluetoothAudioConfig;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 44
     check-cast v0, Landroid/bluetooth/BluetoothAudioConfig;
 
-    .line 45
     .local v0, "bac":Landroid/bluetooth/BluetoothAudioConfig;
     iget v2, v0, Landroid/bluetooth/BluetoothAudioConfig;->mSampleRate:I
 
@@ -116,7 +106,6 @@
 
     const/4 v1, 0x1
 
-    .line 49
     .end local v0    # "bac":Landroid/bluetooth/BluetoothAudioConfig;
     :cond_0
     return v1
@@ -126,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mAudioFormat:I
 
     return v0
@@ -136,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mChannelConfig:I
 
     return v0
@@ -146,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mSampleRate:I
 
     return v0
@@ -156,7 +142,6 @@
     .locals 2
 
     .prologue
-    .line 54
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mSampleRate:I
 
     iget v1, p0, Landroid/bluetooth/BluetoothAudioConfig;->mChannelConfig:I
@@ -178,12 +163,11 @@
     .locals 2
 
     .prologue
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{mSampleRate:"
+    const-string v1, "{mSampleRate:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,7 +203,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -238,21 +222,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 81
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mSampleRate:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 82
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mChannelConfig:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 83
     iget v0, p0, Landroid/bluetooth/BluetoothAudioConfig;->mAudioFormat:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 84
     return-void
 .end method

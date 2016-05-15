@@ -20,7 +20,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 263
     invoke-direct {p0, p1}, Lcom/android/server/firewall/StringFilter$ValueProvider;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -35,7 +34,6 @@
     .param p3, "resolvedType"    # Ljava/lang/String;
 
     .prologue
-    .line 267
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0

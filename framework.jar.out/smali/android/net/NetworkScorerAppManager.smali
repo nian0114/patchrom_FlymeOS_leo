@@ -22,7 +22,6 @@
     .locals 2
 
     .prologue
-    .line 47
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.net.scoring.SCORE_NETWORKS"
@@ -38,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,18 +47,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 142
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "network_scorer_app"
+    const-string v2, "network_scorer_app"
 
     invoke-static {v1, v2}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 144
     .local v0, "scorerPackage":Ljava/lang/String;
     invoke-static {p0, v0}, Landroid/net/NetworkScorerAppManager;->getScorer(Landroid/content/Context;Ljava/lang/String;)Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
 
@@ -87,18 +83,15 @@
     .prologue
     const/4 v13, 0x0
 
-    .line 88
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 90
     .local v9, "scorers":Ljava/util/List;, "Ljava/util/List<Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
-    .line 92
     .local v5, "pm":Landroid/content/pm/PackageManager;
     sget-object v10, Landroid/net/NetworkScorerAppManager;->SCORE_INTENT:Landroid/content/Intent;
 
@@ -106,7 +99,6 @@
 
     move-result-object v8
 
-    .line 94
     .local v8, "receivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -127,15 +119,12 @@
 
     check-cast v6, Landroid/content/pm/ResolveInfo;
 
-    .line 96
     .local v6, "receiver":Landroid/content/pm/ResolveInfo;
     iget-object v7, v6, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 97
     .local v7, "receiverInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v7, :cond_0
 
-    .line 101
     const-string v10, "android.permission.BROADCAST_NETWORK_PRIVILEGED"
 
     iget-object v11, v7, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
@@ -146,7 +135,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 106
     const-string v10, "android.permission.SCORE_NETWORKS"
 
     iget-object v11, v7, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -157,10 +145,8 @@
 
     if-nez v10, :cond_0
 
-    .line 114
     const/4 v2, 0x0
 
-    .line 115
     .local v2, "configurationActivityClassName":Ljava/lang/String;
     new-instance v4, Landroid/content/Intent;
 
@@ -168,18 +154,15 @@
 
     invoke-direct {v4, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 116
     .local v4, "intent":Landroid/content/Intent;
     iget-object v10, v7, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v4, v10}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 117
     invoke-virtual {v5, v4, v13}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 118
     .local v1, "configActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -187,7 +170,6 @@
 
     if-nez v10, :cond_1
 
-    .line 119
     invoke-interface {v1, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -196,14 +178,11 @@
 
     iget-object v0, v10, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 120
     .local v0, "activityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v0, :cond_1
 
-    .line 121
     iget-object v2, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 127
     .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     :cond_1
     new-instance v10, Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
@@ -220,7 +199,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v1    # "configActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v2    # "configurationActivityClassName":Ljava/lang/String;
     .end local v4    # "intent":Landroid/content/Intent;
@@ -238,7 +216,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 205
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -247,17 +224,14 @@
 
     move-object v0, v3
 
-    .line 214
     :goto_0
     return-object v0
 
-    .line 208
     :cond_0
     invoke-static {p0}, Landroid/net/NetworkScorerAppManager;->getAllValidScorers(Landroid/content/Context;)Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 209
     .local v1, "applications":Ljava/util/Collection;, "Ljava/util/Collection<Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;>;"
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -277,7 +251,6 @@
 
     check-cast v0, Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
 
-    .line 210
     .local v0, "app":Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
     iget-object v4, v0, Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;->mPackageName:Ljava/lang/String;
 
@@ -293,7 +266,6 @@
     :cond_2
     move-object v0, v3
 
-    .line 214
     goto :goto_0
 .end method
 
@@ -305,21 +277,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 186
     invoke-static {p0}, Landroid/net/NetworkScorerAppManager;->getActiveScorer(Landroid/content/Context;)Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
 
     move-result-object v1
 
-    .line 187
     .local v1, "defaultApp":Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
     if-nez v1, :cond_1
 
-    .line 199
     :cond_0
     :goto_0
     return v3
 
-    .line 190
     :cond_1
     const-string v4, "appops"
 
@@ -329,7 +297,6 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 192
     .local v0, "appOpsMgr":Landroid/app/AppOpsManager;
     :try_start_0
     iget-object v4, v1, Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;->mPackageName:Ljava/lang/String;
@@ -338,7 +305,6 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 199
     const-string v4, "android.permission.SCORE_NETWORKS"
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
@@ -351,11 +317,9 @@
 
     goto :goto_0
 
-    .line 193
     :catch_0
     move-exception v2
 
-    .line 194
     .local v2, "e":Ljava/lang/SecurityException;
     goto :goto_0
 .end method
@@ -368,18 +332,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 158
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "network_scorer_app"
+    const-string v3, "network_scorer_app"
 
     invoke-static {v2, v3}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 160
     .local v0, "oldPackageName":Ljava/lang/String;
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -387,11 +349,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 179
     :goto_0
     return v1
 
-    .line 165
     :cond_0
     const-string v2, "NetworkScorerAppManager"
 
@@ -425,15 +385,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     if-nez p1, :cond_1
 
-    .line 168
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "network_scorer_app"
+    const-string v3, "network_scorer_app"
 
     const/4 v4, 0x0
 
@@ -441,7 +399,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_1
     invoke-static {p0, p1}, Landroid/net/NetworkScorerAppManager;->getScorer(Landroid/content/Context;Ljava/lang/String;)Landroid/net/NetworkScorerAppManager$NetworkScorerAppData;
 
@@ -449,18 +406,16 @@
 
     if-eqz v2, :cond_2
 
-    .line 174
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "network_scorer_app"
+    const-string v3, "network_scorer_app"
 
     invoke-static {v2, v3, p1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_0
 
-    .line 178
     :cond_2
     const-string v1, "NetworkScorerAppManager"
 
@@ -484,7 +439,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     const/4 v1, 0x0
 
     goto :goto_0

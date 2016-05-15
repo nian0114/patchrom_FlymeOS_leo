@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Landroid/hardware/camera2/utils/CameraBinderDecorator$CameraBinderDecoratorListener;-><init>()V
 
     return-void
@@ -34,25 +33,21 @@
     .param p3, "t"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 42
     instance-of v0, p3, Landroid/os/DeadObjectException;
 
     if-eqz v0, :cond_1
 
-    .line 51
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 45
     :cond_1
     instance-of v0, p3, Landroid/os/RemoteException;
 
     if-eqz v0, :cond_0
 
-    .line 48
     const-string v0, "CameraServiceBinderDecorator"
 
     const-string v1, "Unexpected RemoteException from camera service call."

@@ -24,13 +24,10 @@
     .param p2, "next"    # Landroid/view/ViewRootImpl$InputStage;
 
     .prologue
-    .line 3821
     iput-object p1, p0, Landroid/view/ViewRootImpl$ViewPreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 3822
     invoke-direct {p0, p1, p2}, Landroid/view/ViewRootImpl$InputStage;-><init>(Landroid/view/ViewRootImpl;Landroid/view/ViewRootImpl$InputStage;)V
 
-    .line 3823
     return-void
 .end method
 
@@ -39,12 +36,10 @@
     .param p1, "q"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 3834
     iget-object v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 3835
     .local v0, "event":Landroid/view/KeyEvent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$ViewPreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
@@ -56,10 +51,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 3836
     const/4 v1, 0x1
 
-    .line 3838
     :goto_0
     return v1
 
@@ -76,19 +69,16 @@
     .param p1, "q"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 3827
     iget-object v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
     instance-of v0, v0, Landroid/view/KeyEvent;
 
     if-eqz v0, :cond_0
 
-    .line 3828
     invoke-direct {p0, p1}, Landroid/view/ViewRootImpl$ViewPreImeInputStage;->processKeyEvent(Landroid/view/ViewRootImpl$QueuedInputEvent;)I
 
     move-result v0
 
-    .line 3830
     :goto_0
     return v0
 

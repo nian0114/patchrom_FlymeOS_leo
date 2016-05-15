@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 296
     .local p0, "this":Landroid/os/AsyncTask$3;, "Landroid/os/AsyncTask.3;"
     .local p2, "x0":Ljava/util/concurrent/Callable;, "Ljava/util/concurrent/Callable<TResult;>;"
     iput-object p1, p0, Landroid/os/AsyncTask$3;->this$0:Landroid/os/AsyncTask;
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 300
     .local p0, "this":Landroid/os/AsyncTask$3;, "Landroid/os/AsyncTask.3;"
     :try_start_0
     iget-object v1, p0, Landroid/os/AsyncTask$3;->this$0:Landroid/os/AsyncTask;
@@ -62,15 +60,12 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 309
     :goto_0
     return-void
 
-    .line 301
     :catch_0
     move-exception v0
 
-    .line 302
     .local v0, "e":Ljava/lang/InterruptedException;
     const-string v1, "AsyncTask"
 
@@ -78,12 +73,10 @@
 
     goto :goto_0
 
-    .line 303
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catch_1
     move-exception v0
 
-    .line 304
     .local v0, "e":Ljava/util/concurrent/ExecutionException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -97,12 +90,10 @@
 
     throw v1
 
-    .line 306
     .end local v0    # "e":Ljava/util/concurrent/ExecutionException;
     :catch_2
     move-exception v0
 
-    .line 307
     .local v0, "e":Ljava/util/concurrent/CancellationException;
     iget-object v1, p0, Landroid/os/AsyncTask$3;->this$0:Landroid/os/AsyncTask;
 

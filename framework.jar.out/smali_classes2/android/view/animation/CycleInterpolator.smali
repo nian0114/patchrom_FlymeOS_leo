@@ -21,13 +21,10 @@
     .param p1, "cycles"    # F
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 38
     iput p1, p0, Landroid/view/animation/CycleInterpolator;->mCycles:F
 
-    .line 39
     return-void
 .end method
 
@@ -37,7 +34,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -48,7 +44,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Landroid/view/animation/CycleInterpolator;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
 
-    .line 43
     return-void
 .end method
 
@@ -61,20 +56,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 46
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 48
     if-eqz p2, :cond_0
 
-    .line 49
     sget-object v1, Lcom/android/internal/R$styleable;->CycleInterpolator:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 54
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     const/high16 v1, 0x3f800000    # 1.0f
@@ -85,20 +76,16 @@
 
     iput v1, p0, Landroid/view/animation/CycleInterpolator;->mCycles:F
 
-    .line 55
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->getChangingConfigurations()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroid/view/animation/CycleInterpolator;->setChangingConfiguration(I)V
 
-    .line 56
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 57
     return-void
 
-    .line 51
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->CycleInterpolator:[I
@@ -117,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 68
     iget v0, p0, Landroid/view/animation/CycleInterpolator;->mCycles:F
 
     invoke-static {v0}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createCycleInterpolator(F)J
@@ -132,7 +118,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 60
     const/high16 v0, 0x40000000    # 2.0f
 
     iget v1, p0, Landroid/view/animation/CycleInterpolator;->mCycles:F

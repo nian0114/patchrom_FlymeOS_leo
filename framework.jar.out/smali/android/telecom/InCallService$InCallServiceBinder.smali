@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     invoke-direct {p0}, Lcom/android/internal/telecom/IInCallService$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/telecom/InCallService$1;
 
     .prologue
-    .line 105
     invoke-direct {p0, p1}, Landroid/telecom/InCallService$InCallServiceBinder;-><init>(Landroid/telecom/InCallService;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "call"    # Landroid/telecom/ParcelableCall;
 
     .prologue
-    .line 113
     iget-object v0, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 114
     return-void
 .end method
 
@@ -77,7 +73,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 141
     iget-object v0, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -98,13 +93,11 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 142
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 141
     goto :goto_0
 .end method
 
@@ -113,7 +106,6 @@
     .param p1, "audioState"    # Landroid/telecom/AudioState;
 
     .prologue
-    .line 136
     iget-object v0, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -129,7 +121,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 137
     return-void
 .end method
 
@@ -140,7 +131,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 146
     iget-object v0, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -161,13 +151,11 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 148
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 146
     goto :goto_0
 .end method
 
@@ -176,7 +164,6 @@
     .param p1, "inCallAdapter"    # Lcom/android/internal/telecom/IInCallAdapter;
 
     .prologue
-    .line 108
     iget-object v0, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -192,7 +179,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 109
     return-void
 .end method
 
@@ -202,7 +188,6 @@
     .param p2, "remaining"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -212,19 +197,15 @@
     .param p2, "remaining"    # Ljava/lang/String;
 
     .prologue
-    .line 128
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 129
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 130
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 131
     iget-object v1, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -240,7 +221,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 132
     return-void
 .end method
 
@@ -249,7 +229,6 @@
     .param p1, "call"    # Landroid/telecom/ParcelableCall;
 
     .prologue
-    .line 118
     iget-object v0, p0, Landroid/telecom/InCallService$InCallServiceBinder;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
@@ -265,6 +244,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 119
     return-void
 .end method

@@ -26,7 +26,6 @@
     .param p4, "x2"    # I
 
     .prologue
-    .line 651
     iput-object p1, p0, Landroid/media/tv/TvView$3;->this$0:Landroid/media/tv/TvView;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -42,15 +41,12 @@
     .param p2, "redrawNeeded"    # Z
 
     .prologue
-    .line 654
     invoke-super {p0, p1, p2}, Landroid/view/SurfaceView;->updateWindow(ZZ)V
 
-    .line 655
     iget-object v0, p0, Landroid/media/tv/TvView$3;->this$0:Landroid/media/tv/TvView;
 
     # invokes: Landroid/media/tv/TvView;->relayoutSessionOverlayView()V
     invoke-static {v0}, Landroid/media/tv/TvView;->access$700(Landroid/media/tv/TvView;)V
 
-    .line 656
     return-void
 .end method

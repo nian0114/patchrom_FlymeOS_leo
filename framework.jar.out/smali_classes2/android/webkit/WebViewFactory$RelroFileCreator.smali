@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 353
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,10 +31,8 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 356
     const/4 v2, 0x0
 
-    .line 357
     .local v2, "result":Z
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
@@ -45,7 +42,6 @@
 
     move-result v1
 
-    .line 359
     .local v1, "is64Bit":Z
     :try_start_0
     array-length v3, p0
@@ -66,7 +62,6 @@
 
     if-nez v3, :cond_2
 
-    .line 360
     :cond_0
     const-string v3, "WebViewFactory"
 
@@ -96,7 +91,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 377
     :try_start_1
     # invokes: Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
     invoke-static {}, Landroid/webkit/WebViewFactory;->access$000()Landroid/webkit/IWebViewUpdateService;
@@ -107,7 +101,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 382
     :goto_0
     if-nez v2, :cond_1
 
@@ -117,19 +110,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     :cond_1
     invoke-static {v7}, Ljava/lang/System;->exit(I)V
 
-    .line 387
     :goto_1
     return-void
 
-    .line 378
     :catch_0
     move-exception v0
 
-    .line 379
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "WebViewFactory"
 
@@ -139,7 +128,6 @@
 
     goto :goto_0
 
-    .line 363
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_2
     :try_start_2
@@ -199,7 +187,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     # getter for: Landroid/webkit/WebViewFactory;->sAddressSpaceReserved:Z
     invoke-static {}, Landroid/webkit/WebViewFactory;->access$100()Z
 
@@ -207,7 +194,6 @@
 
     if-nez v3, :cond_4
 
-    .line 366
     const-string v3, "WebViewFactory"
 
     const-string v4, "can\'t create relro file; address space not reserved"
@@ -216,7 +202,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 377
     :try_start_3
     # invokes: Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
     invoke-static {}, Landroid/webkit/WebViewFactory;->access$000()Landroid/webkit/IWebViewUpdateService;
@@ -227,7 +212,6 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 382
     :goto_2
     if-nez v2, :cond_3
 
@@ -237,17 +221,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     :cond_3
     invoke-static {v7}, Ljava/lang/System;->exit(I)V
 
     goto :goto_1
 
-    .line 378
     :catch_1
     move-exception v0
 
-    .line 379
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v3, "WebViewFactory"
 
@@ -257,7 +238,6 @@
 
     goto :goto_2
 
-    .line 369
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_4
     const/4 v3, 0x0
@@ -280,10 +260,8 @@
 
     move-result v2
 
-    .line 373
     if-eqz v2, :cond_5
 
-    .line 377
     :cond_5
     :try_start_5
     # invokes: Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
@@ -295,7 +273,6 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 382
     :goto_3
     if-nez v2, :cond_6
 
@@ -305,17 +282,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     :cond_6
     invoke-static {v7}, Ljava/lang/System;->exit(I)V
 
     goto/16 :goto_1
 
-    .line 378
     :catch_2
     move-exception v0
 
-    .line 379
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v3, "WebViewFactory"
 
@@ -325,12 +299,10 @@
 
     goto :goto_3
 
-    .line 376
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v3
 
-    .line 377
     :try_start_6
     # invokes: Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
     invoke-static {}, Landroid/webkit/WebViewFactory;->access$000()Landroid/webkit/IWebViewUpdateService;
@@ -341,7 +313,6 @@
     :try_end_6
     .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 382
     :goto_4
     if-nez v2, :cond_7
 
@@ -351,17 +322,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     :cond_7
     invoke-static {v7}, Ljava/lang/System;->exit(I)V
 
     throw v3
 
-    .line 378
     :catch_3
     move-exception v0
 
-    .line 379
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v4, "WebViewFactory"
 

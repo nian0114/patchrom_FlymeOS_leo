@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 653
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "patchList"    # [Landroid/media/AudioPatch;
 
     .prologue
-    .line 664
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "portList"    # [Landroid/media/AudioPort;
 
     .prologue
-    .line 656
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->mImplLock:Ljava/lang/Object;
@@ -60,20 +57,16 @@
 
     monitor-enter v1
 
-    .line 657
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     # invokes: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->updateAudioConfigLocked()V
     invoke-static {v0}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->access$1000(Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;)V
 
-    .line 658
     monitor-exit v1
 
-    .line 659
     return-void
 
-    .line 658
     :catchall_0
     move-exception v0
 
@@ -88,7 +81,6 @@
     .locals 3
 
     .prologue
-    .line 668
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->mImplLock:Ljava/lang/Object;
@@ -98,7 +90,6 @@
 
     monitor-enter v1
 
-    .line 669
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
@@ -107,7 +98,6 @@
     # setter for: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->mAudioSource:Landroid/media/AudioDevicePort;
     invoke-static {v0, v2}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->access$1102(Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;Landroid/media/AudioDevicePort;)Landroid/media/AudioDevicePort;
 
-    .line 670
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->mAudioSink:Ljava/util/List;
@@ -117,7 +107,6 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 671
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl$1;->this$1:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     const/4 v2, 0x0
@@ -125,13 +114,10 @@
     # setter for: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->mAudioPatch:Landroid/media/AudioPatch;
     invoke-static {v0, v2}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->access$1302(Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;Landroid/media/AudioPatch;)Landroid/media/AudioPatch;
 
-    .line 672
     monitor-exit v1
 
-    .line 673
     return-void
 
-    .line 672
     :catchall_0
     move-exception v0
 

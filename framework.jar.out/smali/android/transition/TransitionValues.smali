@@ -35,17 +35,14 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
-    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -62,12 +59,10 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 63
     instance-of v0, p1, Landroid/transition/TransitionValues;
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v1, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     move-object v0, p1
@@ -78,7 +73,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     check-cast p1, Landroid/transition/TransitionValues;
@@ -92,10 +86,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     const/4 v0, 0x1
 
-    .line 70
     :goto_0
     return v0
 
@@ -109,7 +101,6 @@
     .locals 2
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -133,7 +124,6 @@
     .locals 5
 
     .prologue
-    .line 80
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,7 +156,6 @@
 
     move-result-object v1
 
-    .line 81
     .local v1, "returnValue":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -198,7 +187,6 @@
 
     move-result-object v1
 
-    .line 82
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,7 +205,6 @@
 
     move-result-object v1
 
-    .line 83
     iget-object v3, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -242,7 +229,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 84
     .local v2, "s":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -288,10 +274,8 @@
 
     move-result-object v1
 
-    .line 85
     goto :goto_0
 
-    .line 86
     .end local v2    # "s":Ljava/lang/String;
     :cond_0
     return-object v1

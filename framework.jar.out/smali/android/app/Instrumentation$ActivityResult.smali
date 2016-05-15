@@ -27,16 +27,12 @@
     .param p2, "resultData"    # Landroid/content/Intent;
 
     .prologue
-    .line 1407
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1408
     iput p1, p0, Landroid/app/Instrumentation$ActivityResult;->mResultCode:I
 
-    .line 1409
     iput-object p2, p0, Landroid/app/Instrumentation$ActivityResult;->mResultData:Landroid/content/Intent;
 
-    .line 1410
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 1416
     iget v0, p0, Landroid/app/Instrumentation$ActivityResult;->mResultCode:I
 
     return v0
@@ -56,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 1423
     iget-object v0, p0, Landroid/app/Instrumentation$ActivityResult;->mResultData:Landroid/content/Intent;
 
     return-object v0

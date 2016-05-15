@@ -63,10 +63,8 @@
     .param p2, "inputManager"    # Lcom/android/server/input/InputManagerService;
 
     .prologue
-    .line 179
     invoke-direct {p0}, Landroid/service/gesture/IEdgeGestureService$Stub;-><init>()V
 
-    .line 73
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "EdgeGestureHandler"
@@ -75,37 +73,30 @@
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 77
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
-    .line 80
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
 
-    .line 81
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
-    .line 172
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
-    .line 180
     iput-object p1, p0, Lcom/android/server/gesture/EdgeGestureService;->mContext:Landroid/content/Context;
 
-    .line 181
     iput-object p2, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
-    .line 182
     return-void
 .end method
 
@@ -115,7 +106,6 @@
     .param p1, "x1"    # Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
     .prologue
-    .line 62
     invoke-direct {p0, p1}, Lcom/android/server/gesture/EdgeGestureService;->removeListenerRecord(Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;)V
 
     return-void
@@ -126,7 +116,6 @@
     .param p0, "x0"    # Lcom/android/server/gesture/EdgeGestureService;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     return-object v0
@@ -137,7 +126,6 @@
     .param p0, "x0"    # Lcom/android/server/gesture/EdgeGestureService;
 
     .prologue
-    .line 62
     iget v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
     return v0
@@ -148,7 +136,6 @@
     .param p0, "x0"    # Lcom/android/server/gesture/EdgeGestureService;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -159,7 +146,6 @@
     .param p0, "x0"    # Lcom/android/server/gesture/EdgeGestureService;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -173,7 +159,6 @@
     .param p3, "x3"    # Lcom/android/internal/util/gesture/EdgeGesturePosition;
 
     .prologue
-    .line 62
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/gesture/EdgeGestureService;->propagateActivation(IILcom/android/internal/util/gesture/EdgeGesturePosition;)Z
 
     move-result v0
@@ -186,7 +171,6 @@
     .param p0, "x0"    # Lcom/android/server/gesture/EdgeGestureService;
 
     .prologue
-    .line 62
     invoke-direct {p0}, Lcom/android/server/gesture/EdgeGestureService;->updateMonitoring()V
 
     return-void
@@ -197,7 +181,6 @@
     .param p0, "x0"    # Lcom/android/server/gesture/EdgeGestureService;
 
     .prologue
-    .line 62
     iget v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
 
     return v0
@@ -207,7 +190,6 @@
     .locals 3
 
     .prologue
-    .line 239
     new-instance v0, Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mContext:Landroid/content/Context;
@@ -218,19 +200,16 @@
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     invoke-virtual {v0, v1}, Lcom/android/server/input/InputManagerService;->registerSecondaryInputFilter(Landroid/view/IInputFilter;)V
 
-    .line 241
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mDisplayObserver:Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;
 
     invoke-virtual {v0}, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->observe()V
 
-    .line 242
     return-void
 .end method
 
@@ -239,7 +218,6 @@
     .param p1, "listener"    # Landroid/os/IBinder;
 
     .prologue
-    .line 303
     iget-object v2, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -260,7 +238,6 @@
 
     check-cast v1, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
-    .line 304
     .local v1, "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     iget-object v2, v1, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->listener:Landroid/service/gesture/IEdgeGestureActivationListener;
 
@@ -274,7 +251,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 308
     .end local v1    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :goto_0
     return-object v1
@@ -292,15 +268,12 @@
     .param p3, "position"    # Lcom/android/internal/util/gesture/EdgeGesturePosition;
 
     .prologue
-    .line 321
     iget-object v4, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 322
     const/4 v2, 0x0
 
-    .line 323
     .local v2, "target":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
@@ -323,7 +296,6 @@
 
     check-cast v1, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
-    .line 324
     .local v1, "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     iget v3, p3, Lcom/android/internal/util/gesture/EdgeGesturePosition;->FLAG:I
 
@@ -334,10 +306,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 325
     move-object v2, v1
 
-    .line 333
     .end local v1    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :cond_1
     if-eqz v2, :cond_2
@@ -349,10 +319,8 @@
 
     if-nez v3, :cond_2
 
-    .line 334
     const/4 v2, 0x0
 
-    .line 336
     :cond_2
     if-eqz v2, :cond_3
 
@@ -368,7 +336,6 @@
 
     goto :goto_0
 
-    .line 337
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -385,31 +352,25 @@
     .param p1, "record"    # Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
     .prologue
-    .line 312
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 313
     :try_start_0
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
     const/16 v2, 0x7d19
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 316
     monitor-exit v1
 
-    .line 317
     return-void
 
-    .line 316
     :catchall_0
     move-exception v0
 
@@ -424,24 +385,20 @@
     .locals 2
 
     .prologue
-    .line 248
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mDisplayObserver:Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;
 
     invoke-virtual {v0}, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->unobserve()V
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     invoke-virtual {v0, v1}, Lcom/android/server/input/InputManagerService;->unregisterSecondaryInputFilter(Landroid/view/IInputFilter;)V
 
-    .line 250
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
-    .line 251
     return-void
 .end method
 
@@ -451,30 +408,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 205
     iget-object v6, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 206
     const/4 v5, 0x0
 
     :try_start_0
     iput v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
 
-    .line 207
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
-    .line 208
     const/4 v3, 0x0
 
-    .line 209
     .local v3, "someLongLiving":Z
     const/4 v0, 0x0
 
-    .line 210
     .local v0, "activePositions":I
     iget-object v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
@@ -496,7 +447,6 @@
 
     check-cast v4, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
-    .line 211
     .local v4, "temp":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     iget v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
 
@@ -506,25 +456,21 @@
 
     iput v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
 
-    .line 212
     invoke-virtual {v4}, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->isActive()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 213
     iget v5, v4, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->positions:I
 
     or-int/2addr v0, v5
 
-    .line 215
     :cond_0
     iget v5, v4, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->sensitivity:I
 
     if-eqz v5, :cond_1
 
-    .line 216
     iget v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
     iget v7, v4, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->sensitivity:I
@@ -535,16 +481,13 @@
 
     iput v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
-    .line 218
     :cond_1
     iget-boolean v5, v4, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->longLiving:Z
 
     or-int/2addr v3, v5
 
-    .line 219
     goto :goto_0
 
-    .line 220
     .end local v4    # "temp":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :cond_2
     iget v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
@@ -553,7 +496,6 @@
 
     const/4 v1, 0x1
 
-    .line 221
     .local v1, "havePositions":Z
     :cond_3
     iget v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
@@ -564,17 +506,14 @@
 
     iput v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
 
-    .line 223
     iget v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
     if-nez v5, :cond_4
 
-    .line 224
     const/4 v5, 0x2
 
     iput v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mGlobalSensitivity:I
 
-    .line 227
     :cond_4
     iget-object v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
@@ -582,18 +521,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 228
     invoke-direct {p0}, Lcom/android/server/gesture/EdgeGestureService;->enforceMonitoringLocked()V
 
-    .line 232
     :cond_5
     :goto_1
     monitor-exit v6
 
-    .line 233
     return-void
 
-    .line 229
     :cond_6
     iget-object v5, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
@@ -603,12 +538,10 @@
 
     if-nez v3, :cond_5
 
-    .line 230
     invoke-direct {p0}, Lcom/android/server/gesture/EdgeGestureService;->shutdownMonitoringLocked()V
 
     goto :goto_1
 
-    .line 232
     .end local v0    # "activePositions":I
     .end local v1    # "havePositions":Z
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -632,7 +565,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 456
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.DUMP"
@@ -643,7 +575,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 458
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -682,22 +613,18 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 485
     :goto_0
     return-void
 
-    .line 464
     :cond_0
     const-string v3, "EDGE GESTURE SERVICE (dumpsys edgegestureservice)\n"
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 465
     iget-object v4, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 466
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -721,19 +648,16 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 467
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     if-eqz v3, :cond_1
 
-    .line 468
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     const-string v5, "    "
 
     invoke-virtual {v3, p2, v5}, Lcom/android/server/gesture/EdgeGestureInputFilter;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 470
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -761,7 +685,6 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 471
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -784,10 +707,8 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 472
     const/4 v0, 0x0
 
-    .line 473
     .local v0, "i":I
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
@@ -810,7 +731,6 @@
 
     check-cast v2, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
-    .line 474
     .local v2, "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     invoke-virtual {v2}, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->isActive()Z
 
@@ -818,7 +738,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 475
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -843,7 +762,6 @@
 
     goto :goto_1
 
-    .line 484
     .end local v0    # "i":I
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
@@ -856,13 +774,11 @@
 
     throw v3
 
-    .line 478
     .restart local v0    # "i":I
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_3
     const/4 v0, 0x0
 
-    .line 479
     :try_start_1
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
@@ -883,7 +799,6 @@
 
     check-cast v2, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
-    .line 480
     .restart local v2    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -911,18 +826,14 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 481
     const-string v3, "    "
 
     invoke-virtual {v2, p2, v3}, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 482
     add-int/lit8 v0, v0, 0x1
 
-    .line 483
     goto :goto_2
 
-    .line 484
     .end local v2    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :cond_4
     monitor-exit v4
@@ -945,7 +856,6 @@
     .end annotation
 
     .prologue
-    .line 444
     :try_start_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/service/gesture/IEdgeGestureService$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
@@ -955,11 +865,9 @@
 
     return v1
 
-    .line 445
     :catch_0
     move-exception v0
 
-    .line 447
     .local v0, "e":Ljava/lang/RuntimeException;
     instance-of v1, v0, Ljava/lang/IllegalArgumentException;
 
@@ -969,14 +877,12 @@
 
     if-nez v1, :cond_0
 
-    .line 448
     const-string v1, "EdgeGestureService"
 
     const-string v2, "EdgeGestureService crashed: "
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 450
     :cond_0
     throw v0
 .end method
@@ -988,7 +894,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 255
     iget-object v4, p0, Lcom/android/server/gesture/EdgeGestureService;->mContext:Landroid/content/Context;
 
     const-string v5, "android.permission.INJECT_EVENTS"
@@ -999,7 +904,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 257
     const-string v4, "EdgeGestureService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1042,15 +946,12 @@
 
     move-object v1, v3
 
-    .line 280
     :goto_0
     return-object v1
 
-    .line 262
     :cond_0
     if-nez p1, :cond_1
 
-    .line 263
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "listener must not be null"
@@ -1059,17 +960,14 @@
 
     throw v3
 
-    .line 266
     :cond_1
     const/4 v1, 0x0
 
-    .line 267
     .local v1, "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     iget-object v4, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 268
     :try_start_0
     invoke-interface {p1}, Landroid/service/gesture/IEdgeGestureActivationListener;->asBinder()Landroid/os/IBinder;
 
@@ -1079,17 +977,14 @@
 
     move-result-object v1
 
-    .line 269
     if-nez v1, :cond_2
 
-    .line 270
     new-instance v2, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
     invoke-direct {v2, p0, p1}, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;-><init>(Lcom/android/server/gesture/EdgeGestureService;Landroid/service/gesture/IEdgeGestureActivationListener;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 272
     .end local v1    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     .local v2, "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :try_start_1
@@ -1104,7 +999,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 277
     :try_start_2
     iget-object v3, p0, Lcom/android/server/gesture/EdgeGestureService;->mEdgeGestureActivationListener:Ljava/util/List;
 
@@ -1114,7 +1008,6 @@
 
     move-object v1, v2
 
-    .line 279
     .end local v2    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     .restart local v1    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :cond_2
@@ -1133,13 +1026,11 @@
 
     throw v3
 
-    .line 273
     .end local v1    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     .restart local v2    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :catch_0
     move-exception v0
 
-    .line 274
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_4
     const-string v5, "EdgeGestureService"
@@ -1168,7 +1059,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     monitor-exit v4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -1177,7 +1067,6 @@
 
     goto :goto_0
 
-    .line 279
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_1
     move-exception v3
@@ -1193,12 +1082,10 @@
     .locals 3
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 189
     new-instance v0, Lcom/android/server/gesture/EdgeGestureService$H;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -1211,7 +1098,6 @@
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/gesture/EdgeGestureService$1;
@@ -1220,7 +1106,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 198
     new-instance v0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mContext:Landroid/content/Context;
@@ -1231,14 +1116,12 @@
 
     iput-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mDisplayObserver:Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x7d19
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 201
     return-void
 .end method
 
@@ -1248,10 +1131,8 @@
     .param p2, "positionFlags"    # I
 
     .prologue
-    .line 285
     if-nez p1, :cond_0
 
-    .line 286
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener must not be null"
@@ -1260,30 +1141,25 @@
 
     throw v1
 
-    .line 288
     :cond_0
     iget-object v2, p0, Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 289
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/gesture/EdgeGestureService;->findListenerRecordLocked(Landroid/os/IBinder;)Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
 
     move-result-object v0
 
-    .line 290
     .local v0, "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     if-nez v0, :cond_1
 
-    .line 291
     const-string v1, "EdgeGestureService"
 
     const-string v3, "Unknown listener on update listener. Register first?"
 
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v3, "listener not registered"
@@ -1292,7 +1168,6 @@
 
     throw v1
 
-    .line 299
     .end local v0    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :catchall_0
     move-exception v1
@@ -1303,31 +1178,26 @@
 
     throw v1
 
-    .line 294
     .restart local v0    # "record":Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;
     :cond_1
     :try_start_1
     # invokes: Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->updateFlags(I)V
     invoke-static {v0, p2}, Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;->access$400(Lcom/android/server/gesture/EdgeGestureService$EdgeGestureActivationListenerRecord;I)V
 
-    .line 296
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_2
 
-    .line 297
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService;->mHandler:Landroid/os/Handler;
 
     const/16 v3, 0x7d19
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 299
     :cond_2
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 300
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-direct {p0}, Landroid/hardware/location/IGeofenceHardware$Stub;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "callback"    # Landroid/hardware/location/IGeofenceHardwareCallback;
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 95
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -68,7 +65,6 @@
     # invokes: Landroid/hardware/location/GeofenceHardwareService;->checkPermission(III)V
     invoke-static {v0, v1, v2, p1}, Landroid/hardware/location/GeofenceHardwareService;->access$200(Landroid/hardware/location/GeofenceHardwareService;III)V
 
-    .line 96
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -87,7 +83,6 @@
     .locals 3
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -101,7 +96,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -121,7 +115,6 @@
     .param p1, "monitoringType"    # I
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -135,7 +128,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -156,7 +148,6 @@
     .param p2, "monitoringType"    # I
 
     .prologue
-    .line 108
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -170,7 +161,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 111
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -184,7 +174,6 @@
     # invokes: Landroid/hardware/location/GeofenceHardwareService;->checkPermission(III)V
     invoke-static {v0, v1, v2, p2}, Landroid/hardware/location/GeofenceHardwareService;->access$200(Landroid/hardware/location/GeofenceHardwareService;III)V
 
-    .line 112
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -205,7 +194,6 @@
     .param p2, "callback"    # Landroid/hardware/location/IGeofenceHardwareMonitorCallback;
 
     .prologue
-    .line 125
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -219,7 +207,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -233,7 +220,6 @@
     # invokes: Landroid/hardware/location/GeofenceHardwareService;->checkPermission(III)V
     invoke-static {v0, v1, v2, p1}, Landroid/hardware/location/GeofenceHardwareService;->access$200(Landroid/hardware/location/GeofenceHardwareService;III)V
 
-    .line 129
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -254,7 +240,6 @@
     .param p2, "monitoringType"    # I
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -268,7 +253,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -282,7 +266,6 @@
     # invokes: Landroid/hardware/location/GeofenceHardwareService;->checkPermission(III)V
     invoke-static {v0, v1, v2, p2}, Landroid/hardware/location/GeofenceHardwareService;->access$200(Landroid/hardware/location/GeofenceHardwareService;III)V
 
-    .line 104
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -304,7 +287,6 @@
     .param p3, "monitorTransitions"    # I
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -318,7 +300,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 119
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -332,7 +313,6 @@
     # invokes: Landroid/hardware/location/GeofenceHardwareService;->checkPermission(III)V
     invoke-static {v0, v1, v2, p2}, Landroid/hardware/location/GeofenceHardwareService;->access$200(Landroid/hardware/location/GeofenceHardwareService;III)V
 
-    .line 120
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -352,7 +332,6 @@
     .param p1, "service"    # Landroid/location/IFusedGeofenceHardware;
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -362,7 +341,6 @@
 
     invoke-virtual {v0, p1}, Landroid/hardware/location/GeofenceHardwareImpl;->setFusedGeofenceHardware(Landroid/location/IFusedGeofenceHardware;)V
 
-    .line 74
     return-void
 .end method
 
@@ -371,7 +349,6 @@
     .param p1, "service"    # Landroid/location/IGpsGeofenceHardware;
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
@@ -381,7 +358,6 @@
 
     invoke-virtual {v0, p1}, Landroid/hardware/location/GeofenceHardwareImpl;->setGpsHardwareGeofence(Landroid/location/IGpsGeofenceHardware;)V
 
-    .line 70
     return-void
 .end method
 
@@ -391,7 +367,6 @@
     .param p2, "callback"    # Landroid/hardware/location/IGeofenceHardwareMonitorCallback;
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mContext:Landroid/content/Context;
@@ -405,7 +380,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 138
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -419,7 +393,6 @@
     # invokes: Landroid/hardware/location/GeofenceHardwareService;->checkPermission(III)V
     invoke-static {v0, v1, v2, p1}, Landroid/hardware/location/GeofenceHardwareService;->access$200(Landroid/hardware/location/GeofenceHardwareService;III)V
 
-    .line 139
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareService$1;->this$0:Landroid/hardware/location/GeofenceHardwareService;
 
     # getter for: Landroid/hardware/location/GeofenceHardwareService;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;

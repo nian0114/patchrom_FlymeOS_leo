@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 145
     iput-object p1, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,14 +37,13 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 150
     const-string v2, "BluetoothSap"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onBluetoothStateChange on: "
+    const-string v4, "onBluetoothStateChange on: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,10 +59,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     if-eqz p1, :cond_1
 
-    .line 153
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
 
@@ -75,14 +71,12 @@
 
     if-nez v2, :cond_0
 
-    .line 154
     const-string v2, "BluetoothSap"
 
-    const-string/jumbo v3, "onBluetoothStateChange call bindService"
+    const-string v3, "onBluetoothStateChange call bindService"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     iget-object v2, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothSap;->doBind()Z
@@ -90,7 +84,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 162
     :cond_0
     :goto_0
     const-string v2, "BluetoothSap"
@@ -99,40 +92,34 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     :goto_1
     return-void
 
-    .line 157
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v2, "BluetoothSap"
 
-    const-string/jumbo v3, "onBluetoothStateChange: could not bind to SAP service: "
+    const-string v3, "onBluetoothStateChange: could not bind to SAP service: "
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 159
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v0
 
-    .line 160
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v2, "BluetoothSap"
 
-    const-string/jumbo v3, "onBluetoothStateChange: could not bind to SAP service: "
+    const-string v3, "onBluetoothStateChange: could not bind to SAP service: "
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 165
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
@@ -144,7 +131,6 @@
 
     monitor-enter v3
 
-    .line 166
     :try_start_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
 
@@ -157,7 +143,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 168
     :try_start_2
     iget-object v2, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
 
@@ -166,7 +151,6 @@
     # setter for: Landroid/bluetooth/BluetoothSap;->mSapService:Landroid/bluetooth/IBluetoothSap;
     invoke-static {v2, v4}, Landroid/bluetooth/BluetoothSap;->access$002(Landroid/bluetooth/BluetoothSap;Landroid/bluetooth/IBluetoothSap;)Landroid/bluetooth/IBluetoothSap;
 
-    .line 169
     iget-object v2, p0, Landroid/bluetooth/BluetoothSap$1;->this$0:Landroid/bluetooth/BluetoothSap;
 
     # getter for: Landroid/bluetooth/BluetoothSap;->mContext:Landroid/content/Context;
@@ -186,7 +170,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 174
     :cond_2
     :goto_2
     :try_start_3
@@ -203,11 +186,9 @@
 
     throw v2
 
-    .line 170
     :catch_2
     move-exception v1
 
-    .line 171
     .local v1, "re":Ljava/lang/Exception;
     :try_start_4
     const-string v2, "BluetoothSap"

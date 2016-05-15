@@ -12,10 +12,8 @@
     .locals 4
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -26,7 +24,6 @@
 
     iput-wide v0, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
-    .line 34
     iget-wide v0, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
     const-wide/16 v2, 0x0
@@ -35,7 +32,6 @@
 
     if-nez v0, :cond_0
 
-    .line 35
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "error creating native FontFamily"
@@ -44,7 +40,6 @@
 
     throw v0
 
-    .line 37
     :cond_0
     return-void
 .end method
@@ -55,13 +50,10 @@
     .param p2, "variant"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
-    .line 41
     .local v0, "varEnum":I
     const-string v1, "compact"
 
@@ -71,10 +63,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 42
     const/4 v0, 0x1
 
-    .line 46
     :cond_0
     :goto_0
     invoke-static {p1, v0}, Landroid/graphics/FontFamily;->nCreateFamily(Ljava/lang/String;I)J
@@ -83,7 +73,6 @@
 
     iput-wide v2, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
-    .line 47
     iget-wide v2, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
     const-wide/16 v4, 0x0
@@ -92,7 +81,6 @@
 
     if-nez v1, :cond_2
 
-    .line 48
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "error creating native FontFamily"
@@ -101,7 +89,6 @@
 
     throw v1
 
-    .line 43
     :cond_1
     const-string v1, "elegant"
 
@@ -111,12 +98,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 44
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 50
     :cond_2
     return-void
 .end method
@@ -143,7 +128,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     iget-wide v0, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Landroid/graphics/FontFamily;->nAddFont(JLjava/lang/String;)Z
@@ -159,7 +143,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     iget-wide v0, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2}, Landroid/graphics/FontFamily;->nAddFontFromAsset(JLandroid/content/res/AssetManager;Ljava/lang/String;)Z
@@ -176,7 +159,6 @@
     .param p3, "style"    # Z
 
     .prologue
-    .line 66
     iget-wide v0, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Landroid/graphics/FontFamily;->nAddFontWeightStyle(JLjava/lang/String;IZ)Z
@@ -195,7 +177,6 @@
     .end annotation
 
     .prologue
-    .line 55
     :try_start_0
     iget-wide v0, p0, Landroid/graphics/FontFamily;->mNativePtr:J
 
@@ -203,13 +184,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 57
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 59
     return-void
 
-    .line 57
     :catchall_0
     move-exception v0
 

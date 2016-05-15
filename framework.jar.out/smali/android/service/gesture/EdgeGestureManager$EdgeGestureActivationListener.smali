@@ -33,14 +33,12 @@
     .locals 1
 
     .prologue
-    .line 63
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;-><init>(Landroid/os/Looper;)V
 
-    .line 64
     return-void
 .end method
 
@@ -49,17 +47,14 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     iput-object v0, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mHandler:Landroid/os/Handler;
 
-    .line 68
     new-instance v0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;
 
     const/4 v1, 0x0
@@ -68,7 +63,6 @@
 
     iput-object v0, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mDelegator:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;
 
-    .line 69
     return-void
 .end method
 
@@ -77,7 +71,6 @@
     .param p0, "x0"    # Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;
 
     .prologue
-    .line 46
     iget-object v0, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -88,7 +81,6 @@
     .param p0, "x0"    # Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;
 
     .prologue
-    .line 46
     iget-object v0, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mDelegator:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;
 
     return-object v0
@@ -100,7 +92,6 @@
     .locals 4
 
     .prologue
-    .line 104
     :try_start_0
     iget-object v1, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mCallback:Landroid/service/gesture/IEdgeGestureHostCallback;
 
@@ -110,15 +101,12 @@
 
     move-result v1
 
-    .line 109
     :goto_0
     return v1
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "EdgeGestureManager"
 
@@ -146,7 +134,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     const/4 v1, 0x0
 
     goto :goto_0
@@ -157,7 +144,6 @@
     .param p1, "applicationWindowToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 94
     :try_start_0
     iget-object v1, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mCallback:Landroid/service/gesture/IEdgeGestureHostCallback;
 
@@ -167,15 +153,12 @@
 
     move-result v1
 
-    .line 99
     :goto_0
     return v1
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 96
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "EdgeGestureManager"
 
@@ -203,7 +186,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     const/4 v1, 0x0
 
     goto :goto_0
@@ -216,7 +198,6 @@
     .locals 4
 
     .prologue
-    .line 123
     :try_start_0
     iget-object v1, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mCallback:Landroid/service/gesture/IEdgeGestureHostCallback;
 
@@ -224,15 +205,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 128
     :goto_0
     return-void
 
-    .line 124
     :catch_0
     move-exception v0
 
-    .line 125
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "EdgeGestureManager"
 
@@ -240,7 +218,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "restoreListenerState failed: "
+    const-string v3, "restoreListenerState failed: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -268,9 +246,7 @@
     .param p1, "hostCallback"    # Landroid/service/gesture/IEdgeGestureHostCallback;
 
     .prologue
-    .line 72
     iput-object p1, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mCallback:Landroid/service/gesture/IEdgeGestureHostCallback;
 
-    .line 73
     return-void
 .end method

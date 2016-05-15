@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 51
     if-eqz p1, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -57,12 +54,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->setSystemAudioMode(ZZ)V
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;->finish()V
 
-    .line 55
     :cond_0
     return-void
 .end method

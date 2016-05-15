@@ -31,19 +31,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/SamplingProfilerService;->mContext:Landroid/content/Context;
 
-    .line 47
     invoke-direct {p0, p1}, Lcom/android/server/SamplingProfilerService;->registerSettingObserver(Landroid/content/Context;)V
 
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/SamplingProfilerService;->startWorking(Landroid/content/Context;)V
 
-    .line 49
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p2, "x2"    # Landroid/os/DropBoxManager;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Lcom/android/server/SamplingProfilerService;->handleSnapshotFile(Ljava/io/File;Landroid/os/DropBoxManager;)V
 
     return-void
@@ -66,7 +60,6 @@
     .param p2, "dropbox"    # Landroid/os/DropBoxManager;
 
     .prologue
-    .line 81
     :try_start_0
     const-string v1, "SamplingProfilerService"
 
@@ -77,18 +70,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 86
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 88
     :goto_0
     return-void
 
-    .line 83
     :catch_0
     move-exception v0
 
-    .line 84
     .local v0, "e":Ljava/io/IOException;
     :try_start_1
     const-string v1, "SamplingProfilerService"
@@ -125,7 +114,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 86
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     goto :goto_0
@@ -144,12 +132,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 91
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 92
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     const-string v1, "sampling_profiler_ms"
 
@@ -165,7 +151,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 95
     return-void
 .end method
 
@@ -174,7 +159,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 54
     const-string v3, "dropbox"
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -183,7 +167,6 @@
 
     check-cast v0, Landroid/os/DropBoxManager;
 
-    .line 59
     .local v0, "dropbox":Landroid/os/DropBoxManager;
     new-instance v3, Ljava/io/File;
 
@@ -195,7 +178,6 @@
 
     move-result-object v2
 
-    .line 60
     .local v2, "snapshotFiles":[Ljava/io/File;
     const/4 v1, 0x0
 
@@ -207,17 +189,14 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 61
     aget-object v3, v2, v1
 
     invoke-direct {p0, v3, v0}, Lcom/android/server/SamplingProfilerService;->handleSnapshotFile(Ljava/io/File;Landroid/os/DropBoxManager;)V
 
-    .line 60
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 68
     :cond_0
     new-instance v3, Lcom/android/server/SamplingProfilerService$1;
 
@@ -229,12 +208,10 @@
 
     iput-object v3, p0, Lcom/android/server/SamplingProfilerService;->snapshotObserver:Landroid/os/FileObserver;
 
-    .line 74
     iget-object v3, p0, Lcom/android/server/SamplingProfilerService;->snapshotObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v3}, Landroid/os/FileObserver;->startWatching()V
 
-    .line 77
     return-void
 .end method
 
@@ -247,7 +224,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcom/android/server/SamplingProfilerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DUMP"
@@ -256,16 +232,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     const-string v0, "SamplingProfilerService:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 102
     const-string v0, "Watching directory: /data/snapshots"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 103
     return-void
 .end method

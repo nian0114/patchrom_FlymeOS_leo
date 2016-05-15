@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -104,7 +103,6 @@
     .param p2, "transitionId"    # I
 
     .prologue
-    .line 179
     return-object p0
 .end method
 

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcom/android/server/display/DisplayAdapter$1;->this$0:Lcom/android/server/display/DisplayAdapter;
 
     iput-object p2, p0, Lcom/android/server/display/DisplayAdapter$1;->val$device:Lcom/android/server/display/DisplayDevice;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/server/display/DisplayAdapter$1;->this$0:Lcom/android/server/display/DisplayAdapter;
 
     # getter for: Lcom/android/server/display/DisplayAdapter;->mListener:Lcom/android/server/display/DisplayAdapter$Listener;
@@ -62,6 +60,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/display/DisplayAdapter$Listener;->onDisplayDeviceEvent(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 109
     return-void
 .end method

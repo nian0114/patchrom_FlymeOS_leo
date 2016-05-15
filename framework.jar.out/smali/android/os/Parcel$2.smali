@@ -26,7 +26,6 @@
     .param p2, "x0"    # Ljava/io/InputStream;
 
     .prologue
-    .line 2364
     iput-object p1, p0, Landroid/os/Parcel$2;->this$0:Landroid/os/Parcel;
 
     iput-object p3, p0, Landroid/os/Parcel$2;->val$loader:Ljava/lang/ClassLoader;
@@ -59,12 +58,10 @@
     .end annotation
 
     .prologue
-    .line 2369
     iget-object v1, p0, Landroid/os/Parcel$2;->val$loader:Ljava/lang/ClassLoader;
 
     if-eqz v1, :cond_0
 
-    .line 2370
     invoke-virtual {p1}, Ljava/io/ObjectStreamClass;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -77,11 +74,9 @@
 
     move-result-object v0
 
-    .line 2371
     .local v0, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v0, :cond_0
 
-    .line 2375
     .end local v0    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     return-object v0

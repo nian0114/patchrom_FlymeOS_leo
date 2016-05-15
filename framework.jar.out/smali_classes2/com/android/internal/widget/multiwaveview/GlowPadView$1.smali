@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 168
     iput-object p1, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView$1;->this$0:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 170
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView$1;->this$0:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     const/4 v1, 0x0
@@ -60,12 +58,10 @@
     # invokes: Lcom/android/internal/widget/multiwaveview/GlowPadView;->switchToState(IFF)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->access$300(Lcom/android/internal/widget/multiwaveview/GlowPadView;IFF)V
 
-    .line 171
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView$1;->this$0:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     # invokes: Lcom/android/internal/widget/multiwaveview/GlowPadView;->dispatchOnFinishFinalAnimation()V
     invoke-static {v0}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->access$400(Lcom/android/internal/widget/multiwaveview/GlowPadView;)V
 
-    .line 172
     return-void
 .end method

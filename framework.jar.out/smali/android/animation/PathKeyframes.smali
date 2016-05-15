@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 43
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -63,12 +62,10 @@
     .param p1, "path"    # Landroid/graphics/Path;
 
     .prologue
-    .line 49
     const/high16 v0, 0x3f000000    # 0.5f
 
     invoke-direct {p0, p1, v0}, Landroid/animation/PathKeyframes;-><init>(Landroid/graphics/Path;F)V
 
-    .line 50
     return-void
 .end method
 
@@ -78,17 +75,14 @@
     .param p2, "error"    # F
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/animation/PathKeyframes;->mTempPointF:Landroid/graphics/PointF;
 
-    .line 53
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/graphics/Path;->isEmpty()Z
@@ -97,7 +91,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 54
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -107,7 +100,6 @@
 
     throw v0
 
-    .line 56
     :cond_1
     invoke-virtual {p1, p2}, Landroid/graphics/Path;->approximate(F)[F
 
@@ -115,7 +107,6 @@
 
     iput-object v0, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
-    .line 57
     return-void
 .end method
 
@@ -123,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 38
     sget-object v0, Landroid/animation/PathKeyframes;->EMPTY_KEYFRAMES:Ljava/util/ArrayList;
 
     return-object v0
@@ -136,10 +126,8 @@
     .param p2, "endValue"    # F
 
     .prologue
-    .line 150
     sub-float v0, p2, p1
 
-    .line 151
     .local v0, "diff":F
     mul-float v1, v0, p0
 
@@ -155,14 +143,11 @@
     .param p3, "endIndex"    # I
 
     .prologue
-    .line 99
     mul-int/lit8 v5, p2, 0x3
 
-    .line 100
     .local v5, "startBase":I
     mul-int/lit8 v0, p3, 0x3
 
-    .line 102
     .local v0, "endBase":I
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -170,7 +155,6 @@
 
     aget v6, v11, v12
 
-    .line 103
     .local v6, "startFraction":F
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -178,7 +162,6 @@
 
     aget v1, v11, v12
 
-    .line 105
     .local v1, "endFraction":F
     sub-float v11, p1, v6
 
@@ -186,7 +169,6 @@
 
     div-float v4, v11, v12
 
-    .line 107
     .local v4, "intervalFraction":F
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -194,7 +176,6 @@
 
     aget v7, v11, v12
 
-    .line 108
     .local v7, "startX":F
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -202,7 +183,6 @@
 
     aget v2, v11, v12
 
-    .line 109
     .local v2, "endX":F
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -210,7 +190,6 @@
 
     aget v8, v11, v12
 
-    .line 110
     .local v8, "startY":F
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -218,25 +197,21 @@
 
     aget v3, v11, v12
 
-    .line 112
     .local v3, "endY":F
     invoke-static {v4, v7, v2}, Landroid/animation/PathKeyframes;->interpolate(FFF)F
 
     move-result v9
 
-    .line 113
     .local v9, "x":F
     invoke-static {v4, v8, v3}, Landroid/animation/PathKeyframes;->interpolate(FFF)F
 
     move-result v10
 
-    .line 115
     .local v10, "y":F
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mTempPointF:Landroid/graphics/PointF;
 
     invoke-virtual {v11, v9, v10}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 116
     iget-object v11, p0, Landroid/animation/PathKeyframes;->mTempPointF:Landroid/graphics/PointF;
 
     return-object v11
@@ -247,18 +222,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 142
     mul-int/lit8 v0, p1, 0x3
 
-    .line 143
     .local v0, "base":I
     add-int/lit8 v1, v0, 0x1
 
-    .line 144
     .local v1, "xOffset":I
     add-int/lit8 v2, v0, 0x2
 
-    .line 145
     .local v2, "yOffset":I
     iget-object v3, p0, Landroid/animation/PathKeyframes;->mTempPointF:Landroid/graphics/PointF;
 
@@ -272,7 +243,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 146
     iget-object v3, p0, Landroid/animation/PathKeyframes;->mTempPointF:Landroid/graphics/PointF;
 
     return-object v3
@@ -284,10 +254,8 @@
     .locals 3
 
     .prologue
-    .line 134
     const/4 v1, 0x0
 
-    .line 136
     .local v1, "clone":Landroid/animation/Keyframes;
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -302,11 +270,9 @@
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 138
     :goto_0
     return-object v1
 
-    .line 137
     :catch_0
     move-exception v2
 
@@ -322,7 +288,6 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-virtual {p0}, Landroid/animation/PathKeyframes;->clone()Landroid/animation/Keyframes;
 
     move-result-object v0
@@ -334,7 +299,6 @@
     .locals 1
 
     .prologue
-    .line 159
     new-instance v0, Landroid/animation/PathKeyframes$1;
 
     invoke-direct {v0, p0}, Landroid/animation/PathKeyframes$1;-><init>(Landroid/animation/PathKeyframes;)V
@@ -346,7 +310,6 @@
     .locals 1
 
     .prologue
-    .line 187
     new-instance v0, Landroid/animation/PathKeyframes$3;
 
     invoke-direct {v0, p0}, Landroid/animation/PathKeyframes$3;-><init>(Landroid/animation/PathKeyframes;)V
@@ -358,7 +321,6 @@
     .locals 1
 
     .prologue
-    .line 173
     new-instance v0, Landroid/animation/PathKeyframes$2;
 
     invoke-direct {v0, p0}, Landroid/animation/PathKeyframes$2;-><init>(Landroid/animation/PathKeyframes;)V
@@ -370,7 +332,6 @@
     .locals 1
 
     .prologue
-    .line 201
     new-instance v0, Landroid/animation/PathKeyframes$4;
 
     invoke-direct {v0, p0}, Landroid/animation/PathKeyframes$4;-><init>(Landroid/animation/PathKeyframes;)V
@@ -391,7 +352,6 @@
     .end annotation
 
     .prologue
-    .line 61
     sget-object v0, Landroid/animation/PathKeyframes;->EMPTY_KEYFRAMES:Ljava/util/ArrayList;
 
     return-object v0
@@ -401,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-virtual {p0}, Landroid/animation/PathKeyframes;->getKeyframes()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -413,7 +372,6 @@
     .locals 1
 
     .prologue
-    .line 129
     const-class v0, Landroid/graphics/PointF;
 
     return-object v0
@@ -430,37 +388,31 @@
 
     const/4 v6, 0x0
 
-    .line 66
     iget-object v5, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
     array-length v5, v5
 
     div-int/lit8 v4, v5, 0x3
 
-    .line 67
     .local v4, "numPoints":I
     cmpg-float v5, p1, v6
 
     if-gez v5, :cond_0
 
-    .line 68
     const/4 v5, 0x1
 
     invoke-direct {p0, p1, v8, v5}, Landroid/animation/PathKeyframes;->interpolateInRange(FII)Landroid/graphics/PointF;
 
     move-result-object v5
 
-    .line 94
     :goto_0
     return-object v5
 
-    .line 69
     :cond_0
     cmpl-float v5, p1, v7
 
     if-lez v5, :cond_1
 
-    .line 70
     add-int/lit8 v5, v4, -0x2
 
     add-int/lit8 v6, v4, -0x1
@@ -471,26 +423,22 @@
 
     goto :goto_0
 
-    .line 71
     :cond_1
     cmpl-float v5, p1, v6
 
     if-nez v5, :cond_2
 
-    .line 72
     invoke-direct {p0, v8}, Landroid/animation/PathKeyframes;->pointForIndex(I)Landroid/graphics/PointF;
 
     move-result-object v5
 
     goto :goto_0
 
-    .line 73
     :cond_2
     cmpl-float v5, p1, v7
 
     if-nez v5, :cond_3
 
-    .line 74
     add-int/lit8 v5, v4, -0x1
 
     invoke-direct {p0, v5}, Landroid/animation/PathKeyframes;->pointForIndex(I)Landroid/graphics/PointF;
@@ -499,25 +447,20 @@
 
     goto :goto_0
 
-    .line 77
     :cond_3
     const/4 v1, 0x0
 
-    .line 78
     .local v1, "low":I
     add-int/lit8 v0, v4, -0x1
 
-    .line 80
     .local v0, "high":I
     :goto_1
     if-gt v1, v0, :cond_6
 
-    .line 81
     add-int v5, v1, v0
 
     div-int/lit8 v2, v5, 0x2
 
-    .line 82
     .local v2, "mid":I
     iget-object v5, p0, Landroid/animation/PathKeyframes;->mKeyframeData:[F
 
@@ -527,29 +470,24 @@
 
     aget v3, v5, v6
 
-    .line 84
     .local v3, "midFraction":F
     cmpg-float v5, p1, v3
 
     if-gez v5, :cond_4
 
-    .line 85
     add-int/lit8 v0, v2, -0x1
 
     goto :goto_1
 
-    .line 86
     :cond_4
     cmpl-float v5, p1, v3
 
     if-lez v5, :cond_5
 
-    .line 87
     add-int/lit8 v1, v2, 0x1
 
     goto :goto_1
 
-    .line 89
     :cond_5
     invoke-direct {p0, v2}, Landroid/animation/PathKeyframes;->pointForIndex(I)Landroid/graphics/PointF;
 
@@ -557,7 +495,6 @@
 
     goto :goto_0
 
-    .line 94
     .end local v2    # "mid":I
     .end local v3    # "midFraction":F
     :cond_6
@@ -572,7 +509,6 @@
     .locals 0
 
     .prologue
-    .line 121
     return-void
 .end method
 
@@ -581,6 +517,5 @@
     .param p1, "evaluator"    # Landroid/animation/TypeEvaluator;
 
     .prologue
-    .line 125
     return-void
 .end method

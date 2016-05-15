@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1504
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$11;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$11;->val$deviceId:I
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 1507
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$11;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v2, v2, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -64,18 +62,14 @@
 
     move-result-object v1
 
-    .line 1508
     .local v1, "mhlDevice":Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;
     if-eqz v1, :cond_0
 
-    .line 1509
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;->sendStandby()V
 
-    .line 1518
     :goto_0
     return-void
 
-    .line 1512
     :cond_0
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$11;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -92,11 +86,9 @@
 
     move-result-object v0
 
-    .line 1513
     .local v0, "device":Lcom/android/server/hdmi/HdmiCecLocalDevice;
     if-nez v0, :cond_1
 
-    .line 1514
     const-string v2, "HdmiControlService"
 
     const-string v3, "Local device not available"
@@ -105,7 +97,6 @@
 
     goto :goto_0
 
-    .line 1517
     :cond_1
     iget v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$11;->val$deviceId:I
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 182
     iput-object p1, p0, Landroid/hardware/TorchManager$3;->this$0:Landroid/hardware/TorchManager;
 
     iput-boolean p2, p0, Landroid/hardware/TorchManager$3;->val$newState:Z
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 186
     :try_start_0
     iget-object v1, p0, Landroid/hardware/TorchManager$3;->this$0:Landroid/hardware/TorchManager;
 
@@ -59,15 +57,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 190
     :goto_0
     return-void
 
-    .line 187
     :catch_0
     move-exception v0
 
-    .line 188
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

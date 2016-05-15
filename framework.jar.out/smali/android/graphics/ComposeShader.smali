@@ -29,24 +29,18 @@
     .param p3, "mode"    # Landroid/graphics/PorterDuff$Mode;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 68
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/graphics/ComposeShader;->mType:I
 
-    .line 69
     iput-object p1, p0, Landroid/graphics/ComposeShader;->mShaderA:Landroid/graphics/Shader;
 
-    .line 70
     iput-object p2, p0, Landroid/graphics/ComposeShader;->mShaderB:Landroid/graphics/Shader;
 
-    .line 71
     iput-object p3, p0, Landroid/graphics/ComposeShader;->mPorterDuffMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 72
     invoke-virtual {p1}, Landroid/graphics/Shader;->getNativeInstance()J
 
     move-result-wide v0
@@ -63,7 +57,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ComposeShader;->init(J)V
 
-    .line 74
     return-void
 .end method
 
@@ -74,24 +67,18 @@
     .param p3, "mode"    # Landroid/graphics/Xfermode;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 52
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/graphics/ComposeShader;->mType:I
 
-    .line 53
     iput-object p1, p0, Landroid/graphics/ComposeShader;->mShaderA:Landroid/graphics/Shader;
 
-    .line 54
     iput-object p2, p0, Landroid/graphics/ComposeShader;->mShaderB:Landroid/graphics/Shader;
 
-    .line 55
     iput-object p3, p0, Landroid/graphics/ComposeShader;->mXferMode:Landroid/graphics/Xfermode;
 
-    .line 56
     invoke-virtual {p1}, Landroid/graphics/Shader;->getNativeInstance()J
 
     move-result-wide v0
@@ -111,10 +98,8 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ComposeShader;->init(J)V
 
-    .line 58
     return-void
 
-    .line 56
     :cond_0
     const-wide/16 v4, 0x0
 
@@ -133,12 +118,10 @@
     .locals 4
 
     .prologue
-    .line 82
     iget v1, p0, Landroid/graphics/ComposeShader;->mType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 90
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "ComposeShader should be created with either Xfermode or PorterDuffMode"
@@ -147,7 +130,6 @@
 
     throw v1
 
-    .line 84
     :pswitch_0
     new-instance v0, Landroid/graphics/ComposeShader;
 
@@ -167,15 +149,12 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/Xfermode;)V
 
-    .line 93
     .local v0, "copy":Landroid/graphics/ComposeShader;
     :goto_0
     invoke-virtual {p0, v0}, Landroid/graphics/ComposeShader;->copyLocalMatrix(Landroid/graphics/Shader;)V
 
-    .line 94
     return-object v0
 
-    .line 87
     .end local v0    # "copy":Landroid/graphics/ComposeShader;
     :pswitch_1
     new-instance v0, Landroid/graphics/ComposeShader;
@@ -196,11 +175,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 88
     .restart local v0    # "copy":Landroid/graphics/ComposeShader;
     goto :goto_0
 
-    .line 82
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

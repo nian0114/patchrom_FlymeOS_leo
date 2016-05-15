@@ -27,13 +27,10 @@
     .param p1, "session"    # Landroid/content/pm/IPackageInstallerSession;
 
     .prologue
-    .line 659
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 660
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
-    .line 661
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 836
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -51,14 +47,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 840
     return-void
 
-    .line 837
     :catch_0
     move-exception v0
 
-    .line 838
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -72,7 +65,6 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 689
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -80,14 +72,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 693
     return-void
 
-    .line 690
     :catch_0
     move-exception v0
 
-    .line 691
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -100,7 +89,6 @@
     .locals 2
 
     .prologue
-    .line 822
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -108,14 +96,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 826
     return-void
 
-    .line 823
     :catch_0
     move-exception v0
 
-    .line 824
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -129,7 +114,6 @@
     .param p1, "statusReceiver"    # Landroid/content/IntentSender;
 
     .prologue
-    .line 809
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -137,14 +121,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 813
     return-void
 
-    .line 810
     :catch_0
     move-exception v0
 
-    .line 811
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -163,21 +144,17 @@
     .end annotation
 
     .prologue
-    .line 745
     instance-of v0, p1, Landroid/os/FileBridge$FileBridgeOutputStream;
 
     if-eqz v0, :cond_0
 
-    .line 746
     check-cast p1, Landroid/os/FileBridge$FileBridgeOutputStream;
 
     .end local p1    # "out":Ljava/io/OutputStream;
     invoke-virtual {p1}, Landroid/os/FileBridge$FileBridgeOutputStream;->fsync()V
 
-    .line 750
     return-void
 
-    .line 748
     .restart local p1    # "out":Ljava/io/OutputStream;
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -198,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 763
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -211,23 +187,18 @@
 
     return-object v1
 
-    .line 764
     :catch_0
     move-exception v0
 
-    .line 765
     .local v0, "e":Ljava/lang/RuntimeException;
     invoke-static {v0}, Landroid/util/ExceptionUtils;->maybeUnwrapIOException(Ljava/lang/RuntimeException;)V
 
-    .line 766
     throw v0
 
-    .line 767
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v0
 
-    .line 768
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -246,7 +217,6 @@
     .end annotation
 
     .prologue
-    .line 785
     :try_start_0
     iget-object v2, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -254,7 +224,6 @@
 
     move-result-object v1
 
-    .line 786
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     new-instance v2, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
@@ -265,24 +234,19 @@
 
     return-object v2
 
-    .line 787
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     :catch_0
     move-exception v0
 
-    .line 788
     .local v0, "e":Ljava/lang/RuntimeException;
     invoke-static {v0}, Landroid/util/ExceptionUtils;->maybeUnwrapIOException(Ljava/lang/RuntimeException;)V
 
-    .line 789
     throw v0
 
-    .line 790
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v0
 
-    .line 791
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -303,7 +267,6 @@
     .end annotation
 
     .prologue
-    .line 728
     :try_start_0
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -317,7 +280,6 @@
 
     move-result-object v6
 
-    .line 730
     .local v6, "clientSocket":Landroid/os/ParcelFileDescriptor;
     new-instance v0, Landroid/os/FileBridge$FileBridgeOutputStream;
 
@@ -328,24 +290,19 @@
 
     return-object v0
 
-    .line 731
     .end local v6    # "clientSocket":Landroid/os/ParcelFileDescriptor;
     :catch_0
     move-exception v7
 
-    .line 732
     .local v7, "e":Ljava/lang/RuntimeException;
     invoke-static {v7}, Landroid/util/ExceptionUtils;->maybeUnwrapIOException(Ljava/lang/RuntimeException;)V
 
-    .line 733
     throw v7
 
-    .line 734
     .end local v7    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v7
 
-    .line 735
     .local v7, "e":Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -361,10 +318,8 @@
     .end annotation
 
     .prologue
-    .line 666
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageInstaller$Session;->setStagingProgress(F)V
 
-    .line 667
     return-void
 .end method
 
@@ -373,7 +328,6 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 680
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$Session;->mSession:Landroid/content/pm/IPackageInstallerSession;
 
@@ -381,14 +335,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 684
     return-void
 
-    .line 681
     :catch_0
     move-exception v0
 
-    .line 682
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 

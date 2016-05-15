@@ -30,16 +30,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/twilight/TwilightService$TwilightListenerRecord;->mListener:Lcom/android/server/twilight/TwilightListener;
 
-    .line 94
     iput-object p2, p0, Lcom/android/server/twilight/TwilightService$TwilightListenerRecord;->mHandler:Landroid/os/Handler;
 
-    .line 95
     return-void
 .end method
 
@@ -49,12 +45,10 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/twilight/TwilightService$TwilightListenerRecord;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 99
     return-void
 .end method
 
@@ -62,11 +56,9 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/android/server/twilight/TwilightService$TwilightListenerRecord;->mListener:Lcom/android/server/twilight/TwilightListener;
 
     invoke-interface {v0}, Lcom/android/server/twilight/TwilightListener;->onTwilightStateChanged()V
 
-    .line 104
     return-void
 .end method

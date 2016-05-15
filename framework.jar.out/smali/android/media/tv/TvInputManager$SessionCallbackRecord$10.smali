@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 427
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$10;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     iput-object p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$10;->val$rating:Landroid/media/tv/TvContentRating;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 430
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$10;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSessionCallback:Landroid/media/tv/TvInputManager$SessionCallback;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/tv/TvInputManager$SessionCallback;->onContentBlocked(Landroid/media/tv/TvInputManager$Session;Landroid/media/tv/TvContentRating;)V
 
-    .line 431
     return-void
 .end method

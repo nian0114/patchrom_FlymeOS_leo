@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 169
     iput-object p1, p0, Landroid/widget/ZoomButtonsController$2;->this$0:Landroid/widget/ZoomButtonsController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 172
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 193
     :goto_0
     return-void
 
-    .line 174
     :pswitch_0
     iget-object v0, p0, Landroid/widget/ZoomButtonsController$2;->this$0:Landroid/widget/ZoomButtonsController;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 178
     :pswitch_1
     iget-object v0, p0, Landroid/widget/ZoomButtonsController$2;->this$0:Landroid/widget/ZoomButtonsController;
 
@@ -66,7 +61,6 @@
 
     goto :goto_0
 
-    .line 182
     :pswitch_2
     iget-object v0, p0, Landroid/widget/ZoomButtonsController$2;->this$0:Landroid/widget/ZoomButtonsController;
 
@@ -81,7 +75,6 @@
 
     if-nez v0, :cond_0
 
-    .line 184
     const-string v0, "ZoomButtonsController"
 
     const-string v1, "Cannot make the zoom controller visible if the owner view is not attached to a window."
@@ -90,7 +83,6 @@
 
     goto :goto_0
 
-    .line 188
     :cond_0
     iget-object v0, p0, Landroid/widget/ZoomButtonsController$2;->this$0:Landroid/widget/ZoomButtonsController;
 
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 172
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

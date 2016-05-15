@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 786
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,26 +31,22 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 788
-    const-string/jumbo v3, "torch"
+    const-string v3, "torch"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 789
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/hardware/ITorchService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/ITorchService;
 
     move-result-object v2
 
-    .line 790
     .local v2, "service":Landroid/hardware/ITorchService;
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 791
     .local v1, "outerContext":Landroid/content/Context;
     new-instance v3, Landroid/hardware/TorchManager;
 

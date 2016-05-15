@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 511
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;
 
     const/4 v0, 0x0
@@ -41,7 +40,6 @@
     .param p2, "sequence"    # I
 
     .prologue
-    .line 514
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;->onRemoteMethodResult(Ljava/lang/Object;I)V
 
-    .line 515
     return-void
 .end method

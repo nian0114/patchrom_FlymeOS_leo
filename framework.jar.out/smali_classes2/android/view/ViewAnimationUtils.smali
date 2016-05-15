@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .param p4, "endRadius"    # F
 
     .prologue
-    .line 53
     new-instance v0, Landroid/animation/RevealAnimator;
 
     move-object v1, p0

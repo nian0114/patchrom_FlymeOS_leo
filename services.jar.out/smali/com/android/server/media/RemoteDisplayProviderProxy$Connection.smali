@@ -31,22 +31,18 @@
     .param p2, "provider"    # Landroid/media/IRemoteDisplayProvider;
 
     .prologue
-    .line 328
     iput-object p1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 329
     iput-object p2, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
-    .line 330
     new-instance v0, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
     invoke-direct {v0, p0}, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;-><init>(Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;)V
 
     iput-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mCallback:Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
-    .line 331
     return-void
 .end method
 
@@ -58,7 +54,6 @@
     .param p2, "volume"    # I
 
     .prologue
-    .line 389
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -66,15 +61,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 393
     :goto_0
     return-void
 
-    .line 390
     :catch_0
     move-exception v0
 
-    .line 391
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RemoteDisplayProvider"
 
@@ -89,7 +81,6 @@
     .locals 2
 
     .prologue
-    .line 397
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     # getter for: Lcom/android/server/media/RemoteDisplayProviderProxy;->mHandler:Landroid/os/Handler;
@@ -103,7 +94,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 403
     return-void
 .end method
 
@@ -112,7 +102,6 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 365
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -120,15 +109,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 369
     :goto_0
     return-void
 
-    .line 366
     :catch_0
     move-exception v0
 
-    .line 367
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RemoteDisplayProvider"
 
@@ -144,7 +130,6 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 373
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -152,15 +137,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 377
     :goto_0
     return-void
 
-    .line 374
     :catch_0
     move-exception v0
 
-    .line 375
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RemoteDisplayProvider"
 
@@ -175,7 +157,6 @@
     .locals 2
 
     .prologue
-    .line 351
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
     invoke-interface {v0}, Landroid/media/IRemoteDisplayProvider;->asBinder()Landroid/os/IBinder;
@@ -186,12 +167,10 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 352
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mCallback:Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
     invoke-virtual {v0}, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;->dispose()V
 
-    .line 353
     return-void
 .end method
 
@@ -200,7 +179,6 @@
     .param p1, "state"    # Landroid/media/RemoteDisplayState;
 
     .prologue
-    .line 406
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     # getter for: Lcom/android/server/media/RemoteDisplayProviderProxy;->mHandler:Landroid/os/Handler;
@@ -214,7 +192,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 412
     return-void
 .end method
 
@@ -224,7 +201,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 335
     :try_start_0
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -236,14 +212,12 @@
 
     invoke-interface {v2, p0, v3}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 336
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
     iget-object v3, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mCallback:Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
     invoke-interface {v2, v3}, Landroid/media/IRemoteDisplayProvider;->setCallback(Landroid/media/IRemoteDisplayCallback;)V
 
-    .line 337
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     # getter for: Lcom/android/server/media/RemoteDisplayProviderProxy;->mHandler:Landroid/os/Handler;
@@ -259,18 +233,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 343
     const/4 v1, 0x1
 
-    .line 347
     :goto_0
     return v1
 
-    .line 344
     :catch_0
     move-exception v0
 
-    .line 345
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->binderDied()V
 
@@ -282,7 +252,6 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 357
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -290,15 +259,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 361
     :goto_0
     return-void
 
-    .line 358
     :catch_0
     move-exception v0
 
-    .line 359
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RemoteDisplayProvider"
 
@@ -315,7 +281,6 @@
     .param p2, "volume"    # I
 
     .prologue
-    .line 381
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -323,15 +288,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 385
     :goto_0
     return-void
 
-    .line 382
     :catch_0
     move-exception v0
 
-    .line 383
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RemoteDisplayProvider"
 

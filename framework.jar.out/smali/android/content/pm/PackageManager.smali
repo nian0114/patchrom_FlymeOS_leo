@@ -434,10 +434,8 @@
     .locals 0
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4192
     return-void
 .end method
 
@@ -450,15 +448,12 @@
 
     const/4 v1, 0x2
 
-    .line 4161
     packed-switch p0, :pswitch_data_0
 
-    .line 4168
     :goto_0
     :pswitch_0
     return v0
 
-    .line 4162
     :pswitch_1
     const/4 v0, 0x0
 
@@ -467,28 +462,23 @@
     :pswitch_2
     move v0, v1
 
-    .line 4164
     goto :goto_0
 
     :pswitch_3
     move v0, v1
 
-    .line 4165
     goto :goto_0
 
     :pswitch_4
     move v0, v1
 
-    .line 4166
     goto :goto_0
 
-    .line 4167
     :pswitch_5
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 4161
     :pswitch_data_0
     .packed-switch -0x5
         :pswitch_5
@@ -506,10 +496,8 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 4148
     packed-switch p0, :pswitch_data_0
 
-    .line 4155
     :pswitch_0
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -518,43 +506,36 @@
     :goto_0
     return-object v0
 
-    .line 4149
     :pswitch_1
     const-string v0, "DELETE_SUCCEEDED"
 
     goto :goto_0
 
-    .line 4150
     :pswitch_2
     const-string v0, "DELETE_FAILED_INTERNAL_ERROR"
 
     goto :goto_0
 
-    .line 4151
     :pswitch_3
     const-string v0, "DELETE_FAILED_DEVICE_POLICY_MANAGER"
 
     goto :goto_0
 
-    .line 4152
     :pswitch_4
     const-string v0, "DELETE_FAILED_USER_RESTRICTED"
 
     goto :goto_0
 
-    .line 4153
     :pswitch_5
     const-string v0, "DELETE_FAILED_OWNER_BLOCKED"
 
     goto :goto_0
 
-    .line 4154
     :pswitch_6
     const-string v0, "DELETE_FAILED_ABORTED"
 
     goto :goto_0
 
-    .line 4148
     :pswitch_data_0
     .packed-switch -0x5
         :pswitch_6
@@ -573,16 +554,13 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 4138
     invoke-static {p0}, Landroid/content/pm/PackageManager;->deleteStatusToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4139
     .local v0, "str":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 4140
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -605,7 +583,6 @@
 
     move-result-object v0
 
-    .line 4142
     .end local v0    # "str":Ljava/lang/String;
     :cond_0
     return-object v0
@@ -617,7 +594,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3986
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -676,17 +652,14 @@
 
     const/4 v1, 0x4
 
-    .line 4090
     sparse-switch p0, :sswitch_data_0
 
-    .line 4132
     const/4 v0, 0x1
 
     :goto_0
     :sswitch_0
     return v0
 
-    .line 4091
     :sswitch_1
     const/4 v0, 0x0
 
@@ -695,172 +668,143 @@
     :sswitch_2
     move v0, v1
 
-    .line 4093
     goto :goto_0
 
     :sswitch_3
     move v0, v1
 
-    .line 4094
     goto :goto_0
 
     :sswitch_4
     move v0, v2
 
-    .line 4095
     goto :goto_0
 
     :sswitch_5
     move v0, v3
 
-    .line 4100
     goto :goto_0
 
     :sswitch_6
     move v0, v1
 
-    .line 4102
     goto :goto_0
 
     :sswitch_7
     move v0, v3
 
-    .line 4103
     goto :goto_0
 
     :sswitch_8
     move v0, v3
 
-    .line 4105
     goto :goto_0
 
     :sswitch_9
     move v0, v1
 
-    .line 4106
     goto :goto_0
 
     :sswitch_a
     move v0, v3
 
-    .line 4107
     goto :goto_0
 
     :sswitch_b
     move v0, v3
 
-    .line 4108
     goto :goto_0
 
     :sswitch_c
     move v0, v2
 
-    .line 4109
     goto :goto_0
 
     :sswitch_d
     move v0, v2
 
-    .line 4110
     goto :goto_0
 
     :sswitch_e
     move v0, v2
 
-    .line 4111
     goto :goto_0
 
     :sswitch_f
     move v0, v4
 
-    .line 4112
     goto :goto_0
 
     :sswitch_10
     move v0, v4
 
-    .line 4113
     goto :goto_0
 
     :sswitch_11
     move v0, v1
 
-    .line 4114
     goto :goto_0
 
     :sswitch_12
     move v0, v1
 
-    .line 4115
     goto :goto_0
 
     :sswitch_13
     move v0, v1
 
-    .line 4116
     goto :goto_0
 
     :sswitch_14
     move v0, v1
 
-    .line 4117
     goto :goto_0
 
     :sswitch_15
     move v0, v1
 
-    .line 4118
     goto :goto_0
 
     :sswitch_16
     move v0, v1
 
-    .line 4119
     goto :goto_0
 
     :sswitch_17
     move v0, v1
 
-    .line 4120
     goto :goto_0
 
     :sswitch_18
     move v0, v1
 
-    .line 4121
     goto :goto_0
 
     :sswitch_19
     move v0, v1
 
-    .line 4122
     goto :goto_0
 
     :sswitch_1a
     move v0, v1
 
-    .line 4123
     goto :goto_0
 
     :sswitch_1b
     move v0, v1
 
-    .line 4124
     goto :goto_0
 
     :sswitch_1c
     move v0, v1
 
-    .line 4125
     goto :goto_0
 
     :sswitch_1d
     move v0, v1
 
-    .line 4126
     goto :goto_0
 
-    .line 4127
     :sswitch_1e
     const/4 v0, 0x1
 
@@ -869,22 +813,18 @@
     :sswitch_1f
     move v0, v3
 
-    .line 4128
     goto :goto_0
 
     :sswitch_20
     move v0, v3
 
-    .line 4130
     goto :goto_0
 
     :sswitch_21
     move v0, v4
 
-    .line 4131
     goto :goto_0
 
-    .line 4090
     :sswitch_data_0
     .sparse-switch
         -0x73 -> :sswitch_21
@@ -936,10 +876,8 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 4042
     sparse-switch p0, :sswitch_data_0
 
-    .line 4084
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -947,253 +885,211 @@
     :goto_0
     return-object v0
 
-    .line 4043
     :sswitch_0
     const-string v0, "INSTALL_SUCCEEDED"
 
     goto :goto_0
 
-    .line 4044
     :sswitch_1
     const-string v0, "INSTALL_FAILED_ALREADY_EXISTS"
 
     goto :goto_0
 
-    .line 4045
     :sswitch_2
     const-string v0, "INSTALL_FAILED_INVALID_APK"
 
     goto :goto_0
 
-    .line 4046
     :sswitch_3
     const-string v0, "INSTALL_FAILED_INVALID_URI"
 
     goto :goto_0
 
-    .line 4047
     :sswitch_4
     const-string v0, "INSTALL_FAILED_INSUFFICIENT_STORAGE"
 
     goto :goto_0
 
-    .line 4048
     :sswitch_5
     const-string v0, "INSTALL_FAILED_DUPLICATE_PACKAGE"
 
     goto :goto_0
 
-    .line 4049
     :sswitch_6
     const-string v0, "INSTALL_FAILED_NO_SHARED_USER"
 
     goto :goto_0
 
-    .line 4050
     :sswitch_7
     const-string v0, "INSTALL_FAILED_UPDATE_INCOMPATIBLE"
 
     goto :goto_0
 
-    .line 4051
     :sswitch_8
     const-string v0, "INSTALL_FAILED_SHARED_USER_INCOMPATIBLE"
 
     goto :goto_0
 
-    .line 4052
     :sswitch_9
     const-string v0, "INSTALL_FAILED_MISSING_SHARED_LIBRARY"
 
     goto :goto_0
 
-    .line 4053
     :sswitch_a
     const-string v0, "INSTALL_FAILED_REPLACE_COULDNT_DELETE"
 
     goto :goto_0
 
-    .line 4054
     :sswitch_b
     const-string v0, "INSTALL_FAILED_DEXOPT"
 
     goto :goto_0
 
-    .line 4055
     :sswitch_c
     const-string v0, "INSTALL_FAILED_OLDER_SDK"
 
     goto :goto_0
 
-    .line 4056
     :sswitch_d
     const-string v0, "INSTALL_FAILED_CONFLICTING_PROVIDER"
 
     goto :goto_0
 
-    .line 4057
     :sswitch_e
     const-string v0, "INSTALL_FAILED_NEWER_SDK"
 
     goto :goto_0
 
-    .line 4058
     :sswitch_f
     const-string v0, "INSTALL_FAILED_TEST_ONLY"
 
     goto :goto_0
 
-    .line 4059
     :sswitch_10
     const-string v0, "INSTALL_FAILED_CPU_ABI_INCOMPATIBLE"
 
     goto :goto_0
 
-    .line 4060
     :sswitch_11
     const-string v0, "INSTALL_FAILED_MISSING_FEATURE"
 
     goto :goto_0
 
-    .line 4061
     :sswitch_12
     const-string v0, "INSTALL_FAILED_CONTAINER_ERROR"
 
     goto :goto_0
 
-    .line 4062
     :sswitch_13
     const-string v0, "INSTALL_FAILED_INVALID_INSTALL_LOCATION"
 
     goto :goto_0
 
-    .line 4063
     :sswitch_14
     const-string v0, "INSTALL_FAILED_MEDIA_UNAVAILABLE"
 
     goto :goto_0
 
-    .line 4064
     :sswitch_15
     const-string v0, "INSTALL_FAILED_VERIFICATION_TIMEOUT"
 
     goto :goto_0
 
-    .line 4065
     :sswitch_16
     const-string v0, "INSTALL_FAILED_VERIFICATION_FAILURE"
 
     goto :goto_0
 
-    .line 4066
     :sswitch_17
     const-string v0, "INSTALL_FAILED_PACKAGE_CHANGED"
 
     goto :goto_0
 
-    .line 4067
     :sswitch_18
     const-string v0, "INSTALL_FAILED_UID_CHANGED"
 
     goto :goto_0
 
-    .line 4068
     :sswitch_19
     const-string v0, "INSTALL_FAILED_VERSION_DOWNGRADE"
 
     goto :goto_0
 
-    .line 4069
     :sswitch_1a
     const-string v0, "INSTALL_PARSE_FAILED_NOT_APK"
 
     goto :goto_0
 
-    .line 4070
     :sswitch_1b
     const-string v0, "INSTALL_PARSE_FAILED_BAD_MANIFEST"
 
     goto :goto_0
 
-    .line 4071
     :sswitch_1c
     const-string v0, "INSTALL_PARSE_FAILED_UNEXPECTED_EXCEPTION"
 
     goto :goto_0
 
-    .line 4072
     :sswitch_1d
     const-string v0, "INSTALL_PARSE_FAILED_NO_CERTIFICATES"
 
     goto :goto_0
 
-    .line 4073
     :sswitch_1e
     const-string v0, "INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES"
 
     goto :goto_0
 
-    .line 4074
     :sswitch_1f
     const-string v0, "INSTALL_PARSE_FAILED_CERTIFICATE_ENCODING"
 
     goto :goto_0
 
-    .line 4075
     :sswitch_20
     const-string v0, "INSTALL_PARSE_FAILED_BAD_PACKAGE_NAME"
 
     goto :goto_0
 
-    .line 4076
     :sswitch_21
     const-string v0, "INSTALL_PARSE_FAILED_BAD_SHARED_USER_ID"
 
     goto :goto_0
 
-    .line 4077
     :sswitch_22
     const-string v0, "INSTALL_PARSE_FAILED_MANIFEST_MALFORMED"
 
     goto :goto_0
 
-    .line 4078
     :sswitch_23
     const-string v0, "INSTALL_PARSE_FAILED_MANIFEST_EMPTY"
 
     goto :goto_0
 
-    .line 4079
     :sswitch_24
     const-string v0, "INSTALL_FAILED_INTERNAL_ERROR"
 
     goto :goto_0
 
-    .line 4080
     :sswitch_25
     const-string v0, "INSTALL_FAILED_USER_RESTRICTED"
 
     goto :goto_0
 
-    .line 4081
     :sswitch_26
     const-string v0, "INSTALL_FAILED_DUPLICATE_PERMISSION"
 
     goto :goto_0
 
-    .line 4082
     :sswitch_27
     const-string v0, "INSTALL_FAILED_NO_MATCHING_ABIS"
 
     goto :goto_0
 
-    .line 4083
     :sswitch_28
     const-string v0, "INSTALL_FAILED_ABORTED"
 
     goto :goto_0
 
-    .line 4042
     nop
 
     :sswitch_data_0
@@ -1248,16 +1144,13 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 4032
     invoke-static {p0}, Landroid/content/pm/PackageManager;->installStatusToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4033
     .local v0, "str":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 4034
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1280,7 +1173,6 @@
 
     move-result-object v0
 
-    .line 4036
     .end local v0    # "str":Ljava/lang/String;
     :cond_0
     return-object v0
@@ -1316,7 +1208,6 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 3730
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -1331,19 +1222,16 @@
     .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 2273
     if-nez p1, :cond_0
 
-    .line 2274
     new-instance v5, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v6, "permissions cannot be null"
+    const-string v6, "permissions cannot be null"
 
     invoke-direct {v5, v6}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 2276
     :cond_0
     move-object v0, p1
 
@@ -1359,26 +1247,22 @@
 
     aget-object v4, v0, v2
 
-    .line 2277
     .local v4, "permission":Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 2278
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v6, "permissions cannot contain null"
+    const-string v6, "permissions cannot contain null"
 
     invoke-direct {v5, v6}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 2276
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2282
     .end local v4    # "permission":Ljava/lang/String;
     :cond_2
     new-instance v1, Landroid/content/Intent;
@@ -1387,18 +1271,15 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2283
     .local v1, "i":Landroid/content/Intent;
     const-string v5, "android.content.pm.extra.PERMISSION_LIST"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2284
     const-string v5, "com.android.packageinstaller"
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2285
     return-object v1
 .end method
 
@@ -1648,18 +1529,15 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 3225
     new-instance v11, Landroid/content/pm/PackageParser;
 
     invoke-direct {v11}, Landroid/content/pm/PackageParser;-><init>()V
 
-    .line 3226
     .local v11, "parser":Landroid/content/pm/PackageParser;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3228
     .local v0, "apkFile":Ljava/io/File;
     const/4 v2, 0x0
 
@@ -1668,27 +1546,22 @@
 
     move-result-object v1
 
-    .line 3229
     .local v1, "pkg":Landroid/content/pm/PackageParser$Package;
     and-int/lit8 v2, p2, 0x40
 
     if-eqz v2, :cond_0
 
-    .line 3230
     const/4 v2, 0x0
 
     invoke-virtual {v11, v1, v2}, Landroid/content/pm/PackageParser;->collectCertificates(Landroid/content/pm/PackageParser$Package;I)V
 
-    .line 3231
     invoke-virtual {v11, v1}, Landroid/content/pm/PackageParser;->collectManifestDigest(Landroid/content/pm/PackageParser$Package;)V
 
-    .line 3233
     :cond_0
     new-instance v9, Landroid/content/pm/PackageUserState;
 
     invoke-direct {v9}, Landroid/content/pm/PackageUserState;-><init>()V
 
-    .line 3234
     .local v9, "state":Landroid/content/pm/PackageUserState;
     const/4 v2, 0x0
 
@@ -1706,20 +1579,17 @@
 
     move-result-object v2
 
-    .line 3236
     .end local v1    # "pkg":Landroid/content/pm/PackageParser$Package;
     .end local v9    # "state":Landroid/content/pm/PackageUserState;
     :goto_0
     return-object v2
 
-    .line 3235
     :catch_0
     move-exception v10
 
     .local v10, "e":Landroid/content/pm/PackageParser$PackageParserException;
     move-object v2, v12
 
-    .line 3236
     goto :goto_0
 .end method
 
@@ -1751,14 +1621,12 @@
     .param p2, "observer"    # Landroid/content/pm/IPackageStatsObserver;
 
     .prologue
-    .line 3649
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/pm/PackageManager;->getPackageSizeInfo(Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)V
 
-    .line 3650
     return-void
 .end method
 
@@ -2213,7 +2081,6 @@
     .end annotation
 
     .prologue
-    .line 3764
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."

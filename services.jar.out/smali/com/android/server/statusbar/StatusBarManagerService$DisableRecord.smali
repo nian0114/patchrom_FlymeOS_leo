@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
     .param p2, "x1"    # Lcom/android/server/statusbar/StatusBarManagerService$1;
 
     .prologue
-    .line 74
     invoke-direct {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;-><init>(Lcom/android/server/statusbar/StatusBarManagerService;)V
 
     return-void
@@ -62,7 +60,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 81
     const-string v0, "StatusBarManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -87,7 +84,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     iget v1, p0, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->userId:I
@@ -99,11 +95,9 @@
     # invokes: Lcom/android/server/statusbar/StatusBarManagerService;->disableInternal(IILandroid/os/IBinder;Ljava/lang/String;)V
     invoke-static {v0, v1, v4, v2, v3}, Lcom/android/server/statusbar/StatusBarManagerService;->access$000(Lcom/android/server/statusbar/StatusBarManagerService;IILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->token:Landroid/os/IBinder;
 
     invoke-interface {v0, p0, v4}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 84
     return-void
 .end method

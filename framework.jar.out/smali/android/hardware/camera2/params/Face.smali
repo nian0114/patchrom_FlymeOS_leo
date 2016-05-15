@@ -34,7 +34,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 133
     const/4 v3, -0x1
 
     move-object v0, p0
@@ -49,7 +48,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/hardware/camera2/params/Face;-><init>(Landroid/graphics/Rect;IILandroid/graphics/Point;Landroid/graphics/Point;Landroid/graphics/Point;)V
 
-    .line 135
     return-void
 .end method
 
@@ -65,15 +63,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     const-string v0, "bounds"
 
     invoke-static {v0, p1}, Landroid/hardware/camera2/params/Face;->checkNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 91
     const/4 v0, 0x1
 
     if-lt p2, v0, :cond_0
@@ -82,7 +77,6 @@
 
     if-le p2, v0, :cond_1
 
-    .line 92
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -92,13 +86,11 @@
 
     throw v0
 
-    .line 93
     :cond_1
     if-gez p3, :cond_2
 
     if-eq p3, v1, :cond_2
 
-    .line 94
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Id out of range"
@@ -107,45 +99,34 @@
 
     throw v0
 
-    .line 96
     :cond_2
     if-ne p3, v1, :cond_3
 
-    .line 97
     const-string v0, "leftEyePosition"
 
     invoke-static {v0, p4}, Landroid/hardware/camera2/params/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 98
-    const-string/jumbo v0, "rightEyePosition"
+    const-string v0, "rightEyePosition"
 
     invoke-static {v0, p5}, Landroid/hardware/camera2/params/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 99
-    const-string/jumbo v0, "mouthPosition"
+    const-string v0, "mouthPosition"
 
     invoke-static {v0, p6}, Landroid/hardware/camera2/params/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 102
     :cond_3
     iput-object p1, p0, Landroid/hardware/camera2/params/Face;->mBounds:Landroid/graphics/Rect;
 
-    .line 103
     iput p2, p0, Landroid/hardware/camera2/params/Face;->mScore:I
 
-    .line 104
     iput p3, p0, Landroid/hardware/camera2/params/Face;->mId:I
 
-    .line 105
     iput-object p4, p0, Landroid/hardware/camera2/params/Face;->mLeftEye:Landroid/graphics/Point;
 
-    .line 106
     iput-object p5, p0, Landroid/hardware/camera2/params/Face;->mRightEye:Landroid/graphics/Point;
 
-    .line 107
     iput-object p6, p0, Landroid/hardware/camera2/params/Face;->mMouth:Landroid/graphics/Point;
 
-    .line 108
     return-void
 .end method
 
@@ -155,10 +136,8 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 255
     if-nez p1, :cond_0
 
-    .line 256
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -183,7 +162,6 @@
 
     throw v0
 
-    .line 258
     :cond_0
     return-void
 .end method
@@ -194,10 +172,8 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 261
     if-eqz p1, :cond_0
 
-    .line 262
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -222,7 +198,6 @@
 
     throw v0
 
-    .line 264
     :cond_0
     return-void
 .end method
@@ -233,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Landroid/hardware/camera2/params/Face;->mBounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -243,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Landroid/hardware/camera2/params/Face;->mId:I
 
     return v0
@@ -253,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/hardware/camera2/params/Face;->mLeftEye:Landroid/graphics/Point;
 
     return-object v0
@@ -263,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Landroid/hardware/camera2/params/Face;->mMouth:Landroid/graphics/Point;
 
     return-object v0
@@ -273,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Landroid/hardware/camera2/params/Face;->mRightEye:Landroid/graphics/Point;
 
     return-object v0
@@ -283,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget v0, p0, Landroid/hardware/camera2/params/Face;->mScore:I
 
     return v0
@@ -293,8 +262,7 @@
     .locals 4
 
     .prologue
-    .line 249
-    const-string/jumbo v0, "{ bounds: %s, score: %s, id: %d, leftEyePosition: %s, rightEyePosition: %s, mouthPosition: %s }"
+    const-string v0, "{ bounds: %s, score: %s, id: %d, leftEyePosition: %s, rightEyePosition: %s, mouthPosition: %s }"
 
     const/4 v1, 0x6
 

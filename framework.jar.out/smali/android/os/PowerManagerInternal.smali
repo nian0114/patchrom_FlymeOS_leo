@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 132
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 76
     if-eq p0, v0, :cond_0
 
     const/4 v1, 0x2
@@ -62,10 +59,8 @@
     .param p0, "wakefulness"    # I
 
     .prologue
-    .line 57
     packed-switch p0, :pswitch_data_0
 
-    .line 67
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -73,31 +68,26 @@
     :goto_0
     return-object v0
 
-    .line 59
     :pswitch_0
     const-string v0, "Asleep"
 
     goto :goto_0
 
-    .line 61
     :pswitch_1
     const-string v0, "Awake"
 
     goto :goto_0
 
-    .line 63
     :pswitch_2
     const-string v0, "Dreaming"
 
     goto :goto_0
 
-    .line 65
     :pswitch_3
     const-string v0, "Dozing"
 
     goto :goto_0
 
-    .line 57
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

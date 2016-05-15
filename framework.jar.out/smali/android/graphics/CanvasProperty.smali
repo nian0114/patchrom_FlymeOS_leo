@@ -24,18 +24,15 @@
     .param p1, "nativeContainer"    # J
 
     .prologue
-    .line 37
     .local p0, "this":Landroid/graphics/CanvasProperty;, "Landroid/graphics/CanvasProperty<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Lcom/android/internal/util/VirtualRefBasePtr;
 
     invoke-direct {v0, p1, p2}, Lcom/android/internal/util/VirtualRefBasePtr;-><init>(J)V
 
     iput-object v0, p0, Landroid/graphics/CanvasProperty;->mProperty:Lcom/android/internal/util/VirtualRefBasePtr;
 
-    .line 39
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 30
     new-instance v0, Landroid/graphics/CanvasProperty;
 
     invoke-static {p0}, Landroid/graphics/CanvasProperty;->nCreateFloat(F)J
@@ -81,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 34
     new-instance v0, Landroid/graphics/CanvasProperty;
 
     iget-wide v2, p0, Landroid/graphics/Paint;->mNativePaint:J
@@ -107,7 +102,6 @@
     .locals 2
 
     .prologue
-    .line 43
     .local p0, "this":Landroid/graphics/CanvasProperty;, "Landroid/graphics/CanvasProperty<TT;>;"
     iget-object v0, p0, Landroid/graphics/CanvasProperty;->mProperty:Lcom/android/internal/util/VirtualRefBasePtr;
 

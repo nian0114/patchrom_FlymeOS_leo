@@ -68,70 +68,55 @@
     .param p5, "sl"    # Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
     .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mLock:Ljava/lang/Object;
 
-    .line 418
     new-instance v0, Landroid/media/audiopolicy/AudioPolicy$1;
 
     invoke-direct {v0, p0}, Landroid/media/audiopolicy/AudioPolicy$1;-><init>(Landroid/media/audiopolicy/AudioPolicy;)V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mPolicyCb:Landroid/media/audiopolicy/IAudioPolicyCallback;
 
-    .line 105
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
-    .line 106
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
-    .line 107
     iput-object p2, p0, Landroid/media/audiopolicy/AudioPolicy;->mContext:Landroid/content/Context;
 
-    .line 108
     if-nez p3, :cond_0
 
-    .line 109
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p3
 
-    .line 111
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 112
     new-instance v0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
     invoke-direct {v0, p0, p0, p3}, Landroid/media/audiopolicy/AudioPolicy$EventHandler;-><init>(Landroid/media/audiopolicy/AudioPolicy;Landroid/media/audiopolicy/AudioPolicy;Landroid/os/Looper;)V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
-    .line 117
     :goto_0
     iput-object p4, p0, Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
 
-    .line 118
     iput-object p5, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
-    .line 119
     return-void
 
-    .line 114
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
-    .line 115
     const-string v0, "AudioPolicy"
 
     const-string v1, "No event handler due to looper without a thread"
@@ -151,7 +136,6 @@
     .param p6, "x5"    # Landroid/media/audiopolicy/AudioPolicy$1;
 
     .prologue
-    .line 51
     invoke-direct/range {p0 .. p5}, Landroid/media/audiopolicy/AudioPolicy;-><init>(Landroid/media/audiopolicy/AudioPolicyConfig;Landroid/content/Context;Landroid/os/Looper;Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;)V
 
     return-void
@@ -165,7 +149,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 51
     invoke-direct {p0, p1, p2, p3}, Landroid/media/audiopolicy/AudioPolicy;->sendMsg(ILjava/lang/Object;I)V
 
     return-void
@@ -176,7 +159,6 @@
     .param p0, "x0"    # Landroid/media/audiopolicy/AudioPolicy;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/media/audiopolicy/AudioPolicy;->onPolicyStatusChange()V
 
     return-void
@@ -187,7 +169,6 @@
     .param p0, "x0"    # Landroid/media/audiopolicy/AudioPolicy;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
 
     return-object v0
@@ -198,7 +179,6 @@
     .param p0, "mix"    # Landroid/media/audiopolicy/AudioMix;
 
     .prologue
-    .line 476
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,15 +215,12 @@
     .end annotation
 
     .prologue
-    .line 236
     if-nez p1, :cond_1
 
-    .line 237
     if-eqz p2, :cond_0
 
     const-string v0, "Invalid null AudioMix for AudioTrack creation"
 
-    .line 239
     .local v0, "msg":Ljava/lang/String;
     :goto_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -252,14 +229,12 @@
 
     throw v1
 
-    .line 237
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     const-string v0, "Invalid null AudioMix for AudioRecord creation"
 
     goto :goto_0
 
-    .line 241
     :cond_1
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
@@ -271,7 +246,6 @@
 
     if-nez v1, :cond_2
 
-    .line 242
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid mix: not part of this policy"
@@ -280,7 +254,6 @@
 
     throw v1
 
-    .line 244
     :cond_2
     invoke-virtual {p1}, Landroid/media/audiopolicy/AudioMix;->getRouteFlags()I
 
@@ -292,7 +265,6 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 246
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid AudioMix: not defined for loop back"
@@ -301,7 +273,6 @@
 
     throw v1
 
-    .line 248
     :cond_3
     if-eqz p2, :cond_4
 
@@ -313,7 +284,6 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 249
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid AudioMix: not defined for being a recording source"
@@ -322,7 +292,6 @@
 
     throw v1
 
-    .line 252
     :cond_4
     if-nez p2, :cond_5
 
@@ -332,7 +301,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 253
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid AudioMix: not defined for capturing playback"
@@ -341,7 +309,6 @@
 
     throw v1
 
-    .line 256
     :cond_5
     return-void
 .end method
@@ -350,20 +317,16 @@
     .locals 2
 
     .prologue
-    .line 496
     sget-object v1, Landroid/media/audiopolicy/AudioPolicy;->sService:Landroid/media/IAudioService;
 
     if-eqz v1, :cond_0
 
-    .line 497
     sget-object v1, Landroid/media/audiopolicy/AudioPolicy;->sService:Landroid/media/IAudioService;
 
-    .line 501
     .local v0, "b":Landroid/os/IBinder;
     :goto_0
     return-object v1
 
-    .line 499
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     const-string v1, "audio"
@@ -372,7 +335,6 @@
 
     move-result-object v0
 
-    .line 500
     .restart local v0    # "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/media/IAudioService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/IAudioService;
 
@@ -380,7 +342,6 @@
 
     sput-object v1, Landroid/media/audiopolicy/AudioPolicy;->sService:Landroid/media/IAudioService;
 
-    .line 501
     sget-object v1, Landroid/media/audiopolicy/AudioPolicy;->sService:Landroid/media/IAudioService;
 
     goto :goto_0
@@ -390,40 +351,32 @@
     .locals 3
 
     .prologue
-    .line 403
     iget-object v2, p0, Landroid/media/audiopolicy/AudioPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 404
     :try_start_0
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
     if-nez v1, :cond_0
 
-    .line 405
     monitor-exit v2
 
-    .line 410
     :goto_0
     return-void
 
-    .line 407
     :cond_0
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
-    .line 408
     .local v0, "l":Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 409
     invoke-virtual {v0}, Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;->onStatusChange()V
 
     goto :goto_0
 
-    .line 408
     .end local v0    # "l":Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
     :catchall_0
     move-exception v1
@@ -442,12 +395,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 211
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 212
     :try_start_0
     iget v2, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
@@ -455,39 +406,32 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 213
     const-string v2, "AudioPolicy"
 
     const-string v3, "Cannot use unregistered AudioPolicy"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     monitor-exit v1
 
-    .line 231
     :goto_0
     return v0
 
-    .line 216
     :cond_0
     iget-object v2, p0, Landroid/media/audiopolicy/AudioPolicy;->mContext:Landroid/content/Context;
 
     if-nez v2, :cond_1
 
-    .line 217
     const-string v2, "AudioPolicy"
 
     const-string v3, "Cannot use AudioPolicy without context"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     monitor-exit v1
 
     goto :goto_0
 
-    .line 224
     :catchall_0
     move-exception v0
 
@@ -497,32 +441,27 @@
 
     throw v0
 
-    .line 220
     :cond_1
     :try_start_1
     iget-object v2, p0, Landroid/media/audiopolicy/AudioPolicy;->mRegistrationId:Ljava/lang/String;
 
     if-nez v2, :cond_2
 
-    .line 221
     const-string v2, "AudioPolicy"
 
     const-string v3, "Cannot use unregistered AudioPolicy"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     monitor-exit v1
 
     goto :goto_0
 
-    .line 224
     :cond_2
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 225
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.MODIFY_AUDIO_ROUTING"
@@ -533,7 +472,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 227
     const-string v1, "AudioPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -582,7 +520,6 @@
 
     goto :goto_0
 
-    .line 231
     :cond_3
     const/4 v0, 0x1
 
@@ -594,17 +531,14 @@
     .param p1, "msg"    # I
 
     .prologue
-    .line 480
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
     if-eqz v0, :cond_0
 
-    .line 481
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
     invoke-virtual {v0, p1}, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->sendEmptyMessage(I)Z
 
-    .line 483
     :cond_0
     return-void
 .end method
@@ -616,12 +550,10 @@
     .param p3, "i"    # I
 
     .prologue
-    .line 486
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
     if-eqz v0, :cond_0
 
-    .line 487
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
 
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy;->mEventHandler:Landroid/media/audiopolicy/AudioPolicy$EventHandler;
@@ -634,7 +566,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 490
     :cond_0
     return-void
 .end method
@@ -645,7 +576,6 @@
     .locals 1
 
     .prologue
-    .line 416
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mPolicyCb:Landroid/media/audiopolicy/IAudioPolicyCallback;
 
     return-object v0
@@ -663,32 +593,26 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 325
     invoke-direct {p0}, Landroid/media/audiopolicy/AudioPolicy;->policyReadyToUse()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 326
     const-string v2, "AudioPolicy"
 
     const-string v3, "Cannot create AudioRecord sink for AudioMix"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     const/4 v0, 0x0
 
-    .line 348
     :goto_0
     return-object v0
 
-    .line 329
     :cond_0
     invoke-direct {p0, p1, v6}, Landroid/media/audiopolicy/AudioPolicy;->checkMixReadyToUse(Landroid/media/audiopolicy/AudioMix;Z)V
 
-    .line 332
     new-instance v2, Landroid/media/AudioFormat$Builder;
 
     invoke-virtual {p1}, Landroid/media/audiopolicy/AudioMix;->getFormat()Landroid/media/AudioFormat;
@@ -717,7 +641,6 @@
 
     move-result-object v1
 
-    .line 337
     .local v1, "mixFormat":Landroid/media/AudioFormat;
     new-instance v0, Landroid/media/AudioRecord;
 
@@ -767,7 +690,6 @@
 
     invoke-direct {v0, v2, v1, v3, v6}, Landroid/media/AudioRecord;-><init>(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;II)V
 
-    .line 348
     .local v0, "ar":Landroid/media/AudioRecord;
     goto :goto_0
 .end method
@@ -784,32 +706,26 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 364
     invoke-direct {p0}, Landroid/media/audiopolicy/AudioPolicy;->policyReadyToUse()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 365
     const-string v1, "AudioPolicy"
 
     const-string v2, "Cannot create AudioTrack source for AudioMix"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     const/4 v0, 0x0
 
-    .line 381
     :goto_0
     return-object v0
 
-    .line 368
     :cond_0
     invoke-direct {p0, p1, v4}, Landroid/media/audiopolicy/AudioPolicy;->checkMixReadyToUse(Landroid/media/audiopolicy/AudioMix;Z)V
 
-    .line 370
     new-instance v0, Landroid/media/AudioTrack;
 
     new-instance v1, Landroid/media/AudioAttributes$Builder;
@@ -870,7 +786,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/media/AudioTrack;-><init>(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;III)V
 
-    .line 381
     .local v0, "at":Landroid/media/AudioTrack;
     goto :goto_0
 .end method
@@ -879,7 +794,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
     return-object v0
@@ -889,7 +803,6 @@
     .locals 1
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
     iget v0, v0, Landroid/media/audiopolicy/AudioPolicyConfig;->mDuckingPolicy:I
@@ -901,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 386
     iget v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
     return v0
@@ -911,7 +823,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
 
     if-eqz v0, :cond_0
@@ -940,12 +851,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 282
     if-eqz p1, :cond_0
 
     if-eq p1, v6, :cond_0
 
-    .line 284
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -970,13 +879,11 @@
 
     throw v3
 
-    .line 286
     :cond_0
     iget-object v4, p0, Landroid/media/audiopolicy/AudioPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 287
     :try_start_0
     iget v3, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
@@ -984,7 +891,6 @@
 
     if-eq v3, v5, :cond_1
 
-    .line 288
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string v5, "Cannot change ducking behavior for unregistered policy"
@@ -993,7 +899,6 @@
 
     throw v3
 
-    .line 309
     :catchall_0
     move-exception v3
 
@@ -1003,7 +908,6 @@
 
     throw v3
 
-    .line 291
     :cond_1
     if-ne p1, v6, :cond_2
 
@@ -1012,7 +916,6 @@
 
     if-nez v3, :cond_2
 
-    .line 294
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string v5, "Cannot handle ducking without an audio focus listener"
@@ -1021,7 +924,6 @@
 
     throw v3
 
-    .line 297
     :cond_2
     invoke-static {}, Landroid/media/audiopolicy/AudioPolicy;->getService()Landroid/media/IAudioService;
     :try_end_1
@@ -1029,7 +931,6 @@
 
     move-result-object v1
 
-    .line 299
     .local v1, "service":Landroid/media/IAudioService;
     :try_start_2
     invoke-virtual {p0}, Landroid/media/audiopolicy/AudioPolicy;->cb()Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -1040,11 +941,9 @@
 
     move-result v2
 
-    .line 301
     .local v2, "status":I
     if-nez v2, :cond_3
 
-    .line 302
     iget-object v3, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
     iput p1, v3, Landroid/media/audiopolicy/AudioPolicyConfig;->mDuckingPolicy:I
@@ -1052,21 +951,17 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 304
     :cond_3
     :try_start_3
     monitor-exit v4
 
-    .line 307
     .end local v2    # "status":I
     :goto_0
     return v2
 
-    .line 305
     :catch_0
     move-exception v0
 
-    .line 306
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "AudioPolicy"
 
@@ -1074,7 +969,6 @@
 
     invoke-static {v3, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 307
     const/4 v2, -0x1
 
     monitor-exit v4
@@ -1089,43 +983,34 @@
     .param p1, "regId"    # Ljava/lang/String;
 
     .prologue
-    .line 198
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 199
     :try_start_0
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy;->mRegistrationId:Ljava/lang/String;
 
-    .line 200
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
     invoke-virtual {v0, p1}, Landroid/media/audiopolicy/AudioPolicyConfig;->setRegistration(Ljava/lang/String;)V
 
-    .line 201
     if-eqz p1, :cond_0
 
-    .line 202
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
-    .line 206
     :goto_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 207
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/media/audiopolicy/AudioPolicy;->sendMsg(I)V
 
-    .line 208
     return-void
 
-    .line 204
     :cond_0
     const/4 v0, 0x1
 
@@ -1134,7 +1019,6 @@
 
     goto :goto_0
 
-    .line 206
     :catchall_0
     move-exception v0
 
@@ -1149,14 +1033,12 @@
     .locals 3
 
     .prologue
-    .line 505
     new-instance v0, Ljava/lang/String;
 
     const-string v1, "android.media.audiopolicy.AudioPolicy:\n"
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 506
     .local v0, "textDump":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1186,6 +1068,5 @@
 
     move-result-object v0
 
-    .line 507
     return-object v0
 .end method

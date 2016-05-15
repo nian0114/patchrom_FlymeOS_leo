@@ -13,24 +13,19 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     if-nez p1, :cond_0
 
-    .line 29
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 31
     :cond_0
     iput-object p1, p0, Lcom/android/server/firewall/FilterFactory;->mTag:Ljava/lang/String;
 
-    .line 32
     return-void
 .end method
 
@@ -40,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/android/server/firewall/FilterFactory;->mTag:Ljava/lang/String;
 
     return-object v0

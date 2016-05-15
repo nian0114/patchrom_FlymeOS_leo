@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 75
     new-instance v0, Landroid/content/ContentProviderResult$1;
 
     invoke-direct {v0}, Landroid/content/ContentProviderResult$1;-><init>()V
@@ -45,22 +44,18 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
-    .line 41
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
-    .line 42
     return-void
 .end method
 
@@ -70,10 +65,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iget-object v0, p1, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
     invoke-static {v0, p2}, Landroid/content/ContentProvider;->maybeAddUserId(Landroid/net/Uri;I)Landroid/net/Uri;
@@ -82,12 +75,10 @@
 
     iput-object v0, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
-    .line 58
     iget-object v0, p1, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
     iput-object v0, p0, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
-    .line 59
     return-void
 .end method
 
@@ -96,30 +87,25 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "uri must not be null"
+    const-string v1, "uri must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 35
     :cond_0
     iput-object p1, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
-    .line 36
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
-    .line 37
     return-void
 .end method
 
@@ -130,21 +116,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 46
     .local v0, "type":I
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -155,18 +137,14 @@
 
     iput-object v1, p0, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
-    .line 48
     iput-object v2, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
-    .line 53
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     iput-object v2, p0, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
-    .line 51
     sget-object v1, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -186,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return v0
@@ -196,12 +173,10 @@
     .locals 2
 
     .prologue
-    .line 87
     iget-object v0, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
 
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,7 +207,6 @@
 
     move-result-object v0
 
-    .line 90
     :goto_0
     return-object v0
 
@@ -272,17 +246,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 62
     iget-object v0, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
     if-nez v0, :cond_0
 
-    .line 63
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 64
     iget-object v0, p0, Landroid/content/ContentProviderResult;->count:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -291,17 +262,14 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 67
     iget-object v0, p0, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
     const/4 v1, 0x0

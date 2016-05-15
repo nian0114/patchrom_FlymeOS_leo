@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 548
     invoke-direct {p0}, Landroid/print/IPrintSpoolerCallbacks$Stub;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lcom/android/server/print/RemotePrintSpooler$1;
 
     .prologue
-    .line 548
     invoke-direct {p0}, Lcom/android/server/print/RemotePrintSpooler$BasePrintSpoolerServiceCallbacks;-><init>()V
 
     return-void
@@ -44,7 +42,6 @@
     .param p2, "sequence"    # I
 
     .prologue
-    .line 563
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p2, "sequence"    # I
 
     .prologue
-    .line 558
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 553
     .local p1, "printJobIds":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     return-void
 .end method
@@ -83,7 +78,6 @@
     .param p2, "sequece"    # I
 
     .prologue
-    .line 568
     return-void
 .end method
 
@@ -93,6 +87,5 @@
     .param p2, "sequence"    # I
 
     .prologue
-    .line 573
     return-void
 .end method

@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 128
     iput-object p1, p0, Landroid/widget/SuggestionsAdapter$1;->this$0:Landroid/widget/SuggestionsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/SuggestionsAdapter$1;->mPreviousLength:I
@@ -50,14 +48,11 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 133
     if-nez p1, :cond_0
 
-    .line 137
     :goto_0
     return-wide v0
 
-    .line 135
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -69,7 +64,6 @@
 
     const-wide/16 v0, 0x1f4
 
-    .line 136
     .local v0, "delay":J
     :cond_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I

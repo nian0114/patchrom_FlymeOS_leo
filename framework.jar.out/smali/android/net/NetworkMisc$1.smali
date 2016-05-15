@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +48,10 @@
 
     const/4 v3, 0x0
 
-    .line 78
     new-instance v0, Landroid/net/NetworkMisc;
 
     invoke-direct {v0}, Landroid/net/NetworkMisc;-><init>()V
 
-    .line 79
     .local v0, "networkMisc":Landroid/net/NetworkMisc;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -67,7 +64,6 @@
     :goto_0
     iput-boolean v1, v0, Landroid/net/NetworkMisc;->allowBypass:Z
 
-    .line 80
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -77,26 +73,22 @@
     :goto_1
     iput-boolean v2, v0, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
-    .line 82
     return-object v0
 
     :cond_0
     move v1, v3
 
-    .line 79
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 80
     goto :goto_1
 .end method
 
@@ -104,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 75
     invoke-virtual {p0, p1}, Landroid/net/NetworkMisc$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/NetworkMisc;
 
     move-result-object v0
@@ -117,7 +108,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 87
     new-array v0, p1, [Landroid/net/NetworkMisc;
 
     return-object v0
@@ -127,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 75
     invoke-virtual {p0, p1}, Landroid/net/NetworkMisc$1;->newArray(I)[Landroid/net/NetworkMisc;
 
     move-result-object v0

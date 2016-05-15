@@ -39,7 +39,6 @@
     .param p2, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 423
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$3;->this$0:Landroid/service/media/MediaBrowserService;
 
     iput-object p3, p0, Landroid/service/media/MediaBrowserService$3;->val$parentId:Ljava/lang/String;
@@ -57,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 423
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Landroid/service/media/MediaBrowserService$3;->onResultSent(Ljava/util/List;)V
@@ -78,18 +76,16 @@
     .end annotation
 
     .prologue
-    .line 426
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/media/browse/MediaBrowser$MediaItem;>;"
     if-nez p1, :cond_0
 
-    .line 427
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onLoadChildren sent null list for id "
+    const-string v4, "onLoadChildren sent null list for id "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,7 +105,6 @@
 
     throw v2
 
-    .line 430
     :cond_0
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$3;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -134,17 +129,14 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 446
     :goto_0
     return-void
 
-    .line 438
     :cond_1
     new-instance v1, Landroid/content/pm/ParceledListSlice;
 
     invoke-direct {v1, p1}, Landroid/content/pm/ParceledListSlice;-><init>(Ljava/util/List;)V
 
-    .line 440
     .local v1, "pls":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/media/browse/MediaBrowser$MediaItem;>;"
     :try_start_0
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$3;->val$connection:Landroid/service/media/MediaBrowserService$ConnectionRecord;
@@ -159,11 +151,9 @@
 
     goto :goto_0
 
-    .line 441
     :catch_0
     move-exception v0
 
-    .line 443
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v2, "MediaBrowserService"
 

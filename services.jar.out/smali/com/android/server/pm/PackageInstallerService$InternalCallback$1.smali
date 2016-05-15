@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1033
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->this$1:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->val$session:Lcom/android/server/pm/PackageInstallerSession;
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 1036
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->this$1:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
@@ -56,7 +54,6 @@
 
     monitor-enter v2
 
-    .line 1037
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->this$1:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
 
@@ -73,7 +70,6 @@
 
     invoke-virtual {v1, v3}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1038
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->this$1:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
@@ -91,7 +87,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1040
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->this$1:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
@@ -105,7 +100,6 @@
 
     move-result-object v0
 
-    .line 1041
     .local v0, "appIconFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -113,10 +107,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1042
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1045
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback$1;->this$1:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
 
@@ -125,13 +117,10 @@
     # invokes: Lcom/android/server/pm/PackageInstallerService;->writeSessionsLocked()V
     invoke-static {v1}, Lcom/android/server/pm/PackageInstallerService;->access$100(Lcom/android/server/pm/PackageInstallerService;)V
 
-    .line 1046
     monitor-exit v2
 
-    .line 1047
     return-void
 
-    .line 1046
     .end local v0    # "appIconFile":Ljava/io/File;
     :catchall_0
     move-exception v1

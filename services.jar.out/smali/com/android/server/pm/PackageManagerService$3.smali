@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 8758
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,21 +49,16 @@
 
     const/4 v2, -0x1
 
-    .line 8760
     iget v0, p1, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 8761
     .local v0, "v1":I
     iget v1, p2, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 8763
     .local v1, "v2":I
     if-eq v0, v1, :cond_2
 
-    .line 8764
     if-le v0, v1, :cond_1
 
-    .line 8783
     :cond_0
     :goto_0
     return v2
@@ -72,27 +66,21 @@
     :cond_1
     move v2, v3
 
-    .line 8764
     goto :goto_0
 
-    .line 8766
     :cond_2
     iget v0, p1, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 8767
     iget v1, p2, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 8768
     if-eq v0, v1, :cond_3
 
-    .line 8769
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 8771
     :cond_3
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
@@ -100,7 +88,6 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 8772
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
     if-nez v4, :cond_0
@@ -109,24 +96,19 @@
 
     goto :goto_0
 
-    .line 8774
     :cond_4
     iget v0, p1, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 8775
     iget v1, p2, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 8777
     if-eq v0, v1, :cond_5
 
-    .line 8778
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 8780
     :cond_5
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
@@ -134,7 +116,6 @@
 
     if-eq v4, v5, :cond_6
 
-    .line 8781
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
     if-nez v4, :cond_0
@@ -143,7 +124,6 @@
 
     goto :goto_0
 
-    .line 8783
     :cond_6
     const/4 v2, 0x0
 
@@ -154,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 8758
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     check-cast p2, Landroid/content/pm/ResolveInfo;

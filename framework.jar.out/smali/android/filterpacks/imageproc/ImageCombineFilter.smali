@@ -24,24 +24,18 @@
     .param p4, "parameterName"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mCurrentTarget:I
 
-    .line 45
     iput-object p2, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mInputNames:[Ljava/lang/String;
 
-    .line 46
     iput-object p3, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mOutputName:Ljava/lang/String;
 
-    .line 47
     iput-object p4, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mParameterName:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -49,7 +43,6 @@
     .locals 8
 
     .prologue
-    .line 72
     iget-object v5, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mInputNames:[Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -64,7 +57,6 @@
 
     move-result v4
 
-    .line 73
     .local v4, "target":I
     iget-object v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mInputNames:[Ljava/lang/String;
 
@@ -80,7 +72,6 @@
 
     aget-object v2, v0, v1
 
-    .line 74
     .local v2, "inputName":Ljava/lang/String;
     invoke-virtual {p0, v2}, Landroid/filterpacks/imageproc/ImageCombineFilter;->getInputFormat(Ljava/lang/String;)Landroid/filterfw/core/FrameFormat;
 
@@ -92,7 +83,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 75
     new-instance v5, Ljava/lang/RuntimeException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -123,13 +113,11 @@
 
     throw v5
 
-    .line 73
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 79
     .end local v2    # "inputName":Ljava/lang/String;
     :cond_1
     return-void
@@ -146,7 +134,6 @@
     .param p2, "inputFormat"    # Landroid/filterfw/core/FrameFormat;
 
     .prologue
-    .line 68
     return-object p2
 .end method
 
@@ -160,10 +147,8 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 84
     const/4 v1, 0x0
 
-    .line 85
     .local v1, "i":I
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mInputNames:[Ljava/lang/String;
 
@@ -171,7 +156,6 @@
 
     new-array v5, v8, [Landroid/filterfw/core/Frame;
 
-    .line 86
     .local v5, "inputs":[Landroid/filterfw/core/Frame;
     iget-object v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mInputNames:[Ljava/lang/String;
 
@@ -191,7 +175,6 @@
 
     aget-object v4, v0, v3
 
-    .line 87
     .local v4, "inputName":Ljava/lang/String;
     add-int/lit8 v1, v2, 0x1
 
@@ -203,7 +186,6 @@
 
     aput-object v8, v5, v2
 
-    .line 86
     add-int/lit8 v3, v3, 0x1
 
     move v2, v1
@@ -212,7 +194,6 @@
     .restart local v2    # "i":I
     goto :goto_0
 
-    .line 91
     .end local v4    # "inputName":Ljava/lang/String;
     :cond_0
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
@@ -229,7 +210,6 @@
 
     move-result-object v7
 
-    .line 94
     .local v7, "output":Landroid/filterfw/core/Frame;
     aget-object v8, v5, v10
 
@@ -243,20 +223,16 @@
 
     invoke-virtual {p0, v8, p1}, Landroid/filterpacks/imageproc/ImageCombineFilter;->updateProgramWithTarget(ILandroid/filterfw/core/FilterContext;)V
 
-    .line 97
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mProgram:Landroid/filterfw/core/Program;
 
     invoke-virtual {v8, v5, v7}, Landroid/filterfw/core/Program;->process([Landroid/filterfw/core/Frame;Landroid/filterfw/core/Frame;)V
 
-    .line 100
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mOutputName:Ljava/lang/String;
 
     invoke-virtual {p0, v8, v7}, Landroid/filterpacks/imageproc/ImageCombineFilter;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 103
     invoke-virtual {v7}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 104
     return-void
 .end method
 
@@ -266,22 +242,19 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 52
     iget-object v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mParameterName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 54
     :try_start_0
     const-class v0, Landroid/filterpacks/imageproc/ImageCombineFilter;
 
-    const-string/jumbo v1, "mProgram"
+    const-string v1, "mProgram"
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v3
 
-    .line 55
     .local v3, "programField":Ljava/lang/reflect/Field;
     iget-object v1, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mParameterName:Ljava/lang/String;
 
@@ -297,7 +270,6 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 60
     .end local v3    # "programField":Ljava/lang/reflect/Field;
     :cond_0
     iget-object v6, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mInputNames:[Ljava/lang/String;
@@ -314,7 +286,6 @@
 
     aget-object v9, v6, v8
 
-    .line 61
     .local v9, "inputName":Ljava/lang/String;
     const/4 v0, 0x3
 
@@ -324,12 +295,10 @@
 
     invoke-virtual {p0, v9, v0}, Landroid/filterpacks/imageproc/ImageCombineFilter;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 60
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 56
     .end local v6    # "arr$":[Ljava/lang/String;
     .end local v8    # "i$":I
     .end local v9    # "inputName":Ljava/lang/String;
@@ -337,7 +306,6 @@
     :catch_0
     move-exception v7
 
-    .line 57
     .local v7, "e":Ljava/lang/NoSuchFieldException;
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -347,7 +315,6 @@
 
     throw v0
 
-    .line 63
     .end local v7    # "e":Ljava/lang/NoSuchFieldException;
     .restart local v6    # "arr$":[Ljava/lang/String;
     .restart local v8    # "i$":I
@@ -361,7 +328,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/ImageCombineFilter;->addOutputBasedOnInput(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     return-void
 .end method
 
@@ -371,26 +337,21 @@
     .param p2, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 107
     iget v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mCurrentTarget:I
 
     if-eq p1, v0, :cond_1
 
-    .line 108
     packed-switch p1, :pswitch_data_0
 
-    .line 118
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mProgram:Landroid/filterfw/core/Program;
 
-    .line 121
     :goto_0
     iget-object v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mProgram:Landroid/filterfw/core/Program;
 
     if-nez v0, :cond_0
 
-    .line 122
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -421,7 +382,6 @@
 
     throw v0
 
-    .line 110
     :pswitch_0
     invoke-virtual {p0, p2}, Landroid/filterpacks/imageproc/ImageCombineFilter;->getNativeProgram(Landroid/filterfw/core/FilterContext;)Landroid/filterfw/core/Program;
 
@@ -431,7 +391,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_1
     invoke-virtual {p0, p2}, Landroid/filterpacks/imageproc/ImageCombineFilter;->getShaderProgram(Landroid/filterfw/core/FilterContext;)Landroid/filterfw/core/Program;
 
@@ -441,20 +400,16 @@
 
     goto :goto_0
 
-    .line 125
     :cond_0
     iget-object v0, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mProgram:Landroid/filterfw/core/Program;
 
     invoke-virtual {p0, v0, p2}, Landroid/filterpacks/imageproc/ImageCombineFilter;->initProgramInputs(Landroid/filterfw/core/Program;Landroid/filterfw/core/FilterContext;)V
 
-    .line 126
     iput p1, p0, Landroid/filterpacks/imageproc/ImageCombineFilter;->mCurrentTarget:I
 
-    .line 128
     :cond_1
     return-void
 
-    .line 108
     nop
 
     :pswitch_data_0

@@ -20,7 +20,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     invoke-direct {p0, p1}, Lcom/android/server/firewall/FilterFactory;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -41,18 +40,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 50
     const-string v1, "name"
 
     invoke-interface {p1, v3, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 51
     .local v0, "categoryName":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 52
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v2, "Category name must be specified."
@@ -61,7 +57,6 @@
 
     throw v1
 
-    .line 55
     :cond_0
     new-instance v1, Lcom/android/server/firewall/CategoryFilter;
 

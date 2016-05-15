@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 245
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$3;, "Landroid/content/pm/RegisteredServicesCache.3;"
     iput-object p1, p0, Landroid/content/pm/RegisteredServicesCache$3;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
@@ -57,7 +56,6 @@
     .locals 4
 
     .prologue
-    .line 247
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$3;, "Landroid/content/pm/RegisteredServicesCache.3;"
     iget-object v0, p0, Landroid/content/pm/RegisteredServicesCache$3;->val$listener2:Landroid/content/pm/RegisteredServicesCacheListener;
 
@@ -69,6 +67,5 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/content/pm/RegisteredServicesCacheListener;->onServiceChanged(Ljava/lang/Object;IZ)V
 
-    .line 248
     return-void
 .end method

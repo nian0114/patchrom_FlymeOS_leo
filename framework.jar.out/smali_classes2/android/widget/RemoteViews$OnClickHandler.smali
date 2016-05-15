@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,13 +35,11 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 211
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 212
     .local v0, "context":Landroid/content/Context;
     const/4 v1, 0x0
 
@@ -60,7 +57,6 @@
 
     move-result-object v8
 
-    .line 215
     .local v8, "opts":Landroid/app/ActivityOptions;
     invoke-virtual {p2}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
 
@@ -83,7 +79,6 @@
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 227
     const/4 v1, 0x1
 
     .end local v0    # "context":Landroid/content/Context;
@@ -91,11 +86,9 @@
     :goto_0
     return v1
 
-    .line 219
     :catch_0
     move-exception v7
 
-    .line 220
     .local v7, "e":Landroid/content/IntentSender$SendIntentException;
     const-string v1, "RemoteViews"
 
@@ -105,15 +98,12 @@
 
     move v1, v9
 
-    .line 221
     goto :goto_0
 
-    .line 222
     .end local v7    # "e":Landroid/content/IntentSender$SendIntentException;
     :catch_1
     move-exception v7
 
-    .line 223
     .local v7, "e":Ljava/lang/Exception;
     const-string v1, "RemoteViews"
 
@@ -123,6 +113,5 @@
 
     move v1, v9
 
-    .line 225
     goto :goto_0
 .end method

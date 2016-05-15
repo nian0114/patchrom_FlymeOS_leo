@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 370
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 373
     :try_start_0
     new-instance v1, Landroid/content/pm/ContainerEncryptionParams;
 
@@ -57,15 +55,12 @@
     :try_end_0
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 376
     :goto_0
     return-object v1
 
-    .line 374
     :catch_0
     move-exception v0
 
-    .line 375
     .local v0, "e":Ljava/security/InvalidAlgorithmParameterException;
     const-string v1, "ContainerEncryptionParams"
 
@@ -75,7 +70,6 @@
 
     move-object v1, v2
 
-    .line 376
     goto :goto_0
 .end method
 
@@ -83,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 370
     invoke-virtual {p0, p1}, Landroid/content/pm/ContainerEncryptionParams$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/pm/ContainerEncryptionParams;
 
     move-result-object v0
@@ -96,7 +89,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 381
     new-array v0, p1, [Landroid/content/pm/ContainerEncryptionParams;
 
     return-object v0
@@ -106,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 370
     invoke-virtual {p0, p1}, Landroid/content/pm/ContainerEncryptionParams$1;->newArray(I)[Landroid/content/pm/ContainerEncryptionParams;
 
     move-result-object v0

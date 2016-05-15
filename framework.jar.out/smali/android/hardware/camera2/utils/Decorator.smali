@@ -49,18 +49,14 @@
     .end annotation
 
     .prologue
-    .line 68
     .local p0, "this":Landroid/hardware/camera2/utils/Decorator;, "Landroid/hardware/camera2/utils/Decorator<TT;>;"
     .local p1, "obj":Ljava/lang/Object;, "TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     iput-object p1, p0, Landroid/hardware/camera2/utils/Decorator;->mObject:Ljava/lang/Object;
 
-    .line 70
     iput-object p2, p0, Landroid/hardware/camera2/utils/Decorator;->mListener:Landroid/hardware/camera2/utils/Decorator$DecoratorListener;
 
-    .line 71
     return-void
 .end method
 
@@ -78,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p0, "obj":Ljava/lang/Object;, "TT;"
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -121,25 +116,21 @@
     .end annotation
 
     .prologue
-    .line 77
     .local p0, "this":Landroid/hardware/camera2/utils/Decorator;, "Landroid/hardware/camera2/utils/Decorator<TT;>;"
     const/4 v1, 0x0
 
-    .line 79
     .local v1, "result":Ljava/lang/Object;
     :try_start_0
     iget-object v3, p0, Landroid/hardware/camera2/utils/Decorator;->mListener:Landroid/hardware/camera2/utils/Decorator$DecoratorListener;
 
     invoke-interface {v3, p2, p3}, Landroid/hardware/camera2/utils/Decorator$DecoratorListener;->onBeforeInvocation(Ljava/lang/reflect/Method;[Ljava/lang/Object;)V
 
-    .line 80
     iget-object v3, p0, Landroid/hardware/camera2/utils/Decorator;->mObject:Ljava/lang/Object;
 
     invoke-virtual {p2, v3, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 81
     iget-object v3, p0, Landroid/hardware/camera2/utils/Decorator;->mListener:Landroid/hardware/camera2/utils/Decorator$DecoratorListener;
 
     invoke-interface {v3, p2, p3, v1}, Landroid/hardware/camera2/utils/Decorator$DecoratorListener;->onAfterInvocation(Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)V
@@ -147,28 +138,23 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
     iget-object v3, p0, Landroid/hardware/camera2/utils/Decorator;->mListener:Landroid/hardware/camera2/utils/Decorator$DecoratorListener;
 
     invoke-interface {v3, p2, p3}, Landroid/hardware/camera2/utils/Decorator$DecoratorListener;->onFinally(Ljava/lang/reflect/Method;[Ljava/lang/Object;)V
 
-    .line 90
     .end local v1    # "result":Ljava/lang/Object;
     :goto_0
     return-object v1
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
 
     move-result-object v2
 
-    .line 84
     .local v2, "t":Ljava/lang/Throwable;
     iget-object v3, p0, Landroid/hardware/camera2/utils/Decorator;->mListener:Landroid/hardware/camera2/utils/Decorator$DecoratorListener;
 
@@ -178,12 +164,10 @@
 
     if-nez v3, :cond_0
 
-    .line 85
     throw v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 88
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     .end local v2    # "t":Ljava/lang/Throwable;
     :catchall_0

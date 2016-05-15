@@ -59,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 1215
     new-instance v0, Landroid/content/pm/PackageInstaller$SessionInfo$1;
 
     invoke-direct {v0}, Landroid/content/pm/PackageInstaller$SessionInfo$1;-><init>()V
@@ -73,10 +72,8 @@
     .locals 0
 
     .prologue
-    .line 1077
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1078
     return-void
 .end method
 
@@ -89,38 +86,32 @@
 
     const/4 v2, 0x0
 
-    .line 1081
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1082
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sessionId:I
 
-    .line 1083
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->installerPackageName:Ljava/lang/String;
 
-    .line 1084
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->resolvedBaseCodePath:Ljava/lang/String;
 
-    .line 1085
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->progress:F
 
-    .line 1086
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -132,7 +123,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sealed:Z
 
-    .line 1087
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -142,28 +132,24 @@
     :goto_1
     iput-boolean v1, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->active:Z
 
-    .line 1089
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->mode:I
 
-    .line 1090
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sizeBytes:J
 
-    .line 1091
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appPackageName:Ljava/lang/String;
 
-    .line 1092
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -174,26 +160,22 @@
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appIcon:Landroid/graphics/Bitmap;
 
-    .line 1093
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appLabel:Ljava/lang/CharSequence;
 
-    .line 1094
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 1086
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 1087
     goto :goto_1
 .end method
 
@@ -203,14 +185,12 @@
     .locals 3
 
     .prologue
-    .line 1180
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.content.pm.action.SESSION_DETAILS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1181
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.content.pm.extra.SESSION_ID"
 
@@ -218,17 +198,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1182
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->installerPackageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1183
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1184
     return-object v0
 .end method
 
@@ -236,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 1195
     const/4 v0, 0x0
 
     return v0
@@ -246,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 1159
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -256,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 1167
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -266,7 +240,6 @@
     .locals 1
 
     .prologue
-    .line 1151
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appPackageName:Ljava/lang/String;
 
     return-object v0
@@ -278,7 +251,6 @@
     .end annotation
 
     .prologue
-    .line 1190
     invoke-virtual {p0}, Landroid/content/pm/PackageInstaller$SessionInfo;->createDetailsIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -290,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 1107
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->installerPackageName:Ljava/lang/String;
 
     return-object v0
@@ -300,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 1120
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->progress:F
 
     return v0
@@ -310,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 1100
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sessionId:I
 
     return v0
@@ -320,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 1137
     iget-boolean v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->active:Z
 
     return v0
@@ -332,7 +300,6 @@
     .end annotation
 
     .prologue
-    .line 1143
     invoke-virtual {p0}, Landroid/content/pm/PackageInstaller$SessionInfo;->isActive()Z
 
     move-result v0
@@ -350,27 +317,22 @@
 
     const/4 v2, 0x0
 
-    .line 1200
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sessionId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1201
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->installerPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1202
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->resolvedBaseCodePath:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1203
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->progress:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1204
     iget-boolean v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sealed:Z
 
     if-eqz v0, :cond_0
@@ -380,7 +342,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1205
     iget-boolean v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->active:Z
 
     if-eqz v0, :cond_1
@@ -388,27 +349,22 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1207
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->mode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1208
     iget-wide v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->sizeBytes:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1209
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1210
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1211
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionInfo;->appLabel:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_2
@@ -422,22 +378,18 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1212
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 1204
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 1205
     goto :goto_1
 
-    .line 1211
     :cond_2
     const/4 v0, 0x0
 

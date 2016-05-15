@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 107
     new-instance v0, Landroid/net/ScoredNetwork$1;
 
     invoke-direct {v0}, Landroid/net/ScoredNetwork$1;-><init>()V
@@ -46,16 +45,12 @@
     .param p2, "rssiCurve"    # Landroid/net/RssiCurve;
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
-    .line 58
     iput-object p2, p0, Landroid/net/ScoredNetwork;->rssiCurve:Landroid/net/RssiCurve;
 
-    .line 59
     return-void
 .end method
 
@@ -64,10 +59,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     sget-object v0, Landroid/net/NetworkKey;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -78,7 +71,6 @@
 
     iput-object v0, p0, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
-    .line 63
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -87,7 +79,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 64
     sget-object v0, Landroid/net/RssiCurve;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -98,11 +89,9 @@
 
     iput-object v0, p0, Landroid/net/ScoredNetwork;->rssiCurve:Landroid/net/RssiCurve;
 
-    .line 68
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     const/4 v0, 0x0
 
@@ -117,7 +106,6 @@
     .param p2, "x1"    # Landroid/net/ScoredNetwork$1;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1}, Landroid/net/ScoredNetwork;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -129,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return v0
@@ -144,15 +131,12 @@
 
     const/4 v2, 0x0
 
-    .line 88
     if-ne p0, p1, :cond_1
 
-    .line 93
     :cond_0
     :goto_0
     return v1
 
-    .line 89
     :cond_1
     if-eqz p1, :cond_2
 
@@ -174,10 +158,8 @@
     :cond_3
     move-object v0, p1
 
-    .line 91
     check-cast v0, Landroid/net/ScoredNetwork;
 
-    .line 93
     .local v0, "that":Landroid/net/ScoredNetwork;
     iget-object v3, p0, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
@@ -209,7 +191,6 @@
     .locals 3
 
     .prologue
-    .line 99
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -237,7 +218,6 @@
     .locals 2
 
     .prologue
-    .line 104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,31 +265,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
     invoke-virtual {v0, p1, p2}, Landroid/net/NetworkKey;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 78
     iget-object v0, p0, Landroid/net/ScoredNetwork;->rssiCurve:Landroid/net/RssiCurve;
 
     if-eqz v0, :cond_0
 
-    .line 79
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 80
     iget-object v0, p0, Landroid/net/ScoredNetwork;->rssiCurve:Landroid/net/RssiCurve;
 
     invoke-virtual {v0, p1, p2}, Landroid/net/RssiCurve;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 84
     :goto_0
     return-void
 
-    .line 82
     :cond_0
     const/4 v0, 0x0
 

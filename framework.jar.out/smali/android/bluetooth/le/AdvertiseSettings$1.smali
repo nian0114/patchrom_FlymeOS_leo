@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 143
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 151
     new-instance v0, Landroid/bluetooth/le/AdvertiseSettings;
 
     const/4 v1, 0x0
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Landroid/bluetooth/le/AdvertiseSettings$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/le/AdvertiseSettings;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 146
     new-array v0, p1, [Landroid/bluetooth/le/AdvertiseSettings;
 
     return-object v0
@@ -82,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Landroid/bluetooth/le/AdvertiseSettings$1;->newArray(I)[Landroid/bluetooth/le/AdvertiseSettings;
 
     move-result-object v0

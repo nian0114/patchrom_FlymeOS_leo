@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 486
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     iput-object p2, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->val$hardwareImpl:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 489
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->val$hardwareImpl:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->val$config:Landroid/media/tv/TvStreamConfig;
@@ -56,6 +54,5 @@
     # invokes: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->stopCapture(Landroid/media/tv/TvStreamConfig;)Z
     invoke-static {v0, v1}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->access$600(Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;Landroid/media/tv/TvStreamConfig;)Z
 
-    .line 490
     return-void
 .end method

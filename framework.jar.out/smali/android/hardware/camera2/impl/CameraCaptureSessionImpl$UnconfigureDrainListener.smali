@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 683
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$UnconfigureDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$1;
 
     .prologue
-    .line 683
     invoke-direct {p0, p1}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$UnconfigureDrainListener;-><init>(Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 687
     # getter for: Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->VERBOSE:Z
     invoke-static {}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->access$500()Z
 
@@ -77,7 +74,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "onUnconfigureDrained"
+    const-string v2, "onUnconfigureDrained"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -89,13 +86,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 688
     :cond_0
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$UnconfigureDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     monitor-enter v1
 
-    .line 690
     :try_start_0
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$UnconfigureDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
@@ -108,13 +103,10 @@
 
     invoke-virtual {v0, v2}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
 
-    .line 691
     monitor-exit v1
 
-    .line 692
     return-void
 
-    .line 691
     :catchall_0
     move-exception v0
 

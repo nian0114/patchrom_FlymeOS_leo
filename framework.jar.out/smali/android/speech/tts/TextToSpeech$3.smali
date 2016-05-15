@@ -44,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 1161
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$3;->this$0:Landroid/speech/tts/TextToSpeech;
 
     iput-object p2, p0, Landroid/speech/tts/TextToSpeech$3;->val$earcon:Ljava/lang/String;
@@ -72,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 1164
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$3;->this$0:Landroid/speech/tts/TextToSpeech;
 
     # getter for: Landroid/speech/tts/TextToSpeech;->mEarcons:Ljava/util/Map;
@@ -88,18 +86,15 @@
 
     check-cast v2, Landroid/net/Uri;
 
-    .line 1165
     .local v2, "earconUri":Landroid/net/Uri;
     if-nez v2, :cond_0
 
-    .line 1166
     const/4 v0, -0x1
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 1168
     :goto_0
     return-object v0
 
@@ -146,7 +141,6 @@
     .end annotation
 
     .prologue
-    .line 1161
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$3;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/lang/Integer;
 
     move-result-object v0

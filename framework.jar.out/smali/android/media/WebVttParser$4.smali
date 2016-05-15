@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 812
     const-class v0, Landroid/media/WebVttParser;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -56,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 812
     iput-object p1, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -71,18 +69,15 @@
     .param p1, "line"    # Ljava/lang/String;
 
     .prologue
-    .line 815
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 834
     :goto_0
     return-void
 
-    .line 819
     :cond_0
     sget-boolean v0, Landroid/media/WebVttParser$4;->$assertionsDisabled:Z
 
@@ -103,7 +98,6 @@
 
     throw v0
 
-    .line 821
     :cond_1
     const-string v0, "NOTE"
 
@@ -121,7 +115,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 822
     :cond_2
     iget-object v0, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 
@@ -135,7 +128,6 @@
     # setter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
     invoke-static {v0, v1}, Landroid/media/WebVttParser;->access$102(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 825
     :cond_3
     iget-object v0, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 
@@ -146,7 +138,6 @@
     # setter for: Landroid/media/WebVttParser;->mCue:Landroid/media/TextTrackCue;
     invoke-static {v0, v1}, Landroid/media/WebVttParser;->access$902(Landroid/media/WebVttParser;Landroid/media/TextTrackCue;)Landroid/media/TextTrackCue;
 
-    .line 826
     iget-object v0, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 
     # getter for: Landroid/media/WebVttParser;->mCueTexts:Ljava/util/Vector;
@@ -156,7 +147,6 @@
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
-    .line 828
     iget-object v0, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 
     iget-object v1, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
@@ -169,7 +159,6 @@
     # setter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
     invoke-static {v0, v1}, Landroid/media/WebVttParser;->access$102(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 829
     const-string v0, "-->"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -178,7 +167,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 830
     iget-object v0, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 
     # getter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
@@ -190,7 +178,6 @@
 
     goto :goto_0
 
-    .line 832
     :cond_4
     iget-object v0, p0, Landroid/media/WebVttParser$4;->this$0:Landroid/media/WebVttParser;
 

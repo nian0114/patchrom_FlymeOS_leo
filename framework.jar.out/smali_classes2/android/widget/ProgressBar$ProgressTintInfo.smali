@@ -53,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 1867
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +63,6 @@
     .param p1, "x0"    # Landroid/widget/ProgressBar$1;
 
     .prologue
-    .line 1867
     invoke-direct {p0}, Landroid/widget/ProgressBar$ProgressTintInfo;-><init>()V
 
     return-void

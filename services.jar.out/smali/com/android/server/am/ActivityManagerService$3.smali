@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 3861
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "rhs"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 3864
     iget v0, p2, Lcom/android/server/am/TaskRecord;->taskId:I
 
     iget v1, p1, Lcom/android/server/am/TaskRecord;->taskId:I
@@ -66,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 3861
     check-cast p1, Lcom/android/server/am/TaskRecord;
 
     check-cast p2, Lcom/android/server/am/TaskRecord;

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 525
     iput-object p1, p0, Landroid/media/tv/TvInputManager$TvInputCallbackRecord$2;->this$0:Landroid/media/tv/TvInputManager$TvInputCallbackRecord;
 
     iput-object p2, p0, Landroid/media/tv/TvInputManager$TvInputCallbackRecord$2;->val$inputId:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 528
     iget-object v0, p0, Landroid/media/tv/TvInputManager$TvInputCallbackRecord$2;->this$0:Landroid/media/tv/TvInputManager$TvInputCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$TvInputCallbackRecord;->mCallback:Landroid/media/tv/TvInputManager$TvInputCallback;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/tv/TvInputManager$TvInputCallback;->onInputAdded(Ljava/lang/String;)V
 
-    .line 529
     return-void
 .end method

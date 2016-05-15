@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 80
     new-instance v0, Landroid/net/wifi/WpsResult;
 
     invoke-direct {v0}, Landroid/net/wifi/WpsResult;-><init>()V
 
-    .line 81
     .local v0, "result":Landroid/net/wifi/WpsResult;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -62,14 +59,12 @@
 
     iput-object v1, v0, Landroid/net/wifi/WpsResult;->status:Landroid/net/wifi/WpsResult$Status;
 
-    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/net/wifi/WpsResult;->pin:Ljava/lang/String;
 
-    .line 83
     return-object v0
 .end method
 
@@ -77,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 78
     invoke-virtual {p0, p1}, Landroid/net/wifi/WpsResult$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WpsResult;
 
     move-result-object v0
@@ -90,7 +84,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 87
     new-array v0, p1, [Landroid/net/wifi/WpsResult;
 
     return-object v0
@@ -100,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 78
     invoke-virtual {p0, p1}, Landroid/net/wifi/WpsResult$1;->newArray(I)[Landroid/net/wifi/WpsResult;
 
     move-result-object v0

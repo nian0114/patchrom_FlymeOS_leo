@@ -40,31 +40,24 @@
     .prologue
     const v0, 0x3f4ccccd    # 0.8f
 
-    .line 64
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 38
     iput v0, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mColorRed:F
 
-    .line 41
     iput v0, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mColorGreen:F
 
-    .line 44
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mColorBlue:F
 
-    .line 47
     const-string v0, "attribute vec4 aPosition;\nvoid main() {\n  gl_Position = aPosition;\n}\n"
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mVertexShader:Ljava/lang/String;
 
-    .line 53
-    const-string/jumbo v0, "precision mediump float;\nuniform vec4 color;\nvoid main() {\n  gl_FragColor = color;\n}\n"
+    const-string v0, "precision mediump float;\nuniform vec4 color;\nvoid main() {\n  gl_FragColor = color;\n}\n"
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mFixedColorFragmentShader:Ljava/lang/String;
 
-    .line 65
     return-void
 .end method
 
@@ -83,10 +76,8 @@
 
     const/4 v5, 0x2
 
-    .line 110
     const/4 v0, 0x4
 
-    .line 113
     .local v0, "FLOAT_SIZE":I
     new-array v1, v6, [F
 
@@ -106,7 +97,6 @@
 
     aput v8, v1, v3
 
-    .line 114
     .local v1, "color":[F
     const/16 v3, 0x8
 
@@ -168,7 +158,6 @@
 
     aput v4, v2, v3
 
-    .line 120
     .local v2, "vertexValues":[F
     iget-object v3, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
@@ -176,30 +165,24 @@
 
     invoke-virtual {v3, v4, v1}, Landroid/filterfw/core/ShaderProgram;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 121
     iget-object v3, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     const-string v4, "aPosition"
 
     invoke-virtual {v3, v4, v2, v5}, Landroid/filterfw/core/ShaderProgram;->setAttributeValues(Ljava/lang/String;[FI)V
 
-    .line 122
     iget-object v3, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     invoke-virtual {v3, v6}, Landroid/filterfw/core/ShaderProgram;->setVertexCount(I)V
 
-    .line 125
     iget-object v3, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     invoke-virtual {v3}, Landroid/filterfw/core/ShaderProgram;->beginDrawing()V
 
-    .line 126
     invoke-static {v8}, Landroid/opengl/GLES20;->glLineWidth(F)V
 
-    .line 127
     invoke-static {v5, v7, v6}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 128
     return-void
 .end method
 
@@ -211,7 +194,6 @@
     .param p2, "inputFormat"    # Landroid/filterfw/core/FrameFormat;
 
     .prologue
-    .line 77
     return-object p2
 .end method
 
@@ -220,18 +202,16 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 82
     new-instance v0, Landroid/filterfw/core/ShaderProgram;
 
     const-string v1, "attribute vec4 aPosition;\nvoid main() {\n  gl_Position = aPosition;\n}\n"
 
-    const-string/jumbo v2, "precision mediump float;\nuniform vec4 color;\nvoid main() {\n  gl_FragColor = color;\n}\n"
+    const-string v2, "precision mediump float;\nuniform vec4 color;\nvoid main() {\n  gl_FragColor = color;\n}\n"
 
     invoke-direct {v0, p1, v1, v2}, Landroid/filterfw/core/ShaderProgram;-><init>(Landroid/filterfw/core/FilterContext;Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/DrawRectFilter;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
-    .line 83
     return-void
 .end method
 
@@ -242,14 +222,12 @@
     .prologue
     const/high16 v5, -0x40800000    # -1.0f
 
-    .line 88
     const-string v4, "image"
 
     invoke-virtual {p0, v4}, Landroid/filterpacks/imageproc/DrawRectFilter;->pullInput(Ljava/lang/String;)Landroid/filterfw/core/Frame;
 
     move-result-object v2
 
-    .line 89
     .local v2, "imageFrame":Landroid/filterfw/core/Frame;
     const-string v4, "box"
 
@@ -257,7 +235,6 @@
 
     move-result-object v1
 
-    .line 92
     .local v1, "boxFrame":Landroid/filterfw/core/Frame;
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->getObjectValue()Ljava/lang/Object;
 
@@ -265,7 +242,6 @@
 
     check-cast v0, Landroid/filterfw/geometry/Quad;
 
-    .line 93
     .local v0, "box":Landroid/filterfw/geometry/Quad;
     const/high16 v4, 0x40000000    # 2.0f
 
@@ -277,7 +253,6 @@
 
     move-result-object v0
 
-    .line 96
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
     move-result-object v4
@@ -288,22 +263,17 @@
 
     check-cast v3, Landroid/filterfw/core/GLFrame;
 
-    .line 99
     .local v3, "output":Landroid/filterfw/core/GLFrame;
     invoke-virtual {v3}, Landroid/filterfw/core/GLFrame;->focus()V
 
-    .line 100
     invoke-direct {p0, v0}, Landroid/filterpacks/imageproc/DrawRectFilter;->renderBox(Landroid/filterfw/geometry/Quad;)V
 
-    .line 103
     const-string v4, "image"
 
     invoke-virtual {p0, v4, v3}, Landroid/filterpacks/imageproc/DrawRectFilter;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 106
     invoke-virtual {v3}, Landroid/filterfw/core/GLFrame;->release()Landroid/filterfw/core/Frame;
 
-    .line 107
     return-void
 .end method
 
@@ -313,7 +283,6 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 69
     const-string v0, "image"
 
     invoke-static {v1, v1}, Landroid/filterfw/format/ImageFormat;->create(II)Landroid/filterfw/core/MutableFrameFormat;
@@ -322,7 +291,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/DrawRectFilter;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 71
     const-string v0, "box"
 
     const-class v1, Landroid/filterfw/geometry/Quad;
@@ -335,13 +303,11 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/DrawRectFilter;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 72
     const-string v0, "image"
 
     const-string v1, "image"
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/DrawRectFilter;->addOutputBasedOnInput(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     return-void
 .end method

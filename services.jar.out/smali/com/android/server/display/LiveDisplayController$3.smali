@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 565
     iput-object p1, p0, Lcom/android/server/display/LiveDisplayController$3;->this$0:Lcom/android/server/display/LiveDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 568
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController$3;->this$0:Lcom/android/server/display/LiveDisplayController;
 
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController$3;->this$0:Lcom/android/server/display/LiveDisplayController;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/LiveDisplayController;->updateLiveDisplay(F)V
 
-    .line 569
     return-void
 .end method

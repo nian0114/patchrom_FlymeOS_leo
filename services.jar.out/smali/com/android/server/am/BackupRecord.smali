@@ -33,19 +33,14 @@
     .param p3, "_backupMode"    # I
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/am/BackupRecord;->stats:Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;
 
-    .line 42
     iput-object p2, p0, Lcom/android/server/am/BackupRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 43
     iput p3, p0, Lcom/android/server/am/BackupRecord;->backupMode:I
 
-    .line 44
     return-void
 .end method
 
@@ -57,19 +52,15 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 47
     iget-object v1, p0, Lcom/android/server/am/BackupRecord;->stringName:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 48
     iget-object v1, p0, Lcom/android/server/am/BackupRecord;->stringName:Ljava/lang/String;
 
-    .line 56
     :goto_0
     return-object v1
 
-    .line 50
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -77,7 +68,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 51
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "BackupRecord{"
 
@@ -137,7 +127,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 56
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

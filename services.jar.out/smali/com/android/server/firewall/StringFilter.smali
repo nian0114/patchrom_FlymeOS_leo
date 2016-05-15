@@ -63,7 +63,6 @@
     .locals 2
 
     .prologue
-    .line 230
     new-instance v0, Lcom/android/server/firewall/StringFilter$1;
 
     const-string v1, "component"
@@ -72,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->COMPONENT:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 241
     new-instance v0, Lcom/android/server/firewall/StringFilter$2;
 
     const-string v1, "component-name"
@@ -81,7 +79,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->COMPONENT_NAME:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 252
     new-instance v0, Lcom/android/server/firewall/StringFilter$3;
 
     const-string v1, "component-package"
@@ -90,7 +87,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->COMPONENT_PACKAGE:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 263
     new-instance v0, Lcom/android/server/firewall/StringFilter$4;
 
     const-string v1, "action"
@@ -99,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->ACTION:Lcom/android/server/firewall/FilterFactory;
 
-    .line 271
     new-instance v0, Lcom/android/server/firewall/StringFilter$5;
 
     const-string v1, "data"
@@ -108,7 +103,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->DATA:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 283
     new-instance v0, Lcom/android/server/firewall/StringFilter$6;
 
     const-string v1, "mime-type"
@@ -117,7 +111,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->MIME_TYPE:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 291
     new-instance v0, Lcom/android/server/firewall/StringFilter$7;
 
     const-string v1, "scheme"
@@ -126,7 +119,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->SCHEME:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 303
     new-instance v0, Lcom/android/server/firewall/StringFilter$8;
 
     const-string v1, "scheme-specific-part"
@@ -135,7 +127,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->SSP:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 315
     new-instance v0, Lcom/android/server/firewall/StringFilter$9;
 
     const-string v1, "host"
@@ -144,7 +135,6 @@
 
     sput-object v0, Lcom/android/server/firewall/StringFilter;->HOST:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 327
     new-instance v0, Lcom/android/server/firewall/StringFilter$10;
 
     const-string v1, "path"
@@ -161,13 +151,10 @@
     .param p1, "valueProvider"    # Lcom/android/server/firewall/StringFilter$ValueProvider;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/firewall/StringFilter;->mValueProvider:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
-    .line 41
     return-void
 .end method
 
@@ -177,7 +164,6 @@
     .param p2, "x1"    # Lcom/android/server/firewall/StringFilter$1;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1}, Lcom/android/server/firewall/StringFilter;-><init>(Lcom/android/server/firewall/StringFilter$ValueProvider;)V
 
     return-void
@@ -192,12 +178,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 79
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 81
     .local v0, "attributeName":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -207,12 +191,10 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 115
     :cond_0
     :goto_0
     return-object v1
 
-    .line 83
     :sswitch_0
     const-string v2, "equals"
 
@@ -222,7 +204,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 86
     new-instance v1, Lcom/android/server/firewall/StringFilter$EqualsFilter;
 
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -233,7 +214,6 @@
 
     goto :goto_0
 
-    .line 88
     :sswitch_1
     const-string v2, "isNull"
 
@@ -243,7 +223,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 91
     new-instance v1, Lcom/android/server/firewall/StringFilter$IsNullFilter;
 
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -254,7 +233,6 @@
 
     goto :goto_0
 
-    .line 93
     :sswitch_2
     const-string v2, "startsWith"
 
@@ -264,7 +242,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 96
     new-instance v1, Lcom/android/server/firewall/StringFilter$StartsWithFilter;
 
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -275,7 +252,6 @@
 
     goto :goto_0
 
-    .line 99
     :sswitch_3
     const-string v2, "contains"
 
@@ -285,7 +261,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 102
     new-instance v1, Lcom/android/server/firewall/StringFilter$ContainsFilter;
 
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -296,7 +271,6 @@
 
     goto :goto_0
 
-    .line 104
     :sswitch_4
     const-string v2, "pattern"
 
@@ -306,7 +280,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 107
     new-instance v1, Lcom/android/server/firewall/StringFilter$PatternStringFilter;
 
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -317,7 +290,6 @@
 
     goto :goto_0
 
-    .line 110
     :sswitch_5
     const-string v2, "regex"
 
@@ -327,7 +299,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 113
     new-instance v1, Lcom/android/server/firewall/StringFilter$RegexFilter;
 
     invoke-interface {p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -338,7 +309,6 @@
 
     goto :goto_0
 
-    .line 81
     :sswitch_data_0
     .sparse-switch
         0x63 -> :sswitch_3
@@ -362,10 +332,8 @@
     .end annotation
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
-    .line 58
     .local v0, "filter":Lcom/android/server/firewall/StringFilter;
     const/4 v1, 0x0
 
@@ -377,19 +345,15 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 59
     invoke-static {p0, p1, v1}, Lcom/android/server/firewall/StringFilter;->getFilter(Lcom/android/server/firewall/StringFilter$ValueProvider;Lorg/xmlpull/v1/XmlPullParser;I)Lcom/android/server/firewall/StringFilter;
 
     move-result-object v2
 
-    .line 60
     .local v2, "newFilter":Lcom/android/server/firewall/StringFilter;
     if-eqz v2, :cond_1
 
-    .line 61
     if-eqz v0, :cond_0
 
-    .line 62
     new-instance v3, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v4, "Multiple string filter attributes found"
@@ -398,22 +362,18 @@
 
     throw v3
 
-    .line 64
     :cond_0
     move-object v0, v2
 
-    .line 58
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 68
     .end local v2    # "newFilter":Lcom/android/server/firewall/StringFilter;
     :cond_2
     if-nez v0, :cond_3
 
-    .line 71
     new-instance v0, Lcom/android/server/firewall/StringFilter$IsNullFilter;
 
     .end local v0    # "filter":Lcom/android/server/firewall/StringFilter;
@@ -421,7 +381,6 @@
 
     invoke-direct {v0, p0, v3}, Lcom/android/server/firewall/StringFilter$IsNullFilter;-><init>(Lcom/android/server/firewall/StringFilter$ValueProvider;Z)V
 
-    .line 74
     .restart local v0    # "filter":Lcom/android/server/firewall/StringFilter;
     :cond_3
     return-object v0
@@ -440,14 +399,12 @@
     .param p7, "receivingUid"    # I
 
     .prologue
-    .line 123
     iget-object v1, p0, Lcom/android/server/firewall/StringFilter;->mValueProvider:Lcom/android/server/firewall/StringFilter$ValueProvider;
 
     invoke-virtual {v1, p2, p3, p6}, Lcom/android/server/firewall/StringFilter$ValueProvider;->getValue(Landroid/content/ComponentName;Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 124
     .local v0, "value":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/server/firewall/StringFilter;->matchesValue(Ljava/lang/String;)Z
 

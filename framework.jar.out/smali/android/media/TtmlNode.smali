@@ -42,38 +42,28 @@
     .param p9, "runId"    # J
 
     .prologue
-    .line 316
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 310
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/TtmlNode;->mChildren:Ljava/util/List;
 
-    .line 317
     iput-object p1, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
-    .line 318
     iput-object p2, p0, Landroid/media/TtmlNode;->mAttributes:Ljava/lang/String;
 
-    .line 319
     iput-object p3, p0, Landroid/media/TtmlNode;->mText:Ljava/lang/String;
 
-    .line 320
     iput-wide p4, p0, Landroid/media/TtmlNode;->mStartTimeMs:J
 
-    .line 321
     iput-wide p6, p0, Landroid/media/TtmlNode;->mEndTimeMs:J
 
-    .line 322
     iput-object p8, p0, Landroid/media/TtmlNode;->mParent:Landroid/media/TtmlNode;
 
-    .line 323
     iput-wide p9, p0, Landroid/media/TtmlNode;->mRunId:J
 
-    .line 324
     return-void
 .end method
 
@@ -85,7 +75,6 @@
     .param p3, "endTimeMs"    # J
 
     .prologue
-    .line 335
     iget-wide v0, p0, Landroid/media/TtmlNode;->mEndTimeMs:J
 
     cmp-long v0, v0, p1

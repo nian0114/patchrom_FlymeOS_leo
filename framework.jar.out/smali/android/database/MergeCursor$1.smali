@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 27
     iput-object p1, p0, Landroid/database/MergeCursor$1;->this$0:Landroid/database/MergeCursor;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 33
     iget-object v0, p0, Landroid/database/MergeCursor$1;->this$0:Landroid/database/MergeCursor;
 
     const/4 v1, -0x1
 
     iput v1, v0, Landroid/database/MergeCursor;->mPos:I
 
-    .line 34
     return-void
 .end method
 
@@ -52,13 +49,11 @@
     .locals 2
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/database/MergeCursor$1;->this$0:Landroid/database/MergeCursor;
 
     const/4 v1, -0x1
 
     iput v1, v0, Landroid/database/MergeCursor;->mPos:I
 
-    .line 39
     return-void
 .end method

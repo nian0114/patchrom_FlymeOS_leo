@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 152
     new-instance v0, Landroid/bluetooth/le/ScanResult$1;
 
     invoke-direct {v0}, Landroid/bluetooth/le/ScanResult$1;-><init>()V
@@ -52,22 +51,16 @@
     .param p4, "timestampNanos"    # J
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Landroid/bluetooth/le/ScanResult;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 54
     iput-object p2, p0, Landroid/bluetooth/le/ScanResult;->mScanRecord:Landroid/bluetooth/le/ScanRecord;
 
-    .line 55
     iput p3, p0, Landroid/bluetooth/le/ScanResult;->mRssi:I
 
-    .line 56
     iput-wide p4, p0, Landroid/bluetooth/le/ScanResult;->mTimestampNanos:J
 
-    .line 57
     return-void
 .end method
 
@@ -76,13 +69,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     invoke-direct {p0, p1}, Landroid/bluetooth/le/ScanResult;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 61
     return-void
 .end method
 
@@ -92,7 +82,6 @@
     .param p2, "x1"    # Landroid/bluetooth/le/ScanResult$1;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1}, Landroid/bluetooth/le/ScanResult;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -105,14 +94,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    .line 83
     sget-object v0, Landroid/bluetooth/BluetoothDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -123,7 +110,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/le/ScanResult;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 85
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -131,7 +117,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 86
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
@@ -142,7 +127,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/le/ScanResult;->mScanRecord:Landroid/bluetooth/le/ScanRecord;
 
-    .line 88
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -150,14 +134,12 @@
 
     iput v0, p0, Landroid/bluetooth/le/ScanResult;->mRssi:I
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/bluetooth/le/ScanResult;->mTimestampNanos:J
 
-    .line 90
     return-void
 .end method
 
@@ -167,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 94
     const/4 v0, 0x0
 
     return v0
@@ -182,15 +163,12 @@
 
     const/4 v2, 0x0
 
-    .line 133
     if-ne p0, p1, :cond_1
 
-    .line 140
     :cond_0
     :goto_0
     return v1
 
-    .line 136
     :cond_1
     if-eqz p1, :cond_2
 
@@ -207,16 +185,13 @@
     :cond_2
     move v1, v2
 
-    .line 137
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 139
     check-cast v0, Landroid/bluetooth/le/ScanResult;
 
-    .line 140
     .local v0, "other":Landroid/bluetooth/le/ScanResult;
     iget-object v3, p0, Landroid/bluetooth/le/ScanResult;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
@@ -262,7 +237,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Landroid/bluetooth/le/ScanResult;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     return-object v0
@@ -272,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget v0, p0, Landroid/bluetooth/le/ScanResult;->mRssi:I
 
     return v0
@@ -282,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-object v0, p0, Landroid/bluetooth/le/ScanResult;->mScanRecord:Landroid/bluetooth/le/ScanRecord;
 
     return-object v0
@@ -292,7 +264,6 @@
     .locals 2
 
     .prologue
-    .line 123
     iget-wide v0, p0, Landroid/bluetooth/le/ScanResult;->mTimestampNanos:J
 
     return-wide v0
@@ -302,7 +273,6 @@
     .locals 4
 
     .prologue
-    .line 128
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -350,7 +320,6 @@
     .locals 4
 
     .prologue
-    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,29 +399,23 @@
 
     const/4 v1, 0x0
 
-    .line 65
     iget-object v0, p0, Landroid/bluetooth/le/ScanResult;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz v0, :cond_0
 
-    .line 66
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 67
     iget-object v0, p0, Landroid/bluetooth/le/ScanResult;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     invoke-virtual {v0, p1, p2}, Landroid/bluetooth/BluetoothDevice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 71
     :goto_0
     iget-object v0, p0, Landroid/bluetooth/le/ScanResult;->mScanRecord:Landroid/bluetooth/le/ScanRecord;
 
     if-eqz v0, :cond_1
 
-    .line 72
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 73
     iget-object v0, p0, Landroid/bluetooth/le/ScanResult;->mScanRecord:Landroid/bluetooth/le/ScanRecord;
 
     invoke-virtual {v0}, Landroid/bluetooth/le/ScanRecord;->getBytes()[B
@@ -461,27 +424,22 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 77
     :goto_1
     iget v0, p0, Landroid/bluetooth/le/ScanResult;->mRssi:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 78
     iget-wide v0, p0, Landroid/bluetooth/le/ScanResult;->mTimestampNanos:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 79
     return-void
 
-    .line 69
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 75
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 

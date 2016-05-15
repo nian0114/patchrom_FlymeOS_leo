@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -26,12 +25,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 75
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 77
     .local v6, "action":Ljava/lang/String;
     const-string v0, "android.content.action.REQUEST_PERMISSION"
 
@@ -41,14 +38,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 78
     const-string v0, "android.content.extra.PACKAGE_NAME"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 79
     .local v2, "packageName":Ljava/lang/String;
     const-string v0, "android.content.extra.REQUEST_TYPE"
 
@@ -56,7 +51,6 @@
 
     move-result-object v3
 
-    .line 80
     .local v3, "requestType":Ljava/lang/String;
     const-string v0, "android.content.extra.REQUEST_ID"
 
@@ -64,7 +58,6 @@
 
     move-result-object v4
 
-    .line 81
     .local v4, "requestId":Ljava/lang/String;
     const-string v0, "android.content.extra.REQUEST_BUNDLE"
 
@@ -79,10 +72,8 @@
 
     move-object v1, p1
 
-    .line 83
     invoke-virtual/range {v0 .. v5}, Landroid/service/restrictions/RestrictionsReceiver;->onRequestPermission(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/PersistableBundle;)V
 
-    .line 85
     .end local v2    # "packageName":Ljava/lang/String;
     .end local v3    # "requestType":Ljava/lang/String;
     .end local v4    # "requestId":Ljava/lang/String;

@@ -69,7 +69,6 @@
 
     const/4 v2, 0x0
 
-    .line 67
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "SIM"
@@ -78,7 +77,6 @@
 
     sput-object v0, Landroid/net/wifi/WifiEapSimInfo;->m2GSupportedTypes:[Ljava/lang/String;
 
-    .line 68
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -93,7 +91,6 @@
 
     sput-object v0, Landroid/net/wifi/WifiEapSimInfo;->m3GSupportedTypes:[Ljava/lang/String;
 
-    .line 165
     new-instance v0, Landroid/net/wifi/WifiEapSimInfo$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiEapSimInfo$1;-><init>()V
@@ -107,17 +104,14 @@
     .locals 1
 
     .prologue
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
-    .line 81
     return-void
 .end method
 
@@ -126,30 +120,24 @@
     .param p1, "source"    # Landroid/net/wifi/WifiEapSimInfo;
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
-    .line 85
     if-eqz p1, :cond_0
 
-    .line 86
     iget v0, p1, Landroid/net/wifi/WifiEapSimInfo;->mNumOfSims:I
 
     iput v0, p0, Landroid/net/wifi/WifiEapSimInfo;->mNumOfSims:I
 
-    .line 87
     iget-object v0, p1, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
     iput-object v0, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
-    .line 89
     :cond_0
     return-void
 .end method
@@ -164,28 +152,23 @@
     .end annotation
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
-    .line 98
     const-string v7, " "
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 99
     .local v6, "sims":[Ljava/lang/String;
     const/4 v4, -0x1
 
-    .line 101
     .local v4, "mSimInfo":I
     array-length v7, v6
 
@@ -199,7 +182,6 @@
 
     if-le v7, v8, :cond_1
 
-    .line 102
     :cond_0
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
@@ -207,7 +189,6 @@
 
     throw v7
 
-    .line 104
     :cond_1
     move-object v0, v6
 
@@ -223,9 +204,8 @@
 
     aget-object v5, v0, v2
 
-    .line 105
     .local v5, "sim":Ljava/lang/String;
-    const-string/jumbo v7, "no_of_sims="
+    const-string v7, "no_of_sims="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -233,9 +213,8 @@
 
     if-eqz v7, :cond_2
 
-    .line 107
     :try_start_0
-    const-string/jumbo v7, "no_of_sims="
+    const-string v7, "no_of_sims="
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -253,17 +232,14 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 104
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 109
     :catch_0
     move-exception v1
 
-    .line 110
     .local v1, "e":Ljava/lang/NumberFormatException;
     const/4 v7, 0x0
 
@@ -271,10 +247,9 @@
 
     goto :goto_1
 
-    .line 112
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_2
-    const-string/jumbo v7, "sim1="
+    const-string v7, "sim1="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -282,9 +257,8 @@
 
     if-eqz v7, :cond_3
 
-    .line 114
     :try_start_1
-    const-string/jumbo v7, "sim1="
+    const-string v7, "sim1="
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -300,7 +274,6 @@
 
     move-result v4
 
-    .line 119
     :goto_2
     iget-object v7, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
@@ -312,20 +285,17 @@
 
     goto :goto_1
 
-    .line 116
     :catch_1
     move-exception v1
 
-    .line 117
     .restart local v1    # "e":Ljava/lang/NumberFormatException;
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 120
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_3
-    const-string/jumbo v7, "sim2="
+    const-string v7, "sim2="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -333,9 +303,8 @@
 
     if-eqz v7, :cond_4
 
-    .line 122
     :try_start_2
-    const-string/jumbo v7, "sim2="
+    const-string v7, "sim2="
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -351,7 +320,6 @@
 
     move-result v4
 
-    .line 127
     :goto_3
     iget-object v7, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
@@ -363,20 +331,17 @@
 
     goto :goto_1
 
-    .line 124
     :catch_2
     move-exception v1
 
-    .line 125
     .restart local v1    # "e":Ljava/lang/NumberFormatException;
     const/4 v4, 0x0
 
     goto :goto_3
 
-    .line 128
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_4
-    const-string/jumbo v7, "sim3="
+    const-string v7, "sim3="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -384,9 +349,8 @@
 
     if-eqz v7, :cond_5
 
-    .line 130
     :try_start_3
-    const-string/jumbo v7, "sim3="
+    const-string v7, "sim3="
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -402,7 +366,6 @@
 
     move-result v4
 
-    .line 135
     :goto_4
     iget-object v7, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
@@ -414,20 +377,17 @@
 
     goto :goto_1
 
-    .line 132
     :catch_3
     move-exception v1
 
-    .line 133
     .restart local v1    # "e":Ljava/lang/NumberFormatException;
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 136
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_5
-    const-string/jumbo v7, "sim4="
+    const-string v7, "sim4="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -435,9 +395,8 @@
 
     if-eqz v7, :cond_6
 
-    .line 138
     :try_start_4
-    const-string/jumbo v7, "sim4="
+    const-string v7, "sim4="
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -453,7 +412,6 @@
 
     move-result v4
 
-    .line 143
     :goto_5
     iget-object v7, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
@@ -465,17 +423,14 @@
 
     goto/16 :goto_1
 
-    .line 140
     :catch_4
     move-exception v1
 
-    .line 141
     .restart local v1    # "e":Ljava/lang/NumberFormatException;
     const/4 v4, 0x0
 
     goto :goto_5
 
-    .line 145
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_6
     new-instance v7, Ljava/lang/IllegalArgumentException;
@@ -484,7 +439,6 @@
 
     throw v7
 
-    .line 148
     .end local v5    # "sim":Ljava/lang/String;
     :cond_7
     return-void
@@ -496,7 +450,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/4 v0, 0x0
 
     return v0
@@ -508,12 +461,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 157
     iget v2, p0, Landroid/net/wifi/WifiEapSimInfo;->mNumOfSims:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 158
     iget-object v2, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -522,7 +473,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 159
     iget-object v2, p0, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -543,7 +493,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 160
     .local v1, "mInteger":Ljava/lang/Integer;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -553,7 +502,6 @@
 
     goto :goto_0
 
-    .line 162
     .end local v1    # "mInteger":Ljava/lang/Integer;
     :cond_0
     return-void

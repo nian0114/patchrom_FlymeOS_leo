@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 298
     iput-object p1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v4, 0x0
 
-    .line 301
     const/16 v0, 0xaa8
 
     const/4 v1, 0x4
@@ -81,7 +79,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -91,6 +88,5 @@
 
     invoke-interface {v0}, Landroid/view/WindowManagerPolicy;->wakingUp()V
 
-    .line 303
     return-void
 .end method

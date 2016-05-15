@@ -30,12 +30,10 @@
     .locals 1
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 272
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->mCanceled:Z
@@ -50,12 +48,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 300
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->mCanceled:Z
 
-    .line 301
     return-void
 .end method
 
@@ -64,17 +60,14 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 289
     iget-boolean v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->mCanceled:Z
 
     if-eqz v0, :cond_1
 
-    .line 296
     :cond_0
     :goto_0
     return-void
 
-    .line 291
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
@@ -82,14 +75,12 @@
 
     iput-object v1, v0, Lcom/android/internal/widget/AbsActionBarView;->mVisibilityAnim:Landroid/animation/Animator;
 
-    .line 292
     iget-object v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
     iget v1, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->mFinalVisibility:I
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/AbsActionBarView;->setVisibility(I)V
 
-    .line 293
     iget-object v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
     iget-object v0, v0, Lcom/android/internal/widget/AbsActionBarView;->mSplitView:Landroid/view/ViewGroup;
@@ -102,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 294
     iget-object v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
     iget-object v0, v0, Lcom/android/internal/widget/AbsActionBarView;->mMenuView:Landroid/widget/ActionMenuView;
@@ -119,7 +109,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 305
     return-void
 .end method
 
@@ -130,20 +119,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 282
     iget-object v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/AbsActionBarView;->setVisibility(I)V
 
-    .line 283
     iget-object v0, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Lcom/android/internal/widget/AbsActionBarView;
 
     iput-object p1, v0, Lcom/android/internal/widget/AbsActionBarView;->mVisibilityAnim:Landroid/animation/Animator;
 
-    .line 284
     iput-boolean v1, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->mCanceled:Z
 
-    .line 285
     return-void
 .end method
 
@@ -152,9 +137,7 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 276
     iput p1, p0, Lcom/android/internal/widget/AbsActionBarView$VisibilityAnimListener;->mFinalVisibility:I
 
-    .line 277
     return-object p0
 .end method

@@ -95,7 +95,6 @@
     .locals 2
 
     .prologue
-    .line 77
     const-string v0, "MediaSessionService"
 
     const/4 v1, 0x3
@@ -114,71 +113,60 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 108
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 81
     new-instance v1, Landroid/os/Binder;
 
     invoke-direct {v1}, Landroid/os/Binder;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mICallback:Landroid/os/IBinder;
 
-    .line 86
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
-    .line 87
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
-    .line 88
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
-    .line 90
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
-    .line 91
     new-instance v1, Lcom/android/server/media/MediaSessionService$MessageHandler;
 
     invoke-direct {v1, p0}, Lcom/android/server/media/MediaSessionService$MessageHandler;-><init>(Lcom/android/server/media/MediaSessionService;)V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
 
-    .line 101
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/media/MediaSessionService;->mCurrentUserId:I
 
-    .line 109
     new-instance v1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     invoke-direct {v1, p0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;-><init>(Lcom/android/server/media/MediaSessionService;)V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mSessionManagerImpl:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
-    .line 110
     new-instance v1, Lcom/android/server/media/MediaSessionStack;
 
     invoke-direct {v1}, Lcom/android/server/media/MediaSessionStack;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
-    .line 111
     const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -187,7 +175,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 112
     .local v0, "pm":Landroid/os/PowerManager;
     const/4 v1, 0x1
 
@@ -199,7 +186,6 @@
 
     iput-object v1, p0, Lcom/android/server/media/MediaSessionService;->mMediaEventWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 113
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -212,7 +198,6 @@
 
     iput-boolean v1, p0, Lcom/android/server/media/MediaSessionService;->mUseMasterVolume:Z
 
-    .line 115
     return-void
 .end method
 
@@ -221,7 +206,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -232,7 +216,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -243,7 +226,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -254,7 +236,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService;->updateActiveSessionListeners()V
 
     return-void
@@ -267,7 +248,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 75
     invoke-direct {p0, p1, p2}, Lcom/android/server/media/MediaSessionService;->enforcePackageName(Ljava/lang/String;I)V
 
     return-void
@@ -289,7 +269,6 @@
     .end annotation
 
     .prologue
-    .line 75
     invoke-direct/range {p0 .. p6}, Lcom/android/server/media/MediaSessionService;->createSessionInternal(IIILjava/lang/String;Landroid/media/session/ISessionCallback;Ljava/lang/String;)Lcom/android/server/media/MediaSessionRecord;
 
     move-result-object v0
@@ -302,7 +281,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
     return-object v0
@@ -314,7 +292,6 @@
     .param p1, "x1"    # Landroid/media/session/IActiveSessionsListener;
 
     .prologue
-    .line 75
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->findIndexOfSessionsListenerLocked(Landroid/media/session/IActiveSessionsListener;)I
 
     move-result v0
@@ -327,7 +304,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget v0, p0, Lcom/android/server/media/MediaSessionService;->mCurrentUserId:I
 
     return v0
@@ -338,7 +314,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
     return-object v0
@@ -352,7 +327,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 75
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/media/MediaSessionService;->enforceStatusBarPermission(Ljava/lang/String;II)V
 
     return-void
@@ -364,7 +338,6 @@
     .param p1, "x1"    # Landroid/media/IRemoteVolumeController;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService;->mRvc:Landroid/media/IRemoteVolumeController;
 
     return-object p1
@@ -375,7 +348,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
     return-object v0
@@ -390,7 +362,6 @@
     .param p4, "x4"    # I
 
     .prologue
-    .line 75
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/media/MediaSessionService;->enforceMediaPermissions(Landroid/content/ComponentName;III)V
 
     return-void
@@ -400,7 +371,6 @@
     .locals 1
 
     .prologue
-    .line 75
     sget-boolean v0, Lcom/android/server/media/MediaSessionService;->DEBUG:Z
 
     return v0
@@ -411,7 +381,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-boolean v0, p0, Lcom/android/server/media/MediaSessionService;->mUseMasterVolume:Z
 
     return v0
@@ -422,7 +391,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAudioService:Landroid/media/IAudioService;
 
     return-object v0
@@ -433,7 +401,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
@@ -444,7 +411,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mMediaEventWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -455,7 +421,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
 
     return-object v0
@@ -466,7 +431,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     return-object v0
@@ -478,7 +442,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 75
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->pushSessionsChanged(I)V
 
     return-void
@@ -490,7 +453,6 @@
     .param p1, "x1"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 75
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->destroySessionLocked(Lcom/android/server/media/MediaSessionRecord;)V
 
     return-void
@@ -511,12 +473,10 @@
     .end annotation
 
     .prologue
-    .line 402
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 403
     :try_start_0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/media/MediaSessionService;->createSessionLocked(IIILjava/lang/String;Landroid/media/session/ISessionCallback;Ljava/lang/String;)Lcom/android/server/media/MediaSessionRecord;
 
@@ -526,7 +486,6 @@
 
     return-object v0
 
-    .line 404
     :catchall_0
     move-exception v0
 
@@ -547,7 +506,6 @@
     .param p6, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 417
     new-instance v1, Lcom/android/server/media/MediaSessionRecord;
 
     iget-object v9, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
@@ -568,7 +526,6 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/android/server/media/MediaSessionRecord;-><init>(IIILjava/lang/String;Landroid/media/session/ISessionCallback;Ljava/lang/String;Lcom/android/server/media/MediaSessionService;Landroid/os/Handler;)V
 
-    .line 420
     .local v1, "session":Lcom/android/server/media/MediaSessionRecord;
     :try_start_0
     invoke-interface/range {p5 .. p5}, Landroid/media/session/ISessionCallback;->asBinder()Landroid/os/IBinder;
@@ -581,26 +538,21 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 425
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 426
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
     invoke-virtual {v2, v1}, Lcom/android/server/media/MediaSessionStack;->addSession(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 428
     invoke-direct {p0, p3}, Lcom/android/server/media/MediaSessionService;->getOrCreateUser(I)Lcom/android/server/media/MediaSessionService$UserRecord;
 
     move-result-object v11
 
-    .line 429
     .local v11, "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     invoke-virtual {v11, v1}, Lcom/android/server/media/MediaSessionService$UserRecord;->addSessionLocked(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 431
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
 
     const/4 v3, 0x1
@@ -609,12 +561,10 @@
 
     invoke-virtual {v2, v3, p3, v4}, Lcom/android/server/media/MediaSessionService$MessageHandler;->post(III)V
 
-    .line 433
     sget-boolean v2, Lcom/android/server/media/MediaSessionService;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 434
     const-string v2, "MediaSessionService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -651,16 +601,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     :cond_0
     return-object v1
 
-    .line 421
     .end local v11    # "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     :catch_0
     move-exception v10
 
-    .line 422
     .local v10, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -678,12 +625,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 292
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionRecord;->getUserId()I
 
     move-result v1
 
-    .line 293
     .local v1, "userId":I
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
@@ -693,25 +638,20 @@
 
     check-cast v0, Lcom/android/server/media/MediaSessionService$UserRecord;
 
-    .line 294
     .local v0, "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     if-eqz v0, :cond_0
 
-    .line 295
     invoke-virtual {v0, p1}, Lcom/android/server/media/MediaSessionService$UserRecord;->removeSessionLocked(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 298
     :cond_0
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
     invoke-virtual {v2, p1}, Lcom/android/server/media/MediaSessionStack;->removeSession(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 299
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 302
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionRecord;->getCallback()Landroid/media/session/ISessionCallback;
 
@@ -727,11 +667,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 306
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionRecord;->onDestroy()V
 
-    .line 308
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
 
     const/4 v3, 0x1
@@ -742,10 +680,8 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/media/MediaSessionService$MessageHandler;->post(III)V
 
-    .line 309
     return-void
 
-    .line 303
     :catch_0
     move-exception v2
 
@@ -757,13 +693,10 @@
     .param p1, "user"    # Lcom/android/server/media/MediaSessionService$UserRecord;
 
     .prologue
-    .line 277
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionService$UserRecord;->stopLocked()V
 
-    .line 278
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionService$UserRecord;->destroyLocked()V
 
-    .line 279
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
     # getter for: Lcom/android/server/media/MediaSessionService$UserRecord;->mUserId:I
@@ -773,7 +706,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 280
     return-void
 .end method
 
@@ -785,7 +717,6 @@
     .param p4, "resolvedUserId"    # I
 
     .prologue
-    .line 337
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -808,7 +739,6 @@
 
     if-nez v0, :cond_0
 
-    .line 342
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Missing permission to control media."
@@ -817,7 +747,6 @@
 
     throw v0
 
-    .line 344
     :cond_0
     return-void
 .end method
@@ -828,14 +757,12 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 312
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 313
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "packageName may not be empty"
@@ -844,7 +771,6 @@
 
     throw v3
 
-    .line 315
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
@@ -858,11 +784,9 @@
 
     move-result-object v2
 
-    .line 316
     .local v2, "packages":[Ljava/lang/String;
     array-length v1, v2
 
-    .line 317
     .local v1, "packageCount":I
     const/4 v0, 0x0
 
@@ -870,7 +794,6 @@
     :goto_0
     if-ge v0, v1, :cond_2
 
-    .line 318
     aget-object v3, v2, v0
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -879,16 +802,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 319
     return-void
 
-    .line 317
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 322
     :cond_2
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -906,7 +826,6 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 347
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -919,7 +838,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 349
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -944,7 +862,6 @@
 
     throw v0
 
-    .line 351
     :cond_0
     return-void
 .end method
@@ -954,7 +871,6 @@
     .param p1, "listener"    # Landroid/media/session/IActiveSessionsListener;
 
     .prologue
-    .line 449
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -967,7 +883,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 450
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -991,19 +906,16 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 454
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 449
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 454
     :cond_1
     const/4 v0, -0x1
 
@@ -1014,14 +926,12 @@
     .locals 2
 
     .prologue
-    .line 132
     const-string v1, "audio"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 133
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/media/IAudioService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/IAudioService;
 
@@ -1035,7 +945,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 440
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1044,11 +953,9 @@
 
     check-cast v0, Lcom/android/server/media/MediaSessionService$UserRecord;
 
-    .line 441
     .local v0, "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     if-nez v0, :cond_0
 
-    .line 442
     new-instance v0, Lcom/android/server/media/MediaSessionService$UserRecord;
 
     .end local v0    # "user":Lcom/android/server/media/MediaSessionService$UserRecord;
@@ -1058,13 +965,11 @@
 
     invoke-direct {v0, p0, v1, p1}, Lcom/android/server/media/MediaSessionService$UserRecord;-><init>(Lcom/android/server/media/MediaSessionService;Landroid/content/Context;I)V
 
-    .line 443
     .restart local v0    # "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 445
     :cond_0
     return-object v0
 .end method
@@ -1078,21 +983,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 365
     if-eq p2, p3, :cond_1
 
-    .line 397
     :cond_0
     :goto_0
     return v4
 
-    .line 369
     :cond_1
     sget-boolean v5, Lcom/android/server/media/MediaSessionService;->DEBUG:Z
 
     if-eqz v5, :cond_2
 
-    .line 370
     const-string v5, "MediaSessionService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1115,11 +1016,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     :cond_2
     if-eqz p1, :cond_0
 
-    .line 373
     iget-object v5, p0, Lcom/android/server/media/MediaSessionService;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v6, "enabled_notification_listeners"
@@ -1128,18 +1027,15 @@
 
     move-result-object v2
 
-    .line 376
     .local v2, "enabledNotifListeners":Ljava/lang/String;
     if-eqz v2, :cond_5
 
-    .line 377
     const-string v5, ":"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 378
     .local v1, "components":[Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -1149,30 +1045,25 @@
 
     if-ge v3, v5, :cond_5
 
-    .line 379
     aget-object v5, v1, v3
 
     invoke-static {v5}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 381
     .local v0, "component":Landroid/content/ComponentName;
     if-eqz v0, :cond_4
 
-    .line 382
     invoke-virtual {p1, v0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_4
 
-    .line 383
     sget-boolean v4, Lcom/android/server/media/MediaSessionService;->DEBUG:Z
 
     if-eqz v4, :cond_3
 
-    .line 384
     const-string v4, "MediaSessionService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1201,19 +1092,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     :cond_3
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 378
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 392
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v1    # "components":[Ljava/lang/String;
     .end local v3    # "i":I
@@ -1222,7 +1110,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 393
     const-string v5, "MediaSessionService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1263,7 +1150,6 @@
     .param p1, "record"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 459
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionRecord;->isActive()Z
 
     move-result v0
@@ -1276,12 +1162,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 490
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mRvc:Landroid/media/IRemoteVolumeController;
 
     if-eqz v2, :cond_0
 
-    .line 492
     :try_start_0
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
@@ -1289,7 +1173,6 @@
 
     move-result-object v1
 
-    .line 493
     .local v1, "record":Lcom/android/server/media/MediaSessionRecord;
     iget-object v3, p0, Lcom/android/server/media/MediaSessionService;->mRvc:Landroid/media/IRemoteVolumeController;
 
@@ -1300,13 +1183,11 @@
     :goto_0
     invoke-interface {v3, v2}, Landroid/media/IRemoteVolumeController;->updateRemoteController(Landroid/media/session/ISessionController;)V
 
-    .line 498
     .end local v1    # "record":Lcom/android/server/media/MediaSessionRecord;
     :cond_0
     :goto_1
     return-void
 
-    .line 493
     .restart local v1    # "record":Lcom/android/server/media/MediaSessionRecord;
     :cond_1
     invoke-virtual {v1}, Lcom/android/server/media/MediaSessionRecord;->getControllerBinder()Landroid/media/session/ISessionController;
@@ -1317,12 +1198,10 @@
 
     goto :goto_0
 
-    .line 494
     .end local v1    # "record":Lcom/android/server/media/MediaSessionRecord;
     :catch_0
     move-exception v0
 
-    .line 495
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "MediaSessionService"
 
@@ -1338,12 +1217,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 463
     iget-object v7, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 464
     :try_start_0
     iget-object v6, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
@@ -1351,13 +1228,11 @@
 
     move-result-object v3
 
-    .line 465
     .local v3, "records":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/media/MediaSessionRecord;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 466
     .local v4, "size":I
     if-lez v4, :cond_0
 
@@ -1377,7 +1252,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 467
     const/4 v6, 0x0
 
     invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1388,13 +1262,11 @@
 
     invoke-direct {p0, v6}, Lcom/android/server/media/MediaSessionService;->rememberMediaButtonReceiverLocked(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 469
     :cond_0
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 470
     .local v5, "tokens":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/session/MediaSession$Token;>;"
     const/4 v1, 0x0
 
@@ -1402,7 +1274,6 @@
     :goto_0
     if-ge v1, v4, :cond_1
 
-    .line 471
     new-instance v8, Landroid/media/session/MediaSession$Token;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1419,16 +1290,13 @@
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 470
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 473
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->pushRemoteVolumeUpdateLocked(I)V
 
-    .line 474
     iget-object v6, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
@@ -1440,7 +1308,6 @@
     :goto_1
     if-ltz v1, :cond_4
 
-    .line 475
     iget-object v6, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1449,7 +1316,6 @@
 
     check-cast v2, Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;
 
-    .line 476
     .local v2, "record":Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;
     # getter for: Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;->mUserId:I
     invoke-static {v2}, Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;->access$500(Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;)I
@@ -1469,7 +1335,6 @@
 
     if-ne v6, p1, :cond_3
 
-    .line 478
     :cond_2
     :try_start_1
     # getter for: Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;->mListener:Landroid/media/session/IActiveSessionsListener;
@@ -1482,18 +1347,15 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 474
     :cond_3
     :goto_2
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 479
     :catch_0
     move-exception v0
 
-    .line 480
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v6, "MediaSessionService"
@@ -1502,14 +1364,12 @@
 
     invoke-static {v6, v8, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 482
     iget-object v6, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 486
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i":I
     .end local v2    # "record":Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;
@@ -1535,7 +1395,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 487
     return-void
 .end method
 
@@ -1544,12 +1403,10 @@
     .param p1, "record"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 501
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionRecord;->getMediaButtonReceiver()Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 502
     .local v0, "receiver":Landroid/app/PendingIntent;
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
@@ -1563,17 +1420,14 @@
 
     check-cast v1, Lcom/android/server/media/MediaSessionService$UserRecord;
 
-    .line 503
     .local v1, "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 504
     # setter for: Lcom/android/server/media/MediaSessionService$UserRecord;->mLastMediaButtonReceiver:Landroid/app/PendingIntent;
     invoke-static {v1, v0}, Lcom/android/server/media/MediaSessionService$UserRecord;->access$802(Lcom/android/server/media/MediaSessionService$UserRecord;Landroid/app/PendingIntent;)Landroid/app/PendingIntent;
 
-    .line 506
     :cond_0
     return-void
 .end method
@@ -1582,12 +1436,10 @@
     .locals 8
 
     .prologue
-    .line 250
     iget-object v4, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 251
     :try_start_0
     iget-object v3, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
@@ -1601,7 +1453,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 252
     iget-object v3, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1612,7 +1463,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 254
     .local v2, "listener":Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;
     :try_start_1
     # getter for: Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;->mComponentName:Landroid/content/ComponentName;
@@ -1640,17 +1490,14 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 251
     :goto_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 256
     :catch_0
     move-exception v0
 
-    .line 257
     .local v0, "e":Ljava/lang/SecurityException;
     :try_start_2
     const-string v3, "MediaSessionService"
@@ -1686,14 +1533,12 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     iget-object v3, p0, Lcom/android/server/media/MediaSessionService;->mSessionsListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 261
     :try_start_3
     # getter for: Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;->mListener:Landroid/media/session/IActiveSessionsListener;
     invoke-static {v2}, Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;->access$600(Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;)Landroid/media/session/IActiveSessionsListener;
@@ -1711,23 +1556,19 @@
 
     goto :goto_1
 
-    .line 263
     :catch_1
     move-exception v3
 
     goto :goto_1
 
-    .line 268
     .end local v0    # "e":Ljava/lang/SecurityException;
     .end local v2    # "listener":Lcom/android/server/media/MediaSessionService$SessionsListenerRecord;
     :cond_0
     :try_start_4
     monitor-exit v4
 
-    .line 269
     return-void
 
-    .line 268
     .end local v1    # "i":I
     :catchall_0
     move-exception v3
@@ -1743,31 +1584,25 @@
     .locals 6
 
     .prologue
-    .line 232
     iget-object v5, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 233
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v3
 
-    .line 234
     .local v3, "userId":I
     iget v4, p0, Lcom/android/server/media/MediaSessionService;->mCurrentUserId:I
 
     if-eq v4, v3, :cond_1
 
-    .line 235
     iget v2, p0, Lcom/android/server/media/MediaSessionService;->mCurrentUserId:I
 
-    .line 236
     .local v2, "oldUserId":I
     iput v3, p0, Lcom/android/server/media/MediaSessionService;->mCurrentUserId:I
 
-    .line 238
     iget-object v4, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1776,34 +1611,27 @@
 
     check-cast v1, Lcom/android/server/media/MediaSessionService$UserRecord;
 
-    .line 239
     .local v1, "oldUser":Lcom/android/server/media/MediaSessionService$UserRecord;
     if-eqz v1, :cond_0
 
-    .line 240
     invoke-virtual {v1}, Lcom/android/server/media/MediaSessionService$UserRecord;->stopLocked()V
 
-    .line 243
     :cond_0
     invoke-direct {p0, v3}, Lcom/android/server/media/MediaSessionService;->getOrCreateUser(I)Lcom/android/server/media/MediaSessionService$UserRecord;
 
     move-result-object v0
 
-    .line 244
     .local v0, "newUser":Lcom/android/server/media/MediaSessionService$UserRecord;
     invoke-virtual {v0}, Lcom/android/server/media/MediaSessionService$UserRecord;->startLocked()V
 
-    .line 246
     .end local v0    # "newUser":Lcom/android/server/media/MediaSessionService$UserRecord;
     .end local v1    # "oldUser":Lcom/android/server/media/MediaSessionService$UserRecord;
     .end local v2    # "oldUserId":I
     :cond_1
     monitor-exit v5
 
-    .line 247
     return-void
 
-    .line 246
     .end local v3    # "userId":I
     :catchall_0
     move-exception v4
@@ -1822,22 +1650,17 @@
     .param p1, "session"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 226
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 227
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->destroySessionLocked(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 228
     monitor-exit v1
 
-    .line 229
     return-void
 
-    .line 228
     :catchall_0
     move-exception v0
 
@@ -1854,7 +1677,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 213
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1867,7 +1689,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 215
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Must hold the MODIFY_PHONE_STATE permission."
@@ -1876,7 +1697,6 @@
 
     throw v0
 
-    .line 217
     :cond_0
     return-void
 .end method
@@ -1885,19 +1705,15 @@
     .locals 2
 
     .prologue
-    .line 207
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 209
     :try_start_0
     monitor-exit v1
 
-    .line 210
     return-void
 
-    .line 209
     :catchall_0
     move-exception v0
 
@@ -1914,16 +1730,13 @@
     .param p2, "session"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 151
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mRvc:Landroid/media/IRemoteVolumeController;
 
     if-nez v1, :cond_0
 
-    .line 159
     :goto_0
     return-void
 
-    .line 155
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mRvc:Landroid/media/IRemoteVolumeController;
@@ -1938,11 +1751,9 @@
 
     goto :goto_0
 
-    .line 156
     :catch_0
     move-exception v0
 
-    .line 157
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MediaSessionService"
 
@@ -1958,12 +1769,10 @@
     .param p1, "record"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 176
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 177
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
@@ -1973,21 +1782,17 @@
 
     if-nez v0, :cond_0
 
-    .line 178
     const-string v0, "MediaSessionService"
 
     const-string v2, "Unknown session changed playback type. Ignoring."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     monitor-exit v1
 
-    .line 183
     :goto_0
     return-void
 
-    .line 181
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/media/MediaSessionRecord;->getUserId()I
 
@@ -1995,7 +1800,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/media/MediaSessionService;->pushRemoteVolumeUpdateLocked(I)V
 
-    .line 182
     monitor-exit v1
 
     goto :goto_0
@@ -2017,16 +1821,13 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 162
     const/4 v0, 0x0
 
-    .line 163
     .local v0, "updateSessions":Z
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 164
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
@@ -2036,22 +1837,18 @@
 
     if-nez v1, :cond_1
 
-    .line 165
     const-string v1, "MediaSessionService"
 
     const-string v3, "Unknown session changed playback state. Ignoring."
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     monitor-exit v2
 
-    .line 173
     :cond_0
     :goto_0
     return-void
 
-    .line 168
     :cond_1
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
@@ -2059,15 +1856,12 @@
 
     move-result v0
 
-    .line 169
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 170
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
 
     const/4 v2, 0x1
@@ -2082,7 +1876,6 @@
 
     goto :goto_0
 
-    .line 169
     :catchall_0
     move-exception v1
 
@@ -2098,24 +1891,20 @@
     .locals 2
 
     .prologue
-    .line 119
     const-string v0, "media_session"
 
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mSessionManagerImpl:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/media/MediaSessionService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 120
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/android/server/Watchdog;->addMonitor(Lcom/android/server/Watchdog$Monitor;)V
 
-    .line 121
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService;->updateUser()V
 
-    .line 122
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2130,14 +1919,12 @@
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 124
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService;->getAudioService()Landroid/media/IAudioService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAudioService:Landroid/media/IAudioService;
 
-    .line 125
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2152,7 +1939,6 @@
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 126
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2163,7 +1949,6 @@
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 127
     new-instance v0, Lcom/android/server/media/MediaSessionService$SettingsObserver;
 
     const/4 v1, 0x0
@@ -2172,13 +1957,11 @@
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mSettingsObserver:Lcom/android/server/media/MediaSessionService$SettingsObserver;
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mSettingsObserver:Lcom/android/server/media/MediaSessionService$SettingsObserver;
 
     # invokes: Lcom/android/server/media/MediaSessionService$SettingsObserver;->observe()V
     invoke-static {v0}, Lcom/android/server/media/MediaSessionService$SettingsObserver;->access$100(Lcom/android/server/media/MediaSessionService$SettingsObserver;)V
 
-    .line 129
     return-void
 .end method
 
@@ -2187,10 +1970,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 187
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService;->updateUser()V
 
-    .line 188
     return-void
 .end method
 
@@ -2199,12 +1980,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 197
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 198
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
 
@@ -2214,21 +1993,16 @@
 
     check-cast v0, Lcom/android/server/media/MediaSessionService$UserRecord;
 
-    .line 199
     .local v0, "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     if-eqz v0, :cond_0
 
-    .line 200
     invoke-direct {p0, v0}, Lcom/android/server/media/MediaSessionService;->destroyUserLocked(Lcom/android/server/media/MediaSessionService$UserRecord;)V
 
-    .line 202
     :cond_0
     monitor-exit v2
 
-    .line 203
     return-void
 
-    .line 202
     .end local v0    # "user":Lcom/android/server/media/MediaSessionService$UserRecord;
     :catchall_0
     move-exception v1
@@ -2245,10 +2019,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 192
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService;->updateUser()V
 
-    .line 193
     return-void
 .end method
 
@@ -2257,22 +2029,17 @@
     .param p1, "session"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 220
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 221
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->destroySessionLocked(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 222
     monitor-exit v1
 
-    .line 223
     return-void
 
-    .line 222
     :catchall_0
     move-exception v0
 
@@ -2288,12 +2055,10 @@
     .param p1, "record"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 137
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 138
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAllSessions:Ljava/util/ArrayList;
 
@@ -2303,32 +2068,26 @@
 
     if-nez v0, :cond_0
 
-    .line 139
     const-string v0, "MediaSessionService"
 
     const-string v2, "Unknown session updated. Ignoring."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     monitor-exit v1
 
-    .line 145
     :goto_0
     return-void
 
-    .line 142
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mPriorityStack:Lcom/android/server/media/MediaSessionStack;
 
     invoke-virtual {v0, p1}, Lcom/android/server/media/MediaSessionStack;->onSessionStateChange(Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 143
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
 
     const/4 v1, 0x1
@@ -2343,7 +2102,6 @@
 
     goto :goto_0
 
-    .line 143
     :catchall_0
     move-exception v0
 

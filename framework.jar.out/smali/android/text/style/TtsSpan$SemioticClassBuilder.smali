@@ -30,11 +30,9 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 582
     .local p0, "this":Landroid/text/style/TtsSpan$SemioticClassBuilder;, "Landroid/text/style/TtsSpan$SemioticClassBuilder<TC;>;"
     invoke-direct {p0, p1}, Landroid/text/style/TtsSpan$Builder;-><init>(Ljava/lang/String;)V
 
-    .line 583
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 602
     .local p0, "this":Landroid/text/style/TtsSpan$SemioticClassBuilder;, "Landroid/text/style/TtsSpan$SemioticClassBuilder<TC;>;"
     const-string v0, "android.arg.animacy"
 
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 626
     .local p0, "this":Landroid/text/style/TtsSpan$SemioticClassBuilder;, "Landroid/text/style/TtsSpan$SemioticClassBuilder<TC;>;"
     const-string v0, "android.arg.case"
 
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 592
     .local p0, "this":Landroid/text/style/TtsSpan$SemioticClassBuilder;, "Landroid/text/style/TtsSpan$SemioticClassBuilder<TC;>;"
     const-string v0, "android.arg.gender"
 
@@ -127,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 613
     .local p0, "this":Landroid/text/style/TtsSpan$SemioticClassBuilder;, "Landroid/text/style/TtsSpan$SemioticClassBuilder<TC;>;"
     const-string v0, "android.arg.multiplicity"
 

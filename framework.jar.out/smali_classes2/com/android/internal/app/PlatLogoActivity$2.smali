@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 150
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$im:Landroid/widget/ImageView;
@@ -57,14 +56,12 @@
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 153
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v1, v1, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
 
     if-nez v1, :cond_0
 
-    .line 154
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$im:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -105,7 +102,6 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 163
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$platlogo:Landroid/graphics/drawable/Drawable;
 
     const-string v2, "alpha"
@@ -120,7 +116,6 @@
 
     move-result-object v0
 
-    .line 164
     .local v0, "a":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
@@ -128,15 +123,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 165
     const-wide/16 v2, 0x3e8
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 166
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 168
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$stick:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -173,7 +165,6 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 176
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$im:Landroid/widget/ImageView;
 
     new-instance v2, Lcom/android/internal/app/PlatLogoActivity$2$1;
@@ -182,7 +173,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 211
     .end local v0    # "a":Landroid/animation/ObjectAnimator;
     :goto_0
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->this$0:Lcom/android/internal/app/PlatLogoActivity;
@@ -193,10 +183,8 @@
 
     iput v2, v1, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
 
-    .line 212
     return-void
 
-    .line 209
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$im:Landroid/widget/ImageView;
 
@@ -210,7 +198,6 @@
 
     goto :goto_0
 
-    .line 163
     :array_0
     .array-data 4
         0x0

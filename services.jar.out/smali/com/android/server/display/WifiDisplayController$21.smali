@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1074
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1077
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1078
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.net.wifi.p2p.STATE_CHANGED"
 
@@ -56,7 +53,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1081
     const-string v3, "wifi_p2p_state"
 
     invoke-virtual {p2, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -67,7 +63,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 1089
     .local v1, "enabled":Z
     :goto_0
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
@@ -75,19 +70,16 @@
     # invokes: Lcom/android/server/display/WifiDisplayController;->handleStateChanged(Z)V
     invoke-static {v3, v1}, Lcom/android/server/display/WifiDisplayController;->access$3500(Lcom/android/server/display/WifiDisplayController;Z)V
 
-    .line 1113
     .end local v1    # "enabled":Z
     :cond_0
     :goto_1
     return-void
 
-    .line 1081
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1090
     :cond_2
     const-string v3, "android.net.wifi.p2p.PEERS_CHANGED"
 
@@ -97,7 +89,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 1095
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # invokes: Lcom/android/server/display/WifiDisplayController;->handlePeersChanged()V
@@ -105,7 +96,6 @@
 
     goto :goto_1
 
-    .line 1096
     :cond_3
     const-string v3, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
 
@@ -115,7 +105,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 1097
     const-string v3, "networkInfo"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -124,7 +113,6 @@
 
     check-cast v2, Landroid/net/NetworkInfo;
 
-    .line 1104
     .local v2, "networkInfo":Landroid/net/NetworkInfo;
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -133,7 +121,6 @@
 
     goto :goto_1
 
-    .line 1105
     .end local v2    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_4
     const-string v3, "android.net.wifi.p2p.THIS_DEVICE_CHANGED"
@@ -144,7 +131,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1106
     iget-object v4, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string v3, "wifiP2pDevice"

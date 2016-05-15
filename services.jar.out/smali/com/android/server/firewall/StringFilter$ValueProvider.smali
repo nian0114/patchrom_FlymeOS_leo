@@ -20,10 +20,8 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 129
     invoke-direct {p0, p1}, Lcom/android/server/firewall/FilterFactory;-><init>(Ljava/lang/String;)V
 
-    .line 130
     return-void
 .end method
 
@@ -43,7 +41,6 @@
     .end annotation
 
     .prologue
-    .line 134
     invoke-static {p0, p1}, Lcom/android/server/firewall/StringFilter;->readFromXml(Lcom/android/server/firewall/StringFilter$ValueProvider;Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/firewall/StringFilter;
 
     move-result-object v0

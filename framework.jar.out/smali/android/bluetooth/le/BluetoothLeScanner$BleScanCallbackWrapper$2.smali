@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 340
     iput-object p1, p0, Landroid/bluetooth/le/BluetoothLeScanner$BleScanCallbackWrapper$2;->this$1:Landroid/bluetooth/le/BluetoothLeScanner$BleScanCallbackWrapper;
 
     iput-object p2, p0, Landroid/bluetooth/le/BluetoothLeScanner$BleScanCallbackWrapper$2;->val$results:Ljava/util/List;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 343
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeScanner$BleScanCallbackWrapper$2;->this$1:Landroid/bluetooth/le/BluetoothLeScanner$BleScanCallbackWrapper;
 
     # getter for: Landroid/bluetooth/le/BluetoothLeScanner$BleScanCallbackWrapper;->mScanCallback:Landroid/bluetooth/le/ScanCallback;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/bluetooth/le/ScanCallback;->onBatchScanResults(Ljava/util/List;)V
 
-    .line 344
     return-void
 .end method

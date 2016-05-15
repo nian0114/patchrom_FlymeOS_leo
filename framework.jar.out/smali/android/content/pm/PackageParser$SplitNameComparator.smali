@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 656
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # Landroid/content/pm/PackageParser$1;
 
     .prologue
-    .line 656
     invoke-direct {p0}, Landroid/content/pm/PackageParser$SplitNameComparator;-><init>()V
 
     return-void
@@ -55,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 656
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -73,26 +70,20 @@
     .param p2, "rhs"    # Ljava/lang/String;
 
     .prologue
-    .line 659
     if-nez p1, :cond_0
 
-    .line 660
     const/4 v0, -0x1
 
-    .line 664
     :goto_0
     return v0
 
-    .line 661
     :cond_0
     if-nez p2, :cond_1
 
-    .line 662
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 664
     :cond_1
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 

@@ -10,10 +10,8 @@
     .param p2, "innerpe"    # Landroid/graphics/PathEffect;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Landroid/graphics/PathEffect;-><init>()V
 
-    .line 26
     iget-wide v0, p1, Landroid/graphics/PathEffect;->native_instance:J
 
     iget-wide v2, p2, Landroid/graphics/PathEffect;->native_instance:J
@@ -24,7 +22,6 @@
 
     iput-wide v0, p0, Landroid/graphics/ComposePathEffect;->native_instance:J
 
-    .line 28
     return-void
 .end method
 

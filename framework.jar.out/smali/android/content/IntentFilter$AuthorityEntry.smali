@@ -30,24 +30,20 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 667
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 668
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mOrigHost:Ljava/lang/String;
 
-    .line 669
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mHost:Ljava/lang/String;
 
-    .line 670
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -59,17 +55,14 @@
     :goto_0
     iput-boolean v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
-    .line 671
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
-    .line 672
     return-void
 
-    .line 670
     :cond_0
     const/4 v0, 0x0
 
@@ -86,13 +79,10 @@
 
     const/4 v0, 0x0
 
-    .line 660
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 661
     iput-object p1, p0, Landroid/content/IntentFilter$AuthorityEntry;->mOrigHost:Ljava/lang/String;
 
-    .line 662
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -112,7 +102,6 @@
     :cond_0
     iput-boolean v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
-    .line 663
     iget-boolean v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
     if-eqz v0, :cond_1
@@ -129,7 +118,6 @@
     :cond_1
     iput-object p1, p0, Landroid/content/IntentFilter$AuthorityEntry;->mHost:Ljava/lang/String;
 
-    .line 664
     if-eqz p2, :cond_2
 
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -139,10 +127,8 @@
     :goto_0
     iput v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
-    .line 665
     return-void
 
-    .line 664
     :cond_2
     const/4 v0, -0x1
 
@@ -154,7 +140,6 @@
     .param p0, "x0"    # Landroid/content/IntentFilter$AuthorityEntry;
 
     .prologue
-    .line 654
     iget-object v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mHost:Ljava/lang/String;
 
     return-object v0
@@ -165,7 +150,6 @@
     .param p0, "x0"    # Landroid/content/IntentFilter$AuthorityEntry;
 
     .prologue
-    .line 654
     iget v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     return v0
@@ -176,7 +160,6 @@
     .param p0, "x0"    # Landroid/content/IntentFilter$AuthorityEntry;
 
     .prologue
-    .line 654
     iget-boolean v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
     return v0
@@ -188,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 682
     iget-object v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mOrigHost:Ljava/lang/String;
 
     return-object v0
@@ -198,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 686
     iget v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     return v0
@@ -211,27 +192,22 @@
     .prologue
     const/4 v1, -0x2
 
-    .line 714
     invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 715
     .local v0, "host":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 735
     :cond_0
     :goto_0
     return v1
 
-    .line 720
     :cond_1
     iget-boolean v2, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
     if-eqz v2, :cond_2
 
-    .line 721
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -244,7 +220,6 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 724
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -261,7 +236,6 @@
 
     move-result-object v0
 
-    .line 726
     :cond_2
     iget-object v2, p0, Landroid/content/IntentFilter$AuthorityEntry;->mHost:Ljava/lang/String;
 
@@ -271,12 +245,10 @@
 
     if-nez v2, :cond_0
 
-    .line 729
     iget v2, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     if-ltz v2, :cond_3
 
-    .line 730
     iget v2, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPort()I
@@ -285,12 +257,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 733
     const/high16 v1, 0x400000
 
     goto :goto_0
 
-    .line 735
     :cond_3
     const/high16 v1, 0x300000
 
@@ -304,19 +274,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 691
     iget-boolean v1, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
     iget-boolean v2, p1, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
     if-eq v1, v2, :cond_1
 
-    .line 700
     :cond_0
     :goto_0
     return v0
 
-    .line 694
     :cond_1
     iget-object v1, p0, Landroid/content/IntentFilter$AuthorityEntry;->mHost:Ljava/lang/String;
 
@@ -328,14 +295,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 697
     iget v1, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     iget v2, p1, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     if-ne v1, v2, :cond_0
 
-    .line 700
     const/4 v0, 0x1
 
     goto :goto_0
@@ -346,17 +311,14 @@
     .param p1, "dest"    # Landroid/os/Parcel;
 
     .prologue
-    .line 675
     iget-object v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mOrigHost:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 676
     iget-object v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mHost:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 677
     iget-boolean v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mWild:Z
 
     if-eqz v0, :cond_0
@@ -366,15 +328,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 678
     iget v0, p0, Landroid/content/IntentFilter$AuthorityEntry;->mPort:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 679
     return-void
 
-    .line 677
     :cond_0
     const/4 v0, 0x0
 

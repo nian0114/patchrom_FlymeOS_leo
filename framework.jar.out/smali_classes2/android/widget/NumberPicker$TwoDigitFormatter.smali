@@ -32,33 +32,27 @@
     .locals 2
 
     .prologue
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 162
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mArgs:[Ljava/lang/Object;
 
-    .line 165
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 166
     .local v0, "locale":Ljava/util/Locale;
     invoke-direct {p0, v0}, Landroid/widget/NumberPicker$TwoDigitFormatter;->init(Ljava/util/Locale;)V
 
-    .line 167
     return-void
 .end method
 
@@ -67,7 +61,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 190
     new-instance v0, Ljava/util/Formatter;
 
     iget-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mBuilder:Ljava/lang/StringBuilder;
@@ -82,7 +75,6 @@
     .param p0, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 186
     invoke-static {p0}, Llibcore/icu/LocaleData;->get(Ljava/util/Locale;)Llibcore/icu/LocaleData;
 
     move-result-object v0
@@ -97,21 +89,18 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 170
     invoke-direct {p0, p1}, Landroid/widget/NumberPicker$TwoDigitFormatter;->createFormatter(Ljava/util/Locale;)Ljava/util/Formatter;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mFmt:Ljava/util/Formatter;
 
-    .line 171
     invoke-static {p1}, Landroid/widget/NumberPicker$TwoDigitFormatter;->getZeroDigit(Ljava/util/Locale;)C
 
     move-result v0
 
     iput-char v0, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mZeroDigit:C
 
-    .line 172
     return-void
 .end method
 
@@ -124,12 +113,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 175
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 176
     .local v0, "currentLocale":Ljava/util/Locale;
     iget-char v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mZeroDigit:C
 
@@ -139,10 +126,8 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 177
     invoke-direct {p0, v0}, Landroid/widget/NumberPicker$TwoDigitFormatter;->init(Ljava/util/Locale;)V
 
-    .line 179
     :cond_0
     iget-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mArgs:[Ljava/lang/Object;
 
@@ -152,7 +137,6 @@
 
     aput-object v2, v1, v3
 
-    .line 180
     iget-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mBuilder:Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mBuilder:Ljava/lang/StringBuilder;
@@ -163,7 +147,6 @@
 
     invoke-virtual {v1, v3, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 181
     iget-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mFmt:Ljava/util/Formatter;
 
     const-string v2, "%02d"
@@ -172,7 +155,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Formatter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
 
-    .line 182
     iget-object v1, p0, Landroid/widget/NumberPicker$TwoDigitFormatter;->mFmt:Ljava/util/Formatter;
 
     invoke-virtual {v1}, Ljava/util/Formatter;->toString()Ljava/lang/String;

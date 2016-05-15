@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,76 +40,63 @@
     .param p0, "callState"    # I
 
     .prologue
-    .line 114
     packed-switch p0, :pswitch_data_0
 
-    .line 136
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 116
     :pswitch_0
     const-string v0, "NEW"
 
     goto :goto_0
 
-    .line 118
     :pswitch_1
     const-string v0, "CONNECTING"
 
     goto :goto_0
 
-    .line 120
     :pswitch_2
     const-string v0, "PRE_DIAL_WAIT"
 
     goto :goto_0
 
-    .line 122
     :pswitch_3
     const-string v0, "DIALING"
 
     goto :goto_0
 
-    .line 124
     :pswitch_4
     const-string v0, "RINGING"
 
     goto :goto_0
 
-    .line 126
     :pswitch_5
     const-string v0, "ACTIVE"
 
     goto :goto_0
 
-    .line 128
     :pswitch_6
     const-string v0, "ON_HOLD"
 
     goto :goto_0
 
-    .line 130
     :pswitch_7
     const-string v0, "DISCONNECTED"
 
     goto :goto_0
 
-    .line 132
     :pswitch_8
     const-string v0, "ABORTED"
 
     goto :goto_0
 
-    .line 134
     :pswitch_9
     const-string v0, "DISCONNECTING"
 
     goto :goto_0
 
-    .line 114
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

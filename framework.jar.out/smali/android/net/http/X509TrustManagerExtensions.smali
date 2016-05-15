@@ -18,24 +18,19 @@
     .end annotation
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     instance-of v0, p1, Lcom/android/org/conscrypt/TrustManagerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 49
     check-cast p1, Lcom/android/org/conscrypt/TrustManagerImpl;
 
     .end local p1    # "tm":Ljavax/net/ssl/X509TrustManager;
     iput-object p1, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
-    .line 54
     return-void
 
-    .line 51
     .restart local p1    # "tm":Ljavax/net/ssl/X509TrustManager;
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -44,7 +39,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "tm is an instance of "
+    const-string v2, "tm is an instance of "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/org/conscrypt/TrustManagerImpl;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
@@ -120,7 +114,6 @@
     .param p1, "cert"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/org/conscrypt/TrustManagerImpl;->isUserAddedCertificate(Ljava/security/cert/X509Certificate;)Z

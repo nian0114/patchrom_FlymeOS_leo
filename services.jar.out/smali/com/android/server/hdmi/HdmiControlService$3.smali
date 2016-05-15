@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1999
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$3;->val$devices:Ljava/util/List;
@@ -45,7 +44,6 @@
     .param p1, "device"    # Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     .prologue
-    .line 2002
     const-string v0, "HdmiControlService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,12 +68,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2003
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->val$devices:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 2004
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->val$devices:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -84,13 +80,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 2005
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->onStandbyCompleted()V
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->access$5300(Lcom/android/server/hdmi/HdmiControlService;)V
 
-    .line 2010
     :cond_0
     return-void
 .end method

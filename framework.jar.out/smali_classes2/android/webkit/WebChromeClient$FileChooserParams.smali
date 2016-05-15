@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 422
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 445
     invoke-static {}, Landroid/webkit/WebViewFactory;->getProvider()Landroid/webkit/WebViewFactoryProvider;
 
     move-result-object v0

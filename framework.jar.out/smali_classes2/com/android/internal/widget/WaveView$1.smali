@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 419
     iput-object p1, p0, Lcom/android/internal/widget/WaveView$1;->this$0:Lcom/android/internal/widget/WaveView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 423
     iget-object v0, p0, Lcom/android/internal/widget/WaveView$1;->this$0:Lcom/android/internal/widget/WaveView;
 
     # getter for: Lcom/android/internal/widget/WaveView;->mLockState:I
@@ -54,13 +52,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 425
     iget-object v0, p0, Lcom/android/internal/widget/WaveView$1;->this$0:Lcom/android/internal/widget/WaveView;
 
     # setter for: Lcom/android/internal/widget/WaveView;->mLockState:I
     invoke-static {v0, v2}, Lcom/android/internal/widget/WaveView;->access$002(Lcom/android/internal/widget/WaveView;I)I
 
-    .line 428
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/WaveView$1;->this$0:Lcom/android/internal/widget/WaveView;
 
@@ -73,18 +69,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 430
     iget-object v0, p0, Lcom/android/internal/widget/WaveView$1;->this$0:Lcom/android/internal/widget/WaveView;
 
     # setter for: Lcom/android/internal/widget/WaveView;->mLockState:I
     invoke-static {v0, v2}, Lcom/android/internal/widget/WaveView;->access$002(Lcom/android/internal/widget/WaveView;I)I
 
-    .line 432
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/WaveView$1;->this$0:Lcom/android/internal/widget/WaveView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/WaveView;->invalidate()V
 
-    .line 433
     return-void
 .end method

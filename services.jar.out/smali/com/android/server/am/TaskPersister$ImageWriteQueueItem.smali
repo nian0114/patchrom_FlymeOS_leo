@@ -27,17 +27,13 @@
     .param p2, "image"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 123
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/am/TaskPersister$WriteQueueItem;-><init>(Lcom/android/server/am/TaskPersister$1;)V
 
-    .line 124
     iput-object p1, p0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mFilename:Ljava/lang/String;
 
-    .line 125
     iput-object p2, p0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
-    .line 126
     return-void
 .end method

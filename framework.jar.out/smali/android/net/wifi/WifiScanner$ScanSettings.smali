@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 188
     new-instance v0, Landroid/net/wifi/WifiScanner$ScanSettings$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiScanner$ScanSettings$1;-><init>()V
@@ -61,7 +60,6 @@
     .locals 0
 
     .prologue
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     return v0
@@ -87,39 +84,32 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 169
     iget v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->band:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 170
     iget v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->periodInMs:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 171
     iget v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->reportEvents:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 172
     iget v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->numBssidsPerScan:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 174
     iget-object v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
     if-eqz v1, :cond_1
 
-    .line 175
     iget-object v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
     array-length v1, v1
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -130,7 +120,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 178
     iget-object v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
     aget-object v1, v1, v0
@@ -139,7 +128,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 179
     iget-object v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
     aget-object v1, v1, v0
@@ -148,7 +136,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 180
     iget-object v1, p0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
     aget-object v1, v1, v0
@@ -162,7 +149,6 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -170,15 +156,12 @@
     :cond_0
     move v1, v2
 
-    .line 180
     goto :goto_1
 
-    .line 183
     .end local v0    # "i":I
     :cond_1
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 185
     :cond_2
     return-void
 .end method

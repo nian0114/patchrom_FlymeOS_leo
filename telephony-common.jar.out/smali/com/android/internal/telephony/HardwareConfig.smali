@@ -47,10 +47,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     return-void
 .end method
 
@@ -65,17 +63,14 @@
 
     const/4 v1, 0x1
 
-    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     const-string v0, ","
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 124
     .local v8, "split":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -87,16 +82,13 @@
 
     iput v0, p0, Lcom/android/internal/telephony/HardwareConfig;->type:I
 
-    .line 126
     iget v0, p0, Lcom/android/internal/telephony/HardwareConfig;->type:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 148
     :goto_0
     return-void
 
-    .line 128
     :pswitch_0
     aget-object v0, v8, v1
 
@@ -154,7 +146,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_1
     aget-object v0, v8, v1
 
@@ -178,7 +169,6 @@
 
     goto :goto_0
 
-    .line 126
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -199,12 +189,10 @@
     .param p7, "maxS"    # I
 
     .prologue
-    .line 152
     iget v2, p0, Lcom/android/internal/telephony/HardwareConfig;->type:I
 
     if-nez v2, :cond_2
 
-    .line 153
     invoke-static {p4}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -213,14 +201,11 @@
 
     move-result-object v0
 
-    .line 154
     .local v0, "bits":[C
     iput-object p1, p0, Lcom/android/internal/telephony/HardwareConfig;->uuid:Ljava/lang/String;
 
-    .line 156
     iput p3, p0, Lcom/android/internal/telephony/HardwareConfig;->rilModel:I
 
-    .line 157
     new-instance v2, Ljava/util/BitSet;
 
     array-length v3, v0
@@ -229,7 +214,6 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/HardwareConfig;->rat:Ljava/util/BitSet;
 
-    .line 158
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -238,7 +222,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 159
     iget-object v3, p0, Lcom/android/internal/telephony/HardwareConfig;->rat:Ljava/util/BitSet;
 
     aget-char v2, v0, v1
@@ -252,28 +235,22 @@
     :goto_1
     invoke-virtual {v3, v1, v2}, Ljava/util/BitSet;->set(IZ)V
 
-    .line 158
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 159
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 161
     :cond_1
     iput p5, p0, Lcom/android/internal/telephony/HardwareConfig;->maxActiveVoiceCall:I
 
-    .line 162
     iput p6, p0, Lcom/android/internal/telephony/HardwareConfig;->maxActiveDataCall:I
 
-    .line 163
     iput p7, p0, Lcom/android/internal/telephony/HardwareConfig;->maxStandby:I
 
-    .line 165
     .end local v0    # "bits":[C
     .end local v1    # "i":I
     :cond_2
@@ -287,20 +264,16 @@
     .param p3, "link"    # Ljava/lang/String;
 
     .prologue
-    .line 168
     iget v0, p0, Lcom/android/internal/telephony/HardwareConfig;->type:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 169
     iput-object p1, p0, Lcom/android/internal/telephony/HardwareConfig;->uuid:Ljava/lang/String;
 
-    .line 170
     iput-object p3, p0, Lcom/android/internal/telephony/HardwareConfig;->modemUuid:Ljava/lang/String;
 
-    .line 173
     :cond_0
     return-void
 .end method
@@ -310,18 +283,15 @@
     .param p1, "hw"    # Lcom/android/internal/telephony/HardwareConfig;
 
     .prologue
-    .line 200
     invoke-virtual {p0}, Lcom/android/internal/telephony/HardwareConfig;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 201
     .local v0, "one":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/android/internal/telephony/HardwareConfig;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 203
     .local v1, "two":Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -334,23 +304,19 @@
     .locals 3
 
     .prologue
-    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 177
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget v1, p0, Lcom/android/internal/telephony/HardwareConfig;->type:I
 
     if-nez v1, :cond_0
 
-    .line 178
     const-string v1, "Modem "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 179
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -373,7 +339,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -396,7 +361,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -419,7 +383,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 182
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -446,7 +409,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -469,7 +431,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 184
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,7 +453,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -515,12 +475,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 186
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -528,7 +486,6 @@
 
     return-object v1
 
-    .line 187
     :cond_0
     iget v1, p0, Lcom/android/internal/telephony/HardwareConfig;->type:I
 
@@ -536,12 +493,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 188
     const-string v1, "Sim "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -564,7 +519,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 190
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -587,7 +541,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 191
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,14 +563,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 194
     :cond_1
     const-string v1, "Invalid Configration"
 

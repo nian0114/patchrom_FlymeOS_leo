@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 2100
     invoke-static {}, Lcom/android/internal/os/BatterySipper$DrainType;->values()[Lcom/android/internal/os/BatterySipper$DrainType;
 
     move-result-object v0

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "errorCode"    # I
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -44,6 +42,5 @@
     .param p1, "settingsInEffect"    # Landroid/bluetooth/le/AdvertiseSettings;
 
     .prologue
-    .line 64
     return-void
 .end method

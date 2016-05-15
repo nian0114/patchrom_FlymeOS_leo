@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 113
     new-instance v0, Landroid/telephony/IccOpenLogicalChannelResponse$1;
 
     invoke-direct {v0}, Landroid/telephony/IccOpenLogicalChannelResponse$1;-><init>()V
@@ -59,19 +58,14 @@
     .param p3, "selectResponse"    # [B
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput p1, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mChannel:I
 
-    .line 56
     iput p2, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mStatus:I
 
-    .line 57
     iput-object p3, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
-    .line 58
     return-void
 .end method
 
@@ -80,47 +74,38 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mChannel:I
 
-    .line 65
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mStatus:I
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 67
     .local v0, "arrayLength":I
     if-lez v0, :cond_0
 
-    .line 68
     new-array v1, v0, [B
 
     iput-object v1, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
-    .line 69
     iget-object v1, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 73
     :goto_0
     return-void
 
-    .line 71
     :cond_0
     const/4 v1, 0x0
 
@@ -135,7 +120,6 @@
     .param p2, "x1"    # Landroid/telephony/IccOpenLogicalChannelResponse$1;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Landroid/telephony/IccOpenLogicalChannelResponse;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -147,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 98
     const/4 v0, 0x0
 
     return v0
@@ -157,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mChannel:I
 
     return v0
@@ -167,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
     return-object v0
@@ -177,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mStatus:I
 
     return v0
@@ -187,7 +167,6 @@
     .locals 2
 
     .prologue
-    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,17 +208,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 103
     iget v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mChannel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 104
     iget v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     iget-object v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
     if-eqz v0, :cond_0
@@ -250,23 +226,19 @@
 
     if-lez v0, :cond_0
 
-    .line 106
     iget-object v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 107
     iget-object v0, p0, Landroid/telephony/IccOpenLogicalChannelResponse;->mSelectResponse:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 111
     :goto_0
     return-void
 
-    .line 109
     :cond_0
     const/4 v0, 0x0
 

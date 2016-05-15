@@ -73,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const-class v0, Lcom/android/server/WiredAccessoryManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -93,17 +92,14 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mLock:Ljava/lang/Object;
 
-    .line 230
     new-instance v1, Lcom/android/server/WiredAccessoryManager$1;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -116,7 +112,6 @@
 
     iput-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mHandler:Landroid/os/Handler;
 
-    .line 94
     const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -125,7 +120,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 95
     .local v0, "pm":Landroid/os/PowerManager;
     const-string v1, "WiredAccessoryManager"
 
@@ -135,14 +129,12 @@
 
     iput-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 96
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 97
     const-string v1, "audio"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -153,10 +145,8 @@
 
     iput-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 98
     iput-object p2, p0, Lcom/android/server/WiredAccessoryManager;->mInputManager:Lcom/android/server/input/InputManagerService;
 
-    .line 100
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -169,14 +159,12 @@
 
     iput-boolean v1, p0, Lcom/android/server/WiredAccessoryManager;->mUseDevInputEventForAudioJack:Z
 
-    .line 103
     new-instance v1, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;
 
     invoke-direct {v1, p0}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;-><init>(Lcom/android/server/WiredAccessoryManager;)V
 
     iput-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mObserver:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;
 
-    .line 104
     return-void
 .end method
 
@@ -188,7 +176,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/WiredAccessoryManager;->setDevicesState(IILjava/lang/String;)V
 
     return-void
@@ -199,7 +186,6 @@
     .param p0, "x0"    # Lcom/android/server/WiredAccessoryManager;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -210,7 +196,6 @@
     .param p0, "x0"    # Lcom/android/server/WiredAccessoryManager;
 
     .prologue
-    .line 56
     invoke-direct {p0}, Lcom/android/server/WiredAccessoryManager;->onSystemReady()V
 
     return-void
@@ -221,7 +206,6 @@
     .param p0, "x0"    # Lcom/android/server/WiredAccessoryManager;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -231,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 56
     sget-object v0, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -242,7 +225,6 @@
     .param p0, "x0"    # Lcom/android/server/WiredAccessoryManager;
 
     .prologue
-    .line 56
     iget-boolean v0, p0, Lcom/android/server/WiredAccessoryManager;->mUseDevInputEventForAudioJack:Z
 
     return v0
@@ -253,7 +235,6 @@
     .param p0, "x0"    # Lcom/android/server/WiredAccessoryManager;
 
     .prologue
-    .line 56
     iget v0, p0, Lcom/android/server/WiredAccessoryManager;->mHeadsetState:I
 
     return v0
@@ -266,7 +247,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Lcom/android/server/WiredAccessoryManager;->updateLocked(Ljava/lang/String;I)V
 
     return-void
@@ -282,15 +262,12 @@
 
     const/16 v3, -0x100
 
-    .line 107
     iget-boolean v1, p0, Lcom/android/server/WiredAccessoryManager;->mUseDevInputEventForAudioJack:Z
 
     if-eqz v1, :cond_3
 
-    .line 108
     const/4 v0, 0x0
 
-    .line 109
     .local v0, "switchValues":I
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mInputManager:Lcom/android/server/input/InputManagerService;
 
@@ -302,10 +279,8 @@
 
     if-ne v1, v5, :cond_0
 
-    .line 110
     or-int/lit8 v0, v0, 0x4
 
-    .line 112
     :cond_0
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mInputManager:Lcom/android/server/input/InputManagerService;
 
@@ -317,10 +292,8 @@
 
     if-ne v1, v5, :cond_1
 
-    .line 113
     or-int/lit8 v0, v0, 0x10
 
-    .line 115
     :cond_1
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mInputManager:Lcom/android/server/input/InputManagerService;
 
@@ -332,10 +305,8 @@
 
     if-ne v1, v5, :cond_2
 
-    .line 116
     or-int/lit8 v0, v0, 0x40
 
-    .line 118
     :cond_2
     const-wide/16 v2, 0x0
 
@@ -343,14 +314,12 @@
 
     invoke-virtual {p0, v2, v3, v0, v1}, Lcom/android/server/WiredAccessoryManager;->notifyWiredAccessoryChanged(JII)V
 
-    .line 122
     .end local v0    # "switchValues":I
     :cond_3
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mObserver:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;
 
     invoke-virtual {v1}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->init()V
 
-    .line 123
     return-void
 .end method
 
@@ -364,41 +333,32 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 261
     and-int v3, p2, p1
 
     and-int v4, p3, p1
 
     if-eq v3, v4, :cond_1
 
-    .line 262
     const/4 v1, 0x0
 
-    .line 263
     .local v1, "outDevice":I
     const/4 v0, 0x0
 
-    .line 266
     .local v0, "inDevice":I
     and-int v3, p2, p1
 
     if-eqz v3, :cond_2
 
-    .line 267
     const/4 v2, 0x1
 
-    .line 272
     .local v2, "state":I
     :goto_0
     if-ne p1, v6, :cond_3
 
-    .line 273
     const/4 v1, 0x4
 
-    .line 274
     const v0, -0x7ffffff0
 
-    .line 291
     :goto_1
     sget-object v4, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
@@ -431,24 +391,19 @@
 
     invoke-static {v4, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     if-eqz v1, :cond_0
 
-    .line 294
     iget-object v3, p0, Lcom/android/server/WiredAccessoryManager;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v3, v1, v2, p4}, Landroid/media/AudioManager;->setWiredDeviceConnectionState(IILjava/lang/String;)V
 
-    .line 296
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 297
     iget-object v3, p0, Lcom/android/server/WiredAccessoryManager;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v3, v0, v2, p4}, Landroid/media/AudioManager;->setWiredDeviceConnectionState(IILjava/lang/String;)V
 
-    .line 300
     .end local v0    # "inDevice":I
     .end local v1    # "outDevice":I
     .end local v2    # "state":I
@@ -456,7 +411,6 @@
     :goto_3
     return-void
 
-    .line 269
     .restart local v0    # "inDevice":I
     .restart local v1    # "outDevice":I
     :cond_2
@@ -465,62 +419,51 @@
     .restart local v2    # "state":I
     goto :goto_0
 
-    .line 275
     :cond_3
     const/4 v3, 0x2
 
     if-ne p1, v3, :cond_4
 
-    .line 276
     const/16 v1, 0x8
 
     goto :goto_1
 
-    .line 277
     :cond_4
     const/16 v3, 0x20
 
     if-ne p1, v3, :cond_5
 
-    .line 278
     const/high16 v1, 0x20000
 
     goto :goto_1
 
-    .line 279
     :cond_5
     const/4 v3, 0x4
 
     if-ne p1, v3, :cond_6
 
-    .line 280
     const/16 v1, 0x800
 
     goto :goto_1
 
-    .line 281
     :cond_6
     const/16 v3, 0x8
 
     if-ne p1, v3, :cond_7
 
-    .line 282
     const/16 v1, 0x1000
 
     goto :goto_1
 
-    .line 283
     :cond_7
     const/16 v3, 0x10
 
     if-ne p1, v3, :cond_8
 
-    .line 284
     const/16 v1, 0x400
 
     goto :goto_1
 
-    .line 286
     :cond_8
     sget-object v3, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
@@ -546,7 +489,6 @@
 
     goto :goto_3
 
-    .line 291
     :cond_9
     const-string v3, " disconnected"
 
@@ -560,15 +502,12 @@
     .param p3, "headsetName"    # Ljava/lang/String;
 
     .prologue
-    .line 248
     iget-object v3, p0, Lcom/android/server/WiredAccessoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 249
     const/16 v0, 0x3f
 
-    .line 250
     .local v0, "allHeadsets":I
     const/4 v1, 0x1
 
@@ -576,34 +515,27 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 251
     and-int v2, v1, v0
 
     if-eqz v2, :cond_0
 
-    .line 252
     :try_start_0
     invoke-direct {p0, v1, p1, p2, p3}, Lcom/android/server/WiredAccessoryManager;->setDeviceStateLocked(IIILjava/lang/String;)V
 
-    .line 253
     xor-int/lit8 v2, v1, -0x1
 
     and-int/2addr v0, v2
 
-    .line 250
     :cond_0
     shl-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 256
     :cond_1
     monitor-exit v3
 
-    .line 257
     return-void
 
-    .line 256
     :catchall_0
     move-exception v2
 
@@ -620,12 +552,10 @@
     .param p2, "switchMask"    # I
 
     .prologue
-    .line 303
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 304
     .local v0, "sb":Ljava/lang/StringBuffer;
     and-int/lit8 v1, p2, 0x4
 
@@ -635,12 +565,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 306
     const-string v1, "SW_HEADPHONE_INSERT "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 308
     :cond_0
     and-int/lit8 v1, p2, 0x10
 
@@ -650,12 +578,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 310
     const-string v1, "SW_MICROPHONE_INSERT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 312
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -670,30 +596,23 @@
     .param p2, "newState"    # I
 
     .prologue
-    .line 187
     and-int/lit8 v2, p2, 0x3f
 
-    .line 188
     .local v2, "headsetState":I
     and-int/lit8 v5, v2, 0x4
 
-    .line 189
     .local v5, "usb_headset_anlg":I
     and-int/lit8 v6, v2, 0x8
 
-    .line 190
     .local v6, "usb_headset_dgtl":I
     and-int/lit8 v1, v2, 0x23
 
-    .line 191
     .local v1, "h2w_headset":I
     const/4 v0, 0x1
 
-    .line 192
     .local v0, "h2wStateChange":Z
     const/4 v4, 0x1
 
-    .line 193
     .local v4, "usbStateChange":Z
     sget-object v7, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
@@ -749,39 +668,32 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     iget v7, p0, Lcom/android/server/WiredAccessoryManager;->mHeadsetState:I
 
     if-ne v7, v2, :cond_0
 
-    .line 199
     sget-object v7, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
     const-string v8, "No state change."
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     :goto_0
     return-void
 
-    .line 206
     :cond_0
     const/16 v7, 0x23
 
     if-ne v1, v7, :cond_1
 
-    .line 207
     sget-object v7, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
     const-string v8, "Invalid combination, unsetting h2w flag"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     const/4 v0, 0x0
 
-    .line 212
     :cond_1
     const/4 v7, 0x4
 
@@ -791,23 +703,19 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 213
     sget-object v7, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
     const-string v8, "Invalid combination, unsetting usb flag"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     const/4 v4, 0x0
 
-    .line 216
     :cond_2
     if-nez v0, :cond_3
 
     if-nez v4, :cond_3
 
-    .line 217
     sget-object v7, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
     const-string v8, "invalid transition, returning ..."
@@ -816,13 +724,11 @@
 
     goto :goto_0
 
-    .line 221
     :cond_3
     iget-object v7, p0, Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v7}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 223
     iget-object v7, p0, Lcom/android/server/WiredAccessoryManager;->mHandler:Landroid/os/Handler;
 
     const/4 v8, 0x1
@@ -833,13 +739,11 @@
 
     move-result-object v3
 
-    .line 225
     .local v3, "msg":Landroid/os/Message;
     iget-object v7, p0, Lcom/android/server/WiredAccessoryManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v7, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 227
     iput v2, p0, Lcom/android/server/WiredAccessoryManager;->mHeadsetState:I
 
     goto :goto_0
@@ -854,7 +758,6 @@
     .param p4, "switchMask"    # I
 
     .prologue
-    .line 127
     sget-object v1, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -905,12 +808,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     iget-object v2, p0, Lcom/android/server/WiredAccessoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 133
     :try_start_0
     iget v1, p0, Lcom/android/server/WiredAccessoryManager;->mSwitchValues:I
 
@@ -922,17 +823,14 @@
 
     iput v1, p0, Lcom/android/server/WiredAccessoryManager;->mSwitchValues:I
 
-    .line 134
     iget v1, p0, Lcom/android/server/WiredAccessoryManager;->mSwitchValues:I
 
     and-int/lit8 v1, v1, 0x54
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 157
     const/4 v0, 0x0
 
-    .line 161
     .local v0, "headset":I
     :goto_0
     const-string v1, "h2w"
@@ -945,58 +843,45 @@
 
     invoke-direct {p0, v1, v3}, Lcom/android/server/WiredAccessoryManager;->updateLocked(Ljava/lang/String;I)V
 
-    .line 163
     monitor-exit v2
 
-    .line 164
     return-void
 
-    .line 137
     .end local v0    # "headset":I
     :sswitch_0
     const/4 v0, 0x0
 
-    .line 138
     .restart local v0    # "headset":I
     goto :goto_0
 
-    .line 141
     .end local v0    # "headset":I
     :sswitch_1
     const/4 v0, 0x2
 
-    .line 142
     .restart local v0    # "headset":I
     goto :goto_0
 
-    .line 145
     .end local v0    # "headset":I
     :sswitch_2
     const/16 v0, 0x20
 
-    .line 146
     .restart local v0    # "headset":I
     goto :goto_0
 
-    .line 149
     .end local v0    # "headset":I
     :sswitch_3
     const/4 v0, 0x1
 
-    .line 150
     .restart local v0    # "headset":I
     goto :goto_0
 
-    .line 153
     .end local v0    # "headset":I
     :sswitch_4
     const/4 v0, 0x1
 
-    .line 154
     .restart local v0    # "headset":I
     goto :goto_0
 
-    .line 163
     .end local v0    # "headset":I
     :catchall_0
     move-exception v1
@@ -1007,7 +892,6 @@
 
     throw v1
 
-    .line 134
     nop
 
     :sswitch_data_0
@@ -1024,18 +908,15 @@
     .locals 7
 
     .prologue
-    .line 168
     iget-object v2, p0, Lcom/android/server/WiredAccessoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 169
     :try_start_0
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mHandler:Landroid/os/Handler;
 
     const/4 v3, 0x2
@@ -1050,19 +931,15 @@
 
     move-result-object v0
 
-    .line 172
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 173
     monitor-exit v2
 
-    .line 174
     return-void
 
-    .line 173
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1

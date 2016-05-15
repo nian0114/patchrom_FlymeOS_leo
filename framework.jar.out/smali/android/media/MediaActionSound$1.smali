@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 176
     iput-object p1, p0, Landroid/media/MediaActionSound$1;->this$0:Landroid/media/MediaActionSound;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,10 +46,8 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 179
     if-nez p3, :cond_1
 
-    .line 180
     iget-object v0, p0, Landroid/media/MediaActionSound$1;->this$0:Landroid/media/MediaActionSound;
 
     # getter for: Landroid/media/MediaActionSound;->mSoundIdToPlay:I
@@ -70,10 +67,8 @@
 
     move v6, v2
 
-    .line 181
     invoke-virtual/range {v0 .. v6}, Landroid/media/SoundPool;->play(IFFIIF)I
 
-    .line 182
     iget-object v0, p0, Landroid/media/MediaActionSound$1;->this$0:Landroid/media/MediaActionSound;
 
     const/4 v1, -0x1
@@ -81,12 +76,10 @@
     # setter for: Landroid/media/MediaActionSound;->mSoundIdToPlay:I
     invoke-static {v0, v1}, Landroid/media/MediaActionSound;->access$002(Landroid/media/MediaActionSound;I)I
 
-    .line 188
     :cond_0
     :goto_0
     return-void
 
-    .line 185
     :cond_1
     const-string v0, "MediaActionSound"
 

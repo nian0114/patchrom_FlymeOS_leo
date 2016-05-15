@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 236
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 237
     .local v0, "json":Ljava/lang/String;
     invoke-static {v0}, Landroid/content/res/ThemeConfig$JsonSerializer;->fromJson(Ljava/lang/String;)Landroid/content/res/ThemeConfig;
 
     move-result-object v1
 
-    .line 238
     .local v1, "themeConfig":Landroid/content/res/ThemeConfig;
     invoke-static {}, Landroid/content/res/ThemeChangeRequest$RequestType;->values()[Landroid/content/res/ThemeChangeRequest$RequestType;
 
@@ -71,7 +67,6 @@
     # setter for: Landroid/content/res/ThemeConfig;->mLastThemeChangeRequestType:Landroid/content/res/ThemeChangeRequest$RequestType;
     invoke-static {v1, v2}, Landroid/content/res/ThemeConfig;->access$002(Landroid/content/res/ThemeConfig;Landroid/content/res/ThemeChangeRequest$RequestType;)Landroid/content/res/ThemeChangeRequest$RequestType;
 
-    .line 239
     return-object v1
 .end method
 
@@ -79,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 234
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeConfig$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/res/ThemeConfig;
 
     move-result-object v0
@@ -92,7 +86,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 243
     new-array v0, p1, [Landroid/content/res/ThemeConfig;
 
     return-object v0
@@ -102,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 234
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeConfig$1;->newArray(I)[Landroid/content/res/ThemeConfig;
 
     move-result-object v0

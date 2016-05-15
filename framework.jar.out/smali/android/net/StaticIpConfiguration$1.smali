@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 168
     new-instance v0, Landroid/net/StaticIpConfiguration;
 
     invoke-direct {v0}, Landroid/net/StaticIpConfiguration;-><init>()V
 
-    .line 169
     .local v0, "s":Landroid/net/StaticIpConfiguration;
     invoke-static {v0, p1}, Landroid/net/StaticIpConfiguration;->readFromParcel(Landroid/net/StaticIpConfiguration;Landroid/os/Parcel;)V
 
-    .line 170
     return-object v0
 .end method
 
@@ -62,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-virtual {p0, p1}, Landroid/net/StaticIpConfiguration$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/StaticIpConfiguration;
 
     move-result-object v0
@@ -75,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 174
     new-array v0, p1, [Landroid/net/StaticIpConfiguration;
 
     return-object v0
@@ -85,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-virtual {p0, p1}, Landroid/net/StaticIpConfiguration$1;->newArray(I)[Landroid/net/StaticIpConfiguration;
 
     move-result-object v0

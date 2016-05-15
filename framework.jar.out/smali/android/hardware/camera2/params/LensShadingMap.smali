@@ -23,11 +23,9 @@
     .param p3, "columns"    # I
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
-    const-string/jumbo v0, "rows must be positive"
+    const-string v0, "rows must be positive"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentPositive(ILjava/lang/String;)I
 
@@ -35,7 +33,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mRows:I
 
-    .line 65
     const-string v0, "columns must be positive"
 
     invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentPositive(ILjava/lang/String;)I
@@ -44,7 +41,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mColumns:I
 
-    .line 66
     const-string v0, "elements must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -55,7 +51,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
-    .line 68
     array-length v0, p1
 
     invoke-virtual {p0}, Landroid/hardware/camera2/params/LensShadingMap;->getGainFactorCount()I
@@ -64,7 +59,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,7 +99,6 @@
 
     throw v0
 
-    .line 74
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -115,7 +108,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/internal/util/Preconditions;->checkArrayElementsInRange([FFFLjava/lang/String;)[F
 
-    .line 75
     return-void
 .end method
 
@@ -127,17 +119,14 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 198
-    const-string/jumbo v0, "offset must not be negative"
+    const-string v0, "offset must not be negative"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
-    .line 199
     const-string v0, "destination must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     array-length v0, p1
 
     add-int/2addr v0, p2
@@ -148,7 +137,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 201
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     const-string v1, "destination too small to fit elements"
@@ -157,7 +145,6 @@
 
     throw v0
 
-    .line 204
     :cond_0
     iget-object v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
@@ -169,7 +156,6 @@
 
     invoke-static {v0, v1, p1, p2, v2}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 205
     return-void
 .end method
 
@@ -182,24 +168,19 @@
 
     const/4 v2, 0x0
 
-    .line 217
     if-nez p1, :cond_1
 
-    .line 229
     :cond_0
     :goto_0
     return v2
 
-    .line 220
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 221
     goto :goto_0
 
-    .line 223
     :cond_2
     instance-of v3, p1, Landroid/hardware/camera2/params/LensShadingMap;
 
@@ -207,10 +188,8 @@
 
     move-object v0, p1
 
-    .line 224
     check-cast v0, Landroid/hardware/camera2/params/LensShadingMap;
 
-    .line 225
     .local v0, "other":Landroid/hardware/camera2/params/LensShadingMap;
     iget v3, p0, Landroid/hardware/camera2/params/LensShadingMap;->mRows:I
 
@@ -249,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mColumns:I
 
     return v0
@@ -262,14 +240,12 @@
     .param p3, "row"    # I
 
     .prologue
-    .line 129
     if-ltz p1, :cond_0
 
     const/4 v0, 0x4
 
     if-le p1, v0, :cond_1
 
-    .line 130
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -279,7 +255,6 @@
 
     throw v0
 
-    .line 131
     :cond_1
     if-ltz p2, :cond_2
 
@@ -287,7 +262,6 @@
 
     if-lt p2, v0, :cond_3
 
-    .line 132
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -297,7 +271,6 @@
 
     throw v0
 
-    .line 133
     :cond_3
     if-ltz p3, :cond_4
 
@@ -305,17 +278,15 @@
 
     if-lt p3, v0, :cond_5
 
-    .line 134
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "row out of range"
+    const-string v1, "row out of range"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 137
     :cond_5
     iget-object v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
@@ -338,7 +309,6 @@
     .locals 2
 
     .prologue
-    .line 98
     iget v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mRows:I
 
     iget v1, p0, Landroid/hardware/camera2/params/LensShadingMap;->mColumns:I
@@ -356,14 +326,12 @@
     .param p2, "row"    # I
 
     .prologue
-    .line 157
     if-ltz p1, :cond_0
 
     iget v5, p0, Landroid/hardware/camera2/params/LensShadingMap;->mColumns:I
 
     if-lt p1, v5, :cond_1
 
-    .line 158
     :cond_0
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -373,7 +341,6 @@
 
     throw v5
 
-    .line 159
     :cond_1
     if-ltz p2, :cond_2
 
@@ -381,17 +348,15 @@
 
     if-lt p2, v5, :cond_3
 
-    .line 160
     :cond_2
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v6, "row out of range"
+    const-string v6, "row out of range"
 
     invoke-direct {v5, v6}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 163
     :cond_3
     iget v5, p0, Landroid/hardware/camera2/params/LensShadingMap;->mColumns:I
 
@@ -401,7 +366,6 @@
 
     mul-int/lit8 v3, v5, 0x4
 
-    .line 165
     .local v3, "offset":I
     iget-object v5, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
@@ -409,7 +373,6 @@
 
     aget v4, v5, v6
 
-    .line 167
     .local v4, "red":F
     iget-object v5, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
@@ -417,7 +380,6 @@
 
     aget v1, v5, v6
 
-    .line 169
     .local v1, "greenEven":F
     iget-object v5, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
@@ -425,7 +387,6 @@
 
     aget v2, v5, v6
 
-    .line 171
     .local v2, "greenOdd":F
     iget-object v5, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
@@ -433,7 +394,6 @@
 
     aget v0, v5, v6
 
-    .line 174
     .local v0, "blue":F
     new-instance v5, Landroid/hardware/camera2/params/RggbChannelVector;
 
@@ -446,7 +406,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget v0, p0, Landroid/hardware/camera2/params/LensShadingMap;->mRows:I
 
     return v0
@@ -456,14 +415,12 @@
     .locals 3
 
     .prologue
-    .line 237
     iget-object v1, p0, Landroid/hardware/camera2/params/LensShadingMap;->mElements:[F
 
     invoke-static {v1}, Landroid/hardware/camera2/utils/HashCodeHelpers;->hashCode([F)I
 
     move-result v0
 
-    .line 238
     .local v0, "elemsHash":I
     iget v1, p0, Landroid/hardware/camera2/params/LensShadingMap;->mRows:I
 

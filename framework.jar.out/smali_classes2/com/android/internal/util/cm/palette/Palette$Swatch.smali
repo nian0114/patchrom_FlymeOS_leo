@@ -41,37 +41,30 @@
     .param p2, "population"    # I
 
     .prologue
-    .line 558
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 559
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRed:I
 
-    .line 560
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGreen:I
 
-    .line 561
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mBlue:I
 
-    .line 562
     iput p1, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
-    .line 563
     iput p2, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mPopulation:I
 
-    .line 564
     return-void
 .end method
 
@@ -83,29 +76,22 @@
     .param p4, "population"    # I
 
     .prologue
-    .line 566
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 567
     iput p1, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRed:I
 
-    .line 568
     iput p2, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGreen:I
 
-    .line 569
     iput p3, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mBlue:I
 
-    .line 570
     invoke-static {p1, p2, p3}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
-    .line 571
     iput p4, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mPopulation:I
 
-    .line 572
     return-void
 .end method
 
@@ -123,19 +109,16 @@
 
     const/4 v5, -0x1
 
-    .line 622
     iget-boolean v4, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGeneratedTextColors:Z
 
     if-nez v4, :cond_0
 
-    .line 624
     iget v4, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
     invoke-static {v4, v5, v8}, Lcom/android/internal/util/cm/palette/ColorUtils;->getTextColorForBackground(IIF)I
 
     move-result v2
 
-    .line 626
     .local v2, "lightBody":I
     iget v4, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
@@ -143,29 +126,23 @@
 
     move-result v3
 
-    .line 629
     .local v3, "lightTitle":I
     if-eq v2, v5, :cond_1
 
     if-eq v3, v5, :cond_1
 
-    .line 631
     iput v2, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mBodyTextColor:I
 
-    .line 632
     iput v3, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mTitleTextColor:I
 
-    .line 633
     iput-boolean v6, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGeneratedTextColors:Z
 
-    .line 656
     .end local v2    # "lightBody":I
     .end local v3    # "lightTitle":I
     :cond_0
     :goto_0
     return-void
 
-    .line 637
     .restart local v2    # "lightBody":I
     .restart local v3    # "lightTitle":I
     :cond_1
@@ -175,7 +152,6 @@
 
     move-result v0
 
-    .line 639
     .local v0, "darkBody":I
     iget v4, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
@@ -183,24 +159,19 @@
 
     move-result v1
 
-    .line 642
     .local v1, "darkTitle":I
     if-eq v0, v5, :cond_2
 
     if-eq v0, v5, :cond_2
 
-    .line 644
     iput v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mBodyTextColor:I
 
-    .line 645
     iput v1, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mTitleTextColor:I
 
-    .line 646
     iput-boolean v6, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGeneratedTextColors:Z
 
     goto :goto_0
 
-    .line 652
     :cond_2
     if-eq v2, v5, :cond_3
 
@@ -208,14 +179,12 @@
     :goto_1
     iput v2, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mBodyTextColor:I
 
-    .line 653
     if-eq v3, v5, :cond_4
 
     .end local v3    # "lightTitle":I
     :goto_2
     iput v3, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mTitleTextColor:I
 
-    .line 654
     iput-boolean v6, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGeneratedTextColors:Z
 
     goto :goto_0
@@ -225,14 +194,12 @@
     :cond_3
     move v2, v0
 
-    .line 652
     goto :goto_1
 
     .end local v2    # "lightBody":I
     :cond_4
     move v3, v1
 
-    .line 653
     goto :goto_2
 .end method
 
@@ -247,15 +214,12 @@
 
     const/4 v2, 0x0
 
-    .line 671
     if-ne p0, p1, :cond_1
 
-    .line 679
     :cond_0
     :goto_0
     return v1
 
-    .line 674
     :cond_1
     if-eqz p1, :cond_2
 
@@ -272,16 +236,13 @@
     :cond_2
     move v1, v2
 
-    .line 675
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 678
     check-cast v0, Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    .line 679
     .local v0, "swatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     iget v3, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mPopulation:I
 
@@ -305,10 +266,8 @@
     .locals 1
 
     .prologue
-    .line 617
     invoke-direct {p0}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->ensureTextColorsGenerated()V
 
-    .line 618
     iget v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mBodyTextColor:I
 
     return v0
@@ -318,19 +277,16 @@
     .locals 4
 
     .prologue
-    .line 588
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mHsl:[F
 
     if-nez v0, :cond_0
 
-    .line 590
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mHsl:[F
 
-    .line 591
     iget v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRed:I
 
     iget v1, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mGreen:I
@@ -341,7 +297,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/internal/util/cm/palette/ColorUtils;->RGBtoHSL(III[F)V
 
-    .line 593
     :cond_0
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mHsl:[F
 
@@ -352,7 +307,6 @@
     .locals 1
 
     .prologue
-    .line 600
     iget v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mPopulation:I
 
     return v0
@@ -362,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 578
     iget v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
     return v0
@@ -372,10 +325,8 @@
     .locals 1
 
     .prologue
-    .line 608
     invoke-direct {p0}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->ensureTextColorsGenerated()V
 
-    .line 609
     iget v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mTitleTextColor:I
 
     return v0
@@ -385,7 +336,6 @@
     .locals 2
 
     .prologue
-    .line 684
     iget v0, p0, Lcom/android/internal/util/cm/palette/Palette$Swatch;->mRgb:I
 
     mul-int/lit8 v0, v0, 0x1f
@@ -403,7 +353,6 @@
     .prologue
     const/16 v2, 0x5d
 
-    .line 660
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

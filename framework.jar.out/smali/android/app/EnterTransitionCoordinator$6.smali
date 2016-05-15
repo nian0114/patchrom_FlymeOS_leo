@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 424
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$6;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     invoke-direct {p0}, Landroid/transition/Transition$TransitionListenerAdapter;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 432
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 433
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$6;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     # invokes: Landroid/app/EnterTransitionCoordinator;->sharedElementTransitionComplete()V
     invoke-static {v0}, Landroid/app/EnterTransitionCoordinator;->access$300(Landroid/app/EnterTransitionCoordinator;)V
 
-    .line 434
     return-void
 .end method
 
@@ -56,12 +52,10 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 427
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$6;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     # invokes: Landroid/app/EnterTransitionCoordinator;->sharedElementTransitionStarted()V
     invoke-static {v0}, Landroid/app/EnterTransitionCoordinator;->access$200(Landroid/app/EnterTransitionCoordinator;)V
 
-    .line 428
     return-void
 .end method

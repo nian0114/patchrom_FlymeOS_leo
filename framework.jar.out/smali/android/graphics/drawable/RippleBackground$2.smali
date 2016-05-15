@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 443
     iput-object p1, p0, Landroid/graphics/drawable/RippleBackground$2;->this$0:Landroid/graphics/drawable/RippleBackground;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 446
     iget-object v0, p0, Landroid/graphics/drawable/RippleBackground$2;->this$0:Landroid/graphics/drawable/RippleBackground;
 
     const/4 v1, 0x0
@@ -46,6 +44,5 @@
     # setter for: Landroid/graphics/drawable/RippleBackground;->mHardwareAnimating:Z
     invoke-static {v0, v1}, Landroid/graphics/drawable/RippleBackground;->access$302(Landroid/graphics/drawable/RippleBackground;Z)Z
 
-    .line 447
     return-void
 .end method

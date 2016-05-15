@@ -25,15 +25,12 @@
     .param p2, "html"    # Ljava/lang/String;
 
     .prologue
-    .line 725
     sget-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->HTML:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
     invoke-direct {p0, v0, p1}, Lcom/google/android/util/AbstractMessageParser$Token;-><init>(Lcom/google/android/util/AbstractMessageParser$Token$Type;Ljava/lang/String;)V
 
-    .line 726
     iput-object p2, p0, Lcom/google/android/util/AbstractMessageParser$Html;->html:Ljava/lang/String;
 
-    .line 727
     return-void
 .end method
 
@@ -42,10 +39,8 @@
     .param p0, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 751
     const/4 v0, 0x0
 
-    .line 752
     .local v0, "index":I
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -64,12 +59,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 754
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 756
     :cond_0
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -83,12 +76,10 @@
     .param p0, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 760
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 761
     .local v0, "index":I
     :goto_0
     if-lez v0, :cond_0
@@ -105,12 +96,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 762
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 764
     :cond_0
     const/4 v1, 0x0
 
@@ -136,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 737
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -148,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 729
     const/4 v0, 0x1
 
     return v0
@@ -159,7 +146,6 @@
     .param p1, "caps"    # Z
 
     .prologue
-    .line 731
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->html:Ljava/lang/String;
@@ -181,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 741
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->text:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/util/AbstractMessageParser$Html;->trimLeadingWhitespace(Ljava/lang/String;)Ljava/lang/String;
@@ -190,7 +175,6 @@
 
     iput-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->text:Ljava/lang/String;
 
-    .line 742
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->html:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/util/AbstractMessageParser$Html;->trimLeadingWhitespace(Ljava/lang/String;)Ljava/lang/String;
@@ -199,7 +183,6 @@
 
     iput-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->html:Ljava/lang/String;
 
-    .line 743
     return-void
 .end method
 
@@ -207,7 +190,6 @@
     .locals 1
 
     .prologue
-    .line 746
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->text:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/util/AbstractMessageParser$Html;->trimTrailingWhitespace(Ljava/lang/String;)Ljava/lang/String;
@@ -216,7 +198,6 @@
 
     iput-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->text:Ljava/lang/String;
 
-    .line 747
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->html:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/util/AbstractMessageParser$Html;->trimTrailingWhitespace(Ljava/lang/String;)Ljava/lang/String;
@@ -225,6 +206,5 @@
 
     iput-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Html;->html:Ljava/lang/String;
 
-    .line 748
     return-void
 .end method

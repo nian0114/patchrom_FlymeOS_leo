@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 626
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,20 +31,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 628
-    const-string/jumbo v2, "rttmanager"
+    const-string v2, "rttmanager"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 629
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/net/wifi/IRttManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/wifi/IRttManager;
 
     move-result-object v1
 
-    .line 630
     .local v1, "service":Landroid/net/wifi/IRttManager;
     new-instance v2, Landroid/net/wifi/RttManager;
 

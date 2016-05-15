@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 827
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra$1;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra$1;-><init>()V
@@ -63,22 +62,16 @@
     .param p4, "confidenceLevels"    # [Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
     .prologue
-    .line 820
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 821
     iput p1, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->id:I
 
-    .line 822
     iput p2, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->recognitionModes:I
 
-    .line 823
     iput p3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->coarseConfidenceLevel:I
 
-    .line 824
     iput-object p4, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->confidenceLevels:[Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
-    .line 825
     return-void
 .end method
 
@@ -87,7 +80,6 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 804
     invoke-static {p0}, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->fromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
 
     move-result-object v0
@@ -100,24 +92,20 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 839
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 840
     .local v2, "id":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 841
     .local v3, "recognitionModes":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 842
     .local v0, "coarseConfidenceLevel":I
     sget-object v4, Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -127,7 +115,6 @@
 
     check-cast v1, [Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
-    .line 843
     .local v1, "confidenceLevels":[Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
     new-instance v4, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
 
@@ -142,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 857
     const/4 v0, 0x0
 
     return v0
@@ -157,24 +143,19 @@
 
     const/4 v2, 0x0
 
-    .line 873
     if-ne p0, p1, :cond_1
 
-    .line 888
     :cond_0
     :goto_0
     return v1
 
-    .line 875
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 876
     goto :goto_0
 
-    .line 877
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -188,16 +169,13 @@
 
     move v1, v2
 
-    .line 878
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 879
     check-cast v0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
 
-    .line 880
     .local v0, "other":Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->confidenceLevels:[Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
@@ -211,10 +189,8 @@
 
     move v1, v2
 
-    .line 881
     goto :goto_0
 
-    .line 882
     :cond_4
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->id:I
 
@@ -224,10 +200,8 @@
 
     move v1, v2
 
-    .line 883
     goto :goto_0
 
-    .line 884
     :cond_5
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->recognitionModes:I
 
@@ -237,10 +211,8 @@
 
     move v1, v2
 
-    .line 885
     goto :goto_0
 
-    .line 886
     :cond_6
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->coarseConfidenceLevel:I
 
@@ -250,7 +222,6 @@
 
     move v1, v2
 
-    .line 887
     goto :goto_0
 .end method
 
@@ -258,14 +229,11 @@
     .locals 4
 
     .prologue
-    .line 862
     const/16 v0, 0x1f
 
-    .line 863
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 864
     .local v1, "result":I
     iget-object v2, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->confidenceLevels:[Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
@@ -275,28 +243,24 @@
 
     add-int/lit8 v1, v2, 0x1f
 
-    .line 865
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->id:I
 
     add-int v1, v2, v3
 
-    .line 866
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->recognitionModes:I
 
     add-int v1, v2, v3
 
-    .line 867
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->coarseConfidenceLevel:I
 
     add-int v1, v2, v3
 
-    .line 868
     return v1
 .end method
 
@@ -304,7 +268,6 @@
     .locals 2
 
     .prologue
-    .line 893
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,26 +343,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 849
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 850
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->recognitionModes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 851
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->coarseConfidenceLevel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 852
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;->confidenceLevels:[Landroid/hardware/soundtrigger/SoundTrigger$ConfidenceLevel;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 853
     return-void
 .end method

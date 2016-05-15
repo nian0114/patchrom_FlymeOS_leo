@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 3479
     iput-object p1, p0, Landroid/media/MediaPlayer$TimeProvider$EventHandler;->this$0:Landroid/media/MediaPlayer$TimeProvider;
 
-    .line 3480
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3481
     return-void
 .end method
 
@@ -43,22 +40,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3485
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v1, :cond_0
 
-    .line 3486
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3501
     :cond_0
     :goto_0
     return-void
 
-    .line 3488
     :pswitch_0
     iget-object v0, p0, Landroid/media/MediaPlayer$TimeProvider$EventHandler;->this$0:Landroid/media/MediaPlayer$TimeProvider;
 
@@ -69,7 +62,6 @@
 
     goto :goto_0
 
-    .line 3491
     :pswitch_1
     iget-object v0, p0, Landroid/media/MediaPlayer$TimeProvider$EventHandler;->this$0:Landroid/media/MediaPlayer$TimeProvider;
 
@@ -78,7 +70,6 @@
 
     goto :goto_0
 
-    .line 3494
     :pswitch_2
     iget-object v0, p0, Landroid/media/MediaPlayer$TimeProvider$EventHandler;->this$0:Landroid/media/MediaPlayer$TimeProvider;
 
@@ -87,7 +78,6 @@
 
     goto :goto_0
 
-    .line 3497
     :pswitch_3
     iget-object v0, p0, Landroid/media/MediaPlayer$TimeProvider$EventHandler;->this$0:Landroid/media/MediaPlayer$TimeProvider;
 
@@ -96,7 +86,6 @@
 
     goto :goto_0
 
-    .line 3486
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 144
     invoke-static {}, Landroid/renderscript/FileA3D$EntryType;->values()[Landroid/renderscript/FileA3D$EntryType;
 
     move-result-object v0

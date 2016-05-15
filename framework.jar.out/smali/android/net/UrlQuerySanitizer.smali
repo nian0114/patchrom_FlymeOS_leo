@@ -81,7 +81,6 @@
     .locals 2
 
     .prologue
-    .line 438
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/4 v1, 0x0
@@ -90,7 +89,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sAllIllegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 442
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x5ff
@@ -99,7 +97,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sAllButNulLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 446
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x5fc
@@ -108,7 +105,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sAllButWhitespaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 450
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x194
@@ -117,7 +113,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sURLLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 454
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x195
@@ -126,7 +121,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sUrlAndSpaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 458
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x80
@@ -135,7 +129,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sAmpLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 462
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x81
@@ -144,7 +137,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sAmpAndSpaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 466
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/4 v1, 0x1
@@ -153,7 +145,6 @@
 
     sput-object v0, Landroid/net/UrlQuerySanitizer;->sSpaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 470
     new-instance v0, Landroid/net/UrlQuerySanitizer$IllegalCharacterValueSanitizer;
 
     const/16 v1, 0x59f
@@ -169,38 +160,32 @@
     .locals 1
 
     .prologue
-    .line 562
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mSanitizers:Ljava/util/HashMap;
 
-    .line 91
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
-    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntriesList:Ljava/util/ArrayList;
 
-    .line 97
     invoke-static {}, Landroid/net/UrlQuerySanitizer;->getAllIllegal()Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mUnregisteredParameterValueSanitizer:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 563
     return-void
 .end method
 
@@ -209,46 +194,38 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 585
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mSanitizers:Ljava/util/HashMap;
 
-    .line 91
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
-    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntriesList:Ljava/util/ArrayList;
 
-    .line 97
     invoke-static {}, Landroid/net/UrlQuerySanitizer;->getAllIllegal()Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/UrlQuerySanitizer;->mUnregisteredParameterValueSanitizer:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 586
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/net/UrlQuerySanitizer;->setAllowUnregisteredParamaters(Z)V
 
-    .line 587
     invoke-virtual {p0, p1}, Landroid/net/UrlQuerySanitizer;->parseUrl(Ljava/lang/String;)V
 
-    .line 588
     return-void
 .end method
 
@@ -256,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 549
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sAllButNulAndAngleBracketsLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -266,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 489
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sAllButNulLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -276,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 498
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sAllButWhitespaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -286,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 480
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sAllIllegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -296,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 532
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sAmpAndSpaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -306,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 524
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sAmpLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -316,7 +287,6 @@
     .locals 1
 
     .prologue
-    .line 540
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sSpaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -326,7 +296,6 @@
     .locals 1
 
     .prologue
-    .line 516
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sUrlAndSpaceLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -336,7 +305,6 @@
     .locals 1
 
     .prologue
-    .line 506
     sget-object v0, Landroid/net/UrlQuerySanitizer;->sURLLegal:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -350,7 +318,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 791
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntriesList:Ljava/util/ArrayList;
 
     new-instance v1, Landroid/net/UrlQuerySanitizer$ParameterValuePair;
@@ -359,12 +326,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 793
     iget-boolean v0, p0, Landroid/net/UrlQuerySanitizer;->mPreferFirstRepeatedParameter:Z
 
     if-eqz v0, :cond_0
 
-    .line 794
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -373,11 +338,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 799
     :goto_0
     return-void
 
-    .line 798
     :cond_0
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
@@ -390,17 +353,14 @@
     .locals 1
 
     .prologue
-    .line 910
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 911
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntriesList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 912
     return-void
 .end method
 
@@ -409,7 +369,6 @@
     .param p1, "c"    # C
 
     .prologue
-    .line 891
     const/16 v0, 0x30
 
     if-lt p1, v0, :cond_0
@@ -418,14 +377,11 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 892
     add-int/lit8 v0, p1, -0x30
 
-    .line 901
     :goto_0
     return v0
 
-    .line 894
     :cond_0
     const/16 v0, 0x41
 
@@ -435,14 +391,12 @@
 
     if-gt p1, v0, :cond_1
 
-    .line 895
     add-int/lit8 v0, p1, -0x41
 
     add-int/lit8 v0, v0, 0xa
 
     goto :goto_0
 
-    .line 897
     :cond_1
     const/16 v0, 0x61
 
@@ -452,14 +406,12 @@
 
     if-gt p1, v0, :cond_2
 
-    .line 898
     add-int/lit8 v0, p1, -0x61
 
     add-int/lit8 v0, v0, 0xa
 
     goto :goto_0
 
-    .line 901
     :cond_2
     const/4 v0, -0x1
 
@@ -470,7 +422,6 @@
     .locals 1
 
     .prologue
-    .line 730
     iget-boolean v0, p0, Landroid/net/UrlQuerySanitizer;->mAllowUnregisteredParamaters:Z
 
     return v0
@@ -481,12 +432,10 @@
     .param p1, "parameter"    # Ljava/lang/String;
 
     .prologue
-    .line 821
     invoke-virtual {p0, p1}, Landroid/net/UrlQuerySanitizer;->getValueSanitizer(Ljava/lang/String;)Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     move-result-object v0
 
-    .line 822
     .local v0, "sanitizer":Landroid/net/UrlQuerySanitizer$ValueSanitizer;
     if-nez v0, :cond_0
 
@@ -494,12 +443,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 823
     invoke-virtual {p0}, Landroid/net/UrlQuerySanitizer;->getUnregisteredParameterValueSanitizer()Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     move-result-object v0
 
-    .line 825
     :cond_0
     return-object v0
 .end method
@@ -517,7 +464,6 @@
     .end annotation
 
     .prologue
-    .line 653
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntriesList:Ljava/util/ArrayList;
 
     return-object v0
@@ -536,7 +482,6 @@
     .end annotation
 
     .prologue
-    .line 643
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -550,7 +495,6 @@
     .locals 1
 
     .prologue
-    .line 759
     iget-boolean v0, p0, Landroid/net/UrlQuerySanitizer;->mPreferFirstRepeatedParameter:Z
 
     return v0
@@ -560,7 +504,6 @@
     .locals 1
 
     .prologue
-    .line 421
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mUnregisteredParameterValueSanitizer:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     return-object v0
@@ -571,7 +514,6 @@
     .param p1, "parameter"    # Ljava/lang/String;
 
     .prologue
-    .line 674
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -588,7 +530,6 @@
     .param p1, "parameter"    # Ljava/lang/String;
 
     .prologue
-    .line 809
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mSanitizers:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -605,7 +546,6 @@
     .param p1, "parameter"    # Ljava/lang/String;
 
     .prologue
-    .line 662
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mEntries:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -620,7 +560,6 @@
     .param p1, "c"    # C
 
     .prologue
-    .line 879
     invoke-virtual {p0, p1}, Landroid/net/UrlQuerySanitizer;->decodeHexDigit(C)I
 
     move-result v0
@@ -644,38 +583,31 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 772
     invoke-virtual {p0, p1}, Landroid/net/UrlQuerySanitizer;->unescape(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 773
     .local v1, "unescapedParameter":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/net/UrlQuerySanitizer;->getEffectiveValueSanitizer(Ljava/lang/String;)Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     move-result-object v3
 
-    .line 776
     .local v3, "valueSanitizer":Landroid/net/UrlQuerySanitizer$ValueSanitizer;
     if-nez v3, :cond_0
 
-    .line 782
     :goto_0
     return-void
 
-    .line 779
     :cond_0
     invoke-virtual {p0, p2}, Landroid/net/UrlQuerySanitizer;->unescape(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 780
     .local v2, "unescapedValue":Ljava/lang/String;
     invoke-interface {v3, v2}, Landroid/net/UrlQuerySanitizer$ValueSanitizer;->sanitize(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 781
     .local v0, "sanitizedValue":Ljava/lang/String;
     invoke-virtual {p0, v1, v0}, Landroid/net/UrlQuerySanitizer;->addSanitizedEntry(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -687,17 +619,14 @@
     .param p1, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 617
     invoke-virtual {p0}, Landroid/net/UrlQuerySanitizer;->clear()V
 
-    .line 619
     new-instance v2, Ljava/util/StringTokenizer;
 
     const-string v3, "&"
 
     invoke-direct {v2, p1, v3}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
     .local v2, "tokenizer":Ljava/util/StringTokenizer;
     :cond_0
     :goto_0
@@ -707,12 +636,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 621
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 622
     .local v1, "attributeValuePair":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -720,25 +647,21 @@
 
     if-lez v3, :cond_0
 
-    .line 623
     const/16 v3, 0x3d
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
 
-    .line 624
     .local v0, "assignmentIndex":I
     if-gez v0, :cond_1
 
-    .line 626
     const-string v3, ""
 
     invoke-virtual {p0, v1, v3}, Landroid/net/UrlQuerySanitizer;->parseEntry(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 629
     :cond_1
     const/4 v3, 0x0
 
@@ -756,7 +679,6 @@
 
     goto :goto_0
 
-    .line 634
     .end local v0    # "assignmentIndex":I
     .end local v1    # "attributeValuePair":Ljava/lang/String;
     :cond_2
@@ -768,33 +690,27 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 598
     const/16 v2, 0x3f
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
-    .line 600
     .local v1, "queryIndex":I
     if-ltz v1, :cond_0
 
-    .line 601
     add-int/lit8 v2, v1, 0x1
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 606
     .local v0, "query":Ljava/lang/String;
     :goto_0
     invoke-virtual {p0, v0}, Landroid/net/UrlQuerySanitizer;->parseQuery(Ljava/lang/String;)V
 
-    .line 607
     return-void
 
-    .line 604
     .end local v0    # "query":Ljava/lang/String;
     :cond_0
     const-string v0, ""
@@ -809,21 +725,17 @@
     .param p2, "valueSanitizer"    # Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     .prologue
-    .line 690
     if-nez p2, :cond_0
 
-    .line 691
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mSanitizers:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 693
     :cond_0
     iget-object v0, p0, Landroid/net/UrlQuerySanitizer;->mSanitizers:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 694
     return-void
 .end method
 
@@ -833,10 +745,8 @@
     .param p2, "valueSanitizer"    # Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     .prologue
-    .line 704
     array-length v1, p1
 
-    .line 705
     .local v1, "length":I
     const/4 v0, 0x0
 
@@ -844,19 +754,16 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 706
     iget-object v2, p0, Landroid/net/UrlQuerySanitizer;->mSanitizers:Ljava/util/HashMap;
 
     aget-object v3, p1, v0
 
     invoke-virtual {v2, v3, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 705
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 708
     :cond_0
     return-void
 .end method
@@ -866,10 +773,8 @@
     .param p1, "allowUnregisteredParamaters"    # Z
 
     .prologue
-    .line 720
     iput-boolean p1, p0, Landroid/net/UrlQuerySanitizer;->mAllowUnregisteredParamaters:Z
 
-    .line 721
     return-void
 .end method
 
@@ -878,10 +783,8 @@
     .param p1, "preferFirstRepeatedParameter"    # Z
 
     .prologue
-    .line 748
     iput-boolean p1, p0, Landroid/net/UrlQuerySanitizer;->mPreferFirstRepeatedParameter:Z
 
-    .line 749
     return-void
 .end method
 
@@ -890,10 +793,8 @@
     .param p1, "sanitizer"    # Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     .prologue
-    .line 432
     iput-object p1, p0, Landroid/net/UrlQuerySanitizer;->mUnregisteredParameterValueSanitizer:Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
-    .line 433
     return-void
 .end method
 
@@ -906,42 +807,34 @@
 
     const/16 v9, 0x25
 
-    .line 842
     invoke-virtual {p1, v9}, Ljava/lang/String;->indexOf(I)I
 
     move-result v3
 
-    .line 843
     .local v3, "firstEscape":I
     if-gez v3, :cond_0
 
-    .line 844
     invoke-virtual {p1, v10}, Ljava/lang/String;->indexOf(I)I
 
     move-result v3
 
-    .line 845
     if-gez v3, :cond_0
 
-    .line 869
     .end local p1    # "string":Ljava/lang/String;
     :goto_0
     return-object p1
 
-    .line 850
     .restart local p1    # "string":Ljava/lang/String;
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 852
     .local v5, "length":I
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 853
     .local v6, "stringBuilder":Ljava/lang/StringBuilder;
     const/4 v7, 0x0
 
@@ -951,36 +844,29 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 854
     move v4, v3
 
     .local v4, "i":I
     :goto_1
     if-ge v4, v5, :cond_3
 
-    .line 855
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 856
     .local v0, "c":C
     if-ne v0, v10, :cond_2
 
-    .line 857
     const/16 v0, 0x20
 
-    .line 867
     :cond_1
     :goto_2
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 854
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 859
     :cond_2
     if-ne v0, v9, :cond_1
 
@@ -988,14 +874,12 @@
 
     if-ge v7, v5, :cond_1
 
-    .line 860
     add-int/lit8 v7, v4, 0x1
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 861
     .local v1, "c1":C
     add-int/lit8 v7, v4, 0x2
 
@@ -1003,7 +887,6 @@
 
     move-result v2
 
-    .line 862
     .local v2, "c2":C
     invoke-virtual {p0, v1}, Landroid/net/UrlQuerySanitizer;->isHexDigit(C)Z
 
@@ -1017,7 +900,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 863
     invoke-virtual {p0, v1}, Landroid/net/UrlQuerySanitizer;->decodeHexDigit(C)I
 
     move-result v7
@@ -1032,12 +914,10 @@
 
     int-to-char v0, v7
 
-    .line 864
     add-int/lit8 v4, v4, 0x2
 
     goto :goto_2
 
-    .line 869
     .end local v0    # "c":C
     .end local v1    # "c1":C
     .end local v2    # "c2":C

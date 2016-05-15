@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 108
     new-instance v0, Lorg/ccil/cowan/tagsoup/HTMLSchema;
 
     invoke-direct {v0}, Lorg/ccil/cowan/tagsoup/HTMLSchema;-><init>()V
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 107
     sget-object v0, Landroid/text/Html$HtmlParser;->schema:Lorg/ccil/cowan/tagsoup/HTMLSchema;
 
     return-object v0

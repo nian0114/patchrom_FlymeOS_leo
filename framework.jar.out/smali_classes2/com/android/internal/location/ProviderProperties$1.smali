@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
 
     const/4 v0, 0x1
 
-    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
@@ -58,7 +56,6 @@
 
     move v1, v0
 
-    .line 117
     .local v1, "requiresNetwork":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -69,7 +66,6 @@
 
     move v2, v0
 
-    .line 118
     .local v2, "requiresSatellite":Z
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -80,7 +76,6 @@
 
     move v3, v0
 
-    .line 119
     .local v3, "requiresCell":Z
     :goto_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -91,7 +86,6 @@
 
     move v4, v0
 
-    .line 120
     .local v4, "hasMonetaryCost":Z
     :goto_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -102,7 +96,6 @@
 
     move v5, v0
 
-    .line 121
     .local v5, "supportsAltitude":Z
     :goto_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -113,7 +106,6 @@
 
     move v6, v0
 
-    .line 122
     .local v6, "supportsSpeed":Z
     :goto_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -124,20 +116,17 @@
 
     move v7, v0
 
-    .line 123
     .local v7, "supportsBearing":Z
     :goto_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 124
     .local v8, "powerRequirement":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 125
     .local v9, "accuracy":I
     new-instance v0, Lcom/android/internal/location/ProviderProperties;
 
@@ -157,49 +146,42 @@
     :cond_0
     move v1, v10
 
-    .line 116
     goto :goto_0
 
     .restart local v1    # "requiresNetwork":Z
     :cond_1
     move v2, v10
 
-    .line 117
     goto :goto_1
 
     .restart local v2    # "requiresSatellite":Z
     :cond_2
     move v3, v10
 
-    .line 118
     goto :goto_2
 
     .restart local v3    # "requiresCell":Z
     :cond_3
     move v4, v10
 
-    .line 119
     goto :goto_3
 
     .restart local v4    # "hasMonetaryCost":Z
     :cond_4
     move v5, v10
 
-    .line 120
     goto :goto_4
 
     .restart local v5    # "supportsAltitude":Z
     :cond_5
     move v6, v10
 
-    .line 121
     goto :goto_5
 
     .restart local v6    # "supportsSpeed":Z
     :cond_6
     move v7, v10
 
-    .line 122
     goto :goto_6
 .end method
 
@@ -207,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 113
     invoke-virtual {p0, p1}, Lcom/android/internal/location/ProviderProperties$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/location/ProviderProperties;
 
     move-result-object v0
@@ -220,7 +201,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 131
     new-array v0, p1, [Lcom/android/internal/location/ProviderProperties;
 
     return-object v0
@@ -230,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 113
     invoke-virtual {p0, p1}, Lcom/android/internal/location/ProviderProperties$1;->newArray(I)[Lcom/android/internal/location/ProviderProperties;
 
     move-result-object v0

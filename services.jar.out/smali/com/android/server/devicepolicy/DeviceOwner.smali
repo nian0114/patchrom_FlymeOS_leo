@@ -56,17 +56,14 @@
     .locals 1
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
-    .line 74
     return-void
 .end method
 
@@ -76,23 +73,18 @@
     .param p2, "out"    # Ljava/io/OutputStream;
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mInputStreamForTest:Ljava/io/InputStream;
 
-    .line 79
     iput-object p2, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mOutputStreamForTest:Ljava/io/OutputStream;
 
-    .line 80
     return-void
 .end method
 
@@ -102,12 +94,10 @@
     .param p1, "ownerName"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     new-instance v0, Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-direct {v0}, Lcom/android/server/devicepolicy/DeviceOwner;-><init>()V
 
-    .line 100
     .local v0, "owner":Lcom/android/server/devicepolicy/DeviceOwner;
     new-instance v1, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
@@ -115,7 +105,6 @@
 
     iput-object v1, v0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 101
     return-object v0
 .end method
 
@@ -126,12 +115,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 118
     new-instance v0, Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-direct {v0}, Lcom/android/server/devicepolicy/DeviceOwner;-><init>()V
 
-    .line 119
     .local v0, "owner":Lcom/android/server/devicepolicy/DeviceOwner;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
@@ -145,7 +132,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 120
     return-object v0
 .end method
 
@@ -156,12 +142,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 109
     new-instance v0, Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-direct {v0}, Lcom/android/server/devicepolicy/DeviceOwner;-><init>()V
 
-    .line 110
     .local v0, "owner":Lcom/android/server/devicepolicy/DeviceOwner;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
@@ -175,7 +159,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     return-object v0
 .end method
 
@@ -184,12 +167,10 @@
     .param p1, "stream"    # Ljava/io/OutputStream;
 
     .prologue
-    .line 327
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->fileForWriting:Landroid/util/AtomicFile;
 
     if-eqz v0, :cond_0
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->fileForWriting:Landroid/util/AtomicFile;
 
     check-cast p1, Ljava/io/FileOutputStream;
@@ -197,7 +178,6 @@
     .end local p1    # "stream":Ljava/io/OutputStream;
     invoke-virtual {v0, p1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
-    .line 330
     :cond_0
     return-void
 .end method
@@ -210,7 +190,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 185
     const/4 v3, 0x0
 
     :try_start_0
@@ -221,7 +200,6 @@
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     if-eqz v1, :cond_0
 
-    .line 186
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -230,20 +208,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 187
     const/4 v2, 0x1
 
-    .line 193
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
     return v2
 
-    .line 190
     :catch_0
     move-exception v0
 
-    .line 191
     .local v0, "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "DevicePolicyManagerService"
 
@@ -284,7 +258,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 198
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -296,7 +269,6 @@
 
     move-result-object v0
 
-    .line 200
     .local v0, "pi":Landroid/content/pm/PackageInfo;
     if-eqz v0, :cond_0
 
@@ -308,19 +280,15 @@
 
     if-eqz v3, :cond_0
 
-    .line 201
     const/4 v2, 0x1
 
-    .line 207
     :cond_0
     return v2
 
-    .line 203
     .end local v0    # "pi":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v1
 
-    .line 204
     .local v1, "re":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -335,12 +303,10 @@
     .locals 4
 
     .prologue
-    .line 86
     new-instance v0, Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-direct {v0}, Lcom/android/server/devicepolicy/DeviceOwner;-><init>()V
 
-    .line 87
     .local v0, "owner":Lcom/android/server/devicepolicy/DeviceOwner;
     new-instance v1, Ljava/io/File;
 
@@ -358,10 +324,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->readOwnerFile()V
 
-    .line 91
     .end local v0    # "owner":Lcom/android/server/devicepolicy/DeviceOwner;
     :goto_0
     return-object v0
@@ -382,15 +346,12 @@
     .end annotation
 
     .prologue
-    .line 308
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mInputStreamForTest:Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
-    .line 309
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mInputStreamForTest:Ljava/io/InputStream;
 
-    .line 312
     :goto_0
     return-object v0
 
@@ -425,19 +386,15 @@
     .end annotation
 
     .prologue
-    .line 317
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mOutputStreamForTest:Ljava/io/OutputStream;
 
     if-eqz v0, :cond_0
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mOutputStreamForTest:Ljava/io/OutputStream;
 
-    .line 323
     :goto_0
     return-object v0
 
-    .line 321
     :cond_0
     new-instance v0, Landroid/util/AtomicFile;
 
@@ -455,7 +412,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->fileForWriting:Landroid/util/AtomicFile;
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->fileForWriting:Landroid/util/AtomicFile;
 
     invoke-virtual {v0}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
@@ -469,25 +425,21 @@
     .locals 9
 
     .prologue
-    .line 270
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DeviceOwner;->startWrite()Ljava/io/OutputStream;
 
     move-result-object v3
 
-    .line 271
     .local v3, "outputStream":Ljava/io/OutputStream;
     new-instance v2, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v2}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 272
     .local v2, "out":Lorg/xmlpull/v1/XmlSerializer;
     const-string v6, "utf-8"
 
     invoke-interface {v2, v3, v6}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 273
     const/4 v6, 0x0
 
     const/4 v7, 0x1
@@ -498,19 +450,16 @@
 
     invoke-interface {v2, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 276
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     if-eqz v6, :cond_1
 
-    .line 277
     const/4 v6, 0x0
 
     const-string v7, "device-owner"
 
     invoke-interface {v2, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 278
     const/4 v6, 0x0
 
     const-string v7, "package"
@@ -521,14 +470,12 @@
 
     invoke-interface {v2, v6, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 279
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     iget-object v6, v6, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->name:Ljava/lang/String;
 
     if-eqz v6, :cond_0
 
-    .line 280
     const/4 v6, 0x0
 
     const-string v7, "name"
@@ -539,7 +486,6 @@
 
     invoke-interface {v2, v6, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 282
     :cond_0
     const/4 v6, 0x0
 
@@ -547,7 +493,6 @@
 
     invoke-interface {v2, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 286
     :cond_1
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
@@ -557,7 +502,6 @@
 
     if-lez v6, :cond_3
 
-    .line 287
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -582,7 +526,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 288
     .local v4, "owner":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;>;"
     const/4 v6, 0x0
 
@@ -590,14 +533,12 @@
 
     invoke-interface {v2, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 289
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 290
     .local v5, "ownerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     const/4 v6, 0x0
 
@@ -607,7 +548,6 @@
 
     invoke-interface {v2, v6, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 291
     const/4 v6, 0x0
 
     const-string v7, "name"
@@ -616,7 +556,6 @@
 
     invoke-interface {v2, v6, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 292
     const/4 v7, 0x0
 
     const-string v8, "userId"
@@ -637,12 +576,10 @@
 
     invoke-interface {v2, v7, v8, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 293
     iget-object v6, v5, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->admin:Landroid/content/ComponentName;
 
     if-eqz v6, :cond_2
 
-    .line 294
     const/4 v6, 0x0
 
     const-string v7, "component"
@@ -655,7 +592,6 @@
 
     invoke-interface {v2, v6, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 296
     :cond_2
     const/4 v6, 0x0
 
@@ -667,7 +603,6 @@
 
     goto :goto_0
 
-    .line 302
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v2    # "out":Lorg/xmlpull/v1/XmlSerializer;
     .end local v3    # "outputStream":Ljava/io/OutputStream;
@@ -676,7 +611,6 @@
     :catch_0
     move-exception v1
 
-    .line 303
     .local v1, "ioe":Ljava/io/IOException;
     const-string v6, "DevicePolicyManagerService"
 
@@ -700,22 +634,18 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     .end local v1    # "ioe":Ljava/io/IOException;
     :goto_1
     return-void
 
-    .line 299
     .restart local v2    # "out":Lorg/xmlpull/v1/XmlSerializer;
     .restart local v3    # "outputStream":Ljava/io/OutputStream;
     :cond_3
     :try_start_1
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 300
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
 
-    .line 301
     invoke-direct {p0, v3}, Lcom/android/server/devicepolicy/DeviceOwner;->finishWrite(Ljava/io/OutputStream;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -729,12 +659,10 @@
     .locals 1
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 137
     return-void
 .end method
 
@@ -742,7 +670,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     if-eqz v0, :cond_0
@@ -764,7 +691,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     if-eqz v0, :cond_0
@@ -787,7 +713,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 165
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -800,7 +725,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 166
     .local v0, "profileOwner":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     if-eqz v0, :cond_0
 
@@ -828,7 +752,6 @@
     .end annotation
 
     .prologue
-    .line 175
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -843,7 +766,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 170
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -856,7 +778,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 171
     .local v0, "profileOwner":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     if-eqz v0, :cond_0
 
@@ -876,7 +797,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 160
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -889,7 +809,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 161
     .local v0, "profileOwner":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     if-eqz v0, :cond_0
 
@@ -908,7 +827,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     if-eqz v0, :cond_0
@@ -928,25 +846,21 @@
     .locals 18
 
     .prologue
-    .line 212
     :try_start_0
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DeviceOwner;->openRead()Ljava/io/InputStream;
 
     move-result-object v2
 
-    .line 213
     .local v2, "input":Ljava/io/InputStream;
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v6
 
-    .line 214
     .local v6, "parser":Lorg/xmlpull/v1/XmlPullParser;
     const/4 v15, 0x0
 
     invoke-interface {v6, v2, v15}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 216
     :cond_0
     :goto_0
     invoke-interface {v6}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -958,17 +872,14 @@
 
     if-eq v12, v15, :cond_6
 
-    .line 217
     const/4 v15, 0x2
 
     if-ne v12, v15, :cond_0
 
-    .line 221
     invoke-interface {v6}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 222
     .local v11, "tag":Ljava/lang/String;
     const-string v15, "device-owner"
 
@@ -978,7 +889,6 @@
 
     if-eqz v15, :cond_1
 
-    .line 223
     const/4 v15, 0x0
 
     const-string v16, "name"
@@ -989,7 +899,6 @@
 
     move-result-object v4
 
-    .line 224
     .local v4, "name":Ljava/lang/String;
     const/4 v15, 0x0
 
@@ -1001,7 +910,6 @@
 
     move-result-object v5
 
-    .line 225
     .local v5, "packageName":Ljava/lang/String;
     new-instance v15, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
@@ -1016,7 +924,6 @@
 
     goto :goto_0
 
-    .line 255
     .end local v2    # "input":Ljava/io/InputStream;
     .end local v4    # "name":Ljava/lang/String;
     .end local v5    # "packageName":Ljava/lang/String;
@@ -1026,7 +933,6 @@
     :catch_0
     move-exception v14
 
-    .line 256
     .local v14, "xppe":Lorg/xmlpull/v1/XmlPullParserException;
     const-string v15, "DevicePolicyManagerService"
 
@@ -1052,12 +958,10 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     .end local v14    # "xppe":Lorg/xmlpull/v1/XmlPullParserException;
     :goto_1
     return-void
 
-    .line 226
     .restart local v2    # "input":Ljava/io/InputStream;
     .restart local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .restart local v11    # "tag":Ljava/lang/String;
@@ -1072,7 +976,6 @@
 
     if-eqz v15, :cond_5
 
-    .line 227
     const/4 v15, 0x0
 
     const-string v16, "package"
@@ -1083,7 +986,6 @@
 
     move-result-object v10
 
-    .line 228
     .local v10, "profileOwnerPackageName":Ljava/lang/String;
     const/4 v15, 0x0
 
@@ -1095,7 +997,6 @@
 
     move-result-object v9
 
-    .line 229
     .local v9, "profileOwnerName":Ljava/lang/String;
     const/4 v15, 0x0
 
@@ -1107,7 +1008,6 @@
 
     move-result-object v7
 
-    .line 231
     .local v7, "profileOwnerComponentStr":Ljava/lang/String;
     const/4 v15, 0x0
 
@@ -1123,43 +1023,35 @@
 
     move-result v13
 
-    .line 232
     .local v13, "userId":I
     const/4 v8, 0x0
 
-    .line 233
     .local v8, "profileOwnerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     if-eqz v7, :cond_2
 
-    .line 234
     invoke-static {v7}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 236
     .local v1, "admin":Landroid/content/ComponentName;
     if-eqz v1, :cond_4
 
-    .line 237
     new-instance v8, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     .end local v8    # "profileOwnerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     invoke-direct {v8, v9, v1}, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;-><init>(Ljava/lang/String;Landroid/content/ComponentName;)V
 
-    .line 245
     .end local v1    # "admin":Landroid/content/ComponentName;
     .restart local v8    # "profileOwnerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     :cond_2
     :goto_2
     if-nez v8, :cond_3
 
-    .line 246
     new-instance v8, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     .end local v8    # "profileOwnerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     invoke-direct {v8, v9, v10}, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 248
     .restart local v8    # "profileOwnerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
     :cond_3
     move-object/from16 v0, p0
@@ -1179,7 +1071,6 @@
 
     goto/16 :goto_0
 
-    .line 257
     .end local v2    # "input":Ljava/io/InputStream;
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v7    # "profileOwnerComponentStr":Ljava/lang/String;
@@ -1192,7 +1083,6 @@
     :catch_1
     move-exception v3
 
-    .line 258
     .local v3, "ioe":Ljava/io/IOException;
     const-string v15, "DevicePolicyManagerService"
 
@@ -1220,7 +1110,6 @@
 
     goto :goto_1
 
-    .line 241
     .end local v3    # "ioe":Ljava/io/IOException;
     .restart local v1    # "admin":Landroid/content/ComponentName;
     .restart local v2    # "input":Ljava/io/InputStream;
@@ -1260,7 +1149,6 @@
 
     goto :goto_2
 
-    .line 250
     .end local v1    # "admin":Landroid/content/ComponentName;
     .end local v7    # "profileOwnerComponentStr":Ljava/lang/String;
     .end local v8    # "profileOwnerInfo":Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
@@ -1294,7 +1182,6 @@
 
     throw v15
 
-    .line 254
     .end local v11    # "tag":Ljava/lang/String;
     :cond_6
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -1310,7 +1197,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 151
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1319,7 +1205,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 152
     return-void
 .end method
 
@@ -1329,14 +1214,12 @@
     .param p2, "ownerName"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     new-instance v0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
     invoke-direct {v0, p2, p1}, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;
 
-    .line 133
     return-void
 .end method
 
@@ -1347,7 +1230,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1360,7 +1242,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 148
     return-void
 .end method
 
@@ -1371,7 +1252,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner;->mProfileOwners:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1384,7 +1264,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     return-void
 .end method
 
@@ -1392,20 +1271,15 @@
     .locals 1
 
     .prologue
-    .line 263
     monitor-enter p0
 
-    .line 264
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFileLocked()V
 
-    .line 265
     monitor-exit p0
 
-    .line 266
     return-void
 
-    .line 265
     :catchall_0
     move-exception v0
 

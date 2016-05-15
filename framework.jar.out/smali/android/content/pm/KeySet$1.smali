@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 75
     # invokes: Landroid/content/pm/KeySet;->readFromParcel(Landroid/os/Parcel;)Landroid/content/pm/KeySet;
     invoke-static {p1}, Landroid/content/pm/KeySet;->access$000(Landroid/os/Parcel;)Landroid/content/pm/KeySet;
 
@@ -58,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-virtual {p0, p1}, Landroid/content/pm/KeySet$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/pm/KeySet;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 82
     new-array v0, p1, [Landroid/content/pm/KeySet;
 
     return-object v0
@@ -81,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-virtual {p0, p1}, Landroid/content/pm/KeySet$1;->newArray(I)[Landroid/content/pm/KeySet;
 
     move-result-object v0

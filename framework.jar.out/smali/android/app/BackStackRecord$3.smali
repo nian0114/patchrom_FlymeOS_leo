@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1531
     iput-object p1, p0, Landroid/app/BackStackRecord$3;->val$epicenter:Landroid/graphics/Rect;
 
     invoke-direct {p0}, Landroid/transition/Transition$EpicenterCallback;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 1534
     iget-object v0, p0, Landroid/app/BackStackRecord$3;->val$epicenter:Landroid/graphics/Rect;
 
     return-object v0

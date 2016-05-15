@@ -25,10 +25,8 @@
     .locals 1
 
     .prologue
-    .line 1701
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1706
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
@@ -41,7 +39,6 @@
     .param p1, "x0"    # Lcom/android/server/tv/TvInputManagerService$1;
 
     .prologue
-    .line 1701
     invoke-direct {p0}, Lcom/android/server/tv/TvInputManagerService$TvInputState;-><init>()V
 
     return-void
@@ -52,7 +49,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$TvInputState;
 
     .prologue
-    .line 1701
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->info:Landroid/media/tv/TvInputInfo;
 
     return-object v0
@@ -64,7 +60,6 @@
     .param p1, "x1"    # Landroid/media/tv/TvInputInfo;
 
     .prologue
-    .line 1701
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->info:Landroid/media/tv/TvInputInfo;
 
     return-object p1
@@ -75,7 +70,6 @@
     .param p0, "x0"    # Lcom/android/server/tv/TvInputManagerService$TvInputState;
 
     .prologue
-    .line 1701
     iget v0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
 
     return v0
@@ -87,7 +81,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 1701
     iput p1, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
 
     return p1
@@ -99,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 1710
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

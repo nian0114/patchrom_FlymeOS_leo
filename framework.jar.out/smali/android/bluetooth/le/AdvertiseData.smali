@@ -69,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 175
     new-instance v0, Landroid/bluetooth/le/AdvertiseData$1;
 
     invoke-direct {v0}, Landroid/bluetooth/le/AdvertiseData$1;-><init>()V
@@ -100,28 +99,21 @@
     .end annotation
 
     .prologue
-    .line 55
     .local p1, "serviceUuids":Ljava/util/List;, "Ljava/util/List<Landroid/os/ParcelUuid;>;"
     .local p2, "manufacturerData":Landroid/util/SparseArray;, "Landroid/util/SparseArray<[B>;"
     .local p3, "serviceData":Ljava/util/Map;, "Ljava/util/Map<Landroid/os/ParcelUuid;[B>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p1, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceUuids:Ljava/util/List;
 
-    .line 57
     iput-object p2, p0, Landroid/bluetooth/le/AdvertiseData;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
-    .line 58
     iput-object p3, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceData:Ljava/util/Map;
 
-    .line 59
     iput-boolean p4, p0, Landroid/bluetooth/le/AdvertiseData;->mIncludeTxPowerLevel:Z
 
-    .line 60
     iput-boolean p5, p0, Landroid/bluetooth/le/AdvertiseData;->mIncludeDeviceName:Z
 
-    .line 61
     return-void
 .end method
 
@@ -135,7 +127,6 @@
     .param p6, "x5"    # Landroid/bluetooth/le/AdvertiseData$1;
 
     .prologue
-    .line 41
     invoke-direct/range {p0 .. p5}, Landroid/bluetooth/le/AdvertiseData;-><init>(Ljava/util/List;Landroid/util/SparseArray;Ljava/util/Map;ZZ)V
 
     return-void
@@ -147,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     return v0
@@ -162,15 +152,12 @@
 
     const/4 v2, 0x0
 
-    .line 114
     if-ne p0, p1, :cond_1
 
-    .line 121
     :cond_0
     :goto_0
     return v1
 
-    .line 117
     :cond_1
     if-eqz p1, :cond_2
 
@@ -187,16 +174,13 @@
     :cond_2
     move v1, v2
 
-    .line 118
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 120
     check-cast v0, Landroid/bluetooth/le/AdvertiseData;
 
-    .line 121
     .local v0, "other":Landroid/bluetooth/le/AdvertiseData;
     iget-object v3, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceUuids:Ljava/util/List;
 
@@ -250,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Landroid/bluetooth/le/AdvertiseData;->mIncludeDeviceName:Z
 
     return v0
@@ -260,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-boolean v0, p0, Landroid/bluetooth/le/AdvertiseData;->mIncludeTxPowerLevel:Z
 
     return v0
@@ -277,7 +259,6 @@
     .end annotation
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/bluetooth/le/AdvertiseData;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
     return-object v0
@@ -296,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceData:Ljava/util/Map;
 
     return-object v0
@@ -315,7 +295,6 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceUuids:Ljava/util/List;
 
     return-object v0
@@ -325,7 +304,6 @@
     .locals 3
 
     .prologue
-    .line 105
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -379,7 +357,6 @@
     .locals 2
 
     .prologue
-    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -475,12 +452,10 @@
 
     const/4 v6, 0x0
 
-    .line 144
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceUuids:Ljava/util/List;
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 147
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
@@ -489,7 +464,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 148
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -502,7 +476,6 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 149
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -511,7 +484,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 150
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -520,34 +492,27 @@
 
     check-cast v0, [B
 
-    .line 151
     .local v0, "data":[B
     if-nez v0, :cond_0
 
-    .line 152
     invoke-virtual {p1, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 148
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 154
     :cond_0
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 155
     array-length v4, v0
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 156
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_1
 
-    .line 159
     .end local v0    # "data":[B
     :cond_1
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceData:Ljava/util/Map;
@@ -558,7 +523,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceData:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -583,11 +547,9 @@
 
     check-cast v3, Landroid/os/ParcelUuid;
 
-    .line 161
     .local v3, "uuid":Landroid/os/ParcelUuid;
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 162
     iget-object v4, p0, Landroid/bluetooth/le/AdvertiseData;->mServiceData:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -596,30 +558,24 @@
 
     check-cast v0, [B
 
-    .line 163
     .restart local v0    # "data":[B
     if-nez v0, :cond_2
 
-    .line 164
     invoke-virtual {p1, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_2
 
-    .line 166
     :cond_2
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 167
     array-length v4, v0
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 168
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_2
 
-    .line 171
     .end local v0    # "data":[B
     .end local v3    # "uuid":Landroid/os/ParcelUuid;
     :cond_3
@@ -636,7 +592,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 172
     invoke-virtual {p0}, Landroid/bluetooth/le/AdvertiseData;->getIncludeDeviceName()Z
 
     move-result v4
@@ -648,18 +603,15 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 173
     return-void
 
     :cond_4
     move v4, v6
 
-    .line 171
     goto :goto_3
 
     :cond_5
     move v5, v6
 
-    .line 172
     goto :goto_4
 .end method

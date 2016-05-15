@@ -26,17 +26,13 @@
     .param p2, "a"    # Z
 
     .prologue
-    .line 234
     iput-object p1, p0, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;->this$0:Landroid/os/storage/StorageManager;
 
-    .line 235
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Landroid/os/storage/StorageManager$StorageEvent;-><init>(Landroid/os/storage/StorageManager;I)V
 
-    .line 236
     iput-boolean p2, p0, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;->available:Z
 
-    .line 237
     return-void
 .end method

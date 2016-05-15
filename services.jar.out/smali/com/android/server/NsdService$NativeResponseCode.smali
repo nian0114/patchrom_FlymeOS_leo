@@ -47,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 638
     iput-object p1, p0, Lcom/android/server/NsdService$NativeResponseCode;->this$0:Lcom/android/server/NsdService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

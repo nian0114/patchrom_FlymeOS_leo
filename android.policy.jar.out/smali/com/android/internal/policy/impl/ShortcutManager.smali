@@ -35,7 +35,6 @@
     .locals 3
 
     .prologue
-    .line 42
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -63,20 +62,16 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 52
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 54
     iput-object p1, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mContext:Landroid/content/Context;
 
-    .line 55
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mShortcutIntents:Landroid/util/SparseArray;
 
-    .line 56
     return-void
 .end method
 
@@ -84,10 +79,8 @@
     .locals 7
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mCursor:Landroid/database/Cursor;
 
-    .line 73
     .local v0, "c":Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->requery()Z
 
@@ -95,24 +88,20 @@
 
     if-nez v5, :cond_1
 
-    .line 74
     const-string v5, "ShortcutManager"
 
     const-string v6, "ShortcutObserver could not re-query shortcuts."
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     :cond_0
     return-void
 
-    .line 78
     :cond_1
     iget-object v5, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mShortcutIntents:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->clear()V
 
-    .line 79
     :cond_2
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
@@ -121,29 +110,24 @@
 
     if-eqz v5, :cond_0
 
-    .line 80
     const/4 v5, 0x0
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
 
-    .line 81
     .local v4, "shortcut":I
     if-eqz v4, :cond_2
 
-    .line 82
     const/4 v5, 0x1
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 83
     .local v3, "intentURI":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 85
     .local v2, "intent":Landroid/content/Intent;
     :try_start_0
     invoke-static {v3}, Landroid/content/Intent;->getIntent(Ljava/lang/String;)Landroid/content/Intent;
@@ -152,22 +136,18 @@
 
     move-result-object v2
 
-    .line 89
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 90
     iget-object v5, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mShortcutIntents:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v4, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 86
     :catch_0
     move-exception v1
 
-    .line 87
     .local v1, "e":Ljava/net/URISyntaxException;
     const-string v5, "ShortcutManager"
 
@@ -187,20 +167,16 @@
     .param p3, "metaState"    # I
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
-    .line 113
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {p1, p2, p3}, Landroid/view/KeyCharacterMap;->get(II)I
 
     move-result v1
 
-    .line 114
     .local v1, "shortcut":I
     if-eqz v1, :cond_0
 
-    .line 115
     iget-object v2, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mShortcutIntents:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -210,12 +186,10 @@
     .end local v0    # "intent":Landroid/content/Intent;
     check-cast v0, Landroid/content/Intent;
 
-    .line 119
     .restart local v0    # "intent":Landroid/content/Intent;
     :cond_0
     if-nez v0, :cond_1
 
-    .line 120
     invoke-virtual {p1, p2}, Landroid/view/KeyCharacterMap;->getDisplayLabel(I)C
 
     move-result v2
@@ -224,10 +198,8 @@
 
     move-result v1
 
-    .line 121
     if-eqz v1, :cond_1
 
-    .line 122
     iget-object v2, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mShortcutIntents:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -237,7 +209,6 @@
     .end local v0    # "intent":Landroid/content/Intent;
     check-cast v0, Landroid/content/Intent;
 
-    .line 126
     .restart local v0    # "intent":Landroid/content/Intent;
     :cond_1
     return-object v0
@@ -249,7 +220,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 60
     iget-object v0, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -270,15 +240,12 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mCursor:Landroid/database/Cursor;
 
-    .line 62
     iget-object v0, p0, Lcom/android/internal/policy/impl/ShortcutManager;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p0}, Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 63
     invoke-direct {p0}, Lcom/android/internal/policy/impl/ShortcutManager;->updateShortcuts()V
 
-    .line 64
     return-void
 .end method
 
@@ -287,9 +254,7 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/internal/policy/impl/ShortcutManager;->updateShortcuts()V
 
-    .line 69
     return-void
 .end method

@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .end annotation
 
     .prologue
-    .line 106
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -53,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 30
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/Shape;->clone()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
@@ -68,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget v0, p0, Landroid/graphics/drawable/shapes/Shape;->mHeight:F
 
     return v0
@@ -79,7 +75,6 @@
     .param p1, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -87,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget v0, p0, Landroid/graphics/drawable/shapes/Shape;->mWidth:F
 
     return v0
@@ -97,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 85
     const/4 v0, 0x1
 
     return v0
@@ -109,7 +102,6 @@
     .param p2, "height"    # F
 
     .prologue
-    .line 94
     return-void
 .end method
 
@@ -121,24 +113,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 65
     cmpg-float v0, p1, v1
 
     if-gez v0, :cond_0
 
-    .line 66
     const/4 p1, 0x0
 
-    .line 68
     :cond_0
     cmpg-float v0, p2, v1
 
     if-gez v0, :cond_1
 
-    .line 69
     const/4 p2, 0x0
 
-    .line 71
     :cond_1
     iget v0, p0, Landroid/graphics/drawable/shapes/Shape;->mWidth:F
 
@@ -152,17 +139,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 72
     :cond_2
     iput p1, p0, Landroid/graphics/drawable/shapes/Shape;->mWidth:F
 
-    .line 73
     iput p2, p0, Landroid/graphics/drawable/shapes/Shape;->mHeight:F
 
-    .line 74
     invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/shapes/Shape;->onResize(FF)V
 
-    .line 76
     :cond_3
     return-void
 .end method

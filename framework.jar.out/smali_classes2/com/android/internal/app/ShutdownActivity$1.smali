@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     iput-object p1, p0, Lcom/android/internal/app/ShutdownActivity$1;->this$0:Lcom/android/internal/app/ShutdownActivity;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -38,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 46
     const-string v1, "power"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -49,7 +47,6 @@
 
     move-result-object v0
 
-    .line 49
     .local v0, "pm":Landroid/os/IPowerManager;
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/app/ShutdownActivity$1;->this$0:Lcom/android/internal/app/ShutdownActivity;
@@ -61,7 +58,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 50
     iget-object v1, p0, Lcom/android/internal/app/ShutdownActivity$1;->this$0:Lcom/android/internal/app/ShutdownActivity;
 
     # getter for: Lcom/android/internal/app/ShutdownActivity;->mConfirm:Z
@@ -75,11 +71,9 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/os/IPowerManager;->reboot(ZLjava/lang/String;Z)V
 
-    .line 56
     :goto_0
     return-void
 
-    .line 52
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/ShutdownActivity$1;->this$0:Lcom/android/internal/app/ShutdownActivity;
 
@@ -96,7 +90,6 @@
 
     goto :goto_0
 
-    .line 54
     :catch_0
     move-exception v1
 

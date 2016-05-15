@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 220
     new-instance v0, Landroid/telephony/CellSignalStrengthWcdma;
 
     const/4 v1, 0x0
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 217
     invoke-virtual {p0, p1}, Landroid/telephony/CellSignalStrengthWcdma$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/CellSignalStrengthWcdma;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 225
     new-array v0, p1, [Landroid/telephony/CellSignalStrengthWcdma;
 
     return-object v0
@@ -82,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 217
     invoke-virtual {p0, p1}, Landroid/telephony/CellSignalStrengthWcdma$1;->newArray(I)[Landroid/telephony/CellSignalStrengthWcdma;
 
     move-result-object v0

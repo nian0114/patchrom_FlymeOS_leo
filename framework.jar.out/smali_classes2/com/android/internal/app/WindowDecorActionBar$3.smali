@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 152
     iput-object p1, p0, Lcom/android/internal/app/WindowDecorActionBar$3;->this$0:Lcom/android/internal/app/WindowDecorActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 155
     iget-object v1, p0, Lcom/android/internal/app/WindowDecorActionBar$3;->this$0:Lcom/android/internal/app/WindowDecorActionBar;
 
     # getter for: Lcom/android/internal/app/WindowDecorActionBar;->mContainerView:Lcom/android/internal/widget/ActionBarContainer;
@@ -53,13 +51,11 @@
 
     move-result-object v0
 
-    .line 156
     .local v0, "parent":Landroid/view/ViewParent;
     check-cast v0, Landroid/view/View;
 
     .end local v0    # "parent":Landroid/view/ViewParent;
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 157
     return-void
 .end method

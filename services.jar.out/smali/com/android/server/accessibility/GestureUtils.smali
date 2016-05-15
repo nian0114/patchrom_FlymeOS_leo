@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     return-void
 .end method
 
@@ -22,7 +20,6 @@
     .param p2, "pointerIndex"    # I
 
     .prologue
-    .line 39
     invoke-virtual {p0, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v0
@@ -59,25 +56,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 28
     invoke-static {p0, p1, p2}, Lcom/android/server/accessibility/GestureUtils;->isTimedOut(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 35
     :cond_0
     :goto_0
     return v2
 
-    .line 31
     :cond_1
     invoke-static {p0, p1, p4}, Lcom/android/server/accessibility/GestureUtils;->computeDistance(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)D
 
     move-result-wide v0
 
-    .line 32
     .local v0, "deltaMove":D
     int-to-double v4, p3
 
@@ -85,7 +78,6 @@
 
     if-gez v3, :cond_0
 
-    .line 35
     const/4 v2, 0x1
 
     goto :goto_0
@@ -104,14 +96,11 @@
     .param p8, "maxDraggingAngleCos"    # F
 
     .prologue
-    .line 65
     sub-float v1, p4, p0
 
-    .line 66
     .local v1, "firstDeltaX":F
     sub-float v2, p5, p1
 
-    .line 68
     .local v2, "firstDeltaY":F
     const/4 v11, 0x0
 
@@ -125,14 +114,11 @@
 
     if-nez v11, :cond_0
 
-    .line 69
     const/4 v11, 0x1
 
-    .line 100
     :goto_0
     return v11
 
-    .line 72
     :cond_0
     mul-float v11, v1, v1
 
@@ -148,7 +134,6 @@
 
     double-to-float v3, v12
 
-    .line 74
     .local v3, "firstMagnitude":F
     const/4 v11, 0x0
 
@@ -158,7 +143,6 @@
 
     div-float v4, v1, v3
 
-    .line 76
     .local v4, "firstXNormalized":F
     :goto_1
     const/4 v11, 0x0
@@ -169,16 +153,13 @@
 
     div-float v5, v2, v3
 
-    .line 79
     .local v5, "firstYNormalized":F
     :goto_2
     sub-float v6, p6, p2
 
-    .line 80
     .local v6, "secondDeltaX":F
     sub-float v7, p7, p3
 
-    .line 82
     .local v7, "secondDeltaY":F
     const/4 v11, 0x0
 
@@ -192,7 +173,6 @@
 
     if-nez v11, :cond_3
 
-    .line 83
     const/4 v11, 0x1
 
     goto :goto_0
@@ -204,17 +184,14 @@
     :cond_1
     move v4, v1
 
-    .line 74
     goto :goto_1
 
     .restart local v4    # "firstXNormalized":F
     :cond_2
     move v5, v2
 
-    .line 76
     goto :goto_2
 
-    .line 86
     .restart local v5    # "firstYNormalized":F
     .restart local v6    # "secondDeltaX":F
     .restart local v7    # "secondDeltaY":F
@@ -233,7 +210,6 @@
 
     double-to-float v8, v12
 
-    .line 88
     .local v8, "secondMagnitude":F
     const/4 v11, 0x0
 
@@ -243,7 +219,6 @@
 
     div-float v9, v6, v8
 
-    .line 90
     .local v9, "secondXNormalized":F
     :goto_3
     const/4 v11, 0x0
@@ -254,7 +229,6 @@
 
     div-float v10, v7, v8
 
-    .line 93
     .local v10, "secondYNormalized":F
     :goto_4
     mul-float v11, v4, v9
@@ -263,13 +237,11 @@
 
     add-float v0, v11, v12
 
-    .line 96
     .local v0, "angleCos":F
     cmpg-float v11, v0, p8
 
     if-gez v11, :cond_6
 
-    .line 97
     const/4 v11, 0x0
 
     goto :goto_0
@@ -280,17 +252,14 @@
     :cond_4
     move v9, v6
 
-    .line 88
     goto :goto_3
 
     .restart local v9    # "secondXNormalized":F
     :cond_5
     move v10, v7
 
-    .line 90
     goto :goto_4
 
-    .line 100
     .restart local v0    # "angleCos":F
     .restart local v10    # "secondYNormalized":F
     :cond_6
@@ -308,7 +277,6 @@
     .param p4, "actionIndex"    # I
 
     .prologue
-    .line 22
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/accessibility/GestureUtils;->eventsWithinTimeAndDistanceSlop(Landroid/view/MotionEvent;Landroid/view/MotionEvent;III)Z
 
     move-result v0
@@ -322,7 +290,6 @@
     .param p1, "second"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 49
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getPointerIdBits()I
 
     move-result v0
@@ -371,7 +338,6 @@
     .param p4, "actionIndex"    # I
 
     .prologue
-    .line 17
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/accessibility/GestureUtils;->eventsWithinTimeAndDistanceSlop(Landroid/view/MotionEvent;Landroid/view/MotionEvent;III)Z
 
     move-result v0
@@ -386,7 +352,6 @@
     .param p2, "timeout"    # I
 
     .prologue
-    .line 44
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v2
@@ -397,7 +362,6 @@
 
     sub-long v0, v2, v4
 
-    .line 45
     .local v0, "deltaTime":J
     int-to-long v2, p2
 

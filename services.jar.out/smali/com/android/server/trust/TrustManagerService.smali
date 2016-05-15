@@ -105,7 +105,6 @@
     .locals 2
 
     .prologue
-    .line 91
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.service.trust.TrustAgentService"
@@ -124,24 +123,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 125
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 105
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
-    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
-    .line 107
     new-instance v0, Lcom/android/server/trust/TrustManagerService$Receiver;
 
     const/4 v1, 0x0
@@ -150,65 +145,54 @@
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mReceiver:Lcom/android/server/trust/TrustManagerService$Receiver;
 
-    .line 108
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
-    .line 109
     new-instance v0, Lcom/android/server/trust/TrustArchive;
 
     invoke-direct {v0}, Lcom/android/server/trust/TrustArchive;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mArchive:Lcom/android/server/trust/TrustArchive;
 
-    .line 115
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserIsTrusted:Landroid/util/SparseBooleanArray;
 
-    .line 118
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mDeviceLockedForUser:Landroid/util/SparseBooleanArray;
 
-    .line 121
     iput-boolean v2, p0, Lcom/android/server/trust/TrustManagerService;->mTrustAgentsCanRun:Z
 
-    .line 122
     iput v2, p0, Lcom/android/server/trust/TrustManagerService;->mCurrentUser:I
 
-    .line 638
     new-instance v0, Lcom/android/server/trust/TrustManagerService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/trust/TrustManagerService$1;-><init>(Lcom/android/server/trust/TrustManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mService:Landroid/os/IBinder;
 
-    .line 791
     new-instance v0, Lcom/android/server/trust/TrustManagerService$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/trust/TrustManagerService$2;-><init>(Lcom/android/server/trust/TrustManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 827
     new-instance v0, Lcom/android/server/trust/TrustManagerService$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/trust/TrustManagerService$3;-><init>(Lcom/android/server/trust/TrustManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "user"
@@ -221,7 +205,6 @@
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -234,14 +217,12 @@
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 129
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 130
     return-void
 .end method
 
@@ -251,7 +232,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->aggregateIsTrustManaged(I)Z
 
     move-result v0
@@ -264,7 +244,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     return-object v0
@@ -276,7 +255,6 @@
     .param p1, "x1"    # Landroid/app/trust/ITrustListener;
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->addListener(Landroid/app/trust/ITrustListener;)V
 
     return-void
@@ -288,7 +266,6 @@
     .param p1, "x1"    # Landroid/app/trust/ITrustListener;
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->removeListener(Landroid/app/trust/ITrustListener;)V
 
     return-void
@@ -301,7 +278,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1, p2}, Lcom/android/server/trust/TrustManagerService;->dispatchUnlockAttempt(ZI)V
 
     return-void
@@ -313,7 +289,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->refreshDeviceLockedForUser(I)V
 
     return-void
@@ -325,7 +300,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->requireCredentialEntry(I)V
 
     return-void
@@ -337,7 +311,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->removeAgentsOfPackage(Ljava/lang/String;)V
 
     return-void
@@ -349,7 +322,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->updateUserHasAuthenticated(I)V
 
     return-void
@@ -360,7 +332,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
@@ -371,7 +342,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -384,7 +354,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1, p2}, Lcom/android/server/trust/TrustManagerService;->maybeEnableFactoryTrustAgents(Lcom/android/internal/widget/LockPatternUtils;I)V
 
     return-void
@@ -395,7 +364,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
     return-object v0
@@ -406,7 +374,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserIsTrusted:Landroid/util/SparseBooleanArray;
 
     return-object v0
@@ -417,7 +384,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mDeviceLockedForUser:Landroid/util/SparseBooleanArray;
 
     return-object v0
@@ -429,7 +395,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->resolveProfileParent(I)I
 
     move-result v0
@@ -442,7 +407,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -453,7 +417,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-boolean v0, p0, Lcom/android/server/trust/TrustManagerService;->mTrustAgentsCanRun:Z
 
     return v0
@@ -464,7 +427,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
 
     return-object v0
@@ -475,7 +437,6 @@
     .param p0, "x0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 86
     iget v0, p0, Lcom/android/server/trust/TrustManagerService;->mCurrentUser:I
 
     return v0
@@ -487,7 +448,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     iput p1, p0, Lcom/android/server/trust/TrustManagerService;->mCurrentUser:I
 
     return p1
@@ -499,7 +459,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->aggregateIsTrusted(I)Z
 
     move-result v0
@@ -512,7 +471,6 @@
     .param p1, "listener"    # Landroid/app/trust/ITrustListener;
 
     .prologue
-    .line 572
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -525,7 +483,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 573
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -544,23 +501,19 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 579
     :goto_1
     return-void
 
-    .line 572
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 577
     :cond_1
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 578
     invoke-direct {p0}, Lcom/android/server/trust/TrustManagerService;->updateTrustAll()V
 
     goto :goto_1
@@ -573,7 +526,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 524
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -582,12 +534,10 @@
 
     if-nez v3, :cond_1
 
-    .line 535
     :cond_0
     :goto_0
     return v2
 
-    .line 527
     :cond_1
     const/4 v0, 0x0
 
@@ -601,7 +551,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 528
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -610,13 +559,11 @@
 
     check-cast v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 529
     .local v1, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->userId:I
 
     if-ne v3, p1, :cond_2
 
-    .line 530
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v3}, Lcom/android/server/trust/TrustAgentWrapper;->isManagingTrust()Z
@@ -625,12 +572,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 531
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 527
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -644,7 +589,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 509
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -653,12 +597,10 @@
 
     if-nez v3, :cond_1
 
-    .line 520
     :cond_0
     :goto_0
     return v2
 
-    .line 512
     :cond_1
     const/4 v0, 0x0
 
@@ -672,7 +614,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 513
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -681,13 +622,11 @@
 
     check-cast v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 514
     .local v1, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->userId:I
 
     if-ne v3, p1, :cond_2
 
-    .line 515
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v3}, Lcom/android/server/trust/TrustAgentWrapper;->isTrusted()Z
@@ -696,12 +635,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 516
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 512
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -714,7 +651,6 @@
     .param p2, "isLocked"    # Z
 
     .prologue
-    .line 344
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -727,7 +663,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 345
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -736,28 +671,23 @@
 
     check-cast v0, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 346
     .local v0, "agent":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget v2, v0, Lcom/android/server/trust/TrustManagerService$AgentInfo;->userId:I
 
     if-ne v2, p1, :cond_0
 
-    .line 347
     if-eqz p2, :cond_1
 
-    .line 348
     iget-object v2, v0, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v2}, Lcom/android/server/trust/TrustAgentWrapper;->onDeviceLocked()V
 
-    .line 344
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 350
     :cond_1
     iget-object v2, v0, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -765,7 +695,6 @@
 
     goto :goto_1
 
-    .line 354
     .end local v0    # "agent":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     :cond_2
     return-void
@@ -778,12 +707,10 @@
     .param p3, "initiatedByUser"    # Z
 
     .prologue
-    .line 591
     if-nez p1, :cond_0
 
     const/4 p3, 0x0
 
-    .line 592
     :cond_0
     const/4 v1, 0x0
 
@@ -797,7 +724,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 594
     :try_start_0
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
@@ -812,17 +738,14 @@
     .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 592
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 595
     :catch_0
     move-exception v0
 
-    .line 596
     .local v0, "e":Landroid/os/DeadObjectException;
     const-string v2, "TrustManagerService"
 
@@ -830,23 +753,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 598
     add-int/lit8 v1, v1, -0x1
 
-    .line 601
     goto :goto_1
 
-    .line 599
     .end local v0    # "e":Landroid/os/DeadObjectException;
     :catch_1
     move-exception v0
 
-    .line 600
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TrustManagerService"
 
@@ -856,7 +774,6 @@
 
     goto :goto_1
 
-    .line 603
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     return-void
@@ -868,7 +785,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 606
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -881,7 +797,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 608
     :try_start_0
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
@@ -896,17 +811,14 @@
     .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 606
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 609
     :catch_0
     move-exception v0
 
-    .line 610
     .local v0, "e":Landroid/os/DeadObjectException;
     const-string v2, "TrustManagerService"
 
@@ -914,23 +826,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 612
     add-int/lit8 v1, v1, -0x1
 
-    .line 615
     goto :goto_1
 
-    .line 613
     .end local v0    # "e":Landroid/os/DeadObjectException;
     :catch_1
     move-exception v0
 
-    .line 614
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TrustManagerService"
 
@@ -940,7 +847,6 @@
 
     goto :goto_1
 
-    .line 617
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     return-void
@@ -952,7 +858,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 539
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -965,7 +870,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 540
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -974,32 +878,26 @@
 
     check-cast v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 541
     .local v1, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget v2, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->userId:I
 
     if-ne v2, p2, :cond_0
 
-    .line 542
     iget-object v2, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onUnlockAttempt(Z)V
 
-    .line 539
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 546
     .end local v1    # "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 547
     invoke-direct {p0, p2}, Lcom/android/server/trust/TrustManagerService;->updateUserHasAuthenticated(I)V
 
-    .line 549
     :cond_2
     return-void
 .end method
@@ -1009,7 +907,6 @@
     .param p1, "resolveInfo"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 454
     if-eqz p1, :cond_0
 
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -1019,7 +916,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 455
     :goto_0
     return-object v0
 
@@ -1049,7 +945,6 @@
 
     const/4 v9, 0x0
 
-    .line 403
     if-eqz p2, :cond_0
 
     iget-object v10, p2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -1062,24 +957,19 @@
 
     if-nez v10, :cond_1
 
-    .line 450
     :cond_0
     :goto_0
     return-object v9
 
-    .line 405
     :cond_1
     const/4 v2, 0x0
 
-    .line 406
     .local v2, "cn":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 407
     .local v5, "parser":Landroid/content/res/XmlResourceParser;
     const/4 v1, 0x0
 
-    .line 409
     .local v1, "caughtException":Ljava/lang/Exception;
     :try_start_0
     iget-object v10, p2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -1090,10 +980,8 @@
 
     move-result-object v5
 
-    .line 411
     if-nez v5, :cond_2
 
-    .line 412
     const-string v10, "TrustManagerService"
 
     const-string v11, "Can\'t find android.service.trust.trustagent meta-data"
@@ -1105,14 +993,12 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 438
     if-eqz v5, :cond_0
 
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_0
 
-    .line 415
     :cond_2
     :try_start_1
     iget-object v10, p2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -1123,13 +1009,11 @@
 
     move-result-object v6
 
-    .line 416
     .local v6, "res":Landroid/content/res/Resources;
     invoke-static {v5}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v0
 
-    .line 419
     .local v0, "attrs":Landroid/util/AttributeSet;
     :cond_3
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->next()I
@@ -1143,13 +1027,11 @@
 
     if-ne v8, v12, :cond_3
 
-    .line 422
     :cond_4
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 423
     .local v4, "nodeName":Ljava/lang/String;
     const-string v10, "trust-agent"
 
@@ -1159,7 +1041,6 @@
 
     if-nez v10, :cond_5
 
-    .line 424
     const-string v10, "TrustManagerService"
 
     const-string v11, "Meta-data does not start with trust-agent tag"
@@ -1171,14 +1052,12 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 438
     if-eqz v5, :cond_0
 
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_0
 
-    .line 427
     :cond_5
     :try_start_2
     sget-object v10, Lcom/android/internal/R$styleable;->TrustAgent:[I
@@ -1187,7 +1066,6 @@
 
     move-result-object v7
 
-    .line 429
     .local v7, "sa":Landroid/content/res/TypedArray;
     const/4 v10, 0x2
 
@@ -1195,7 +1073,6 @@
 
     move-result-object v2
 
-    .line 430
     invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1203,12 +1080,10 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 438
     if-eqz v5, :cond_6
 
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 440
     .end local v0    # "attrs":Landroid/util/AttributeSet;
     .end local v4    # "nodeName":Ljava/lang/String;
     .end local v6    # "res":Landroid/content/res/Resources;
@@ -1218,7 +1093,6 @@
     :goto_1
     if-eqz v1, :cond_8
 
-    .line 441
     const-string v10, "TrustManagerService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1247,47 +1121,38 @@
 
     goto :goto_0
 
-    .line 431
     :catch_0
     move-exception v3
 
-    .line 432
     .local v3, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object v1, v3
 
-    .line 438
     if-eqz v5, :cond_6
 
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_1
 
-    .line 433
     .end local v3    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v3
 
-    .line 434
     .local v3, "e":Ljava/io/IOException;
     move-object v1, v3
 
-    .line 438
     if-eqz v5, :cond_6
 
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_1
 
-    .line 435
     .end local v3    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v3
 
-    .line 436
     .local v3, "e":Lorg/xmlpull/v1/XmlPullParserException;
     move-object v1, v3
 
-    .line 438
     if-eqz v5, :cond_6
 
     invoke-interface {v5}, Landroid/content/res/XmlResourceParser;->close()V
@@ -1305,11 +1170,9 @@
     :cond_7
     throw v9
 
-    .line 444
     :cond_8
     if-eqz v2, :cond_0
 
-    .line 447
     const/16 v9, 0x2f
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->indexOf(I)I
@@ -1318,7 +1181,6 @@
 
     if-gez v9, :cond_9
 
-    .line 448
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1345,7 +1207,6 @@
 
     move-result-object v2
 
-    .line 450
     :cond_9
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -1360,7 +1221,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 459
     iget-object v8, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1377,11 +1237,9 @@
 
     if-eqz v8, :cond_0
 
-    .line 484
     :goto_0
     return-void
 
-    .line 463
     :cond_0
     iget-object v8, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
@@ -1389,19 +1247,16 @@
 
     move-result-object v4
 
-    .line 464
     .local v4, "pm":Landroid/content/pm/PackageManager;
     invoke-direct {p0, v4, p2}, Lcom/android/server/trust/TrustManagerService;->resolveAllowedTrustAgents(Landroid/content/pm/PackageManager;I)Ljava/util/List;
 
     move-result-object v7
 
-    .line 465
     .local v7, "resolveInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 466
     .local v2, "discoveredAgents":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/content/ComponentName;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1421,13 +1276,11 @@
 
     check-cast v6, Landroid/content/pm/ResolveInfo;
 
-    .line 467
     .local v6, "resolveInfo":Landroid/content/pm/ResolveInfo;
     invoke-direct {p0, v6}, Lcom/android/server/trust/TrustManagerService;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 468
     .local v1, "componentName":Landroid/content/ComponentName;
     iget-object v8, v6, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -1435,13 +1288,11 @@
 
     iget v0, v8, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 469
     .local v0, "applicationInfoFlags":I
     and-int/lit8 v8, v0, 0x1
 
     if-nez v8, :cond_1
 
-    .line 470
     const-string v8, "TrustManagerService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1478,13 +1329,11 @@
 
     goto :goto_1
 
-    .line 474
     :cond_1
     invoke-virtual {v2, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 477
     .end local v0    # "applicationInfoFlags":I
     .end local v1    # "componentName":Landroid/content/ComponentName;
     .end local v6    # "resolveInfo":Landroid/content/pm/ResolveInfo;
@@ -1493,18 +1342,14 @@
 
     move-result-object v5
 
-    .line 478
     .local v5, "previouslyEnabledAgents":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
     if-eqz v5, :cond_3
 
-    .line 479
     invoke-virtual {v2, v5}, Landroid/util/ArraySet;->addAll(Ljava/util/Collection;)Z
 
-    .line 481
     :cond_3
     invoke-virtual {p1, v2, p2}, Lcom/android/internal/widget/LockPatternUtils;->setEnabledTrustAgents(Ljava/util/Collection;I)V
 
-    .line 482
     iget-object v8, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1525,14 +1370,12 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 296
     const/4 v10, -0x1
 
     if-eq p1, v10, :cond_0
 
     if-gez p1, :cond_0
 
-    .line 297
     const-string v10, "TrustManagerService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1573,16 +1416,13 @@
 
     invoke-static {v10, v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 299
     const/4 p1, -0x1
 
-    .line 303
     :cond_0
     const/4 v10, -0x1
 
     if-ne p1, v10, :cond_2
 
-    .line 304
     iget-object v10, p0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
 
     const/4 v11, 0x1
@@ -1591,14 +1431,12 @@
 
     move-result-object v8
 
-    .line 310
     .local v8, "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :goto_0
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     move-result-object v9
 
-    .line 312
     .local v9, "wm":Landroid/view/IWindowManager;
     const/4 v2, 0x0
 
@@ -1610,14 +1448,12 @@
 
     if-ge v2, v10, :cond_7
 
-    .line 313
     invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/content/pm/UserInfo;
 
-    .line 315
     .local v4, "info":Landroid/content/pm/UserInfo;
     if-eqz v4, :cond_1
 
@@ -1641,14 +1477,12 @@
 
     if-nez v10, :cond_3
 
-    .line 312
     :cond_1
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 306
     .end local v2    # "i":I
     .end local v4    # "info":Landroid/content/pm/UserInfo;
     .end local v8    # "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
@@ -1658,7 +1492,6 @@
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 307
     .restart local v8    # "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     iget-object v10, p0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
 
@@ -1670,14 +1503,12 @@
 
     goto :goto_0
 
-    .line 320
     .restart local v2    # "i":I
     .restart local v4    # "info":Landroid/content/pm/UserInfo;
     .restart local v9    # "wm":Landroid/view/IWindowManager;
     :cond_3
     iget v3, v4, Landroid/content/pm/UserInfo;->id:I
 
-    .line 321
     .local v3, "id":I
     iget-object v10, p0, Lcom/android/server/trust/TrustManagerService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -1685,23 +1516,19 @@
 
     move-result v5
 
-    .line 322
     .local v5, "secure":Z
     invoke-direct {p0, v3}, Lcom/android/server/trust/TrustManagerService;->aggregateIsTrusted(I)Z
 
     move-result v7
 
-    .line 323
     .local v7, "trusted":Z
     const/4 v6, 0x1
 
-    .line 324
     .local v6, "showingKeyguard":Z
     iget v10, p0, Lcom/android/server/trust/TrustManagerService;->mCurrentUser:I
 
     if-ne v10, v3, :cond_4
 
-    .line 326
     :try_start_0
     invoke-interface {v9}, Landroid/view/IWindowManager;->isKeyguardLocked()Z
     :try_end_0
@@ -1709,7 +1536,6 @@
 
     move-result v6
 
-    .line 330
     :cond_4
     :goto_3
     if-eqz v5, :cond_5
@@ -1720,14 +1546,12 @@
 
     const/4 v1, 0x1
 
-    .line 333
     .local v1, "deviceLocked":Z
     :goto_4
     iget-object v11, p0, Lcom/android/server/trust/TrustManagerService;->mDeviceLockedForUser:Landroid/util/SparseBooleanArray;
 
     monitor-enter v11
 
-    .line 334
     :try_start_1
     invoke-virtual {p0, v3}, Lcom/android/server/trust/TrustManagerService;->isDeviceLockedInner(I)Z
 
@@ -1737,27 +1561,22 @@
 
     const/4 v0, 0x1
 
-    .line 335
     .local v0, "changed":Z
     :goto_5
     iget-object v10, p0, Lcom/android/server/trust/TrustManagerService;->mDeviceLockedForUser:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v10, v3, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 336
     monitor-exit v11
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 337
     if-eqz v0, :cond_1
 
-    .line 338
     invoke-direct {p0, v3, v1}, Lcom/android/server/trust/TrustManagerService;->dispatchDeviceLocked(IZ)V
 
     goto :goto_2
 
-    .line 330
     .end local v0    # "changed":Z
     .end local v1    # "deviceLocked":Z
     :cond_5
@@ -1765,14 +1584,12 @@
 
     goto :goto_4
 
-    .line 334
     .restart local v1    # "deviceLocked":Z
     :cond_6
     const/4 v0, 0x0
 
     goto :goto_5
 
-    .line 336
     :catchall_0
     move-exception v10
 
@@ -1783,14 +1600,12 @@
 
     throw v10
 
-    .line 327
     .end local v1    # "deviceLocked":Z
     :catch_0
     move-exception v10
 
     goto :goto_3
 
-    .line 341
     .end local v3    # "id":I
     .end local v4    # "info":Landroid/content/pm/UserInfo;
     .end local v5    # "secure":Z
@@ -1805,10 +1620,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 366
     const/4 v2, 0x0
 
-    .line 367
     .local v2, "trustMayHaveChanged":Z
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
@@ -1822,7 +1635,6 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 368
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -1831,7 +1643,6 @@
 
     check-cast v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 369
     .local v1, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->component:Landroid/content/ComponentName;
 
@@ -1845,7 +1656,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 370
     const-string v3, "TrustManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1874,7 +1684,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v3}, Lcom/android/server/trust/TrustAgentWrapper;->isManagingTrust()Z
@@ -1883,35 +1692,28 @@
 
     if-eqz v3, :cond_0
 
-    .line 372
     const/4 v2, 0x1
 
-    .line 374
     :cond_0
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v3}, Lcom/android/server/trust/TrustAgentWrapper;->destroy()V
 
-    .line 375
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v0}, Landroid/util/ArraySet;->removeAt(I)Ljava/lang/Object;
 
-    .line 367
     :cond_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 378
     .end local v1    # "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 379
     invoke-direct {p0}, Lcom/android/server/trust/TrustManagerService;->updateTrustAll()V
 
-    .line 381
     :cond_3
     return-void
 .end method
@@ -1921,7 +1723,6 @@
     .param p1, "listener"    # Landroid/app/trust/ITrustListener;
 
     .prologue
-    .line 582
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1934,7 +1735,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 583
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1953,16 +1753,13 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 584
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mTrustListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 588
     :cond_0
     return-void
 
-    .line 582
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -1976,22 +1773,17 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 560
     if-ne p1, v1, :cond_0
 
-    .line 561
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 562
     invoke-virtual {p0, v1}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
-    .line 567
     :goto_0
     return-void
 
-    .line 564
     :cond_0
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
@@ -1999,7 +1791,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 565
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
     goto :goto_0
@@ -2022,7 +1813,6 @@
     .end annotation
 
     .prologue
-    .line 487
     sget-object v6, Lcom/android/server/trust/TrustManagerService;->TRUST_AGENT_INTENT:Landroid/content/Intent;
 
     const/4 v7, 0x0
@@ -2031,7 +1821,6 @@
 
     move-result-object v5
 
-    .line 489
     .local v5, "resolveInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v0, Ljava/util/ArrayList;
 
@@ -2041,7 +1830,6 @@
 
     invoke-direct {v0, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 490
     .local v0, "allowedAgents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2062,25 +1850,21 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 491
     .local v4, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v6, v4, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-eqz v6, :cond_0
 
-    .line 492
     iget-object v6, v4, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v6, v6, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v6, :cond_0
 
-    .line 493
     iget-object v6, v4, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v3, v6, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 494
     .local v3, "packageName":Ljava/lang/String;
     const-string v6, "android.permission.PROVIDE_TRUST_AGENT"
 
@@ -2090,12 +1874,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 496
     invoke-direct {p0, v4}, Lcom/android/server/trust/TrustManagerService;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
 
     move-result-object v2
 
-    .line 497
     .local v2, "name":Landroid/content/ComponentName;
     const-string v6, "TrustManagerService"
 
@@ -2145,14 +1927,12 @@
 
     goto :goto_0
 
-    .line 501
     .end local v2    # "name":Landroid/content/ComponentName;
     :cond_1
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 503
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     :cond_2
@@ -2164,12 +1944,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 779
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 781
     .local v0, "identity":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
@@ -2178,11 +1956,9 @@
 
     move-result-object v2
 
-    .line 782
     .local v2, "parent":Landroid/content/pm/UserInfo;
     if-eqz v2, :cond_0
 
-    .line 783
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v3
@@ -2193,7 +1969,6 @@
 
     move-result p1
 
-    .line 787
     .end local p1    # "userId":I
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -2219,7 +1994,6 @@
     .locals 5
 
     .prologue
-    .line 180
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
 
     const/4 v4, 0x1
@@ -2228,7 +2002,6 @@
 
     move-result-object v2
 
-    .line 181
     .local v2, "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2248,7 +2021,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 182
     .local v1, "userInfo":Landroid/content/pm/UserInfo;
     iget v3, v1, Landroid/content/pm/UserInfo;->id:I
 
@@ -2258,7 +2030,6 @@
 
     goto :goto_0
 
-    .line 184
     .end local v1    # "userInfo":Landroid/content/pm/UserInfo;
     :cond_0
     return-void
@@ -2269,7 +2040,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 552
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -2278,17 +2048,14 @@
 
     if-nez v0, :cond_0
 
-    .line 553
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 554
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
-    .line 556
     :cond_0
     return-void
 .end method
@@ -2300,12 +2067,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 290
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mDeviceLockedForUser:Landroid/util/SparseBooleanArray;
 
     monitor-enter v1
 
-    .line 291
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mDeviceLockedForUser:Landroid/util/SparseBooleanArray;
 
@@ -2319,7 +2084,6 @@
 
     return v0
 
-    .line 292
     :catchall_0
     move-exception v0
 
@@ -2337,25 +2101,21 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/trust/TrustManagerService;->isSafeMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 152
     :cond_0
     :goto_0
     return-void
 
-    .line 143
     :cond_1
     const/16 v0, 0x1f4
 
     if-ne p1, v0, :cond_2
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
@@ -2370,7 +2130,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Landroid/os/UserHandle;Z)V
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mReceiver:Lcom/android/server/trust/TrustManagerService$Receiver;
 
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mContext:Landroid/content/Context;
@@ -2379,29 +2138,24 @@
 
     goto :goto_0
 
-    .line 146
     :cond_2
     const/16 v0, 0x258
 
     if-ne p1, v0, :cond_3
 
-    .line 147
     iput-boolean v4, p0, Lcom/android/server/trust/TrustManagerService;->mTrustAgentsCanRun:Z
 
-    .line 148
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
     goto :goto_0
 
-    .line 149
     :cond_3
     const/16 v0, 0x3e8
 
     if-ne p1, v0, :cond_0
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
@@ -2416,7 +2170,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 628
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x8
@@ -2431,7 +2184,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 629
     return-void
 .end method
 
@@ -2439,14 +2191,12 @@
     .locals 2
 
     .prologue
-    .line 134
     const-string v0, "trust"
 
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService;->mService:Landroid/os/IBinder;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/trust/TrustManagerService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 135
     return-void
 .end method
 
@@ -2455,7 +2205,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 623
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x7
@@ -2470,7 +2219,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 624
     return-void
 .end method
 
@@ -2479,7 +2227,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 633
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x9
@@ -2494,7 +2241,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 634
     return-void
 .end method
 
@@ -2503,7 +2249,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 202
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/trust/TrustManagerService;->mTrustAgentsCanRun:Z
@@ -2512,12 +2257,10 @@
 
     if-nez v24, :cond_1
 
-    .line 287
     :cond_0
     :goto_0
     return-void
 
-    .line 205
     :cond_1
     const/16 v24, -0x1
 
@@ -2529,7 +2272,6 @@
 
     if-gez p1, :cond_2
 
-    .line 206
     const-string v24, "TrustManagerService"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -2574,10 +2316,8 @@
 
     invoke-static/range {v24 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 208
     const/16 p1, -0x1
 
-    .line 210
     :cond_2
     move-object/from16 v0, p0
 
@@ -2589,7 +2329,6 @@
 
     move-result-object v18
 
-    .line 213
     .local v18, "pm":Landroid/content/pm/PackageManager;
     const/16 v24, -0x1
 
@@ -2599,7 +2338,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/trust/TrustManagerService;->mUserManager:Landroid/os/UserManager;
@@ -2612,20 +2350,17 @@
 
     move-result-object v23
 
-    .line 219
     .local v23, "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :goto_1
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/trust/TrustManagerService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 221
     .local v15, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     new-instance v17, Landroid/util/ArraySet;
 
     invoke-direct/range {v17 .. v17}, Landroid/util/ArraySet;-><init>()V
 
-    .line 222
     .local v17, "obsoleteAgents":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Lcom/android/server/trust/TrustManagerService$AgentInfo;>;"
     move-object/from16 v0, p0
 
@@ -2639,7 +2374,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->addAll(Landroid/util/ArraySet;)V
 
-    .line 224
     invoke-interface/range {v23 .. v23}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -2657,7 +2391,6 @@
 
     check-cast v22, Landroid/content/pm/UserInfo;
 
-    .line 225
     .local v22, "userInfo":Landroid/content/pm/UserInfo;
     if-eqz v22, :cond_3
 
@@ -2683,14 +2416,12 @@
 
     if-nez v24, :cond_3
 
-    .line 227
     invoke-virtual/range {v22 .. v22}, Landroid/content/pm/UserInfo;->supportsSwitchTo()Z
 
     move-result v24
 
     if-eqz v24, :cond_3
 
-    .line 228
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/trust/TrustManagerService;->mActivityManager:Landroid/app/ActivityManager;
@@ -2709,7 +2440,6 @@
 
     if-eqz v24, :cond_3
 
-    .line 229
     move-object/from16 v0, v22
 
     iget v0, v0, Landroid/content/pm/UserInfo;->id:I
@@ -2724,7 +2454,6 @@
 
     if-eqz v24, :cond_3
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/trust/TrustManagerService;->mUserHasAuthenticatedSinceBoot:Landroid/util/SparseBooleanArray;
@@ -2743,12 +2472,10 @@
 
     if-eqz v24, :cond_3
 
-    .line 231
     invoke-virtual {v15}, Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object v9
 
-    .line 232
     .local v9, "dpm":Landroid/app/admin/DevicePolicyManager;
     const/16 v24, 0x0
 
@@ -2766,7 +2493,6 @@
 
     move-result v8
 
-    .line 233
     .local v8, "disabledFeatures":I
     and-int/lit8 v24, v8, 0x10
 
@@ -2774,7 +2500,6 @@
 
     const/4 v7, 0x1
 
-    .line 236
     .local v7, "disableTrustAgents":Z
     :goto_2
     move-object/from16 v0, v22
@@ -2789,11 +2514,9 @@
 
     move-result-object v10
 
-    .line 237
     .local v10, "enabledAgents":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
     if-eqz v10, :cond_3
 
-    .line 240
     move-object/from16 v0, v22
 
     iget v0, v0, Landroid/content/pm/UserInfo;->id:I
@@ -2810,7 +2533,6 @@
 
     move-result-object v20
 
-    .line 241
     .local v20, "resolveInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface/range {v20 .. v20}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2831,7 +2553,6 @@
 
     check-cast v19, Landroid/content/pm/ResolveInfo;
 
-    .line 242
     .local v19, "resolveInfo":Landroid/content/pm/ResolveInfo;
     move-object/from16 v0, p0
 
@@ -2841,7 +2562,6 @@
 
     move-result-object v16
 
-    .line 244
     .local v16, "name":Landroid/content/ComponentName;
     move-object/from16 v0, v16
 
@@ -2851,10 +2571,8 @@
 
     if-eqz v24, :cond_4
 
-    .line 245
     if-eqz v7, :cond_5
 
-    .line 246
     const/16 v24, 0x0
 
     move-object/from16 v0, v22
@@ -2873,7 +2591,6 @@
 
     move-result-object v6
 
-    .line 249
     .local v6, "config":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     if-eqz v6, :cond_4
 
@@ -2883,7 +2600,6 @@
 
     if-nez v24, :cond_4
 
-    .line 252
     .end local v6    # "config":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     :cond_5
     new-instance v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;
@@ -2894,13 +2610,11 @@
 
     invoke-direct {v5, v0}, Lcom/android/server/trust/TrustManagerService$AgentInfo;-><init>(Lcom/android/server/trust/TrustManagerService$1;)V
 
-    .line 253
     .local v5, "agentInfo":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     move-object/from16 v0, v16
 
     iput-object v0, v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;->component:Landroid/content/ComponentName;
 
-    .line 254
     move-object/from16 v0, v22
 
     iget v0, v0, Landroid/content/pm/UserInfo;->id:I
@@ -2911,7 +2625,6 @@
 
     iput v0, v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;->userId:I
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
@@ -2926,7 +2639,6 @@
 
     if-nez v24, :cond_8
 
-    .line 256
     move-object/from16 v0, v19
 
     move-object/from16 v1, v18
@@ -2939,7 +2651,6 @@
 
     iput-object v0, v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;->label:Ljava/lang/CharSequence;
 
-    .line 257
     move-object/from16 v0, v19
 
     move-object/from16 v1, v18
@@ -2952,7 +2663,6 @@
 
     iput-object v0, v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 258
     move-object/from16 v0, p0
 
     move-object/from16 v1, v18
@@ -2967,7 +2677,6 @@
 
     iput-object v0, v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;->settings:Landroid/content/ComponentName;
 
-    .line 259
     new-instance v24, Lcom/android/server/trust/TrustAgentWrapper;
 
     move-object/from16 v0, p0
@@ -3008,7 +2717,6 @@
 
     iput-object v0, v5, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
@@ -3021,7 +2729,6 @@
 
     goto/16 :goto_3
 
-    .line 216
     .end local v5    # "agentInfo":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     .end local v7    # "disableTrustAgents":Z
     .end local v8    # "disabledFeatures":I
@@ -3040,7 +2747,6 @@
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 217
     .restart local v23    # "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     move-object/from16 v0, p0
 
@@ -3060,7 +2766,6 @@
 
     goto/16 :goto_1
 
-    .line 233
     .restart local v8    # "disabledFeatures":I
     .restart local v9    # "dpm":Landroid/app/admin/DevicePolicyManager;
     .restart local v15    # "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
@@ -3071,7 +2776,6 @@
 
     goto/16 :goto_2
 
-    .line 263
     .restart local v5    # "agentInfo":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     .restart local v7    # "disableTrustAgents":Z
     .restart local v10    # "enabledAgents":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
@@ -3086,7 +2790,6 @@
 
     goto/16 :goto_3
 
-    .line 268
     .end local v5    # "agentInfo":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     .end local v7    # "disableTrustAgents":Z
     .end local v8    # "disabledFeatures":I
@@ -3100,7 +2803,6 @@
     :cond_9
     const/16 v21, 0x0
 
-    .line 269
     .local v21, "trustMayHaveChanged":Z
     const/4 v11, 0x0
 
@@ -3114,7 +2816,6 @@
 
     if-ge v11, v0, :cond_d
 
-    .line 270
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v11}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -3123,7 +2824,6 @@
 
     check-cast v14, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 271
     .local v14, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     const/16 v24, -0x1
 
@@ -3143,7 +2843,6 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 272
     :cond_a
     iget-object v0, v14, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -3155,10 +2854,8 @@
 
     if-eqz v24, :cond_b
 
-    .line 273
     const/16 v21, 0x1
 
-    .line 275
     :cond_b
     iget-object v0, v14, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -3166,7 +2863,6 @@
 
     invoke-virtual/range {v24 .. v24}, Lcom/android/server/trust/TrustAgentWrapper;->destroy()V
 
-    .line 276
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
@@ -3177,18 +2873,15 @@
 
     invoke-virtual {v0, v14}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 269
     :cond_c
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_4
 
-    .line 280
     .end local v14    # "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     :cond_d
     if-eqz v21, :cond_0
 
-    .line 281
     const/16 v24, -0x1
 
     move/from16 v0, p1
@@ -3197,12 +2890,10 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 282
     invoke-direct/range {p0 .. p0}, Lcom/android/server/trust/TrustManagerService;->updateTrustAll()V
 
     goto/16 :goto_0
 
-    .line 284
     :cond_e
     const/16 v24, 0x0
 
@@ -3223,10 +2914,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 384
     const/4 v2, 0x0
 
-    .line 385
     .local v2, "trustMayHaveChanged":Z
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
@@ -3240,7 +2929,6 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 386
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -3249,7 +2937,6 @@
 
     check-cast v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 387
     .local v1, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->component:Landroid/content/ComponentName;
 
@@ -3263,7 +2950,6 @@
 
     if-ne p2, v3, :cond_1
 
-    .line 388
     const-string v3, "TrustManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3292,7 +2978,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v3}, Lcom/android/server/trust/TrustAgentWrapper;->isManagingTrust()Z
@@ -3301,41 +2986,33 @@
 
     if-eqz v3, :cond_0
 
-    .line 390
     const/4 v2, 0x1
 
-    .line 392
     :cond_0
     iget-object v3, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v3}, Lcom/android/server/trust/TrustAgentWrapper;->destroy()V
 
-    .line 393
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v0}, Landroid/util/ArraySet;->removeAt(I)Ljava/lang/Object;
 
-    .line 385
     :cond_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 396
     .end local v1    # "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 397
     const/4 v3, 0x0
 
     invoke-virtual {p0, p2, v3}, Lcom/android/server/trust/TrustManagerService;->updateTrust(IZ)V
 
-    .line 399
     :cond_3
     invoke-virtual {p0, p2}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
-    .line 400
     return-void
 .end method
 
@@ -3343,7 +3020,6 @@
     .locals 3
 
     .prologue
-    .line 357
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3356,7 +3032,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 358
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mActiveAgents:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -3365,7 +3040,6 @@
 
     check-cast v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;
 
-    .line 359
     .local v1, "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     iget-object v2, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -3375,18 +3049,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 360
     iget-object v2, v1, Lcom/android/server/trust/TrustManagerService$AgentInfo;->agent:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-virtual {v2}, Lcom/android/server/trust/TrustAgentWrapper;->updateDevicePolicyFeatures()Z
 
-    .line 357
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 363
     .end local v1    # "info":Lcom/android/server/trust/TrustManagerService$AgentInfo;
     :cond_1
     return-void
@@ -3398,25 +3069,21 @@
     .param p2, "initiatedByUser"    # Z
 
     .prologue
-    .line 187
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->aggregateIsTrustManaged(I)Z
 
     move-result v2
 
     invoke-direct {p0, v2, p1}, Lcom/android/server/trust/TrustManagerService;->dispatchOnTrustManagedChanged(ZI)V
 
-    .line 188
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->aggregateIsTrusted(I)Z
 
     move-result v1
 
-    .line 190
     .local v1, "trusted":Z
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService;->mUserIsTrusted:Landroid/util/SparseBooleanArray;
 
     monitor-enter v3
 
-    .line 191
     :try_start_0
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mUserIsTrusted:Landroid/util/SparseBooleanArray;
 
@@ -3428,39 +3095,31 @@
 
     const/4 v0, 0x1
 
-    .line 192
     .local v0, "changed":Z
     :goto_0
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService;->mUserIsTrusted:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 193
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 194
     invoke-direct {p0, v1, p1, p2}, Lcom/android/server/trust/TrustManagerService;->dispatchOnTrustChanged(ZIZ)V
 
-    .line 195
     if-eqz v0, :cond_0
 
-    .line 196
     invoke-direct {p0, p1}, Lcom/android/server/trust/TrustManagerService;->refreshDeviceLockedForUser(I)V
 
-    .line 198
     :cond_0
     return-void
 
-    .line 191
     .end local v0    # "changed":Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 193
     :catchall_0
     move-exception v2
 

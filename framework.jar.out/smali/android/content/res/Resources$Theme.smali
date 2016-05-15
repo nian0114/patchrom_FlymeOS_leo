@@ -31,27 +31,22 @@
     .locals 2
 
     .prologue
-    .line 1777
     iput-object p1, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1787
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/content/res/Resources$Theme;->mThemeResId:I
 
-    .line 1790
     const-string v0, ""
 
     iput-object v0, p0, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
-    .line 1778
     iget-object v0, p1, Landroid/content/res/Resources;->mAssets:Landroid/content/res/AssetManager;
 
     iput-object v0, p0, Landroid/content/res/Resources$Theme;->mAssets:Landroid/content/res/AssetManager;
 
-    .line 1779
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->mAssets:Landroid/content/res/AssetManager;
 
     invoke-virtual {v0}, Landroid/content/res/AssetManager;->createTheme()J
@@ -60,7 +55,6 @@
 
     iput-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
-    .line 1780
     return-void
 .end method
 
@@ -69,7 +63,6 @@
     .param p0, "x0"    # Landroid/content/res/Resources$Theme;
 
     .prologue
-    .line 1450
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -80,7 +73,6 @@
     .param p1, "hexString"    # Ljava/lang/String;
 
     .prologue
-    .line 1806
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
     const/16 v1, 0x10
@@ -104,15 +96,12 @@
     .param p2, "force"    # Z
 
     .prologue
-    .line 1469
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     invoke-static {v0, v1, p1, p2}, Landroid/content/res/AssetManager;->applyThemeStyle(JIZ)V
 
-    .line 1471
     iput p1, p0, Landroid/content/res/Resources$Theme;->mThemeResId:I
 
-    .line 1472
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,10 +135,8 @@
 
     iput-object v0, p0, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
-    .line 1473
     return-void
 
-    .line 1472
     :cond_0
     const-string v0, " "
 
@@ -163,12 +150,10 @@
     .param p3, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 1768
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     invoke-static {v0, v1, p1, p2, p3}, Landroid/content/res/AssetManager;->dumpTheme(JILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1769
     return-void
 .end method
 
@@ -181,17 +166,14 @@
     .end annotation
 
     .prologue
-    .line 1773
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 1774
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->mAssets:Landroid/content/res/AssetManager;
 
     iget-wide v2, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     invoke-virtual {v0, v2, v3}, Landroid/content/res/AssetManager;->releaseTheme(J)V
 
-    .line 1775
     return-void
 .end method
 
@@ -199,7 +181,6 @@
     .locals 2
 
     .prologue
-    .line 1733
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->mAssets:Landroid/content/res/AssetManager;
 
     invoke-virtual {p0}, Landroid/content/res/Resources$Theme;->getAppliedStyleResId()I
@@ -217,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 1798
     iget v0, p0, Landroid/content/res/Resources$Theme;->mThemeResId:I
 
     return v0
@@ -233,7 +213,6 @@
     .end annotation
 
     .prologue
-    .line 1757
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p1, p0}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -247,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 1802
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -257,7 +235,6 @@
     .locals 2
 
     .prologue
-    .line 1794
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     return-wide v0
@@ -267,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 1742
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
     return-object v0
@@ -281,7 +257,6 @@
     .end annotation
 
     .prologue
-    .line 1818
     iget-object v6, p0, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
     const-string v7, " "
@@ -290,7 +265,6 @@
 
     move-result-object v4
 
-    .line 1819
     .local v4, "themeData":[Ljava/lang/String;
     array-length v6, v4
 
@@ -298,7 +272,6 @@
 
     new-array v5, v6, [Ljava/lang/String;
 
-    .line 1823
     .local v5, "themes":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -313,10 +286,8 @@
 
     if-ge v1, v6, :cond_2
 
-    .line 1824
     aget-object v3, v4, v2
 
-    .line 1825
     .local v3, "theme":Ljava/lang/String;
     const-string v6, "!"
 
@@ -324,7 +295,6 @@
 
     move-result v0
 
-    .line 1826
     .local v0, "forced":Z
     if-eqz v0, :cond_0
 
@@ -347,7 +317,6 @@
     :goto_1
     aput-object v6, v5, v1
 
-    .line 1829
     add-int/lit8 v7, v1, 0x1
 
     if-eqz v0, :cond_1
@@ -357,14 +326,12 @@
     :goto_2
     aput-object v6, v5, v7
 
-    .line 1823
     add-int/lit8 v1, v1, 0x2
 
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 1826
     :cond_0
     invoke-direct {p0, v3}, Landroid/content/res/Resources$Theme;->getResourceNameFromHexString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -372,13 +339,11 @@
 
     goto :goto_1
 
-    .line 1829
     :cond_1
-    const-string/jumbo v6, "not forced"
+    const-string v6, "not forced"
 
     goto :goto_2
 
-    .line 1831
     .end local v0    # "forced":Z
     .end local v3    # "theme":Ljava/lang/String;
     :cond_2
@@ -396,10 +361,8 @@
     .end annotation
 
     .prologue
-    .line 1539
     array-length v10, p2
 
-    .line 1540
     .local v10, "len":I
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
@@ -407,11 +370,9 @@
 
     move-result-object v9
 
-    .line 1541
     .local v9, "array":Landroid/content/res/TypedArray;
     iput-object p0, v9, Landroid/content/res/TypedArray;->mTheme:Landroid/content/res/Resources$Theme;
 
-    .line 1568
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     const/4 v2, 0x0
@@ -428,7 +389,6 @@
 
     invoke-static/range {v0 .. v8}, Landroid/content/res/AssetManager;->applyStyle(JIIJ[I[I[I)Z
 
-    .line 1569
     return-object v9
 .end method
 
@@ -440,10 +400,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 1622
     array-length v10, p2
 
-    .line 1623
     .local v10, "len":I
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
@@ -454,10 +412,8 @@
     .local v9, "array":Landroid/content/res/TypedArray;
     move-object v11, p1
 
-    .line 1629
     check-cast v11, Landroid/content/res/XmlBlock$Parser;
 
-    .line 1630
     .local v11, "parser":Landroid/content/res/XmlBlock$Parser;
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
@@ -478,16 +434,12 @@
 
     invoke-static/range {v0 .. v8}, Landroid/content/res/AssetManager;->applyStyle(JIIJ[I[I[I)Z
 
-    .line 1633
     iput-object p0, v9, Landroid/content/res/TypedArray;->mTheme:Landroid/content/res/Resources$Theme;
 
-    .line 1634
     iput-object v11, v9, Landroid/content/res/TypedArray;->mXml:Landroid/content/res/XmlBlock$Parser;
 
-    .line 1665
     return-object v9
 
-    .line 1630
     :cond_0
     const-wide/16 v4, 0x0
 
@@ -501,10 +453,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1511
     array-length v10, p1
 
-    .line 1512
     .local v10, "len":I
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
@@ -512,11 +462,9 @@
 
     move-result-object v9
 
-    .line 1513
     .local v9, "array":Landroid/content/res/TypedArray;
     iput-object p0, v9, Landroid/content/res/TypedArray;->mTheme:Landroid/content/res/Resources$Theme;
 
-    .line 1514
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     const-wide/16 v4, 0x0
@@ -531,7 +479,6 @@
 
     invoke-static/range {v0 .. v8}, Landroid/content/res/AssetManager;->applyStyle(JIIJ[I[I[I)Z
 
-    .line 1515
     return-object v9
 .end method
 
@@ -542,7 +489,6 @@
     .param p3, "resolveRefs"    # Z
 
     .prologue
-    .line 1716
     iget-object v1, p0, Landroid/content/res/Resources$Theme;->mAssets:Landroid/content/res/AssetManager;
 
     iget-wide v2, p0, Landroid/content/res/Resources$Theme;->mTheme:J
@@ -557,7 +503,6 @@
 
     move-result v0
 
-    .line 1723
     .local v0, "got":Z
     return v0
 .end method
@@ -570,10 +515,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1684
     array-length v9, p2
 
-    .line 1685
     .local v9, "len":I
     if-eqz p1, :cond_0
 
@@ -581,7 +524,6 @@
 
     if-eq v9, v0, :cond_1
 
-    .line 1686
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -591,7 +533,6 @@
 
     throw v0
 
-    .line 1690
     :cond_1
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
@@ -599,7 +540,6 @@
 
     move-result-object v8
 
-    .line 1691
     .local v8, "array":Landroid/content/res/TypedArray;
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
@@ -615,15 +555,12 @@
 
     invoke-static/range {v0 .. v7}, Landroid/content/res/AssetManager;->resolveAttrs(JII[I[I[I[I)Z
 
-    .line 1692
     iput-object p0, v8, Landroid/content/res/TypedArray;->mTheme:Landroid/content/res/Resources$Theme;
 
-    .line 1693
     const/4 v0, 0x0
 
     iput-object v0, v8, Landroid/content/res/TypedArray;->mXml:Landroid/content/res/XmlBlock$Parser;
 
-    .line 1695
     return-object v8
 .end method
 
@@ -632,23 +569,19 @@
     .param p1, "other"    # Landroid/content/res/Resources$Theme;
 
     .prologue
-    .line 1485
     iget-wide v0, p0, Landroid/content/res/Resources$Theme;->mTheme:J
 
     iget-wide v2, p1, Landroid/content/res/Resources$Theme;->mTheme:J
 
     invoke-static {v0, v1, v2, v3}, Landroid/content/res/AssetManager;->copyTheme(JJ)V
 
-    .line 1487
     iget v0, p1, Landroid/content/res/Resources$Theme;->mThemeResId:I
 
     iput v0, p0, Landroid/content/res/Resources$Theme;->mThemeResId:I
 
-    .line 1488
     iget-object v0, p1, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/res/Resources$Theme;->mKey:Ljava/lang/String;
 
-    .line 1489
     return-void
 .end method

@@ -56,19 +56,16 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->this$0:Lcom/android/server/pm/LauncherAppsService;
 
     invoke-direct {p0}, Landroid/content/pm/ILauncherApps$Stub;-><init>()V
 
-    .line 75
     new-instance v0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;-><init>(Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;)V
 
     iput-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
-    .line 78
     new-instance v0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;
 
     const/4 v1, 0x0
@@ -77,10 +74,8 @@
 
     iput-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mPackageMonitor:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;
 
-    .line 81
     iput-object p2, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mContext:Landroid/content/Context;
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -89,7 +84,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "user"
@@ -102,7 +96,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mUm:Landroid/os/UserManager;
 
-    .line 84
     return-void
 .end method
 
@@ -111,7 +104,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mUm:Landroid/os/UserManager;
 
     return-object v0
@@ -122,7 +114,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     return-object v0
@@ -134,32 +125,26 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 158
     .local v0, "callingUserId":I
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v4
 
-    .line 160
     .local v4, "targetUserId":I
     if-ne v4, v0, :cond_0
 
-    .line 174
     :goto_0
     return-void
 
-    .line 162
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 164
     .local v2, "ident":J
     :try_start_0
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mUm:Landroid/os/UserManager;
@@ -168,7 +153,6 @@
 
     move-result-object v1
 
-    .line 165
     .local v1, "callingUserInfo":Landroid/content/pm/UserInfo;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mUm:Landroid/os/UserManager;
 
@@ -176,7 +160,6 @@
 
     move-result-object v5
 
-    .line 166
     .local v5, "targetUserInfo":Landroid/content/pm/UserInfo;
     if-eqz v5, :cond_1
 
@@ -192,7 +175,6 @@
 
     if-eq v6, v7, :cond_2
 
-    .line 169
     :cond_1
     new-instance v6, Ljava/lang/SecurityException;
 
@@ -202,7 +184,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 172
     .end local v1    # "callingUserInfo":Landroid/content/pm/UserInfo;
     .end local v5    # "targetUserInfo":Landroid/content/pm/UserInfo;
     :catchall_0
@@ -225,12 +206,10 @@
     .param p1, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 180
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 182
     .local v0, "ident":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mUm:Landroid/os/UserManager;
@@ -243,7 +222,6 @@
 
     move-result-object v2
 
-    .line 183
     .local v2, "targetUserInfo":Landroid/content/pm/UserInfo;
     if-eqz v2, :cond_0
 
@@ -257,19 +235,16 @@
 
     const/4 v3, 0x1
 
-    .line 185
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v3
 
-    .line 183
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 185
     .end local v2    # "targetUserInfo":Landroid/content/pm/UserInfo;
     :catchall_0
     move-exception v3
@@ -283,7 +258,6 @@
     .locals 5
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mPackageMonitor:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;
 
     iget-object v1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mContext:Landroid/content/Context;
@@ -296,7 +270,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Landroid/os/UserHandle;Z)V
 
-    .line 130
     return-void
 .end method
 
@@ -304,12 +277,10 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mPackageMonitor:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->unregister()V
 
-    .line 140
     return-void
 .end method
 
@@ -325,12 +296,10 @@
     .end annotation
 
     .prologue
-    .line 92
     iget-object v1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     monitor-enter v1
 
-    .line 96
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
@@ -340,16 +309,13 @@
 
     if-nez v0, :cond_0
 
-    .line 100
     invoke-direct {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->startWatchingPackageBroadcasts()V
 
-    .line 102
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
@@ -358,13 +324,10 @@
 
     invoke-virtual {v0, p1, v2}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->register(Landroid/os/IInterface;Ljava/lang/Object;)Z
 
-    .line 104
     monitor-exit v1
 
-    .line 105
     return-void
 
-    .line 104
     :catchall_0
     move-exception v0
 
@@ -379,12 +342,10 @@
     .locals 2
 
     .prologue
-    .line 143
     iget-object v1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     monitor-enter v1
 
-    .line 147
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
@@ -394,17 +355,13 @@
 
     if-nez v0, :cond_0
 
-    .line 148
     invoke-direct {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->stopWatchingPackageBroadcasts()V
 
-    .line 150
     :cond_0
     monitor-exit v1
 
-    .line 151
     return-void
 
-    .line 150
     :catchall_0
     move-exception v0
 
@@ -439,7 +396,6 @@
     .end annotation
 
     .prologue
-    .line 192
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -460,23 +416,19 @@
 
     invoke-direct {p0, p2, v4}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->ensureInUserProfiles(Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 193
     invoke-direct {p0, p2}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->isUserEnabled(Landroid/os/UserHandle;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 194
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 206
     :goto_0
     return-object v0
 
-    .line 197
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -486,21 +438,17 @@
 
     invoke-direct {v1, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 198
     .local v1, "mainIntent":Landroid/content/Intent;
     const-string v4, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 199
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 200
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 202
     .local v2, "ident":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mPm:Landroid/content/pm/PackageManager;
@@ -517,7 +465,6 @@
 
     move-result-object v0
 
-    .line 206
     .local v0, "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -545,7 +492,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 248
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -566,31 +512,26 @@
 
     invoke-direct {p0, p2, v5}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->ensureInUserProfiles(Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 249
     invoke-direct {p0, p2}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->isUserEnabled(Landroid/os/UserHandle;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 259
     :goto_0
     return v4
 
-    .line 253
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 255
     .local v0, "ident":J
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 256
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v5, 0x0
 
@@ -604,13 +545,11 @@
 
     move-result-object v2
 
-    .line 257
     .local v2, "info":Landroid/content/pm/ActivityInfo;
     if-eqz v2, :cond_1
 
     const/4 v4, 0x1
 
-    .line 259
     :cond_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -639,7 +578,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 230
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -660,31 +598,26 @@
 
     invoke-direct {p0, p2, v5}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->ensureInUserProfiles(Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 231
     invoke-direct {p0, p2}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->isUserEnabled(Landroid/os/UserHandle;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 241
     :goto_0
     return v4
 
-    .line 235
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 237
     .local v0, "ident":J
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 238
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v5, 0x0
 
@@ -696,7 +629,6 @@
 
     move-result-object v2
 
-    .line 239
     .local v2, "info":Landroid/content/pm/PackageInfo;
     if-eqz v2, :cond_1
 
@@ -710,7 +642,6 @@
 
     const/4 v4, 0x1
 
-    .line 241
     :cond_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -736,18 +667,15 @@
     .end annotation
 
     .prologue
-    .line 114
     iget-object v1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     monitor-enter v1
 
-    .line 118
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
 
     invoke-virtual {v0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->getRegisteredCallbackCount()I
@@ -756,17 +684,13 @@
 
     if-nez v0, :cond_0
 
-    .line 120
     invoke-direct {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->stopWatchingPackageBroadcasts()V
 
-    .line 122
     :cond_0
     monitor-exit v1
 
-    .line 123
     return-void
 
-    .line 122
     :catchall_0
     move-exception v0
 
@@ -788,7 +712,6 @@
     .end annotation
 
     .prologue
-    .line 213
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -809,27 +732,22 @@
 
     invoke-direct {p0, p2, v1}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->ensureInUserProfiles(Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 214
     invoke-direct {p0, p2}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->isUserEnabled(Landroid/os/UserHandle;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 215
     const/4 v0, 0x0
 
-    .line 223
     :goto_0
     return-object v0
 
-    .line 218
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 220
     .local v2, "ident":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mPm:Landroid/content/pm/PackageManager;
@@ -846,7 +764,6 @@
 
     move-result-object v0
 
-    .line 223
     .local v0, "app":Landroid/content/pm/ResolveInfo;
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -874,7 +791,6 @@
     .end annotation
 
     .prologue
-    .line 313
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -895,14 +811,12 @@
 
     invoke-direct {p0, p4, v4}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->ensureInUserProfiles(Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 314
     invoke-direct {p0, p4}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->isUserEnabled(Landroid/os/UserHandle;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 315
     new-instance v4, Ljava/lang/IllegalStateException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -927,20 +841,17 @@
 
     throw v4
 
-    .line 319
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 321
     .local v0, "ident":J
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 322
     .local v3, "packageName":Ljava/lang/String;
     new-instance v2, Landroid/content/Intent;
 
@@ -956,29 +867,23 @@
 
     invoke-direct {v2, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 324
     .local v2, "intent":Landroid/content/Intent;
     const v4, 0x10808000
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 326
     invoke-virtual {v2, p2}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    .line 327
     iget-object v4, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2, p3, p4}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 329
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 331
     return-void
 
-    .line 329
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v3    # "packageName":Ljava/lang/String;
     :catchall_0
@@ -1002,7 +907,6 @@
     .end annotation
 
     .prologue
-    .line 266
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,7 +931,6 @@
 
     invoke-direct {p0, v0, v11}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->ensureInUserProfiles(Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 267
     move-object/from16 v0, p4
 
     invoke-direct {p0, v0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->isUserEnabled(Landroid/os/UserHandle;)Z
@@ -1036,7 +939,6 @@
 
     if-nez v11, :cond_0
 
-    .line 268
     new-instance v11, Ljava/lang/IllegalStateException;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -1063,7 +965,6 @@
 
     throw v11
 
-    .line 271
     :cond_0
     new-instance v8, Landroid/content/Intent;
 
@@ -1071,42 +972,35 @@
 
     invoke-direct {v8, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 272
     .local v8, "launchIntent":Landroid/content/Intent;
     const-string v11, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v8, v11}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 273
     move-object/from16 v0, p2
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    .line 274
     const/high16 v11, 0x10000000
 
     invoke-virtual {v8, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 275
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v11
 
     invoke-virtual {v8, v11}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 277
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 279
     .local v6, "ident":J
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v9
 
-    .line 280
     .local v9, "pm":Landroid/content/pm/IPackageManager;
     const/4 v11, 0x0
 
@@ -1118,13 +1012,11 @@
 
     move-result-object v5
 
-    .line 281
     .local v5, "info":Landroid/content/pm/ActivityInfo;
     iget-boolean v11, v5, Landroid/content/pm/ActivityInfo;->exported:Z
 
     if-nez v11, :cond_1
 
-    .line 282
     new-instance v11, Ljava/lang/SecurityException;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -1151,7 +1043,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 306
     .end local v5    # "info":Landroid/content/pm/ActivityInfo;
     .end local v9    # "pm":Landroid/content/pm/IPackageManager;
     :catchall_0
@@ -1161,7 +1052,6 @@
 
     throw v11
 
-    .line 289
     .restart local v5    # "info":Landroid/content/pm/ActivityInfo;
     .restart local v9    # "pm":Landroid/content/pm/IPackageManager;
     :cond_1
@@ -1178,13 +1068,11 @@
 
     move-result-object v3
 
-    .line 291
     .local v3, "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v10
 
-    .line 292
     .local v10, "size":I
     const/4 v4, 0x0
 
@@ -1192,7 +1080,6 @@
     :goto_0
     if-ge v4, v10, :cond_3
 
-    .line 293
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -1201,7 +1088,6 @@
 
     iget-object v2, v11, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 294
     .local v2, "activityInfo":Landroid/content/pm/ActivityInfo;
     iget-object v11, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
@@ -1227,10 +1113,8 @@
 
     if-eqz v11, :cond_2
 
-    .line 298
     invoke-virtual {v8, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 299
     iget-object v11, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, p3
@@ -1241,18 +1125,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 306
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
 
-    .line 292
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 303
     .end local v2    # "activityInfo":Landroid/content/pm/ActivityInfo;
     :cond_3
     :try_start_2

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 143
     invoke-static {}, Landroid/graphics/Atlas$Type;->values()[Landroid/graphics/Atlas$Type;
 
     move-result-object v0

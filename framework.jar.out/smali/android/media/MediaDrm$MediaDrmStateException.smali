@@ -27,18 +27,14 @@
     .param p2, "detailMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 197
     invoke-direct {p0, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 198
     iput p1, p0, Landroid/media/MediaDrm$MediaDrmStateException;->mErrorCode:I
 
-    .line 201
     if-gez p1, :cond_0
 
-    const-string/jumbo v0, "neg_"
+    const-string v0, "neg_"
 
-    .line 202
     .local v0, "sign":Ljava/lang/String;
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,10 +65,8 @@
 
     iput-object v1, p0, Landroid/media/MediaDrm$MediaDrmStateException;->mDiagnosticInfo:Ljava/lang/String;
 
-    .line 205
     return-void
 
-    .line 201
     .end local v0    # "sign":Ljava/lang/String;
     :cond_0
     const-string v0, ""
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 223
     iget-object v0, p0, Landroid/media/MediaDrm$MediaDrmStateException;->mDiagnosticInfo:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget v0, p0, Landroid/media/MediaDrm$MediaDrmStateException;->mErrorCode:I
 
     return v0

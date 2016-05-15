@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,42 +44,35 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 164
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 165
     .local v1, "id":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 166
     .local v2, "alternateSetting":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 167
     .local v3, "name":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 168
     .local v4, "Class":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 169
     .local v5, "subClass":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 170
     .local v6, "protocol":I
     const-class v8, Landroid/hardware/usb/UsbEndpoint;
 
@@ -92,17 +84,14 @@
 
     move-result-object v7
 
-    .line 171
     .local v7, "endpoints":[Landroid/os/Parcelable;
     new-instance v0, Landroid/hardware/usb/UsbInterface;
 
     invoke-direct/range {v0 .. v6}, Landroid/hardware/usb/UsbInterface;-><init>(IILjava/lang/String;III)V
 
-    .line 172
     .local v0, "intf":Landroid/hardware/usb/UsbInterface;
     invoke-virtual {v0, v7}, Landroid/hardware/usb/UsbInterface;->setEndpoints([Landroid/os/Parcelable;)V
 
-    .line 173
     return-object v0
 .end method
 
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 162
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbInterface$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/UsbInterface;
 
     move-result-object v0
@@ -123,7 +111,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 177
     new-array v0, p1, [Landroid/hardware/usb/UsbInterface;
 
     return-object v0
@@ -133,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 162
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbInterface$1;->newArray(I)[Landroid/hardware/usb/UsbInterface;
 
     move-result-object v0

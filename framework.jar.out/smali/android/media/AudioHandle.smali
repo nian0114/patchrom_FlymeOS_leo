@@ -13,13 +13,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput p1, p0, Landroid/media/AudioHandle;->mId:I
 
-    .line 30
     return-void
 .end method
 
@@ -32,14 +29,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 38
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Landroid/media/AudioHandle;
 
     if-nez v2, :cond_1
 
-    .line 42
     :cond_0
     :goto_0
     return v1
@@ -47,10 +42,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 41
     check-cast v0, Landroid/media/AudioHandle;
 
-    .line 42
     .local v0, "ah":Landroid/media/AudioHandle;
     iget v2, p0, Landroid/media/AudioHandle;->mId:I
 
@@ -69,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Landroid/media/AudioHandle;->mId:I
 
     return v0
@@ -79,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget v0, p0, Landroid/media/AudioHandle;->mId:I
 
     return v0
@@ -89,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget v0, p0, Landroid/media/AudioHandle;->mId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

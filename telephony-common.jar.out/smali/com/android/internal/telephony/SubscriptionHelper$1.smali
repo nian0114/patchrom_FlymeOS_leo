@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionHelper$1;->this$0:Lcom/android/internal/telephony/SubscriptionHelper;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,13 +38,11 @@
     .param p1, "selfUpdate"    # Z
 
     .prologue
-    .line 85
     const-string v0, "NwMode Observer onChange hit !!!"
 
     # invokes: Lcom/android/internal/telephony/SubscriptionHelper;->logd(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/internal/telephony/SubscriptionHelper;->access$000(Ljava/lang/String;)V
 
-    .line 86
     # getter for: Lcom/android/internal/telephony/SubscriptionHelper;->mNwModeUpdated:Z
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionHelper;->access$100()Z
 
@@ -53,11 +50,9 @@
 
     if-nez v0, :cond_0
 
-    .line 89
     :goto_0
     return-void
 
-    .line 88
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/SubscriptionHelper$1;->this$0:Lcom/android/internal/telephony/SubscriptionHelper;
 

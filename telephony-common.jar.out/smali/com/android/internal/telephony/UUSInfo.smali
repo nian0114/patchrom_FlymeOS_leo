@@ -42,25 +42,20 @@
     .locals 1
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/UUSInfo;->mUusType:I
 
-    .line 67
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/telephony/UUSInfo;->mUusDcs:I
 
-    .line 68
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/UUSInfo;->mUusData:[B
 
-    .line 69
     return-void
 .end method
 
@@ -71,19 +66,14 @@
     .param p3, "uusData"    # [B
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput p1, p0, Lcom/android/internal/telephony/UUSInfo;->mUusType:I
 
-    .line 73
     iput p2, p0, Lcom/android/internal/telephony/UUSInfo;->mUusDcs:I
 
-    .line 74
     iput-object p3, p0, Lcom/android/internal/telephony/UUSInfo;->mUusData:[B
 
-    .line 75
     return-void
 .end method
 
@@ -93,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget v0, p0, Lcom/android/internal/telephony/UUSInfo;->mUusDcs:I
 
     return v0
@@ -103,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget v0, p0, Lcom/android/internal/telephony/UUSInfo;->mUusType:I
 
     return v0
@@ -113,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/internal/telephony/UUSInfo;->mUusData:[B
 
     return-object v0
@@ -124,10 +111,8 @@
     .param p1, "uusDcs"    # I
 
     .prologue
-    .line 82
     iput p1, p0, Lcom/android/internal/telephony/UUSInfo;->mUusDcs:I
 
-    .line 83
     return-void
 .end method
 
@@ -136,10 +121,8 @@
     .param p1, "uusType"    # I
 
     .prologue
-    .line 90
     iput p1, p0, Lcom/android/internal/telephony/UUSInfo;->mUusType:I
 
-    .line 91
     return-void
 .end method
 
@@ -148,9 +131,7 @@
     .param p1, "uusData"    # [B
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/android/internal/telephony/UUSInfo;->mUusData:[B
 
-    .line 99
     return-void
 .end method

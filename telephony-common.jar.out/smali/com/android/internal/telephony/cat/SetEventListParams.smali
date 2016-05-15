@@ -14,12 +14,9 @@
     .param p2, "eventInfo"    # [I
 
     .prologue
-    .line 100
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 101
     iput-object p2, p0, Lcom/android/internal/telephony/cat/SetEventListParams;->mEventInfo:[I
 
-    .line 102
     return-void
 .end method

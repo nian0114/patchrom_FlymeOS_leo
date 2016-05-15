@@ -43,13 +43,11 @@
     .end annotation
 
     .prologue
-    .line 32
     .local p0, "this":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<TT;>;"
     .local p1, "target":Ljava/lang/Object;, "TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
-    const-string/jumbo v0, "target must not be null"
+    const-string v0, "target must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -57,7 +55,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/dispatch/InvokeDispatcher;->mTarget:Ljava/lang/Object;
 
-    .line 34
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 39
     .local p0, "this":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<TT;>;"
     :try_start_0
     iget-object v2, p0, Landroid/hardware/camera2/dispatch/InvokeDispatcher;->mTarget:Ljava/lang/Object;
@@ -82,25 +78,20 @@
 
     move-result-object v2
 
-    .line 53
     :goto_0
     return-object v2
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 41
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    .line 43
     .local v1, "t":Ljava/lang/Throwable;
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Throwable;)V
 
-    .line 53
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     .end local v1    # "t":Ljava/lang/Throwable;
     :goto_1
@@ -108,11 +99,9 @@
 
     goto :goto_0
 
-    .line 44
     :catch_1
     move-exception v0
 
-    .line 46
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const-string v2, "InvocationSink"
 
@@ -138,12 +127,10 @@
 
     goto :goto_1
 
-    .line 47
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v0
 
-    .line 49
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v2, "InvocationSink"
 

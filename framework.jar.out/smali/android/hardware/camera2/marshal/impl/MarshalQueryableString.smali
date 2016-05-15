@@ -39,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 33
     const-class v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -48,7 +47,6 @@
 
     sput-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->TAG:Ljava/lang/String;
 
-    .line 34
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -59,7 +57,6 @@
 
     sput-boolean v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->VERBOSE:Z
 
-    .line 36
     const-string v0, "UTF-8"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -75,10 +72,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -86,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->UTF8_CHARSET:Ljava/nio/charset/Charset;
 
     return-object v0
@@ -96,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-boolean v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->VERBOSE:Z
 
     return v0
@@ -106,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -132,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 103
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Ljava/lang/String;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString$MarshalerString;
 
@@ -155,7 +146,6 @@
     .end annotation
 
     .prologue
-    .line 108
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Ljava/lang/String;>;"
     if-nez p2, :cond_0
 

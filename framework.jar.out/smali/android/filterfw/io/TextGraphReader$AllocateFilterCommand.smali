@@ -32,18 +32,14 @@
     .param p3, "filterName"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     iput-object p1, p0, Landroid/filterfw/io/TextGraphReader$AllocateFilterCommand;->this$0:Landroid/filterfw/io/TextGraphReader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     iput-object p2, p0, Landroid/filterfw/io/TextGraphReader$AllocateFilterCommand;->mClassName:Ljava/lang/String;
 
-    .line 88
     iput-object p3, p0, Landroid/filterfw/io/TextGraphReader$AllocateFilterCommand;->mFilterName:Ljava/lang/String;
 
-    .line 89
     return-void
 .end method
 
@@ -59,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 93
     const/4 v1, 0x0
 
-    .line 95
     .local v1, "filter":Landroid/filterfw/core/Filter;
     :try_start_0
     # getter for: Landroid/filterfw/io/TextGraphReader;->mFactory:Landroid/filterfw/core/FilterFactory;
@@ -80,18 +74,14 @@
 
     move-result-object v1
 
-    .line 101
     # setter for: Landroid/filterfw/io/TextGraphReader;->mCurrentFilter:Landroid/filterfw/core/Filter;
     invoke-static {p1, v1}, Landroid/filterfw/io/TextGraphReader;->access$102(Landroid/filterfw/io/TextGraphReader;Landroid/filterfw/core/Filter;)Landroid/filterfw/core/Filter;
 
-    .line 102
     return-void
 
-    .line 96
     :catch_0
     move-exception v0
 
-    .line 97
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     new-instance v2, Landroid/filterfw/io/GraphIOException;
 

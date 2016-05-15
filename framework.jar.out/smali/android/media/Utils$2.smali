@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 98
     .local p1, "lhs":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     .local p2, "rhs":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     invoke-virtual {p1}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -70,14 +68,11 @@
 
     if-gez v0, :cond_0
 
-    .line 99
     const/4 v0, -0x1
 
-    .line 103
     :goto_0
     return v0
 
-    .line 100
     :cond_0
     invoke-virtual {p1}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
@@ -93,12 +88,10 @@
 
     if-lez v0, :cond_1
 
-    .line 101
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 103
     :cond_1
     const/4 v0, 0x0
 
@@ -109,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 95
     check-cast p1, Landroid/util/Range;
 
     check-cast p2, Landroid/util/Range;

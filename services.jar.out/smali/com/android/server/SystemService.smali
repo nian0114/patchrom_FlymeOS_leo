@@ -27,13 +27,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     iput-object p1, p0, Lcom/android/server/SystemService;->mContext:Landroid/content/Context;
 
-    .line 96
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 197
     const-class v0, Lcom/android/server/SystemServiceManager;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -60,7 +56,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -72,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/server/SystemService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -91,7 +85,6 @@
     .end annotation
 
     .prologue
-    .line 193
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
@@ -104,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 110
     invoke-direct {p0}, Lcom/android/server/SystemService;->getManager()Lcom/android/server/SystemServiceManager;
 
     move-result-object v0
@@ -121,7 +113,6 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 126
     return-void
 .end method
 
@@ -130,7 +121,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 158
     return-void
 .end method
 
@@ -142,7 +132,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 133
     return-void
 .end method
 
@@ -151,7 +140,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 150
     return-void
 .end method
 
@@ -160,7 +148,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 141
     return-void
 .end method
 
@@ -170,12 +157,10 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;Z)V
 
-    .line 165
     return-void
 .end method
 
@@ -186,10 +171,8 @@
     .param p3, "allowIsolated"    # Z
 
     .prologue
-    .line 172
     invoke-static {p1, p2, p3}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;Z)V
 
-    .line 173
     return-void
 .end method
 
@@ -206,11 +189,9 @@
     .end annotation
 
     .prologue
-    .line 186
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     .local p2, "service":Ljava/lang/Object;, "TT;"
     invoke-static {p1, p2}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
 
-    .line 187
     return-void
 .end method

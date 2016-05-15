@@ -30,7 +30,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 347
     iput-object p1, p0, Landroid/os/Binder$1;->this$0:Landroid/os/Binder;
 
     iput-object p3, p0, Landroid/os/Binder$1;->val$fd:Ljava/io/FileDescriptor;
@@ -50,7 +49,6 @@
     .locals 4
 
     .prologue
-    .line 350
     :try_start_0
     iget-object v0, p0, Landroid/os/Binder$1;->this$0:Landroid/os/Binder;
 
@@ -64,15 +62,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 352
     iget-object v0, p0, Landroid/os/Binder$1;->val$pw:Ljava/io/PrintWriter;
 
     invoke-virtual {v0}, Ljava/io/PrintWriter;->flush()V
 
-    .line 354
     return-void
 
-    .line 352
     :catchall_0
     move-exception v0
 

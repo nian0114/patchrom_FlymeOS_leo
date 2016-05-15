@@ -1158,7 +1158,6 @@
     .locals 3
 
     .prologue
-    .line 391
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.colorCorrection.mode"
@@ -1169,7 +1168,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 416
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.colorCorrection.transform"
@@ -1180,7 +1178,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_TRANSFORM:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 439
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.colorCorrection.gains"
@@ -1191,7 +1188,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_GAINS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 471
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.colorCorrection.aberrationMode"
@@ -1202,7 +1198,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_ABERRATION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 527
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeAntibandingMode"
@@ -1213,7 +1208,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_ANTIBANDING_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 560
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeExposureCompensation"
@@ -1224,7 +1218,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 603
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeLock"
@@ -1235,7 +1228,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_LOCK:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 653
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeMode"
@@ -1246,7 +1238,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 693
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeRegions"
@@ -1257,7 +1248,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 713
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeTargetFpsRange"
@@ -1270,7 +1260,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 765
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aePrecaptureTrigger"
@@ -1281,7 +1270,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_PRECAPTURE_TRIGGER:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 978
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.aeState"
@@ -1292,7 +1280,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1019
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.afMode"
@@ -1303,7 +1290,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1059
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.afRegions"
@@ -1314,7 +1300,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1089
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.afTrigger"
@@ -1325,7 +1310,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_TRIGGER:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1498
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.afState"
@@ -1336,7 +1320,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1528
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.awbLock"
@@ -1347,7 +1330,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_LOCK:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1588
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.awbMode"
@@ -1358,7 +1340,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1629
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.awbRegions"
@@ -1369,7 +1350,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1665
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.captureIntent"
@@ -1380,7 +1360,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_CAPTURE_INTENT:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1808
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.awbState"
@@ -1391,7 +1370,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1847
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.effectMode"
@@ -1402,7 +1380,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_EFFECT_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1888
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.mode"
@@ -1413,7 +1390,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1955
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.sceneMode"
@@ -1424,7 +1400,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 1988
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.control.videoStabilizationMode"
@@ -1435,7 +1410,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_VIDEO_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2021
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.edge.mode"
@@ -1446,7 +1420,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->EDGE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2056
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.flash.mode"
@@ -1457,7 +1430,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->FLASH_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2099
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.flash.state"
@@ -1468,7 +1440,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->FLASH_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2123
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.hotPixel.mode"
@@ -1479,7 +1450,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->HOT_PIXEL_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2135
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.gpsLocation"
@@ -1490,7 +1460,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_LOCATION:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2146
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.gpsCoordinates"
@@ -1501,7 +1470,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_COORDINATES:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2156
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.gpsProcessingMethod"
@@ -1512,7 +1480,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_PROCESSING_METHOD:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2166
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.gpsTimestamp"
@@ -1523,7 +1490,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2206
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.orientation"
@@ -1534,7 +1500,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_ORIENTATION:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2218
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.quality"
@@ -1545,7 +1510,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_QUALITY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2229
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.thumbnailQuality"
@@ -1556,7 +1520,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_THUMBNAIL_QUALITY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2251
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.jpeg.thumbnailSize"
@@ -1567,7 +1530,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->JPEG_THUMBNAIL_SIZE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2288
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.aperture"
@@ -1578,7 +1540,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_APERTURE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2318
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.filterDensity"
@@ -1589,7 +1550,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_FILTER_DENSITY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2343
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.focalLength"
@@ -1600,7 +1560,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2362
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.focusDistance"
@@ -1611,7 +1570,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2383
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.focusRange"
@@ -1624,7 +1582,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_RANGE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2425
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.opticalStabilizationMode"
@@ -1635,7 +1592,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_OPTICAL_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2472
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.lens.state"
@@ -1646,7 +1602,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2505
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.noiseReduction.mode"
@@ -1657,7 +1612,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2529
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.quirks.partialResult"
@@ -1668,7 +1622,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->QUIRKS_PARTIAL_RESULT:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2545
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.request.frameCount"
@@ -1679,7 +1632,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->REQUEST_FRAME_COUNT:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2558
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.request.id"
@@ -1690,7 +1642,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->REQUEST_ID:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2576
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.request.pipelineDepth"
@@ -1701,7 +1652,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->REQUEST_PIPELINE_DEPTH:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2619
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.scaler.cropRegion"
@@ -1712,7 +1662,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2644
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.exposureTime"
@@ -1723,7 +1672,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_EXPOSURE_TIME:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2738
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.frameDuration"
@@ -1734,7 +1682,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_FRAME_DURATION:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2766
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.sensitivity"
@@ -1745,7 +1692,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_SENSITIVITY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2793
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.timestamp"
@@ -1756,7 +1702,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2808
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.neutralColorPoint"
@@ -1767,7 +1712,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_NEUTRAL_COLOR_POINT:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2835
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.noiseProfile"
@@ -1780,7 +1724,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_NOISE_PROFILE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2875
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.greenSplit"
@@ -1791,7 +1734,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_GREEN_SPLIT:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2892
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.testPatternData"
@@ -1802,7 +1744,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TEST_PATTERN_DATA:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2927
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.testPatternMode"
@@ -1813,7 +1754,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TEST_PATTERN_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 2952
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sensor.rollingShutterSkew"
@@ -1824,7 +1764,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_ROLLING_SHUTTER_SKEW:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3002
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.shading.mode"
@@ -1835,7 +1774,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->SHADING_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3027
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.faceDetectMode"
@@ -1846,7 +1784,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACE_DETECT_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3041
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.faceIds"
@@ -1857,7 +1794,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACE_IDS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3056
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.faceLandmarks"
@@ -1868,7 +1804,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACE_LANDMARKS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3071
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.faceRectangles"
@@ -1879,7 +1814,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACE_RECTANGLES:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3085
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.faceScores"
@@ -1890,7 +1824,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACE_SCORES:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3098
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.faces"
@@ -1901,7 +1834,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACES:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3152
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.lensShadingCorrectionMap"
@@ -1912,7 +1844,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_LENS_SHADING_CORRECTION_MAP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3207
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.lensShadingMap"
@@ -1923,7 +1854,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_LENS_SHADING_MAP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3228
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.predictedColorGains"
@@ -1934,7 +1864,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_PREDICTED_COLOR_GAINS:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3252
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.predictedColorTransform"
@@ -1945,7 +1874,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_PREDICTED_COLOR_TRANSFORM:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3291
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.sceneFlicker"
@@ -1956,7 +1884,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_SCENE_FLICKER:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3306
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.hotPixelMapMode"
@@ -1967,7 +1894,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_HOT_PIXEL_MAP_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3327
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.hotPixelMap"
@@ -1978,7 +1904,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_HOT_PIXEL_MAP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3352
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.statistics.lensShadingMapMode"
@@ -1989,7 +1914,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_LENS_SHADING_MAP_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3369
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.tonemap.curveBlue"
@@ -2000,7 +1924,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->TONEMAP_CURVE_BLUE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3386
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.tonemap.curveGreen"
@@ -2011,7 +1934,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->TONEMAP_CURVE_GREEN:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3446
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.tonemap.curveRed"
@@ -2022,7 +1944,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->TONEMAP_CURVE_RED:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3506
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.tonemap.curve"
@@ -2033,7 +1954,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->TONEMAP_CURVE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3551
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.tonemap.mode"
@@ -2044,7 +1964,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->TONEMAP_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3568
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.led.transmit"
@@ -2055,7 +1974,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->LED_TRANSMIT:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3587
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.blackLevel.lock"
@@ -2066,7 +1984,6 @@
 
     sput-object v0, Landroid/hardware/camera2/CaptureResult;->BLACK_LEVEL_LOCK:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3657
     new-instance v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "android.sync.frameNumber"
@@ -2086,22 +2003,18 @@
     .param p2, "sequenceId"    # I
 
     .prologue
-    .line 191
     invoke-direct {p0}, Landroid/hardware/camera2/CameraMetadata;-><init>()V
 
-    .line 192
     if-nez p1, :cond_0
 
-    .line 193
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "results was null"
+    const-string v1, "results was null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 196
     :cond_0
     invoke-static {p1}, Landroid/hardware/camera2/impl/CameraMetadataNative;->move(Landroid/hardware/camera2/impl/CameraMetadataNative;)Landroid/hardware/camera2/impl/CameraMetadataNative;
 
@@ -2109,7 +2022,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
-    .line 197
     iget-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->isEmpty()Z
@@ -2118,7 +2030,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 198
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "Results must not be empty"
@@ -2127,21 +2038,17 @@
 
     throw v0
 
-    .line 201
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 202
     iput p2, p0, Landroid/hardware/camera2/CaptureResult;->mSequenceId:I
 
-    .line 203
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/hardware/camera2/CaptureResult;->mFrameNumber:J
 
-    .line 204
     return-void
 .end method
 
@@ -2152,39 +2059,32 @@
     .param p3, "extras"    # Landroid/hardware/camera2/impl/CaptureResultExtras;
 
     .prologue
-    .line 155
     invoke-direct {p0}, Landroid/hardware/camera2/CameraMetadata;-><init>()V
 
-    .line 156
     if-nez p1, :cond_0
 
-    .line 157
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "results was null"
+    const-string v1, "results was null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 160
     :cond_0
     if-nez p2, :cond_1
 
-    .line 161
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "parent was null"
+    const-string v1, "parent was null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 164
     :cond_1
     if-nez p3, :cond_2
 
-    .line 165
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "extras was null"
@@ -2193,7 +2093,6 @@
 
     throw v0
 
-    .line 168
     :cond_2
     invoke-static {p1}, Landroid/hardware/camera2/impl/CameraMetadataNative;->move(Landroid/hardware/camera2/impl/CameraMetadataNative;)Landroid/hardware/camera2/impl/CameraMetadataNative;
 
@@ -2201,7 +2100,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
-    .line 169
     iget-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->isEmpty()Z
@@ -2210,7 +2108,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 170
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "Results must not be empty"
@@ -2219,25 +2116,21 @@
 
     throw v0
 
-    .line 172
     :cond_3
     iput-object p2, p0, Landroid/hardware/camera2/CaptureResult;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 173
     invoke-virtual {p3}, Landroid/hardware/camera2/impl/CaptureResultExtras;->getRequestId()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/CaptureResult;->mSequenceId:I
 
-    .line 174
     invoke-virtual {p3}, Landroid/hardware/camera2/impl/CaptureResultExtras;->getFrameNumber()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/hardware/camera2/CaptureResult;->mFrameNumber:J
 
-    .line 175
     return-void
 .end method
 
@@ -2247,12 +2140,10 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->dumpToLog()V
 
-    .line 256
     return-void
 .end method
 
@@ -2269,7 +2160,6 @@
     .end annotation
 
     .prologue
-    .line 220
     .local p1, "key":Landroid/hardware/camera2/CaptureResult$Key;, "Landroid/hardware/camera2/CaptureResult$Key<TT;>;"
     iget-object v1, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
@@ -2277,7 +2167,6 @@
 
     move-result-object v0
 
-    .line 222
     .local v0, "value":Ljava/lang/Object;, "TT;"
     return-object v0
 .end method
@@ -2286,7 +2175,6 @@
     .locals 2
 
     .prologue
-    .line 305
     iget-wide v0, p0, Landroid/hardware/camera2/CaptureResult;->mFrameNumber:J
 
     return-wide v0
@@ -2305,10 +2193,8 @@
     .end annotation
 
     .prologue
-    .line 242
     const-class v0, Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 243
     .local v0, "thisClass":Ljava/lang/Class;
     check-cast v0, Ljava/lang/Class;
 
@@ -2329,7 +2215,6 @@
     .end annotation
 
     .prologue
-    .line 264
     invoke-super {p0}, Landroid/hardware/camera2/CameraMetadata;->getKeys()Ljava/util/List;
 
     move-result-object v0
@@ -2341,7 +2226,6 @@
     .locals 2
 
     .prologue
-    .line 182
     new-instance v0, Landroid/hardware/camera2/impl/CameraMetadataNative;
 
     iget-object v1, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
@@ -2364,7 +2248,6 @@
     .end annotation
 
     .prologue
-    .line 232
     .local p1, "key":Landroid/hardware/camera2/CaptureResult$Key;, "Landroid/hardware/camera2/CaptureResult$Key<*>;"
     iget-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mResults:Landroid/hardware/camera2/impl/CameraMetadataNative;
 
@@ -2379,7 +2262,6 @@
     .locals 1
 
     .prologue
-    .line 50
     check-cast p1, Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/CaptureResult;->getProtected(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -2393,7 +2275,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/hardware/camera2/CaptureResult;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     return-object v0
@@ -2403,7 +2284,6 @@
     .locals 1
 
     .prologue
-    .line 321
     iget v0, p0, Landroid/hardware/camera2/CaptureResult;->mSequenceId:I
 
     return v0

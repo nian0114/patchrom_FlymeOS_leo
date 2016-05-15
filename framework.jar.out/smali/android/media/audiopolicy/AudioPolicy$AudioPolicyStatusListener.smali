@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 390
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "mix"    # Landroid/media/audiopolicy/AudioMix;
 
     .prologue
-    .line 392
     return-void
 .end method
 
@@ -40,6 +38,5 @@
     .locals 0
 
     .prologue
-    .line 391
     return-void
 .end method

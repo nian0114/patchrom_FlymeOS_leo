@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 43
     iput-object p1, p0, Lcom/android/server/hdmi/RequestArcTerminationAction$1;->this$0:Lcom/android/server/hdmi/RequestArcTerminationAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,20 +40,16 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 46
     if-eqz p1, :cond_0
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/hdmi/RequestArcTerminationAction$1;->this$0:Lcom/android/server/hdmi/RequestArcTerminationAction;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/RequestArcTerminationAction;->disableArcTransmission()V
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/hdmi/RequestArcTerminationAction$1;->this$0:Lcom/android/server/hdmi/RequestArcTerminationAction;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/RequestArcTerminationAction;->finish()V
 
-    .line 52
     :cond_0
     return-void
 .end method

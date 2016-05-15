@@ -58,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 215
     const-string v0, "content://com.android.voicemail/status"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -74,10 +73,8 @@
     .locals 0
 
     .prologue
-    .line 222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 223
     return-void
 .end method
 
@@ -86,14 +83,13 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 318
     sget-object v0, Landroid/provider/VoicemailContract$Status;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    const-string/jumbo v1, "source_package"
+    const-string v1, "source_package"
 
     invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 

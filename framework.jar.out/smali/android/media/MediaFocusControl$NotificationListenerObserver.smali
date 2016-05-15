@@ -23,10 +23,8 @@
     .locals 3
 
     .prologue
-    .line 134
     iput-object p1, p0, Landroid/media/MediaFocusControl$NotificationListenerObserver;->this$0:Landroid/media/MediaFocusControl;
 
-    .line 135
     # getter for: Landroid/media/MediaFocusControl;->mEventHandler:Landroid/media/MediaFocusControl$MediaEventHandler;
     invoke-static {p1}, Landroid/media/MediaFocusControl;->access$000(Landroid/media/MediaFocusControl;)Landroid/media/MediaFocusControl$MediaEventHandler;
 
@@ -34,7 +32,6 @@
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 136
     # getter for: Landroid/media/MediaFocusControl;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {p1}, Landroid/media/MediaFocusControl;->access$100(Landroid/media/MediaFocusControl;)Landroid/content/ContentResolver;
 
@@ -50,7 +47,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 138
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 142
     # getter for: Landroid/media/MediaFocusControl;->ENABLED_NOTIFICATION_LISTENERS_URI:Landroid/net/Uri;
     invoke-static {}, Landroid/media/MediaFocusControl;->access$200()Landroid/net/Uri;
 
@@ -76,12 +71,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 147
     :cond_0
     :goto_0
     return-void
 
-    .line 146
     :cond_1
     iget-object v0, p0, Landroid/media/MediaFocusControl$NotificationListenerObserver;->this$0:Landroid/media/MediaFocusControl;
 

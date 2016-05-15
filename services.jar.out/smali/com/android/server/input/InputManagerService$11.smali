@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1701
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
 
     iput-object p2, p0, Lcom/android/server/input/InputManagerService$11;->val$result:[Ljava/lang/String;
@@ -50,7 +49,6 @@
     .param p6, "priority"    # I
 
     .prologue
-    .line 1706
     :try_start_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$11;->val$result:[Ljava/lang/String;
 
@@ -58,7 +56,6 @@
 
     aput-object p2, v0, v1
 
-    .line 1707
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$11;->val$result:[Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -80,17 +77,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1712
     :goto_0
     return-void
 
-    .line 1710
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 1709
     :catch_1
     move-exception v0
 

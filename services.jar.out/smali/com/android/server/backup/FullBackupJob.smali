@@ -22,7 +22,6 @@
     .locals 3
 
     .prologue
-    .line 30
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "android"
@@ -44,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 38
     const-string v2, "jobscheduler"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -67,7 +64,6 @@
 
     check-cast v1, Landroid/app/job/JobScheduler;
 
-    .line 39
     .local v1, "js":Landroid/app/job/JobScheduler;
     new-instance v2, Landroid/app/job/JobInfo$Builder;
 
@@ -91,7 +87,6 @@
 
     move-result-object v0
 
-    .line 43
     .local v0, "builder":Landroid/app/job/JobInfo$Builder;
     const-wide/16 v2, 0x0
 
@@ -99,10 +94,8 @@
 
     if-lez v2, :cond_0
 
-    .line 44
     invoke-virtual {v0, p1, p2}, Landroid/app/job/JobInfo$Builder;->setMinimumLatency(J)Landroid/app/job/JobInfo$Builder;
 
-    .line 46
     :cond_0
     invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
@@ -110,7 +103,6 @@
 
     invoke-virtual {v1, v2}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 47
     return-void
 .end method
 
@@ -120,24 +112,20 @@
     .locals 2
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/android/server/backup/FullBackupJob;->mParams:Landroid/app/job/JobParameters;
 
     if-eqz v0, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/backup/FullBackupJob;->mParams:Landroid/app/job/JobParameters;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/backup/FullBackupJob;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
-    .line 53
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/backup/FullBackupJob;->mParams:Landroid/app/job/JobParameters;
 
-    .line 55
     :cond_0
     return-void
 .end method
@@ -147,15 +135,12 @@
     .param p1, "params"    # Landroid/app/job/JobParameters;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/server/backup/FullBackupJob;->mParams:Landroid/app/job/JobParameters;
 
-    .line 62
     invoke-static {}, Lcom/android/server/backup/BackupManagerService;->getInstance()Lcom/android/server/backup/Trampoline;
 
     move-result-object v0
 
-    .line 63
     .local v0, "service":Lcom/android/server/backup/Trampoline;
     invoke-virtual {v0, p0}, Lcom/android/server/backup/Trampoline;->beginFullBackup(Lcom/android/server/backup/FullBackupJob;)Z
 
@@ -169,26 +154,21 @@
     .param p1, "params"    # Landroid/app/job/JobParameters;
 
     .prologue
-    .line 68
     iget-object v1, p0, Lcom/android/server/backup/FullBackupJob;->mParams:Landroid/app/job/JobParameters;
 
     if-eqz v1, :cond_0
 
-    .line 69
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/FullBackupJob;->mParams:Landroid/app/job/JobParameters;
 
-    .line 70
     invoke-static {}, Lcom/android/server/backup/BackupManagerService;->getInstance()Lcom/android/server/backup/Trampoline;
 
     move-result-object v0
 
-    .line 71
     .local v0, "service":Lcom/android/server/backup/Trampoline;
     invoke-virtual {v0}, Lcom/android/server/backup/Trampoline;->endFullBackup()V
 
-    .line 73
     .end local v0    # "service":Lcom/android/server/backup/Trampoline;
     :cond_0
     const/4 v1, 0x0

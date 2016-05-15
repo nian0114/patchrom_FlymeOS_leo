@@ -46,24 +46,20 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 234
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/BaseObj;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 47
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/renderscript/Script;->mKIDs:Landroid/util/SparseArray;
 
-    .line 85
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/renderscript/Script;->mFIDs:Landroid/util/SparseArray;
 
-    .line 235
     return-void
 .end method
 
@@ -75,20 +71,16 @@
     .param p2, "slot"    # I
 
     .prologue
-    .line 243
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v1}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 244
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v1, p1}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 245
     if-eqz p1, :cond_2
 
-    .line 246
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v1}, Landroid/renderscript/RenderScript;->getApplicationContext()Landroid/content/Context;
@@ -105,10 +97,8 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 247
     iget-object v0, p1, Landroid/renderscript/Allocation;->mType:Landroid/renderscript/Type;
 
-    .line 248
     .local v0, "t":Landroid/renderscript/Type;
     invoke-virtual {v0}, Landroid/renderscript/Type;->hasMipmaps()Z
 
@@ -134,7 +124,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 249
     :cond_0
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 
@@ -144,7 +133,6 @@
 
     throw v1
 
-    .line 253
     .end local v0    # "t":Landroid/renderscript/Type;
     :cond_1
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -165,11 +153,9 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/renderscript/RenderScript;->nScriptBindAllocation(JJI)V
 
-    .line 257
     :goto_0
     return-void
 
-    .line 255
     :cond_2
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
@@ -194,7 +180,6 @@
     .param p2, "e"    # Landroid/renderscript/Element;
 
     .prologue
-    .line 90
     iget-object v4, p0, Landroid/renderscript/Script;->mFIDs:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -203,19 +188,16 @@
 
     check-cast v1, Landroid/renderscript/Script$FieldID;
 
-    .line 91
     .local v1, "f":Landroid/renderscript/Script$FieldID;
     if-eqz v1, :cond_0
 
     move-object v0, v1
 
-    .line 102
     .end local v1    # "f":Landroid/renderscript/Script$FieldID;
     .local v0, "f":Ljava/lang/Object;
     :goto_0
     return-object v0
 
-    .line 95
     .end local v0    # "f":Ljava/lang/Object;
     .restart local v1    # "f":Landroid/renderscript/Script$FieldID;
     :cond_0
@@ -231,7 +213,6 @@
 
     move-result-wide v2
 
-    .line 96
     .local v2, "id":J
     const-wide/16 v4, 0x0
 
@@ -239,7 +220,6 @@
 
     if-nez v4, :cond_1
 
-    .line 97
     new-instance v4, Landroid/renderscript/RSDriverException;
 
     const-string v5, "Failed to create FieldID"
@@ -248,7 +228,6 @@
 
     throw v4
 
-    .line 100
     :cond_1
     new-instance v1, Landroid/renderscript/Script$FieldID;
 
@@ -261,7 +240,6 @@
 
     invoke-direct/range {v1 .. v6}, Landroid/renderscript/Script$FieldID;-><init>(JLandroid/renderscript/RenderScript;Landroid/renderscript/Script;I)V
 
-    .line 101
     .restart local v1    # "f":Landroid/renderscript/Script$FieldID;
     iget-object v4, p0, Landroid/renderscript/Script;->mFIDs:Landroid/util/SparseArray;
 
@@ -269,7 +247,6 @@
 
     move-object v0, v1
 
-    .line 102
     .restart local v0    # "f":Ljava/lang/Object;
     goto :goto_0
 .end method
@@ -282,7 +259,6 @@
     .param p4, "eout"    # Landroid/renderscript/Element;
 
     .prologue
-    .line 52
     iget-object v4, p0, Landroid/renderscript/Script;->mKIDs:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -291,19 +267,16 @@
 
     check-cast v1, Landroid/renderscript/Script$KernelID;
 
-    .line 53
     .local v1, "k":Landroid/renderscript/Script$KernelID;
     if-eqz v1, :cond_0
 
     move-object v0, v1
 
-    .line 64
     .end local v1    # "k":Landroid/renderscript/Script$KernelID;
     .local v0, "k":Ljava/lang/Object;
     :goto_0
     return-object v0
 
-    .line 57
     .end local v0    # "k":Ljava/lang/Object;
     .restart local v1    # "k":Landroid/renderscript/Script$KernelID;
     :cond_0
@@ -319,7 +292,6 @@
 
     move-result-wide v2
 
-    .line 58
     .local v2, "id":J
     const-wide/16 v4, 0x0
 
@@ -327,7 +299,6 @@
 
     if-nez v4, :cond_1
 
-    .line 59
     new-instance v4, Landroid/renderscript/RSDriverException;
 
     const-string v5, "Failed to create KernelID"
@@ -336,7 +307,6 @@
 
     throw v4
 
-    .line 62
     :cond_1
     new-instance v1, Landroid/renderscript/Script$KernelID;
 
@@ -351,7 +321,6 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/renderscript/Script$KernelID;-><init>(JLandroid/renderscript/RenderScript;Landroid/renderscript/Script;II)V
 
-    .line 63
     .restart local v1    # "k":Landroid/renderscript/Script$KernelID;
     iget-object v4, p0, Landroid/renderscript/Script;->mKIDs:Landroid/util/SparseArray;
 
@@ -359,7 +328,6 @@
 
     move-object v0, v1
 
-    .line 64
     .restart local v0    # "k":Ljava/lang/Object;
     goto :goto_0
 .end method
@@ -372,27 +340,22 @@
     .param p4, "v"    # Landroid/renderscript/FieldPacker;
 
     .prologue
-    .line 131
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 132
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0, p2}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 133
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0, p3}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 134
     if-nez p2, :cond_0
 
     if-nez p3, :cond_0
 
-    .line 135
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v1, "At least one of ain or aout is required to be non-null."
@@ -401,50 +364,40 @@
 
     throw v0
 
-    .line 138
     :cond_0
     const-wide/16 v4, 0x0
 
-    .line 139
     .local v4, "in_id":J
     if-eqz p2, :cond_1
 
-    .line 140
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {p2, v0}, Landroid/renderscript/Allocation;->getID(Landroid/renderscript/RenderScript;)J
 
     move-result-wide v4
 
-    .line 142
     :cond_1
     const-wide/16 v6, 0x0
 
-    .line 143
     .local v6, "out_id":J
     if-eqz p3, :cond_2
 
-    .line 144
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {p3, v0}, Landroid/renderscript/Allocation;->getID(Landroid/renderscript/RenderScript;)J
 
     move-result-wide v6
 
-    .line 146
     :cond_2
     const/4 v8, 0x0
 
-    .line 147
     .local v8, "params":[B
     if-eqz p4, :cond_3
 
-    .line 148
     invoke-virtual {p4}, Landroid/renderscript/FieldPacker;->getData()[B
 
     move-result-object v8
 
-    .line 150
     :cond_3
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
@@ -458,7 +411,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/renderscript/RenderScript;->nScriptForEach(JIJJ[B)V
 
-    .line 151
     return-void
 .end method
 
@@ -471,14 +423,12 @@
     .param p5, "sc"    # Landroid/renderscript/Script$LaunchOptions;
 
     .prologue
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v2}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -487,7 +437,6 @@
 
     invoke-virtual {v2, v0}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 160
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -496,12 +445,10 @@
 
     invoke-virtual {v2, v0}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 161
     if-nez p2, :cond_0
 
     if-nez p3, :cond_0
 
-    .line 162
     new-instance v2, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v3, "At least one of ain or aout is required to be non-null."
@@ -510,26 +457,20 @@
 
     throw v2
 
-    .line 166
     :cond_0
     if-nez p5, :cond_1
 
-    .line 167
     invoke-virtual/range {p0 .. p4}, Landroid/renderscript/Script;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;)V
 
-    .line 183
     :goto_0
     return-void
 
-    .line 170
     :cond_1
     const-wide/16 v6, 0x0
 
-    .line 171
     .local v6, "in_id":J
     if-eqz p2, :cond_2
 
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -540,15 +481,12 @@
 
     move-result-wide v6
 
-    .line 174
     :cond_2
     const-wide/16 v8, 0x0
 
-    .line 175
     .local v8, "out_id":J
     if-eqz p3, :cond_3
 
-    .line 176
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -559,20 +497,16 @@
 
     move-result-wide v8
 
-    .line 178
     :cond_3
     const/4 v10, 0x0
 
-    .line 179
     .local v10, "params":[B
     if-eqz p4, :cond_4
 
-    .line 180
     invoke-virtual/range {p4 .. p4}, Landroid/renderscript/FieldPacker;->getData()[B
 
     move-result-object v10
 
-    .line 182
     :cond_4
     move-object/from16 v0, p0
 
@@ -633,7 +567,6 @@
     .param p4, "v"    # Landroid/renderscript/FieldPacker;
 
     .prologue
-    .line 191
     new-instance v5, Landroid/renderscript/Script$LaunchOptions;
 
     invoke-direct {v5}, Landroid/renderscript/Script$LaunchOptions;-><init>()V
@@ -650,7 +583,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/Script;->forEach(I[Landroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 192
     return-void
 .end method
 
@@ -663,14 +595,12 @@
     .param p5, "sc"    # Landroid/renderscript/Script$LaunchOptions;
 
     .prologue
-    .line 200
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v3}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 202
     move-object/from16 v17, p2
 
     .local v17, "arr$":[Landroid/renderscript/Allocation;
@@ -693,7 +623,6 @@
 
     aget-object v2, v17, v18
 
-    .line 203
     .local v2, "ain":Landroid/renderscript/Allocation;
     move-object/from16 v0, p0
 
@@ -701,12 +630,10 @@
 
     invoke-virtual {v3, v2}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 202
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_0
 
-    .line 206
     .end local v2    # "ain":Landroid/renderscript/Allocation;
     :cond_0
     move-object/from16 v0, p0
@@ -717,12 +644,10 @@
 
     invoke-virtual {v3, v0}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 207
     if-nez p2, :cond_1
 
     if-nez p3, :cond_1
 
-    .line 208
     new-instance v3, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v4, "At least one of ain or aout is required to be non-null."
@@ -731,18 +656,14 @@
 
     throw v3
 
-    .line 212
     :cond_1
     if-nez p5, :cond_2
 
-    .line 213
     invoke-virtual/range {p0 .. p4}, Landroid/renderscript/Script;->forEach(I[Landroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;)V
 
-    .line 231
     :goto_1
     return-void
 
-    .line 217
     :cond_2
     move-object/from16 v0, p2
 
@@ -750,7 +671,6 @@
 
     new-array v7, v3, [J
 
-    .line 218
     .local v7, "in_ids":[J
     const/16 v19, 0x0
 
@@ -764,7 +684,6 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 219
     aget-object v3, p2, v19
 
     move-object/from16 v0, p0
@@ -777,20 +696,16 @@
 
     aput-wide v4, v7, v19
 
-    .line 218
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_2
 
-    .line 222
     :cond_3
     const-wide/16 v8, 0x0
 
-    .line 223
     .local v8, "out_id":J
     if-eqz p3, :cond_4
 
-    .line 224
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -801,20 +716,16 @@
 
     move-result-wide v8
 
-    .line 226
     :cond_4
     const/4 v10, 0x0
 
-    .line 227
     .local v10, "params":[B
     if-eqz p4, :cond_5
 
-    .line 228
     invoke-virtual/range {p4 .. p4}, Landroid/renderscript/FieldPacker;->getData()[B
 
     move-result-object v10
 
-    .line 230
     :cond_5
     move-object/from16 v0, p0
 
@@ -872,7 +783,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 313
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -903,7 +813,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 278
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -924,7 +833,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 267
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -945,7 +853,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -966,7 +873,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 301
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -988,7 +894,6 @@
     .param p2, "v"    # Landroid/renderscript/FieldPacker;
 
     .prologue
-    .line 347
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1003,7 +908,6 @@
 
     invoke-virtual {v0, v2, v3, p1, v1}, Landroid/renderscript/RenderScript;->nScriptGetVarV(JI[B)V
 
-    .line 348
     return-void
 .end method
 
@@ -1012,7 +916,6 @@
     .param p1, "slot"    # I
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1023,7 +926,6 @@
 
     invoke-virtual {v0, v2, v3, p1}, Landroid/renderscript/RenderScript;->nScriptInvoke(JI)V
 
-    .line 112
     return-void
 .end method
 
@@ -1033,10 +935,8 @@
     .param p2, "v"    # Landroid/renderscript/FieldPacker;
 
     .prologue
-    .line 119
     if-eqz p2, :cond_0
 
-    .line 120
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1051,11 +951,9 @@
 
     invoke-virtual {v0, v2, v3, p1, v1}, Landroid/renderscript/RenderScript;->nScriptInvokeV(JI[B)V
 
-    .line 124
     :goto_0
     return-void
 
-    .line 122
     :cond_0
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
@@ -1075,12 +973,10 @@
     .param p1, "timeZone"    # Ljava/lang/String;
 
     .prologue
-    .line 351
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v1}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 353
     :try_start_0
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
@@ -1100,14 +996,11 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 357
     return-void
 
-    .line 354
     :catch_0
     move-exception v0
 
-    .line 355
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1122,7 +1015,6 @@
     .param p2, "v"    # D
 
     .prologue
-    .line 275
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1137,7 +1029,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/RenderScript;->nScriptSetVarD(JID)V
 
-    .line 276
     return-void
 .end method
 
@@ -1147,7 +1038,6 @@
     .param p2, "v"    # F
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1158,7 +1048,6 @@
 
     invoke-virtual {v0, v2, v3, p1, p2}, Landroid/renderscript/RenderScript;->nScriptSetVarF(JIF)V
 
-    .line 265
     return-void
 .end method
 
@@ -1168,7 +1057,6 @@
     .param p2, "v"    # I
 
     .prologue
-    .line 286
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1179,7 +1067,6 @@
 
     invoke-virtual {v0, v2, v3, p1, p2}, Landroid/renderscript/RenderScript;->nScriptSetVarI(JII)V
 
-    .line 287
     return-void
 .end method
 
@@ -1189,7 +1076,6 @@
     .param p2, "v"    # J
 
     .prologue
-    .line 298
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1204,7 +1090,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/RenderScript;->nScriptSetVarJ(JIJ)V
 
-    .line 299
     return-void
 .end method
 
@@ -1214,17 +1099,14 @@
     .param p2, "o"    # Landroid/renderscript/BaseObj;
 
     .prologue
-    .line 321
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 322
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0, p2}, Landroid/renderscript/RenderScript;->validateObject(Landroid/renderscript/BaseObj;)V
 
-    .line 323
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1242,10 +1124,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/RenderScript;->nScriptSetVarObj(JIJ)V
 
-    .line 324
     return-void
 
-    .line 323
     :cond_0
     iget-object v3, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
@@ -1262,7 +1142,6 @@
     .param p2, "v"    # Landroid/renderscript/FieldPacker;
 
     .prologue
-    .line 331
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1277,7 +1156,6 @@
 
     invoke-virtual {v0, v2, v3, p1, v1}, Landroid/renderscript/RenderScript;->nScriptSetVarV(JI[B)V
 
-    .line 332
     return-void
 .end method
 
@@ -1289,7 +1167,6 @@
     .param p4, "dims"    # [I
 
     .prologue
-    .line 339
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1314,7 +1191,6 @@
 
     invoke-virtual/range {v1 .. v8}, Landroid/renderscript/RenderScript;->nScriptSetVarVE(JI[BJ[I)V
 
-    .line 340
     return-void
 .end method
 
@@ -1324,7 +1200,6 @@
     .param p2, "v"    # Z
 
     .prologue
-    .line 310
     iget-object v1, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v0, p0, Landroid/renderscript/Script;->mRS:Landroid/renderscript/RenderScript;
@@ -1340,10 +1215,8 @@
     :goto_0
     invoke-virtual {v1, v2, v3, p1, v0}, Landroid/renderscript/RenderScript;->nScriptSetVarI(JII)V
 
-    .line 311
     return-void
 
-    .line 310
     :cond_0
     const/4 v0, 0x0
 

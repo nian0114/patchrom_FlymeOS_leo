@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 127
     const/high16 v0, -0x41000000    # -0.5f
 
     const-wide v2, 0x400921fb54442d18L    # Math.PI

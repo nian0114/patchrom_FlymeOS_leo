@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 31
     new-instance v0, Landroid/graphics/BlurMaskFilter$Blur;
 
     const-string v1, "NORMAL"
@@ -61,7 +60,6 @@
 
     sput-object v0, Landroid/graphics/BlurMaskFilter$Blur;->NORMAL:Landroid/graphics/BlurMaskFilter$Blur;
 
-    .line 36
     new-instance v0, Landroid/graphics/BlurMaskFilter$Blur;
 
     const-string v1, "SOLID"
@@ -70,7 +68,6 @@
 
     sput-object v0, Landroid/graphics/BlurMaskFilter$Blur;->SOLID:Landroid/graphics/BlurMaskFilter$Blur;
 
-    .line 41
     new-instance v0, Landroid/graphics/BlurMaskFilter$Blur;
 
     const-string v1, "OUTER"
@@ -79,7 +76,6 @@
 
     sput-object v0, Landroid/graphics/BlurMaskFilter$Blur;->OUTER:Landroid/graphics/BlurMaskFilter$Blur;
 
-    .line 46
     new-instance v0, Landroid/graphics/BlurMaskFilter$Blur;
 
     const-string v1, "INNER"
@@ -88,7 +84,6 @@
 
     sput-object v0, Landroid/graphics/BlurMaskFilter$Blur;->INNER:Landroid/graphics/BlurMaskFilter$Blur;
 
-    .line 27
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/graphics/BlurMaskFilter$Blur;
@@ -124,13 +119,10 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 49
     iput p3, p0, Landroid/graphics/BlurMaskFilter$Blur;->native_int:I
 
-    .line 50
     return-void
 .end method
 
@@ -139,7 +131,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 27
     const-class v0, Landroid/graphics/BlurMaskFilter$Blur;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -155,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 27
     sget-object v0, Landroid/graphics/BlurMaskFilter$Blur;->$VALUES:[Landroid/graphics/BlurMaskFilter$Blur;
 
     invoke-virtual {v0}, [Landroid/graphics/BlurMaskFilter$Blur;->clone()Ljava/lang/Object;

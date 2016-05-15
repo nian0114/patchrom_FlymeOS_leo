@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 953
     invoke-static {}, Landroid/renderscript/Element$DataKind;->values()[Landroid/renderscript/Element$DataKind;
 
     move-result-object v0
@@ -99,7 +98,6 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_b
 
-    .line 883
     :goto_3
     invoke-static {}, Landroid/renderscript/Element$DataType;->values()[Landroid/renderscript/Element$DataType;
 
@@ -344,7 +342,6 @@
 
     goto/16 :goto_4
 
-    .line 953
     :catch_b
     move-exception v0
 

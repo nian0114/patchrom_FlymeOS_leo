@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 63
     iput-object p1, p0, Landroid/animation/StateListAnimator$1;->this$0:Landroid/animation/StateListAnimator;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -40,10 +39,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 66
     invoke-virtual {p1, v1}, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
 
-    .line 67
     iget-object v0, p0, Landroid/animation/StateListAnimator$1;->this$0:Landroid/animation/StateListAnimator;
 
     # getter for: Landroid/animation/StateListAnimator;->mRunningAnimator:Landroid/animation/Animator;
@@ -53,13 +50,11 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 68
     iget-object v0, p0, Landroid/animation/StateListAnimator$1;->this$0:Landroid/animation/StateListAnimator;
 
     # setter for: Landroid/animation/StateListAnimator;->mRunningAnimator:Landroid/animation/Animator;
     invoke-static {v0, v1}, Landroid/animation/StateListAnimator;->access$002(Landroid/animation/StateListAnimator;Landroid/animation/Animator;)Landroid/animation/Animator;
 
-    .line 70
     :cond_0
     return-void
 .end method

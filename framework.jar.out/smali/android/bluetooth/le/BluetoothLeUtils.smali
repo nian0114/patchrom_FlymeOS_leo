@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "adapter"    # Landroid/bluetooth/BluetoothAdapter;
 
     .prologue
-    .line 135
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothAdapter;->getState()I
@@ -30,7 +28,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 136
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -40,7 +37,6 @@
 
     throw v0
 
-    .line 138
     :cond_1
     return-void
 .end method
@@ -64,16 +60,13 @@
 
     const/4 v4, 0x0
 
-    .line 83
     if-ne p0, p1, :cond_0
 
     move v1, v3
 
-    .line 100
     :goto_0
     return v1
 
-    .line 86
     :cond_0
     if-eqz p0, :cond_1
 
@@ -82,10 +75,8 @@
     :cond_1
     move v1, v4
 
-    .line 87
     goto :goto_0
 
-    .line 89
     :cond_2
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -99,10 +90,8 @@
 
     move v1, v4
 
-    .line 90
     goto :goto_0
 
-    .line 94
     :cond_3
     const/4 v0, 0x0
 
@@ -114,7 +103,6 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 95
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v1
@@ -146,10 +134,8 @@
     :cond_4
     move v1, v4
 
-    .line 97
     goto :goto_0
 
-    .line 94
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
@@ -158,7 +144,6 @@
     :cond_6
     move v1, v3
 
-    .line 100
     goto :goto_0
 .end method
 
@@ -183,15 +168,12 @@
 
     const/4 v4, 0x0
 
-    .line 107
     if-ne p0, p1, :cond_1
 
-    .line 125
     :cond_0
     :goto_0
     return v3
 
-    .line 110
     :cond_1
     if-eqz p0, :cond_2
 
@@ -200,10 +182,8 @@
     :cond_2
     move v3, v4
 
-    .line 111
     goto :goto_0
 
-    .line 113
     :cond_3
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
@@ -217,16 +197,13 @@
 
     move v3, v4
 
-    .line 114
     goto :goto_0
 
-    .line 116
     :cond_4
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 117
     .local v2, "keys":Ljava/util/Set;, "Ljava/util/Set<TT;>;"
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -240,10 +217,8 @@
 
     move v3, v4
 
-    .line 118
     goto :goto_0
 
-    .line 120
     :cond_5
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -261,7 +236,6 @@
 
     move-result-object v1
 
-    .line 121
     .local v1, "key":Ljava/lang/Object;, "TT;"
     invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -279,7 +253,6 @@
 
     move v3, v4
 
-    .line 122
     goto :goto_0
 .end method
 
@@ -295,18 +268,14 @@
     .end annotation
 
     .prologue
-    .line 39
     .local p0, "array":Landroid/util/SparseArray;, "Landroid/util/SparseArray<[B>;"
     if-nez p0, :cond_0
 
-    .line 40
-    const-string/jumbo v2, "null"
+    const-string v2, "null"
 
-    .line 51
     :goto_0
     return-object v2
 
-    .line 42
     :cond_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -314,24 +283,20 @@
 
     if-nez v2, :cond_1
 
-    .line 43
-    const-string/jumbo v2, "{}"
+    const-string v2, "{}"
 
     goto :goto_0
 
-    .line 45
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 46
     .local v0, "buffer":Ljava/lang/StringBuilder;
     const/16 v2, 0x7b
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 47
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -342,7 +307,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 48
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
@@ -369,18 +333,15 @@
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 47
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 50
     :cond_2
     const/16 v2, 0x7d
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 51
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -402,18 +363,14 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p0, "map":Ljava/util/Map;, "Ljava/util/Map<TT;[B>;"
     if-nez p0, :cond_0
 
-    .line 59
-    const-string/jumbo v4, "null"
+    const-string v4, "null"
 
-    .line 76
     :goto_0
     return-object v4
 
-    .line 61
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
 
@@ -421,24 +378,20 @@
 
     if-eqz v4, :cond_1
 
-    .line 62
-    const-string/jumbo v4, "{}"
+    const-string v4, "{}"
 
     goto :goto_0
 
-    .line 64
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 65
     .local v0, "buffer":Ljava/lang/StringBuilder;
     const/16 v4, 0x7b
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 66
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -447,7 +400,6 @@
 
     move-result-object v2
 
-    .line 67
     .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<TT;[B>;>;"
     :cond_2
     :goto_1
@@ -457,20 +409,17 @@
 
     if-eqz v4, :cond_3
 
-    .line 68
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 69
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TT;[B>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 70
     .local v3, "key":Ljava/lang/Object;
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -494,21 +443,18 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 72
     const-string v4, ", "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 75
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TT;[B>;"
     .end local v3    # "key":Ljava/lang/Object;
     :cond_3
@@ -516,7 +462,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 76
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4

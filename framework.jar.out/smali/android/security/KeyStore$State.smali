@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 55
     new-instance v0, Landroid/security/KeyStore$State;
 
     const-string v1, "UNLOCKED"
@@ -99,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 55
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     const-class v0, Landroid/security/KeyStore$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 55
     sget-object v0, Landroid/security/KeyStore$State;->$VALUES:[Landroid/security/KeyStore$State;
 
     invoke-virtual {v0}, [Landroid/security/KeyStore$State;->clone()Ljava/lang/Object;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 135
     iput-object p1, p0, Landroid/mtp/MtpDatabase$1;->this$0:Landroid/mtp/MtpDatabase;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 138
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 139
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.BATTERY_CHANGED"
 
@@ -56,10 +53,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 140
     iget-object v2, p0, Landroid/mtp/MtpDatabase$1;->this$0:Landroid/mtp/MtpDatabase;
 
-    const-string/jumbo v3, "scale"
+    const-string v3, "scale"
 
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -68,14 +64,12 @@
     # setter for: Landroid/mtp/MtpDatabase;->mBatteryScale:I
     invoke-static {v2, v3}, Landroid/mtp/MtpDatabase;->access$002(Landroid/mtp/MtpDatabase;I)I
 
-    .line 141
     const-string v2, "level"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 142
     .local v1, "newLevel":I
     iget-object v2, p0, Landroid/mtp/MtpDatabase$1;->this$0:Landroid/mtp/MtpDatabase;
 
@@ -86,13 +80,11 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 143
     iget-object v2, p0, Landroid/mtp/MtpDatabase$1;->this$0:Landroid/mtp/MtpDatabase;
 
     # setter for: Landroid/mtp/MtpDatabase;->mBatteryLevel:I
     invoke-static {v2, v1}, Landroid/mtp/MtpDatabase;->access$102(Landroid/mtp/MtpDatabase;I)I
 
-    .line 144
     iget-object v2, p0, Landroid/mtp/MtpDatabase$1;->this$0:Landroid/mtp/MtpDatabase;
 
     # getter for: Landroid/mtp/MtpDatabase;->mServer:Landroid/mtp/MtpServer;
@@ -102,7 +94,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 146
     iget-object v2, p0, Landroid/mtp/MtpDatabase$1;->this$0:Landroid/mtp/MtpDatabase;
 
     # getter for: Landroid/mtp/MtpDatabase;->mServer:Landroid/mtp/MtpServer;
@@ -114,7 +105,6 @@
 
     invoke-virtual {v2, v3}, Landroid/mtp/MtpServer;->sendDevicePropertyChanged(I)V
 
-    .line 151
     .end local v1    # "newLevel":I
     :cond_0
     return-void

@@ -27,20 +27,16 @@
     .param p3, "mountShutdownLatch"    # Lcom/android/server/MountService$MountShutdownLatch;
 
     .prologue
-    .line 416
     iput-object p1, p0, Lcom/android/server/MountService$ShutdownCallBack;->this$0:Lcom/android/server/MountService;
 
-    .line 417
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/server/MountService$UnmountCallBack;-><init>(Lcom/android/server/MountService;Ljava/lang/String;ZZ)V
 
-    .line 418
     iput-object p3, p0, Lcom/android/server/MountService$ShutdownCallBack;->mMountShutdownLatch:Lcom/android/server/MountService$MountShutdownLatch;
 
-    .line 419
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 5
 
     .prologue
-    .line 423
     iget-object v1, p0, Lcom/android/server/MountService$ShutdownCallBack;->this$0:Lcom/android/server/MountService;
 
     iget-object v2, p0, Lcom/android/server/MountService$ShutdownCallBack;->path:Ljava/lang/String;
@@ -64,7 +59,6 @@
 
     move-result v0
 
-    .line 424
     .local v0, "ret":I
     const-string v1, "MountService"
 
@@ -100,11 +94,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     iget-object v1, p0, Lcom/android/server/MountService$ShutdownCallBack;->mMountShutdownLatch:Lcom/android/server/MountService$MountShutdownLatch;
 
     invoke-virtual {v1}, Lcom/android/server/MountService$MountShutdownLatch;->countDown()V
 
-    .line 426
     return-void
 .end method

@@ -20,17 +20,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 365
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 366
     new-instance v0, Lcom/android/server/backup/Trampoline;
 
     invoke-direct {v0, p1}, Lcom/android/server/backup/Trampoline;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/Trampoline;
 
-    .line 367
     return-void
 .end method
 
@@ -43,28 +40,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 376
     const/16 v2, 0x1f4
 
     if-ne p1, v2, :cond_1
 
-    .line 377
     sget-object v2, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/Trampoline;
 
     invoke-virtual {v2, v0}, Lcom/android/server/backup/Trampoline;->initialize(I)V
 
-    .line 388
     :cond_0
     :goto_0
     return-void
 
-    .line 378
     :cond_1
     const/16 v2, 0x258
 
     if-ne p1, v2, :cond_0
 
-    .line 379
     sget-object v2, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/Trampoline;
 
     iget-object v2, v2, Lcom/android/server/backup/Trampoline;->mContext:Landroid/content/Context;
@@ -73,7 +65,6 @@
 
     move-result-object v1
 
-    .line 380
     .local v1, "r":Landroid/content/ContentResolver;
     const-string v2, "backup_enabled"
 
@@ -85,7 +76,6 @@
 
     const/4 v0, 0x1
 
-    .line 383
     .local v0, "areEnabled":Z
     :cond_2
     :try_start_0
@@ -97,7 +87,6 @@
 
     goto :goto_0
 
-    .line 384
     :catch_0
     move-exception v2
 
@@ -108,13 +97,11 @@
     .locals 2
 
     .prologue
-    .line 371
     const-string v0, "backup"
 
     sget-object v1, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/Trampoline;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/backup/BackupManagerService$Lifecycle;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 372
     return-void
 .end method

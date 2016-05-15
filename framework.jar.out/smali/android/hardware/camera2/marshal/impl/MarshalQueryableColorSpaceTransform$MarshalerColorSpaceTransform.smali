@@ -42,14 +42,11 @@
     .end annotation
 
     .prologue
-    .line 40
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/hardware/camera2/params/ColorSpaceTransform;>;"
     iput-object p1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableColorSpaceTransform$MarshalerColorSpaceTransform;->this$0:Landroid/hardware/camera2/marshal/impl/MarshalQueryableColorSpaceTransform;
 
-    .line 41
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
-    .line 42
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/16 v0, 0x48
 
     return v0
@@ -73,33 +69,27 @@
     .prologue
     const/16 v3, 0x12
 
-    .line 46
     new-array v1, v3, [I
 
-    .line 47
     .local v1, "transformAsArray":[I
     const/4 v2, 0x0
 
     invoke-virtual {p1, v1, v2}, Landroid/hardware/camera2/params/ColorSpaceTransform;->copyElements([II)V
 
-    .line 49
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 50
     aget v2, v1, v0
 
     invoke-virtual {p2, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 49
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 52
     :cond_0
     return-void
 .end method
@@ -108,7 +98,6 @@
     .locals 0
 
     .prologue
-    .line 38
     check-cast p1, Landroid/hardware/camera2/params/ColorSpaceTransform;
 
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableColorSpaceTransform$MarshalerColorSpaceTransform;->marshal(Landroid/hardware/camera2/params/ColorSpaceTransform;Ljava/nio/ByteBuffer;)V
@@ -123,10 +112,8 @@
     .prologue
     const/16 v3, 0x12
 
-    .line 56
     new-array v1, v3, [I
 
-    .line 58
     .local v1, "transformAsArray":[I
     const/4 v0, 0x0
 
@@ -134,19 +121,16 @@
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 59
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
 
     aput v2, v1, v0
 
-    .line 58
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 62
     :cond_0
     new-instance v2, Landroid/hardware/camera2/params/ColorSpaceTransform;
 
@@ -159,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableColorSpaceTransform$MarshalerColorSpaceTransform;->unmarshal(Ljava/nio/ByteBuffer;)Landroid/hardware/camera2/params/ColorSpaceTransform;
 
     move-result-object v0

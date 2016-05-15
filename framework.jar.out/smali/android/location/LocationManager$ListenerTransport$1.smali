@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 223
     iput-object p1, p0, Landroid/location/LocationManager$ListenerTransport$1;->this$1:Landroid/location/LocationManager$ListenerTransport;
 
     iput-object p2, p0, Landroid/location/LocationManager$ListenerTransport$1;->val$this$0:Landroid/location/LocationManager;
@@ -42,12 +41,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 226
     iget-object v0, p0, Landroid/location/LocationManager$ListenerTransport$1;->this$1:Landroid/location/LocationManager$ListenerTransport;
 
     # invokes: Landroid/location/LocationManager$ListenerTransport;->_handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Landroid/location/LocationManager$ListenerTransport;->access$000(Landroid/location/LocationManager$ListenerTransport;Landroid/os/Message;)V
 
-    .line 227
     return-void
 .end method

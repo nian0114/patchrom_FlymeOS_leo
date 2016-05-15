@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,16 +23,13 @@
     .param p1, "t"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 44
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 45
     .local v0, "builder":Ljava/lang/StringBuilder;
     if-eqz p0, :cond_0
 
-    .line 46
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -42,7 +38,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
@@ -50,7 +45,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 49
     :goto_0
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -58,7 +52,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 50
     const-string v1, ": "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -73,7 +66,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -87,7 +79,6 @@
     .param p0, "t"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     invoke-static {v0, p0}, Landroid/util/ExceptionUtils;->getCompleteMessage(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
@@ -107,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 38
     instance-of v0, p0, Ljava/lang/IllegalStateException;
 
     if-eqz v0, :cond_0
@@ -116,7 +106,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\u2603"
+    const-string v1, "\u2603"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -124,14 +114,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 39
     new-instance v0, Ljava/io/IOException;
 
     invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "\u2603"
+    const-string v2, "\u2603"
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -145,7 +134,6 @@
 
     throw v0
 
-    .line 41
     :cond_0
     return-void
 .end method
@@ -155,14 +143,13 @@
     .param p0, "e"    # Ljava/io/IOException;
 
     .prologue
-    .line 34
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "\u2603"
+    const-string v2, "\u2603"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

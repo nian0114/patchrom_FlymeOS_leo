@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 464
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$8;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 467
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$8;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mListener:Lcom/android/server/display/WifiDisplayController$Listener;
@@ -50,6 +48,5 @@
 
     invoke-interface {v0}, Lcom/android/server/display/WifiDisplayController$Listener;->onScanStarted()V
 
-    .line 468
     return-void
 .end method

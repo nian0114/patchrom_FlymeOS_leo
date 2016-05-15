@@ -47,15 +47,12 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     iput-object p1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->this$0:Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive;
 
-    .line 59
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
-    .line 62
     invoke-virtual {p2}, Landroid/hardware/camera2/utils/TypeReference;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
@@ -66,7 +63,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mClass:Ljava/lang/Class;
 
-    .line 63
     return-void
 .end method
 
@@ -76,11 +72,9 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 128
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 129
     return-void
 .end method
 
@@ -90,11 +84,9 @@
     .param p3, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 115
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     invoke-virtual {p3, p1, p2}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
 
-    .line 116
     return-void
 .end method
 
@@ -104,11 +96,9 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 111
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 112
     return-void
 .end method
 
@@ -118,11 +108,9 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 107
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 108
     return-void
 .end method
 
@@ -132,11 +120,9 @@
     .param p3, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 119
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     invoke-virtual {p3, p1, p2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 120
     return-void
 .end method
 
@@ -146,7 +132,6 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 123
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     invoke-virtual {p1}, Landroid/util/Rational;->getNumerator()I
 
@@ -154,14 +139,12 @@
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 124
     invoke-virtual {p1}, Landroid/util/Rational;->getDenominator()I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 125
     return-void
 .end method
 
@@ -170,13 +153,11 @@
     .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 132
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     iget v2, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 148
     new-instance v2, Ljava/lang/UnsupportedOperationException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -203,7 +184,6 @@
 
     throw v2
 
-    .line 134
     :pswitch_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
@@ -213,11 +193,9 @@
 
     move-result-object v2
 
-    .line 146
     :goto_0
     return-object v2
 
-    .line 136
     :pswitch_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
@@ -229,7 +207,6 @@
 
     goto :goto_0
 
-    .line 138
     :pswitch_2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
@@ -241,19 +218,16 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
-    .line 141
     .local v1, "numerator":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 142
     .local v0, "denominator":I
     new-instance v2, Landroid/util/Rational;
 
@@ -261,7 +235,6 @@
 
     goto :goto_0
 
-    .line 144
     .end local v0    # "denominator":I
     .end local v1    # "numerator":I
     :pswitch_4
@@ -275,7 +248,6 @@
 
     goto :goto_0
 
-    .line 146
     :pswitch_5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -287,7 +259,6 @@
 
     goto :goto_0
 
-    .line 132
     nop
 
     :pswitch_data_0
@@ -312,7 +283,6 @@
     .end annotation
 
     .prologue
-    .line 72
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     .local p1, "value":Ljava/lang/Object;, "TT;"
     iget v0, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
@@ -328,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 155
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     iget v0, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
@@ -351,21 +320,18 @@
     .end annotation
 
     .prologue
-    .line 77
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     .local p1, "value":Ljava/lang/Object;, "TT;"
     instance-of v2, p1, Ljava/lang/Integer;
 
     if-eqz v2, :cond_0
 
-    .line 78
     const/4 v2, 0x1
 
     iget v3, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeTypeEquals(II)I
 
-    .line 79
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -373,30 +339,25 @@
 
     move-result v0
 
-    .line 80
     .local v0, "val":I
     invoke-direct {p0, v0, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->marshalPrimitive(ILjava/nio/ByteBuffer;)V
 
-    .line 104
     .end local v0    # "val":I
     :goto_0
     return-void
 
-    .line 81
     .restart local p1    # "value":Ljava/lang/Object;, "TT;"
     :cond_0
     instance-of v2, p1, Ljava/lang/Float;
 
     if-eqz v2, :cond_1
 
-    .line 82
     const/4 v2, 0x2
 
     iget v3, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeTypeEquals(II)I
 
-    .line 83
     check-cast p1, Ljava/lang/Float;
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -404,13 +365,11 @@
 
     move-result v0
 
-    .line 84
     .local v0, "val":F
     invoke-direct {p0, v0, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->marshalPrimitive(FLjava/nio/ByteBuffer;)V
 
     goto :goto_0
 
-    .line 85
     .end local v0    # "val":F
     .restart local p1    # "value":Ljava/lang/Object;, "TT;"
     :cond_1
@@ -418,14 +377,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 86
     const/4 v2, 0x3
 
     iget v3, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeTypeEquals(II)I
 
-    .line 87
     check-cast p1, Ljava/lang/Long;
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -433,13 +390,11 @@
 
     move-result-wide v0
 
-    .line 88
     .local v0, "val":J
     invoke-direct {p0, v0, v1, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->marshalPrimitive(JLjava/nio/ByteBuffer;)V
 
     goto :goto_0
 
-    .line 89
     .end local v0    # "val":J
     .restart local p1    # "value":Ljava/lang/Object;, "TT;"
     :cond_2
@@ -447,14 +402,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 90
     const/4 v2, 0x5
 
     iget v3, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeTypeEquals(II)I
 
-    .line 91
     check-cast p1, Landroid/util/Rational;
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -462,21 +415,18 @@
 
     goto :goto_0
 
-    .line 92
     .restart local p1    # "value":Ljava/lang/Object;, "TT;"
     :cond_3
     instance-of v2, p1, Ljava/lang/Double;
 
     if-eqz v2, :cond_4
 
-    .line 93
     const/4 v2, 0x4
 
     iget v3, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeTypeEquals(II)I
 
-    .line 94
     check-cast p1, Ljava/lang/Double;
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -484,13 +434,11 @@
 
     move-result-wide v0
 
-    .line 95
     .local v0, "val":D
     invoke-direct {p0, v0, v1, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->marshalPrimitive(DLjava/nio/ByteBuffer;)V
 
     goto :goto_0
 
-    .line 96
     .end local v0    # "val":D
     .restart local p1    # "value":Ljava/lang/Object;, "TT;"
     :cond_4
@@ -498,14 +446,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 97
     const/4 v2, 0x0
 
     iget v3, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mNativeType:I
 
     invoke-static {v2, v3}, Landroid/hardware/camera2/marshal/MarshalHelpers;->checkNativeTypeEquals(II)I
 
-    .line 98
     check-cast p1, Ljava/lang/Byte;
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -513,13 +459,11 @@
 
     move-result v0
 
-    .line 99
     .local v0, "val":B
     invoke-direct {p0, v0, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->marshalPrimitive(BLjava/nio/ByteBuffer;)V
 
     goto :goto_0
 
-    .line 101
     .end local v0    # "val":B
     .restart local p1    # "value":Ljava/lang/Object;, "TT;"
     :cond_5
@@ -562,7 +506,6 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive<TT;>.MarshalerPrimitive;"
     iget-object v0, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePrimitive$MarshalerPrimitive;->mClass:Ljava/lang/Class;
 

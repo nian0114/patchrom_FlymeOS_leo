@@ -28,13 +28,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 968
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 969
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 963
     const-string v0, "notification_light_pulse"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -43,7 +40,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
 
-    .line 965
     const-string v0, "enabled_notification_listeners"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -52,7 +48,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->ENABLED_NOTIFICATION_LISTENERS_URI:Landroid/net/Uri;
 
-    .line 970
     return-void
 .end method
 
@@ -66,7 +61,6 @@
 
     const/4 v2, -0x1
 
-    .line 973
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -77,18 +71,15 @@
 
     move-result-object v0
 
-    .line 974
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 976
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->ENABLED_NOTIFICATION_LISTENERS_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 978
     const-string v1, "notification_light_pulse_default_color"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -97,7 +88,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 981
     const-string v1, "notification_light_pulse_default_led_on"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -106,7 +96,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 984
     const-string v1, "notification_light_pulse_default_led_off"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -115,7 +104,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 987
     const-string v1, "notification_light_pulse_custom_enable"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -124,7 +112,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 990
     const-string v1, "notification_light_pulse_custom_values"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -133,7 +120,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 993
     const-string v1, "notification_light_screen_on_enable"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -142,7 +128,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 996
     const-string v1, "zen_disable_ducking_during_media_playback"
 
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -151,7 +136,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 999
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mAdjustableNotificationLedBrightness:Z
@@ -161,7 +145,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1000
     const-string v1, "notification_light_brightness_level"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -170,7 +153,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1004
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -181,7 +163,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1005
     const-string v1, "notification_light_multiple_leds_enable"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -190,13 +171,11 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1009
     :cond_1
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 1010
     return-void
 .end method
 
@@ -206,10 +185,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1013
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 1014
     return-void
 .end method
 
@@ -224,7 +201,6 @@
 
     const/4 v6, -0x2
 
-    .line 1017
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -235,7 +211,6 @@
 
     move-result-object v0
 
-    .line 1020
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -253,7 +228,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mNotificationPulseEnabled:Z
     invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$2402(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 1024
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v4, "notification_light_pulse_default_color"
@@ -272,7 +246,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mDefaultNotificationColor:I
     invoke-static {v1, v4}, Lcom/android/server/notification/NotificationManagerService;->access$2502(Lcom/android/server/notification/NotificationManagerService;I)I
 
-    .line 1029
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v4, "notification_light_pulse_default_led_on"
@@ -291,7 +264,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mDefaultNotificationLedOn:I
     invoke-static {v1, v4}, Lcom/android/server/notification/NotificationManagerService;->access$2602(Lcom/android/server/notification/NotificationManagerService;I)I
 
-    .line 1034
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v4, "notification_light_pulse_default_led_off"
@@ -310,7 +282,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mDefaultNotificationLedOff:I
     invoke-static {v1, v4}, Lcom/android/server/notification/NotificationManagerService;->access$2702(Lcom/android/server/notification/NotificationManagerService;I)I
 
-    .line 1039
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mNotificationPulseCustomLedValues:Ljava/util/HashMap;
@@ -320,7 +291,6 @@
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 1040
     const-string v1, "notification_light_pulse_custom_enable"
 
     invoke-static {v0, v1, v3, v6}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
@@ -329,7 +299,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1043
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v4, "notification_light_pulse_custom_values"
@@ -341,7 +310,6 @@
     # invokes: Lcom/android/server/notification/NotificationManagerService;->parseNotificationPulseCustomValuesString(Ljava/lang/String;)V
     invoke-static {v1, v4}, Lcom/android/server/notification/NotificationManagerService;->access$2900(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;)V
 
-    .line 1049
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -352,7 +320,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1050
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v4, "notification_light_brightness_level"
@@ -366,7 +333,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mNotificationLedBrightnessLevel:I
     invoke-static {v1, v4}, Lcom/android/server/notification/NotificationManagerService;->access$3002(Lcom/android/server/notification/NotificationManagerService;I)I
 
-    .line 1056
     :cond_1
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -377,7 +343,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1057
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v5, "notification_light_multiple_leds_enable"
@@ -406,7 +371,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mMultipleLedsEnabledSetting:Z
     invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$3102(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 1063
     :cond_2
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -436,13 +400,11 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mScreenOnEnabled:Z
     invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$1202(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 1067
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->updateNotificationPulse()V
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->access$1000(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 1069
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -468,25 +430,21 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mDisableDuckingWhileMedia:Z
     invoke-static {v1, v2}, Lcom/android/server/notification/NotificationManagerService;->access$3302(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 1071
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->updateDisableDucking()V
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->access$3500(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 1072
     return-void
 
     :cond_3
     move v1, v3
 
-    .line 1020
     goto/16 :goto_0
 
     :cond_4
     move v1, v3
 
-    .line 1057
     goto :goto_1
 
     :cond_5
@@ -497,7 +455,6 @@
     :cond_6
     move v1, v3
 
-    .line 1063
     goto :goto_3
 
     :cond_7
@@ -508,6 +465,5 @@
     :cond_8
     move v2, v3
 
-    .line 1069
     goto :goto_5
 .end method

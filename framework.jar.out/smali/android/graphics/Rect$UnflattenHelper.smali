@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const-string v0, "(-?\\d+) (-?\\d+) (-?\\d+) (-?\\d+)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     sget-object v0, Landroid/graphics/Rect$UnflattenHelper;->FLATTENED_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;

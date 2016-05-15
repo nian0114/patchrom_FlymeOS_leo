@@ -21,10 +21,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 54
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;-><init>(Landroid/content/Context;)V
 
-    .line 55
     return-void
 .end method
 
@@ -35,12 +33,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 163
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 164
     .local v3, "contentValues":Landroid/content/ContentValues;
     const-string v7, "\n"
 
@@ -48,7 +44,6 @@
 
     move-result-object v2
 
-    .line 165
     .local v2, "attrs":[Ljava/lang/String;
     move-object v0, v2
 
@@ -64,7 +59,6 @@
 
     aget-object v1, v0, v4
 
-    .line 166
     .local v1, "attr":Ljava/lang/String;
     const-string v7, "\t"
 
@@ -72,7 +66,6 @@
 
     move-result-object v6
 
-    .line 167
     .local v6, "values":[Ljava/lang/String;
     array-length v7, v6
 
@@ -86,7 +79,6 @@
 
     if-nez v7, :cond_0
 
-    .line 168
     aget-object v7, v6, v9
 
     const/4 v8, 0x1
@@ -95,13 +87,11 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 171
     .end local v1    # "attr":Ljava/lang/String;
     .end local v6    # "values":[Ljava/lang/String;
     :cond_1
@@ -117,12 +107,10 @@
 
     const/4 v9, 0x1
 
-    .line 175
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 176
     .local v3, "contentValues":Landroid/content/ContentValues;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -130,14 +118,12 @@
 
     if-nez v7, :cond_2
 
-    .line 177
     const-string v7, "\n"
 
     invoke-static {p1, v7}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 178
     .local v2, "attrs":[Ljava/lang/String;
     move-object v0, v2
 
@@ -153,7 +139,6 @@
 
     aget-object v1, v0, v4
 
-    .line 179
     .local v1, "attr":Ljava/lang/String;
     const-string v7, "\t"
 
@@ -161,7 +146,6 @@
 
     move-result-object v6
 
-    .line 180
     .local v6, "values":[Ljava/lang/String;
     aget-object v7, v6, v10
 
@@ -173,12 +157,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 181
     aget-object v7, v6, v9
 
     if-eqz v7, :cond_0
 
-    .line 182
     const-string v7, "DRM-TYPE"
 
     aget-object v8, v6, v9
@@ -193,7 +175,6 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 186
     :cond_0
     aget-object v7, v6, v10
 
@@ -205,25 +186,21 @@
 
     if-eqz v7, :cond_1
 
-    .line 187
     aget-object v7, v6, v9
 
     if-eqz v7, :cond_1
 
-    .line 188
     const-string v7, "Rights-Issuer"
 
     aget-object v8, v6, v9
 
     invoke-virtual {v3, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 178
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 193
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "attr":Ljava/lang/String;
     .end local v2    # "attrs":[Ljava/lang/String;
@@ -239,14 +216,12 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 197
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 198
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -255,7 +230,6 @@
 
     move-result v0
 
-    .line 200
     :goto_0
     return v0
 
@@ -273,12 +247,11 @@
     .param p2, "action"    # I
 
     .prologue
-    .line 95
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "rights"
+    const-string v9, "rights"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -302,7 +275,6 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "actionPath":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -314,7 +286,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 98
     :cond_0
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -324,26 +295,21 @@
 
     throw v8
 
-    .line 101
     :cond_1
     const/4 v4, 0x0
 
-    .line 103
     .local v4, "info":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 105
     .local v6, "is":Ljava/io/FileInputStream;
     const/4 v2, 0x0
 
-    .line 106
     .local v2, "fd":Ljava/io/FileDescriptor;
     :try_start_0
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 107
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -351,7 +317,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 108
     new-instance v7, Ljava/io/FileInputStream;
 
     invoke-direct {v7, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -359,7 +324,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 109
     .end local v6    # "is":Ljava/io/FileInputStream;
     .local v7, "is":Ljava/io/FileInputStream;
     :try_start_1
@@ -372,7 +336,6 @@
 
     move-object v6, v7
 
-    .line 111
     .end local v7    # "is":Ljava/io/FileInputStream;
     .restart local v6    # "is":Ljava/io/FileInputStream;
     :cond_2
@@ -384,16 +347,13 @@
 
     move-result-object v4
 
-    .line 115
     if-eqz v6, :cond_3
 
-    .line 117
     :try_start_3
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 123
     .end local v3    # "file":Ljava/io/File;
     :cond_3
     :goto_0
@@ -419,19 +379,16 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     invoke-direct {p0, v4}, Landroid/drm/DrmManagerClientWrapper;->parseRightsStatus(Ljava/lang/String;)I
 
     move-result v8
 
     return v8
 
-    .line 118
     .restart local v3    # "file":Ljava/io/File;
     :catch_0
     move-exception v1
 
-    .line 119
     .local v1, "e":Ljava/io/IOException;
     const-string v8, "DrmManagerClientWrapper"
 
@@ -457,13 +414,11 @@
 
     goto :goto_0
 
-    .line 112
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "file":Ljava/io/File;
     :catch_1
     move-exception v5
 
-    .line 113
     .local v5, "ioe":Ljava/io/IOException;
     :goto_1
     :try_start_4
@@ -491,10 +446,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 115
     if-eqz v6, :cond_3
 
-    .line 117
     :try_start_5
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -502,11 +455,9 @@
 
     goto :goto_0
 
-    .line 118
     :catch_2
     move-exception v1
 
-    .line 119
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v8, "DrmManagerClientWrapper"
 
@@ -532,7 +483,6 @@
 
     goto :goto_0
 
-    .line 115
     .end local v1    # "e":Ljava/io/IOException;
     .end local v5    # "ioe":Ljava/io/IOException;
     :catchall_0
@@ -541,22 +491,18 @@
     :goto_2
     if-eqz v6, :cond_4
 
-    .line 117
     :try_start_6
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 120
     :cond_4
     :goto_3
     throw v8
 
-    .line 118
     :catch_3
     move-exception v1
 
-    .line 119
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v9, "DrmManagerClientWrapper"
 
@@ -582,7 +528,6 @@
 
     goto :goto_3
 
-    .line 115
     .end local v1    # "e":Ljava/io/IOException;
     .end local v6    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "file":Ljava/io/File;
@@ -596,7 +541,6 @@
     .restart local v6    # "is":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 112
     .end local v6    # "is":Ljava/io/FileInputStream;
     .restart local v7    # "is":Ljava/io/FileInputStream;
     :catch_4
@@ -615,7 +559,6 @@
     .param p2, "action"    # I
 
     .prologue
-    .line 60
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -644,7 +587,6 @@
 
     move-result-object v0
 
-    .line 62
     .local v0, "actionPath":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -656,7 +598,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 63
     :cond_0
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -666,26 +607,21 @@
 
     throw v8
 
-    .line 66
     :cond_1
     const/4 v4, 0x0
 
-    .line 68
     .local v4, "info":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 70
     .local v6, "is":Ljava/io/FileInputStream;
     const/4 v2, 0x0
 
-    .line 71
     .local v2, "fd":Ljava/io/FileDescriptor;
     :try_start_0
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 72
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -693,7 +629,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 73
     new-instance v7, Ljava/io/FileInputStream;
 
     invoke-direct {v7, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -701,7 +636,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     .end local v6    # "is":Ljava/io/FileInputStream;
     .local v7, "is":Ljava/io/FileInputStream;
     :try_start_1
@@ -714,7 +648,6 @@
 
     move-object v6, v7
 
-    .line 76
     .end local v7    # "is":Ljava/io/FileInputStream;
     .restart local v6    # "is":Ljava/io/FileInputStream;
     :cond_2
@@ -726,16 +659,13 @@
 
     move-result-object v4
 
-    .line 80
     if-eqz v6, :cond_3
 
-    .line 82
     :try_start_3
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 88
     .end local v3    # "file":Ljava/io/File;
     :cond_3
     :goto_0
@@ -761,19 +691,16 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     invoke-direct {p0, v4}, Landroid/drm/DrmManagerClientWrapper;->parseConstraints(Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v8
 
     return-object v8
 
-    .line 83
     .restart local v3    # "file":Ljava/io/File;
     :catch_0
     move-exception v1
 
-    .line 84
     .local v1, "e":Ljava/io/IOException;
     const-string v8, "DrmManagerClientWrapper"
 
@@ -799,13 +726,11 @@
 
     goto :goto_0
 
-    .line 77
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "file":Ljava/io/File;
     :catch_1
     move-exception v5
 
-    .line 78
     .local v5, "ioe":Ljava/io/IOException;
     :goto_1
     :try_start_4
@@ -833,10 +758,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 80
     if-eqz v6, :cond_3
 
-    .line 82
     :try_start_5
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -844,11 +767,9 @@
 
     goto :goto_0
 
-    .line 83
     :catch_2
     move-exception v1
 
-    .line 84
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v8, "DrmManagerClientWrapper"
 
@@ -874,7 +795,6 @@
 
     goto :goto_0
 
-    .line 80
     .end local v1    # "e":Ljava/io/IOException;
     .end local v5    # "ioe":Ljava/io/IOException;
     :catchall_0
@@ -883,22 +803,18 @@
     :goto_2
     if-eqz v6, :cond_4
 
-    .line 82
     :try_start_6
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 85
     :cond_4
     :goto_3
     throw v8
 
-    .line 83
     :catch_3
     move-exception v1
 
-    .line 84
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v9, "DrmManagerClientWrapper"
 
@@ -924,7 +840,6 @@
 
     goto :goto_3
 
-    .line 80
     .end local v1    # "e":Ljava/io/IOException;
     .end local v6    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "file":Ljava/io/File;
@@ -938,7 +853,6 @@
     .restart local v6    # "is":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 77
     .end local v6    # "is":Ljava/io/FileInputStream;
     .restart local v7    # "is":Ljava/io/FileInputStream;
     :catch_4
@@ -956,12 +870,11 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "metadata0:"
+    const-string v9, "metadata0:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -975,7 +888,6 @@
 
     move-result-object v0
 
-    .line 132
     .local v0, "actionPath":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -987,7 +899,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 133
     :cond_0
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -997,26 +908,21 @@
 
     throw v8
 
-    .line 136
     :cond_1
     const/4 v4, 0x0
 
-    .line 138
     .local v4, "info":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 140
     .local v6, "is":Ljava/io/FileInputStream;
     const/4 v2, 0x0
 
-    .line 141
     .local v2, "fd":Ljava/io/FileDescriptor;
     :try_start_0
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 142
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -1024,7 +930,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 143
     new-instance v7, Ljava/io/FileInputStream;
 
     invoke-direct {v7, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -1032,7 +937,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 144
     .end local v6    # "is":Ljava/io/FileInputStream;
     .local v7, "is":Ljava/io/FileInputStream;
     :try_start_1
@@ -1045,7 +949,6 @@
 
     move-object v6, v7
 
-    .line 146
     .end local v7    # "is":Ljava/io/FileInputStream;
     .restart local v6    # "is":Ljava/io/FileInputStream;
     :cond_2
@@ -1057,16 +960,13 @@
 
     move-result-object v4
 
-    .line 150
     if-eqz v6, :cond_3
 
-    .line 152
     :try_start_3
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 158
     .end local v3    # "file":Ljava/io/File;
     :cond_3
     :goto_0
@@ -1092,19 +992,16 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     invoke-direct {p0, v4}, Landroid/drm/DrmManagerClientWrapper;->parseMetadata(Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v8
 
     return-object v8
 
-    .line 153
     .restart local v3    # "file":Ljava/io/File;
     :catch_0
     move-exception v1
 
-    .line 154
     .local v1, "e":Ljava/io/IOException;
     const-string v8, "DrmManagerClientWrapper"
 
@@ -1130,13 +1027,11 @@
 
     goto :goto_0
 
-    .line 147
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "file":Ljava/io/File;
     :catch_1
     move-exception v5
 
-    .line 148
     .local v5, "ioe":Ljava/io/IOException;
     :goto_1
     :try_start_4
@@ -1164,10 +1059,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 150
     if-eqz v6, :cond_3
 
-    .line 152
     :try_start_5
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -1175,11 +1068,9 @@
 
     goto :goto_0
 
-    .line 153
     :catch_2
     move-exception v1
 
-    .line 154
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v8, "DrmManagerClientWrapper"
 
@@ -1205,7 +1096,6 @@
 
     goto :goto_0
 
-    .line 150
     .end local v1    # "e":Ljava/io/IOException;
     .end local v5    # "ioe":Ljava/io/IOException;
     :catchall_0
@@ -1214,22 +1104,18 @@
     :goto_2
     if-eqz v6, :cond_4
 
-    .line 152
     :try_start_6
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 155
     :cond_4
     :goto_3
     throw v8
 
-    .line 153
     :catch_3
     move-exception v1
 
-    .line 154
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v9, "DrmManagerClientWrapper"
 
@@ -1255,7 +1141,6 @@
 
     goto :goto_3
 
-    .line 150
     .end local v1    # "e":Ljava/io/IOException;
     .end local v6    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "file":Ljava/io/File;
@@ -1269,7 +1154,6 @@
     .restart local v6    # "is":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 147
     .end local v6    # "is":Ljava/io/FileInputStream;
     .restart local v7    # "is":Ljava/io/FileInputStream;
     :catch_4

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 216
     iput-object p1, p0, Landroid/telecom/RemoteConnectionService$1$1;->this$1:Landroid/telecom/RemoteConnectionService$1;
 
     iput-object p2, p0, Landroid/telecom/RemoteConnectionService$1$1;->val$callId:Ljava/lang/String;
@@ -42,7 +41,6 @@
     .param p1, "c"    # Landroid/telecom/RemoteConference;
 
     .prologue
-    .line 219
     iget-object v0, p0, Landroid/telecom/RemoteConnectionService$1$1;->this$1:Landroid/telecom/RemoteConnectionService$1;
 
     iget-object v0, v0, Landroid/telecom/RemoteConnectionService$1;->this$0:Landroid/telecom/RemoteConnectionService;
@@ -56,7 +54,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     iget-object v0, p0, Landroid/telecom/RemoteConnectionService$1$1;->this$1:Landroid/telecom/RemoteConnectionService$1;
 
     iget-object v0, v0, Landroid/telecom/RemoteConnectionService$1;->this$0:Landroid/telecom/RemoteConnectionService;
@@ -64,6 +61,5 @@
     # invokes: Landroid/telecom/RemoteConnectionService;->maybeDisconnectAdapter()V
     invoke-static {v0}, Landroid/telecom/RemoteConnectionService;->access$800(Landroid/telecom/RemoteConnectionService;)V
 
-    .line 221
     return-void
 .end method

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 639
     iput-object p1, p0, Lcom/android/internal/app/AlertController$6;->this$0:Lcom/android/internal/app/AlertController;
 
     iput-object p2, p0, Lcom/android/internal/app/AlertController$6;->val$indicatorUp:Landroid/view/View;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 642
     iget-object v0, p0, Lcom/android/internal/app/AlertController$6;->this$0:Lcom/android/internal/app/AlertController;
 
     # getter for: Lcom/android/internal/app/AlertController;->mListView:Landroid/widget/ListView;
@@ -63,6 +61,5 @@
     # invokes: Lcom/android/internal/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     invoke-static {v0, v1, v2}, Lcom/android/internal/app/AlertController;->access$900(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    .line 643
     return-void
 .end method

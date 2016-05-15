@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 88
     new-instance v0, Landroid/telecom/GatewayInfo$1;
 
     invoke-direct {v0}, Landroid/telecom/GatewayInfo$1;-><init>()V
@@ -49,19 +48,14 @@
     .param p3, "originalAddress"    # Landroid/net/Uri;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Landroid/telecom/GatewayInfo;->mGatewayProviderPackageName:Ljava/lang/String;
 
-    .line 50
     iput-object p2, p0, Landroid/telecom/GatewayInfo;->mGatewayAddress:Landroid/net/Uri;
 
-    .line 51
     iput-object p3, p0, Landroid/telecom/GatewayInfo;->mOriginalAddress:Landroid/net/Uri;
 
-    .line 52
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     return v0
@@ -81,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mGatewayAddress:Landroid/net/Uri;
 
     return-object v0
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mGatewayProviderPackageName:Ljava/lang/String;
 
     return-object v0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mOriginalAddress:Landroid/net/Uri;
 
     return-object v0
@@ -111,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mGatewayProviderPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -144,21 +133,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 118
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mGatewayProviderPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 119
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mGatewayAddress:Landroid/net/Uri;
 
     invoke-virtual {v0, p1, v1}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 120
     iget-object v0, p0, Landroid/telecom/GatewayInfo;->mOriginalAddress:Landroid/net/Uri;
 
     invoke-virtual {v0, p1, v1}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 121
     return-void
 .end method

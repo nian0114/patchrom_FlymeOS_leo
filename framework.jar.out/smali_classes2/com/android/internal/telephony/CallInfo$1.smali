@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 53
     new-instance v0, Lcom/android/internal/telephony/CallInfo;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 49
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/CallInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/CallInfo;
 
     move-result-object v0
@@ -74,7 +71,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 58
     new-array v0, p1, [Lcom/android/internal/telephony/CallInfo;
 
     return-object v0
@@ -84,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 49
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/CallInfo$1;->newArray(I)[Lcom/android/internal/telephony/CallInfo;
 
     move-result-object v0

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 765
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "o2"    # Ljava/lang/Object;
 
     .prologue
-    .line 767
     move-object v2, p1
 
     check-cast v2, Landroid/content/IntentFilter;
@@ -48,14 +46,12 @@
     .local v0, "q1":I
     move-object v2, p2
 
-    .line 768
     check-cast v2, Landroid/content/IntentFilter;
 
     invoke-virtual {v2}, Landroid/content/IntentFilter;->getPriority()I
 
     move-result v1
 
-    .line 769
     .local v1, "q2":I
     if-le v0, v1, :cond_0
 

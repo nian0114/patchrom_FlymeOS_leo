@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     iput p2, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->val$svCount:I
@@ -77,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 93
     iget v1, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->val$svCount:I
 
     iget-object v2, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->val$prns:[I
@@ -98,7 +96,6 @@
 
     invoke-interface/range {v0 .. v8}, Landroid/location/IGpsStatusListener;->onSvStatusChanged(I[I[F[F[FIII)V
 
-    .line 102
     return-void
 .end method
 
@@ -111,7 +108,6 @@
     .end annotation
 
     .prologue
-    .line 90
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/GpsStatusListenerHelper$5;->execute(Landroid/location/IGpsStatusListener;)V

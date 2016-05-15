@@ -26,13 +26,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 523
     iput-object p1, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->this$0:Lcom/android/server/notification/ManagedServices;
 
-    .line 524
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 521
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->this$0:Lcom/android/server/notification/ManagedServices;
 
     # getter for: Lcom/android/server/notification/ManagedServices;->mConfig:Lcom/android/server/notification/ManagedServices$Config;
@@ -48,7 +45,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
-    .line 525
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .param p3, "x2"    # Lcom/android/server/notification/ManagedServices$1;
 
     .prologue
-    .line 520
     invoke-direct {p0, p1, p2}, Lcom/android/server/notification/ManagedServices$SettingsObserver;-><init>(Lcom/android/server/notification/ManagedServices;Landroid/os/Handler;)V
 
     return-void
@@ -70,7 +65,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/ManagedServices$SettingsObserver;
 
     .prologue
-    .line 520
     invoke-direct {p0}, Lcom/android/server/notification/ManagedServices$SettingsObserver;->observe()V
 
     return-void
@@ -80,7 +74,6 @@
     .locals 4
 
     .prologue
-    .line 528
     iget-object v1, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iget-object v1, v1, Lcom/android/server/notification/ManagedServices;->mContext:Landroid/content/Context;
@@ -89,7 +82,6 @@
 
     move-result-object v0
 
-    .line 529
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
@@ -99,12 +91,10 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 531
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/android/server/notification/ManagedServices$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 532
     return-void
 .end method
 
@@ -113,7 +103,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 540
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
@@ -124,7 +113,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 541
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->this$0:Lcom/android/server/notification/ManagedServices;
 
@@ -168,14 +156,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$SettingsObserver;->this$0:Lcom/android/server/notification/ManagedServices;
 
     # invokes: Lcom/android/server/notification/ManagedServices;->rebindServices()V
     invoke-static {v0}, Lcom/android/server/notification/ManagedServices;->access$600(Lcom/android/server/notification/ManagedServices;)V
 
-    .line 545
     :cond_2
     return-void
 .end method
@@ -188,9 +174,7 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 536
     invoke-direct {p0, p2}, Lcom/android/server/notification/ManagedServices$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 537
     return-void
 .end method

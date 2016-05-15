@@ -34,10 +34,8 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     return-void
 .end method
 
@@ -48,7 +46,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 142
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$RequestType;->values()[Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
@@ -58,15 +55,12 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 145
     :goto_0
     return-object v1
 
-    .line 143
     :catch_0
     move-exception v0
 
-    .line 144
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     const-string v1, "GSMPhone"
 
@@ -74,7 +68,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     const/4 v1, 0x0
 
     goto :goto_0
@@ -85,7 +78,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 133
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$ServiceType;->values()[Lcom/android/internal/telephony/gsm/SsData$ServiceType;
 
@@ -95,15 +87,12 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 136
     :goto_0
     return-object v1
 
-    .line 134
     :catch_0
     move-exception v0
 
-    .line 135
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     const-string v1, "GSMPhone"
 
@@ -111,7 +100,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     const/4 v1, 0x0
 
     goto :goto_0
@@ -122,7 +110,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 151
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->values()[Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
@@ -132,15 +119,12 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 154
     :goto_0
     return-object v1
 
-    .line 152
     :catch_0
     move-exception v0
 
-    .line 153
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     const-string v1, "GSMPhone"
 
@@ -148,7 +132,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     const/4 v1, 0x0
 
     goto :goto_0
@@ -158,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 159
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

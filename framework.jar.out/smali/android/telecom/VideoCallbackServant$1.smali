@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 45
     iput-object p1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,16 +40,13 @@
     .end annotation
 
     .prologue
-    .line 56
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 109
     :goto_0
     return-void
 
-    .line 58
     :pswitch_0
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
 
@@ -67,13 +63,11 @@
 
     goto :goto_0
 
-    .line 62
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 64
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     :try_start_0
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
@@ -97,7 +91,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 69
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -109,14 +102,12 @@
 
     throw v1
 
-    .line 74
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 76
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :try_start_1
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
@@ -132,7 +123,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 78
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -144,14 +134,12 @@
 
     throw v1
 
-    .line 83
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 85
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :try_start_2
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
@@ -169,7 +157,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 87
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -181,14 +168,12 @@
 
     throw v1
 
-    .line 92
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 94
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :try_start_3
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
@@ -204,7 +189,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 96
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -216,7 +200,6 @@
 
     throw v1
 
-    .line 101
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_5
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
@@ -234,7 +217,6 @@
 
     goto/16 :goto_0
 
-    .line 105
     :pswitch_6
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$1;->this$0:Landroid/telecom/VideoCallbackServant;
 
@@ -249,7 +231,6 @@
 
     goto/16 :goto_0
 
-    .line 56
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -269,17 +250,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 49
     :try_start_0
     invoke-direct {p0, p1}, Landroid/telecom/VideoCallbackServant$1;->internalHandleMessage(Landroid/os/Message;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 52
     :goto_0
     return-void
 
-    .line 50
     :catch_0
     move-exception v0
 

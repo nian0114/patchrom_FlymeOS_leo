@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1263
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->val$keyCode:I
@@ -52,7 +51,6 @@
     .locals 4
 
     .prologue
-    .line 1266
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v2, v2, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -75,23 +73,19 @@
 
     move-result-object v0
 
-    .line 1267
     .local v0, "device":Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;
     if-eqz v0, :cond_1
 
-    .line 1268
     iget v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->val$keyCode:I
 
     iget-boolean v3, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->val$isPressed:Z
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;->sendKeyEvent(IZ)V
 
-    .line 1279
     :cond_0
     :goto_0
     return-void
 
-    .line 1271
     :cond_1
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -104,7 +98,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1272
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v2, v2, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -120,11 +113,9 @@
 
     move-result-object v1
 
-    .line 1273
     .local v1, "localDevice":Lcom/android/server/hdmi/HdmiCecLocalDevice;
     if-nez v1, :cond_2
 
-    .line 1274
     const-string v2, "HdmiControlService"
 
     const-string v3, "Local device not available"
@@ -133,7 +124,6 @@
 
     goto :goto_0
 
-    .line 1277
     :cond_2
     iget v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$3;->val$keyCode:I
 

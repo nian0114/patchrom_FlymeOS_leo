@@ -33,16 +33,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 46
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 40
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady32Bit:Z
 
-    .line 41
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady64Bit:Z
 
-    .line 47
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p0, "x0"    # Lcom/android/server/webkit/WebViewUpdateService;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lcom/android/server/webkit/WebViewUpdateService;->onWebViewUpdateInstalled()V
 
     return-void
@@ -62,7 +57,6 @@
     .param p0, "x0"    # Lcom/android/server/webkit/WebViewUpdateService;
 
     .prologue
-    .line 35
     iget-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady64Bit:Z
 
     return v0
@@ -74,7 +68,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 35
     iput-boolean p1, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady64Bit:Z
 
     return p1
@@ -85,7 +78,6 @@
     .param p0, "x0"    # Lcom/android/server/webkit/WebViewUpdateService;
 
     .prologue
-    .line 35
     iget-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady32Bit:Z
 
     return v0
@@ -97,7 +89,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 35
     iput-boolean p1, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady32Bit:Z
 
     return p1
@@ -107,39 +98,31 @@
     .locals 2
 
     .prologue
-    .line 69
     const-string v0, "WebViewUpdateService"
 
     const-string v1, "WebView Package updated!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     monitor-enter p0
 
-    .line 72
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady32Bit:Z
 
-    .line 73
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateService;->mRelroReady64Bit:Z
 
-    .line 74
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 75
     invoke-static {}, Landroid/webkit/WebViewFactory;->onWebViewUpdateInstalled()V
 
-    .line 76
     return-void
 
-    .line 74
     :catchall_0
     move-exception v0
 
@@ -157,30 +140,25 @@
     .locals 4
 
     .prologue
-    .line 51
     new-instance v1, Lcom/android/server/webkit/WebViewUpdateService$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/webkit/WebViewUpdateService$1;-><init>(Lcom/android/server/webkit/WebViewUpdateService;)V
 
     iput-object v1, p0, Lcom/android/server/webkit/WebViewUpdateService;->mWebViewUpdatedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 60
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 61
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 62
     const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -189,7 +167,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 65
     const-string v1, "webviewupdate"
 
     new-instance v2, Lcom/android/server/webkit/WebViewUpdateService$BinderService;
@@ -200,6 +177,5 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/webkit/WebViewUpdateService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 66
     return-void
 .end method

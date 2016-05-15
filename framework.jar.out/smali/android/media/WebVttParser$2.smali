@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 695
     iput-object p1, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,8 +40,7 @@
     .param p1, "line"    # Ljava/lang/String;
 
     .prologue
-    .line 698
-    const-string/jumbo v0, "\ufeff"
+    const-string v0, "\ufeff"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -50,14 +48,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 699
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 701
     :cond_0
     const-string v0, "WEBVTT"
 
@@ -83,7 +79,6 @@
 
     if-nez v0, :cond_1
 
-    .line 704
     iget-object v0, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
     const-string v1, "Not a WEBVTT header"
@@ -91,7 +86,6 @@
     # invokes: Landroid/media/WebVttParser;->log_warning(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, p1}, Landroid/media/WebVttParser;->access$000(Landroid/media/WebVttParser;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 705
     iget-object v0, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
     iget-object v1, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
@@ -104,11 +98,9 @@
     # setter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
     invoke-static {v0, v1}, Landroid/media/WebVttParser;->access$102(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 709
     :goto_0
     return-void
 
-    .line 707
     :cond_1
     iget-object v0, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 

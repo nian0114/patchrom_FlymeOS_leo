@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 639
     const-string v0, "android.type.text"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 640
     return-void
 .end method
 
@@ -42,13 +40,10 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 649
     invoke-direct {p0}, Landroid/text/style/TtsSpan$TextBuilder;-><init>()V
 
-    .line 650
     invoke-virtual {p0, p1}, Landroid/text/style/TtsSpan$TextBuilder;->setText(Ljava/lang/String;)Landroid/text/style/TtsSpan$TextBuilder;
 
-    .line 651
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 659
     const-string v0, "android.arg.text"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$TextBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;

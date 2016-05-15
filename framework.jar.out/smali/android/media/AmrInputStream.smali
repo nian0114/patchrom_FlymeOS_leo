@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 30
-    const-string/jumbo v0, "media_jni"
+    const-string v0, "media_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 31
     return-void
 .end method
 
@@ -44,45 +42,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 56
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 45
     const/16 v0, 0x140
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/media/AmrInputStream;->mBuf:[B
 
-    .line 46
     iput v1, p0, Landroid/media/AmrInputStream;->mBufIn:I
 
-    .line 47
     iput v1, p0, Landroid/media/AmrInputStream;->mBufOut:I
 
-    .line 50
     const/4 v0, 0x1
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/media/AmrInputStream;->mOneByte:[B
 
-    .line 57
     iput-object p1, p0, Landroid/media/AmrInputStream;->mInputStream:Ljava/io/InputStream;
 
-    .line 58
     invoke-static {}, Landroid/media/AmrInputStream;->GsmAmrEncoderNew()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/media/AmrInputStream;->mGae:J
 
-    .line 59
     iget-wide v0, p0, Landroid/media/AmrInputStream;->mGae:J
 
     invoke-static {v0, v1}, Landroid/media/AmrInputStream;->GsmAmrEncoderInitialize(J)V
 
-    .line 60
     return-void
 .end method
 
@@ -121,7 +110,6 @@
 
     const-wide/16 v4, 0x0
 
-    .line 105
     :try_start_0
     iget-object v0, p0, Landroid/media/AmrInputStream;->mInputStream:Ljava/io/InputStream;
 
@@ -133,11 +121,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 107
     :cond_0
     iput-object v1, p0, Landroid/media/AmrInputStream;->mInputStream:Ljava/io/InputStream;
 
-    .line 109
     :try_start_1
     iget-wide v0, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -151,7 +137,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 112
     :cond_1
     :try_start_2
     iget-wide v0, p0, Landroid/media/AmrInputStream;->mGae:J
@@ -166,14 +151,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 114
     :cond_2
     iput-wide v4, p0, Landroid/media/AmrInputStream;->mGae:J
 
-    .line 118
     return-void
 
-    .line 114
     :catchall_0
     move-exception v0
 
@@ -181,11 +163,9 @@
 
     throw v0
 
-    .line 111
     :catchall_1
     move-exception v0
 
-    .line 112
     :try_start_3
     iget-wide v2, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -199,7 +179,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 114
     :cond_3
     iput-wide v4, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -212,13 +191,11 @@
 
     throw v0
 
-    .line 107
     :catchall_3
     move-exception v0
 
     iput-object v1, p0, Landroid/media/AmrInputStream;->mInputStream:Ljava/io/InputStream;
 
-    .line 109
     :try_start_4
     iget-wide v2, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -232,7 +209,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_5
 
-    .line 112
     :cond_4
     :try_start_5
     iget-wide v2, p0, Landroid/media/AmrInputStream;->mGae:J
@@ -247,7 +223,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 114
     :cond_5
     iput-wide v4, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -260,11 +235,9 @@
 
     throw v0
 
-    .line 111
     :catchall_5
     move-exception v0
 
-    .line 112
     :try_start_6
     iget-wide v2, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -278,7 +251,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_6
 
-    .line 114
     :cond_6
     iput-wide v4, p0, Landroid/media/AmrInputStream;->mGae:J
 
@@ -301,7 +273,6 @@
     .end annotation
 
     .prologue
-    .line 122
     iget-wide v0, p0, Landroid/media/AmrInputStream;->mGae:J
 
     const-wide/16 v2, 0x0
@@ -310,19 +281,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 123
     invoke-virtual {p0}, Landroid/media/AmrInputStream;->close()V
 
-    .line 124
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "someone forgot to close AmrInputStream"
+    const-string v1, "someone forgot to close AmrInputStream"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 126
     :cond_0
     return-void
 .end method
@@ -340,14 +308,12 @@
 
     const/4 v2, 0x0
 
-    .line 64
     iget-object v1, p0, Landroid/media/AmrInputStream;->mOneByte:[B
 
     invoke-virtual {p0, v1, v2, v3}, Landroid/media/AmrInputStream;->read([BII)I
 
     move-result v0
 
-    .line 65
     .local v0, "rtn":I
     if-ne v0, v3, :cond_0
 
@@ -376,7 +342,6 @@
     .end annotation
 
     .prologue
-    .line 70
     const/4 v0, 0x0
 
     array-length v1, p1
@@ -404,7 +369,6 @@
 
     const/4 v3, 0x0
 
-    .line 75
     iget-wide v4, p0, Landroid/media/AmrInputStream;->mGae:J
 
     const-wide/16 v8, 0x0
@@ -415,13 +379,12 @@
 
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "not open"
+    const-string v1, "not open"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 78
     :cond_0
     iget v1, p0, Landroid/media/AmrInputStream;->mBufOut:I
 
@@ -429,13 +392,10 @@
 
     if-lt v1, v2, :cond_3
 
-    .line 80
     iput v3, p0, Landroid/media/AmrInputStream;->mBufOut:I
 
-    .line 81
     iput v3, p0, Landroid/media/AmrInputStream;->mBufIn:I
 
-    .line 84
     const/4 v6, 0x0
 
     .local v6, "i":I
@@ -444,7 +404,6 @@
 
     if-ge v6, v1, :cond_2
 
-    .line 85
     iget-object v1, p0, Landroid/media/AmrInputStream;->mInputStream:Ljava/io/InputStream;
 
     iget-object v2, p0, Landroid/media/AmrInputStream;->mBuf:[B
@@ -455,26 +414,21 @@
 
     move-result v7
 
-    .line 86
     .local v7, "n":I
     if-ne v7, v0, :cond_1
 
-    .line 99
     .end local v6    # "i":I
     .end local v7    # "n":I
     :goto_1
     return v0
 
-    .line 87
     .restart local v6    # "i":I
     .restart local v7    # "n":I
     :cond_1
     add-int/2addr v6, v7
 
-    .line 88
     goto :goto_0
 
-    .line 91
     .end local v7    # "n":I
     :cond_2
     iget-wide v0, p0, Landroid/media/AmrInputStream;->mGae:J
@@ -491,7 +445,6 @@
 
     iput v0, p0, Landroid/media/AmrInputStream;->mBufIn:I
 
-    .line 95
     .end local v6    # "i":I
     :cond_3
     iget v0, p0, Landroid/media/AmrInputStream;->mBufIn:I
@@ -508,7 +461,6 @@
 
     sub-int p3, v0, v1
 
-    .line 96
     :cond_4
     iget-object v0, p0, Landroid/media/AmrInputStream;->mBuf:[B
 
@@ -516,7 +468,6 @@
 
     invoke-static {v0, v1, p1, p2, p3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 97
     iget v0, p0, Landroid/media/AmrInputStream;->mBufOut:I
 
     add-int/2addr v0, p3
@@ -525,6 +476,5 @@
 
     move v0, p3
 
-    .line 99
     goto :goto_1
 .end method

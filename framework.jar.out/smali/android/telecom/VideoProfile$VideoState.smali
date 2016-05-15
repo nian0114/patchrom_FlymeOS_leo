@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 242
     and-int v0, p0, p1
 
     if-ne v0, p1, :cond_0
@@ -66,7 +64,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 184
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile$VideoState;->hasState(II)Z
 
     move-result v1
@@ -95,7 +92,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 221
     const/4 v0, 0x3
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile$VideoState;->hasState(II)Z
@@ -110,7 +106,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 230
     const/4 v0, 0x4
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile$VideoState;->hasState(II)Z
@@ -125,7 +120,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 212
     const/4 v0, 0x2
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile$VideoState;->hasState(II)Z
@@ -140,7 +134,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 203
     const/4 v0, 0x1
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile$VideoState;->hasState(II)Z
@@ -157,7 +150,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 193
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile$VideoState;->hasState(II)Z
 
     move-result v1

@@ -60,7 +60,6 @@
 
     const/4 v4, 0x0
 
-    .line 48
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "ALWAYS"
@@ -69,7 +68,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->ALWAYS:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 53
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "LESS"
@@ -78,7 +76,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->LESS:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 58
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "LESS_OR_EQUAL"
@@ -87,7 +84,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->LESS_OR_EQUAL:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 63
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "GREATER"
@@ -96,7 +92,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->GREATER:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 68
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "GREATER_OR_EQUAL"
@@ -105,7 +100,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->GREATER_OR_EQUAL:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 73
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "EQUAL"
@@ -118,7 +112,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->EQUAL:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 78
     new-instance v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     const-string v1, "NOT_EQUAL"
@@ -131,7 +124,6 @@
 
     sput-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->NOT_EQUAL:Landroid/renderscript/ProgramStore$DepthFunc;
 
-    .line 43
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/renderscript/ProgramStore$DepthFunc;
@@ -183,13 +175,10 @@
     .end annotation
 
     .prologue
-    .line 81
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 82
     iput p3, p0, Landroid/renderscript/ProgramStore$DepthFunc;->mID:I
 
-    .line 83
     return-void
 .end method
 
@@ -198,7 +187,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-class v0, Landroid/renderscript/ProgramStore$DepthFunc;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -214,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Landroid/renderscript/ProgramStore$DepthFunc;->$VALUES:[Landroid/renderscript/ProgramStore$DepthFunc;
 
     invoke-virtual {v0}, [Landroid/renderscript/ProgramStore$DepthFunc;->clone()Ljava/lang/Object;

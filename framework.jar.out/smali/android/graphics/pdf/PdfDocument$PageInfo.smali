@@ -35,10 +35,8 @@
     .locals 0
 
     .prologue
-    .line 273
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 275
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p1, "x0"    # Landroid/graphics/pdf/PdfDocument$1;
 
     .prologue
-    .line 264
     invoke-direct {p0}, Landroid/graphics/pdf/PdfDocument$PageInfo;-><init>()V
 
     return-void
@@ -58,7 +55,6 @@
     .param p0, "x0"    # Landroid/graphics/pdf/PdfDocument$PageInfo;
 
     .prologue
-    .line 264
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageWidth:I
 
     return v0
@@ -70,7 +66,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 264
     iput p1, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageWidth:I
 
     return p1
@@ -81,7 +76,6 @@
     .param p0, "x0"    # Landroid/graphics/pdf/PdfDocument$PageInfo;
 
     .prologue
-    .line 264
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageHeight:I
 
     return v0
@@ -93,7 +87,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 264
     iput p1, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageHeight:I
 
     return p1
@@ -104,7 +97,6 @@
     .param p0, "x0"    # Landroid/graphics/pdf/PdfDocument$PageInfo;
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mContentRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -116,7 +108,6 @@
     .param p1, "x1"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 264
     iput-object p1, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mContentRect:Landroid/graphics/Rect;
 
     return-object p1
@@ -128,7 +119,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 264
     iput p1, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageNumber:I
 
     return p1
@@ -140,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mContentRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -150,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageHeight:I
 
     return v0
@@ -160,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageNumber:I
 
     return v0
@@ -170,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 283
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageWidth:I
 
     return v0

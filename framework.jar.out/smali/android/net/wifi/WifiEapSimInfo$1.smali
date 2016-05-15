@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 168
     new-instance v2, Landroid/net/wifi/WifiEapSimInfo;
 
     invoke-direct {v2}, Landroid/net/wifi/WifiEapSimInfo;-><init>()V
 
-    .line 169
     .local v2, "mWifiEapSimInfo":Landroid/net/wifi/WifiEapSimInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -58,7 +55,6 @@
 
     iput v3, v2, Landroid/net/wifi/WifiEapSimInfo;->mNumOfSims:I
 
-    .line 170
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -66,7 +62,6 @@
     .local v0, "count":I
     move v1, v0
 
-    .line 172
     .end local v0    # "count":I
     .local v1, "count":I
     :goto_0
@@ -76,7 +71,6 @@
     .restart local v0    # "count":I
     if-lez v1, :cond_0
 
-    .line 173
     iget-object v3, v2, Landroid/net/wifi/WifiEapSimInfo;->mSimTypes:Ljava/util/ArrayList;
 
     new-instance v4, Ljava/lang/Integer;
@@ -95,7 +89,6 @@
     .restart local v1    # "count":I
     goto :goto_0
 
-    .line 175
     .end local v1    # "count":I
     .restart local v0    # "count":I
     :cond_0
@@ -106,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiEapSimInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WifiEapSimInfo;
 
     move-result-object v0
@@ -119,7 +111,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 179
     new-array v0, p1, [Landroid/net/wifi/WifiEapSimInfo;
 
     return-object v0
@@ -129,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiEapSimInfo$1;->newArray(I)[Landroid/net/wifi/WifiEapSimInfo;
 
     move-result-object v0

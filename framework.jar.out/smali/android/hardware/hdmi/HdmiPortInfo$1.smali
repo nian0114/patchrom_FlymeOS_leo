@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,24 +48,20 @@
 
     const/4 v0, 0x1
 
-    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 134
     .local v1, "id":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 135
     .local v2, "type":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 136
     .local v3, "address":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -76,7 +71,6 @@
 
     move v4, v0
 
-    .line 137
     .local v4, "cec":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -87,7 +81,6 @@
 
     move v6, v0
 
-    .line 138
     .local v6, "arc":Z
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -98,7 +91,6 @@
 
     move v5, v0
 
-    .line 139
     .local v5, "mhl":Z
     :goto_2
     new-instance v0, Landroid/hardware/hdmi/HdmiPortInfo;
@@ -113,21 +105,18 @@
     :cond_0
     move v4, v7
 
-    .line 136
     goto :goto_0
 
     .restart local v4    # "cec":Z
     :cond_1
     move v6, v7
 
-    .line 137
     goto :goto_1
 
     .restart local v6    # "arc":Z
     :cond_2
     move v5, v7
 
-    .line 138
     goto :goto_2
 .end method
 
@@ -135,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 130
     invoke-virtual {p0, p1}, Landroid/hardware/hdmi/HdmiPortInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/hdmi/HdmiPortInfo;
 
     move-result-object v0
@@ -148,7 +136,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 144
     new-array v0, p1, [Landroid/hardware/hdmi/HdmiPortInfo;
 
     return-object v0
@@ -158,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 130
     invoke-virtual {p0, p1}, Landroid/hardware/hdmi/HdmiPortInfo$1;->newArray(I)[Landroid/hardware/hdmi/HdmiPortInfo;
 
     move-result-object v0

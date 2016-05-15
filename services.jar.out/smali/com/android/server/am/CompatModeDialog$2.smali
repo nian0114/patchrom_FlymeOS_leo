@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 65
     iput-object p1, p0, Lcom/android/server/am/CompatModeDialog$2;->this$0:Lcom/android/server/am/CompatModeDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/am/CompatModeDialog$2;->this$0:Lcom/android/server/am/CompatModeDialog;
 
     iget-object v1, v0, Lcom/android/server/am/CompatModeDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 69
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/CompatModeDialog$2;->this$0:Lcom/android/server/am/CompatModeDialog;
 
@@ -73,18 +70,14 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/am/CompatModePackages;->setPackageAskCompatModeLocked(Ljava/lang/String;Z)V
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/am/CompatModeDialog$2;->this$0:Lcom/android/server/am/CompatModeDialog;
 
     invoke-virtual {v0}, Lcom/android/server/am/CompatModeDialog;->updateControls()V
 
-    .line 72
     monitor-exit v1
 
-    .line 73
     return-void
 
-    .line 72
     :catchall_0
     move-exception v0
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 224
     iput-object p1, p0, Landroid/net/Network$1;->this$0:Landroid/net/Network;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 227
     iget-object v0, p0, Landroid/net/Network$1;->this$0:Landroid/net/Network;
 
     invoke-virtual {v0, p1}, Landroid/net/Network;->getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;

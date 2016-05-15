@@ -48,45 +48,32 @@
     .param p10, "ctlr"    # Landroid/media/MediaFocusControl;
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     iput-object p1, p0, Landroid/media/FocusRequester;->mAttributes:Landroid/media/AudioAttributes;
 
-    .line 81
     iput-object p4, p0, Landroid/media/FocusRequester;->mFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
 
-    .line 82
     iput-object p5, p0, Landroid/media/FocusRequester;->mSourceRef:Landroid/os/IBinder;
 
-    .line 83
     iput-object p6, p0, Landroid/media/FocusRequester;->mClientId:Ljava/lang/String;
 
-    .line 84
     iput-object p7, p0, Landroid/media/FocusRequester;->mDeathHandler:Landroid/media/MediaFocusControl$AudioFocusDeathHandler;
 
-    .line 85
     iput-object p8, p0, Landroid/media/FocusRequester;->mPackageName:Ljava/lang/String;
 
-    .line 86
     iput p9, p0, Landroid/media/FocusRequester;->mCallingUid:I
 
-    .line 87
     iput p2, p0, Landroid/media/FocusRequester;->mFocusGainRequest:I
 
-    .line 88
     iput p3, p0, Landroid/media/FocusRequester;->mGrantFlags:I
 
-    .line 89
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
-    .line 90
     iput-object p10, p0, Landroid/media/FocusRequester;->mFocusController:Landroid/media/MediaFocusControl;
 
-    .line 91
     return-void
 .end method
 
@@ -95,18 +82,15 @@
     .param p0, "flags"    # I
 
     .prologue
-    .line 171
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    .line 172
     .local v0, "msg":Ljava/lang/String;
     and-int/lit8 v1, p0, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 173
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,13 +109,11 @@
 
     move-result-object v0
 
-    .line 175
     :cond_0
     and-int/lit8 v1, p0, 0x4
 
     if-eqz v1, :cond_2
 
-    .line 176
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -146,7 +128,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|"
+    const-string v2, "|"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -156,7 +138,6 @@
 
     move-result-object v0
 
-    .line 177
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -176,13 +157,11 @@
 
     move-result-object v0
 
-    .line 179
     :cond_2
     and-int/lit8 v1, p0, 0x2
 
     if-eqz v1, :cond_4
 
-    .line 180
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -197,7 +176,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|"
+    const-string v2, "|"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -207,7 +186,6 @@
 
     move-result-object v0
 
-    .line 181
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -227,7 +205,6 @@
 
     move-result-object v0
 
-    .line 183
     :cond_4
     return-object v0
 .end method
@@ -237,10 +214,8 @@
     .param p0, "focus"    # I
 
     .prologue
-    .line 140
     packed-switch p0, :pswitch_data_0
 
-    .line 158
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,55 +243,46 @@
     :goto_0
     return-object v0
 
-    .line 142
     :pswitch_0
-    const-string/jumbo v0, "none"
+    const-string v0, "none"
 
     goto :goto_0
 
-    .line 144
     :pswitch_1
     const-string v0, "GAIN"
 
     goto :goto_0
 
-    .line 146
     :pswitch_2
     const-string v0, "GAIN_TRANSIENT"
 
     goto :goto_0
 
-    .line 148
     :pswitch_3
     const-string v0, "GAIN_TRANSIENT_MAY_DUCK"
 
     goto :goto_0
 
-    .line 150
     :pswitch_4
     const-string v0, "GAIN_TRANSIENT_EXCLUSIVE"
 
     goto :goto_0
 
-    .line 152
     :pswitch_5
     const-string v0, "LOSS"
 
     goto :goto_0
 
-    .line 154
     :pswitch_6
     const-string v0, "LOSS_TRANSIENT"
 
     goto :goto_0
 
-    .line 156
     :pswitch_7
     const-string v0, "LOSS_TRANSIENT_CAN_DUCK"
 
     goto :goto_0
 
-    .line 140
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_7
@@ -334,7 +300,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget v0, p0, Landroid/media/FocusRequester;->mFocusGainRequest:I
 
     invoke-static {v0}, Landroid/media/FocusRequester;->focusChangeToString(I)Ljava/lang/String;
@@ -353,10 +318,8 @@
 
     const/4 v0, -0x1
 
-    .line 222
     packed-switch p1, :pswitch_data_0
 
-    .line 252
     :goto_0
     const-string v0, "MediaFocusControl"
 
@@ -380,26 +343,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     const/4 v0, 0x0
 
     :goto_1
     :pswitch_0
     return v0
 
-    .line 224
     :pswitch_1
     iget v2, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
     packed-switch v2, :pswitch_data_1
 
-    .line 233
     :pswitch_2
     iget v2, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
     packed-switch v2, :pswitch_data_2
 
-    .line 242
     :pswitch_3
     iget v2, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
@@ -407,7 +366,6 @@
 
     goto :goto_0
 
-    .line 245
     :pswitch_4
     const/4 v0, -0x3
 
@@ -416,16 +374,13 @@
     :pswitch_5
     move v0, v1
 
-    .line 237
     goto :goto_1
 
     :pswitch_6
     move v0, v1
 
-    .line 247
     goto :goto_1
 
-    .line 222
     nop
 
     :pswitch_data_0
@@ -436,7 +391,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 224
     :pswitch_data_1
     .packed-switch -0x3
         :pswitch_0
@@ -445,7 +399,6 @@
         :pswitch_0
     .end packed-switch
 
-    .line 233
     :pswitch_data_2
     .packed-switch -0x3
         :pswitch_5
@@ -454,7 +407,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 242
     :pswitch_data_3
     .packed-switch -0x3
         :pswitch_4
@@ -468,7 +420,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget v0, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
     invoke-static {v0}, Landroid/media/FocusRequester;->focusChangeToString(I)Ljava/lang/String;
@@ -485,7 +436,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 187
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -600,7 +550,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 195
     return-void
 .end method
 
@@ -613,13 +562,10 @@
     .end annotation
 
     .prologue
-    .line 211
     invoke-virtual {p0}, Landroid/media/FocusRequester;->release()V
 
-    .line 212
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 213
     return-void
 .end method
 
@@ -627,7 +573,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/media/FocusRequester;->mAttributes:Landroid/media/AudioAttributes;
 
     return-object v0
@@ -637,7 +582,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/media/FocusRequester;->mClientId:Ljava/lang/String;
 
     return-object v0
@@ -647,7 +591,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget v0, p0, Landroid/media/FocusRequester;->mFocusGainRequest:I
 
     return v0
@@ -657,7 +600,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget v0, p0, Landroid/media/FocusRequester;->mGrantFlags:I
 
     return v0
@@ -668,16 +610,13 @@
     .param p1, "focusGain"    # I
 
     .prologue
-    .line 261
     invoke-direct {p0, p1}, Landroid/media/FocusRequester;->focusLossForGainRequest(I)I
 
     move-result v0
 
-    .line 262
     .local v0, "focusLoss":I
     invoke-virtual {p0, v0}, Landroid/media/FocusRequester;->handleFocusLoss(I)V
 
-    .line 263
     return-void
 .end method
 
@@ -686,13 +625,11 @@
     .param p1, "focusGain"    # I
 
     .prologue
-    .line 270
     const/4 v1, 0x0
 
     :try_start_0
     iput v1, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
-    .line 271
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusController:Landroid/media/MediaFocusControl;
 
     invoke-virtual {p0}, Landroid/media/FocusRequester;->toAudioFocusInfo()Landroid/media/AudioFocusInfo;
@@ -703,12 +640,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/MediaFocusControl;->notifyExtPolicyFocusGrant_syncAf(Landroid/media/AudioFocusInfo;I)V
 
-    .line 273
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
 
     if-eqz v1, :cond_0
 
-    .line 278
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
 
     iget-object v2, p0, Landroid/media/FocusRequester;->mClientId:Ljava/lang/String;
@@ -717,16 +652,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 283
     :cond_0
     :goto_0
     return-void
 
-    .line 280
     :catch_0
     move-exception v0
 
-    .line 281
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MediaFocusControl"
 
@@ -742,16 +674,13 @@
     .param p1, "focusLoss"    # I
 
     .prologue
-    .line 290
     :try_start_0
     iget v1, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
     if-eq p1, v1, :cond_0
 
-    .line 291
     iput p1, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
 
-    .line 297
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusController:Landroid/media/MediaFocusControl;
 
     invoke-virtual {v1}, Landroid/media/MediaFocusControl;->mustNotifyFocusOwnerOnDuck()Z
@@ -772,7 +701,6 @@
 
     if-nez v1, :cond_1
 
-    .line 305
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusController:Landroid/media/MediaFocusControl;
 
     invoke-virtual {p0}, Landroid/media/FocusRequester;->toAudioFocusInfo()Landroid/media/AudioFocusInfo;
@@ -783,18 +711,15 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/MediaFocusControl;->notifyExtPolicyFocusLoss_syncAf(Landroid/media/AudioFocusInfo;Z)V
 
-    .line 322
     :cond_0
     :goto_0
     return-void
 
-    .line 309
     :cond_1
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
 
     if-eqz v1, :cond_0
 
-    .line 314
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusController:Landroid/media/MediaFocusControl;
 
     invoke-virtual {p0}, Landroid/media/FocusRequester;->toAudioFocusInfo()Landroid/media/AudioFocusInfo;
@@ -805,7 +730,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/MediaFocusControl;->notifyExtPolicyFocusLoss_syncAf(Landroid/media/AudioFocusInfo;Z)V
 
-    .line 316
     iget-object v1, p0, Landroid/media/FocusRequester;->mFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
 
     iget v2, p0, Landroid/media/FocusRequester;->mFocusLossReceived:I
@@ -818,11 +742,9 @@
 
     goto :goto_0
 
-    .line 319
     :catch_0
     move-exception v0
 
-    .line 320
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MediaFocusControl"
 
@@ -838,7 +760,6 @@
     .param p1, "ib"    # Landroid/os/IBinder;
 
     .prologue
-    .line 107
     iget-object v0, p0, Landroid/media/FocusRequester;->mSourceRef:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
@@ -869,7 +790,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 96
     :try_start_0
     iget-object v2, p0, Landroid/media/FocusRequester;->mClientId:Ljava/lang/String;
 
@@ -883,16 +803,13 @@
 
     const/4 v1, 0x1
 
-    .line 98
     :cond_0
     :goto_0
     return v1
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 98
     .local v0, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -904,7 +821,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 112
     :try_start_0
     iget-object v2, p0, Landroid/media/FocusRequester;->mPackageName:Ljava/lang/String;
 
@@ -918,16 +834,13 @@
 
     const/4 v1, 0x1
 
-    .line 114
     :cond_0
     :goto_0
     return v1
 
-    .line 113
     :catch_0
     move-exception v0
 
-    .line 114
     .local v0, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -937,7 +850,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 119
     iget v0, p0, Landroid/media/FocusRequester;->mCallingUid:I
 
     if-ne v0, p1, :cond_0
@@ -957,7 +869,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget v0, p0, Landroid/media/FocusRequester;->mGrantFlags:I
 
     and-int/lit8 v0, v0, 0x4
@@ -979,7 +890,6 @@
     .locals 4
 
     .prologue
-    .line 200
     :try_start_0
     iget-object v1, p0, Landroid/media/FocusRequester;->mSourceRef:Landroid/os/IBinder;
 
@@ -989,7 +899,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 201
     iget-object v1, p0, Landroid/media/FocusRequester;->mSourceRef:Landroid/os/IBinder;
 
     iget-object v2, p0, Landroid/media/FocusRequester;->mDeathHandler:Landroid/media/MediaFocusControl$AudioFocusDeathHandler;
@@ -998,23 +907,19 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 202
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/FocusRequester;->mDeathHandler:Landroid/media/MediaFocusControl$AudioFocusDeathHandler;
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 207
     :cond_0
     :goto_0
     return-void
 
-    .line 204
     :catch_0
     move-exception v0
 
-    .line 205
     .local v0, "e":Ljava/util/NoSuchElementException;
     const-string v1, "MediaFocusControl"
 
@@ -1029,7 +934,6 @@
     .locals 7
 
     .prologue
-    .line 325
     new-instance v0, Landroid/media/AudioFocusInfo;
 
     iget-object v1, p0, Landroid/media/FocusRequester;->mAttributes:Landroid/media/AudioAttributes;

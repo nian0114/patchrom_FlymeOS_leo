@@ -27,21 +27,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 262
     iput-object p1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
-    .line 263
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 264
     iput-object p3, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->mContext:Landroid/content/Context;
 
-    .line 265
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->onChange(Z)V
 
-    .line 266
     return-void
 .end method
 
@@ -52,12 +47,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 270
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 271
     return-void
 .end method
 
@@ -67,14 +60,12 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 275
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 276
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
@@ -89,7 +80,6 @@
     # setter for: Lcom/android/internal/telephony/SmsUsageMonitor;->mMaxAllowed:I
     invoke-static {v1, v2}, Lcom/android/internal/telephony/SmsUsageMonitor;->access$002(Lcom/android/internal/telephony/SmsUsageMonitor;I)I
 
-    .line 280
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SmsLimitObserver;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
     const-string v2, "sms_outgoing_check_interval_ms"
@@ -103,6 +93,5 @@
     # setter for: Lcom/android/internal/telephony/SmsUsageMonitor;->mCheckPeriod:I
     invoke-static {v1, v2}, Lcom/android/internal/telephony/SmsUsageMonitor;->access$102(Lcom/android/internal/telephony/SmsUsageMonitor;I)I
 
-    .line 283
     return-void
 .end method

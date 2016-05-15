@@ -31,21 +31,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     iput v1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mScanMode:I
 
-    .line 167
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mCallbackType:I
 
-    .line 168
     iput v1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mScanResultType:I
 
-    .line 169
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mReportDelayMillis:J
@@ -60,7 +55,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 206
     if-eq p1, v0, :cond_0
 
     const/4 v1, 0x2
@@ -71,7 +65,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 211
     :cond_0
     :goto_0
     return v0
@@ -92,7 +85,6 @@
     .locals 7
 
     .prologue
-    .line 254
     new-instance v0, Landroid/bluetooth/le/ScanSettings;
 
     iget v1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mScanMode:I
@@ -115,14 +107,12 @@
     .param p1, "callbackType"    # I
 
     .prologue
-    .line 197
     invoke-direct {p0, p1}, Landroid/bluetooth/le/ScanSettings$Builder;->isValidCallbackType(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 198
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,11 +137,9 @@
 
     throw v0
 
-    .line 200
     :cond_0
     iput p1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mCallbackType:I
 
-    .line 201
     return-object p0
 .end method
 
@@ -160,27 +148,23 @@
     .param p1, "reportDelayMillis"    # J
 
     .prologue
-    .line 243
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gez v0, :cond_0
 
-    .line 244
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "reportDelay must be > 0"
+    const-string v1, "reportDelay must be > 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 246
     :cond_0
     iput-wide p1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mReportDelayMillis:J
 
-    .line 247
     return-object p0
 .end method
 
@@ -189,14 +173,12 @@
     .param p1, "scanMode"    # I
 
     .prologue
-    .line 180
     if-ltz p1, :cond_0
 
     const/4 v0, 0x2
 
     if-le p1, v0, :cond_1
 
-    .line 181
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -222,11 +204,9 @@
 
     throw v0
 
-    .line 183
     :cond_1
     iput p1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mScanMode:I
 
-    .line 184
     return-object p0
 .end method
 
@@ -235,14 +215,12 @@
     .param p1, "scanResultType"    # I
 
     .prologue
-    .line 225
     if-ltz p1, :cond_0
 
     const/4 v0, 0x1
 
     if-le p1, v0, :cond_1
 
-    .line 227
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -268,10 +246,8 @@
 
     throw v0
 
-    .line 230
     :cond_1
     iput p1, p0, Landroid/bluetooth/le/ScanSettings$Builder;->mScanResultType:I
 
-    .line 231
     return-object p0
 .end method

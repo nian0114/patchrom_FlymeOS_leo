@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 278
     iput-object p1, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
 
     iput-boolean p2, p0, Landroid/media/tv/TvInputService$Session$1;->val$enable:Z
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 281
     iget-boolean v0, p0, Landroid/media/tv/TvInputService$Session$1;->val$enable:Z
 
     iget-object v1, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
@@ -56,12 +54,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 292
     :cond_0
     :goto_0
     return-void
 
-    .line 284
     :cond_1
     iget-object v0, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -70,12 +66,10 @@
     # setter for: Landroid/media/tv/TvInputService$Session;->mOverlayViewEnabled:Z
     invoke-static {v0, v1}, Landroid/media/tv/TvInputService$Session;->access$302(Landroid/media/tv/TvInputService$Session;Z)Z
 
-    .line 285
     iget-boolean v0, p0, Landroid/media/tv/TvInputService$Session$1;->val$enable:Z
 
     if-eqz v0, :cond_2
 
-    .line 286
     iget-object v0, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # getter for: Landroid/media/tv/TvInputService$Session;->mWindowToken:Landroid/os/IBinder;
@@ -85,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 287
     iget-object v0, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
 
     iget-object v1, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
@@ -106,7 +99,6 @@
 
     goto :goto_0
 
-    .line 290
     :cond_2
     iget-object v0, p0, Landroid/media/tv/TvInputService$Session$1;->this$0:Landroid/media/tv/TvInputService$Session;
 

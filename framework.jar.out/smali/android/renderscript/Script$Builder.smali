@@ -24,12 +24,9 @@
     .param p1, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 366
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 367
     iput-object p1, p0, Landroid/renderscript/Script$Builder;->mRS:Landroid/renderscript/RenderScript;
 
-    .line 368
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1560
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionController$DataConnectionHandler;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/SubscriptionController$1;
 
     .prologue
-    .line 1560
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/SubscriptionController$DataConnectionHandler;-><init>(Lcom/android/internal/telephony/SubscriptionController;)V
 
     return-void
@@ -50,22 +48,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1563
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1573
     :goto_0
     return-void
 
-    .line 1565
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 1566
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v2, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -75,7 +69,6 @@
 
     move-result v1
 
-    .line 1567
     .local v1, "subId":I
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$DataConnectionHandler;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -100,13 +93,11 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->logd(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/SubscriptionController;->access$000(Lcom/android/internal/telephony/SubscriptionController;Ljava/lang/String;)V
 
-    .line 1568
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$DataConnectionHandler;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->setDefaultDataSubNetworkType(I)V
     invoke-static {v2, v1}, Lcom/android/internal/telephony/SubscriptionController;->access$200(Lcom/android/internal/telephony/SubscriptionController;I)V
 
-    .line 1569
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$DataConnectionHandler;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->updateDataSubId(Landroid/os/AsyncResult;)V
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 1563
     nop
 
     :pswitch_data_0

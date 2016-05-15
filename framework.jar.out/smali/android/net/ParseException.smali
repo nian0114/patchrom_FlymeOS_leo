@@ -13,12 +13,9 @@
     .param p1, "response"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
-    .line 27
     iput-object p1, p0, Landroid/net/ParseException;->response:Ljava/lang/String;
 
-    .line 28
     return-void
 .end method

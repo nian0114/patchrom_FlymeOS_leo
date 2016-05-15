@@ -93,41 +93,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 298
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/os/CommonClock;->mListenerLock:Ljava/lang/Object;
 
-    .line 299
     iput-object v1, p0, Landroid/os/CommonClock;->mTimelineChangedListener:Landroid/os/CommonClock$OnTimelineChangedListener;
 
-    .line 300
     iput-object v1, p0, Landroid/os/CommonClock;->mServerDiedListener:Landroid/os/CommonClock$OnServerDiedListener;
 
-    .line 302
     iput-object v1, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
-    .line 303
     const-string v0, ""
 
     iput-object v0, p0, Landroid/os/CommonClock;->mInterfaceDesc:Ljava/lang/String;
 
-    .line 306
     new-instance v0, Landroid/os/CommonClock$1;
 
     invoke-direct {v0, p0}, Landroid/os/CommonClock$1;-><init>(Landroid/os/CommonClock;)V
 
     iput-object v0, p0, Landroid/os/CommonClock;->mDeathHandler:Landroid/os/IBinder$DeathRecipient;
 
-    .line 336
     iput-object v1, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
-    .line 114
     const-string v0, "common_time.clock"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -136,19 +127,16 @@
 
     iput-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
-    .line 115
     iget-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
     if-nez v0, :cond_0
 
-    .line 116
     new-instance v0, Landroid/os/RemoteException;
 
     invoke-direct {v0}, Landroid/os/RemoteException;-><init>()V
 
     throw v0
 
-    .line 118
     :cond_0
     iget-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
@@ -158,7 +146,6 @@
 
     iput-object v0, p0, Landroid/os/CommonClock;->mInterfaceDesc:Ljava/lang/String;
 
-    .line 119
     new-instance v0, Landroid/os/CommonTimeUtils;
 
     iget-object v1, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
@@ -169,7 +156,6 @@
 
     iput-object v0, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
-    .line 120
     iget-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
     iget-object v1, p0, Landroid/os/CommonClock;->mDeathHandler:Landroid/os/IBinder$DeathRecipient;
@@ -178,10 +164,8 @@
 
     invoke-interface {v0, v1, v2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 121
     invoke-direct {p0}, Landroid/os/CommonClock;->registerTimelineChangeListener()V
 
-    .line 122
     return-void
 .end method
 
@@ -190,7 +174,6 @@
     .param p0, "x0"    # Landroid/os/CommonClock;
 
     .prologue
-    .line 33
     iget-object v0, p0, Landroid/os/CommonClock;->mListenerLock:Ljava/lang/Object;
 
     return-object v0
@@ -201,7 +184,6 @@
     .param p0, "x0"    # Landroid/os/CommonClock;
 
     .prologue
-    .line 33
     iget-object v0, p0, Landroid/os/CommonClock;->mServerDiedListener:Landroid/os/CommonClock$OnServerDiedListener;
 
     return-object v0
@@ -212,7 +194,6 @@
     .param p0, "x0"    # Landroid/os/CommonClock;
 
     .prologue
-    .line 33
     iget-object v0, p0, Landroid/os/CommonClock;->mTimelineChangedListener:Landroid/os/CommonClock$OnTimelineChangedListener;
 
     return-object v0
@@ -222,7 +203,6 @@
     .locals 2
 
     .prologue
-    .line 131
     :try_start_0
     new-instance v1, Landroid/os/CommonClock;
 
@@ -230,17 +210,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
     .local v1, "retVal":Landroid/os/CommonClock;
     :goto_0
     return-object v1
 
-    .line 133
     .end local v1    # "retVal":Landroid/os/CommonClock;
     :catch_0
     move-exception v0
 
-    .line 134
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -261,33 +238,27 @@
 
     const/4 v8, 0x0
 
-    .line 339
     iget-object v5, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     if-eqz v5, :cond_1
 
-    .line 369
     :cond_0
     :goto_0
     return-void
 
-    .line 342
     :cond_1
     const/4 v3, 0x0
 
-    .line 343
     .local v3, "success":Z
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 344
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 345
     .local v2, "reply":Landroid/os/Parcel;
     new-instance v5, Landroid/os/CommonClock$TimelineChangedListener;
 
@@ -295,18 +266,15 @@
 
     iput-object v5, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
-    .line 348
     :try_start_0
     iget-object v5, p0, Landroid/os/CommonClock;->mInterfaceDesc:Ljava/lang/String;
 
     invoke-virtual {v0, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 349
     iget-object v5, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     invoke-virtual {v0, v5}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 350
     iget-object v5, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
     const/16 v6, 0xc
@@ -315,7 +283,6 @@
 
     invoke-interface {v5, v6, v0, v2, v7}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 351
     invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -327,24 +294,18 @@
 
     const/4 v3, 0x1
 
-    .line 357
     :goto_1
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 358
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 364
     :goto_2
     if-nez v3, :cond_0
 
-    .line 365
     iput-object v8, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
-    .line 366
     iput-object v8, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
-    .line 367
     iput-object v8, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
     goto :goto_0
@@ -352,33 +313,26 @@
     :cond_2
     move v3, v4
 
-    .line 351
     goto :goto_1
 
-    .line 353
     :catch_0
     move-exception v1
 
-    .line 354
     .local v1, "e":Landroid/os/RemoteException;
     const/4 v3, 0x0
 
-    .line 357
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 358
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_2
 
-    .line 357
     .end local v1    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v4
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 358
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v4
@@ -393,7 +347,6 @@
     .end annotation
 
     .prologue
-    .line 294
     iget-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
@@ -402,7 +355,6 @@
 
     if-nez v0, :cond_1
 
-    .line 295
     :cond_0
     new-instance v0, Landroid/os/RemoteException;
 
@@ -410,7 +362,6 @@
 
     throw v0
 
-    .line 296
     :cond_1
     return-void
 .end method
@@ -421,40 +372,33 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 372
     iget-object v2, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     if-nez v2, :cond_0
 
-    .line 389
     :goto_0
     return-void
 
-    .line 375
     :cond_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 376
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 379
     .local v1, "reply":Landroid/os/Parcel;
     :try_start_0
     iget-object v2, p0, Landroid/os/CommonClock;->mInterfaceDesc:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 380
     iget-object v2, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 381
     iget-object v2, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xd
@@ -466,42 +410,32 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 385
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 386
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 387
     iput-object v5, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     goto :goto_0
 
-    .line 383
     :catch_0
     move-exception v2
 
-    .line 385
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 386
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 387
     iput-object v5, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     goto :goto_0
 
-    .line 385
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 386
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 387
     iput-object v5, p0, Landroid/os/CommonClock;->mCallbackTgt:Landroid/os/CommonClock$TimelineChangedListener;
 
     throw v2
@@ -518,7 +452,6 @@
     .end annotation
 
     .prologue
-    .line 291
     invoke-virtual {p0}, Landroid/os/CommonClock;->release()V
 
     return-void
@@ -533,10 +466,8 @@
     .end annotation
 
     .prologue
-    .line 190
     invoke-direct {p0}, Landroid/os/CommonClock;->throwOnDeadServer()V
 
-    .line 191
     iget-object v0, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
     const/16 v1, 0x8
@@ -559,10 +490,8 @@
     .end annotation
 
     .prologue
-    .line 231
     invoke-direct {p0}, Landroid/os/CommonClock;->throwOnDeadServer()V
 
-    .line 232
     iget-object v0, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
     const/16 v1, 0xb
@@ -583,10 +512,8 @@
     .end annotation
 
     .prologue
-    .line 218
     invoke-direct {p0}, Landroid/os/CommonClock;->throwOnDeadServer()V
 
-    .line 219
     iget-object v0, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
     const/16 v1, 0xa
@@ -609,10 +536,8 @@
     .end annotation
 
     .prologue
-    .line 171
     invoke-direct {p0}, Landroid/os/CommonClock;->throwOnDeadServer()V
 
-    .line 172
     iget-object v0, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
     const/4 v1, 0x4
@@ -635,10 +560,8 @@
     .end annotation
 
     .prologue
-    .line 204
     invoke-direct {p0}, Landroid/os/CommonClock;->throwOnDeadServer()V
 
-    .line 205
     iget-object v0, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
     const/16 v1, 0x9
@@ -658,15 +581,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 150
     invoke-direct {p0}, Landroid/os/CommonClock;->unregisterTimelineChangeListener()V
 
-    .line 151
     iget-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 153
     :try_start_0
     iget-object v0, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
@@ -678,18 +598,14 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 156
     :goto_0
     iput-object v3, p0, Landroid/os/CommonClock;->mRemote:Landroid/os/IBinder;
 
-    .line 158
     :cond_0
     iput-object v3, p0, Landroid/os/CommonClock;->mUtils:Landroid/os/CommonTimeUtils;
 
-    .line 159
     return-void
 
-    .line 155
     :catch_0
     move-exception v0
 
@@ -701,22 +617,17 @@
     .param p1, "listener"    # Landroid/os/CommonClock$OnServerDiedListener;
 
     .prologue
-    .line 286
     iget-object v1, p0, Landroid/os/CommonClock;->mListenerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 287
     :try_start_0
     iput-object p1, p0, Landroid/os/CommonClock;->mServerDiedListener:Landroid/os/CommonClock$OnServerDiedListener;
 
-    .line 288
     monitor-exit v1
 
-    .line 289
     return-void
 
-    .line 288
     :catchall_0
     move-exception v0
 
@@ -732,22 +643,17 @@
     .param p1, "listener"    # Landroid/os/CommonClock$OnTimelineChangedListener;
 
     .prologue
-    .line 258
     iget-object v1, p0, Landroid/os/CommonClock;->mListenerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 259
     :try_start_0
     iput-object p1, p0, Landroid/os/CommonClock;->mTimelineChangedListener:Landroid/os/CommonClock$OnTimelineChangedListener;
 
-    .line 260
     monitor-exit v1
 
-    .line 261
     return-void
 
-    .line 260
     :catchall_0
     move-exception v0
 

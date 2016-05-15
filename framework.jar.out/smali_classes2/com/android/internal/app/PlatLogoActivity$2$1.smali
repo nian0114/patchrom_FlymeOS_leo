@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$2$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 179
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$2;
 
     iget-object v1, v1, Lcom/android/internal/app/PlatLogoActivity$2;->this$0:Lcom/android/internal/app/PlatLogoActivity;
@@ -56,11 +54,9 @@
 
     const/4 v1, 0x0
 
-    .line 205
     :goto_0
     return v1
 
-    .line 181
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$2;
 
@@ -70,7 +66,6 @@
 
     move-result-object v0
 
-    .line 182
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v1, "egg_mode"
 
@@ -82,7 +77,6 @@
 
     if-nez v1, :cond_1
 
-    .line 185
     const-string v1, "egg_mode"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -91,7 +85,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 189
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$2$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$2;
 
@@ -103,7 +96,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->post(Ljava/lang/Runnable;)Z
 
-    .line 205
     const/4 v1, 0x1
 
     goto :goto_0

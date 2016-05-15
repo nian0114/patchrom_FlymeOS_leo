@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 415
     iput-object p1, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     invoke-direct {p0}, Landroid/media/MediaRouter$SimpleCallback;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/app/MediaRouteButton$1;
 
     .prologue
-    .line 415
     invoke-direct {p0, p1}, Landroid/app/MediaRouteButton$MediaRouterCallback;-><init>(Landroid/app/MediaRouteButton;)V
 
     return-void
@@ -51,13 +49,11 @@
     .param p2, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 418
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 419
     return-void
 .end method
 
@@ -67,13 +63,11 @@
     .param p2, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 428
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 429
     return-void
 .end method
 
@@ -85,13 +79,11 @@
     .param p4, "index"    # I
 
     .prologue
-    .line 444
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 445
     return-void
 .end method
 
@@ -101,13 +93,11 @@
     .param p2, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 423
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 424
     return-void
 .end method
 
@@ -118,13 +108,11 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 433
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 434
     return-void
 .end method
 
@@ -135,13 +123,11 @@
     .param p3, "group"    # Landroid/media/MediaRouter$RouteGroup;
 
     .prologue
-    .line 449
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 450
     return-void
 .end method
 
@@ -152,12 +138,10 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 438
     iget-object v0, p0, Landroid/app/MediaRouteButton$MediaRouterCallback;->this$0:Landroid/app/MediaRouteButton;
 
     # invokes: Landroid/app/MediaRouteButton;->refreshRoute()V
     invoke-static {v0}, Landroid/app/MediaRouteButton;->access$100(Landroid/app/MediaRouteButton;)V
 
-    .line 439
     return-void
 .end method

@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1330
     const-string v0, "android.type.electronic"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1331
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .param p1, "domain"    # Ljava/lang/String;
 
     .prologue
-    .line 1377
     const-string v0, "android.arg.domain"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
@@ -62,7 +59,6 @@
     .param p2, "domain"    # Ljava/lang/String;
 
     .prologue
-    .line 1342
     invoke-virtual {p0, p2}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setDomain(Ljava/lang/String;)Landroid/text/style/TtsSpan$ElectronicBuilder;
 
     move-result-object v0
@@ -79,7 +75,6 @@
     .param p1, "fragmentId"    # Ljava/lang/String;
 
     .prologue
-    .line 1411
     const-string v0, "android.arg.fragment_id"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
@@ -96,7 +91,6 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 1368
     const-string v0, "android.arg.password"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
@@ -113,7 +107,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 1394
     const-string v0, "android.arg.path"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
@@ -130,7 +123,6 @@
     .param p1, "port"    # I
 
     .prologue
-    .line 1385
     const-string v0, "android.arg.port"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setIntArgument(Ljava/lang/String;I)Landroid/text/style/TtsSpan$Builder;
@@ -147,7 +139,6 @@
     .param p1, "protocol"    # Ljava/lang/String;
 
     .prologue
-    .line 1352
     const-string v0, "android.arg.protocol"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
@@ -164,7 +155,6 @@
     .param p1, "queryString"    # Ljava/lang/String;
 
     .prologue
-    .line 1403
     const-string v0, "android.arg.query_string"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
@@ -181,7 +171,6 @@
     .param p1, "username"    # Ljava/lang/String;
 
     .prologue
-    .line 1360
     const-string v0, "android.arg.username"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;

@@ -20,16 +20,12 @@
     .param p3, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 35
     invoke-direct {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;-><init>(Landroid/content/Context;)V
 
-    .line 37
     iput-object p2, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
-    .line 38
     iput-object p3, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 39
     return-void
 .end method
 
@@ -40,7 +36,6 @@
     .param p1, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 122
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->collapseItemActionView(Lcom/android/internal/view/menu/MenuItemImpl;)Z
@@ -56,7 +51,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 81
     invoke-super {p0, p1, p2}, Lcom/android/internal/view/menu/MenuBuilder;->dispatchMenuItemSelected(Lcom/android/internal/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -88,7 +82,6 @@
     .param p1, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->expandItemActionView(Lcom/android/internal/view/menu/MenuItemImpl;)Z
@@ -102,7 +95,6 @@
     .locals 3
 
     .prologue
-    .line 127
     iget-object v1, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     if-eqz v1, :cond_0
@@ -113,26 +105,21 @@
 
     move-result v0
 
-    .line 128
     .local v0, "itemId":I
     :goto_0
     if-nez v0, :cond_1
 
-    .line 129
     const/4 v1, 0x0
 
-    .line 131
     :goto_1
     return-object v1
 
-    .line 127
     .end local v0    # "itemId":I
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 131
     .restart local v0    # "itemId":I
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -168,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     return-object v0
@@ -178,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     return-object v0
@@ -188,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     return-object v0
@@ -198,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->isQwertyMode()Z
@@ -212,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->isShortcutsVisible()Z
@@ -227,12 +209,10 @@
     .param p1, "callback"    # Lcom/android/internal/view/menu/MenuBuilder$Callback;
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setCallback(Lcom/android/internal/view/menu/MenuBuilder$Callback;)V
 
-    .line 72
     return-void
 .end method
 
@@ -241,7 +221,6 @@
     .param p1, "iconRes"    # I
 
     .prologue
-    .line 100
     invoke-super {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderIconInt(I)Lcom/android/internal/view/menu/MenuBuilder;
 
     move-result-object v0
@@ -256,7 +235,6 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 96
     invoke-super {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderIconInt(Landroid/graphics/drawable/Drawable;)Lcom/android/internal/view/menu/MenuBuilder;
 
     move-result-object v0
@@ -271,7 +249,6 @@
     .param p1, "titleRes"    # I
 
     .prologue
-    .line 108
     invoke-super {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderTitleInt(I)Lcom/android/internal/view/menu/MenuBuilder;
 
     move-result-object v0
@@ -286,7 +263,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 104
     invoke-super {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderTitleInt(Ljava/lang/CharSequence;)Lcom/android/internal/view/menu/MenuBuilder;
 
     move-result-object v0
@@ -301,7 +277,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 112
     invoke-super {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setHeaderViewInt(Landroid/view/View;)Lcom/android/internal/view/menu/MenuBuilder;
 
     move-result-object v0
@@ -316,12 +291,10 @@
     .param p1, "iconRes"    # I
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuItemImpl;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 92
     return-object p0
 .end method
 
@@ -330,12 +303,10 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mItem:Lcom/android/internal/view/menu/MenuItemImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuItemImpl;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
 
-    .line 87
     return-object p0
 .end method
 
@@ -344,12 +315,10 @@
     .param p1, "isQwerty"    # Z
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setQwertyMode(Z)V
 
-    .line 44
     return-void
 .end method
 
@@ -358,11 +327,9 @@
     .param p1, "shortcutsVisible"    # Z
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/internal/view/menu/SubMenuBuilder;->mParentMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;->setShortcutsVisible(Z)V
 
-    .line 54
     return-void
 .end method

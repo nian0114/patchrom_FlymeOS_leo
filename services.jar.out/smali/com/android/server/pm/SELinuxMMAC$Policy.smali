@@ -35,22 +35,18 @@
     .locals 1
 
     .prologue
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$Policy;->seinfo:Ljava/lang/String;
 
-    .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$Policy;->pkgMap:Ljava/util/HashMap;
 
-    .line 106
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     iget-object v1, p0, Lcom/android/server/pm/SELinuxMMAC$Policy;->pkgMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -70,11 +65,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 125
     .local v0, "seinfoValue":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 130
     .end local v0    # "seinfoValue":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$Policy;->seinfo:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -121,12 +113,10 @@
     .param p2, "seinfoValue"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$Policy;->pkgMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     return-void
 .end method
 
@@ -135,9 +125,7 @@
     .param p1, "seinfoValue"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     iput-object p1, p0, Lcom/android/server/pm/SELinuxMMAC$Policy;->seinfo:Ljava/lang/String;
 
-    .line 110
     return-void
 .end method

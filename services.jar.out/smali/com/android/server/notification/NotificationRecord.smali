@@ -40,16 +40,12 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 77
     iput p2, p0, Lcom/android/server/notification/NotificationRecord;->score:I
 
-    .line 78
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -58,7 +54,6 @@
 
     iput v0, p0, Lcom/android/server/notification/NotificationRecord;->mOriginalFlags:I
 
-    .line 79
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/notification/NotificationRecord;->calculateRankingTimeMs(J)J
@@ -67,7 +62,6 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/NotificationRecord;->mRankingTimeMs:J
 
-    .line 80
     return-void
 .end method
 
@@ -78,12 +72,10 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 270
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 272
     .local v0, "n":Landroid/app/Notification;
     iget-wide v2, v0, Landroid/app/Notification;->when:J
 
@@ -103,23 +95,19 @@
 
     if-gtz v1, :cond_1
 
-    .line 273
     iget-wide p1, v0, Landroid/app/Notification;->when:J
 
-    .line 280
     .end local p1    # "previousRankingTimeMs":J
     :cond_0
     :goto_0
     return-wide p1
 
-    .line 277
     .restart local p1    # "previousRankingTimeMs":J
     :cond_1
     cmp-long v1, p1, v6
 
     if-gtz v1, :cond_0
 
-    .line 280
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getPostTime()J
@@ -136,10 +124,8 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 176
     if-eqz p1, :cond_0
 
-    .line 178
     const/4 v3, 0x0
 
     :try_start_0
@@ -149,14 +135,12 @@
 
     move-result-object v0
 
-    .line 186
     .local v0, "c":Landroid/content/Context;
     :goto_0
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 188
     .local v2, "r":Landroid/content/res/Resources;
     :try_start_1
     invoke-virtual {v2, p2}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
@@ -165,25 +149,20 @@
 
     move-result-object v3
 
-    .line 190
     :goto_1
     return-object v3
 
-    .line 179
     .end local v0    # "c":Landroid/content/Context;
     .end local v2    # "r":Landroid/content/res/Resources;
     :catch_0
     move-exception v1
 
-    .line 180
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object v0, p0
 
-    .line 181
     .restart local v0    # "c":Landroid/content/Context;
     goto :goto_0
 
-    .line 183
     .end local v0    # "c":Landroid/content/Context;
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
@@ -192,12 +171,10 @@
     .restart local v0    # "c":Landroid/content/Context;
     goto :goto_0
 
-    .line 189
     .restart local v2    # "r":Landroid/content/res/Resources;
     :catch_1
     move-exception v1
 
-    .line 190
     .local v1, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v3, "<name unknown>"
 
@@ -211,32 +188,26 @@
     .param p1, "previous"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 84
     iget v0, p1, Lcom/android/server/notification/NotificationRecord;->mContactAffinity:F
 
     iput v0, p0, Lcom/android/server/notification/NotificationRecord;->mContactAffinity:F
 
-    .line 85
     iget-boolean v0, p1, Lcom/android/server/notification/NotificationRecord;->mRecentlyIntrusive:Z
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationRecord;->mRecentlyIntrusive:Z
 
-    .line 86
     iget v0, p1, Lcom/android/server/notification/NotificationRecord;->mPackagePriority:I
 
     iput v0, p0, Lcom/android/server/notification/NotificationRecord;->mPackagePriority:I
 
-    .line 87
     iget v0, p1, Lcom/android/server/notification/NotificationRecord;->mPackageVisibility:I
 
     iput v0, p0, Lcom/android/server/notification/NotificationRecord;->mPackageVisibility:I
 
-    .line 88
     iget-boolean v0, p1, Lcom/android/server/notification/NotificationRecord;->mIntercept:Z
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationRecord;->mIntercept:Z
 
-    .line 89
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getRankingTimeMs()J
 
     move-result-wide v0
@@ -247,7 +218,6 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/NotificationRecord;->mRankingTimeMs:J
 
-    .line 91
     return-void
 .end method
 
@@ -258,14 +228,12 @@
     .param p3, "baseContext"    # Landroid/content/Context;
 
     .prologue
-    .line 101
     iget-object v7, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v7}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v5
 
-    .line 102
     .local v5, "notification":Landroid/app/Notification;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -285,7 +253,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 103
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +299,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 104
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -385,7 +351,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 106
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -428,7 +393,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 107
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,7 +423,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 108
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,7 +451,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 109
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -515,7 +477,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 110
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -542,7 +503,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 111
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -569,7 +529,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 112
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -596,7 +555,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 113
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -645,7 +603,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 115
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -672,7 +629,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 116
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +655,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 117
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -726,7 +681,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 118
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -765,7 +719,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 119
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -796,7 +749,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 120
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -855,7 +807,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 122
     iget-object v7, v5, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     if-eqz v7, :cond_1
@@ -866,7 +817,6 @@
 
     if-lez v7, :cond_1
 
-    .line 123
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -887,12 +837,10 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 124
     iget-object v7, v5, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     array-length v0, v7
 
-    .line 125
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -900,12 +848,10 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 126
     iget-object v7, v5, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     aget-object v1, v7, v2
 
-    .line 127
     .local v1, "action":Landroid/app/Notification$Action;
     const-string v7, "%s    [%d] \"%s\" -> %s"
 
@@ -947,12 +893,10 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 125
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 134
     .end local v1    # "action":Landroid/app/Notification$Action;
     :cond_0
     new-instance v7, Ljava/lang/StringBuilder;
@@ -975,7 +919,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 136
     .end local v0    # "N":I
     .end local v2    # "i":I
     :cond_1
@@ -991,7 +934,6 @@
 
     if-lez v7, :cond_8
 
-    .line 137
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1012,7 +954,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 138
     iget-object v7, v5, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v7}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
@@ -1037,7 +978,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 139
     .local v4, "key":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1069,25 +1009,21 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 140
     iget-object v7, v5, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
-    .line 141
     .local v6, "val":Ljava/lang/Object;
     if-nez v6, :cond_2
 
-    .line 142
     const-string v7, "null"
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 144
     :cond_2
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1099,7 +1035,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 145
     instance-of v7, v6, Ljava/lang/CharSequence;
 
     if-nez v7, :cond_3
@@ -1108,7 +1043,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 157
     .end local v6    # "val":Ljava/lang/Object;
     :cond_3
     :goto_2
@@ -1116,14 +1050,12 @@
 
     goto :goto_1
 
-    .line 147
     .restart local v6    # "val":Ljava/lang/Object;
     :cond_4
     instance-of v7, v6, Landroid/graphics/Bitmap;
 
     if-eqz v7, :cond_5
 
-    .line 148
     const-string v8, " (%dx%d)"
 
     const/4 v7, 0x2
@@ -1169,7 +1101,6 @@
 
     goto :goto_2
 
-    .line 151
     .restart local v6    # "val":Ljava/lang/Object;
     :cond_5
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1182,12 +1113,10 @@
 
     if-eqz v7, :cond_6
 
-    .line 152
     invoke-static {v6}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 153
     .restart local v0    # "N":I
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1217,7 +1146,6 @@
 
     goto :goto_2
 
-    .line 155
     .end local v0    # "N":I
     :cond_6
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1252,7 +1180,6 @@
 
     goto :goto_2
 
-    .line 160
     .end local v4    # "key":Ljava/lang/String;
     .end local v6    # "val":Ljava/lang/Object;
     :cond_7
@@ -1276,7 +1203,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 162
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_8
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1309,7 +1235,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 163
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1336,7 +1261,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 164
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1363,7 +1287,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 165
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1390,7 +1313,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 166
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1417,7 +1339,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 167
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1444,7 +1365,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 168
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1471,7 +1391,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 169
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1498,7 +1417,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 170
     return-void
 .end method
 
@@ -1506,7 +1424,6 @@
     .locals 1
 
     .prologue
-    .line 296
     iget v0, p0, Lcom/android/server/notification/NotificationRecord;->mAuthoritativeRank:I
 
     return v0
@@ -1516,7 +1433,6 @@
     .locals 1
 
     .prologue
-    .line 209
     iget v0, p0, Lcom/android/server/notification/NotificationRecord;->mContactAffinity:F
 
     return v0
@@ -1526,7 +1442,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
@@ -1542,7 +1457,6 @@
     .locals 1
 
     .prologue
-    .line 288
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->mGlobalSortKey:Ljava/lang/String;
 
     return-object v0
@@ -1552,7 +1466,6 @@
     .locals 1
 
     .prologue
-    .line 300
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getGroupKey()Ljava/lang/String;
@@ -1566,7 +1479,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
@@ -1580,7 +1492,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
@@ -1594,7 +1505,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget v0, p0, Lcom/android/server/notification/NotificationRecord;->mPackagePriority:I
 
     return v0
@@ -1604,7 +1514,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget v0, p0, Lcom/android/server/notification/NotificationRecord;->mPackageVisibility:I
 
     return v0
@@ -1614,7 +1523,6 @@
     .locals 2
 
     .prologue
-    .line 262
     iget-wide v0, p0, Lcom/android/server/notification/NotificationRecord;->mRankingTimeMs:J
 
     return-wide v0
@@ -1624,7 +1532,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
@@ -1638,7 +1545,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getUserId()I
@@ -1653,14 +1559,12 @@
     .param p1, "usage"    # I
 
     .prologue
-    .line 254
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
 
     iget-object v0, v1, Landroid/app/Notification;->audioAttributes:Landroid/media/AudioAttributes;
 
-    .line 255
     .local v0, "attributes":Landroid/media/AudioAttributes;
     if-eqz v0, :cond_0
 
@@ -1686,7 +1590,6 @@
     .param p1, "stream"    # I
 
     .prologue
-    .line 250
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -1711,7 +1614,6 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 246
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -1729,7 +1631,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationRecord;->mIntercept:Z
 
     return v0
@@ -1739,7 +1640,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationRecord;->mRecentlyIntrusive:Z
 
     return v0
@@ -1750,10 +1650,8 @@
     .param p1, "authoritativeRank"    # I
 
     .prologue
-    .line 292
     iput p1, p0, Lcom/android/server/notification/NotificationRecord;->mAuthoritativeRank:I
 
-    .line 293
     return-void
 .end method
 
@@ -1762,10 +1660,8 @@
     .param p1, "contactAffinity"    # F
 
     .prologue
-    .line 205
     iput p1, p0, Lcom/android/server/notification/NotificationRecord;->mContactAffinity:F
 
-    .line 206
     return-void
 .end method
 
@@ -1774,10 +1670,8 @@
     .param p1, "globalSortKey"    # Ljava/lang/String;
 
     .prologue
-    .line 284
     iput-object p1, p0, Lcom/android/server/notification/NotificationRecord;->mGlobalSortKey:Ljava/lang/String;
 
-    .line 285
     return-void
 .end method
 
@@ -1786,10 +1680,8 @@
     .param p1, "intercept"    # Z
 
     .prologue
-    .line 237
     iput-boolean p1, p0, Lcom/android/server/notification/NotificationRecord;->mIntercept:Z
 
-    .line 238
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationRecord;->mIntercept:Z
 
     return v0
@@ -1800,10 +1692,8 @@
     .param p1, "packagePriority"    # I
 
     .prologue
-    .line 221
     iput p1, p0, Lcom/android/server/notification/NotificationRecord;->mPackagePriority:I
 
-    .line 222
     return-void
 .end method
 
@@ -1812,10 +1702,8 @@
     .param p1, "packageVisibility"    # I
 
     .prologue
-    .line 229
     iput p1, p0, Lcom/android/server/notification/NotificationRecord;->mPackageVisibility:I
 
-    .line 230
     return-void
 .end method
 
@@ -1824,10 +1712,8 @@
     .param p1, "recentlyIntrusive"    # Z
 
     .prologue
-    .line 213
     iput-boolean p1, p0, Lcom/android/server/notification/NotificationRecord;->mRecentlyIntrusive:Z
 
-    .line 214
     return-void
 .end method
 
@@ -1835,7 +1721,6 @@
     .locals 4
 
     .prologue
-    .line 196
     const-string v0, "NotificationRecord(0x%08x: pkg=%s user=%s id=%d tag=%s score=%d key=%s: %s)"
 
     const/16 v1, 0x8

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/server/net/DelayedDiskWrite$1;->this$0:Lcom/android/server/net/DelayedDiskWrite;
 
     iput-object p2, p0, Lcom/android/server/net/DelayedDiskWrite$1;->val$filePath:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/server/net/DelayedDiskWrite$1;->this$0:Lcom/android/server/net/DelayedDiskWrite;
 
     iget-object v1, p0, Lcom/android/server/net/DelayedDiskWrite$1;->val$filePath:Ljava/lang/String;
@@ -58,6 +56,5 @@
     # invokes: Lcom/android/server/net/DelayedDiskWrite;->doWrite(Ljava/lang/String;Lcom/android/server/net/DelayedDiskWrite$Writer;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/net/DelayedDiskWrite;->access$000(Lcom/android/server/net/DelayedDiskWrite;Ljava/lang/String;Lcom/android/server/net/DelayedDiskWrite$Writer;)V
 
-    .line 58
     return-void
 .end method

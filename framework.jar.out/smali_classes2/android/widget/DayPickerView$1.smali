@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 261
     iput-object p1, p0, Landroid/widget/DayPickerView$1;->this$0:Landroid/widget/DayPickerView;
 
     iput p2, p0, Landroid/widget/DayPickerView$1;->val$position:I
@@ -44,13 +43,11 @@
     .locals 2
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/widget/DayPickerView$1;->this$0:Landroid/widget/DayPickerView;
 
     iget v1, p0, Landroid/widget/DayPickerView$1;->val$position:I
 
     invoke-virtual {v0, v1}, Landroid/widget/DayPickerView;->setSelection(I)V
 
-    .line 266
     return-void
 .end method

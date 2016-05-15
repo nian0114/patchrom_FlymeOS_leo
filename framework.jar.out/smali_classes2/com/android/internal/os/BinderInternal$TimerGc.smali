@@ -37,13 +37,10 @@
     .param p1, "timeInMillis"    # J
 
     .prologue
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 124
     iput-wide p1, p0, Lcom/android/internal/os/BinderInternal$TimerGc;->waitTime:J
 
-    .line 125
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 121
     invoke-virtual {p0}, Lcom/android/internal/os/BinderInternal$TimerGc;->call()Ljava/lang/Void;
 
     move-result-object v0
@@ -75,22 +71,18 @@
     .end annotation
 
     .prologue
-    .line 128
     iget-wide v0, p0, Lcom/android/internal/os/BinderInternal$TimerGc;->waitTime:J
 
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 129
     const-string v0, "Binder"
 
     invoke-static {v0}, Lcom/android/internal/os/BinderInternal;->forceGc(Ljava/lang/String;)V
 
-    .line 130
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
-    .line 131
     const/4 v0, 0x0
 
     return-object v0

@@ -51,31 +51,27 @@
 
     const/4 v1, 0x4
 
-    .line 40
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/graphics/FontListConverter;->WEIGHTS:[I
 
-    .line 41
     new-array v0, v1, [Z
 
     fill-array-data v0, :array_1
 
     sput-object v0, Landroid/graphics/FontListConverter;->ITALICS:[Z
 
-    .line 42
     sget-object v0, Landroid/graphics/FontListConverter;->WEIGHTS:[I
 
     aget v0, v0, v2
 
     sput v0, Landroid/graphics/FontListConverter;->DEFAULT_WEIGHT:I
 
-    .line 47
     new-array v0, v1, [Ljava/lang/String;
 
-    const-string/jumbo v1, "thin"
+    const-string v1, "thin"
 
     aput-object v1, v0, v2
 
@@ -87,7 +83,7 @@
 
     const/4 v1, 0x2
 
-    const-string/jumbo v2, "medium"
+    const-string v2, "medium"
 
     aput-object v2, v0, v1
 
@@ -101,7 +97,6 @@
 
     return-void
 
-    .line 40
     :array_0
     .array-data 4
         0x190
@@ -110,7 +105,6 @@
         0x2bc
     .end array-data
 
-    .line 41
     :array_1
     .array-data 1
         0x0t
@@ -126,35 +120,28 @@
     .param p2, "fontDir"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
-    .line 57
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/FontListConverter;->mFamilies:Ljava/util/List;
 
-    .line 69
     iget-object v0, p0, Landroid/graphics/FontListConverter;->mFamilies:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 70
     iput-object p2, p0, Landroid/graphics/FontListConverter;->mFontDir:Ljava/lang/String;
 
-    .line 71
     invoke-direct {p0}, Landroid/graphics/FontListConverter;->findFamilyVariants()V
 
-    .line 72
     return-void
 .end method
 
@@ -174,36 +161,29 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p1, "families":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
-    .line 57
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/FontListConverter;->mFamilies:Ljava/util/List;
 
-    .line 63
     iget-object v0, p0, Landroid/graphics/FontListConverter;->mFamilies:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 64
     iput-object p2, p0, Landroid/graphics/FontListConverter;->mFontDir:Ljava/lang/String;
 
-    .line 65
     invoke-direct {p0}, Landroid/graphics/FontListConverter;->findFamilyVariants()V
 
-    .line 66
     return-void
 .end method
 
@@ -224,13 +204,11 @@
     .end annotation
 
     .prologue
-    .line 207
     .local p1, "nameset":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 208
     .local v1, "aliases":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Alias;>;"
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -240,11 +218,9 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 218
     :cond_0
     return-object v1
 
-    .line 210
     :cond_1
     const/4 v4, 0x0
 
@@ -254,7 +230,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 211
     .local v3, "toName":Ljava/lang/String;
     const/4 v2, 0x1
 
@@ -266,12 +241,10 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 212
     new-instance v0, Landroid/graphics/FontListParser$Alias;
 
     invoke-direct {v0}, Landroid/graphics/FontListParser$Alias;-><init>()V
 
-    .line 213
     .local v0, "alias":Landroid/graphics/FontListParser$Alias;
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -281,13 +254,10 @@
 
     iput-object v4, v0, Landroid/graphics/FontListParser$Alias;->name:Ljava/lang/String;
 
-    .line 214
     iput-object v3, v0, Landroid/graphics/FontListParser$Alias;->toName:Ljava/lang/String;
 
-    .line 215
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 211
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -313,13 +283,11 @@
     .end annotation
 
     .prologue
-    .line 196
     .local p1, "nameset":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 197
     .local v1, "aliases":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Alias;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -339,25 +307,20 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 198
     .local v3, "name":Ljava/lang/String;
     new-instance v0, Landroid/graphics/FontListParser$Alias;
 
     invoke-direct {v0}, Landroid/graphics/FontListParser$Alias;-><init>()V
 
-    .line 199
     .local v0, "alias":Landroid/graphics/FontListParser$Alias;
     iput-object v3, v0, Landroid/graphics/FontListParser$Alias;->name:Ljava/lang/String;
 
-    .line 200
     iput-object p2, v0, Landroid/graphics/FontListParser$Alias;->toName:Ljava/lang/String;
 
-    .line 201
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 203
     .end local v0    # "alias":Landroid/graphics/FontListParser$Alias;
     .end local v3    # "name":Ljava/lang/String;
     :cond_0
@@ -368,7 +331,6 @@
     .locals 4
 
     .prologue
-    .line 75
     iget-object v3, p0, Landroid/graphics/FontListConverter;->mFamilies:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -390,7 +352,6 @@
 
     check-cast v0, Landroid/graphics/LegacyFontListParser$Family;
 
-    .line 76
     .local v0, "family":Landroid/graphics/LegacyFontListParser$Family;
     invoke-virtual {p0, v0}, Landroid/graphics/FontListConverter;->isNormalStyle(Landroid/graphics/LegacyFontListParser$Family;)Z
 
@@ -398,14 +359,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 77
     iget-object v3, p0, Landroid/graphics/FontListConverter;->mFamilies:Ljava/util/List;
 
     invoke-direct {p0, v0, v3}, Landroid/graphics/FontListConverter;->findVariants(Landroid/graphics/LegacyFontListParser$Family;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 78
     .local v2, "variants":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
     iget-object v3, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
@@ -413,7 +372,6 @@
 
     goto :goto_0
 
-    .line 81
     .end local v0    # "family":Landroid/graphics/LegacyFontListParser$Family;
     .end local v2    # "variants":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
     :cond_1
@@ -439,19 +397,16 @@
     .end annotation
 
     .prologue
-    .line 84
     .local p2, "legacyFamilies":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 86
     .local v4, "variants":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
     invoke-virtual {p1}, Landroid/graphics/LegacyFontListParser$Family;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 88
     .local v3, "normalFamilyName":Ljava/lang/String;
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -472,13 +427,11 @@
 
     check-cast v0, Landroid/graphics/LegacyFontListParser$Family;
 
-    .line 89
     .local v0, "family":Landroid/graphics/LegacyFontListParser$Family;
     invoke-virtual {v0}, Landroid/graphics/LegacyFontListParser$Family;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 91
     .local v2, "name":Ljava/lang/String;
     invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -492,12 +445,10 @@
 
     if-nez v5, :cond_0
 
-    .line 92
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 95
     .end local v0    # "family":Landroid/graphics/LegacyFontListParser$Family;
     .end local v2    # "name":Ljava/lang/String;
     :cond_1
@@ -517,12 +468,10 @@
     .end annotation
 
     .prologue
-    .line 183
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 185
     .local v0, "aliases":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Alias;>;"
     iget-object v7, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
@@ -547,7 +496,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 186
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/LegacyFontListParser$Family;Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -565,7 +513,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 187
     .local v6, "toName":Ljava/lang/String;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -573,7 +520,6 @@
 
     check-cast v4, Ljava/util/List;
 
-    .line 188
     .local v4, "relatedFamilies":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -593,7 +539,6 @@
 
     check-cast v5, Landroid/graphics/LegacyFontListParser$Family;
 
-    .line 189
     .local v5, "relatedFamily":Landroid/graphics/LegacyFontListParser$Family;
     iget-object v7, v5, Landroid/graphics/LegacyFontListParser$Family;->nameset:Ljava/util/List;
 
@@ -605,7 +550,6 @@
 
     goto :goto_0
 
-    .line 192
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/LegacyFontListParser$Family;Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "relatedFamilies":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/LegacyFontListParser$Family;>;"
@@ -621,12 +565,10 @@
     .locals 3
 
     .prologue
-    .line 99
     new-instance v0, Landroid/graphics/FontListParser$Config;
 
     invoke-direct {v0}, Landroid/graphics/FontListParser$Config;-><init>()V
 
-    .line 100
     .local v0, "config":Landroid/graphics/FontListParser$Config;
     iget-object v1, v0, Landroid/graphics/FontListParser$Config;->families:Ljava/util/List;
 
@@ -636,7 +578,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 101
     iget-object v1, v0, Landroid/graphics/FontListParser$Config;->aliases:Ljava/util/List;
 
     invoke-virtual {p0}, Landroid/graphics/FontListConverter;->createAliases()Ljava/util/List;
@@ -645,7 +586,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 102
     return-object v0
 .end method
 
@@ -662,12 +602,10 @@
     .end annotation
 
     .prologue
-    .line 122
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 125
     .local v0, "convertedFamilies":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Family;>;"
     iget-object v3, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
@@ -693,7 +631,6 @@
 
     check-cast v1, Landroid/graphics/LegacyFontListParser$Family;
 
-    .line 126
     .local v1, "family":Landroid/graphics/LegacyFontListParser$Family;
     invoke-virtual {p0, v1}, Landroid/graphics/FontListConverter;->convertFamily(Landroid/graphics/LegacyFontListParser$Family;)Landroid/graphics/FontListParser$Family;
 
@@ -703,7 +640,6 @@
 
     goto :goto_0
 
-    .line 129
     .end local v1    # "family":Landroid/graphics/LegacyFontListParser$Family;
     :cond_0
     return-object v0
@@ -716,14 +652,11 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 133
     iget-object v4, p1, Landroid/graphics/LegacyFontListParser$Family;->nameset:Ljava/util/List;
 
-    .line 134
     .local v4, "nameset":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p1, Landroid/graphics/LegacyFontListParser$Family;->fileset:Ljava/util/List;
 
-    .line 137
     .local v0, "fileset":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
@@ -733,14 +666,12 @@
 
     move-object v3, v7
 
-    .line 139
     .local v3, "name":Ljava/lang/String;
     :goto_0
     invoke-virtual {p0, v0}, Landroid/graphics/FontListConverter;->convertFonts(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 142
     .local v1, "fonts":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Font;>;"
     iget-object v6, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
@@ -768,7 +699,6 @@
 
     check-cast v5, Landroid/graphics/LegacyFontListParser$Family;
 
-    .line 143
     .local v5, "variantFamily":Landroid/graphics/LegacyFontListParser$Family;
     iget-object v6, v5, Landroid/graphics/LegacyFontListParser$Family;->fileset:Ljava/util/List;
 
@@ -780,7 +710,6 @@
 
     goto :goto_1
 
-    .line 137
     .end local v1    # "fonts":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Font;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "name":Ljava/lang/String;
@@ -798,7 +727,6 @@
 
     goto :goto_0
 
-    .line 146
     .restart local v1    # "fonts":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Font;>;"
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "name":Ljava/lang/String;
@@ -827,13 +755,11 @@
     .end annotation
 
     .prologue
-    .line 150
     .local p1, "fileset":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 152
     .local v1, "fonts":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Font;>;"
     const/4 v3, 0x0
 
@@ -845,7 +771,6 @@
 
     if-ge v3, v6, :cond_2
 
-    .line 153
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -876,7 +801,6 @@
 
     move-result-object v2
 
-    .line 156
     .local v2, "fullpath":Ljava/lang/String;
     sget-object v6, Landroid/graphics/FontListConverter;->WEIGHTS:[I
 
@@ -888,7 +812,6 @@
 
     aget v5, v6, v3
 
-    .line 157
     .local v5, "weight":I
     :goto_1
     sget-object v6, Landroid/graphics/FontListConverter;->ITALICS:[Z
@@ -901,23 +824,19 @@
 
     aget-boolean v4, v6, v3
 
-    .line 159
     .local v4, "isItalic":Z
     :goto_2
     new-instance v0, Landroid/graphics/FontListParser$Font;
 
     invoke-direct {v0, v2, v5, v4}, Landroid/graphics/FontListParser$Font;-><init>(Ljava/lang/String;IZ)V
 
-    .line 160
     .local v0, "font":Landroid/graphics/FontListParser$Font;
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 152
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 156
     .end local v0    # "font":Landroid/graphics/FontListParser$Font;
     .end local v4    # "isItalic":Z
     .end local v5    # "weight":I
@@ -926,14 +845,12 @@
 
     goto :goto_1
 
-    .line 157
     .restart local v5    # "weight":I
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 163
     .end local v2    # "fullpath":Ljava/lang/String;
     .end local v5    # "weight":I
     :cond_2
@@ -953,12 +870,10 @@
     .end annotation
 
     .prologue
-    .line 167
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 169
     .local v0, "aliases":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontListParser$Alias;>;"
     iget-object v3, p0, Landroid/graphics/FontListConverter;->mFamilyVariants:Ljava/util/HashMap;
 
@@ -985,7 +900,6 @@
 
     check-cast v1, Landroid/graphics/LegacyFontListParser$Family;
 
-    .line 172
     .local v1, "family":Landroid/graphics/LegacyFontListParser$Family;
     invoke-virtual {p0, v1}, Landroid/graphics/FontListConverter;->isNormalStyle(Landroid/graphics/LegacyFontListParser$Family;)Z
 
@@ -993,7 +907,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 173
     iget-object v3, v1, Landroid/graphics/LegacyFontListParser$Family;->nameset:Ljava/util/List;
 
     invoke-direct {p0, v3}, Landroid/graphics/FontListConverter;->adaptNamesetAliases(Ljava/util/List;)Ljava/util/List;
@@ -1004,7 +917,6 @@
 
     goto :goto_0
 
-    .line 177
     .end local v1    # "family":Landroid/graphics/LegacyFontListParser$Family;
     :cond_1
     invoke-direct {p0}, Landroid/graphics/FontListConverter;->getAliasesForRelatedFamilies()Ljava/util/List;
@@ -1013,7 +925,6 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 179
     return-object v0
 .end method
 
@@ -1024,21 +935,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 110
     invoke-virtual {p1}, Landroid/graphics/LegacyFontListParser$Family;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 111
     .local v3, "name":Ljava/lang/String;
     if-nez v3, :cond_1
 
-    .line 118
     :cond_0
     :goto_0
     return v5
 
-    .line 113
     :cond_1
     sget-object v0, Landroid/graphics/FontListConverter;->STYLES:[Ljava/lang/String;
 
@@ -1054,7 +961,6 @@
 
     aget-object v4, v0, v1
 
-    .line 114
     .local v4, "style":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1080,12 +986,10 @@
 
     if-nez v6, :cond_0
 
-    .line 113
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 118
     .end local v4    # "style":Ljava/lang/String;
     :cond_2
     const/4 v5, 0x1

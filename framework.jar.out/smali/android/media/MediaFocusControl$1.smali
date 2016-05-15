@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 424
     iput-object p1, p0, Landroid/media/MediaFocusControl$1;->this$0:Landroid/media/MediaFocusControl;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,10 +40,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 427
     if-ne p1, v0, :cond_1
 
-    .line 429
     # getter for: Landroid/media/MediaFocusControl;->mRingingLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/MediaFocusControl;->access$1800()Ljava/lang/Object;
 
@@ -52,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 430
     :try_start_0
     iget-object v0, p0, Landroid/media/MediaFocusControl$1;->this$0:Landroid/media/MediaFocusControl;
 
@@ -61,15 +57,12 @@
     # setter for: Landroid/media/MediaFocusControl;->mIsRinging:Z
     invoke-static {v0, v2}, Landroid/media/MediaFocusControl;->access$1902(Landroid/media/MediaFocusControl;Z)Z
 
-    .line 431
     monitor-exit v1
 
-    .line 438
     :cond_0
     :goto_0
     return-void
 
-    .line 431
     :catchall_0
     move-exception v0
 
@@ -79,7 +72,6 @@
 
     throw v0
 
-    .line 432
     :cond_1
     const/4 v0, 0x2
 
@@ -87,7 +79,6 @@
 
     if-nez p1, :cond_0
 
-    .line 434
     :cond_2
     # getter for: Landroid/media/MediaFocusControl;->mRingingLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/MediaFocusControl;->access$1800()Ljava/lang/Object;
@@ -96,7 +87,6 @@
 
     monitor-enter v1
 
-    .line 435
     :try_start_1
     iget-object v0, p0, Landroid/media/MediaFocusControl$1;->this$0:Landroid/media/MediaFocusControl;
 
@@ -105,7 +95,6 @@
     # setter for: Landroid/media/MediaFocusControl;->mIsRinging:Z
     invoke-static {v0, v2}, Landroid/media/MediaFocusControl;->access$1902(Landroid/media/MediaFocusControl;Z)Z
 
-    .line 436
     monitor-exit v1
 
     goto :goto_0

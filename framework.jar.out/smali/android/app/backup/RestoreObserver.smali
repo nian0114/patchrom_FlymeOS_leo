@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .param p2, "currentPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 78
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .param p1, "result"    # [Landroid/app/backup/RestoreSet;
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -49,6 +45,5 @@
     .param p1, "numPackages"    # I
 
     .prologue
-    .line 52
     return-void
 .end method

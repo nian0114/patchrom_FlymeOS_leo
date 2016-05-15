@@ -27,13 +27,10 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 470
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 471
     if-nez p1, :cond_0
 
-    .line 472
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The root id in BrowserRoot cannot be null. Use null for BrowserRoot instead."
@@ -42,14 +39,11 @@
 
     throw v0
 
-    .line 475
     :cond_0
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$BrowserRoot;->mRootId:Ljava/lang/String;
 
-    .line 476
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$BrowserRoot;->mExtras:Landroid/os/Bundle;
 
-    .line 477
     return-void
 .end method
 
@@ -59,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 490
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$BrowserRoot;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -69,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 483
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$BrowserRoot;->mRootId:Ljava/lang/String;
 
     return-object v0

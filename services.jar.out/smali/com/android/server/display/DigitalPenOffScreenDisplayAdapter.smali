@@ -32,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 59
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -56,7 +55,6 @@
     .param p4, "listener"    # Lcom/android/server/display/DisplayAdapter$Listener;
 
     .prologue
-    .line 66
     const-string v5, "DigitalPenOffScreenDisplayAdapter"
 
     move-object v0, p0
@@ -71,7 +69,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/display/DisplayAdapter;-><init>(Lcom/android/server/display/DisplayManagerService$SyncRoot;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/DisplayAdapter$Listener;Ljava/lang/String;)V
 
-    .line 67
     new-instance v0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter$DimensionsCallback;
 
     const/4 v1, 0x0
@@ -80,7 +77,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->mCallback:Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter$DimensionsCallback;
 
-    .line 68
     return-void
 .end method
 
@@ -89,7 +85,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->mDevice:Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter$DigitalPenOffScreenDisplayDevice;
 
     return-object v0
@@ -99,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const-string v0, "Digital Pen off-screen display"
 
     return-object v0
@@ -109,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 71
     sget-boolean v0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->mDigitalPenCapable:Z
 
     if-nez v0, :cond_0
@@ -129,28 +122,23 @@
     .locals 9
 
     .prologue
-    .line 91
     const-string v6, "DigitalPen"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 92
     .local v1, "digitalPenService":Landroid/os/IBinder;
     if-nez v1, :cond_0
 
-    .line 117
     :goto_0
     return-void
 
-    .line 95
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 97
     .local v2, "digitalPenServiceClass":Ljava/lang/Class;
     const/4 v6, 0x1
 
@@ -163,7 +151,6 @@
 
     aput-object v7, v0, v6
 
-    .line 101
     .local v0, "args":[Ljava/lang/Class;
     const-string v6, "registerOffScreenDimensionsCallback"
 
@@ -171,7 +158,6 @@
 
     move-result-object v4
 
-    .line 103
     .local v4, "registerCallbackMethod":Ljava/lang/reflect/Method;
     const/4 v6, 0x1
 
@@ -191,13 +177,11 @@
 
     goto :goto_0
 
-    .line 105
     .end local v0    # "args":[Ljava/lang/Class;
     .end local v4    # "registerCallbackMethod":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v3
 
-    .line 106
     .local v3, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v6, "DigitalPenOffScreenDisplayAdapter"
 
@@ -205,17 +189,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     invoke-virtual {v3}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 109
     .end local v3    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_1
     move-exception v3
 
-    .line 110
     .local v3, "e":Ljava/lang/IllegalAccessException;
     const-string v6, "DigitalPenOffScreenDisplayAdapter"
 
@@ -223,17 +204,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     invoke-virtual {v3}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 113
     .end local v3    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v5
 
-    .line 114
     .local v5, "t":Ljava/lang/Throwable;
     const-string v6, "DigitalPenOffScreenDisplayAdapter"
 
@@ -241,7 +219,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     invoke-virtual {v5}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
@@ -253,7 +230,6 @@
     .locals 0
 
     .prologue
-    .line 55
     invoke-super {p0, p1}, Lcom/android/server/display/DisplayAdapter;->dumpLocked(Ljava/io/PrintWriter;)V
 
     return-void
@@ -263,10 +239,8 @@
     .locals 3
 
     .prologue
-    .line 80
     invoke-super {p0}, Lcom/android/server/display/DisplayAdapter;->registerLocked()V
 
-    .line 82
     invoke-static {}, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->getDisplayName()Ljava/lang/String;
 
     move-result-object v1
@@ -277,7 +251,6 @@
 
     move-result-object v0
 
-    .line 84
     .local v0, "displayToken":Landroid/os/IBinder;
     new-instance v1, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter$DigitalPenOffScreenDisplayDevice;
 
@@ -285,16 +258,13 @@
 
     iput-object v1, p0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->mDevice:Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter$DigitalPenOffScreenDisplayDevice;
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->mDevice:Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter$DigitalPenOffScreenDisplayDevice;
 
     const/4 v2, 0x1
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 87
     invoke-direct {p0}, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->registerOffScreenDimensionsCallbackLocked()V
 
-    .line 88
     return-void
 .end method

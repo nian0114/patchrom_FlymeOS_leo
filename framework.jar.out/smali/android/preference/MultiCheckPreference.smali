@@ -29,12 +29,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/preference/MultiCheckPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 77
     return-void
 .end method
 
@@ -44,12 +42,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 72
     const v0, 0x1010091
 
     invoke-direct {p0, p1, p2, v0}, Landroid/preference/MultiCheckPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 73
     return-void
 .end method
 
@@ -60,12 +56,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/preference/MultiCheckPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 69
     return-void
 .end method
 
@@ -79,17 +73,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 46
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 48
     sget-object v1, Lcom/android/internal/R$styleable;->ListPreference:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 50
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
@@ -97,17 +88,14 @@
 
     iput-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
-    .line 51
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_0
 
-    .line 52
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
     invoke-virtual {p0, v1}, Landroid/preference/MultiCheckPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 54
     :cond_0
     const/4 v1, 0x1
 
@@ -117,17 +105,14 @@
 
     invoke-direct {p0, v1}, Landroid/preference/MultiCheckPreference;->setEntryValuesCS([Ljava/lang/CharSequence;)V
 
-    .line 56
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 61
     sget-object v1, Lcom/android/internal/R$styleable;->Preference:[I
 
     invoke-virtual {p1, p2, v1, v2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 63
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -136,10 +121,8 @@
 
     iput-object v1, p0, Landroid/preference/MultiCheckPreference;->mSummary:Ljava/lang/String;
 
-    .line 64
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 65
     return-void
 .end method
 
@@ -148,7 +131,6 @@
     .param p0, "x0"    # Landroid/preference/MultiCheckPreference;
 
     .prologue
-    .line 37
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     return-object v0
@@ -159,22 +141,18 @@
     .param p1, "values"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 134
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Landroid/preference/MultiCheckPreference;->setValues([Z)V
 
-    .line 135
     if-eqz p1, :cond_0
 
-    .line 136
     array-length v1, p1
 
     new-array v1, v1, [Ljava/lang/String;
 
     iput-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
-    .line 137
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -183,7 +161,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 138
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
     aget-object v2, p1, v0
@@ -194,12 +171,10 @@
 
     aput-object v2, v1, v0
 
-    .line 137
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 141
     .end local v0    # "i":I
     :cond_0
     return-void
@@ -212,14 +187,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 230
     if-eqz p1, :cond_1
 
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 231
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
     array-length v1, v1
@@ -230,7 +203,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 232
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
     aget-object v1, v1, v0
@@ -241,19 +213,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 237
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 231
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 237
     .end local v0    # "i":I
     :cond_1
     const/4 v0, -0x1
@@ -265,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -275,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
     return-object v0
@@ -285,17 +252,14 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSummary:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 191
     invoke-super {p0}, Landroid/preference/DialogPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 193
     :goto_0
     return-object v0
 
@@ -310,7 +274,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     aget-boolean v0, v0, p1
@@ -322,7 +285,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     return-object v0
@@ -335,13 +297,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 261
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onDialogClosed(Z)V
 
-    .line 263
     if-eqz p1, :cond_0
 
-    .line 264
     invoke-virtual {p0}, Landroid/preference/MultiCheckPreference;->getValues()[Z
 
     move-result-object v0
@@ -352,11 +311,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 269
     :goto_0
     return-void
 
-    .line 268
     :cond_0
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mOrigValues:[Z
 
@@ -377,7 +334,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 273
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -390,10 +346,8 @@
     .param p1, "builder"    # Landroid/app/AlertDialog$Builder;
 
     .prologue
-    .line 242
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onPrepareDialogBuilder(Landroid/app/AlertDialog$Builder;)V
 
-    .line 244
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
@@ -402,7 +356,6 @@
 
     if-nez v0, :cond_1
 
-    .line 245
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -412,7 +365,6 @@
 
     throw v0
 
-    .line 249
     :cond_1
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
@@ -426,7 +378,6 @@
 
     iput-object v0, p0, Landroid/preference/MultiCheckPreference;->mOrigValues:[Z
 
-    .line 250
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
@@ -437,7 +388,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setMultiChoiceItems([Ljava/lang/CharSequence;[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 257
     return-void
 .end method
 
@@ -446,7 +396,6 @@
     .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 295
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -461,21 +410,17 @@
 
     if-nez v1, :cond_1
 
-    .line 297
     :cond_0
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 304
     :goto_0
     return-void
 
     :cond_1
     move-object v0, p1
 
-    .line 301
     check-cast v0, Landroid/preference/MultiCheckPreference$SavedState;
 
-    .line 302
     .local v0, "myState":Landroid/preference/MultiCheckPreference$SavedState;
     invoke-virtual {v0}, Landroid/preference/MultiCheckPreference$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -483,7 +428,6 @@
 
     invoke-super {p0, v1}, Landroid/preference/DialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 303
     iget-object v1, v0, Landroid/preference/MultiCheckPreference$SavedState;->values:[Z
 
     invoke-virtual {p0, v1}, Landroid/preference/MultiCheckPreference;->setValues([Z)V
@@ -495,12 +439,10 @@
     .locals 3
 
     .prologue
-    .line 282
     invoke-super {p0}, Landroid/preference/DialogPreference;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 283
     .local v1, "superState":Landroid/os/Parcelable;
     invoke-virtual {p0}, Landroid/preference/MultiCheckPreference;->isPersistent()Z
 
@@ -508,19 +450,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 290
     .end local v1    # "superState":Landroid/os/Parcelable;
     :goto_0
     return-object v1
 
-    .line 288
     .restart local v1    # "superState":Landroid/os/Parcelable;
     :cond_0
     new-instance v0, Landroid/preference/MultiCheckPreference$SavedState;
 
     invoke-direct {v0, v1}, Landroid/preference/MultiCheckPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 289
     .local v0, "myState":Landroid/preference/MultiCheckPreference$SavedState;
     invoke-virtual {p0}, Landroid/preference/MultiCheckPreference;->getValues()[Z
 
@@ -530,7 +469,6 @@
 
     move-object v1, v0
 
-    .line 290
     goto :goto_0
 .end method
 
@@ -540,7 +478,6 @@
     .param p2, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 278
     return-void
 .end method
 
@@ -549,7 +486,6 @@
     .param p1, "entriesResId"    # I
 
     .prologue
-    .line 100
     invoke-virtual {p0}, Landroid/preference/MultiCheckPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -564,7 +500,6 @@
 
     invoke-virtual {p0, v0}, Landroid/preference/MultiCheckPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 101
     return-void
 .end method
 
@@ -573,24 +508,20 @@
     .param p1, "entries"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 90
     iput-object p1, p0, Landroid/preference/MultiCheckPreference;->mEntries:[Ljava/lang/CharSequence;
 
-    .line 91
     array-length v0, p1
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
-    .line 92
     array-length v0, p1
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Landroid/preference/MultiCheckPreference;->mOrigValues:[Z
 
-    .line 93
     return-void
 .end method
 
@@ -599,7 +530,6 @@
     .param p1, "entryValuesResId"    # I
 
     .prologue
-    .line 130
     invoke-virtual {p0}, Landroid/preference/MultiCheckPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -614,7 +544,6 @@
 
     invoke-direct {p0, v0}, Landroid/preference/MultiCheckPreference;->setEntryValuesCS([Ljava/lang/CharSequence;)V
 
-    .line 131
     return-void
 .end method
 
@@ -625,20 +554,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 120
     iput-object p1, p0, Landroid/preference/MultiCheckPreference;->mEntryValues:[Ljava/lang/String;
 
-    .line 121
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([ZZ)V
 
-    .line 122
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mOrigValues:[Z
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([ZZ)V
 
-    .line 123
     return-void
 .end method
 
@@ -647,27 +572,22 @@
     .param p1, "summary"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 208
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 209
     if-nez p1, :cond_1
 
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSummary:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 210
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/preference/MultiCheckPreference;->mSummary:Ljava/lang/String;
 
-    .line 214
     :cond_0
     :goto_0
     return-void
 
-    .line 211
     :cond_1
     if-eqz p1, :cond_0
 
@@ -679,7 +599,6 @@
 
     if-nez v0, :cond_0
 
-    .line 212
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -695,12 +614,10 @@
     .param p2, "state"    # Z
 
     .prologue
-    .line 163
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     aput-boolean p2, v0, p1
 
-    .line 164
     return-void
 .end method
 
@@ -711,25 +628,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 170
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     invoke-static {v0, v3}, Ljava/util/Arrays;->fill([ZZ)V
 
-    .line 172
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mOrigValues:[Z
 
     invoke-static {v0, v3}, Ljava/util/Arrays;->fill([ZZ)V
 
-    .line 173
     if-eqz p1, :cond_0
 
-    .line 174
     iget-object v1, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 
     array-length v0, p1
@@ -745,11 +657,9 @@
     :goto_0
     invoke-static {p1, v3, v1, v3, v0}, Ljava/lang/System;->arraycopy([ZI[ZII)V
 
-    .line 178
     :cond_0
     return-void
 
-    .line 174
     :cond_1
     iget-object v0, p0, Landroid/preference/MultiCheckPreference;->mSetValues:[Z
 

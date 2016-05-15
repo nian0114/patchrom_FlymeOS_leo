@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 91
     new-instance v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
     const-string v1, "PROFILE_TYPE_APN"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->PROFILE_TYPE_APN:Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
-    .line 92
     new-instance v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
     const-string v1, "PROFILE_TYPE_CDMA"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->PROFILE_TYPE_CDMA:Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
-    .line 93
     new-instance v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
     const-string v1, "PROFILE_TYPE_OMH"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->PROFILE_TYPE_OMH:Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
-    .line 90
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
@@ -107,13 +103,10 @@
     .end annotation
 
     .prologue
-    .line 97
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 98
     iput p3, p0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->id:I
 
-    .line 99
     return-void
 .end method
 
@@ -122,7 +115,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-class v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 90
     sget-object v0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->$VALUES:[Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->clone()Ljava/lang/Object;
@@ -156,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/ApnSetting$ApnProfileType;->id:I
 
     return v0

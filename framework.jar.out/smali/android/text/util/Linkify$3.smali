@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 142
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     invoke-static {p1}, Landroid/util/Patterns;->digitsAndPlusOnly(Ljava/util/regex/Matcher;)Ljava/lang/String;
 
     move-result-object v0

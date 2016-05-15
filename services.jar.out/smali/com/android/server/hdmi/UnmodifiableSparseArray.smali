@@ -41,15 +41,12 @@
     .end annotation
 
     .prologue
-    .line 29
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     .local p1, "array":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
-    .line 31
     return-void
 .end method
 
@@ -65,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 38
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
@@ -86,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 42
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     .local p2, "valueIfKeyNotFound":Ljava/lang/Object;, "TE;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
@@ -107,7 +102,6 @@
     .end annotation
 
     .prologue
-    .line 54
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     .local p1, "value":Ljava/lang/Object;, "TE;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
@@ -124,7 +118,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 46
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
@@ -139,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 34
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
@@ -154,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 59
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
@@ -175,7 +166,6 @@
     .end annotation
 
     .prologue
-    .line 50
     .local p0, "this":Lcom/android/server/hdmi/UnmodifiableSparseArray;, "Lcom/android/server/hdmi/UnmodifiableSparseArray<TE;>;"
     iget-object v0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 

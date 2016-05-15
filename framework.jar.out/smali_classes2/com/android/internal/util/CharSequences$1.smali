@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcom/android/internal/util/CharSequences$1;->val$bytes:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/internal/util/CharSequences$1;->val$bytes:[B
 
     aget-byte v0, v0, p1
@@ -55,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/internal/util/CharSequences$1;->val$bytes:[B
 
     array-length v0, v0
@@ -69,7 +66,6 @@
     .param p2, "end"    # I
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/internal/util/CharSequences$1;->val$bytes:[B
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/CharSequences;->forAsciiBytes([BII)Ljava/lang/CharSequence;
@@ -83,7 +79,6 @@
     .locals 2
 
     .prologue
-    .line 45
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/internal/util/CharSequences$1;->val$bytes:[B

@@ -34,10 +34,8 @@
     .locals 1
 
     .prologue
-    .line 524
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 547
     const/4 v0, 0x4
 
     new-array v0, v0, [C

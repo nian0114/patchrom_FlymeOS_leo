@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 50
     new-instance v0, Landroid/hardware/location/ActivityRecognitionEvent$1;
 
     invoke-direct {v0}, Landroid/hardware/location/ActivityRecognitionEvent$1;-><init>()V
@@ -49,19 +48,14 @@
     .param p3, "timestampNs"    # J
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mActivity:Ljava/lang/String;
 
-    .line 34
     iput p2, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mEventType:I
 
-    .line 35
     iput-wide p3, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mTimestampNs:J
 
-    .line 36
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return v0
@@ -81,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mActivity:Ljava/lang/String;
 
     return-object v0
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget v0, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mEventType:I
 
     return v0
@@ -101,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 47
     iget-wide v0, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mTimestampNs:J
 
     return-wide v0
@@ -111,7 +101,6 @@
     .locals 6
 
     .prologue
-    .line 81
     const-string v0, "Activity=\'%s\', EventType=%s, TimestampNs=%s"
 
     const/4 v1, 0x3
@@ -157,21 +146,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mActivity:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 75
     iget v0, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mEventType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 76
     iget-wide v0, p0, Landroid/hardware/location/ActivityRecognitionEvent;->mTimestampNs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 77
     return-void
 .end method

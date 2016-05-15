@@ -14,14 +14,12 @@
     .locals 2
 
     .prologue
-    .line 30
     const-string v0, "android.bg"
 
     const/16 v1, 0xa
 
     invoke-direct {p0, v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 31
     return-void
 .end method
 
@@ -29,24 +27,20 @@
     .locals 2
 
     .prologue
-    .line 34
     sget-object v0, Lcom/android/internal/os/BackgroundThread;->sInstance:Lcom/android/internal/os/BackgroundThread;
 
     if-nez v0, :cond_0
 
-    .line 35
     new-instance v0, Lcom/android/internal/os/BackgroundThread;
 
     invoke-direct {v0}, Lcom/android/internal/os/BackgroundThread;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/BackgroundThread;->sInstance:Lcom/android/internal/os/BackgroundThread;
 
-    .line 36
     sget-object v0, Lcom/android/internal/os/BackgroundThread;->sInstance:Lcom/android/internal/os/BackgroundThread;
 
     invoke-virtual {v0}, Lcom/android/internal/os/BackgroundThread;->start()V
 
-    .line 37
     new-instance v0, Landroid/os/Handler;
 
     sget-object v1, Lcom/android/internal/os/BackgroundThread;->sInstance:Lcom/android/internal/os/BackgroundThread;
@@ -59,7 +53,6 @@
 
     sput-object v0, Lcom/android/internal/os/BackgroundThread;->sHandler:Landroid/os/Handler;
 
-    .line 39
     :cond_0
     return-void
 .end method
@@ -68,23 +61,19 @@
     .locals 2
 
     .prologue
-    .line 42
     const-class v1, Lcom/android/internal/os/BackgroundThread;
 
     monitor-enter v1
 
-    .line 43
     :try_start_0
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->ensureThreadLocked()V
 
-    .line 44
     sget-object v0, Lcom/android/internal/os/BackgroundThread;->sInstance:Lcom/android/internal/os/BackgroundThread;
 
     monitor-exit v1
 
     return-object v0
 
-    .line 45
     :catchall_0
     move-exception v0
 
@@ -99,23 +88,19 @@
     .locals 2
 
     .prologue
-    .line 49
     const-class v1, Lcom/android/internal/os/BackgroundThread;
 
     monitor-enter v1
 
-    .line 50
     :try_start_0
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->ensureThreadLocked()V
 
-    .line 51
     sget-object v0, Lcom/android/internal/os/BackgroundThread;->sHandler:Landroid/os/Handler;
 
     monitor-exit v1
 
     return-object v0
 
-    .line 52
     :catchall_0
     move-exception v0
 

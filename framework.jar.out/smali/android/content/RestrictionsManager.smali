@@ -82,16 +82,12 @@
     .param p2, "service"    # Landroid/content/IRestrictionsManager;
 
     .prologue
-    .line 400
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 401
     iput-object p1, p0, Landroid/content/RestrictionsManager;->mContext:Landroid/content/Context;
 
-    .line 402
     iput-object p2, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
-    .line 403
     return-void
 .end method
 
@@ -115,7 +111,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 549
     :try_start_0
     iget-object v9, p0, Landroid/content/RestrictionsManager;->mContext:Landroid/content/Context;
 
@@ -127,37 +122,32 @@
 
     move-result-object v1
 
-    .line 553
     .local v1, "appContext":Landroid/content/Context;
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 557
     .local v6, "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/RestrictionEntry;>;"
     :try_start_1
     invoke-interface {p2}, Landroid/content/res/XmlResourceParser;->next()I
 
     move-result v7
 
-    .line 558
     .local v7, "tagType":I
     :goto_0
     const/4 v9, 0x1
 
     if-eq v7, v9, :cond_1
 
-    .line 559
     const/4 v9, 0x2
 
     if-ne v7, v9, :cond_0
 
-    .line 560
     invoke-interface {p2}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v9
 
-    const-string/jumbo v10, "restriction"
+    const-string v10, "restriction"
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -165,36 +155,29 @@
 
     if-eqz v9, :cond_0
 
-    .line 561
     invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v2
 
-    .line 562
     .local v2, "attrSet":Landroid/util/AttributeSet;
     if-eqz v2, :cond_0
 
-    .line 563
     sget-object v9, Lcom/android/internal/R$styleable;->RestrictionEntry:[I
 
     invoke-virtual {v1, v2, v9}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 565
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-direct {p0, v1, v0}, Landroid/content/RestrictionsManager;->loadRestriction(Landroid/content/Context;Landroid/content/res/TypedArray;)Landroid/content/RestrictionEntry;
 
     move-result-object v5
 
-    .line 566
     .local v5, "restriction":Landroid/content/RestrictionEntry;
     if-eqz v5, :cond_0
 
-    .line 567
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 572
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v2    # "attrSet":Landroid/util/AttributeSet;
     .end local v5    # "restriction":Landroid/content/RestrictionEntry;
@@ -208,7 +191,6 @@
 
     goto :goto_0
 
-    .line 550
     .end local v1    # "appContext":Landroid/content/Context;
     .end local v6    # "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/RestrictionEntry;>;"
     .end local v7    # "tagType":I
@@ -218,19 +200,16 @@
     .local v4, "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object v6, v8
 
-    .line 582
     .end local v4    # "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     :goto_1
     return-object v6
 
-    .line 574
     .restart local v1    # "appContext":Landroid/content/Context;
     .restart local v6    # "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/RestrictionEntry;>;"
     :catch_1
     move-exception v3
 
-    .line 575
     .local v3, "e":Lorg/xmlpull/v1/XmlPullParserException;
     const-string v9, "RestrictionsManager"
 
@@ -256,15 +235,12 @@
 
     move-object v6, v8
 
-    .line 576
     goto :goto_1
 
-    .line 577
     .end local v3    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v3
 
-    .line 578
     .local v3, "e":Ljava/io/IOException;
     const-string v9, "RestrictionsManager"
 
@@ -290,7 +266,6 @@
 
     move-object v6, v8
 
-    .line 579
     goto :goto_1
 .end method
 
@@ -308,14 +283,12 @@
 
     const/4 v9, 0x0
 
-    .line 586
     const/4 v8, 0x3
 
     invoke-virtual {p2, v8}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 587
     .local v3, "key":Ljava/lang/String;
     const/4 v8, 0x6
 
@@ -323,7 +296,6 @@
 
     move-result v6
 
-    .line 589
     .local v6, "restrictionType":I
     const/4 v8, 0x2
 
@@ -331,13 +303,11 @@
 
     move-result-object v7
 
-    .line 590
     .local v7, "title":Ljava/lang/String;
     invoke-virtual {p2, v9}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 591
     .local v0, "description":Ljava/lang/String;
     const/4 v8, 0x1
 
@@ -345,7 +315,6 @@
 
     move-result v1
 
-    .line 592
     .local v1, "entries":I
     const/4 v8, 0x5
 
@@ -353,27 +322,22 @@
 
     move-result v2
 
-    .line 594
     .local v2, "entryValues":I
     if-ne v6, v11, :cond_1
 
-    .line 595
     const-string v8, "RestrictionsManager"
 
-    const-string/jumbo v9, "restrictionType cannot be omitted"
+    const-string v9, "restrictionType cannot be omitted"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 639
     :cond_0
     :goto_0
     return-object v5
 
-    .line 599
     :cond_1
     if-nez v3, :cond_2
 
-    .line 600
     const-string v8, "RestrictionsManager"
 
     const-string v9, "key cannot be omitted"
@@ -382,37 +346,28 @@
 
     goto :goto_0
 
-    .line 604
     :cond_2
     new-instance v5, Landroid/content/RestrictionEntry;
 
     invoke-direct {v5, v6, v3}, Landroid/content/RestrictionEntry;-><init>(ILjava/lang/String;)V
 
-    .line 605
     .local v5, "restriction":Landroid/content/RestrictionEntry;
     invoke-virtual {v5, v7}, Landroid/content/RestrictionEntry;->setTitle(Ljava/lang/String;)V
 
-    .line 606
     invoke-virtual {v5, v0}, Landroid/content/RestrictionEntry;->setDescription(Ljava/lang/String;)V
 
-    .line 607
     if-eqz v1, :cond_3
 
-    .line 608
     invoke-virtual {v5, p1, v1}, Landroid/content/RestrictionEntry;->setChoiceEntries(Landroid/content/Context;I)V
 
-    .line 610
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 611
     invoke-virtual {v5, p1, v2}, Landroid/content/RestrictionEntry;->setChoiceValues(Landroid/content/Context;I)V
 
-    .line 614
     :cond_4
     packed-switch v6, :pswitch_data_0
 
-    .line 637
     :pswitch_0
     const-string v8, "RestrictionsManager"
 
@@ -438,7 +393,6 @@
 
     goto :goto_0
 
-    .line 618
     :pswitch_1
     invoke-virtual {p2, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -448,7 +402,6 @@
 
     goto :goto_0
 
-    .line 622
     :pswitch_2
     invoke-virtual {p2, v10, v9}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -458,17 +411,14 @@
 
     goto :goto_0
 
-    .line 626
     :pswitch_3
     invoke-virtual {p2, v10, v9}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
-    .line 627
     .local v4, "resId":I
     if-eqz v4, :cond_0
 
-    .line 628
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -481,7 +431,6 @@
 
     goto :goto_0
 
-    .line 633
     .end local v4    # "resId":I
     :pswitch_4
     invoke-virtual {p2, v10, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -492,7 +441,6 @@
 
     goto :goto_0
 
-    .line 614
     nop
 
     :pswitch_data_0
@@ -513,13 +461,11 @@
     .locals 3
 
     .prologue
-    .line 478
     :try_start_0
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     if-eqz v1, :cond_0
 
-    .line 479
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     invoke-interface {v1}, Landroid/content/IRestrictionsManager;->createLocalApprovalIntent()Landroid/content/Intent;
@@ -528,15 +474,12 @@
 
     move-result-object v1
 
-    .line 484
     :goto_0
     return-object v1
 
-    .line 481
     :catch_0
     move-exception v0
 
-    .line 482
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "RestrictionsManager"
 
@@ -544,7 +487,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -556,13 +498,11 @@
     .locals 3
 
     .prologue
-    .line 413
     :try_start_0
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     if-eqz v1, :cond_0
 
-    .line 414
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     iget-object v2, p0, Landroid/content/RestrictionsManager;->mContext:Landroid/content/Context;
@@ -577,15 +517,12 @@
 
     move-result-object v1
 
-    .line 419
     :goto_0
     return-object v1
 
-    .line 416
     :catch_0
     move-exception v0
 
-    .line 417
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "RestrictionsManager"
 
@@ -593,7 +530,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -617,10 +553,8 @@
     .end annotation
 
     .prologue
-    .line 527
     const/4 v0, 0x0
 
-    .line 529
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     iget-object v4, p0, Landroid/content/RestrictionsManager;->mContext:Landroid/content/Context;
@@ -637,7 +571,6 @@
 
     move-result-object v0
 
-    .line 534
     if-eqz v0, :cond_0
 
     iget-object v4, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -650,19 +583,15 @@
 
     if-nez v4, :cond_1
 
-    .line 535
     :cond_0
     const/4 v2, 0x0
 
-    .line 542
     :goto_0
     return-object v2
 
-    .line 531
     :catch_0
     move-exception v1
 
-    .line 532
     .local v1, "pnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -688,7 +617,6 @@
 
     throw v4
 
-    .line 538
     .end local v1    # "pnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     iget-object v4, p0, Landroid/content/RestrictionsManager;->mContext:Landroid/content/Context;
@@ -703,13 +631,11 @@
 
     move-result-object v3
 
-    .line 540
     .local v3, "xml":Landroid/content/res/XmlResourceParser;
     invoke-direct {p0, p1, v3}, Landroid/content/RestrictionsManager;->loadManifestRestrictions(Ljava/lang/String;Landroid/content/res/XmlResourceParser;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 542
     .local v2, "restrictions":Ljava/util/List;, "Ljava/util/List<Landroid/content/RestrictionEntry;>;"
     goto :goto_0
 .end method
@@ -718,13 +644,11 @@
     .locals 3
 
     .prologue
-    .line 430
     :try_start_0
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     if-eqz v1, :cond_0
 
-    .line 431
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     invoke-interface {v1}, Landroid/content/IRestrictionsManager;->hasRestrictionsProvider()Z
@@ -733,15 +657,12 @@
 
     move-result v1
 
-    .line 436
     :goto_0
     return v1
 
-    .line 433
     :catch_0
     move-exception v0
 
-    .line 434
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "RestrictionsManager"
 
@@ -749,7 +670,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -763,32 +683,27 @@
     .param p2, "response"    # Landroid/os/PersistableBundle;
 
     .prologue
-    .line 497
     if-nez p1, :cond_0
 
-    .line 498
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "packageName cannot be null"
+    const-string v2, "packageName cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 500
     :cond_0
     if-nez p2, :cond_1
 
-    .line 501
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "request cannot be null"
+    const-string v2, "request cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 503
     :cond_1
     const-string v1, "android.request.id"
 
@@ -798,7 +713,6 @@
 
     if-nez v1, :cond_2
 
-    .line 504
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "REQUEST_KEY_ID must be specified"
@@ -807,7 +721,6 @@
 
     throw v1
 
-    .line 506
     :cond_2
     const-string v1, "android.response.result"
 
@@ -817,7 +730,6 @@
 
     if-nez v1, :cond_3
 
-    .line 507
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "RESPONSE_KEY_RESULT must be specified"
@@ -826,30 +738,25 @@
 
     throw v1
 
-    .line 510
     :cond_3
     :try_start_0
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     if-eqz v1, :cond_4
 
-    .line 511
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     invoke-interface {v1, p1, p2}, Landroid/content/IRestrictionsManager;->notifyPermissionResponse(Ljava/lang/String;Landroid/os/PersistableBundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 516
     :cond_4
     :goto_0
     return-void
 
-    .line 513
     :catch_0
     move-exception v0
 
-    .line 514
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "RestrictionsManager"
 
@@ -867,52 +774,44 @@
     .param p3, "request"    # Landroid/os/PersistableBundle;
 
     .prologue
-    .line 457
     if-nez p1, :cond_0
 
-    .line 458
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "requestType cannot be null"
+    const-string v2, "requestType cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 460
     :cond_0
     if-nez p2, :cond_1
 
-    .line 461
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "requestId cannot be null"
+    const-string v2, "requestId cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 463
     :cond_1
     if-nez p3, :cond_2
 
-    .line 464
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "request cannot be null"
+    const-string v2, "request cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 467
     :cond_2
     :try_start_0
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     if-eqz v1, :cond_3
 
-    .line 468
     iget-object v1, p0, Landroid/content/RestrictionsManager;->mService:Landroid/content/IRestrictionsManager;
 
     iget-object v2, p0, Landroid/content/RestrictionsManager;->mContext:Landroid/content/Context;
@@ -925,16 +824,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 474
     :cond_3
     :goto_0
     return-void
 
-    .line 471
     :catch_0
     move-exception v0
 
-    .line 472
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "RestrictionsManager"
 

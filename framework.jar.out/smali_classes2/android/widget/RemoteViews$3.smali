@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 2770
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 2772
     new-instance v0, Landroid/widget/RemoteViews;
 
     invoke-direct {v0, p1}, Landroid/widget/RemoteViews;-><init>(Landroid/os/Parcel;)V
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 2770
     invoke-virtual {p0, p1}, Landroid/widget/RemoteViews$3;->createFromParcel(Landroid/os/Parcel;)Landroid/widget/RemoteViews;
 
     move-result-object v0
@@ -70,7 +67,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 2776
     new-array v0, p1, [Landroid/widget/RemoteViews;
 
     return-object v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 2770
     invoke-virtual {p0, p1}, Landroid/widget/RemoteViews$3;->newArray(I)[Landroid/widget/RemoteViews;
 
     move-result-object v0

@@ -27,10 +27,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 346
     new-instance v0, Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
     const/4 v1, 0x0
@@ -39,10 +37,8 @@
 
     iput-object v0, p0, Landroid/accounts/AbstractAccountAuthenticator;->mTransport:Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
-    .line 114
     iput-object p1, p0, Landroid/accounts/AbstractAccountAuthenticator;->mContext:Landroid/content/Context;
 
-    .line 115
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p0, "x0"    # Landroid/accounts/AbstractAccountAuthenticator;
 
     .prologue
-    .line 108
     invoke-direct {p0}, Landroid/accounts/AbstractAccountAuthenticator;->checkBinderPermission()V
 
     return-void
@@ -71,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 108
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/accounts/AbstractAccountAuthenticator;->handleException(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
@@ -81,16 +75,13 @@
     .locals 5
 
     .prologue
-    .line 339
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 340
     .local v1, "uid":I
     const-string v0, "android.permission.ACCOUNT_MANAGER"
 
-    .line 341
     .local v0, "perm":Ljava/lang/String;
     iget-object v2, p0, Landroid/accounts/AbstractAccountAuthenticator;->mContext:Landroid/content/Context;
 
@@ -102,7 +93,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 342
     new-instance v2, Ljava/lang/SecurityException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -139,7 +129,6 @@
 
     throw v2
 
-    .line 344
     :cond_0
     return-void
 .end method
@@ -159,12 +148,10 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 314
     instance-of v0, p4, Landroid/accounts/NetworkErrorException;
 
     if-eqz v0, :cond_1
 
-    .line 315
     const-string v0, "AccountAuthenticator"
 
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -173,7 +160,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
     const-string v0, "AccountAuthenticator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -206,7 +192,6 @@
 
     invoke-static {v0, v1, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 318
     :cond_0
     const/4 v0, 0x3
 
@@ -216,17 +201,14 @@
 
     invoke-interface {p1, v0, v1}, Landroid/accounts/IAccountAuthenticatorResponse;->onError(ILjava/lang/String;)V
 
-    .line 336
     :goto_0
     return-void
 
-    .line 319
     :cond_1
     instance-of v0, p4, Ljava/lang/UnsupportedOperationException;
 
     if-eqz v0, :cond_3
 
-    .line 320
     const-string v0, "AccountAuthenticator"
 
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -235,7 +217,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 321
     const-string v0, "AccountAuthenticator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -268,7 +249,6 @@
 
     invoke-static {v0, v1, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 323
     :cond_2
     const/4 v0, 0x6
 
@@ -294,13 +274,11 @@
 
     goto :goto_0
 
-    .line 325
     :cond_3
     instance-of v0, p4, Ljava/lang/IllegalArgumentException;
 
     if-eqz v0, :cond_5
 
-    .line 326
     const-string v0, "AccountAuthenticator"
 
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -309,7 +287,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 327
     const-string v0, "AccountAuthenticator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -342,7 +319,6 @@
 
     invoke-static {v0, v1, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 329
     :cond_4
     const/4 v0, 0x7
 
@@ -368,7 +344,6 @@
 
     goto/16 :goto_0
 
-    .line 332
     :cond_5
     const-string v0, "AccountAuthenticator"
 
@@ -402,7 +377,6 @@
 
     invoke-static {v0, v1, p4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 333
     const/4 v0, 0x1
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -450,7 +424,6 @@
     .end annotation
 
     .prologue
-    .line 545
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Landroid/accounts/AbstractAccountAuthenticator$2;
@@ -461,7 +434,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 552
     const/4 v0, 0x0
 
     return-object v0
@@ -489,7 +461,6 @@
     .end annotation
 
     .prologue
-    .line 520
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Landroid/accounts/AbstractAccountAuthenticator$1;
@@ -500,7 +471,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 527
     const/4 v0, 0x0
 
     return-object v0
@@ -517,12 +487,10 @@
     .end annotation
 
     .prologue
-    .line 502
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 503
     .local v0, "result":Landroid/os/Bundle;
     const-string v1, "booleanResult"
 
@@ -530,7 +498,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 504
     return-object v0
 .end method
 
@@ -549,7 +516,6 @@
     .locals 1
 
     .prologue
-    .line 352
     iget-object v0, p0, Landroid/accounts/AbstractAccountAuthenticator;->mTransport:Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
     invoke-virtual {v0}, Landroid/accounts/AbstractAccountAuthenticator$Transport;->asBinder()Landroid/os/IBinder;

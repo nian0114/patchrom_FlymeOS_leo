@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 260
     iput-object p1, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 317
     const/4 v0, 0x0
 
     return-object v0
@@ -51,7 +49,6 @@
     .param p1, "dataUsage"    # I
 
     .prologue
-    .line 296
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -77,7 +74,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 297
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -85,7 +81,6 @@
 
     goto :goto_0
 
-    .line 299
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void
@@ -96,7 +91,6 @@
     .param p1, "cameraCapabilities"    # Landroid/telecom/CameraCapabilities;
 
     .prologue
-    .line 303
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -122,7 +116,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 304
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -130,7 +123,6 @@
 
     goto :goto_0
 
-    .line 306
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void
@@ -142,7 +134,6 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 289
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -168,7 +159,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 290
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -176,7 +166,6 @@
 
     goto :goto_0
 
-    .line 292
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void
@@ -187,7 +176,6 @@
     .param p1, "videoQuality"    # I
 
     .prologue
-    .line 310
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -213,7 +201,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 311
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -221,7 +208,6 @@
 
     goto :goto_0
 
-    .line 313
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void
@@ -232,7 +218,6 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 282
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -258,7 +243,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 283
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -266,7 +250,6 @@
 
     goto :goto_0
 
-    .line 285
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void
@@ -277,7 +260,6 @@
     .param p1, "videoProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 263
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -303,7 +285,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 264
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -311,7 +292,6 @@
 
     goto :goto_0
 
-    .line 266
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void
@@ -324,7 +304,6 @@
     .param p3, "responseProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 271
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mListeners:Ljava/util/Set;
@@ -350,7 +329,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Listener;
 
-    .line 272
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -358,7 +336,6 @@
 
     goto :goto_0
 
-    .line 278
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Listener;
     :cond_0
     return-void

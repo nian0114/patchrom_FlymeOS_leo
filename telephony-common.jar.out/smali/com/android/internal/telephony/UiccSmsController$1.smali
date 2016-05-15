@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/internal/telephony/UiccSmsController$1;->this$0:Lcom/android/internal/telephony/UiccSmsController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 78
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/UiccSmsController$1;->getResultCode()I
 
     move-result v1
@@ -48,17 +46,14 @@
 
     if-eq v1, v8, :cond_0
 
-    .line 127
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/UiccSmsController$1;->getResultData()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 82
     .local v3, "destAddr":Ljava/lang/String;
     const-string v1, "scAddr"
 
@@ -68,7 +63,6 @@
 
     move-result-object v4
 
-    .line 83
     .local v4, "scAddr":Ljava/lang/String;
     const-string v1, "subId"
 
@@ -87,7 +81,6 @@
 
     move-result v15
 
-    .line 84
     .local v15, "subId":I
     const-string v1, "callingPackage"
 
@@ -97,7 +90,6 @@
 
     move-result-object v2
 
-    .line 85
     .local v2, "callingPackage":Ljava/lang/String;
     const-string v1, "parts"
 
@@ -107,7 +99,6 @@
 
     move-result-object v5
 
-    .line 86
     .local v5, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v1, "sentIntents"
 
@@ -117,7 +108,6 @@
 
     move-result-object v6
 
-    .line 87
     .local v6, "sentIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     const-string v1, "deliveryIntents"
 
@@ -127,7 +117,6 @@
 
     move-result-object v7
 
-    .line 89
     .local v7, "deliveryIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     const-string v1, "callingUid"
 
@@ -141,7 +130,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 90
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -174,7 +162,6 @@
 
     move-result-object v2
 
-    .line 93
     :cond_1
     const-string v1, "multipart"
 
@@ -188,7 +175,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 94
     const-string v1, "SMS"
 
     const/4 v8, 0x2
@@ -199,7 +185,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 95
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/telephony/UiccSmsController$1;->this$0:Lcom/android/internal/telephony/UiccSmsController;
@@ -268,7 +253,6 @@
 
     invoke-virtual {v1, v8}, Lcom/android/internal/telephony/UiccSmsController;->log(Ljava/lang/String;)V
 
-    .line 101
     :cond_2
     move-object/from16 v0, p0
 
@@ -283,11 +267,9 @@
 
     goto/16 :goto_0
 
-    .line 107
     :cond_3
     const/4 v13, 0x0
 
-    .line 108
     .local v13, "sentIntent":Landroid/app/PendingIntent;
     if-eqz v6, :cond_4
 
@@ -297,7 +279,6 @@
 
     if-lez v1, :cond_4
 
-    .line 109
     const/4 v1, 0x0
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -307,12 +288,10 @@
     .end local v13    # "sentIntent":Landroid/app/PendingIntent;
     check-cast v13, Landroid/app/PendingIntent;
 
-    .line 111
     .restart local v13    # "sentIntent":Landroid/app/PendingIntent;
     :cond_4
     const/4 v14, 0x0
 
-    .line 112
     .local v14, "deliveryIntent":Landroid/app/PendingIntent;
     if-eqz v7, :cond_5
 
@@ -322,7 +301,6 @@
 
     if-lez v1, :cond_5
 
-    .line 113
     const/4 v1, 0x0
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -332,12 +310,10 @@
     .end local v14    # "deliveryIntent":Landroid/app/PendingIntent;
     check-cast v14, Landroid/app/PendingIntent;
 
-    .line 115
     .restart local v14    # "deliveryIntent":Landroid/app/PendingIntent;
     :cond_5
     const/4 v12, 0x0
 
-    .line 116
     .local v12, "text":Ljava/lang/String;
     if-eqz v5, :cond_6
 
@@ -347,7 +323,6 @@
 
     if-lez v1, :cond_6
 
-    .line 117
     const/4 v1, 0x0
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -357,7 +332,6 @@
     .end local v12    # "text":Ljava/lang/String;
     check-cast v12, Ljava/lang/String;
 
-    .line 119
     .restart local v12    # "text":Ljava/lang/String;
     :cond_6
     const-string v1, "SMS"
@@ -370,7 +344,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 120
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/telephony/UiccSmsController$1;->this$0:Lcom/android/internal/telephony/UiccSmsController;
@@ -425,7 +398,6 @@
 
     invoke-virtual {v1, v8}, Lcom/android/internal/telephony/UiccSmsController;->log(Ljava/lang/String;)V
 
-    .line 125
     :cond_7
     move-object/from16 v0, p0
 

@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 434
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver$1;->this$1:Lcom/android/server/InputMethodManagerService$SettingsObserver;
 
     iput-object p3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver$1;->val$this$0:Lcom/android/server/InputMethodManagerService;
@@ -43,7 +42,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 436
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver$1;->this$1:Lcom/android/server/InputMethodManagerService$SettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/InputMethodManagerService;->updateFromSettingsLocked(Z)V
 
-    .line 437
     return-void
 .end method

@@ -74,7 +74,6 @@
     .locals 2
 
     .prologue
-    .line 45
     const-string v0, "NextAlarmTracker"
 
     const/4 v1, 0x3
@@ -93,10 +92,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     new-instance v0, Lcom/android/server/notification/NextAlarmTracker$H;
 
     const/4 v1, 0x0
@@ -105,24 +102,20 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mHandler:Lcom/android/server/notification/NextAlarmTracker$H;
 
-    .line 60
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 225
     new-instance v0, Lcom/android/server/notification/NextAlarmTracker$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/notification/NextAlarmTracker$1;-><init>(Lcom/android/server/notification/NextAlarmTracker;)V
 
     iput-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
-    .line 72
     return-void
 .end method
 
@@ -130,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-boolean v0, Lcom/android/server/notification/NextAlarmTracker;->DEBUG:Z
 
     return v0
@@ -141,7 +133,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NextAlarmTracker;
 
     .prologue
-    .line 43
     iget v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mCurrentUserId:I
 
     return v0
@@ -152,7 +143,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NextAlarmTracker;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mAlarmManager:Landroid/app/AlarmManager;
 
     return-object v0
@@ -164,7 +154,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 43
     iput-wide p1, p0, Lcom/android/server/notification/NextAlarmTracker;->mBootCompleted:J
 
     return-wide p1
@@ -175,7 +164,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NextAlarmTracker;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mHandler:Lcom/android/server/notification/NextAlarmTracker$H;
 
     return-object v0
@@ -186,7 +174,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NextAlarmTracker;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -197,7 +184,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NextAlarmTracker;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Lcom/android/server/notification/NextAlarmTracker;->handleEvaluate()V
 
     return-void
@@ -210,7 +196,6 @@
     .param p4, "booted"    # Z
 
     .prologue
-    .line 142
     iget-object v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -231,13 +216,11 @@
 
     check-cast v0, Lcom/android/server/notification/NextAlarmTracker$Callback;
 
-    .line 143
     .local v0, "callback":Lcom/android/server/notification/NextAlarmTracker$Callback;
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/android/server/notification/NextAlarmTracker$Callback;->onEvaluate(Landroid/app/AlarmManager$AlarmClockInfo;JZ)V
 
     goto :goto_0
 
-    .line 145
     .end local v0    # "callback":Lcom/android/server/notification/NextAlarmTracker$Callback;
     :cond_0
     return-void
@@ -248,7 +231,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 190
     const-string v0, "Hm"
 
     const-string v1, "hma"
@@ -267,7 +249,6 @@
     .param p4, "skeleton12"    # Ljava/lang/String;
 
     .prologue
-    .line 194
     iget-object v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
@@ -278,7 +259,6 @@
 
     move-object v1, p3
 
-    .line 195
     .local v1, "skeleton":Ljava/lang/String;
     :goto_0
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -289,7 +269,6 @@
 
     move-result-object v0
 
-    .line 196
     .local v0, "pattern":Ljava/lang/String;
     invoke-static {v0, p1, p2}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
@@ -306,7 +285,6 @@
     :cond_0
     move-object v1, p4
 
-    .line 194
     goto :goto_0
 .end method
 
@@ -315,16 +293,13 @@
     .param p0, "millis"    # J
 
     .prologue
-    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 181
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-static {p0, p1, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 182
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -337,7 +312,6 @@
     .param p0, "alarm"    # Landroid/app/AlarmManager$AlarmClockInfo;
 
     .prologue
-    .line 170
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/app/AlarmManager$AlarmClockInfo;->getTriggerTime()J
@@ -361,7 +335,6 @@
     .locals 14
 
     .prologue
-    .line 148
     iget-object v3, p0, Lcom/android/server/notification/NextAlarmTracker;->mAlarmManager:Landroid/app/AlarmManager;
 
     iget v10, p0, Lcom/android/server/notification/NextAlarmTracker;->mCurrentUserId:I
@@ -370,19 +343,16 @@
 
     move-result-object v2
 
-    .line 149
     .local v2, "nextAlarm":Landroid/app/AlarmManager$AlarmClockInfo;
     invoke-static {v2}, Lcom/android/server/notification/NextAlarmTracker;->getEarlyTriggerTime(Landroid/app/AlarmManager$AlarmClockInfo;)J
 
     move-result-wide v8
 
-    .line 150
     .local v8, "triggerTime":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 151
     .local v4, "now":J
     cmp-long v3, v8, v4
 
@@ -390,14 +360,12 @@
 
     const/4 v0, 0x1
 
-    .line 152
     .local v0, "alarmUpcoming":Z
     :goto_0
     invoke-direct {p0, v4, v5}, Lcom/android/server/notification/NextAlarmTracker;->isDoneWaitingAfterBoot(J)Z
 
     move-result v1
 
-    .line 153
     .local v1, "booted":Z
     sget-boolean v3, Lcom/android/server/notification/NextAlarmTracker;->DEBUG:Z
 
@@ -449,14 +417,11 @@
 
     invoke-static {v3, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     :cond_0
     invoke-direct {p0, v2, v8, v9, v1}, Lcom/android/server/notification/NextAlarmTracker;->fireEvaluate(Landroid/app/AlarmManager$AlarmClockInfo;JZ)V
 
-    .line 157
     if-nez v1, :cond_4
 
-    .line 159
     iget-wide v10, p0, Lcom/android/server/notification/NextAlarmTracker;->mBootCompleted:J
 
     const-wide/16 v12, 0x0
@@ -473,17 +438,14 @@
 
     add-long v6, v4, v10
 
-    .line 160
     .local v6, "recheckTime":J
     invoke-direct {p0, v6, v7}, Lcom/android/server/notification/NextAlarmTracker;->rescheduleAlarm(J)V
 
-    .line 167
     .end local v6    # "recheckTime":J
     :cond_2
     :goto_1
     return-void
 
-    .line 151
     .end local v0    # "alarmUpcoming":Z
     .end local v1    # "booted":Z
     .restart local v4    # "now":J
@@ -492,13 +454,11 @@
 
     goto :goto_0
 
-    .line 163
     .restart local v0    # "alarmUpcoming":Z
     .restart local v1    # "booted":Z
     :cond_4
     if-eqz v0, :cond_2
 
-    .line 165
     invoke-direct {p0, v8, v9}, Lcom/android/server/notification/NextAlarmTracker;->rescheduleAlarm(J)V
 
     goto :goto_1
@@ -515,7 +475,6 @@
 
     const/4 v0, 0x1
 
-    .line 174
     iget-wide v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mBootCompleted:J
 
     cmp-long v2, v2, v4
@@ -532,7 +491,6 @@
 
     if-lez v2, :cond_1
 
-    .line 176
     :cond_0
     :goto_0
     return v0
@@ -540,10 +498,8 @@
     :cond_1
     move v0, v1
 
-    .line 174
     goto :goto_0
 
-    .line 175
     :cond_2
     iget-wide v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mInit:J
 
@@ -573,7 +529,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 209
     sget-boolean v2, Lcom/android/server/notification/NextAlarmTracker;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -600,7 +555,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
@@ -612,7 +566,6 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 211
     .local v0, "alarms":Landroid/app/AlarmManager;
     iget-object v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
@@ -642,21 +595,17 @@
 
     move-result-object v1
 
-    .line 216
     .local v1, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 217
     iput-wide p1, p0, Lcom/android/server/notification/NextAlarmTracker;->mScheduledAlarmTime:J
 
-    .line 218
     const-wide/16 v2, 0x0
 
     cmp-long v2, p1, v2
 
     if-lez v2, :cond_2
 
-    .line 219
     sget-boolean v2, Lcom/android/server/notification/NextAlarmTracker;->DEBUG:Z
 
     if-eqz v2, :cond_1
@@ -695,11 +644,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_1
     invoke-virtual {v0, v8, p1, p2, v1}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 223
     :cond_2
     return-void
 .end method
@@ -711,12 +658,10 @@
     .param p1, "callback"    # Lcom/android/server/notification/NextAlarmTracker$Callback;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 87
     return-void
 .end method
 
@@ -724,24 +669,20 @@
     .locals 2
 
     .prologue
-    .line 131
     iget-boolean v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 133
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mRegistered:Z
 
-    .line 135
     :cond_0
     return-void
 .end method
@@ -752,12 +693,10 @@
     .param p2, "filter"    # Lcom/android/server/notification/NotificationManagerService$DumpFilter;
 
     .prologue
-    .line 75
     const-string v0, "    NextAlarmTracker:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 76
     const-string v0, "      len(mCallbacks)="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -770,7 +709,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 77
     const-string v0, "      mRegistered="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -779,7 +717,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 78
     const-string v0, "      mInit="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -788,7 +725,6 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 79
     const-string v0, "      mBootCompleted="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -797,7 +733,6 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 80
     const-string v0, "      mCurrentUserId="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -806,7 +741,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 81
     const-string v0, "      mScheduledAlarmTime="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -819,7 +753,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 82
     const-string v0, "      mWakeLock="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -828,7 +761,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 83
     return-void
 .end method
 
@@ -836,14 +768,12 @@
     .locals 4
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mHandler:Lcom/android/server/notification/NextAlarmTracker$H;
 
     const-wide/16 v2, 0x0
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/notification/NextAlarmTracker$H;->postEvaluate(J)V
 
-    .line 139
     return-void
 .end method
 
@@ -852,7 +782,6 @@
     .param p1, "alarm"    # Landroid/app/AlarmManager$AlarmClockInfo;
 
     .prologue
-    .line 186
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/app/AlarmManager$AlarmClockInfo;->getTriggerTime()J
@@ -877,7 +806,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 204
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
@@ -888,7 +816,6 @@
 
     move-result-object v0
 
-    .line 205
     :goto_0
     return-object v0
 
@@ -931,7 +858,6 @@
     .param p1, "alarm"    # Landroid/app/AlarmManager$AlarmClockInfo;
 
     .prologue
-    .line 200
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/app/AlarmManager$AlarmClockInfo;->getTriggerTime()J
@@ -955,7 +881,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mCurrentUserId:I
 
     return v0
@@ -965,7 +890,6 @@
     .locals 2
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mAlarmManager:Landroid/app/AlarmManager;
 
     iget v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mCurrentUserId:I
@@ -981,7 +905,6 @@
     .locals 4
 
     .prologue
-    .line 106
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
     const-string v2, "alarm"
@@ -994,7 +917,6 @@
 
     iput-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 107
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
     const-string v2, "power"
@@ -1005,7 +927,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 108
     .local v0, "p":Landroid/os/PowerManager;
     const/4 v1, 0x1
 
@@ -1017,17 +938,14 @@
 
     iput-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 109
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/notification/NextAlarmTracker;->mInit:J
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/notification/NextAlarmTracker;->reset()V
 
-    .line 111
     return-void
 .end method
 
@@ -1035,10 +953,8 @@
     .locals 0
 
     .prologue
-    .line 102
     invoke-virtual {p0}, Lcom/android/server/notification/NextAlarmTracker;->reset()V
 
-    .line 103
     return-void
 .end method
 
@@ -1047,12 +963,10 @@
     .param p1, "callback"    # Lcom/android/server/notification/NextAlarmTracker$Callback;
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 91
     return-void
 .end method
 
@@ -1062,19 +976,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 114
     iget-boolean v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 117
     :cond_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -1082,38 +993,31 @@
 
     iput v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mCurrentUserId:I
 
-    .line 118
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 119
     .local v3, "filter":Landroid/content/IntentFilter;
     const-string v0, "android.app.action.NEXT_ALARM_CLOCK_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 120
     const-string v0, "NextAlarmTracker.trigger"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 121
     const-string v0, "android.intent.action.TIME_SET"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 122
     const-string v0, "android.intent.action.TIMEZONE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 123
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/notification/NextAlarmTracker;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -1128,14 +1032,11 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 126
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/notification/NextAlarmTracker;->mRegistered:Z
 
-    .line 127
     invoke-virtual {p0}, Lcom/android/server/notification/NextAlarmTracker;->evaluate()V
 
-    .line 128
     return-void
 .end method

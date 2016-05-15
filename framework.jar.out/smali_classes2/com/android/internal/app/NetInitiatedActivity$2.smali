@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/android/internal/app/NetInitiatedActivity$2;->this$0:Lcom/android/internal/app/NetInitiatedActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 69
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 79
     :goto_0
     return-void
 
-    .line 71
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/app/NetInitiatedActivity$2;->this$0:Lcom/android/internal/app/NetInitiatedActivity;
 
@@ -60,7 +56,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/android/internal/app/NetInitiatedActivity$2;->this$0:Lcom/android/internal/app/NetInitiatedActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/NetInitiatedActivity$2;->this$0:Lcom/android/internal/app/NetInitiatedActivity;
@@ -73,7 +68,6 @@
     # invokes: Lcom/android/internal/app/NetInitiatedActivity;->sendUserResponse(I)V
     invoke-static {v0, v1}, Lcom/android/internal/app/NetInitiatedActivity;->access$300(Lcom/android/internal/app/NetInitiatedActivity;I)V
 
-    .line 74
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/NetInitiatedActivity$2;->this$0:Lcom/android/internal/app/NetInitiatedActivity;
 
@@ -81,7 +75,6 @@
 
     goto :goto_0
 
-    .line 69
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -19,13 +19,10 @@
     .param p3, "allowIo"    # Z
 
     .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 34
     iput-boolean p3, p0, Lcom/android/server/ServiceThread;->mAllowIo:Z
 
-    .line 35
     return-void
 .end method
 
@@ -35,12 +32,10 @@
     .locals 3
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
-    .line 42
     iget-boolean v0, p0, Lcom/android/server/ServiceThread;->mAllowIo:Z
 
     if-nez v0, :cond_0
@@ -51,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 43
     const-string v0, "ServiceThread"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -84,10 +78,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :cond_0
     invoke-super {p0}, Landroid/os/HandlerThread;->run()V
 
-    .line 47
     return-void
 .end method

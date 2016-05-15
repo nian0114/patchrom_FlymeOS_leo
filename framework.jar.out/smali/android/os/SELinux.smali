@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +69,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 173
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -84,15 +82,12 @@
 
     move-result v1
 
-    .line 177
     :goto_0
     return v1
 
-    .line 174
     :catch_0
     move-exception v0
 
-    .line 175
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "SELinux"
 
@@ -133,7 +128,6 @@
     .end annotation
 
     .prologue
-    .line 144
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -142,7 +136,6 @@
 
     throw v0
 
-    .line 145
     :cond_0
     const/4 v0, 0x0
 
@@ -158,7 +151,6 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 191
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -172,15 +164,12 @@
 
     move-result v1
 
-    .line 195
     :goto_0
     return v1
 
-    .line 192
     :catch_0
     move-exception v0
 
-    .line 193
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "SELinux"
 
@@ -208,7 +197,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 195
     const/4 v1, 0x0
 
     goto :goto_0

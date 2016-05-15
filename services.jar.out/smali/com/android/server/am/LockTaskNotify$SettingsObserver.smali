@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->this$0:Lcom/android/server/am/LockTaskNotify;
 
-    .line 108
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 109
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 113
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->this$0:Lcom/android/server/am/LockTaskNotify;
 
     # getter for: Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 114
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "dev_force_show_navbar"
 
@@ -66,12 +61,10 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 117
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->onChange(Z)V
 
-    .line 118
     return-void
 .end method
 
@@ -84,7 +77,6 @@
 
     const/4 v2, 0x0
 
-    .line 121
     iget-object v3, p0, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->this$0:Lcom/android/server/am/LockTaskNotify;
 
     # getter for: Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
@@ -96,7 +88,6 @@
 
     move-result-object v0
 
-    .line 122
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v3, p0, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->this$0:Lcom/android/server/am/LockTaskNotify;
 
@@ -114,12 +105,10 @@
     # setter for: Lcom/android/server/am/LockTaskNotify;->mDevForceNavbar:Z
     invoke-static {v3, v1}, Lcom/android/server/am/LockTaskNotify;->access$202(Lcom/android/server/am/LockTaskNotify;Z)Z
 
-    .line 124
     return-void
 
     :cond_0
     move v1, v2
 
-    .line 122
     goto :goto_0
 .end method

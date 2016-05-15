@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1184
     iput-object p1, p0, Lcom/android/server/ThemeService$3;->this$0:Lcom/android/server/ThemeService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "rhs"    # Ljava/io/File;
 
     .prologue
-    .line 1187
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -72,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 1184
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

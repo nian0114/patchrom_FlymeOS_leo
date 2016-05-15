@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/server/MmsServiceBroker$1;->this$0:Lcom/android/server/MmsServiceBroker;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,23 +37,19 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 78
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 83
     const-string v0, "MmsServiceBroker"
 
     const-string v1, "Unknown message"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :goto_0
     return-void
 
-    .line 80
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$1;->this$0:Lcom/android/server/MmsServiceBroker;
 
@@ -63,7 +58,6 @@
 
     goto :goto_0
 
-    .line 78
     nop
 
     :pswitch_data_0

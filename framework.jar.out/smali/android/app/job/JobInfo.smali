@@ -80,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 267
     new-instance v0, Landroid/app/job/JobInfo$1;
 
     invoke-direct {v0}, Landroid/app/job/JobInfo$1;-><init>()V
@@ -95,10 +94,8 @@
     .param p1, "b"    # Landroid/app/job/JobInfo$Builder;
 
     .prologue
-    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 226
     # getter for: Landroid/app/job/JobInfo$Builder;->mJobId:I
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$000(Landroid/app/job/JobInfo$Builder;)I
 
@@ -106,7 +103,6 @@
 
     iput v0, p0, Landroid/app/job/JobInfo;->jobId:I
 
-    .line 227
     # getter for: Landroid/app/job/JobInfo$Builder;->mExtras:Landroid/os/PersistableBundle;
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$100(Landroid/app/job/JobInfo$Builder;)Landroid/os/PersistableBundle;
 
@@ -114,7 +110,6 @@
 
     iput-object v0, p0, Landroid/app/job/JobInfo;->extras:Landroid/os/PersistableBundle;
 
-    .line 228
     # getter for: Landroid/app/job/JobInfo$Builder;->mJobService:Landroid/content/ComponentName;
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$200(Landroid/app/job/JobInfo$Builder;)Landroid/content/ComponentName;
 
@@ -122,7 +117,6 @@
 
     iput-object v0, p0, Landroid/app/job/JobInfo;->service:Landroid/content/ComponentName;
 
-    .line 229
     # getter for: Landroid/app/job/JobInfo$Builder;->mRequiresCharging:Z
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$300(Landroid/app/job/JobInfo$Builder;)Z
 
@@ -130,7 +124,6 @@
 
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->requireCharging:Z
 
-    .line 230
     # getter for: Landroid/app/job/JobInfo$Builder;->mRequiresDeviceIdle:Z
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$400(Landroid/app/job/JobInfo$Builder;)Z
 
@@ -138,7 +131,6 @@
 
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->requireDeviceIdle:Z
 
-    .line 231
     # getter for: Landroid/app/job/JobInfo$Builder;->mNetworkType:I
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$500(Landroid/app/job/JobInfo$Builder;)I
 
@@ -146,7 +138,6 @@
 
     iput v0, p0, Landroid/app/job/JobInfo;->networkType:I
 
-    .line 232
     # getter for: Landroid/app/job/JobInfo$Builder;->mMinLatencyMillis:J
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$600(Landroid/app/job/JobInfo$Builder;)J
 
@@ -154,7 +145,6 @@
 
     iput-wide v0, p0, Landroid/app/job/JobInfo;->minLatencyMillis:J
 
-    .line 233
     # getter for: Landroid/app/job/JobInfo$Builder;->mMaxExecutionDelayMillis:J
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$700(Landroid/app/job/JobInfo$Builder;)J
 
@@ -162,7 +152,6 @@
 
     iput-wide v0, p0, Landroid/app/job/JobInfo;->maxExecutionDelayMillis:J
 
-    .line 234
     # getter for: Landroid/app/job/JobInfo$Builder;->mIsPeriodic:Z
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$800(Landroid/app/job/JobInfo$Builder;)Z
 
@@ -170,7 +159,6 @@
 
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->isPeriodic:Z
 
-    .line 235
     # getter for: Landroid/app/job/JobInfo$Builder;->mIsPersisted:Z
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$900(Landroid/app/job/JobInfo$Builder;)Z
 
@@ -178,7 +166,6 @@
 
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->isPersisted:Z
 
-    .line 236
     # getter for: Landroid/app/job/JobInfo$Builder;->mIntervalMillis:J
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$1000(Landroid/app/job/JobInfo$Builder;)J
 
@@ -186,7 +173,6 @@
 
     iput-wide v0, p0, Landroid/app/job/JobInfo;->intervalMillis:J
 
-    .line 237
     # getter for: Landroid/app/job/JobInfo$Builder;->mInitialBackoffMillis:J
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$1100(Landroid/app/job/JobInfo$Builder;)J
 
@@ -194,7 +180,6 @@
 
     iput-wide v0, p0, Landroid/app/job/JobInfo;->initialBackoffMillis:J
 
-    .line 238
     # getter for: Landroid/app/job/JobInfo$Builder;->mBackoffPolicy:I
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$1200(Landroid/app/job/JobInfo$Builder;)I
 
@@ -202,7 +187,6 @@
 
     iput v0, p0, Landroid/app/job/JobInfo;->backoffPolicy:I
 
-    .line 239
     # getter for: Landroid/app/job/JobInfo$Builder;->mHasEarlyConstraint:Z
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$1300(Landroid/app/job/JobInfo$Builder;)Z
 
@@ -210,7 +194,6 @@
 
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->hasEarlyConstraint:Z
 
-    .line 240
     # getter for: Landroid/app/job/JobInfo$Builder;->mHasLateConstraint:Z
     invoke-static {p1}, Landroid/app/job/JobInfo$Builder;->access$1400(Landroid/app/job/JobInfo$Builder;)Z
 
@@ -218,7 +201,6 @@
 
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->hasLateConstraint:Z
 
-    .line 241
     return-void
 .end method
 
@@ -228,7 +210,6 @@
     .param p2, "x1"    # Landroid/app/job/JobInfo$1;
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Landroid/app/job/JobInfo;-><init>(Landroid/app/job/JobInfo$Builder;)V
 
     return-void
@@ -243,24 +224,20 @@
 
     const/4 v1, 0x1
 
-    .line 207
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 208
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/job/JobInfo;->jobId:I
 
-    .line 209
     invoke-virtual {p1}, Landroid/os/Parcel;->readPersistableBundle()Landroid/os/PersistableBundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/job/JobInfo;->extras:Landroid/os/PersistableBundle;
 
-    .line 210
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -271,7 +248,6 @@
 
     iput-object v0, p0, Landroid/app/job/JobInfo;->service:Landroid/content/ComponentName;
 
-    .line 211
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -283,7 +259,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->requireCharging:Z
 
-    .line 212
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -295,28 +270,24 @@
     :goto_1
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->requireDeviceIdle:Z
 
-    .line 213
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/job/JobInfo;->networkType:I
 
-    .line 214
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/app/job/JobInfo;->minLatencyMillis:J
 
-    .line 215
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/app/job/JobInfo;->maxExecutionDelayMillis:J
 
-    .line 216
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -328,7 +299,6 @@
     :goto_2
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->isPeriodic:Z
 
-    .line 217
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -340,28 +310,24 @@
     :goto_3
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->isPersisted:Z
 
-    .line 218
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/app/job/JobInfo;->intervalMillis:J
 
-    .line 219
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/app/job/JobInfo;->initialBackoffMillis:J
 
-    .line 220
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/job/JobInfo;->backoffPolicy:I
 
-    .line 221
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -373,7 +339,6 @@
     :goto_4
     iput-boolean v0, p0, Landroid/app/job/JobInfo;->hasEarlyConstraint:Z
 
-    .line 222
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -383,43 +348,36 @@
     :goto_5
     iput-boolean v1, p0, Landroid/app/job/JobInfo;->hasLateConstraint:Z
 
-    .line 223
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 211
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 212
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 216
     goto :goto_2
 
     :cond_3
     move v0, v2
 
-    .line 217
     goto :goto_3
 
     :cond_4
     move v0, v2
 
-    .line 221
     goto :goto_4
 
     :cond_5
     move v1, v2
 
-    .line 222
     goto :goto_5
 .end method
 
@@ -429,7 +387,6 @@
     .param p2, "x1"    # Landroid/app/job/JobInfo$1;
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Landroid/app/job/JobInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -441,7 +398,6 @@
     .locals 1
 
     .prologue
-    .line 245
     const/4 v0, 0x0
 
     return v0
@@ -451,7 +407,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget v0, p0, Landroid/app/job/JobInfo;->backoffPolicy:I
 
     return v0
@@ -461,7 +416,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/app/job/JobInfo;->extras:Landroid/os/PersistableBundle;
 
     return-object v0
@@ -471,7 +425,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget v0, p0, Landroid/app/job/JobInfo;->jobId:I
 
     return v0
@@ -481,7 +434,6 @@
     .locals 2
 
     .prologue
-    .line 177
     iget-wide v0, p0, Landroid/app/job/JobInfo;->initialBackoffMillis:J
 
     return-wide v0
@@ -491,7 +443,6 @@
     .locals 2
 
     .prologue
-    .line 168
     iget-wide v0, p0, Landroid/app/job/JobInfo;->intervalMillis:J
 
     return-wide v0
@@ -501,7 +452,6 @@
     .locals 2
 
     .prologue
-    .line 146
     iget-wide v0, p0, Landroid/app/job/JobInfo;->maxExecutionDelayMillis:J
 
     return-wide v0
@@ -511,7 +461,6 @@
     .locals 2
 
     .prologue
-    .line 138
     iget-wide v0, p0, Landroid/app/job/JobInfo;->minLatencyMillis:J
 
     return-wide v0
@@ -521,7 +470,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget v0, p0, Landroid/app/job/JobInfo;->networkType:I
 
     return v0
@@ -531,7 +479,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Landroid/app/job/JobInfo;->service:Landroid/content/ComponentName;
 
     return-object v0
@@ -541,7 +488,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->hasEarlyConstraint:Z
 
     return v0
@@ -551,7 +497,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->hasLateConstraint:Z
 
     return v0
@@ -561,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->isPeriodic:Z
 
     return v0
@@ -571,7 +515,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->isPersisted:Z
 
     return v0
@@ -581,7 +524,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->requireCharging:Z
 
     return v0
@@ -591,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->requireDeviceIdle:Z
 
     return v0
@@ -601,7 +542,6 @@
     .locals 2
 
     .prologue
-    .line 281
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -657,22 +597,18 @@
 
     const/4 v2, 0x0
 
-    .line 250
     iget v0, p0, Landroid/app/job/JobInfo;->jobId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 251
     iget-object v0, p0, Landroid/app/job/JobInfo;->extras:Landroid/os/PersistableBundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writePersistableBundle(Landroid/os/PersistableBundle;)V
 
-    .line 252
     iget-object v0, p0, Landroid/app/job/JobInfo;->service:Landroid/content/ComponentName;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 253
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->requireCharging:Z
 
     if-eqz v0, :cond_0
@@ -682,7 +618,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 254
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->requireDeviceIdle:Z
 
     if-eqz v0, :cond_1
@@ -692,22 +627,18 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 255
     iget v0, p0, Landroid/app/job/JobInfo;->networkType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 256
     iget-wide v4, p0, Landroid/app/job/JobInfo;->minLatencyMillis:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 257
     iget-wide v4, p0, Landroid/app/job/JobInfo;->maxExecutionDelayMillis:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 258
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->isPeriodic:Z
 
     if-eqz v0, :cond_2
@@ -717,7 +648,6 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 259
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->isPersisted:Z
 
     if-eqz v0, :cond_3
@@ -727,22 +657,18 @@
     :goto_3
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 260
     iget-wide v4, p0, Landroid/app/job/JobInfo;->intervalMillis:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 261
     iget-wide v4, p0, Landroid/app/job/JobInfo;->initialBackoffMillis:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 262
     iget v0, p0, Landroid/app/job/JobInfo;->backoffPolicy:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 263
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->hasEarlyConstraint:Z
 
     if-eqz v0, :cond_4
@@ -752,7 +678,6 @@
     :goto_4
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 264
     iget-boolean v0, p0, Landroid/app/job/JobInfo;->hasLateConstraint:Z
 
     if-eqz v0, :cond_5
@@ -760,42 +685,35 @@
     :goto_5
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 265
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 253
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 254
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 258
     goto :goto_2
 
     :cond_3
     move v0, v2
 
-    .line 259
     goto :goto_3
 
     :cond_4
     move v0, v2
 
-    .line 263
     goto :goto_4
 
     :cond_5
     move v1, v2
 
-    .line 264
     goto :goto_5
 .end method

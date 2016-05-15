@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 879
     invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "camera"    # Landroid/hardware/camera2/CameraDevice;
 
     .prologue
-    .line 895
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "camera"    # Landroid/hardware/camera2/CameraDevice;
 
     .prologue
-    .line 903
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .param p1, "camera"    # Landroid/hardware/camera2/CameraDevice;
 
     .prologue
-    .line 912
     return-void
 .end method
 
@@ -59,6 +55,5 @@
     .param p1, "camera"    # Landroid/hardware/camera2/CameraDevice;
 
     .prologue
-    .line 886
     return-void
 .end method

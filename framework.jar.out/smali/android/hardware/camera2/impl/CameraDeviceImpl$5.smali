@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 167
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 168
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->mClosedOnce:Z
@@ -47,12 +45,10 @@
     .locals 3
 
     .prologue
-    .line 172
     iget-boolean v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->mClosedOnce:Z
 
     if-eqz v1, :cond_0
 
-    .line 173
     new-instance v1, Ljava/lang/AssertionError;
 
     const-string v2, "Don\'t post #onClosed more than once"
@@ -61,11 +57,9 @@
 
     throw v1
 
-    .line 175
     :cond_0
     const/4 v0, 0x0
 
-    .line 176
     .local v0, "sessionCallback":Landroid/hardware/camera2/impl/CameraDeviceImpl$StateCallbackKK;
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -73,7 +67,6 @@
 
     monitor-enter v2
 
-    .line 177
     :try_start_0
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -82,20 +75,16 @@
 
     move-result-object v0
 
-    .line 178
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 179
     if-eqz v0, :cond_1
 
-    .line 180
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/impl/CameraDeviceImpl$StateCallbackKK;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
 
-    .line 182
     :cond_1
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -108,15 +97,12 @@
 
     invoke-virtual {v1, v2}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
 
-    .line 183
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$5;->mClosedOnce:Z
 
-    .line 184
     return-void
 
-    .line 178
     :catchall_0
     move-exception v1
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Landroid/app/ExitTransitionCoordinator$2;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     invoke-direct {p0}, Landroid/transition/Transition$TransitionListenerAdapter;-><init>()V
@@ -38,10 +37,8 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 165
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 166
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$2;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     # getter for: Landroid/app/ExitTransitionCoordinator;->mExitComplete:Z
@@ -51,13 +48,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 167
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$2;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     # invokes: Landroid/app/ExitTransitionCoordinator;->delayCancel()V
     invoke-static {v0}, Landroid/app/ExitTransitionCoordinator;->access$200(Landroid/app/ExitTransitionCoordinator;)V
 
-    .line 169
     :cond_0
     return-void
 .end method

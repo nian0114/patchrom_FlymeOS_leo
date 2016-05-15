@@ -34,15 +34,12 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 20
     const-string v0, "android.app.IBatteryService"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/IBatteryService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -51,17 +48,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     if-nez p0, :cond_0
 
-    .line 29
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 31
     :cond_0
     const-string v1, "android.app.IBatteryService"
 
@@ -69,7 +62,6 @@
 
     move-result-object v0
 
-    .line 32
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -77,12 +69,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 33
     check-cast v0, Landroid/app/IBatteryService;
 
     goto :goto_0
 
-    .line 35
     :cond_1
     new-instance v0, Landroid/app/IBatteryService$Stub$Proxy;
 
@@ -98,7 +88,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-object p0
 .end method
 
@@ -117,10 +106,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 59
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -128,7 +115,6 @@
     :goto_0
     return v2
 
-    .line 47
     :sswitch_0
     const-string v1, "android.app.IBatteryService"
 
@@ -136,22 +122,18 @@
 
     goto :goto_0
 
-    .line 52
     :sswitch_1
     const-string v1, "android.app.IBatteryService"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p0}, Landroid/app/IBatteryService$Stub;->isDockBatterySupported()Z
 
     move-result v0
 
-    .line 54
     .local v0, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 55
     if-eqz v0, :cond_0
 
     move v1, v2
@@ -166,7 +148,6 @@
 
     goto :goto_1
 
-    .line 43
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

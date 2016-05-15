@@ -24,13 +24,10 @@
     .param p2, "tracker"    # Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     .prologue
-    .line 378
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$TextSmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
-    .line 379
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/SMSDispatcher$SmsSender;-><init>(Lcom/android/internal/telephony/SMSDispatcher;Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;)V
 
-    .line 380
     return-void
 .end method
 
@@ -45,12 +42,10 @@
 
     const/4 v6, 0x0
 
-    .line 384
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$TextSmsSender;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     iget-object v1, v3, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mData:Ljava/util/HashMap;
 
-    .line 385
     .local v1, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "text"
 
@@ -60,11 +55,9 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 387
     .local v2, "text":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 389
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$TextSmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
@@ -82,15 +75,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 402
     :goto_0
     return-void
 
-    .line 391
     :catch_0
     move-exception v0
 
-    .line 392
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "SMSDispatcher"
 
@@ -114,14 +104,12 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$TextSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;
 
     invoke-virtual {v3, v7, v6}, Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;->onSendSmsComplete(II)V
 
     goto :goto_0
 
-    .line 398
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$TextSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;

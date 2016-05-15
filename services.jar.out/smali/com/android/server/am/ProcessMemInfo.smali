@@ -32,27 +32,19 @@
     .param p6, "_adjReason"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/am/ProcessMemInfo;->name:Ljava/lang/String;
 
-    .line 32
     iput p2, p0, Lcom/android/server/am/ProcessMemInfo;->pid:I
 
-    .line 33
     iput p3, p0, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
-    .line 34
     iput p4, p0, Lcom/android/server/am/ProcessMemInfo;->procState:I
 
-    .line 35
     iput-object p5, p0, Lcom/android/server/am/ProcessMemInfo;->adjType:Ljava/lang/String;
 
-    .line 36
     iput-object p6, p0, Lcom/android/server/am/ProcessMemInfo;->adjReason:Ljava/lang/String;
 
-    .line 37
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 65
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 68
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v0
@@ -64,6 +62,5 @@
 
     invoke-virtual {p2, v0, v1, v2, v3}, Landroid/graphics/Outline;->setRect(IIII)V
 
-    .line 72
     return-void
 .end method

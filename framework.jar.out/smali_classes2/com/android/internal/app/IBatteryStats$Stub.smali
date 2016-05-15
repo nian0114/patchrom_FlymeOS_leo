@@ -182,15 +182,12 @@
     .locals 1
 
     .prologue
-    .line 14
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 15
     const-string v0, "com.android.internal.app.IBatteryStats"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/app/IBatteryStats$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 16
     return-void
 .end method
 
@@ -199,17 +196,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 23
     if-nez p0, :cond_0
 
-    .line 24
     const/4 v0, 0x0
 
-    .line 30
     :goto_0
     return-object v0
 
-    .line 26
     :cond_0
     const-string v1, "com.android.internal.app.IBatteryStats"
 
@@ -217,7 +210,6 @@
 
     move-result-object v0
 
-    .line 27
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -225,12 +217,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 28
     check-cast v0, Lcom/android/internal/app/IBatteryStats;
 
     goto :goto_0
 
-    .line 30
     :cond_1
     new-instance v0, Lcom/android/internal/app/IBatteryStats$Stub$Proxy;
 
@@ -246,7 +236,6 @@
     .locals 0
 
     .prologue
-    .line 34
     return-object p0
 .end method
 
@@ -263,10 +252,8 @@
     .end annotation
 
     .prologue
-    .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 896
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -274,7 +261,6 @@
     :goto_0
     return v4
 
-    .line 42
     :sswitch_0
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -282,12 +268,10 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 43
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 47
     :sswitch_1
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -295,32 +279,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 51
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 52
     .local v6, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStartSensor(II)V
 
-    .line 53
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 54
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 58
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     :sswitch_2
@@ -330,32 +308,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 60
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 62
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 63
     .restart local v6    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStopSensor(II)V
 
-    .line 64
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 65
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 69
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     :sswitch_3
@@ -365,26 +337,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 71
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 72
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStartVideo(I)V
 
-    .line 73
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 74
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 78
     .end local v5    # "_arg0":I
     :sswitch_4
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -393,26 +360,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 80
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 81
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStopVideo(I)V
 
-    .line 82
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 83
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 87
     .end local v5    # "_arg0":I
     :sswitch_5
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -421,26 +383,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 90
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStartAudio(I)V
 
-    .line 91
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 92
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 96
     .end local v5    # "_arg0":I
     :sswitch_6
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -449,26 +406,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 99
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStopAudio(I)V
 
-    .line 100
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 101
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 105
     .end local v5    # "_arg0":I
     :sswitch_7
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -477,18 +429,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteResetVideo()V
 
-    .line 107
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 108
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 112
     :sswitch_8
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -496,18 +444,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 113
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteResetAudio()V
 
-    .line 114
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 115
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 119
     :sswitch_9
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -515,28 +459,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getStatistics()[B
 
     move-result-object v18
 
-    .line 121
     .local v18, "_result":[B
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 122
     move-object/from16 v0, p3
 
     move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 123
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 127
     .end local v18    # "_result":[B
     :sswitch_a
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -545,26 +484,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 128
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getStatisticsStream()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v18
 
-    .line 129
     .local v18, "_result":Landroid/os/ParcelFileDescriptor;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 130
     if-eqz v18, :cond_0
 
-    .line 131
     const/4 v4, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 132
     const/4 v4, 0x1
 
     move-object/from16 v0, v18
@@ -573,13 +507,11 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 137
     :goto_1
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 135
     :cond_0
     const/4 v4, 0x0
 
@@ -589,7 +521,6 @@
 
     goto :goto_1
 
-    .line 141
     .end local v18    # "_result":Landroid/os/ParcelFileDescriptor;
     :sswitch_b
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -598,28 +529,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 142
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->computeBatteryTimeRemaining()J
 
     move-result-wide v18
 
-    .line 143
     .local v18, "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 144
     move-object/from16 v0, p3
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 145
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 149
     .end local v18    # "_result":J
     :sswitch_c
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -628,28 +554,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 150
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->computeChargeTimeRemaining()J
 
     move-result-wide v18
 
-    .line 151
     .restart local v18    # "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 152
     move-object/from16 v0, p3
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 153
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 157
     .end local v18    # "_result":J
     :sswitch_d
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -658,38 +579,31 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 159
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 161
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 163
     .local v6, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 164
     .local v7, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6, v7}, Lcom/android/internal/app/IBatteryStats$Stub;->noteEvent(ILjava/lang/String;I)V
 
-    .line 165
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 166
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 170
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":Ljava/lang/String;
     .end local v7    # "_arg2":I
@@ -700,32 +614,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 172
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 174
     .local v5, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 175
     .local v6, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteSyncStart(Ljava/lang/String;I)V
 
-    .line 176
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 177
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 181
     .end local v5    # "_arg0":Ljava/lang/String;
     .end local v6    # "_arg1":I
     :sswitch_f
@@ -735,32 +643,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 183
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 185
     .restart local v5    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 186
     .restart local v6    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteSyncFinish(Ljava/lang/String;I)V
 
-    .line 187
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 188
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 192
     .end local v5    # "_arg0":Ljava/lang/String;
     .end local v6    # "_arg1":I
     :sswitch_10
@@ -770,32 +672,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 194
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 196
     .restart local v5    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 197
     .restart local v6    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteJobStart(Ljava/lang/String;I)V
 
-    .line 198
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 199
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 203
     .end local v5    # "_arg0":Ljava/lang/String;
     .end local v6    # "_arg1":I
     :sswitch_11
@@ -805,32 +701,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 205
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 207
     .restart local v5    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 208
     .restart local v6    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteJobFinish(Ljava/lang/String;I)V
 
-    .line 209
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 210
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 214
     .end local v5    # "_arg0":Ljava/lang/String;
     .end local v6    # "_arg1":I
     :sswitch_12
@@ -840,36 +730,30 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 216
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 218
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 220
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 222
     .local v7, "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 224
     .local v8, "_arg3":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 226
     .local v9, "_arg4":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -883,25 +767,20 @@
     :goto_2
     move-object/from16 v4, p0
 
-    .line 227
     invoke-virtual/range {v4 .. v10}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStartWakelock(IILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 228
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 229
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 226
     .end local v10    # "_arg5":Z
     :cond_1
     const/4 v10, 0x0
 
     goto :goto_2
 
-    .line 233
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -914,30 +793,25 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 235
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 237
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 239
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 241
     .restart local v7    # "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 243
     .restart local v8    # "_arg3":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -946,18 +820,14 @@
     .restart local v9    # "_arg4":I
     move-object/from16 v4, p0
 
-    .line 244
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStopWakelock(IILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 245
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 246
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 250
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -970,14 +840,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 252
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 253
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -988,32 +856,27 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 259
     .local v5, "_arg0":Landroid/os/WorkSource;
     :goto_3
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 261
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 263
     .restart local v7    # "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 265
     .restart local v8    # "_arg3":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 267
     .restart local v9    # "_arg4":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1027,18 +890,14 @@
     :goto_4
     move-object/from16 v4, p0
 
-    .line 268
     invoke-virtual/range {v4 .. v10}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStartWakelockFromSource(Landroid/os/WorkSource;ILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 269
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 270
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 256
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -1051,7 +910,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_3
 
-    .line 267
     .restart local v6    # "_arg1":I
     .restart local v7    # "_arg2":Ljava/lang/String;
     .restart local v8    # "_arg3":Ljava/lang/String;
@@ -1061,7 +919,6 @@
 
     goto :goto_4
 
-    .line 274
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -1074,14 +931,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 276
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 277
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1092,32 +947,27 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 283
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_5
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 285
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 287
     .restart local v7    # "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 289
     .restart local v8    # "_arg3":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 291
     .restart local v9    # "_arg4":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1125,7 +975,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 292
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1136,32 +985,27 @@
 
     check-cast v10, Landroid/os/WorkSource;
 
-    .line 298
     .local v10, "_arg5":Landroid/os/WorkSource;
     :goto_6
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 300
     .local v11, "_arg6":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 302
     .local v12, "_arg7":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 304
     .local v13, "_arg8":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v14
 
-    .line 306
     .local v14, "_arg9":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1175,18 +1019,14 @@
     :goto_7
     move-object/from16 v4, p0
 
-    .line 307
     invoke-virtual/range {v4 .. v15}, Lcom/android/internal/app/IBatteryStats$Stub;->noteChangeWakelockFromSource(Landroid/os/WorkSource;ILjava/lang/String;Ljava/lang/String;ILandroid/os/WorkSource;ILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 308
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 309
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 280
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -1204,7 +1044,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_5
 
-    .line 295
     .restart local v6    # "_arg1":I
     .restart local v7    # "_arg2":Ljava/lang/String;
     .restart local v8    # "_arg3":Ljava/lang/String;
@@ -1215,7 +1054,6 @@
     .restart local v10    # "_arg5":Landroid/os/WorkSource;
     goto :goto_6
 
-    .line 306
     .restart local v11    # "_arg6":I
     .restart local v12    # "_arg7":Ljava/lang/String;
     .restart local v13    # "_arg8":Ljava/lang/String;
@@ -1225,7 +1063,6 @@
 
     goto :goto_7
 
-    .line 313
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -1243,14 +1080,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 315
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 316
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1261,26 +1096,22 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 322
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_8
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 324
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 326
     .restart local v7    # "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 328
     .restart local v8    # "_arg3":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1289,18 +1120,14 @@
     .restart local v9    # "_arg4":I
     move-object/from16 v4, p0
 
-    .line 329
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStopWakelockFromSource(Landroid/os/WorkSource;ILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 330
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 331
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 319
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":Ljava/lang/String;
@@ -1312,7 +1139,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_8
 
-    .line 335
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_17
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1321,18 +1147,15 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 337
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 339
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v16
 
-    .line 340
     .local v16, "_arg1":J
     move-object/from16 v0, p0
 
@@ -1340,15 +1163,12 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/android/internal/app/IBatteryStats$Stub;->noteVibratorOn(IJ)V
 
-    .line 341
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 342
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 346
     .end local v5    # "_arg0":I
     .end local v16    # "_arg1":J
     :sswitch_18
@@ -1358,26 +1178,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 348
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 349
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteVibratorOff(I)V
 
-    .line 350
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 351
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 355
     .end local v5    # "_arg0":I
     :sswitch_19
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1386,18 +1201,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 356
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteFlashlightOn()V
 
-    .line 357
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 358
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 362
     :sswitch_1a
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1405,18 +1216,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 363
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteFlashlightOff()V
 
-    .line 364
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 365
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 369
     :sswitch_1b
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1424,26 +1231,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 371
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 372
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStartGps(I)V
 
-    .line 373
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 374
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 378
     .end local v5    # "_arg0":I
     :sswitch_1c
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1452,26 +1254,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 380
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 381
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteStopGps(I)V
 
-    .line 382
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 383
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 387
     .end local v5    # "_arg0":I
     :sswitch_1d
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1480,26 +1277,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 389
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 390
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteScreenState(I)V
 
-    .line 391
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 392
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 396
     .end local v5    # "_arg0":I
     :sswitch_1e
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1508,26 +1300,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 398
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 399
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteScreenBrightness(I)V
 
-    .line 400
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 401
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 405
     .end local v5    # "_arg0":I
     :sswitch_1f
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1536,32 +1323,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 407
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 409
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 410
     .restart local v6    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteUserActivity(II)V
 
-    .line 411
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 412
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 416
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     :sswitch_20
@@ -1571,7 +1352,6 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 418
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -1580,29 +1360,24 @@
 
     const/4 v5, 0x1
 
-    .line 419
     .local v5, "_arg0":Z
     :goto_9
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteInteractive(Z)V
 
-    .line 420
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 421
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 418
     .end local v5    # "_arg0":Z
     :cond_8
     const/4 v5, 0x0
 
     goto :goto_9
 
-    .line 425
     :sswitch_21
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1610,32 +1385,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 427
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 429
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 430
     .local v6, "_arg1":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteConnectivityChanged(ILjava/lang/String;)V
 
-    .line 431
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 432
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 436
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":Ljava/lang/String;
     :sswitch_22
@@ -1645,18 +1414,15 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 438
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 440
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v16
 
-    .line 441
     .restart local v16    # "_arg1":J
     move-object/from16 v0, p0
 
@@ -1664,15 +1430,12 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/android/internal/app/IBatteryStats$Stub;->noteMobileRadioPowerState(IJ)V
 
-    .line 442
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 443
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 447
     .end local v5    # "_arg0":I
     .end local v16    # "_arg1":J
     :sswitch_23
@@ -1682,18 +1445,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 448
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->notePhoneOn()V
 
-    .line 449
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 450
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 454
     :sswitch_24
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1701,18 +1460,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 455
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->notePhoneOff()V
 
-    .line 456
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 457
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 461
     :sswitch_25
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1720,14 +1475,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 463
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_9
 
-    .line 464
     sget-object v4, Landroid/telephony/SignalStrength;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1738,22 +1491,18 @@
 
     check-cast v5, Landroid/telephony/SignalStrength;
 
-    .line 469
     .local v5, "_arg0":Landroid/telephony/SignalStrength;
     :goto_a
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->notePhoneSignalStrength(Landroid/telephony/SignalStrength;)V
 
-    .line 470
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 471
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 467
     .end local v5    # "_arg0":Landroid/telephony/SignalStrength;
     :cond_9
     const/4 v5, 0x0
@@ -1761,7 +1510,6 @@
     .restart local v5    # "_arg0":Landroid/telephony/SignalStrength;
     goto :goto_a
 
-    .line 475
     .end local v5    # "_arg0":Landroid/telephony/SignalStrength;
     :sswitch_26
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1770,12 +1518,10 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 477
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 479
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1785,29 +1531,24 @@
 
     const/4 v6, 0x1
 
-    .line 480
     .local v6, "_arg1":Z
     :goto_b
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->notePhoneDataConnectionState(IZ)V
 
-    .line 481
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 482
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 479
     .end local v6    # "_arg1":Z
     :cond_a
     const/4 v6, 0x0
 
     goto :goto_b
 
-    .line 486
     .end local v5    # "_arg0":I
     :sswitch_27
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1816,26 +1557,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 488
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 489
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->notePhoneState(I)V
 
-    .line 490
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 491
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 495
     .end local v5    # "_arg0":I
     :sswitch_28
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1844,18 +1580,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 496
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiOn()V
 
-    .line 497
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 498
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 502
     :sswitch_29
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1863,18 +1595,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 503
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiOff()V
 
-    .line 504
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 505
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 509
     :sswitch_2a
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -1882,14 +1610,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 511
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_b
 
-    .line 512
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1900,22 +1626,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 517
     .local v5, "_arg0":Landroid/os/WorkSource;
     :goto_c
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiRunning(Landroid/os/WorkSource;)V
 
-    .line 518
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 519
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 515
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_b
     const/4 v5, 0x0
@@ -1923,7 +1645,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_c
 
-    .line 523
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_2b
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -1932,14 +1653,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 525
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_c
 
-    .line 526
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1950,7 +1669,6 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 532
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_d
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1959,7 +1677,6 @@
 
     if-eqz v4, :cond_d
 
-    .line 533
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1970,22 +1687,18 @@
 
     check-cast v6, Landroid/os/WorkSource;
 
-    .line 538
     .local v6, "_arg1":Landroid/os/WorkSource;
     :goto_e
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiRunningChanged(Landroid/os/WorkSource;Landroid/os/WorkSource;)V
 
-    .line 539
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 540
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 529
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":Landroid/os/WorkSource;
     :cond_c
@@ -1994,14 +1707,12 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_d
 
-    .line 536
     :cond_d
     const/4 v6, 0x0
 
     .restart local v6    # "_arg1":Landroid/os/WorkSource;
     goto :goto_e
 
-    .line 544
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":Landroid/os/WorkSource;
     :sswitch_2c
@@ -2011,14 +1722,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 546
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_e
 
-    .line 547
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2029,22 +1738,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 552
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_f
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiStopped(Landroid/os/WorkSource;)V
 
-    .line 553
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 554
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 550
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_e
     const/4 v5, 0x0
@@ -2052,7 +1757,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_f
 
-    .line 558
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_2d
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2061,32 +1765,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 560
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 562
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 563
     .local v6, "_arg1":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiState(ILjava/lang/String;)V
 
-    .line 564
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 565
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 569
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":Ljava/lang/String;
     :sswitch_2e
@@ -2096,12 +1794,10 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 571
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 573
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2111,29 +1807,24 @@
 
     const/4 v6, 0x1
 
-    .line 574
     .local v6, "_arg1":Z
     :goto_10
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiSupplicantStateChanged(IZ)V
 
-    .line 575
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 576
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 573
     .end local v6    # "_arg1":Z
     :cond_f
     const/4 v6, 0x0
 
     goto :goto_10
 
-    .line 580
     .end local v5    # "_arg0":I
     :sswitch_2f
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2142,26 +1833,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 582
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 583
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiRssiChanged(I)V
 
-    .line 584
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 585
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 589
     .end local v5    # "_arg0":I
     :sswitch_30
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2170,18 +1856,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 590
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteBluetoothOn()V
 
-    .line 591
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 592
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 596
     :sswitch_31
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -2189,18 +1871,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 597
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteBluetoothOff()V
 
-    .line 598
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 599
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 603
     :sswitch_32
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -2208,26 +1886,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 605
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 606
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteBluetoothState(I)V
 
-    .line 607
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 608
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 612
     .end local v5    # "_arg0":I
     :sswitch_33
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2236,26 +1909,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 614
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 615
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteFullWifiLockAcquired(I)V
 
-    .line 616
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 617
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 621
     .end local v5    # "_arg0":I
     :sswitch_34
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2264,26 +1932,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 623
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 624
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteFullWifiLockReleased(I)V
 
-    .line 625
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 626
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 630
     .end local v5    # "_arg0":I
     :sswitch_35
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2292,26 +1955,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 632
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 633
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiScanStarted(I)V
 
-    .line 634
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 635
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 639
     .end local v5    # "_arg0":I
     :sswitch_36
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2320,26 +1978,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 641
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 642
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiScanStopped(I)V
 
-    .line 643
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 644
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 648
     .end local v5    # "_arg0":I
     :sswitch_37
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2348,26 +2001,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 650
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 651
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiMulticastEnabled(I)V
 
-    .line 652
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 653
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 657
     .end local v5    # "_arg0":I
     :sswitch_38
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2376,26 +2024,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 659
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 660
     .restart local v5    # "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiMulticastDisabled(I)V
 
-    .line 661
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 662
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 666
     .end local v5    # "_arg0":I
     :sswitch_39
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2404,14 +2047,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 668
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_10
 
-    .line 669
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2422,22 +2063,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 674
     .local v5, "_arg0":Landroid/os/WorkSource;
     :goto_11
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteFullWifiLockAcquiredFromSource(Landroid/os/WorkSource;)V
 
-    .line 675
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 676
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 672
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_10
     const/4 v5, 0x0
@@ -2445,7 +2082,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_11
 
-    .line 680
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_3a
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2454,14 +2090,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 682
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_11
 
-    .line 683
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2472,22 +2106,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 688
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_12
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteFullWifiLockReleasedFromSource(Landroid/os/WorkSource;)V
 
-    .line 689
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 690
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 686
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_11
     const/4 v5, 0x0
@@ -2495,7 +2125,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_12
 
-    .line 694
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_3b
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2504,14 +2133,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 696
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_12
 
-    .line 697
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2522,22 +2149,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 702
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_13
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiScanStartedFromSource(Landroid/os/WorkSource;)V
 
-    .line 703
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 704
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 700
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_12
     const/4 v5, 0x0
@@ -2545,7 +2168,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_13
 
-    .line 708
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_3c
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2554,14 +2176,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 710
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_13
 
-    .line 711
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2572,22 +2192,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 716
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_14
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiScanStoppedFromSource(Landroid/os/WorkSource;)V
 
-    .line 717
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 718
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 714
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_13
     const/4 v5, 0x0
@@ -2595,7 +2211,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_14
 
-    .line 722
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_3d
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2604,14 +2219,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 724
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_14
 
-    .line 725
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2622,28 +2235,23 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 731
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_15
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 732
     .local v6, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiBatchedScanStartedFromSource(Landroid/os/WorkSource;I)V
 
-    .line 733
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 734
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 728
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     .end local v6    # "_arg1":I
     :cond_14
@@ -2652,7 +2260,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_15
 
-    .line 738
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_3e
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2661,14 +2268,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 740
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_15
 
-    .line 741
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2679,22 +2284,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 746
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_16
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiBatchedScanStoppedFromSource(Landroid/os/WorkSource;)V
 
-    .line 747
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 748
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 744
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_15
     const/4 v5, 0x0
@@ -2702,7 +2303,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_16
 
-    .line 752
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_3f
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2711,14 +2311,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 754
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_16
 
-    .line 755
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2729,22 +2327,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 760
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_17
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiMulticastEnabledFromSource(Landroid/os/WorkSource;)V
 
-    .line 761
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 762
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 758
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_16
     const/4 v5, 0x0
@@ -2752,7 +2346,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_17
 
-    .line 766
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_40
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2761,14 +2354,12 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 768
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_17
 
-    .line 769
     sget-object v4, Landroid/os/WorkSource;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2779,22 +2370,18 @@
 
     check-cast v5, Landroid/os/WorkSource;
 
-    .line 774
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     :goto_18
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/android/internal/app/IBatteryStats$Stub;->noteWifiMulticastDisabledFromSource(Landroid/os/WorkSource;)V
 
-    .line 775
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 776
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 772
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :cond_17
     const/4 v5, 0x0
@@ -2802,7 +2389,6 @@
     .restart local v5    # "_arg0":Landroid/os/WorkSource;
     goto :goto_18
 
-    .line 780
     .end local v5    # "_arg0":Landroid/os/WorkSource;
     :sswitch_41
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2811,32 +2397,26 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 782
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 784
     .local v5, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 785
     .restart local v6    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v6}, Lcom/android/internal/app/IBatteryStats$Stub;->noteNetworkInterfaceType(Ljava/lang/String;I)V
 
-    .line 786
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 787
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 791
     .end local v5    # "_arg0":Ljava/lang/String;
     .end local v6    # "_arg1":I
     :sswitch_42
@@ -2846,18 +2426,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 792
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->noteNetworkStatsEnabled()V
 
-    .line 793
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 794
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 798
     :sswitch_43
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -2865,36 +2441,30 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 800
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 802
     .local v5, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 804
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 806
     .local v7, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 808
     .local v8, "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 810
     .restart local v9    # "_arg4":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2903,18 +2473,14 @@
     .local v10, "_arg5":I
     move-object/from16 v4, p0
 
-    .line 811
     invoke-virtual/range {v4 .. v10}, Lcom/android/internal/app/IBatteryStats$Stub;->setBatteryState(IIIIII)V
 
-    .line 812
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 813
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 817
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":I
@@ -2928,28 +2494,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 818
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getAwakeTimeBattery()J
 
     move-result-wide v18
 
-    .line 819
     .restart local v18    # "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 820
     move-object/from16 v0, p3
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 821
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 825
     .end local v18    # "_result":J
     :sswitch_45
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2958,28 +2519,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 826
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getAwakeTimePlugged()J
 
     move-result-wide v18
 
-    .line 827
     .restart local v18    # "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 828
     move-object/from16 v0, p3
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 829
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 833
     .end local v18    # "_result":J
     :sswitch_46
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -2988,28 +2544,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 834
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getDockStatistics()[B
 
     move-result-object v18
 
-    .line 835
     .local v18, "_result":[B
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 836
     move-object/from16 v0, p3
 
     move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 837
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 841
     .end local v18    # "_result":[B
     :sswitch_47
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -3018,26 +2569,21 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 842
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getDockStatisticsStream()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v18
 
-    .line 843
     .local v18, "_result":Landroid/os/ParcelFileDescriptor;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 844
     if-eqz v18, :cond_18
 
-    .line 845
     const/4 v4, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 846
     const/4 v4, 0x1
 
     move-object/from16 v0, v18
@@ -3046,13 +2592,11 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 851
     :goto_19
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 849
     :cond_18
     const/4 v4, 0x0
 
@@ -3062,7 +2606,6 @@
 
     goto :goto_19
 
-    .line 855
     .end local v18    # "_result":Landroid/os/ParcelFileDescriptor;
     :sswitch_48
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -3071,18 +2614,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 856
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->resetStatistics()V
 
-    .line 857
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 858
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 862
     :sswitch_49
     const-string v4, "com.android.internal.app.IBatteryStats"
 
@@ -3090,36 +2629,30 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 864
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 866
     .restart local v5    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 868
     .restart local v6    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 870
     .restart local v7    # "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 872
     .restart local v8    # "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 874
     .restart local v9    # "_arg4":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3128,18 +2661,14 @@
     .restart local v10    # "_arg5":I
     move-object/from16 v4, p0
 
-    .line 875
     invoke-virtual/range {v4 .. v10}, Lcom/android/internal/app/IBatteryStats$Stub;->setDockBatteryState(IIIIII)V
 
-    .line 876
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 877
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 881
     .end local v5    # "_arg0":I
     .end local v6    # "_arg1":I
     .end local v7    # "_arg2":I
@@ -3153,28 +2682,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 882
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getAwakeTimeDockBattery()J
 
     move-result-wide v18
 
-    .line 883
     .local v18, "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 884
     move-object/from16 v0, p3
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 885
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 889
     .end local v18    # "_result":J
     :sswitch_4b
     const-string v4, "com.android.internal.app.IBatteryStats"
@@ -3183,28 +2707,23 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 890
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getAwakeTimeDockPlugged()J
 
     move-result-wide v18
 
-    .line 891
     .restart local v18    # "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 892
     move-object/from16 v0, p3
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 893
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 38
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

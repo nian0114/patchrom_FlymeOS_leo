@@ -29,16 +29,12 @@
     .param p4, "y"    # I
 
     .prologue
-    .line 180
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 181
     iput p3, p0, Landroid/widget/AbsoluteLayout$LayoutParams;->x:I
 
-    .line 182
     iput p4, p0, Landroid/widget/AbsoluteLayout$LayoutParams;->y:I
 
-    .line 183
     return-void
 .end method
 
@@ -50,17 +46,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 202
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 203
     sget-object v1, Lcom/android/internal/R$styleable;->AbsoluteLayout_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 205
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -68,7 +61,6 @@
 
     iput v1, p0, Landroid/widget/AbsoluteLayout$LayoutParams;->x:I
 
-    .line 207
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
@@ -77,10 +69,8 @@
 
     iput v1, p0, Landroid/widget/AbsoluteLayout$LayoutParams;->y:I
 
-    .line 209
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 210
     return-void
 .end method
 
@@ -89,10 +79,8 @@
     .param p1, "source"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 216
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 217
     return-void
 .end method
 
@@ -103,7 +91,6 @@
     .param p1, "output"    # Ljava/lang/String;
 
     .prologue
-    .line 221
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

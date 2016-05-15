@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const-class v0, Landroid/hardware/TorchManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -66,30 +65,24 @@
     .param p2, "service"    # Landroid/hardware/ITorchService;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
-    .line 149
     new-instance v0, Landroid/hardware/TorchManager$1;
 
     invoke-direct {v0, p0}, Landroid/hardware/TorchManager$1;-><init>(Landroid/hardware/TorchManager;)V
 
     iput-object v0, p0, Landroid/hardware/TorchManager;->mTorchChangeListener:Landroid/hardware/ITorchCallback;
 
-    .line 47
     iput-object p1, p0, Landroid/hardware/TorchManager;->mContext:Landroid/content/Context;
 
-    .line 48
     iput-object p2, p0, Landroid/hardware/TorchManager;->mService:Landroid/hardware/ITorchService;
 
-    .line 49
     new-instance v0, Landroid/hardware/TorchManager$TorchHandler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -100,7 +93,6 @@
 
     iput-object v0, p0, Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
 
-    .line 50
     return-void
 .end method
 
@@ -109,7 +101,6 @@
     .param p0, "x0"    # Landroid/hardware/TorchManager;
 
     .prologue
-    .line 32
     iget-object v0, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
     return-object v0
@@ -120,7 +111,6 @@
     .param p0, "x0"    # Landroid/hardware/TorchManager;
 
     .prologue
-    .line 32
     iget-object v0, p0, Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
 
     return-object v0
@@ -131,7 +121,6 @@
     .param p0, "x0"    # Landroid/hardware/TorchManager;
 
     .prologue
-    .line 32
     iget-object v0, p0, Landroid/hardware/TorchManager;->mService:Landroid/hardware/ITorchService;
 
     return-object v0
@@ -144,12 +133,10 @@
     .param p1, "callback"    # Landroid/hardware/TorchManager$TorchCallback;
 
     .prologue
-    .line 121
     iget-object v2, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 122
     :try_start_0
     iget-object v1, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
@@ -159,7 +146,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 123
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Torch client was already added"
@@ -168,7 +154,6 @@
 
     throw v1
 
-    .line 133
     :catchall_0
     move-exception v1
 
@@ -178,7 +163,6 @@
 
     throw v1
 
-    .line 125
     :cond_0
     :try_start_1
     iget-object v1, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
@@ -191,7 +175,6 @@
 
     if-nez v1, :cond_1
 
-    .line 127
     :try_start_2
     iget-object v1, p0, Landroid/hardware/TorchManager;->mService:Landroid/hardware/ITorchService;
 
@@ -202,7 +185,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 132
     :cond_1
     :goto_0
     :try_start_3
@@ -210,17 +192,13 @@
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 133
     monitor-exit v2
 
-    .line 134
     return-void
 
-    .line 128
     :catch_0
     move-exception v0
 
-    .line 129
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/hardware/TorchManager;->TAG:Ljava/lang/String;
 
@@ -237,7 +215,6 @@
     .locals 2
 
     .prologue
-    .line 208
     :try_start_0
     iget-object v1, p0, Landroid/hardware/TorchManager;->mService:Landroid/hardware/ITorchService;
 
@@ -247,15 +224,12 @@
 
     move-result v1
 
-    .line 210
     :goto_0
     return v1
 
-    .line 209
     :catch_0
     move-exception v0
 
-    .line 210
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -266,7 +240,6 @@
     .locals 2
 
     .prologue
-    .line 196
     :try_start_0
     iget-object v1, p0, Landroid/hardware/TorchManager;->mService:Landroid/hardware/ITorchService;
 
@@ -276,15 +249,12 @@
 
     move-result v1
 
-    .line 198
     :goto_0
     return v1
 
-    .line 197
     :catch_0
     move-exception v0
 
-    .line 198
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -295,7 +265,6 @@
     .locals 2
 
     .prologue
-    .line 203
     iget-object v0, p0, Landroid/hardware/TorchManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -316,18 +285,15 @@
     .param p1, "callback"    # Landroid/hardware/TorchManager$TorchCallback;
 
     .prologue
-    .line 137
     iget-object v2, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 138
     :try_start_0
     iget-object v1, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 139
     iget-object v1, p0, Landroid/hardware/TorchManager;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -338,7 +304,6 @@
 
     if-nez v1, :cond_0
 
-    .line 141
     :try_start_1
     iget-object v1, p0, Landroid/hardware/TorchManager;->mService:Landroid/hardware/ITorchService;
 
@@ -349,20 +314,16 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 146
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 147
     return-void
 
-    .line 142
     :catch_0
     move-exception v0
 
-    .line 143
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/hardware/TorchManager;->TAG:Ljava/lang/String;
 
@@ -372,7 +333,6 @@
 
     goto :goto_0
 
-    .line 146
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -389,7 +349,6 @@
     .param p1, "newState"    # Z
 
     .prologue
-    .line 182
     iget-object v0, p0, Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
 
     new-instance v1, Landroid/hardware/TorchManager$3;
@@ -398,7 +357,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/TorchManager$TorchHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 192
     return-void
 .end method
 
@@ -406,7 +364,6 @@
     .locals 2
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
 
     new-instance v1, Landroid/hardware/TorchManager$2;
@@ -415,6 +372,5 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/TorchManager$TorchHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 179
     return-void
 .end method

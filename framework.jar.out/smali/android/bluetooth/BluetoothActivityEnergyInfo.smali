@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 63
     new-instance v0, Landroid/bluetooth/BluetoothActivityEnergyInfo$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothActivityEnergyInfo$1;-><init>()V
@@ -65,32 +64,24 @@
     .param p5, "energyUsed"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput p1, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mBluetoothStackState:I
 
-    .line 44
     iput p2, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerTxTimeMs:I
 
-    .line 45
     iput p3, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerRxTimeMs:I
 
-    .line 46
     iput p4, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerIdleTimeMs:I
 
-    .line 47
     iput p5, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerEnergyUsed:I
 
-    .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->timestamp:J
 
-    .line 49
     return-void
 .end method
 
@@ -100,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 88
     const/4 v0, 0x0
 
     return v0
@@ -110,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mBluetoothStackState:I
 
     return v0
@@ -120,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerEnergyUsed:I
 
     return v0
@@ -130,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerIdleTimeMs:I
 
     return v0
@@ -140,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerRxTimeMs:I
 
     return v0
@@ -150,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerTxTimeMs:I
 
     return v0
@@ -160,7 +145,6 @@
     .locals 2
 
     .prologue
-    .line 130
     iget-wide v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->timestamp:J
 
     return-wide v0
@@ -170,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 137
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothActivityEnergyInfo;->getControllerTxTimeMillis()I
 
     move-result v0
@@ -205,7 +188,6 @@
     .locals 4
 
     .prologue
-    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,31 +283,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mBluetoothStackState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 81
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerTxTimeMs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 82
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerRxTimeMs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 83
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerIdleTimeMs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 84
     iget v0, p0, Landroid/bluetooth/BluetoothActivityEnergyInfo;->mControllerEnergyUsed:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     return-void
 .end method

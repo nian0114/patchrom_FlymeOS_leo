@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 510
     iput-object p1, p0, Lcom/android/server/am/ServiceRecord$2;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iput-object p2, p0, Lcom/android/server/am/ServiceRecord$2;->val$localPackageName:Ljava/lang/String;
@@ -48,20 +47,16 @@
     .locals 6
 
     .prologue
-    .line 512
     invoke-static {}, Landroid/app/NotificationManager;->getService()Landroid/app/INotificationManager;
 
     move-result-object v1
 
-    .line 513
     .local v1, "inm":Landroid/app/INotificationManager;
     if-nez v1, :cond_0
 
-    .line 524
     :goto_0
     return-void
 
-    .line 517
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ServiceRecord$2;->val$localPackageName:Ljava/lang/String;
@@ -81,11 +76,9 @@
 
     goto :goto_0
 
-    .line 519
     :catch_0
     move-exception v0
 
-    .line 520
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string v2, "ActivityManager"
 
@@ -95,7 +88,6 @@
 
     goto :goto_0
 
-    .line 522
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v2

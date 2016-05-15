@@ -43,25 +43,21 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 274
     iput-object p1, p0, Landroid/graphics/pdf/PdfRenderer$Page;->this$0:Landroid/graphics/pdf/PdfRenderer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 256
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    .line 275
     # getter for: Landroid/graphics/pdf/PdfRenderer;->mTempPoint:Landroid/graphics/Point;
     invoke-static {p1}, Landroid/graphics/pdf/PdfRenderer;->access$100(Landroid/graphics/pdf/PdfRenderer;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 276
     .local v0, "size":Landroid/graphics/Point;
     # getter for: Landroid/graphics/pdf/PdfRenderer;->mNativeDocument:J
     invoke-static {p1}, Landroid/graphics/pdf/PdfRenderer;->access$200(Landroid/graphics/pdf/PdfRenderer;)J
@@ -75,27 +71,22 @@
 
     iput-wide v2, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mNativePage:J
 
-    .line 277
     iput p2, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mIndex:I
 
-    .line 278
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     iput v1, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mWidth:I
 
-    .line 279
     iget v1, v0, Landroid/graphics/Point;->y:I
 
     iput v1, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mHeight:I
 
-    .line 280
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     const-string v2, "close"
 
     invoke-virtual {v1, v2}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 281
     return-void
 .end method
 
@@ -106,7 +97,6 @@
     .param p3, "x2"    # Landroid/graphics/pdf/PdfRenderer$1;
 
     .prologue
-    .line 254
     invoke-direct {p0, p1, p2}, Landroid/graphics/pdf/PdfRenderer$Page;-><init>(Landroid/graphics/pdf/PdfRenderer;I)V
 
     return-void
@@ -116,23 +106,19 @@
     .locals 2
 
     .prologue
-    .line 411
     iget-wide v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mNativePage:J
 
     # invokes: Landroid/graphics/pdf/PdfRenderer;->nativeClosePage(J)V
     invoke-static {v0, v1}, Landroid/graphics/pdf/PdfRenderer;->access$500(J)V
 
-    .line 412
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mNativePage:J
 
-    .line 413
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->close()V
 
-    .line 414
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->this$0:Landroid/graphics/pdf/PdfRenderer;
 
     const/4 v1, 0x0
@@ -140,7 +126,6 @@
     # setter for: Landroid/graphics/pdf/PdfRenderer;->mCurrentPage:Landroid/graphics/pdf/PdfRenderer$Page;
     invoke-static {v0, v1}, Landroid/graphics/pdf/PdfRenderer;->access$602(Landroid/graphics/pdf/PdfRenderer;Landroid/graphics/pdf/PdfRenderer$Page;)Landroid/graphics/pdf/PdfRenderer$Page;
 
-    .line 415
     return-void
 .end method
 
@@ -148,7 +133,6 @@
     .locals 4
 
     .prologue
-    .line 418
     iget-wide v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mNativePage:J
 
     const-wide/16 v2, 0x0
@@ -157,7 +141,6 @@
 
     if-nez v0, :cond_0
 
-    .line 419
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Already closed"
@@ -166,7 +149,6 @@
 
     throw v0
 
-    .line 421
     :cond_0
     return-void
 .end method
@@ -177,13 +159,10 @@
     .locals 0
 
     .prologue
-    .line 394
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer$Page;->throwIfClosed()V
 
-    .line 395
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer$Page;->doClose()V
 
-    .line 396
     return-void
 .end method
 
@@ -196,13 +175,11 @@
     .end annotation
 
     .prologue
-    .line 401
     :try_start_0
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 402
     iget-wide v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mNativePage:J
 
     const-wide/16 v2, 0x0
@@ -211,19 +188,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 403
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer$Page;->doClose()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 406
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 408
     return-void
 
-    .line 406
     :catchall_0
     move-exception v0
 
@@ -236,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 307
     iget v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mHeight:I
 
     return v0
@@ -246,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mIndex:I
 
     return v0
@@ -256,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 298
     iget v0, p0, Landroid/graphics/pdf/PdfRenderer$Page;->mWidth:I
 
     return v0
@@ -270,7 +240,6 @@
     .param p4, "renderMode"    # I
 
     .prologue
-    .line 350
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v2
@@ -279,7 +248,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 351
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Unsupported pixel format"
@@ -288,11 +256,9 @@
 
     throw v2
 
-    .line 354
     :cond_0
     if-eqz p2, :cond_2
 
-    .line 355
     move-object/from16 v0, p2
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -325,7 +291,6 @@
 
     if-le v2, v3, :cond_2
 
-    .line 358
     :cond_1
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -335,7 +300,6 @@
 
     throw v2
 
-    .line 362
     :cond_2
     if-eqz p3, :cond_3
 
@@ -345,16 +309,14 @@
 
     if-nez v2, :cond_3
 
-    .line 363
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "transform not affine"
+    const-string v3, "transform not affine"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 366
     :cond_3
     const/4 v2, 0x2
 
@@ -368,7 +330,6 @@
 
     if-eq v0, v2, :cond_4
 
-    .line 367
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Unsupported render mode"
@@ -377,7 +338,6 @@
 
     throw v2
 
-    .line 370
     :cond_4
     const/4 v2, 0x2
 
@@ -391,7 +351,6 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 371
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Only single render mode supported"
@@ -400,7 +359,6 @@
 
     throw v2
 
-    .line 374
     :cond_5
     if-eqz p2, :cond_6
 
@@ -408,7 +366,6 @@
 
     iget v8, v0, Landroid/graphics/Rect;->left:I
 
-    .line 375
     .local v8, "contentLeft":I
     :goto_0
     if-eqz p2, :cond_7
@@ -417,7 +374,6 @@
 
     iget v9, v0, Landroid/graphics/Rect;->top:I
 
-    .line 376
     .local v9, "contentTop":I
     :goto_1
     if-eqz p2, :cond_8
@@ -426,7 +382,6 @@
 
     iget v10, v0, Landroid/graphics/Rect;->right:I
 
-    .line 378
     .local v10, "contentRight":I
     :goto_2
     if-eqz p2, :cond_9
@@ -435,7 +390,6 @@
 
     iget v11, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 381
     .local v11, "contentBottom":I
     :goto_3
     if-eqz p3, :cond_a
@@ -444,7 +398,6 @@
 
     iget-wide v12, v0, Landroid/graphics/Matrix;->native_instance:J
 
-    .line 383
     .local v12, "transformPtr":J
     :goto_4
     iget-object v2, p0, Landroid/graphics/pdf/PdfRenderer$Page;->this$0:Landroid/graphics/pdf/PdfRenderer;
@@ -465,10 +418,8 @@
     # invokes: Landroid/graphics/pdf/PdfRenderer;->nativeRenderPage(JJJIIIIJI)V
     invoke-static/range {v2 .. v14}, Landroid/graphics/pdf/PdfRenderer;->access$400(JJJIIIIJI)V
 
-    .line 385
     return-void
 
-    .line 374
     .end local v8    # "contentLeft":I
     .end local v9    # "contentTop":I
     .end local v10    # "contentRight":I
@@ -479,14 +430,12 @@
 
     goto :goto_0
 
-    .line 375
     .restart local v8    # "contentLeft":I
     :cond_7
     const/4 v9, 0x0
 
     goto :goto_1
 
-    .line 376
     .restart local v9    # "contentTop":I
     :cond_8
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -495,7 +444,6 @@
 
     goto :goto_2
 
-    .line 378
     .restart local v10    # "contentRight":I
     :cond_9
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -504,7 +452,6 @@
 
     goto :goto_3
 
-    .line 381
     .restart local v11    # "contentBottom":I
     :cond_a
     const-wide/16 v12, 0x0

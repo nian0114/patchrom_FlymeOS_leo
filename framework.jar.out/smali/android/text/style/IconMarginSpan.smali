@@ -19,13 +19,10 @@
     .param p1, "b"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Landroid/text/style/IconMarginSpan;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 30
     return-void
 .end method
 
@@ -35,16 +32,12 @@
     .param p2, "pad"    # I
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/text/style/IconMarginSpan;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 34
     iput p2, p0, Landroid/text/style/IconMarginSpan;->mPad:I
 
-    .line 35
     return-void
 .end method
 
@@ -60,7 +53,6 @@
     .param p6, "fm"    # Landroid/graphics/Paint$FontMetricsInt;
 
     .prologue
-    .line 57
     check-cast p1, Landroid/text/Spanned;
 
     .end local p1    # "text":Ljava/lang/CharSequence;
@@ -70,14 +62,12 @@
 
     if-ne p3, v2, :cond_1
 
-    .line 58
     iget-object v2, p0, Landroid/text/style/IconMarginSpan;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 60
     .local v0, "ht":I
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
@@ -91,18 +81,15 @@
 
     sub-int v1, v0, v2
 
-    .line 61
     .local v1, "need":I
     if-lez v1, :cond_0
 
-    .line 62
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     add-int/2addr v2, v1
 
     iput v2, p6, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    .line 64
     :cond_0
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
@@ -116,17 +103,14 @@
 
     sub-int v1, v0, v2
 
-    .line 65
     if-lez v1, :cond_1
 
-    .line 66
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
     add-int/2addr v2, v1
 
     iput v2, p6, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
-    .line 68
     .end local v0    # "ht":I
     .end local v1    # "need":I
     :cond_1
@@ -149,7 +133,6 @@
     .param p12, "layout"    # Landroid/text/Layout;
 
     .prologue
-    .line 45
     check-cast p8, Landroid/text/Spanned;
 
     .end local p8    # "text":Ljava/lang/CharSequence;
@@ -157,7 +140,6 @@
 
     move-result v2
 
-    .line 46
     .local v2, "st":I
     move-object/from16 v0, p12
 
@@ -171,11 +153,9 @@
 
     move-result v1
 
-    .line 48
     .local v1, "itop":I
     if-gez p4, :cond_0
 
-    .line 49
     iget-object v3, p0, Landroid/text/style/IconMarginSpan;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
@@ -184,7 +164,6 @@
 
     sub-int/2addr p3, v3
 
-    .line 51
     :cond_0
     iget-object v3, p0, Landroid/text/style/IconMarginSpan;->mBitmap:Landroid/graphics/Bitmap;
 
@@ -194,7 +173,6 @@
 
     invoke-virtual {p1, v3, v4, v5, p2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 52
     return-void
 .end method
 
@@ -203,7 +181,6 @@
     .param p1, "first"    # Z
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/text/style/IconMarginSpan;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I

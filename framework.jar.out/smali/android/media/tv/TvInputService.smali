@@ -45,10 +45,8 @@
     .locals 2
 
     .prologue
-    .line 72
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 96
     new-instance v0, Landroid/media/tv/TvInputService$ServiceHandler;
 
     const/4 v1, 0x0
@@ -57,14 +55,12 @@
 
     iput-object v0, p0, Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
 
-    .line 97
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Landroid/media/tv/TvInputService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 1301
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p0, "x0"    # Landroid/media/tv/TvInputService;
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/media/tv/TvInputService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     return-object v0
@@ -85,7 +80,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     invoke-direct {p0, p1}, Landroid/media/tv/TvInputService;->isPassthroughInput(Ljava/lang/String;)Z
 
     move-result v0
@@ -98,7 +92,6 @@
     .param p0, "x0"    # Landroid/media/tv/TvInputService;
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/media/tv/TvInputService;->mServiceHandler:Landroid/os/Handler;
 
     return-object v0
@@ -109,22 +102,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1283
     sparse-switch p0, :sswitch_data_0
 
-    .line 1298
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1296
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1283
     nop
 
     :sswitch_data_0
@@ -149,13 +138,11 @@
     .param p1, "inputId"    # Ljava/lang/String;
 
     .prologue
-    .line 225
     iget-object v1, p0, Landroid/media/tv/TvInputService;->mTvInputManager:Landroid/media/tv/TvInputManager;
 
     if-nez v1, :cond_0
 
-    .line 226
-    const-string/jumbo v1, "tv_input"
+    const-string v1, "tv_input"
 
     invoke-virtual {p0, v1}, Landroid/media/tv/TvInputService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -165,7 +152,6 @@
 
     iput-object v1, p0, Landroid/media/tv/TvInputService;->mTvInputManager:Landroid/media/tv/TvInputManager;
 
-    .line 228
     :cond_0
     iget-object v1, p0, Landroid/media/tv/TvInputService;->mTvInputManager:Landroid/media/tv/TvInputManager;
 
@@ -173,7 +159,6 @@
 
     move-result-object v0
 
-    .line 229
     .local v0, "info":Landroid/media/tv/TvInputInfo;
     if-eqz v0, :cond_1
 
@@ -183,10 +168,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 230
     const/4 v1, 0x1
 
-    .line 232
     :goto_0
     return v1
 
@@ -203,7 +186,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 104
     new-instance v0, Landroid/media/tv/TvInputService$1;
 
     invoke-direct {v0, p0}, Landroid/media/tv/TvInputService$1;-><init>(Landroid/media/tv/TvInputService;)V
@@ -219,7 +201,6 @@
     .param p1, "hardwareInfo"    # Landroid/media/tv/TvInputHardwareInfo;
 
     .prologue
-    .line 182
     const/4 v0, 0x0
 
     return-object v0
@@ -230,7 +211,6 @@
     .param p1, "hardwareInfo"    # Landroid/media/tv/TvInputHardwareInfo;
 
     .prologue
-    .line 195
     const/4 v0, 0x0
 
     return-object v0
@@ -241,7 +221,6 @@
     .param p1, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 208
     const/4 v0, 0x0
 
     return-object v0
@@ -252,7 +231,6 @@
     .param p1, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 221
     const/4 v0, 0x0
 
     return-object v0

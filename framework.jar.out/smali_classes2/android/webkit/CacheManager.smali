@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 40
     const-class v0, Landroid/webkit/CacheManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -49,10 +48,8 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 248
     const/4 v0, 0x0
 
     return v0
@@ -74,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 273
     const/4 v0, 0x0
 
     return v0
@@ -100,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 292
     .local p1, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -113,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 237
     const/4 v0, 0x0
 
     return-object v0
@@ -126,7 +119,6 @@
     .param p3, "cacheRet"    # Landroid/webkit/CacheManager$CacheResult;
 
     .prologue
-    .line 311
     :try_start_0
     iget-object v1, p3, Landroid/webkit/CacheManager$CacheResult;->outStream:Ljava/io/OutputStream;
 
@@ -134,7 +126,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 333
     sget-boolean v1, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v1, :cond_0
@@ -145,11 +136,9 @@
 
     throw v1
 
-    .line 312
     :catch_0
     move-exception v0
 
-    .line 334
     :cond_0
     return-void
 .end method
@@ -162,12 +151,10 @@
     .end annotation
 
     .prologue
-    .line 305
     const-wide/16 v0, 0x0
 
     invoke-static {p0, v0, v1, p1}, Landroid/webkit/CacheManager;->saveCacheFile(Ljava/lang/String;JLandroid/webkit/CacheManager$CacheResult;)V
 
-    .line 306
     return-void
 .end method
 
@@ -177,7 +164,6 @@
     .end annotation
 
     .prologue
-    .line 261
     const/4 v0, 0x0
 
     return v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 521
     iput-object p1, p0, Landroid/widget/VideoView$4;->this$0:Landroid/widget/VideoView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 523
     iget-object v0, p0, Landroid/widget/VideoView$4;->this$0:Landroid/widget/VideoView;
 
     # getter for: Landroid/widget/VideoView;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 524
     iget-object v0, p0, Landroid/widget/VideoView$4;->this$0:Landroid/widget/VideoView;
 
     # getter for: Landroid/widget/VideoView;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
@@ -63,7 +60,6 @@
 
     invoke-interface {v0, p1, p2, p3}, Landroid/media/MediaPlayer$OnInfoListener;->onInfo(Landroid/media/MediaPlayer;II)Z
 
-    .line 526
     :cond_0
     const/4 v0, 0x1
 

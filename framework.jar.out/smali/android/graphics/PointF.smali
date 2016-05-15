@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 134
     new-instance v0, Landroid/graphics/PointF$1;
 
     invoke-direct {v0}, Landroid/graphics/PointF$1;-><init>()V
@@ -44,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,16 +54,12 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput p1, p0, Landroid/graphics/PointF;->x:F
 
-    .line 35
     iput p2, p0, Landroid/graphics/PointF;->y:F
 
-    .line 36
     return-void
 .end method
 
@@ -74,24 +68,20 @@
     .param p1, "p"    # Landroid/graphics/Point;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iget v0, p1, Landroid/graphics/Point;->x:I
 
     int-to-float v0, v0
 
     iput v0, p0, Landroid/graphics/PointF;->x:F
 
-    .line 40
     iget v0, p1, Landroid/graphics/Point;->y:I
 
     int-to-float v0, v0
 
     iput v0, p0, Landroid/graphics/PointF;->y:F
 
-    .line 41
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .param p1, "y"    # F
 
     .prologue
-    .line 112
     mul-float v0, p0, p0
 
     mul-float v1, p1, p1
@@ -121,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 120
     const/4 v0, 0x0
 
     return v0
@@ -133,7 +121,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 73
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     cmpl-float v0, v0, p1
@@ -166,15 +153,12 @@
 
     const/4 v2, 0x0
 
-    .line 78
     if-ne p0, p1, :cond_1
 
-    .line 86
     :cond_0
     :goto_0
     return v1
 
-    .line 79
     :cond_1
     if-eqz p1, :cond_2
 
@@ -196,10 +180,8 @@
     :cond_3
     move-object v0, p1
 
-    .line 81
     check-cast v0, Landroid/graphics/PointF;
 
-    .line 83
     .local v0, "pointF":Landroid/graphics/PointF;
     iget v3, v0, Landroid/graphics/PointF;->x:F
 
@@ -215,7 +197,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_4
     iget v3, v0, Landroid/graphics/PointF;->y:F
 
@@ -240,7 +221,6 @@
 
     const/4 v4, 0x0
 
-    .line 91
     iget v2, p0, Landroid/graphics/PointF;->x:F
 
     cmpl-float v2, v2, v4
@@ -253,7 +233,6 @@
 
     move-result v0
 
-    .line 92
     .local v0, "result":I
     :goto_0
     mul-int/lit8 v2, v0, 0x1f
@@ -273,14 +252,12 @@
     :cond_0
     add-int v0, v2, v1
 
-    .line 93
     return v0
 
     .end local v0    # "result":I
     :cond_1
     move v0, v1
 
-    .line 91
     goto :goto_0
 .end method
 
@@ -288,7 +265,6 @@
     .locals 2
 
     .prologue
-    .line 105
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     iget v1, p0, Landroid/graphics/PointF;->y:F
@@ -304,21 +280,18 @@
     .locals 1
 
     .prologue
-    .line 60
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     neg-float v0, v0
 
     iput v0, p0, Landroid/graphics/PointF;->x:F
 
-    .line 61
     iget v0, p0, Landroid/graphics/PointF;->y:F
 
     neg-float v0, v0
 
     iput v0, p0, Landroid/graphics/PointF;->y:F
 
-    .line 62
     return-void
 .end method
 
@@ -328,21 +301,18 @@
     .param p2, "dy"    # F
 
     .prologue
-    .line 65
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     add-float/2addr v0, p1
 
     iput v0, p0, Landroid/graphics/PointF;->x:F
 
-    .line 66
     iget v0, p0, Landroid/graphics/PointF;->y:F
 
     add-float/2addr v0, p2
 
     iput v0, p0, Landroid/graphics/PointF;->y:F
 
-    .line 67
     return-void
 .end method
 
@@ -351,21 +321,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 159
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/PointF;->x:F
 
-    .line 160
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/PointF;->y:F
 
-    .line 161
     return-void
 .end method
 
@@ -375,13 +342,10 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 47
     iput p1, p0, Landroid/graphics/PointF;->x:F
 
-    .line 48
     iput p2, p0, Landroid/graphics/PointF;->y:F
 
-    .line 49
     return-void
 .end method
 
@@ -390,17 +354,14 @@
     .param p1, "p"    # Landroid/graphics/PointF;
 
     .prologue
-    .line 55
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     iput v0, p0, Landroid/graphics/PointF;->x:F
 
-    .line 56
     iget v0, p1, Landroid/graphics/PointF;->y:F
 
     iput v0, p0, Landroid/graphics/PointF;->y:F
 
-    .line 57
     return-void
 .end method
 
@@ -408,7 +369,6 @@
     .locals 2
 
     .prologue
-    .line 98
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -456,16 +416,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 130
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 131
     iget v0, p0, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 132
     return-void
 .end method

@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 47
     new-instance v0, Landroid/graphics/Shader$TileMode;
 
     const-string v1, "CLAMP"
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    .line 51
     new-instance v0, Landroid/graphics/Shader$TileMode;
 
     const-string v1, "REPEAT"
@@ -66,7 +64,6 @@
 
     sput-object v0, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
 
-    .line 56
     new-instance v0, Landroid/graphics/Shader$TileMode;
 
     const-string v1, "MIRROR"
@@ -75,7 +72,6 @@
 
     sput-object v0, Landroid/graphics/Shader$TileMode;->MIRROR:Landroid/graphics/Shader$TileMode;
 
-    .line 42
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/graphics/Shader$TileMode;
@@ -107,13 +103,10 @@
     .end annotation
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 59
     iput p3, p0, Landroid/graphics/Shader$TileMode;->nativeInt:I
 
-    .line 60
     return-void
 .end method
 
@@ -122,7 +115,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     const-class v0, Landroid/graphics/Shader$TileMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Landroid/graphics/Shader$TileMode;->$VALUES:[Landroid/graphics/Shader$TileMode;
 
     invoke-virtual {v0}, [Landroid/graphics/Shader$TileMode;->clone()Ljava/lang/Object;

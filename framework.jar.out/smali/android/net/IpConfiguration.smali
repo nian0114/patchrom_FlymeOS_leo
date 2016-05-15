@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 187
     new-instance v0, Landroid/net/IpConfiguration$1;
 
     invoke-direct {v0}, Landroid/net/IpConfiguration$1;-><init>()V
@@ -61,17 +60,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     sget-object v0, Landroid/net/IpConfiguration$IpAssignment;->UNASSIGNED:Landroid/net/IpConfiguration$IpAssignment;
 
     sget-object v1, Landroid/net/IpConfiguration$ProxySettings;->UNASSIGNED:Landroid/net/IpConfiguration$ProxySettings;
 
     invoke-direct {p0, v0, v1, v2, v2}, Landroid/net/IpConfiguration;->init(Landroid/net/IpConfiguration$IpAssignment;Landroid/net/IpConfiguration$ProxySettings;Landroid/net/StaticIpConfiguration;Landroid/net/ProxyInfo;)V
 
-    .line 80
     return-void
 .end method
 
@@ -83,13 +79,10 @@
     .param p4, "httpProxy"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/net/IpConfiguration;->init(Landroid/net/IpConfiguration$IpAssignment;Landroid/net/IpConfiguration$ProxySettings;Landroid/net/StaticIpConfiguration;Landroid/net/ProxyInfo;)V
 
-    .line 87
     return-void
 .end method
 
@@ -98,13 +91,10 @@
     .param p1, "source"    # Landroid/net/IpConfiguration;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Landroid/net/IpConfiguration;-><init>()V
 
-    .line 91
     if-eqz p1, :cond_0
 
-    .line 92
     iget-object v0, p1, Landroid/net/IpConfiguration;->ipAssignment:Landroid/net/IpConfiguration$IpAssignment;
 
     iget-object v1, p1, Landroid/net/IpConfiguration;->proxySettings:Landroid/net/IpConfiguration$ProxySettings;
@@ -115,7 +105,6 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroid/net/IpConfiguration;->init(Landroid/net/IpConfiguration$IpAssignment;Landroid/net/IpConfiguration$ProxySettings;Landroid/net/StaticIpConfiguration;Landroid/net/ProxyInfo;)V
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -130,13 +119,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 70
     iput-object p1, p0, Landroid/net/IpConfiguration;->ipAssignment:Landroid/net/IpConfiguration$IpAssignment;
 
-    .line 71
     iput-object p2, p0, Landroid/net/IpConfiguration;->proxySettings:Landroid/net/IpConfiguration$ProxySettings;
 
-    .line 72
     if-nez p3, :cond_0
 
     move-object v0, v1
@@ -144,16 +130,13 @@
     :goto_0
     iput-object v0, p0, Landroid/net/IpConfiguration;->staticIpConfiguration:Landroid/net/StaticIpConfiguration;
 
-    .line 74
     if-nez p4, :cond_1
 
     :goto_1
     iput-object v1, p0, Landroid/net/IpConfiguration;->httpProxy:Landroid/net/ProxyInfo;
 
-    .line 76
     return-void
 
-    .line 72
     :cond_0
     new-instance v0, Landroid/net/StaticIpConfiguration;
 
@@ -161,7 +144,6 @@
 
     goto :goto_0
 
-    .line 74
     :cond_1
     new-instance v1, Landroid/net/ProxyInfo;
 
@@ -176,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 175
     const/4 v0, 0x0
 
     return v0
@@ -191,15 +172,12 @@
 
     const/4 v2, 0x0
 
-    .line 150
     if-ne p1, p0, :cond_1
 
-    .line 159
     :cond_0
     :goto_0
     return v1
 
-    .line 154
     :cond_1
     instance-of v3, p1, Landroid/net/IpConfiguration;
 
@@ -207,16 +185,13 @@
 
     move v1, v2
 
-    .line 155
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 158
     check-cast v0, Landroid/net/IpConfiguration;
 
-    .line 159
     .local v0, "other":Landroid/net/IpConfiguration;
     iget-object v3, p0, Landroid/net/IpConfiguration;->ipAssignment:Landroid/net/IpConfiguration$IpAssignment;
 
@@ -260,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Landroid/net/IpConfiguration;->httpProxy:Landroid/net/ProxyInfo;
 
     return-object v0
@@ -270,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/net/IpConfiguration;->ipAssignment:Landroid/net/IpConfiguration$IpAssignment;
 
     return-object v0
@@ -280,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-object v0, p0, Landroid/net/IpConfiguration;->proxySettings:Landroid/net/IpConfiguration$ProxySettings;
 
     return-object v0
@@ -290,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Landroid/net/IpConfiguration;->staticIpConfiguration:Landroid/net/StaticIpConfiguration;
 
     return-object v0
@@ -300,7 +271,6 @@
     .locals 2
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/net/IpConfiguration;->staticIpConfiguration:Landroid/net/StaticIpConfiguration;
 
     if-eqz v0, :cond_0
@@ -357,10 +327,8 @@
     .param p1, "httpProxy"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 126
     iput-object p1, p0, Landroid/net/IpConfiguration;->httpProxy:Landroid/net/ProxyInfo;
 
-    .line 127
     return-void
 .end method
 
@@ -369,10 +337,8 @@
     .param p1, "ipAssignment"    # Landroid/net/IpConfiguration$IpAssignment;
 
     .prologue
-    .line 102
     iput-object p1, p0, Landroid/net/IpConfiguration;->ipAssignment:Landroid/net/IpConfiguration$IpAssignment;
 
-    .line 103
     return-void
 .end method
 
@@ -381,10 +347,8 @@
     .param p1, "proxySettings"    # Landroid/net/IpConfiguration$ProxySettings;
 
     .prologue
-    .line 118
     iput-object p1, p0, Landroid/net/IpConfiguration;->proxySettings:Landroid/net/IpConfiguration$ProxySettings;
 
-    .line 119
     return-void
 .end method
 
@@ -393,10 +357,8 @@
     .param p1, "staticIpConfiguration"    # Landroid/net/StaticIpConfiguration;
 
     .prologue
-    .line 110
     iput-object p1, p0, Landroid/net/IpConfiguration;->staticIpConfiguration:Landroid/net/StaticIpConfiguration;
 
-    .line 111
     return-void
 .end method
 
@@ -404,12 +366,10 @@
     .locals 3
 
     .prologue
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 132
     .local v0, "sbuf":Ljava/lang/StringBuilder;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -437,17 +397,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 134
     iget-object v1, p0, Landroid/net/IpConfiguration;->staticIpConfiguration:Landroid/net/StaticIpConfiguration;
 
     if-eqz v1, :cond_0
 
-    .line 135
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,12 +431,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -507,17 +462,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 139
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
     iget-object v1, p0, Landroid/net/IpConfiguration;->httpProxy:Landroid/net/ProxyInfo;
 
     if-eqz v1, :cond_1
 
-    .line 141
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -544,12 +496,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 142
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 145
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -564,7 +514,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 180
     iget-object v0, p0, Landroid/net/IpConfiguration;->ipAssignment:Landroid/net/IpConfiguration$IpAssignment;
 
     invoke-virtual {v0}, Landroid/net/IpConfiguration$IpAssignment;->name()Ljava/lang/String;
@@ -573,7 +522,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 181
     iget-object v0, p0, Landroid/net/IpConfiguration;->proxySettings:Landroid/net/IpConfiguration$ProxySettings;
 
     invoke-virtual {v0}, Landroid/net/IpConfiguration$ProxySettings;->name()Ljava/lang/String;
@@ -582,16 +530,13 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 182
     iget-object v0, p0, Landroid/net/IpConfiguration;->staticIpConfiguration:Landroid/net/StaticIpConfiguration;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 183
     iget-object v0, p0, Landroid/net/IpConfiguration;->httpProxy:Landroid/net/ProxyInfo;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 184
     return-void
 .end method

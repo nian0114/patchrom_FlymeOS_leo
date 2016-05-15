@@ -16,16 +16,12 @@
     .param p2, "varName"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Landroid/filterfw/core/ProgramVariable;->mProgram:Landroid/filterfw/core/Program;
 
-    .line 30
     iput-object p2, p0, Landroid/filterfw/core/ProgramVariable;->mVarName:Ljava/lang/String;
 
-    .line 31
     return-void
 .end method
 
@@ -35,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/filterfw/core/ProgramVariable;->mProgram:Landroid/filterfw/core/Program;
 
     return-object v0
@@ -45,12 +40,10 @@
     .locals 3
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/filterfw/core/ProgramVariable;->mProgram:Landroid/filterfw/core/Program;
 
     if-nez v0, :cond_0
 
-    .line 51
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,7 +76,6 @@
 
     throw v0
 
-    .line 54
     :cond_0
     iget-object v0, p0, Landroid/filterfw/core/ProgramVariable;->mProgram:Landroid/filterfw/core/Program;
 
@@ -100,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/filterfw/core/ProgramVariable;->mVarName:Ljava/lang/String;
 
     return-object v0
@@ -111,12 +102,10 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/filterfw/core/ProgramVariable;->mProgram:Landroid/filterfw/core/Program;
 
     if-nez v0, :cond_0
 
-    .line 43
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -149,7 +138,6 @@
 
     throw v0
 
-    .line 46
     :cond_0
     iget-object v0, p0, Landroid/filterfw/core/ProgramVariable;->mProgram:Landroid/filterfw/core/Program;
 
@@ -157,6 +145,5 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 47
     return-void
 .end method

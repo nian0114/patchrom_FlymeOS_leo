@@ -24,7 +24,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 223
     iput-object p2, p0, Lcom/android/internal/util/cm/QSUtils$1;->val$cb:Lcom/android/internal/util/cm/QSUtils$OnQSChanged;
 
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,11 +39,9 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 226
     iget-object v0, p0, Lcom/android/internal/util/cm/QSUtils$1;->val$cb:Lcom/android/internal/util/cm/QSUtils$OnQSChanged;
 
     invoke-interface {v0}, Lcom/android/internal/util/cm/QSUtils$OnQSChanged;->onQSChanged()V
 
-    .line 227
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 159
     invoke-static {}, Lcom/google/android/gles_jni/EGLImpl;->_nativeClassInit()V
 
     return-void
@@ -31,24 +30,20 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     new-instance v0, Lcom/google/android/gles_jni/EGLContextImpl;
 
     invoke-direct {v0, v2, v3}, Lcom/google/android/gles_jni/EGLContextImpl;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gles_jni/EGLImpl;->mContext:Lcom/google/android/gles_jni/EGLContextImpl;
 
-    .line 28
     new-instance v0, Lcom/google/android/gles_jni/EGLDisplayImpl;
 
     invoke-direct {v0, v2, v3}, Lcom/google/android/gles_jni/EGLDisplayImpl;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
 
-    .line 29
     new-instance v0, Lcom/google/android/gles_jni/EGLSurfaceImpl;
 
     invoke-direct {v0, v2, v3}, Lcom/google/android/gles_jni/EGLSurfaceImpl;-><init>(J)V
@@ -107,12 +102,10 @@
     .param p4, "attrib_list"    # [I
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/gles_jni/EGLImpl;->_eglCreateContext(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;Ljavax/microedition/khronos/egl/EGLContext;[I)J
 
     move-result-wide v0
 
-    .line 55
     .local v0, "eglContextId":J
     const-wide/16 v2, 0x0
 
@@ -120,10 +113,8 @@
 
     if-nez v2, :cond_0
 
-    .line 56
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_CONTEXT:Ljavax/microedition/khronos/egl/EGLContext;
 
-    .line 58
     :goto_0
     return-object v2
 
@@ -142,12 +133,10 @@
     .param p3, "attrib_list"    # [I
 
     .prologue
-    .line 62
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/gles_jni/EGLImpl;->_eglCreatePbufferSurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;[I)J
 
     move-result-wide v0
 
-    .line 63
     .local v0, "eglSurfaceId":J
     const-wide/16 v2, 0x0
 
@@ -155,10 +144,8 @@
 
     if-nez v2, :cond_0
 
-    .line 64
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    .line 66
     :goto_0
     return-object v2
 
@@ -178,7 +165,6 @@
     .param p4, "attrib_list"    # [I
 
     .prologue
-    .line 70
     new-instance v1, Lcom/google/android/gles_jni/EGLSurfaceImpl;
 
     invoke-direct {v1}, Lcom/google/android/gles_jni/EGLSurfaceImpl;-><init>()V
@@ -194,10 +180,8 @@
 
     move-object v5, p4
 
-    .line 71
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gles_jni/EGLImpl;->_eglCreatePixmapSurface(Ljavax/microedition/khronos/egl/EGLSurface;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;Ljava/lang/Object;[I)V
 
-    .line 72
     iget-wide v2, v1, Lcom/google/android/gles_jni/EGLSurfaceImpl;->mEGLSurface:J
 
     const-wide/16 v4, 0x0
@@ -206,10 +190,8 @@
 
     if-nez v0, :cond_0
 
-    .line 73
     sget-object v1, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    .line 75
     .end local v1    # "sur":Lcom/google/android/gles_jni/EGLSurfaceImpl;
     :cond_0
     return-object v1
@@ -223,10 +205,8 @@
     .param p4, "attrib_list"    # [I
 
     .prologue
-    .line 79
     const/4 v3, 0x0
 
-    .line 80
     .local v3, "sur":Landroid/view/Surface;
     instance-of v5, p3, Landroid/view/SurfaceView;
 
@@ -234,10 +214,8 @@
 
     move-object v4, p3
 
-    .line 81
     check-cast v4, Landroid/view/SurfaceView;
 
-    .line 82
     .local v4, "surfaceView":Landroid/view/SurfaceView;
     invoke-virtual {v4}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
@@ -247,18 +225,15 @@
 
     move-result-object v3
 
-    .line 91
     .end local v4    # "surfaceView":Landroid/view/SurfaceView;
     :cond_0
     :goto_0
     if-eqz v3, :cond_3
 
-    .line 92
     invoke-direct {p0, p1, p2, v3, p4}, Lcom/google/android/gles_jni/EGLImpl;->_eglCreateWindowSurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;Ljava/lang/Object;[I)J
 
     move-result-wide v0
 
-    .line 102
     .local v0, "eglSurfaceId":J
     :goto_1
     const-wide/16 v6, 0x0
@@ -267,14 +242,11 @@
 
     if-nez v5, :cond_5
 
-    .line 103
     sget-object v5, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
 
-    .line 105
     :goto_2
     return-object v5
 
-    .line 83
     .end local v0    # "eglSurfaceId":J
     :cond_1
     instance-of v5, p3, Landroid/view/SurfaceHolder;
@@ -283,16 +255,13 @@
 
     move-object v2, p3
 
-    .line 84
     check-cast v2, Landroid/view/SurfaceHolder;
 
-    .line 85
     .local v2, "holder":Landroid/view/SurfaceHolder;
     invoke-interface {v2}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v3
 
-    .line 86
     goto :goto_0
 
     .end local v2    # "holder":Landroid/view/SurfaceHolder;
@@ -303,18 +272,15 @@
 
     move-object v3, p3
 
-    .line 87
     check-cast v3, Landroid/view/Surface;
 
     goto :goto_0
 
-    .line 93
     :cond_3
     instance-of v5, p3, Landroid/graphics/SurfaceTexture;
 
     if-eqz v5, :cond_4
 
-    .line 94
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/gles_jni/EGLImpl;->_eglCreateWindowSurfaceTexture(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;Ljava/lang/Object;[I)J
 
     move-result-wide v0
@@ -322,7 +288,6 @@
     .restart local v0    # "eglSurfaceId":J
     goto :goto_1
 
-    .line 97
     .end local v0    # "eglSurfaceId":J
     :cond_4
     new-instance v5, Ljava/lang/UnsupportedOperationException;
@@ -333,7 +298,6 @@
 
     throw v5
 
-    .line 105
     .restart local v0    # "eglSurfaceId":J
     :cond_5
     new-instance v5, Lcom/google/android/gles_jni/EGLSurfaceImpl;
@@ -359,7 +323,6 @@
     .locals 4
 
     .prologue
-    .line 119
     monitor-enter p0
 
     :try_start_0
@@ -367,7 +330,6 @@
 
     move-result-wide v0
 
-    .line 120
     .local v0, "value":J
     const-wide/16 v2, 0x0
 
@@ -375,18 +337,15 @@
 
     if-nez v2, :cond_0
 
-    .line 121
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_CONTEXT:Ljavax/microedition/khronos/egl/EGLContext;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 125
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 123
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mContext:Lcom/google/android/gles_jni/EGLContextImpl;
@@ -397,14 +356,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 124
     new-instance v2, Lcom/google/android/gles_jni/EGLContextImpl;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/gles_jni/EGLContextImpl;-><init>(J)V
 
     iput-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mContext:Lcom/google/android/gles_jni/EGLContextImpl;
 
-    .line 125
     :cond_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mContext:Lcom/google/android/gles_jni/EGLContextImpl;
     :try_end_1
@@ -412,7 +369,6 @@
 
     goto :goto_0
 
-    .line 119
     .end local v0    # "value":J
     :catchall_0
     move-exception v2
@@ -426,7 +382,6 @@
     .locals 4
 
     .prologue
-    .line 129
     monitor-enter p0
 
     :try_start_0
@@ -434,7 +389,6 @@
 
     move-result-wide v0
 
-    .line 130
     .local v0, "value":J
     const-wide/16 v2, 0x0
 
@@ -442,18 +396,15 @@
 
     if-nez v2, :cond_0
 
-    .line 131
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_DISPLAY:Ljavax/microedition/khronos/egl/EGLDisplay;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 135
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 133
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
@@ -464,14 +415,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 134
     new-instance v2, Lcom/google/android/gles_jni/EGLDisplayImpl;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/gles_jni/EGLDisplayImpl;-><init>(J)V
 
     iput-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
 
-    .line 135
     :cond_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
     :try_end_1
@@ -479,7 +428,6 @@
 
     goto :goto_0
 
-    .line 129
     .end local v0    # "value":J
     :catchall_0
     move-exception v2
@@ -494,7 +442,6 @@
     .param p1, "readdraw"    # I
 
     .prologue
-    .line 139
     monitor-enter p0
 
     :try_start_0
@@ -502,7 +449,6 @@
 
     move-result-wide v0
 
-    .line 140
     .local v0, "value":J
     const-wide/16 v2, 0x0
 
@@ -510,18 +456,15 @@
 
     if-nez v2, :cond_0
 
-    .line 141
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 145
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 143
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mSurface:Lcom/google/android/gles_jni/EGLSurfaceImpl;
@@ -532,14 +475,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 144
     new-instance v2, Lcom/google/android/gles_jni/EGLSurfaceImpl;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/gles_jni/EGLSurfaceImpl;-><init>(J)V
 
     iput-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mSurface:Lcom/google/android/gles_jni/EGLSurfaceImpl;
 
-    .line 145
     :cond_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mSurface:Lcom/google/android/gles_jni/EGLSurfaceImpl;
     :try_end_1
@@ -547,7 +488,6 @@
 
     goto :goto_0
 
-    .line 139
     .end local v0    # "value":J
     :catchall_0
     move-exception v2
@@ -562,7 +502,6 @@
     .param p1, "native_display"    # Ljava/lang/Object;
 
     .prologue
-    .line 109
     monitor-enter p0
 
     :try_start_0
@@ -570,7 +509,6 @@
 
     move-result-wide v0
 
-    .line 110
     .local v0, "value":J
     const-wide/16 v2, 0x0
 
@@ -578,18 +516,15 @@
 
     if-nez v2, :cond_0
 
-    .line 111
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_DISPLAY:Ljavax/microedition/khronos/egl/EGLDisplay;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 115
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 113
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
@@ -600,14 +535,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 114
     new-instance v2, Lcom/google/android/gles_jni/EGLDisplayImpl;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/gles_jni/EGLDisplayImpl;-><init>(J)V
 
     iput-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
 
-    .line 115
     :cond_1
     iget-object v2, p0, Lcom/google/android/gles_jni/EGLImpl;->mDisplay:Lcom/google/android/gles_jni/EGLDisplayImpl;
     :try_end_1
@@ -615,7 +548,6 @@
 
     goto :goto_0
 
-    .line 109
     .end local v0    # "value":J
     :catchall_0
     move-exception v2

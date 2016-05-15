@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 218
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$3;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/PlatLogoActivity$3;->val$im:Landroid/widget/ImageView;
@@ -47,7 +46,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 221
     const/4 v0, 0x4
 
     if-eq p2, v0, :cond_2
@@ -58,7 +56,6 @@
 
     if-nez v0, :cond_2
 
-    .line 222
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$3;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v1, v0, Lcom/android/internal/app/PlatLogoActivity;->mKeyCount:I
@@ -67,7 +64,6 @@
 
     iput v1, v0, Lcom/android/internal/app/PlatLogoActivity;->mKeyCount:I
 
-    .line 223
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$3;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v0, v0, Lcom/android/internal/app/PlatLogoActivity;->mKeyCount:I
@@ -76,7 +72,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 224
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$3;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v0, v0, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
@@ -85,21 +80,17 @@
 
     if-le v0, v1, :cond_1
 
-    .line 225
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$3;->val$im:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->performLongClick()Z
 
-    .line 230
     :cond_0
     :goto_0
     const/4 v0, 0x1
 
-    .line 232
     :goto_1
     return v0
 
-    .line 227
     :cond_1
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$3;->val$im:Landroid/widget/ImageView;
 
@@ -107,7 +98,6 @@
 
     goto :goto_0
 
-    .line 232
     :cond_2
     const/4 v0, 0x0
 

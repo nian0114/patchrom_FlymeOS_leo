@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1543
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$10;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 1543
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$10;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/util/Locale;
 
     move-result-object v0
@@ -68,7 +66,6 @@
     .param p1, "service"    # Landroid/speech/tts/ITextToSpeechService;
 
     .prologue
-    .line 1548
     iget-object v3, p0, Landroid/speech/tts/TextToSpeech$10;->this$0:Landroid/speech/tts/TextToSpeech;
 
     # getter for: Landroid/speech/tts/TextToSpeech;->mParams:Landroid/os/Bundle;
@@ -84,7 +81,6 @@
 
     move-result-object v1
 
-    .line 1549
     .local v1, "lang":Ljava/lang/String;
     iget-object v3, p0, Landroid/speech/tts/TextToSpeech$10;->this$0:Landroid/speech/tts/TextToSpeech;
 
@@ -101,7 +97,6 @@
 
     move-result-object v0
 
-    .line 1550
     .local v0, "country":Ljava/lang/String;
     iget-object v3, p0, Landroid/speech/tts/TextToSpeech$10;->this$0:Landroid/speech/tts/TextToSpeech;
 
@@ -110,7 +105,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "variant"
+    const-string v4, "variant"
 
     const-string v5, ""
 
@@ -118,7 +113,6 @@
 
     move-result-object v2
 
-    .line 1551
     .local v2, "variant":Ljava/lang/String;
     new-instance v3, Ljava/util/Locale;
 

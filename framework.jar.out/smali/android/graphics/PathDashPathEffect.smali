@@ -20,10 +20,8 @@
     .param p4, "style"    # Landroid/graphics/PathDashPathEffect$Style;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Landroid/graphics/PathEffect;-><init>()V
 
-    .line 44
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()J
 
     move-result-wide v0
@@ -36,7 +34,6 @@
 
     iput-wide v0, p0, Landroid/graphics/PathDashPathEffect;->native_instance:J
 
-    .line 46
     return-void
 .end method
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 149
     iput-object p1, p0, Landroid/hardware/TorchManager$1;->this$0:Landroid/hardware/TorchManager;
 
     invoke-direct {p0}, Landroid/hardware/ITorchCallback$Stub;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 163
     iget-object v0, p0, Landroid/hardware/TorchManager$1;->this$0:Landroid/hardware/TorchManager;
 
     # getter for: Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
@@ -73,13 +71,11 @@
 
     invoke-virtual {v2, v0}, Landroid/hardware/TorchManager$TorchHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 165
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 163
     goto :goto_0
 .end method
 
@@ -92,7 +88,6 @@
     .end annotation
 
     .prologue
-    .line 158
     iget-object v0, p0, Landroid/hardware/TorchManager$1;->this$0:Landroid/hardware/TorchManager;
 
     # getter for: Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
@@ -104,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/TorchManager$TorchHandler;->sendEmptyMessage(I)Z
 
-    .line 159
     return-void
 .end method
 
@@ -122,7 +116,6 @@
 
     const/4 v2, 0x0
 
-    .line 152
     iget-object v0, p0, Landroid/hardware/TorchManager$1;->this$0:Landroid/hardware/TorchManager;
 
     # getter for: Landroid/hardware/TorchManager;->mHandler:Landroid/hardware/TorchManager$TorchHandler;
@@ -148,12 +141,10 @@
 
     invoke-virtual {v3, v0}, Landroid/hardware/TorchManager$TorchHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 154
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 152
     goto :goto_0
 .end method

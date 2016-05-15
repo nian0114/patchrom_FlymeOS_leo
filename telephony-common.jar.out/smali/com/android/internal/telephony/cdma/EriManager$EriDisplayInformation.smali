@@ -32,21 +32,16 @@
     .param p4, "eriIconText"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/EriManager$EriDisplayInformation;->this$0:Lcom/android/internal/telephony/cdma/EriManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput p2, p0, Lcom/android/internal/telephony/cdma/EriManager$EriDisplayInformation;->mEriIconIndex:I
 
-    .line 69
     iput p3, p0, Lcom/android/internal/telephony/cdma/EriManager$EriDisplayInformation;->mEriIconMode:I
 
-    .line 70
     iput-object p4, p0, Lcom/android/internal/telephony/cdma/EriManager$EriDisplayInformation;->mEriIconText:Ljava/lang/String;
 
-    .line 71
     return-void
 .end method
 
@@ -56,7 +51,6 @@
     .locals 2
 
     .prologue
-    .line 81
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

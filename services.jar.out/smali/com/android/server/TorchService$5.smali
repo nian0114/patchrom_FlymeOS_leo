@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 503
     iput-object p1, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "camera"    # Landroid/hardware/camera2/CameraDevice;
 
     .prologue
-    .line 518
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # getter for: Lcom/android/server/TorchService;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
@@ -48,13 +46,11 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 519
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # invokes: Lcom/android/server/TorchService;->teardownTorch()V
     invoke-static {v0}, Lcom/android/server/TorchService;->access$1200(Lcom/android/server/TorchService;)V
 
-    .line 521
     :cond_0
     return-void
 .end method
@@ -65,7 +61,6 @@
     .param p2, "error"    # I
 
     .prologue
-    .line 525
     # getter for: Lcom/android/server/TorchService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/TorchService;->access$500()Ljava/lang/String;
 
@@ -101,7 +96,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # getter for: Lcom/android/server/TorchService;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
@@ -120,14 +114,12 @@
 
     if-nez v0, :cond_1
 
-    .line 527
     :cond_0
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # invokes: Lcom/android/server/TorchService;->handleError()V
     invoke-static {v0}, Lcom/android/server/TorchService;->access$1300(Lcom/android/server/TorchService;)V
 
-    .line 529
     :cond_1
     return-void
 .end method
@@ -137,7 +129,6 @@
     .param p1, "camera"    # Landroid/hardware/camera2/CameraDevice;
 
     .prologue
-    .line 506
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # getter for: Lcom/android/server/TorchService;->mOpeningCamera:Z
@@ -147,13 +138,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 507
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # setter for: Lcom/android/server/TorchService;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
     invoke-static {v0, p1}, Lcom/android/server/TorchService;->access$1002(Lcom/android/server/TorchService;Landroid/hardware/camera2/CameraDevice;)Landroid/hardware/camera2/CameraDevice;
 
-    .line 508
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     const/4 v1, 0x0
@@ -161,21 +150,17 @@
     # setter for: Lcom/android/server/TorchService;->mOpeningCamera:Z
     invoke-static {v0, v1}, Lcom/android/server/TorchService;->access$902(Lcom/android/server/TorchService;Z)Z
 
-    .line 509
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # invokes: Lcom/android/server/TorchService;->postUpdateFlashlight()V
     invoke-static {v0}, Lcom/android/server/TorchService;->access$1100(Lcom/android/server/TorchService;)V
 
-    .line 514
     :goto_0
     return-void
 
-    .line 511
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->close()V
 
-    .line 512
     iget-object v0, p0, Lcom/android/server/TorchService$5;->this$0:Lcom/android/server/TorchService;
 
     # invokes: Lcom/android/server/TorchService;->teardownTorch()V

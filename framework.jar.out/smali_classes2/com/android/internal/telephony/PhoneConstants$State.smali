@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 35
     new-instance v0, Lcom/android/internal/telephony/PhoneConstants$State;
 
     const-string v1, "IDLE"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/PhoneConstants$State;->OFFHOOK:Lcom/android/internal/telephony/PhoneConstants$State;
 
-    .line 34
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/telephony/PhoneConstants$State;
@@ -100,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     const-class v0, Lcom/android/internal/telephony/PhoneConstants$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-object v0, Lcom/android/internal/telephony/PhoneConstants$State;->$VALUES:[Lcom/android/internal/telephony/PhoneConstants$State;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/PhoneConstants$State;->clone()Ljava/lang/Object;

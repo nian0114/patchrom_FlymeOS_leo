@@ -101,29 +101,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 338
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 196
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
-    .line 199
     iput v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
-    .line 339
     iput-object p1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mText:Ljava/lang/String;
 
-    .line 340
     iput-object p2, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLocale:Ljava/util/Locale;
 
-    .line 341
     iput-object p4, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mKeyphraseEnrollmentInfo:Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
 
-    .line 342
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mKeyphraseEnrollmentInfo:Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;->getKeyphraseMetadata(Ljava/lang/String;Ljava/util/Locale;)Landroid/hardware/soundtrigger/KeyphraseMetadata;
@@ -132,17 +125,14 @@
 
     iput-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mKeyphraseMetadata:Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
-    .line 343
     iput-object p3, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mExternalCallback:Landroid/service/voice/AlwaysOnHotwordDetector$Callback;
 
-    .line 344
     new-instance v0, Landroid/service/voice/AlwaysOnHotwordDetector$MyHandler;
 
     invoke-direct {v0, p0}, Landroid/service/voice/AlwaysOnHotwordDetector$MyHandler;-><init>(Landroid/service/voice/AlwaysOnHotwordDetector;)V
 
     iput-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mHandler:Landroid/os/Handler;
 
-    .line 345
     new-instance v0, Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;
 
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mHandler:Landroid/os/Handler;
@@ -151,13 +141,10 @@
 
     iput-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mInternalCallback:Landroid/service/voice/AlwaysOnHotwordDetector$SoundTriggerListener;
 
-    .line 346
     iput-object p5, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mVoiceInteractionService:Landroid/service/voice/IVoiceInteractionService;
 
-    .line 347
     iput-object p6, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mModelManagementService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
-    .line 348
     new-instance v0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;
 
     invoke-direct {v0, p0}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;-><init>(Landroid/service/voice/AlwaysOnHotwordDetector;)V
@@ -166,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 349
     return-void
 .end method
 
@@ -175,7 +161,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -186,7 +171,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
     return v0
@@ -198,7 +182,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 52
     iput p1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
     return p1
@@ -209,7 +192,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mExternalCallback:Landroid/service/voice/AlwaysOnHotwordDetector$Callback;
 
     return-object v0
@@ -220,7 +202,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mKeyphraseMetadata:Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
     return-object v0
@@ -231,7 +212,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLocale:Ljava/util/Locale;
 
     return-object v0
@@ -242,7 +222,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector;->notifyStateChangedLocked()V
 
     return-void
@@ -253,7 +232,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mVoiceInteractionService:Landroid/service/voice/IVoiceInteractionService;
 
     return-object v0
@@ -264,7 +242,6 @@
     .param p0, "x0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mModelManagementService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     return-object v0
@@ -275,14 +252,12 @@
     .param p1, "action"    # I
 
     .prologue
-    .line 512
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
     const/4 v1, -0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 513
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "getManageIntent called on an invalid detector"
@@ -291,7 +266,6 @@
 
     throw v0
 
-    .line 517
     :cond_0
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
@@ -305,7 +279,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 519
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Managing the given keyphrase is not supported"
@@ -314,7 +287,6 @@
 
     throw v0
 
-    .line 523
     :cond_1
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mKeyphraseEnrollmentInfo:Landroid/hardware/soundtrigger/KeyphraseEnrollmentInfo;
 
@@ -333,14 +305,12 @@
     .locals 2
 
     .prologue
-    .line 372
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
     const/4 v1, -0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 373
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "getSupportedRecognitionModes called on an invalid detector"
@@ -349,7 +319,6 @@
 
     throw v0
 
-    .line 378
     :cond_0
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
@@ -363,7 +332,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 380
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Getting supported recognition modes for the keyphrase is not supported"
@@ -372,7 +340,6 @@
 
     throw v0
 
-    .line 384
     :cond_1
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mKeyphraseMetadata:Landroid/hardware/soundtrigger/KeyphraseMetadata;
 
@@ -385,7 +352,6 @@
     .locals 3
 
     .prologue
-    .line 605
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -394,16 +360,13 @@
 
     move-result-object v0
 
-    .line 606
     .local v0, "message":Landroid/os/Message;
     iget v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 607
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 608
     return-void
 .end method
 
@@ -416,10 +379,8 @@
 
     const/4 v0, 0x0
 
-    .line 566
     new-array v10, v6, [Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
 
-    .line 568
     .local v10, "recognitionExtra":[Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
     new-instance v1, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseRecognitionExtra;
 
@@ -437,26 +398,22 @@
 
     aput-object v1, v10, v0
 
-    .line 570
     and-int/lit8 v1, p1, 0x1
 
     if-eqz v1, :cond_1
 
     move v7, v6
 
-    .line 572
     .local v7, "captureTriggerAudio":Z
     :goto_0
     and-int/lit8 v1, p1, 0x2
 
     if-eqz v1, :cond_2
 
-    .line 574
     .local v6, "allowMultipleTriggers":Z
     :goto_1
     const/high16 v8, -0x80000000
 
-    .line 576
     .local v8, "code":I
     :try_start_0
     iget-object v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mModelManagementService:Lcom/android/internal/app/IVoiceInteractionManagerService;
@@ -487,18 +444,16 @@
 
     move-result v8
 
-    .line 583
     :goto_2
     if-eqz v8, :cond_0
 
-    .line 584
     const-string v0, "AlwaysOnHotwordDetector"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "startRecognition() failed with error code "
+    const-string v2, "startRecognition() failed with error code "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -514,7 +469,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
     :cond_0
     return v8
 
@@ -524,23 +478,19 @@
     :cond_1
     move v7, v0
 
-    .line 570
     goto :goto_0
 
     .restart local v7    # "captureTriggerAudio":Z
     :cond_2
     move v6, v0
 
-    .line 572
     goto :goto_1
 
-    .line 580
     .restart local v6    # "allowMultipleTriggers":Z
     .restart local v8    # "code":I
     :catch_0
     move-exception v9
 
-    .line 581
     .local v9, "e":Landroid/os/RemoteException;
     const-string v0, "AlwaysOnHotwordDetector"
 
@@ -555,10 +505,8 @@
     .locals 6
 
     .prologue
-    .line 590
     const/high16 v0, -0x80000000
 
-    .line 592
     .local v0, "code":I
     :try_start_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mModelManagementService:Lcom/android/internal/app/IVoiceInteractionManagerService;
@@ -577,18 +525,16 @@
 
     move-result v0
 
-    .line 598
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 599
     const-string v2, "AlwaysOnHotwordDetector"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "stopRecognition() failed with error code "
+    const-string v4, "stopRecognition() failed with error code "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -604,15 +550,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 601
     :cond_0
     return v0
 
-    .line 594
     :catch_0
     move-exception v1
 
-    .line 595
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "AlwaysOnHotwordDetector"
 
@@ -629,12 +572,10 @@
     .locals 2
 
     .prologue
-    .line 464
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 465
     const/4 v0, 0x0
 
     :try_start_0
@@ -646,7 +587,6 @@
 
     return-object v0
 
-    .line 466
     :catchall_0
     move-exception v0
 
@@ -661,12 +601,10 @@
     .locals 2
 
     .prologue
-    .line 506
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 507
     const/4 v0, 0x1
 
     :try_start_0
@@ -678,7 +616,6 @@
 
     return-object v0
 
-    .line 508
     :catchall_0
     move-exception v0
 
@@ -693,12 +630,10 @@
     .locals 2
 
     .prologue
-    .line 485
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 486
     const/4 v0, 0x2
 
     :try_start_0
@@ -710,7 +645,6 @@
 
     return-object v0
 
-    .line 487
     :catchall_0
     move-exception v0
 
@@ -727,12 +661,10 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 756
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 757
     :try_start_0
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -744,7 +676,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 758
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "Locale="
@@ -755,7 +686,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 759
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "Availability="
@@ -766,7 +696,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 760
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "KeyphraseMetadata="
@@ -777,7 +706,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 761
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "EnrollmentInfo="
@@ -788,13 +716,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 762
     monitor-exit v1
 
-    .line 763
     return-void
 
-    .line 762
     :catchall_0
     move-exception v0
 
@@ -809,12 +734,10 @@
     .locals 2
 
     .prologue
-    .line 366
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 367
     :try_start_0
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector;->getSupportedRecognitionModesLocked()I
 
@@ -824,7 +747,6 @@
 
     return v0
 
-    .line 368
     :catchall_0
     move-exception v0
 
@@ -839,27 +761,21 @@
     .locals 2
 
     .prologue
-    .line 533
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 534
     const/4 v0, -0x3
 
     :try_start_0
     iput v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
-    .line 535
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector;->notifyStateChangedLocked()V
 
-    .line 536
     monitor-exit v1
 
-    .line 537
     return-void
 
-    .line 536
     :catchall_0
     move-exception v0
 
@@ -874,12 +790,10 @@
     .locals 3
 
     .prologue
-    .line 545
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 546
     :try_start_0
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
@@ -899,7 +813,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 549
     :cond_0
     const-string v0, "AlwaysOnHotwordDetector"
 
@@ -907,18 +820,14 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
     monitor-exit v1
 
-    .line 563
     :goto_0
     return-void
 
-    .line 558
     :cond_1
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector;->stopRecognitionLocked()I
 
-    .line 561
     new-instance v0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;
 
     invoke-direct {v0, p0}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;-><init>(Landroid/service/voice/AlwaysOnHotwordDetector;)V
@@ -929,7 +838,6 @@
 
     invoke-virtual {v0, v2}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 562
     monitor-exit v1
 
     goto :goto_0
@@ -949,12 +857,10 @@
     .param p1, "recognitionFlags"    # I
 
     .prologue
-    .line 404
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 405
     :try_start_0
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
@@ -962,16 +868,14 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 406
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "startRecognition called on an invalid detector"
+    const-string v2, "startRecognition called on an invalid detector"
 
     invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 416
     :catchall_0
     move-exception v0
 
@@ -981,7 +885,6 @@
 
     throw v0
 
-    .line 410
     :cond_0
     :try_start_1
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
@@ -990,7 +893,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 411
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v2, "Recognition for the given keyphrase is not supported"
@@ -999,7 +901,6 @@
 
     throw v0
 
-    .line 415
     :cond_1
     invoke-direct {p0, p1}, Landroid/service/voice/AlwaysOnHotwordDetector;->startRecognitionLocked(I)I
 
@@ -1026,12 +927,10 @@
     .locals 3
 
     .prologue
-    .line 432
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 433
     :try_start_0
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
 
@@ -1039,16 +938,14 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 434
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "stopRecognition called on an invalid detector"
+    const-string v2, "stopRecognition called on an invalid detector"
 
     invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 444
     :catchall_0
     move-exception v0
 
@@ -1058,7 +955,6 @@
 
     throw v0
 
-    .line 438
     :cond_0
     :try_start_1
     iget v0, p0, Landroid/service/voice/AlwaysOnHotwordDetector;->mAvailability:I
@@ -1067,7 +963,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 439
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v2, "Recognition for the given keyphrase is not supported"
@@ -1076,7 +971,6 @@
 
     throw v0
 
-    .line 443
     :cond_1
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector;->stopRecognitionLocked()I
 

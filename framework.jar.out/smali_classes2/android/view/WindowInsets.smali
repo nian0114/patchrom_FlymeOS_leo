@@ -36,21 +36,18 @@
 
     const/4 v1, 0x0
 
-    .line 44
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     sput-object v0, Landroid/view/WindowInsets;->EMPTY_RECT:Landroid/graphics/Rect;
 
-    .line 55
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, v2, v2, v2, v1}, Landroid/view/WindowInsets;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Z)V
 
     sput-object v0, Landroid/view/WindowInsets;->CONSUMED:Landroid/view/WindowInsets;
 
-    .line 56
     return-void
 .end method
 
@@ -61,12 +58,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 90
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v1, v1, v0}, Landroid/view/WindowInsets;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Z)V
 
-    .line 91
     return-void
 .end method
 
@@ -82,19 +77,14 @@
 
     const/4 v2, 0x0
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v2, p0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
-    .line 41
     iput-boolean v2, p0, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
-    .line 42
     iput-boolean v2, p0, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
-    .line 61
     if-nez p1, :cond_3
 
     move v0, v1
@@ -102,7 +92,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
-    .line 62
     iget-boolean v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
     if-eqz v0, :cond_0
@@ -113,7 +102,6 @@
     :cond_0
     iput-object p1, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
-    .line 64
     if-nez p2, :cond_4
 
     move v0, v1
@@ -121,7 +109,6 @@
     :goto_1
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
-    .line 65
     iget-boolean v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
     if-eqz v0, :cond_1
@@ -132,13 +119,11 @@
     :cond_1
     iput-object p2, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
-    .line 67
     if-nez p3, :cond_5
 
     :goto_2
     iput-boolean v1, p0, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
-    .line 68
     iget-boolean v0, p0, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
     if-eqz v0, :cond_2
@@ -149,10 +134,8 @@
     :cond_2
     iput-object p3, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
-    .line 70
     iput-boolean p4, p0, Landroid/view/WindowInsets;->mIsRound:Z
 
-    .line 71
     return-void
 
     .restart local p1    # "systemWindowInsets":Landroid/graphics/Rect;
@@ -161,21 +144,18 @@
     :cond_3
     move v0, v2
 
-    .line 61
     goto :goto_0
 
     .end local p1    # "systemWindowInsets":Landroid/graphics/Rect;
     :cond_4
     move v0, v2
 
-    .line 64
     goto :goto_1
 
     .end local p2    # "windowDecorInsets":Landroid/graphics/Rect;
     :cond_5
     move v1, v2
 
-    .line 67
     goto :goto_2
 .end method
 
@@ -186,54 +166,42 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
-    .line 41
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
-    .line 42
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
-    .line 79
     iget-object v0, p1, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
-    .line 80
     iget-object v0, p1, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
-    .line 81
     iget-object v0, p1, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
-    .line 82
     iget-boolean v0, p1, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
-    .line 83
     iget-boolean v0, p1, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
-    .line 84
     iget-boolean v0, p1, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
-    .line 85
     iget-boolean v0, p1, Landroid/view/WindowInsets;->mIsRound:Z
 
     iput-boolean v0, p0, Landroid/view/WindowInsets;->mIsRound:Z
 
-    .line 86
     return-void
 .end method
 
@@ -243,23 +211,19 @@
     .locals 2
 
     .prologue
-    .line 472
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 473
     .local v0, "result":Landroid/view/WindowInsets;
     sget-object v1, Landroid/view/WindowInsets;->EMPTY_RECT:Landroid/graphics/Rect;
 
     iput-object v1, v0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
-    .line 474
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/view/WindowInsets;->mStableInsetsConsumed:Z
 
-    .line 475
     return-object v0
 .end method
 
@@ -267,23 +231,19 @@
     .locals 2
 
     .prologue
-    .line 294
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 295
     .local v0, "result":Landroid/view/WindowInsets;
     sget-object v1, Landroid/view/WindowInsets;->EMPTY_RECT:Landroid/graphics/Rect;
 
     iput-object v1, v0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
-    .line 296
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
-    .line 297
     return-object v0
 .end method
 
@@ -297,7 +257,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 312
     if-nez p1, :cond_0
 
     if-nez p2, :cond_0
@@ -306,13 +265,11 @@
 
     if-eqz p4, :cond_1
 
-    .line 313
     :cond_0
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 314
     .local v0, "result":Landroid/view/WindowInsets;
     new-instance v5, Landroid/graphics/Rect;
 
@@ -340,13 +297,11 @@
 
     move-object p0, v0
 
-    .line 321
     .end local v0    # "result":Landroid/view/WindowInsets;
     .end local p0    # "this":Landroid/view/WindowInsets;
     :cond_1
     return-object p0
 
-    .line 314
     .restart local v0    # "result":Landroid/view/WindowInsets;
     .restart local p0    # "this":Landroid/view/WindowInsets;
     :cond_2
@@ -388,23 +343,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 359
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 360
     .local v0, "result":Landroid/view/WindowInsets;
     iget-object v1, v0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v2, v2, v2, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 361
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/view/WindowInsets;->mWindowDecorInsetsConsumed:Z
 
-    .line 362
     return-object v0
 .end method
 
@@ -418,7 +369,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 370
     if-nez p1, :cond_0
 
     if-nez p2, :cond_0
@@ -427,13 +377,11 @@
 
     if-eqz p4, :cond_1
 
-    .line 371
     :cond_0
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 372
     .local v0, "result":Landroid/view/WindowInsets;
     new-instance v5, Landroid/graphics/Rect;
 
@@ -461,13 +409,11 @@
 
     move-object p0, v0
 
-    .line 378
     .end local v0    # "result":Landroid/view/WindowInsets;
     .end local p0    # "this":Landroid/view/WindowInsets;
     :cond_1
     return-object p0
 
-    .line 372
     .restart local v0    # "result":Landroid/view/WindowInsets;
     .restart local p0    # "this":Landroid/view/WindowInsets;
     :cond_2
@@ -507,7 +453,6 @@
     .locals 1
 
     .prologue
-    .line 447
     iget-object v0, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -519,7 +464,6 @@
     .locals 1
 
     .prologue
-    .line 417
     iget-object v0, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -531,7 +475,6 @@
     .locals 1
 
     .prologue
-    .line 432
     iget-object v0, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -543,7 +486,6 @@
     .locals 1
 
     .prologue
-    .line 402
     iget-object v0, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -555,7 +497,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -567,7 +508,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -579,7 +519,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -591,7 +530,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -603,38 +541,32 @@
     .locals 2
 
     .prologue
-    .line 99
     iget-object v0, p0, Landroid/view/WindowInsets;->mTempRect:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
-    .line 100
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/WindowInsets;->mTempRect:Landroid/graphics/Rect;
 
-    .line 102
     :cond_0
     iget-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_1
 
-    .line 103
     iget-object v0, p0, Landroid/view/WindowInsets;->mTempRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 108
     :goto_0
     iget-object v0, p0, Landroid/view/WindowInsets;->mTempRect:Landroid/graphics/Rect;
 
     return-object v0
 
-    .line 106
     :cond_1
     iget-object v0, p0, Landroid/view/WindowInsets;->mTempRect:Landroid/graphics/Rect;
 
@@ -647,7 +579,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget-object v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -659,7 +590,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -671,7 +601,6 @@
     .locals 1
 
     .prologue
-    .line 202
     iget-object v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -683,7 +612,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-object v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -695,7 +623,6 @@
     .locals 1
 
     .prologue
-    .line 254
     invoke-virtual {p0}, Landroid/view/WindowInsets;->hasSystemWindowInsets()Z
 
     move-result v0
@@ -724,7 +651,6 @@
     .locals 1
 
     .prologue
-    .line 462
     iget-object v0, p0, Landroid/view/WindowInsets;->mStableInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -765,7 +691,6 @@
     .locals 1
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -806,7 +731,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -847,7 +771,6 @@
     .locals 1
 
     .prologue
-    .line 271
     iget-boolean v0, p0, Landroid/view/WindowInsets;->mSystemWindowInsetsConsumed:Z
 
     if-eqz v0, :cond_0
@@ -875,7 +798,6 @@
     .locals 1
 
     .prologue
-    .line 285
     iget-boolean v0, p0, Landroid/view/WindowInsets;->mIsRound:Z
 
     return v0
@@ -889,12 +811,10 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 336
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 337
     .local v0, "result":Landroid/view/WindowInsets;
     new-instance v1, Landroid/graphics/Rect;
 
@@ -902,7 +822,6 @@
 
     iput-object v1, v0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
-    .line 338
     return-object v0
 .end method
 
@@ -911,12 +830,10 @@
     .param p1, "systemWindowInsets"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 350
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 351
     .local v0, "result":Landroid/view/WindowInsets;
     new-instance v1, Landroid/graphics/Rect;
 
@@ -924,7 +841,6 @@
 
     iput-object v1, v0, Landroid/view/WindowInsets;->mSystemWindowInsets:Landroid/graphics/Rect;
 
-    .line 352
     return-object v0
 .end method
 
@@ -936,12 +852,10 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 385
     new-instance v0, Landroid/view/WindowInsets;
 
     invoke-direct {v0, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 386
     .local v0, "result":Landroid/view/WindowInsets;
     new-instance v1, Landroid/graphics/Rect;
 
@@ -949,7 +863,6 @@
 
     iput-object v1, v0, Landroid/view/WindowInsets;->mWindowDecorInsets:Landroid/graphics/Rect;
 
-    .line 387
     return-object v0
 .end method
 
@@ -957,7 +870,6 @@
     .locals 2
 
     .prologue
-    .line 480
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

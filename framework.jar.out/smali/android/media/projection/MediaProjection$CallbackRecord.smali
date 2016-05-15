@@ -27,16 +27,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 199
     iput-object p1, p0, Landroid/media/projection/MediaProjection$CallbackRecord;->mCallback:Landroid/media/projection/MediaProjection$Callback;
 
-    .line 200
     iput-object p2, p0, Landroid/media/projection/MediaProjection$CallbackRecord;->mHandler:Landroid/os/Handler;
 
-    .line 201
     return-void
 .end method
 
@@ -45,7 +41,6 @@
     .param p0, "x0"    # Landroid/media/projection/MediaProjection$CallbackRecord;
 
     .prologue
-    .line 194
     iget-object v0, p0, Landroid/media/projection/MediaProjection$CallbackRecord;->mCallback:Landroid/media/projection/MediaProjection$Callback;
 
     return-object v0
@@ -57,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/media/projection/MediaProjection$CallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/projection/MediaProjection$CallbackRecord$1;
@@ -66,6 +60,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 210
     return-void
 .end method

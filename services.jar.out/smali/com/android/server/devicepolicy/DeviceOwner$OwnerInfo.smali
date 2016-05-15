@@ -29,23 +29,18 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 343
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 344
     iput-object p1, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->name:Ljava/lang/String;
 
-    .line 345
     iput-object p2, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->admin:Landroid/content/ComponentName;
 
-    .line 346
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->packageName:Ljava/lang/String;
 
-    .line 347
     return-void
 .end method
 
@@ -55,16 +50,12 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 337
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 338
     iput-object p1, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->name:Ljava/lang/String;
 
-    .line 339
     iput-object p2, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->packageName:Ljava/lang/String;
 
-    .line 340
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, ""
@@ -73,6 +64,5 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->admin:Landroid/content/ComponentName;
 
-    .line 341
     return-void
 .end method

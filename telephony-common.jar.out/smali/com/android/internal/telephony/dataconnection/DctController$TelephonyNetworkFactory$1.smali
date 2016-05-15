@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1144
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory$1;->this$1:Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "n"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 1146
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory$1;->this$1:Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,11 +62,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 1147
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory$1;->this$1:Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->processPendingNetworkRequests(Landroid/net/NetworkRequest;)V
 
-    .line 1148
     return-void
 .end method

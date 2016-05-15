@@ -33,19 +33,14 @@
     .param p3, "originalNetworkId"    # I
 
     .prologue
-    .line 254
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 255
     iput p1, p0, Landroid/hardware/hdmi/HdmiRecordSources$DvbData;->mTransportStreamId:I
 
-    .line 256
     iput p2, p0, Landroid/hardware/hdmi/HdmiRecordSources$DvbData;->mServiceId:I
 
-    .line 257
     iput p3, p0, Landroid/hardware/hdmi/HdmiRecordSources$DvbData;->mOriginalNetworkId:I
 
-    .line 258
     return-void
 .end method
 
@@ -57,7 +52,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 262
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordSources$DvbData;->mTransportStreamId:I
 
     iget v1, p0, Landroid/hardware/hdmi/HdmiRecordSources$DvbData;->mServiceId:I

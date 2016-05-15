@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1190
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/tv/TvInputHardwareManager$1;
 
     .prologue
-    .line 1190
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;-><init>(Lcom/android/server/tv/TvInputHardwareManager;)V
 
     return-void
@@ -55,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 1194
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->mLock:Ljava/lang/Object;
@@ -65,7 +62,6 @@
 
     monitor-enter v3
 
-    .line 1195
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -84,7 +80,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1196
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->mConnections:Landroid/util/SparseArray;
@@ -102,29 +97,23 @@
 
     move-result-object v1
 
-    .line 1197
     .local v1, "impl":Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
     if-eqz v1, :cond_0
 
-    .line 1198
     # invokes: Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->handleAudioSinkUpdated()V
     invoke-static {v1}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->access$2900(Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;)V
 
-    .line 1195
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1201
     .end local v1    # "impl":Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
     :cond_1
     monitor-exit v3
 
-    .line 1202
     return-void
 
-    .line 1201
     :catchall_0
     move-exception v2
 

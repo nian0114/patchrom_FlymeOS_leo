@@ -10,7 +10,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     const-class v3, Landroid/filterpacks/imageproc/CropRectFilter;
 
     const-string v4, "image"
@@ -29,6 +28,5 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/media/effect/SizeChangeEffect;-><init>(Landroid/media/effect/EffectContext;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 31
     return-void
 .end method

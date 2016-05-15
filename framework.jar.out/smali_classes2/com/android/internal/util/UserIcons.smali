@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -40,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,17 +49,13 @@
     .param p0, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 48
     if-nez p0, :cond_0
 
-    .line 49
     const/4 v0, 0x0
 
-    .line 54
     :goto_0
     return-object v0
 
-    .line 51
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -77,7 +71,6 @@
 
     move-result-object v0
 
-    .line 53
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
@@ -96,19 +89,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 65
     if-eqz p1, :cond_1
 
     const v0, 0x1060067
 
-    .line 66
     .local v0, "colorResId":I
     :goto_0
     const/16 v2, -0x2710
 
     if-eq p0, v2, :cond_0
 
-    .line 68
     sget-object v2, Lcom/android/internal/util/UserIcons;->USER_ICON_COLORS:[I
 
     sget-object v3, Lcom/android/internal/util/UserIcons;->USER_ICON_COLORS:[I
@@ -119,7 +109,6 @@
 
     aget v0, v2, v3
 
-    .line 70
     :cond_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -135,7 +124,6 @@
 
     move-result-object v1
 
-    .line 71
     .local v1, "icon":Landroid/graphics/drawable/Drawable;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -149,7 +137,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 72
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -160,10 +147,8 @@
 
     invoke-virtual {v1, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 73
     return-object v1
 
-    .line 65
     .end local v0    # "colorResId":I
     .end local v1    # "icon":Landroid/graphics/drawable/Drawable;
     :cond_1

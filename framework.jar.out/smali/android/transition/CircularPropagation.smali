@@ -16,10 +16,8 @@
     .locals 1
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/transition/VisibilityPropagation;-><init>()V
 
-    .line 37
     const/high16 v0, 0x40400000    # 3.0f
 
     iput v0, p0, Landroid/transition/CircularPropagation;->mPropagationSpeed:F
@@ -35,14 +33,11 @@
     .param p3, "y2"    # F
 
     .prologue
-    .line 103
     sub-float v0, p2, p0
 
-    .line 104
     .local v0, "x":F
     sub-float v1, p3, p1
 
-    .line 105
     .local v1, "y":F
     mul-float v2, v0, v0
 
@@ -67,23 +62,18 @@
     .param p4, "endValues"    # Landroid/transition/TransitionValues;
 
     .prologue
-    .line 61
     if-nez p3, :cond_0
 
     if-nez p4, :cond_0
 
-    .line 62
     const-wide/16 v16, 0x0
 
-    .line 99
     :goto_0
     return-wide v16
 
-    .line 64
     :cond_0
     const/4 v2, 0x1
 
-    .line 66
     .local v2, "directionMultiplier":I
     if-eqz p4, :cond_1
 
@@ -97,15 +87,12 @@
 
     if-nez v15, :cond_3
 
-    .line 67
     :cond_1
     move-object/from16 v12, p3
 
-    .line 68
     .local v12, "positionValues":Landroid/transition/TransitionValues;
     const/4 v2, -0x1
 
-    .line 73
     :goto_1
     move-object/from16 v0, p0
 
@@ -113,7 +100,6 @@
 
     move-result v13
 
-    .line 74
     .local v13, "viewCenterX":I
     move-object/from16 v0, p0
 
@@ -121,28 +107,23 @@
 
     move-result v14
 
-    .line 76
     .local v14, "viewCenterY":I
     invoke-virtual/range {p2 .. p2}, Landroid/transition/Transition;->getEpicenter()Landroid/graphics/Rect;
 
     move-result-object v5
 
-    .line 79
     .local v5, "epicenter":Landroid/graphics/Rect;
     if-eqz v5, :cond_4
 
-    .line 80
     invoke-virtual {v5}, Landroid/graphics/Rect;->centerX()I
 
     move-result v8
 
-    .line 81
     .local v8, "epicenterX":I
     invoke-virtual {v5}, Landroid/graphics/Rect;->centerY()I
 
     move-result v9
 
-    .line 90
     .local v9, "epicenterY":I
     :goto_2
     int-to-float v15, v13
@@ -163,7 +144,6 @@
 
     move-result v3
 
-    .line 91
     .local v3, "distance":F
     const/4 v15, 0x0
 
@@ -193,17 +173,14 @@
 
     move-result v11
 
-    .line 92
     .local v11, "maxDistance":F
     div-float v4, v3, v11
 
-    .line 94
     .local v4, "distanceFraction":F
     invoke-virtual/range {p2 .. p2}, Landroid/transition/Transition;->getDuration()J
 
     move-result-wide v6
 
-    .line 95
     .local v6, "duration":J
     const-wide/16 v16, 0x0
 
@@ -211,10 +188,8 @@
 
     if-gez v15, :cond_2
 
-    .line 96
     const-wide/16 v6, 0x12c
 
-    .line 99
     :cond_2
     int-to-long v0, v2
 
@@ -246,7 +221,6 @@
 
     goto :goto_0
 
-    .line 70
     .end local v3    # "distance":F
     .end local v4    # "distanceFraction":F
     .end local v5    # "epicenter":Landroid/graphics/Rect;
@@ -263,7 +237,6 @@
     .restart local v12    # "positionValues":Landroid/transition/TransitionValues;
     goto :goto_1
 
-    .line 83
     .restart local v5    # "epicenter":Landroid/graphics/Rect;
     .restart local v13    # "viewCenterX":I
     .restart local v14    # "viewCenterY":I
@@ -272,13 +245,11 @@
 
     new-array v10, v15, [I
 
-    .line 84
     .local v10, "loc":[I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->getLocationOnScreen([I)V
 
-    .line 85
     const/4 v15, 0x0
 
     aget v15, v10, v15
@@ -303,7 +274,6 @@
 
     move-result v8
 
-    .line 87
     .restart local v8    # "epicenterX":I
     const/4 v15, 0x1
 
@@ -338,26 +308,22 @@
     .param p1, "propagationSpeed"    # F
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     cmpl-float v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 53
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "propagationSpeed may not be 0"
+    const-string v1, "propagationSpeed may not be 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 55
     :cond_0
     iput p1, p0, Landroid/transition/CircularPropagation;->mPropagationSpeed:F
 
-    .line 56
     return-void
 .end method

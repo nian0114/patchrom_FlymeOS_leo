@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1104
     iput-object p1, p0, Landroid/app/ActivityThread$ApplicationThread$1;->this$1:Landroid/app/ActivityThread$ApplicationThread;
 
     iput-object p2, p0, Landroid/app/ActivityThread$ApplicationThread$1;->val$fd:Ljava/io/FileDescriptor;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 1107
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread$1;->this$1:Landroid/app/ActivityThread$ApplicationThread;
 
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread$1;->val$fd:Ljava/io/FileDescriptor;
@@ -58,6 +56,5 @@
     # invokes: Landroid/app/ActivityThread$ApplicationThread;->dumpDatabaseInfo(Ljava/io/FileDescriptor;[Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Landroid/app/ActivityThread$ApplicationThread;->access$800(Landroid/app/ActivityThread$ApplicationThread;Ljava/io/FileDescriptor;[Ljava/lang/String;)V
 
-    .line 1108
     return-void
 .end method

@@ -29,13 +29,10 @@
     .param p1, "task"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 752
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 753
     iput-object p1, p0, Landroid/os/Handler$BlockingRunnable;->mTask:Ljava/lang/Runnable;
 
-    .line 754
     return-void
 .end method
 
@@ -51,27 +48,22 @@
 
     const/4 v4, 0x0
 
-    .line 769
     invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 795
     :goto_0
     return v4
 
-    .line 773
     :cond_0
     monitor-enter p0
 
-    .line 774
     cmp-long v5, p2, v8
 
     if-lez v5, :cond_2
 
-    .line 775
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -79,32 +71,27 @@
 
     add-long v2, v6, p2
 
-    .line 776
     .local v2, "expirationTime":J
     :goto_1
     iget-boolean v5, p0, Landroid/os/Handler$BlockingRunnable;->mDone:Z
 
     if-nez v5, :cond_3
 
-    .line 777
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
     sub-long v0, v2, v6
 
-    .line 778
     .local v0, "delay":J
     cmp-long v5, v0, v8
 
     if-gtz v5, :cond_1
 
-    .line 779
     monitor-exit p0
 
     goto :goto_0
 
-    .line 794
     .end local v0    # "delay":J
     .end local v2    # "expirationTime":J
     :catchall_0
@@ -116,7 +103,6 @@
 
     throw v4
 
-    .line 782
     .restart local v0    # "delay":J
     .restart local v2    # "expirationTime":J
     :cond_1
@@ -128,13 +114,11 @@
 
     goto :goto_1
 
-    .line 783
     :catch_0
     move-exception v5
 
     goto :goto_1
 
-    .line 787
     .end local v0    # "delay":J
     .end local v2    # "expirationTime":J
     :cond_2
@@ -146,7 +130,6 @@
 
     if-nez v4, :cond_3
 
-    .line 789
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_3
@@ -155,20 +138,17 @@
 
     goto :goto_2
 
-    .line 790
     :catch_1
     move-exception v4
 
     goto :goto_2
 
-    .line 794
     :cond_3
     :try_start_4
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 795
     const/4 v4, 0x1
 
     goto :goto_0
@@ -178,7 +158,6 @@
     .locals 2
 
     .prologue
-    .line 759
     :try_start_0
     iget-object v0, p0, Landroid/os/Handler$BlockingRunnable;->mTask:Ljava/lang/Runnable;
 
@@ -186,25 +165,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 761
     monitor-enter p0
 
-    .line 762
     const/4 v0, 0x1
 
     :try_start_1
     iput-boolean v0, p0, Landroid/os/Handler$BlockingRunnable;->mDone:Z
 
-    .line 763
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 764
     monitor-exit p0
 
-    .line 766
     return-void
 
-    .line 764
     :catchall_0
     move-exception v0
 
@@ -214,22 +187,18 @@
 
     throw v0
 
-    .line 761
     :catchall_1
     move-exception v0
 
     monitor-enter p0
 
-    .line 762
     const/4 v1, 0x1
 
     :try_start_2
     iput-boolean v1, p0, Landroid/os/Handler$BlockingRunnable;->mDone:Z
 
-    .line 763
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 764
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2

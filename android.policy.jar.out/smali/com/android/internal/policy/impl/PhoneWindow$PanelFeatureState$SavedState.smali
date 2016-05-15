@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 4837
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState$1;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState$1;-><init>()V
@@ -59,7 +58,6 @@
     .locals 0
 
     .prologue
-    .line 4804
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +68,6 @@
     .param p1, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow$1;
 
     .prologue
-    .line 4804
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;-><init>()V
 
     return-void
@@ -81,7 +78,6 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 4804
     invoke-static {p0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->readFromParcel(Landroid/os/Parcel;)Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;
 
     move-result-object v0
@@ -98,12 +94,10 @@
 
     const/4 v2, 0x1
 
-    .line 4825
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;-><init>()V
 
-    .line 4826
     .local v0, "savedState":Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
@@ -111,7 +105,6 @@
 
     iput v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->featureId:I
 
-    .line 4827
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -123,7 +116,6 @@
     :goto_0
     iput-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
-    .line 4828
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -133,32 +125,27 @@
     :goto_1
     iput-boolean v2, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isInExpandedMode:Z
 
-    .line 4830
     iget-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
     if-eqz v1, :cond_0
 
-    .line 4831
     invoke-virtual {p0}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->menuState:Landroid/os/Bundle;
 
-    .line 4834
     :cond_0
     return-object v0
 
     :cond_1
     move v1, v3
 
-    .line 4827
     goto :goto_0
 
     :cond_2
     move v2, v3
 
-    .line 4828
     goto :goto_1
 .end method
 
@@ -168,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 4811
     const/4 v0, 0x0
 
     return v0
@@ -184,12 +170,10 @@
 
     const/4 v2, 0x0
 
-    .line 4815
     iget v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->featureId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4816
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
     if-eqz v0, :cond_1
@@ -199,7 +183,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4817
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isInExpandedMode:Z
 
     if-eqz v0, :cond_2
@@ -207,29 +190,24 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4819
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
     if-eqz v0, :cond_0
 
-    .line 4820
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->menuState:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 4822
     :cond_0
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 4816
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 4817
     goto :goto_1
 .end method

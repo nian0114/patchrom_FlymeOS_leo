@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,9 +36,7 @@
     .param p3, "system"    # Z
 
     .prologue
-    .line 104
     invoke-static {p1, p2, p3}, Lcom/android/internal/os/RuntimeInit;->wtf(Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
-    .line 105
     return-void
 .end method

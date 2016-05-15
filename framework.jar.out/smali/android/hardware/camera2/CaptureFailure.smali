@@ -31,25 +31,18 @@
     .param p5, "frameNumber"    # J
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Landroid/hardware/camera2/CaptureFailure;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 58
     iput p2, p0, Landroid/hardware/camera2/CaptureFailure;->mReason:I
 
-    .line 59
     iput-boolean p3, p0, Landroid/hardware/camera2/CaptureFailure;->mDropped:Z
 
-    .line 60
     iput p4, p0, Landroid/hardware/camera2/CaptureFailure;->mSequenceId:I
 
-    .line 61
     iput-wide p5, p0, Landroid/hardware/camera2/CaptureFailure;->mFrameNumber:J
 
-    .line 62
     return-void
 .end method
 
@@ -59,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 101
     iget-wide v0, p0, Landroid/hardware/camera2/CaptureFailure;->mFrameNumber:J
 
     return-wide v0
@@ -69,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Landroid/hardware/camera2/CaptureFailure;->mReason:I
 
     return v0
@@ -79,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/hardware/camera2/CaptureFailure;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     return-object v0
@@ -89,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget v0, p0, Landroid/hardware/camera2/CaptureFailure;->mSequenceId:I
 
     return v0
@@ -99,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-boolean v0, p0, Landroid/hardware/camera2/CaptureFailure;->mDropped:Z
 
     if-nez v0, :cond_0

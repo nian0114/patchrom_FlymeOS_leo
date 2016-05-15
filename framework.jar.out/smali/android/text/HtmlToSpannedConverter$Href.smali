@@ -24,12 +24,9 @@
     .param p1, "href"    # Ljava/lang/String;
 
     .prologue
-    .line 838
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 839
     iput-object p1, p0, Landroid/text/HtmlToSpannedConverter$Href;->mHref:Ljava/lang/String;
 
-    .line 840
     return-void
 .end method

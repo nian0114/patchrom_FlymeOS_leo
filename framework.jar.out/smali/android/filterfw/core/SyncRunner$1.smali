@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 181
     iput-object p1, p0, Landroid/filterfw/core/SyncRunner$1;->this$0:Landroid/filterfw/core/SyncRunner;
 
     iput-object p2, p0, Landroid/filterfw/core/SyncRunner$1;->val$filterToSchedule:Landroid/filterfw/core/Filter;
@@ -48,18 +47,15 @@
     .locals 2
 
     .prologue
-    .line 184
     iget-object v0, p0, Landroid/filterfw/core/SyncRunner$1;->val$filterToSchedule:Landroid/filterfw/core/Filter;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/Filter;->unsetStatus(I)V
 
-    .line 185
     iget-object v0, p0, Landroid/filterfw/core/SyncRunner$1;->val$conditionToWake:Landroid/os/ConditionVariable;
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
 
-    .line 186
     return-void
 .end method

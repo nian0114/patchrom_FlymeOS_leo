@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +32,5 @@
     .param p1, "listener"    # Landroid/media/effect/EffectUpdateListener;
 
     .prologue
-    .line 97
     return-void
 .end method

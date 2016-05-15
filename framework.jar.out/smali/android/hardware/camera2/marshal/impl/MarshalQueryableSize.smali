@@ -33,10 +33,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 61
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/Size;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableSize$MarshalerSize;
 
@@ -86,7 +83,6 @@
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/Size;>;"
     const/4 v0, 0x1
 
-    .line 66
     if-ne p2, v0, :cond_0
 
     const-class v1, Landroid/util/Size;

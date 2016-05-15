@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 186
     invoke-static {}, Lcom/android/internal/telephony/cat/Tone;->values()[Lcom/android/internal/telephony/cat/Tone;
 
     move-result-object v0
@@ -63,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 183
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cat/Tone$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/cat/Tone;
 
     move-result-object v0
@@ -76,7 +73,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 191
     new-array v0, p1, [Lcom/android/internal/telephony/cat/Tone;
 
     return-object v0
@@ -86,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 183
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cat/Tone$1;->newArray(I)[Lcom/android/internal/telephony/cat/Tone;
 
     move-result-object v0

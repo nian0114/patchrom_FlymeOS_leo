@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 340
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "rhs"    # Ljava/io/File;
 
     .prologue
-    .line 343
     invoke-virtual {p2}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -66,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 340
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

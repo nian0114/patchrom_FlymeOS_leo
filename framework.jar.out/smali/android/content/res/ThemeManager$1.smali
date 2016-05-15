@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 54
     iput-object p1, p0, Landroid/content/res/ThemeManager$1;->this$0:Landroid/content/res/ThemeManager;
 
     invoke-direct {p0}, Landroid/content/res/IThemeChangeListener$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/content/res/ThemeManager$1;->this$0:Landroid/content/res/ThemeManager;
 
     # getter for: Landroid/content/res/ThemeManager;->mHandler:Landroid/os/Handler;
@@ -57,7 +55,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 105
     return-void
 .end method
 
@@ -71,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/content/res/ThemeManager$1;->this$0:Landroid/content/res/ThemeManager;
 
     # getter for: Landroid/content/res/ThemeManager;->mHandler:Landroid/os/Handler;
@@ -85,6 +81,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 79
     return-void
 .end method

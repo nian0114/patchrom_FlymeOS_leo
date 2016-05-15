@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1069
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1072
     new-instance v0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1069
     invoke-virtual {p0}, Landroid/os/StrictMode$4;->initialValue()Landroid/os/StrictMode$AndroidBlockGuardPolicy;
 
     move-result-object v0

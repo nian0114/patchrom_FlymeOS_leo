@@ -54,31 +54,26 @@
     .prologue
     const/16 v1, 0xc
 
-    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/net/DnsServerRepository;->mCurrentServers:Ljava/util/Set;
 
-    .line 280
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/net/DnsServerRepository;->mAllServers:Ljava/util/ArrayList;
 
-    .line 281
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/net/DnsServerRepository;->mIndex:Ljava/util/HashMap;
 
-    .line 282
     return-void
 .end method
 
@@ -86,7 +81,6 @@
     .locals 10
 
     .prologue
-    .line 339
     monitor-enter p0
 
     :try_start_0
@@ -94,11 +88,9 @@
 
     move-result-wide v4
 
-    .line 340
     .local v4, "now":J
     const/4 v0, 0x0
 
-    .line 343
     .local v0, "changed":Z
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mAllServers:Ljava/util/ArrayList;
 
@@ -112,7 +104,6 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 344
     const/16 v7, 0xc
 
     if-ge v2, v7, :cond_0
@@ -131,7 +122,6 @@
 
     if-gez v7, :cond_1
 
-    .line 345
     :cond_0
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mAllServers:Ljava/util/ArrayList;
 
@@ -141,7 +131,6 @@
 
     check-cast v6, Lcom/android/server/net/DnsServerEntry;
 
-    .line 346
     .local v6, "removed":Lcom/android/server/net/DnsServerEntry;
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mIndex:Ljava/util/HashMap;
 
@@ -149,7 +138,6 @@
 
     invoke-virtual {v7, v8}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 347
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mCurrentServers:Ljava/util/Set;
 
     iget-object v8, v6, Lcom/android/server/net/DnsServerEntry;->address:Ljava/net/InetAddress;
@@ -160,12 +148,10 @@
 
     or-int/2addr v0, v7
 
-    .line 343
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 356
     .end local v6    # "removed":Lcom/android/server/net/DnsServerEntry;
     :cond_1
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mAllServers:Ljava/util/ArrayList;
@@ -188,7 +174,6 @@
 
     check-cast v1, Lcom/android/server/net/DnsServerEntry;
 
-    .line 357
     .local v1, "entry":Lcom/android/server/net/DnsServerEntry;
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mCurrentServers:Ljava/util/Set;
 
@@ -200,7 +185,6 @@
 
     if-ge v7, v8, :cond_2
 
-    .line 358
     iget-object v7, p0, Lcom/android/server/net/DnsServerRepository;->mCurrentServers:Ljava/util/Set;
 
     iget-object v8, v1, Lcom/android/server/net/DnsServerEntry;->address:Ljava/net/InetAddress;
@@ -213,17 +197,14 @@
 
     or-int/2addr v0, v7
 
-    .line 362
     goto :goto_1
 
-    .line 363
     .end local v1    # "entry":Lcom/android/server/net/DnsServerEntry;
     :cond_2
     monitor-exit p0
 
     return v0
 
-    .line 339
     .end local v0    # "changed":Z
     .end local v2    # "i":I
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -242,7 +223,6 @@
     .param p2, "expiry"    # J
 
     .prologue
-    .line 330
     monitor-enter p0
 
     :try_start_0
@@ -254,19 +234,15 @@
 
     check-cast v0, Lcom/android/server/net/DnsServerEntry;
 
-    .line 331
     .local v0, "existing":Lcom/android/server/net/DnsServerEntry;
     if-eqz v0, :cond_0
 
-    .line 332
     iput-wide p2, v0, Lcom/android/server/net/DnsServerEntry;->expiry:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 333
     const/4 v1, 0x1
 
-    .line 335
     :goto_0
     monitor-exit p0
 
@@ -277,7 +253,6 @@
 
     goto :goto_0
 
-    .line 330
     .end local v0    # "existing":Lcom/android/server/net/DnsServerEntry;
     :catchall_0
     move-exception v1
@@ -295,7 +270,6 @@
     .param p3, "addresses"    # [Ljava/lang/String;
 
     .prologue
-    .line 298
     monitor-enter p0
 
     :try_start_0
@@ -303,7 +277,6 @@
 
     move-result-wide v10
 
-    .line 299
     .local v10, "now":J
     const-wide/16 v12, 0x3e8
 
@@ -311,7 +284,6 @@
 
     add-long v6, v10, v12
 
-    .line 303
     .local v6, "expiry":J
     move-object/from16 v2, p3
 
@@ -329,7 +301,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 306
     .local v1, "addressString":Ljava/lang/String;
     :try_start_1
     invoke-static {v1}, Ljava/net/InetAddress;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
@@ -339,7 +310,6 @@
 
     move-result-object v0
 
-    .line 311
     .local v0, "address":Ljava/net/InetAddress;
     :try_start_2
     invoke-direct {p0, v0, v6, v7}, Lcom/android/server/net/DnsServerRepository;->updateExistingEntry(Ljava/net/InetAddress;J)Z
@@ -348,28 +318,23 @@
 
     if-nez v9, :cond_0
 
-    .line 314
     cmp-long v9, v6, v10
 
     if-lez v9, :cond_0
 
-    .line 315
     new-instance v3, Lcom/android/server/net/DnsServerEntry;
 
     invoke-direct {v3, v0, v6, v7}, Lcom/android/server/net/DnsServerEntry;-><init>(Ljava/net/InetAddress;J)V
 
-    .line 316
     .local v3, "entry":Lcom/android/server/net/DnsServerEntry;
     iget-object v9, p0, Lcom/android/server/net/DnsServerRepository;->mAllServers:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 317
     iget-object v9, p0, Lcom/android/server/net/DnsServerRepository;->mIndex:Ljava/util/HashMap;
 
     invoke-virtual {v9, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 303
     .end local v0    # "address":Ljava/net/InetAddress;
     .end local v3    # "entry":Lcom/android/server/net/DnsServerEntry;
     :cond_0
@@ -378,15 +343,12 @@
 
     goto :goto_0
 
-    .line 307
     :catch_0
     move-exception v4
 
-    .line 308
     .local v4, "ex":Ljava/lang/IllegalArgumentException;
     goto :goto_1
 
-    .line 323
     .end local v1    # "addressString":Ljava/lang/String;
     .end local v4    # "ex":Ljava/lang/IllegalArgumentException;
     :cond_1
@@ -394,7 +356,6 @@
 
     invoke-static {v9}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 326
     invoke-direct {p0}, Lcom/android/server/net/DnsServerRepository;->updateCurrentServers()Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -405,7 +366,6 @@
 
     return v9
 
-    .line 298
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v5    # "i$":I
     .end local v6    # "expiry":J
@@ -424,7 +384,6 @@
     .param p1, "lp"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 286
     monitor-enter p0
 
     :try_start_0
@@ -434,12 +393,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 287
     monitor-exit p0
 
     return-void
 
-    .line 286
     :catchall_0
     move-exception v0
 

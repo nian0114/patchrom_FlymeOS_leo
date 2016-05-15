@@ -54,7 +54,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->contentdisposition:Ljava/lang/String;
 
     return-object v0
@@ -76,7 +74,6 @@
     .locals 2
 
     .prologue
-    .line 85
     iget-wide v0, p0, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
 
     return-wide v0
@@ -86,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->etag:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->encoding:Ljava/lang/String;
 
     return-object v0
@@ -106,7 +101,6 @@
     .locals 2
 
     .prologue
-    .line 106
     iget-wide v0, p0, Landroid/webkit/CacheManager$CacheResult;->expires:J
 
     return-wide v0
@@ -116,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->expiresString:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Landroid/webkit/CacheManager$CacheResult;->httpStatusCode:I
 
     return v0
@@ -136,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->inStream:Ljava/io/InputStream;
 
     return-object v0
@@ -146,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->lastModified:Ljava/lang/String;
 
     return-object v0
@@ -156,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->localPath:Ljava/lang/String;
 
     return-object v0
@@ -166,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->location:Ljava/lang/String;
 
     return-object v0
@@ -176,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->mimeType:Ljava/lang/String;
 
     return-object v0
@@ -186,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Landroid/webkit/CacheManager$CacheResult;->outStream:Ljava/io/OutputStream;
 
     return-object v0
@@ -197,10 +183,8 @@
     .param p1, "contentLength"    # J
 
     .prologue
-    .line 223
     iput-wide p1, p0, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
 
-    .line 224
     return-void
 .end method
 
@@ -209,10 +193,8 @@
     .param p1, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 216
     iput-object p1, p0, Landroid/webkit/CacheManager$CacheResult;->encoding:Ljava/lang/String;
 
-    .line 217
     return-void
 .end method
 
@@ -221,9 +203,7 @@
     .param p1, "stream"    # Ljava/io/InputStream;
 
     .prologue
-    .line 207
     iput-object p1, p0, Landroid/webkit/CacheManager$CacheResult;->inStream:Ljava/io/InputStream;
 
-    .line 208
     return-void
 .end method

@@ -20,10 +20,8 @@
     .param p1, "target"    # Landroid/os/IRemoteCallback;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Landroid/os/RemoteCallback;-><init>(Landroid/os/IRemoteCallback;)V
 
-    .line 49
     return-void
 .end method
 
@@ -34,6 +32,5 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 52
     return-void
 .end method

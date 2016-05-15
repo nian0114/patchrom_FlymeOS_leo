@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "requestResult"    # I
 
     .prologue
-    .line 397
     return-void
 .end method
 
@@ -43,6 +41,5 @@
     .param p2, "wasNotified"    # Z
 
     .prologue
-    .line 398
     return-void
 .end method

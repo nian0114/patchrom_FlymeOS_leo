@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 365
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -65,13 +63,11 @@
 
     move-result-object v0
 
-    .line 366
     .local v0, "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
     instance-of v1, v0, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;
 
     if-eqz v1, :cond_0
 
-    .line 367
     check-cast v0, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;
 
     .end local v0    # "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
@@ -79,7 +75,6 @@
 
     move-result v1
 
-    .line 369
     :goto_0
     return v1
 

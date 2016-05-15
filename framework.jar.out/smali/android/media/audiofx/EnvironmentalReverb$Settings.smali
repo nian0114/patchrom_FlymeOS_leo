@@ -41,10 +41,8 @@
     .locals 0
 
     .prologue
-    .line 513
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 514
     return-void
 .end method
 
@@ -53,23 +51,19 @@
     .param p1, "settings"    # Ljava/lang/String;
 
     .prologue
-    .line 521
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 522
     new-instance v2, Ljava/util/StringTokenizer;
 
     const-string v4, "=;"
 
     invoke-direct {v2, p1, v4}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
     .local v2, "st":Ljava/util/StringTokenizer;
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v3
 
-    .line 524
     .local v3, "tokens":I
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->countTokens()I
 
@@ -79,14 +73,13 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 525
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "settings: "
+    const-string v6, "settings: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -104,13 +97,11 @@
 
     throw v4
 
-    .line 527
     :cond_0
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 528
     .local v0, "key":Ljava/lang/String;
     const-string v4, "EnvironmentalReverb"
 
@@ -120,7 +111,6 @@
 
     if-nez v4, :cond_1
 
-    .line 529
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -145,15 +135,13 @@
 
     throw v4
 
-    .line 534
     :cond_1
     :try_start_0
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 535
-    const-string/jumbo v4, "roomLevel"
+    const-string v4, "roomLevel"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -161,7 +149,6 @@
 
     if-nez v4, :cond_2
 
-    .line 536
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -188,11 +175,9 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 584
     :catch_0
     move-exception v1
 
-    .line 585
     .local v1, "nfe":Ljava/lang/NumberFormatException;
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -218,7 +203,6 @@
 
     throw v4
 
-    .line 538
     .end local v1    # "nfe":Ljava/lang/NumberFormatException;
     :cond_2
     :try_start_1
@@ -232,13 +216,11 @@
 
     iput-short v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->roomLevel:S
 
-    .line 539
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 540
-    const-string/jumbo v4, "roomHFLevel"
+    const-string v4, "roomHFLevel"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -246,7 +228,6 @@
 
     if-nez v4, :cond_3
 
-    .line 541
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -271,7 +252,6 @@
 
     throw v4
 
-    .line 543
     :cond_3
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -283,12 +263,10 @@
 
     iput-short v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->roomHFLevel:S
 
-    .line 544
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 545
     const-string v4, "decayTime"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -297,7 +275,6 @@
 
     if-nez v4, :cond_4
 
-    .line 546
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -322,7 +299,6 @@
 
     throw v4
 
-    .line 548
     :cond_4
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -334,12 +310,10 @@
 
     iput v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->decayTime:I
 
-    .line 549
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 550
     const-string v4, "decayHFRatio"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -348,7 +322,6 @@
 
     if-nez v4, :cond_5
 
-    .line 551
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -373,7 +346,6 @@
 
     throw v4
 
-    .line 553
     :cond_5
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -385,13 +357,11 @@
 
     iput-short v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->decayHFRatio:S
 
-    .line 554
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 555
-    const-string/jumbo v4, "reflectionsLevel"
+    const-string v4, "reflectionsLevel"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -399,7 +369,6 @@
 
     if-nez v4, :cond_6
 
-    .line 556
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -424,7 +393,6 @@
 
     throw v4
 
-    .line 558
     :cond_6
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -436,13 +404,11 @@
 
     iput-short v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->reflectionsLevel:S
 
-    .line 559
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 560
-    const-string/jumbo v4, "reflectionsDelay"
+    const-string v4, "reflectionsDelay"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -450,7 +416,6 @@
 
     if-nez v4, :cond_7
 
-    .line 561
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -475,7 +440,6 @@
 
     throw v4
 
-    .line 563
     :cond_7
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -487,13 +451,11 @@
 
     iput v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->reflectionsDelay:I
 
-    .line 564
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 565
-    const-string/jumbo v4, "reverbLevel"
+    const-string v4, "reverbLevel"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -501,7 +463,6 @@
 
     if-nez v4, :cond_8
 
-    .line 566
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -526,7 +487,6 @@
 
     throw v4
 
-    .line 568
     :cond_8
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -538,13 +498,11 @@
 
     iput-short v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->reverbLevel:S
 
-    .line 569
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 570
-    const-string/jumbo v4, "reverbDelay"
+    const-string v4, "reverbDelay"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -552,7 +510,6 @@
 
     if-nez v4, :cond_9
 
-    .line 571
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -577,7 +534,6 @@
 
     throw v4
 
-    .line 573
     :cond_9
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -589,12 +545,10 @@
 
     iput v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->reverbDelay:I
 
-    .line 574
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 575
     const-string v4, "diffusion"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -603,7 +557,6 @@
 
     if-nez v4, :cond_a
 
-    .line 576
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -628,7 +581,6 @@
 
     throw v4
 
-    .line 578
     :cond_a
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -640,12 +592,10 @@
 
     iput-short v4, p0, Landroid/media/audiofx/EnvironmentalReverb$Settings;->diffusion:S
 
-    .line 579
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 580
     const-string v4, "density"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -654,7 +604,6 @@
 
     if-nez v4, :cond_b
 
-    .line 581
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -679,7 +628,6 @@
 
     throw v4
 
-    .line 583
     :cond_b
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -693,7 +641,6 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 587
     return-void
 .end method
 
@@ -703,7 +650,6 @@
     .locals 3
 
     .prologue
-    .line 591
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

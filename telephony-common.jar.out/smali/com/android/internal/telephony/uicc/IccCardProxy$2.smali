@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 637
     invoke-static {}, Lcom/android/internal/telephony/IccCardConstants$State;->values()[Lcom/android/internal/telephony/IccCardConstants$State;
 
     move-result-object v0
@@ -163,7 +162,6 @@
     :try_end_7
     .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_6
 
-    .line 482
     :goto_7
     invoke-static {}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->values()[Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
@@ -303,7 +301,6 @@
 
     goto :goto_8
 
-    .line 637
     :catch_6
     move-exception v0
 

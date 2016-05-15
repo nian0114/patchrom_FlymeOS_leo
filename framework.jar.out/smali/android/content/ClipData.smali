@@ -61,43 +61,38 @@
 
     const/4 v2, 0x0
 
-    .line 152
     new-array v0, v3, [Ljava/lang/String;
 
-    const-string/jumbo v1, "text/plain"
+    const-string v1, "text/plain"
 
     aput-object v1, v0, v2
 
     sput-object v0, Landroid/content/ClipData;->MIMETYPES_TEXT_PLAIN:[Ljava/lang/String;
 
-    .line 154
     new-array v0, v3, [Ljava/lang/String;
 
-    const-string/jumbo v1, "text/html"
+    const-string v1, "text/html"
 
     aput-object v1, v0, v2
 
     sput-object v0, Landroid/content/ClipData;->MIMETYPES_TEXT_HTML:[Ljava/lang/String;
 
-    .line 156
     new-array v0, v3, [Ljava/lang/String;
 
-    const-string/jumbo v1, "text/uri-list"
+    const-string v1, "text/uri-list"
 
     aput-object v1, v0, v2
 
     sput-object v0, Landroid/content/ClipData;->MIMETYPES_TEXT_URILIST:[Ljava/lang/String;
 
-    .line 158
     new-array v0, v3, [Ljava/lang/String;
 
-    const-string/jumbo v1, "text/vnd.android.intent"
+    const-string v1, "text/vnd.android.intent"
 
     aput-object v1, v0, v2
 
     sput-object v0, Landroid/content/ClipData;->MIMETYPES_TEXT_INTENT:[Ljava/lang/String;
 
-    .line 940
     new-instance v0, Landroid/content/ClipData$1;
 
     invoke-direct {v0}, Landroid/content/ClipData$1;-><init>()V
@@ -112,20 +107,16 @@
     .param p1, "other"    # Landroid/content/ClipData;
 
     .prologue
-    .line 653
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 654
     iget-object v0, p1, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
     iput-object v0, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
-    .line 655
     iget-object v0, p1, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 656
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p1, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
@@ -134,7 +125,6 @@
 
     iput-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
-    .line 657
     return-void
 .end method
 
@@ -144,16 +134,12 @@
     .param p2, "item"    # Landroid/content/ClipData$Item;
 
     .prologue
-    .line 637
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 638
     iput-object p1, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
-    .line 639
     if-nez p2, :cond_0
 
-    .line 640
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "item is null"
@@ -162,25 +148,21 @@
 
     throw v0
 
-    .line 642
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 643
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
-    .line 644
     iget-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 645
     return-void
 .end method
 
@@ -191,24 +173,20 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 922
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 923
     new-instance v6, Landroid/content/ClipDescription;
 
     invoke-direct {v6, p1}, Landroid/content/ClipDescription;-><init>(Landroid/os/Parcel;)V
 
     iput-object v6, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
-    .line 924
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 925
     sget-object v6, Landroid/graphics/Bitmap;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v6, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -219,7 +197,6 @@
 
     iput-object v6, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 929
     :goto_0
     new-instance v6, Ljava/util/ArrayList;
 
@@ -227,12 +204,10 @@
 
     iput-object v6, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
-    .line 930
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 931
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -240,7 +215,6 @@
     :goto_1
     if-ge v2, v0, :cond_3
 
-    .line 932
     sget-object v6, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v6, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -249,13 +223,11 @@
 
     check-cast v4, Ljava/lang/CharSequence;
 
-    .line 933
     .local v4, "text":Ljava/lang/CharSequence;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 934
     .local v1, "htmlText":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -273,7 +245,6 @@
 
     move-object v3, v6
 
-    .line 935
     .local v3, "intent":Landroid/content/Intent;
     :goto_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -292,7 +263,6 @@
 
     move-object v5, v6
 
-    .line 936
     .local v5, "uri":Landroid/net/Uri;
     :goto_3
     iget-object v6, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
@@ -303,12 +273,10 @@
 
     invoke-virtual {v6, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 931
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 927
     .end local v0    # "N":I
     .end local v1    # "htmlText":Ljava/lang/String;
     .end local v2    # "i":I
@@ -327,17 +295,14 @@
     :cond_1
     move-object v3, v7
 
-    .line 934
     goto :goto_2
 
     .restart local v3    # "intent":Landroid/content/Intent;
     :cond_2
     move-object v5, v7
 
-    .line 935
     goto :goto_3
 
-    .line 938
     .end local v1    # "htmlText":Ljava/lang/String;
     .end local v3    # "intent":Landroid/content/Intent;
     .end local v4    # "text":Ljava/lang/CharSequence;
@@ -352,20 +317,16 @@
     .param p3, "item"    # Landroid/content/ClipData$Item;
 
     .prologue
-    .line 621
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 622
     new-instance v0, Landroid/content/ClipDescription;
 
     invoke-direct {v0, p1, p2}, Landroid/content/ClipDescription;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
-    .line 623
     if-nez p3, :cond_0
 
-    .line 624
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "item is null"
@@ -374,25 +335,21 @@
 
     throw v0
 
-    .line 626
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 627
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
-    .line 628
     iget-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 629
     return-void
 .end method
 
@@ -403,12 +360,10 @@
     .param p2, "htmlText"    # Ljava/lang/String;
 
     .prologue
-    .line 684
     new-instance v0, Landroid/content/ClipData$Item;
 
     invoke-direct {v0, p1, p2}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;Ljava/lang/String;)V
 
-    .line 685
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v1, Landroid/content/ClipData;
 
@@ -425,12 +380,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 697
     new-instance v0, Landroid/content/ClipData$Item;
 
     invoke-direct {v0, p1}, Landroid/content/ClipData$Item;-><init>(Landroid/content/Intent;)V
 
-    .line 698
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v1, Landroid/content/ClipData;
 
@@ -447,12 +400,10 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 668
     new-instance v0, Landroid/content/ClipData$Item;
 
     invoke-direct {v0, p1}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 669
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v1, Landroid/content/ClipData;
 
@@ -469,12 +420,10 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 753
     new-instance v0, Landroid/content/ClipData$Item;
 
     invoke-direct {v0, p1}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
 
-    .line 754
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v1, Landroid/content/ClipData;
 
@@ -498,16 +447,13 @@
 
     const/4 v9, 0x0
 
-    .line 714
     new-instance v1, Landroid/content/ClipData$Item;
 
     invoke-direct {v1, p2}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
 
-    .line 715
     .local v1, "item":Landroid/content/ClipData$Item;
     const/4 v2, 0x0
 
-    .line 716
     .local v2, "mimeTypes":[Ljava/lang/String;
     const-string v7, "content"
 
@@ -521,12 +467,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 717
     invoke-virtual {p0, p2}, Landroid/content/ContentResolver;->getType(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 718
     .local v3, "realType":Ljava/lang/String;
     const-string v7, "*/*"
 
@@ -534,33 +478,27 @@
 
     move-result-object v2
 
-    .line 719
     if-nez v2, :cond_2
 
-    .line 720
     if-eqz v3, :cond_0
 
-    .line 721
     new-array v2, v5, [Ljava/lang/String;
 
     .end local v2    # "mimeTypes":[Ljava/lang/String;
     aput-object v3, v2, v9
 
-    const-string/jumbo v5, "text/uri-list"
+    const-string v5, "text/uri-list"
 
     aput-object v5, v2, v6
 
-    .line 735
     .end local v3    # "realType":Ljava/lang/String;
     .restart local v2    # "mimeTypes":[Ljava/lang/String;
     :cond_0
     :goto_0
     if-nez v2, :cond_1
 
-    .line 736
     sget-object v2, Landroid/content/ClipData;->MIMETYPES_TEXT_URILIST:[Ljava/lang/String;
 
-    .line 738
     :cond_1
     new-instance v5, Landroid/content/ClipData;
 
@@ -568,7 +506,6 @@
 
     return-object v5
 
-    .line 724
     .restart local v3    # "realType":Ljava/lang/String;
     :cond_2
     array-length v7, v2
@@ -580,36 +517,29 @@
 
     new-array v4, v5, [Ljava/lang/String;
 
-    .line 725
     .local v4, "tmp":[Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 726
     .local v0, "i":I
     if-eqz v3, :cond_3
 
-    .line 727
     aput-object v3, v4, v9
 
-    .line 728
     add-int/lit8 v0, v0, 0x1
 
-    .line 730
     :cond_3
     array-length v5, v2
 
     invoke-static {v2, v9, v4, v0, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 731
     array-length v5, v2
 
     add-int/2addr v5, v0
 
-    const-string/jumbo v6, "text/uri-list"
+    const-string v6, "text/uri-list"
 
     aput-object v6, v4, v5
 
-    .line 732
     move-object v2, v4
 
     goto :goto_0
@@ -619,7 +549,6 @@
     :cond_4
     move v5, v6
 
-    .line 724
     goto :goto_1
 .end method
 
@@ -630,10 +559,8 @@
     .param p1, "item"    # Landroid/content/ClipData$Item;
 
     .prologue
-    .line 769
     if-nez p1, :cond_0
 
-    .line 770
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "item is null"
@@ -642,13 +569,11 @@
 
     throw v0
 
-    .line 772
     :cond_0
     iget-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 773
     return-void
 .end method
 
@@ -656,7 +581,6 @@
     .locals 1
 
     .prologue
-    .line 889
     const/4 v0, 0x0
 
     return v0
@@ -667,14 +591,12 @@
     .param p1, "contentUserHint"    # I
 
     .prologue
-    .line 815
     iget-object v3, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 816
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -682,7 +604,6 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 817
     iget-object v3, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -691,24 +612,20 @@
 
     check-cast v1, Landroid/content/ClipData$Item;
 
-    .line 818
     .local v1, "item":Landroid/content/ClipData$Item;
     iget-object v3, v1, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     if-eqz v3, :cond_0
 
-    .line 819
     iget-object v3, v1, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v3, p1}, Landroid/content/Intent;->fixUris(I)V
 
-    .line 821
     :cond_0
     iget-object v3, v1, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     if-eqz v3, :cond_1
 
-    .line 822
     iget-object v3, v1, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     invoke-static {v3, p1}, Landroid/content/ContentProvider;->maybeAddUserId(Landroid/net/Uri;I)Landroid/net/Uri;
@@ -717,13 +634,11 @@
 
     iput-object v3, v1, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
-    .line 816
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 825
     .end local v1    # "item":Landroid/content/ClipData$Item;
     :cond_2
     return-void
@@ -734,14 +649,12 @@
     .param p1, "contentUserHint"    # I
 
     .prologue
-    .line 832
     iget-object v4, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .line 833
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -749,7 +662,6 @@
     :goto_0
     if-ge v1, v3, :cond_2
 
-    .line 834
     iget-object v4, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -758,24 +670,20 @@
 
     check-cast v2, Landroid/content/ClipData$Item;
 
-    .line 835
     .local v2, "item":Landroid/content/ClipData$Item;
     iget-object v4, v2, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     if-eqz v4, :cond_0
 
-    .line 836
     iget-object v4, v2, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 837
     .local v0, "data":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 838
     iget-object v4, v2, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     invoke-static {v0, p1}, Landroid/content/ContentProvider;->maybeAddUserId(Landroid/net/Uri;I)Landroid/net/Uri;
@@ -784,14 +692,12 @@
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 841
     .end local v0    # "data":Landroid/net/Uri;
     :cond_0
     iget-object v4, v2, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     if-eqz v4, :cond_1
 
-    .line 842
     iget-object v4, v2, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     invoke-static {v4, p1}, Landroid/content/ContentProvider;->maybeAddUserId(Landroid/net/Uri;I)Landroid/net/Uri;
@@ -800,13 +706,11 @@
 
     iput-object v4, v2, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
-    .line 833
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 845
     .end local v2    # "item":Landroid/content/ClipData$Item;
     :cond_2
     return-void
@@ -816,7 +720,6 @@
     .locals 1
 
     .prologue
-    .line 762
     iget-object v0, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
     return-object v0
@@ -826,7 +729,6 @@
     .locals 1
 
     .prologue
-    .line 777
     iget-object v0, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -837,7 +739,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 792
     iget-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -853,7 +754,6 @@
     .locals 1
 
     .prologue
-    .line 784
     iget-object v0, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -867,14 +767,12 @@
     .locals 5
 
     .prologue
-    .line 801
     iget-object v3, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 802
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -882,7 +780,6 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 803
     iget-object v3, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -891,18 +788,15 @@
 
     check-cast v1, Landroid/content/ClipData$Item;
 
-    .line 804
     .local v1, "item":Landroid/content/ClipData$Item;
     iget-object v3, v1, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     if-eqz v3, :cond_0
 
-    .line 805
     iget-object v3, v1, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v3}, Landroid/content/Intent;->prepareToLeaveProcess()V
 
-    .line 807
     :cond_0
     iget-object v3, v1, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
@@ -914,20 +808,17 @@
 
     if-eqz v3, :cond_1
 
-    .line 808
     iget-object v3, v1, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     const-string v4, "ClipData.Item.getUri()"
 
     invoke-virtual {v3, v4}, Landroid/net/Uri;->checkFileUriExposed(Ljava/lang/String;)V
 
-    .line 802
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 811
     .end local v1    # "item":Landroid/content/ClipData$Item;
     :cond_2
     return-void
@@ -940,12 +831,10 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 861
     iget-object v2, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
     if-eqz v2, :cond_4
 
-    .line 862
     iget-object v2, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
     invoke-virtual {v2, p1}, Landroid/content/ClipDescription;->toShortString(Ljava/lang/StringBuilder;)Z
@@ -956,29 +845,23 @@
 
     const/4 v0, 0x1
 
-    .line 866
     .local v0, "first":Z
     :goto_0
     iget-object v2, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_1
 
-    .line 867
     if-nez v0, :cond_0
 
-    .line 868
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 870
     :cond_0
     const/4 v0, 0x0
 
-    .line 871
     const-string v2, "I:"
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 872
     iget-object v2, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
@@ -987,12 +870,10 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 873
     const/16 v2, 0x78
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 874
     iget-object v2, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -1001,7 +882,6 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 876
     :cond_1
     const/4 v1, 0x0
 
@@ -1015,22 +895,17 @@
 
     if-ge v1, v2, :cond_5
 
-    .line 877
     if-nez v0, :cond_2
 
-    .line 878
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 880
     :cond_2
     const/4 v0, 0x0
 
-    .line 881
     const/16 v2, 0x7b
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 882
     iget-object v2, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1041,17 +916,14 @@
 
     invoke-virtual {v2, p1}, Landroid/content/ClipData$Item;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 883
     const/16 v2, 0x7d
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 876
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 862
     .end local v0    # "first":Z
     .end local v1    # "i":I
     :cond_3
@@ -1059,14 +931,12 @@
 
     goto :goto_0
 
-    .line 864
     :cond_4
     const/4 v0, 0x1
 
     .restart local v0    # "first":Z
     goto :goto_0
 
-    .line 885
     .restart local v1    # "i":I
     :cond_5
     return-void
@@ -1076,28 +946,23 @@
     .locals 2
 
     .prologue
-    .line 849
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 851
     .local v0, "b":Ljava/lang/StringBuilder;
     const-string v1, "ClipData { "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 852
     invoke-virtual {p0, v0}, Landroid/content/ClipData;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 853
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 855
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1115,25 +980,20 @@
 
     const/4 v4, 0x0
 
-    .line 894
     iget-object v3, p0, Landroid/content/ClipData;->mClipDescription:Landroid/content/ClipDescription;
 
     invoke-virtual {v3, p1, p2}, Landroid/content/ClipDescription;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 895
     iget-object v3, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     if-eqz v3, :cond_0
 
-    .line 896
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 897
     iget-object v3, p0, Landroid/content/ClipData;->mIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3, p1, p2}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 901
     :goto_0
     iget-object v3, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
@@ -1141,18 +1001,15 @@
 
     move-result v0
 
-    .line 902
     .local v0, "N":I
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 903
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_1
     if-ge v1, v0, :cond_3
 
-    .line 904
     iget-object v3, p0, Landroid/content/ClipData;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1161,51 +1018,41 @@
 
     check-cast v2, Landroid/content/ClipData$Item;
 
-    .line 905
     .local v2, "item":Landroid/content/ClipData$Item;
     iget-object v3, v2, Landroid/content/ClipData$Item;->mText:Ljava/lang/CharSequence;
 
     invoke-static {v3, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 906
     iget-object v3, v2, Landroid/content/ClipData$Item;->mHtmlText:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 907
     iget-object v3, v2, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     if-eqz v3, :cond_1
 
-    .line 908
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 909
     iget-object v3, v2, Landroid/content/ClipData$Item;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v3, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 913
     :goto_2
     iget-object v3, v2, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     if-eqz v3, :cond_2
 
-    .line 914
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 915
     iget-object v3, v2, Landroid/content/ClipData$Item;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, p1, p2}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 903
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 899
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "item":Landroid/content/ClipData$Item;
@@ -1214,7 +1061,6 @@
 
     goto :goto_0
 
-    .line 911
     .restart local v0    # "N":I
     .restart local v1    # "i":I
     .restart local v2    # "item":Landroid/content/ClipData$Item;
@@ -1223,13 +1069,11 @@
 
     goto :goto_2
 
-    .line 917
     :cond_2
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_3
 
-    .line 920
     .end local v2    # "item":Landroid/content/ClipData$Item;
     :cond_3
     return-void

@@ -31,16 +31,12 @@
     .param p2, "ptm"    # Landroid/text/method/PasswordTransformationMethod;
 
     .prologue
-    .line 239
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 240
     iput-object p1, p0, Landroid/text/method/PasswordTransformationMethod$Visible;->mText:Landroid/text/Spannable;
 
-    .line 241
     iput-object p2, p0, Landroid/text/method/PasswordTransformationMethod$Visible;->mTransformer:Landroid/text/method/PasswordTransformationMethod;
 
-    .line 242
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -51,7 +47,6 @@
 
     invoke-virtual {p0, p0, v0, v1}, Landroid/text/method/PasswordTransformationMethod$Visible;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 243
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p0, "x0"    # Landroid/text/method/PasswordTransformationMethod$Visible;
 
     .prologue
-    .line 235
     iget-object v0, p0, Landroid/text/method/PasswordTransformationMethod$Visible;->mTransformer:Landroid/text/method/PasswordTransformationMethod;
 
     return-object v0
@@ -72,11 +66,9 @@
     .locals 1
 
     .prologue
-    .line 246
     iget-object v0, p0, Landroid/text/method/PasswordTransformationMethod$Visible;->mText:Landroid/text/Spannable;
 
     invoke-interface {v0, p0}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 247
     return-void
 .end method

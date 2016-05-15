@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/wipower/WipowerDynamicParam;->sDebug:Z
@@ -66,46 +65,32 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mOptValidity:B
 
-    .line 78
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
 
-    .line 79
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
 
-    .line 80
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
 
-    .line 81
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
 
-    .line 82
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mTemperature:B
 
-    .line 83
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
 
-    .line 84
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
 
-    .line 85
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
 
-    .line 86
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mAlert:B
 
-    .line 87
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved1:S
 
-    .line 88
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved2:B
 
-    .line 89
     return-void
 .end method
 
@@ -114,7 +99,6 @@
     .param p0, "adc"    # S
 
     .prologue
-    .line 174
     int-to-float v0, p0
 
     const v1, 0x40988000    # 4.765625f
@@ -133,7 +117,6 @@
     .param p0, "adc"    # S
 
     .prologue
-    .line 170
     int-to-float v0, p0
 
     const v1, 0x42bea000    # 95.3125f
@@ -152,7 +135,6 @@
     .param p0, "num"    # I
 
     .prologue
-    .line 96
     const-string v0, "0x%8s"
 
     const/4 v1, 0x1
@@ -187,7 +169,6 @@
     .param p0, "b"    # B
 
     .prologue
-    .line 166
     and-int/lit16 v0, p0, 0xff
 
     int-to-short v0, v0
@@ -205,23 +186,19 @@
 
     const v3, 0xff00
 
-    .line 124
     const/16 v1, 0x14
 
     new-array v0, v1, [B
 
-    .line 125
     .local v0, "res":[B
     invoke-virtual {p0}, Landroid/wipower/WipowerDynamicParam;->print()V
 
-    .line 126
     const/4 v1, 0x0
 
     iget-byte v2, p0, Landroid/wipower/WipowerDynamicParam;->mOptValidity:B
 
     aput-byte v2, v0, v1
 
-    .line 127
     const/4 v1, 0x1
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
@@ -232,7 +209,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 128
     const/4 v1, 0x2
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
@@ -245,7 +221,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 129
     const/4 v1, 0x3
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
@@ -256,7 +231,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 130
     const/4 v1, 0x4
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
@@ -269,7 +243,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 131
     const/4 v1, 0x5
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
@@ -280,7 +253,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 132
     const/4 v1, 0x6
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
@@ -293,7 +265,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 133
     const/4 v1, 0x7
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
@@ -304,7 +275,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 134
     const/16 v1, 0x8
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
@@ -317,14 +287,12 @@
 
     aput-byte v2, v0, v1
 
-    .line 135
     const/16 v1, 0x9
 
     iget-byte v2, p0, Landroid/wipower/WipowerDynamicParam;->mTemperature:B
 
     aput-byte v2, v0, v1
 
-    .line 136
     const/16 v1, 0xa
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
@@ -335,7 +303,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 137
     const/16 v1, 0xb
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
@@ -348,7 +315,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 138
     const/16 v1, 0xc
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
@@ -359,7 +325,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 139
     const/16 v1, 0xd
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
@@ -372,7 +337,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 140
     const/16 v1, 0xe
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
@@ -383,7 +347,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 141
     const/16 v1, 0xf
 
     iget-short v2, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
@@ -396,12 +359,10 @@
 
     aput-byte v2, v0, v1
 
-    .line 142
     iget-byte v1, p0, Landroid/wipower/WipowerDynamicParam;->mAlert:B
 
     aput-byte v1, v0, v4
 
-    .line 143
     aget-byte v1, v0, v4
 
     and-int/lit8 v1, v1, -0x80
@@ -416,7 +377,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 144
     aget-byte v1, v0, v4
 
     and-int/lit8 v1, v1, 0x7f
@@ -425,7 +385,6 @@
 
     aput-byte v1, v0, v4
 
-    .line 146
     :cond_0
     const-string v1, "WipowerDynamicParam"
 
@@ -433,7 +392,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     return-object v0
 .end method
 
@@ -441,7 +399,6 @@
     .locals 3
 
     .prologue
-    .line 104
     const-string v0, "persist.a4wp.logging"
 
     const/4 v1, 0x0
@@ -452,7 +409,6 @@
 
     sput-boolean v0, Landroid/wipower/WipowerDynamicParam;->sDebug:Z
 
-    .line 105
     sget-boolean v0, Landroid/wipower/WipowerDynamicParam;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -533,7 +489,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_0
     sget-boolean v0, Landroid/wipower/WipowerDynamicParam;->sDebug:Z
 
@@ -615,7 +570,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     :cond_1
     sget-boolean v0, Landroid/wipower/WipowerDynamicParam;->sDebug:Z
 
@@ -697,7 +651,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     :cond_2
     return-void
 .end method
@@ -708,43 +661,30 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 151
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mOptValidity:B
 
-    .line 152
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
 
-    .line 153
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
 
-    .line 154
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
 
-    .line 155
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
 
-    .line 156
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mTemperature:B
 
-    .line 157
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
 
-    .line 158
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
 
-    .line 159
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
 
-    .line 160
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mAlert:B
 
-    .line 161
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved1:S
 
-    .line 162
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved2:B
 
-    .line 163
     return-void
 .end method
 
@@ -753,17 +693,14 @@
     .param p1, "value"    # [B
 
     .prologue
-    .line 185
     invoke-virtual {p0}, Landroid/wipower/WipowerDynamicParam;->resetValues()V
 
-    .line 186
     const/4 v0, 0x0
 
     aget-byte v0, p1, v0
 
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mOptValidity:B
 
-    .line 187
     const/4 v0, 0x1
 
     aget-byte v0, p1, v0
@@ -774,7 +711,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
 
-    .line 188
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
 
     const/4 v1, 0x2
@@ -795,7 +731,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectVoltage:S
 
-    .line 189
     const/4 v0, 0x3
 
     aget-byte v0, p1, v0
@@ -806,7 +741,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
 
-    .line 190
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
 
     const/4 v1, 0x4
@@ -827,7 +761,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mRectCurrent:S
 
-    .line 191
     const/4 v0, 0x5
 
     aget-byte v0, p1, v0
@@ -838,7 +771,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
 
-    .line 192
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
 
     const/4 v1, 0x6
@@ -859,7 +791,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputVoltage:S
 
-    .line 193
     const/4 v0, 0x7
 
     aget-byte v0, p1, v0
@@ -870,7 +801,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
 
-    .line 194
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
 
     const/16 v1, 0x8
@@ -891,14 +821,12 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mOutputCurrent:S
 
-    .line 195
     const/16 v0, 0x9
 
     aget-byte v0, p1, v0
 
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mTemperature:B
 
-    .line 196
     const/16 v0, 0xa
 
     aget-byte v0, p1, v0
@@ -909,7 +837,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
 
-    .line 197
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
 
     const/16 v1, 0xb
@@ -930,7 +857,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMinRectVoltageDyn:S
 
-    .line 198
     const/16 v0, 0xc
 
     aget-byte v0, p1, v0
@@ -941,7 +867,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
 
-    .line 199
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
 
     const/16 v1, 0xd
@@ -962,7 +887,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mSetRectVoltageDyn:S
 
-    .line 200
     const/16 v0, 0xe
 
     aget-byte v0, p1, v0
@@ -973,7 +897,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
 
-    .line 201
     iget-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
 
     const/16 v1, 0xf
@@ -994,14 +917,12 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mMaxRectVoltageDyn:S
 
-    .line 203
     const/16 v0, 0x10
 
     aget-byte v0, p1, v0
 
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mAlert:B
 
-    .line 204
     const/16 v0, 0x11
 
     aget-byte v0, p1, v0
@@ -1012,7 +933,6 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved1:S
 
-    .line 205
     const/16 v0, 0x12
 
     aget-byte v0, p1, v0
@@ -1027,23 +947,19 @@
 
     iput-short v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved1:S
 
-    .line 206
     const/16 v0, 0x13
 
     aget-byte v0, p1, v0
 
     iput-byte v0, p0, Landroid/wipower/WipowerDynamicParam;->mReserved2:B
 
-    .line 207
     const-string v0, "WipowerDynamicParam"
 
     const-string v1, "mPruDynamicParam.setAppValue"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     invoke-virtual {p0}, Landroid/wipower/WipowerDynamicParam;->print()V
 
-    .line 209
     return-void
 .end method

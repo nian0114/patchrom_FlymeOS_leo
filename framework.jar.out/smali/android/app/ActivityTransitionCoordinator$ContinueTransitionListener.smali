@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 897
     iput-object p1, p0, Landroid/app/ActivityTransitionCoordinator$ContinueTransitionListener;->this$0:Landroid/app/ActivityTransitionCoordinator;
 
     invoke-direct {p0}, Landroid/transition/Transition$TransitionListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 900
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator$ContinueTransitionListener;->this$0:Landroid/app/ActivityTransitionCoordinator;
 
     const/4 v2, 0x0
@@ -46,7 +44,6 @@
     # setter for: Landroid/app/ActivityTransitionCoordinator;->mIsStartingTransition:Z
     invoke-static {v1, v2}, Landroid/app/ActivityTransitionCoordinator;->access$102(Landroid/app/ActivityTransitionCoordinator;Z)Z
 
-    .line 901
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator$ContinueTransitionListener;->this$0:Landroid/app/ActivityTransitionCoordinator;
 
     # getter for: Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
@@ -54,7 +51,6 @@
 
     move-result-object v0
 
-    .line 902
     .local v0, "pending":Ljava/lang/Runnable;
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator$ContinueTransitionListener;->this$0:Landroid/app/ActivityTransitionCoordinator;
 
@@ -63,15 +59,12 @@
     # setter for: Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
     invoke-static {v1, v2}, Landroid/app/ActivityTransitionCoordinator;->access$202(Landroid/app/ActivityTransitionCoordinator;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 903
     if-eqz v0, :cond_0
 
-    .line 904
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator$ContinueTransitionListener;->this$0:Landroid/app/ActivityTransitionCoordinator;
 
     invoke-virtual {v1, v0}, Landroid/app/ActivityTransitionCoordinator;->startTransition(Ljava/lang/Runnable;)V
 
-    .line 906
     :cond_0
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 32
     iput-object p1, p0, Landroid/widget/ZoomButton$1;->this$0:Landroid/widget/ZoomButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/widget/ZoomButton$1;->this$0:Landroid/widget/ZoomButton;
 
     invoke-virtual {v0}, Landroid/widget/ZoomButton;->hasOnClickListeners()Z
@@ -66,12 +64,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 35
     iget-object v0, p0, Landroid/widget/ZoomButton$1;->this$0:Landroid/widget/ZoomButton;
 
     invoke-virtual {v0}, Landroid/widget/ZoomButton;->callOnClick()Z
 
-    .line 36
     iget-object v0, p0, Landroid/widget/ZoomButton$1;->this$0:Landroid/widget/ZoomButton;
 
     # getter for: Landroid/widget/ZoomButton;->mHandler:Landroid/os/Handler;
@@ -88,7 +84,6 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 38
     :cond_0
     return-void
 .end method

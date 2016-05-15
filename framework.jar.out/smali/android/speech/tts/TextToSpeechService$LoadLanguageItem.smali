@@ -35,22 +35,16 @@
     .param p7, "variant"    # Ljava/lang/String;
 
     .prologue
-    .line 1071
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 1072
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/speech/tts/TextToSpeechService$SpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;II)V
 
-    .line 1073
     iput-object p5, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mLanguage:Ljava/lang/String;
 
-    .line 1074
     iput-object p6, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mCountry:Ljava/lang/String;
 
-    .line 1075
     iput-object p7, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mVariant:Ljava/lang/String;
 
-    .line 1076
     return-void
 .end method
 
@@ -60,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 1080
     const/4 v0, 0x1
 
     return v0
@@ -70,7 +63,6 @@
     .locals 4
 
     .prologue
-    .line 1085
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mLanguage:Ljava/lang/String;
@@ -81,7 +73,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/speech/tts/TextToSpeechService;->onLoadLanguage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1086
     return-void
 .end method
 
@@ -89,6 +80,5 @@
     .locals 0
 
     .prologue
-    .line 1091
     return-void
 .end method

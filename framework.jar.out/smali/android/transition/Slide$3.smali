@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/transition/Slide$CalculateSlideVertical;-><init>(Landroid/transition/Slide$1;)V
@@ -35,7 +34,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 96
     invoke-virtual {p2}, Landroid/view/View;->getTranslationY()F
 
     move-result v0

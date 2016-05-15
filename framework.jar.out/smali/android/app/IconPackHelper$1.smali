@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 703
     invoke-static {}, Landroid/app/ComposedIconInfo$SwatchType;->values()[Landroid/app/ComposedIconInfo$SwatchType;
 
     move-result-object v0

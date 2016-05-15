@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
 
     return-void

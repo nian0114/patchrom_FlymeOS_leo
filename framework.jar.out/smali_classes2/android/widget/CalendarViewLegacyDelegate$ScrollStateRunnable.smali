@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 941
     iput-object p1, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Landroid/widget/CalendarViewLegacyDelegate$1;
 
     .prologue
-    .line 941
     invoke-direct {p0, p1}, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;-><init>(Landroid/widget/CalendarViewLegacyDelegate;)V
 
     return-void
@@ -58,20 +56,16 @@
     .param p2, "scrollState"    # I
 
     .prologue
-    .line 954
     iput-object p1, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->mView:Landroid/widget/AbsListView;
 
-    .line 955
     iput p2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->mNewState:I
 
-    .line 956
     iget-object v0, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     iget-object v0, v0, Landroid/widget/CalendarViewLegacyDelegate;->mDelegator:Landroid/widget/CalendarView;
 
     invoke-virtual {v0, p0}, Landroid/widget/CalendarView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 957
     iget-object v0, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     iget-object v0, v0, Landroid/widget/CalendarViewLegacyDelegate;->mDelegator:Landroid/widget/CalendarView;
@@ -80,7 +74,6 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/widget/CalendarView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 958
     return-void
 .end method
 
@@ -90,7 +83,6 @@
     .prologue
     const/16 v4, 0x1f4
 
-    .line 961
     iget-object v2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     iget v3, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->mNewState:I
@@ -98,7 +90,6 @@
     # setter for: Landroid/widget/CalendarViewLegacyDelegate;->mCurrentScrollState:I
     invoke-static {v2, v3}, Landroid/widget/CalendarViewLegacyDelegate;->access$1002(Landroid/widget/CalendarViewLegacyDelegate;I)I
 
-    .line 963
     iget v2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->mNewState:I
 
     if-nez v2, :cond_1
@@ -112,7 +103,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 965
     iget-object v2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->mView:Landroid/widget/AbsListView;
 
     const/4 v3, 0x0
@@ -121,16 +111,13 @@
 
     move-result-object v0
 
-    .line 966
     .local v0, "child":Landroid/view/View;
     if-nez v0, :cond_0
 
-    .line 981
     .end local v0    # "child":Landroid/view/View;
     :goto_0
     return-void
 
-    .line 970
     .restart local v0    # "child":Landroid/view/View;
     :cond_0
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
@@ -146,7 +133,6 @@
 
     sub-int v1, v2, v3
 
-    .line 971
     .local v1, "dist":I
     iget-object v2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
@@ -157,7 +143,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 972
     iget-object v2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     # getter for: Landroid/widget/CalendarViewLegacyDelegate;->mIsScrollingUp:Z
@@ -167,7 +152,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 973
     iget-object v2, p0, Landroid/widget/CalendarViewLegacyDelegate$ScrollStateRunnable;->mView:Landroid/widget/AbsListView;
 
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
@@ -178,7 +162,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
 
-    .line 980
     .end local v0    # "child":Landroid/view/View;
     .end local v1    # "dist":I
     :cond_1
@@ -192,7 +175,6 @@
 
     goto :goto_0
 
-    .line 976
     .restart local v0    # "child":Landroid/view/View;
     .restart local v1    # "dist":I
     :cond_2

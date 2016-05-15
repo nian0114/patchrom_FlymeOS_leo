@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 37
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "record"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 40
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
@@ -50,21 +47,17 @@
 
     if-nez v1, :cond_1
 
-    .line 42
     :cond_0
     const/4 v1, 0x0
 
-    .line 54
     :goto_0
     return-object v1
 
-    .line 45
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 46
     .local v0, "notification":Landroid/app/Notification;
     iget v1, v0, Landroid/app/Notification;->defaults:I
 
@@ -90,13 +83,11 @@
 
     if-eqz v1, :cond_3
 
-    .line 51
     :cond_2
     const/4 v1, 0x1
 
     invoke-virtual {p1, v1}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntusive(Z)V
 
-    .line 54
     :cond_3
     new-instance v1, Lcom/android/server/notification/NotificationIntrusivenessExtractor$1;
 
@@ -116,6 +107,5 @@
     .param p1, "config"    # Lcom/android/server/notification/RankingConfig;
 
     .prologue
-    .line 70
     return-void
 .end method

@@ -25,25 +25,20 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/android/internal/util/BitwiseInputStream;->mBuf:[B
 
-    .line 54
     array-length v0, p1
 
     shl-int/lit8 v0, v0, 0x3
 
     iput v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mEnd:I
 
-    .line 55
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 56
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 62
     iget v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mEnd:I
 
     iget v1, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
@@ -75,12 +69,10 @@
     .prologue
     const/16 v5, 0x8
 
-    .line 75
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
     ushr-int/lit8 v1, v3, 0x3
 
-    .line 76
     .local v1, "index":I
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
@@ -90,7 +82,6 @@
 
     sub-int v2, v3, p1
 
-    .line 77
     .local v2, "offset":I
     if-ltz p1, :cond_0
 
@@ -104,7 +95,6 @@
 
     if-le v3, v4, :cond_1
 
-    .line 78
     :cond_0
     new-instance v3, Lcom/android/internal/util/BitwiseInputStream$AccessException;
 
@@ -160,7 +150,6 @@
 
     throw v3
 
-    .line 81
     :cond_1
     iget-object v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mBuf:[B
 
@@ -170,7 +159,6 @@
 
     shl-int/lit8 v0, v3, 0x8
 
-    .line 82
     .local v0, "data":I
     if-ge v2, v5, :cond_2
 
@@ -184,11 +172,9 @@
 
     or-int/2addr v0, v3
 
-    .line 83
     :cond_2
     ushr-int/2addr v0, v2
 
-    .line 84
     const/4 v3, -0x1
 
     rsub-int/lit8 v4, p1, 0x20
@@ -197,14 +183,12 @@
 
     and-int/2addr v0, v3
 
-    .line 85
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
     add-int/2addr v3, p1
 
     iput v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 86
     return v0
 .end method
 
@@ -218,7 +202,6 @@
     .end annotation
 
     .prologue
-    .line 96
     ushr-int/lit8 v5, p1, 0x3
 
     and-int/lit8 v4, p1, 0x7
@@ -230,11 +213,9 @@
     :goto_0
     add-int v1, v5, v4
 
-    .line 97
     .local v1, "bytes":I
     new-array v0, v1, [B
 
-    .line 98
     .local v0, "arr":[B
     const/4 v2, 0x0
 
@@ -242,7 +223,6 @@
     :goto_1
     if-ge v2, v1, :cond_1
 
-    .line 99
     const/16 v4, 0x8
 
     shl-int/lit8 v5, v2, 0x3
@@ -253,7 +233,6 @@
 
     move-result v3
 
-    .line 100
     .local v3, "increment":I
     invoke-virtual {p0, v3}, Lcom/android/internal/util/BitwiseInputStream;->read(I)I
 
@@ -267,12 +246,10 @@
 
     aput-byte v4, v0, v2
 
-    .line 98
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 96
     .end local v0    # "arr":[B
     .end local v1    # "bytes":I
     .end local v2    # "i":I
@@ -282,7 +259,6 @@
 
     goto :goto_0
 
-    .line 102
     .restart local v0    # "arr":[B
     .restart local v1    # "bytes":I
     .restart local v2    # "i":I
@@ -300,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 111
     iget v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
     add-int/2addr v0, p1
@@ -309,7 +284,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 112
     new-instance v0, Lcom/android/internal/util/BitwiseInputStream$AccessException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -364,7 +338,6 @@
 
     throw v0
 
-    .line 115
     :cond_0
     iget v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
@@ -372,6 +345,5 @@
 
     iput v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 116
     return-void
 .end method

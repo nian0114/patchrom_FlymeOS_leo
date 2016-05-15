@@ -36,20 +36,16 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 491
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/android/server/NativeDaemonConnector$Command;->mArguments:Ljava/util/ArrayList;
 
-    .line 492
     iput-object p1, p0, Lcom/android/server/NativeDaemonConnector$Command;->mCmd:Ljava/lang/String;
 
-    .line 493
     move-object v1, p2
 
     .local v1, "arr$":[Ljava/lang/Object;
@@ -64,16 +60,13 @@
 
     aget-object v0, v1, v2
 
-    .line 494
     .local v0, "arg":Ljava/lang/Object;
     invoke-virtual {p0, v0}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 493
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 496
     .end local v0    # "arg":Ljava/lang/Object;
     :cond_0
     return-void
@@ -84,7 +77,6 @@
     .param p0, "x0"    # Lcom/android/server/NativeDaemonConnector$Command;
 
     .prologue
-    .line 487
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnector$Command;->mCmd:Ljava/lang/String;
 
     return-object v0
@@ -95,7 +87,6 @@
     .param p0, "x0"    # Lcom/android/server/NativeDaemonConnector$Command;
 
     .prologue
-    .line 487
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnector$Command;->mArguments:Ljava/util/ArrayList;
 
     return-object v0
@@ -108,11 +99,9 @@
     .param p1, "arg"    # Ljava/lang/Object;
 
     .prologue
-    .line 499
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnector$Command;->mArguments:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 500
     return-object p0
 .end method

@@ -27,10 +27,8 @@
     .locals 0
 
     .prologue
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .locals 3
 
     .prologue
-    .line 184
     :try_start_0
     iget-object v1, p0, Landroid/app/VoiceInteractor$Request;->mRequestInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
@@ -48,15 +45,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 188
     :goto_0
     return-void
 
-    .line 185
     :catch_0
     move-exception v0
 
-    .line 186
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "VoiceInteractor"
 
@@ -73,16 +67,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 208
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mRequestInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
-    .line 209
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mContext:Landroid/content/Context;
 
-    .line 210
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mActivity:Landroid/app/Activity;
 
-    .line 211
     return-void
 .end method
 
@@ -90,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget-object v0, p0, Landroid/app/VoiceInteractor$Request;->mActivity:Landroid/app/Activity;
 
     return-object v0
@@ -100,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-object v0, p0, Landroid/app/VoiceInteractor$Request;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -111,7 +99,6 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 202
     return-void
 .end method
 
@@ -119,7 +106,6 @@
     .locals 0
 
     .prologue
-    .line 199
     return-void
 .end method
 
@@ -127,7 +113,6 @@
     .locals 0
 
     .prologue
-    .line 205
     return-void
 .end method
 

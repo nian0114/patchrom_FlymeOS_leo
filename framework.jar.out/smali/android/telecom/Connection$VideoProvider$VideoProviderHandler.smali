@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 431
     iput-object p1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/telecom/Connection$1;
 
     .prologue
-    .line 431
     invoke-direct {p0, p1}, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;-><init>(Landroid/telecom/Connection$VideoProvider;)V
 
     return-void
@@ -50,16 +48,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 434
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 471
     :goto_0
     return-void
 
-    .line 436
     :pswitch_0
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -76,7 +71,6 @@
 
     goto :goto_0
 
-    .line 439
     :pswitch_1
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -88,7 +82,6 @@
 
     goto :goto_0
 
-    .line 442
     :pswitch_2
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -100,7 +93,6 @@
 
     goto :goto_0
 
-    .line 445
     :pswitch_3
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -112,7 +104,6 @@
 
     goto :goto_0
 
-    .line 448
     :pswitch_4
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -122,7 +113,6 @@
 
     goto :goto_0
 
-    .line 451
     :pswitch_5
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -138,7 +128,6 @@
 
     goto :goto_0
 
-    .line 454
     :pswitch_6
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -150,7 +139,6 @@
 
     goto :goto_0
 
-    .line 457
     :pswitch_7
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -162,7 +150,6 @@
 
     goto :goto_0
 
-    .line 460
     :pswitch_8
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -170,7 +157,6 @@
 
     goto :goto_0
 
-    .line 463
     :pswitch_9
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -178,7 +164,6 @@
 
     goto :goto_0
 
-    .line 466
     :pswitch_a
     iget-object v1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -190,7 +175,6 @@
 
     goto :goto_0
 
-    .line 434
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

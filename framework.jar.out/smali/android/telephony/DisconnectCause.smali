@@ -206,10 +206,8 @@
     .locals 0
 
     .prologue
-    .line 255
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 257
     return-void
 .end method
 
@@ -218,10 +216,8 @@
     .param p0, "cause"    # I
 
     .prologue
-    .line 261
     sparse-switch p0, :sswitch_data_0
 
-    .line 361
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -243,301 +239,251 @@
     :goto_0
     return-object v0
 
-    .line 263
     :sswitch_0
     const-string v0, "NOT_DISCONNECTED"
 
     goto :goto_0
 
-    .line 265
     :sswitch_1
     const-string v0, "INCOMING_MISSED"
 
     goto :goto_0
 
-    .line 267
     :sswitch_2
     const-string v0, "NORMAL"
 
     goto :goto_0
 
-    .line 269
     :sswitch_3
     const-string v0, "LOCAL"
 
     goto :goto_0
 
-    .line 271
     :sswitch_4
     const-string v0, "BUSY"
 
     goto :goto_0
 
-    .line 273
     :sswitch_5
     const-string v0, "CONGESTION"
 
     goto :goto_0
 
-    .line 275
     :sswitch_6
     const-string v0, "INVALID_NUMBER"
 
     goto :goto_0
 
-    .line 277
     :sswitch_7
     const-string v0, "NUMBER_UNREACHABLE"
 
     goto :goto_0
 
-    .line 279
     :sswitch_8
     const-string v0, "SERVER_UNREACHABLE"
 
     goto :goto_0
 
-    .line 281
     :sswitch_9
     const-string v0, "INVALID_CREDENTIALS"
 
     goto :goto_0
 
-    .line 283
     :sswitch_a
     const-string v0, "OUT_OF_NETWORK"
 
     goto :goto_0
 
-    .line 285
     :sswitch_b
     const-string v0, "SERVER_ERROR"
 
     goto :goto_0
 
-    .line 287
     :sswitch_c
     const-string v0, "TIMED_OUT"
 
     goto :goto_0
 
-    .line 289
     :sswitch_d
     const-string v0, "LOST_SIGNAL"
 
     goto :goto_0
 
-    .line 291
     :sswitch_e
     const-string v0, "LIMIT_EXCEEDED"
 
     goto :goto_0
 
-    .line 293
     :sswitch_f
     const-string v0, "INCOMING_REJECTED"
 
     goto :goto_0
 
-    .line 295
     :sswitch_10
     const-string v0, "POWER_OFF"
 
     goto :goto_0
 
-    .line 297
     :sswitch_11
     const-string v0, "OUT_OF_SERVICE"
 
     goto :goto_0
 
-    .line 299
     :sswitch_12
     const-string v0, "ICC_ERROR"
 
     goto :goto_0
 
-    .line 301
     :sswitch_13
     const-string v0, "CALL_BARRED"
 
     goto :goto_0
 
-    .line 303
     :sswitch_14
     const-string v0, "FDN_BLOCKED"
 
     goto :goto_0
 
-    .line 305
     :sswitch_15
     const-string v0, "CS_RESTRICTED"
 
     goto :goto_0
 
-    .line 307
     :sswitch_16
     const-string v0, "CS_RESTRICTED_NORMAL"
 
     goto :goto_0
 
-    .line 309
     :sswitch_17
     const-string v0, "CS_RESTRICTED_EMERGENCY"
 
     goto :goto_0
 
-    .line 311
     :sswitch_18
     const-string v0, "UNOBTAINABLE_NUMBER"
 
     goto :goto_0
 
-    .line 313
     :sswitch_19
     const-string v0, "CDMA_LOCKED_UNTIL_POWER_CYCLE"
 
     goto :goto_0
 
-    .line 315
     :sswitch_1a
     const-string v0, "CDMA_DROP"
 
     goto :goto_0
 
-    .line 317
     :sswitch_1b
     const-string v0, "CDMA_INTERCEPT"
 
     goto :goto_0
 
-    .line 319
     :sswitch_1c
     const-string v0, "CDMA_REORDER"
 
     goto :goto_0
 
-    .line 321
     :sswitch_1d
     const-string v0, "CDMA_SO_REJECT"
 
     goto :goto_0
 
-    .line 323
     :sswitch_1e
     const-string v0, "CDMA_RETRY_ORDER"
 
     goto :goto_0
 
-    .line 325
     :sswitch_1f
     const-string v0, "CDMA_ACCESS_FAILURE"
 
     goto :goto_0
 
-    .line 327
     :sswitch_20
     const-string v0, "CDMA_PREEMPTED"
 
     goto :goto_0
 
-    .line 329
     :sswitch_21
     const-string v0, "CDMA_NOT_EMERGENCY"
 
     goto :goto_0
 
-    .line 331
     :sswitch_22
     const-string v0, "CDMA_ACCESS_BLOCKED"
 
     goto :goto_0
 
-    .line 333
     :sswitch_23
     const-string v0, "EMERGENCY_ONLY"
 
     goto :goto_0
 
-    .line 335
     :sswitch_24
     const-string v0, "NO_PHONE_NUMBER_SUPPLIED"
 
     goto :goto_0
 
-    .line 337
     :sswitch_25
     const-string v0, "DIALED_MMI"
 
     goto :goto_0
 
-    .line 339
     :sswitch_26
     const-string v0, "VOICEMAIL_NUMBER_MISSING"
 
     goto :goto_0
 
-    .line 341
     :sswitch_27
     const-string v0, "CDMA_CALL_LOST"
 
     goto :goto_0
 
-    .line 343
     :sswitch_28
     const-string v0, "EXITED_ECM"
 
     goto :goto_0
 
-    .line 345
     :sswitch_29
     const-string v0, "DIAL_MODIFIED_TO_USSD"
 
     goto :goto_0
 
-    .line 347
     :sswitch_2a
     const-string v0, "DIAL_MODIFIED_TO_SS"
 
     goto/16 :goto_0
 
-    .line 349
     :sswitch_2b
     const-string v0, "DIAL_MODIFIED_TO_DIAL"
 
     goto/16 :goto_0
 
-    .line 351
     :sswitch_2c
     const-string v0, "ERROR_UNSPECIFIED"
 
     goto/16 :goto_0
 
-    .line 353
     :sswitch_2d
     const-string v0, "OUTGOING_FAILURE"
 
     goto/16 :goto_0
 
-    .line 355
     :sswitch_2e
     const-string v0, "OUTGOING_CANCELED"
 
     goto/16 :goto_0
 
-    .line 357
     :sswitch_2f
     const-string v0, "IMS_MERGED_SUCCESSFULLY"
 
     goto/16 :goto_0
 
-    .line 359
     :sswitch_30
     const-string v0, "CALL_BLACKLISTED"
 
     goto/16 :goto_0
 
-    .line 261
     nop
 
     :sswitch_data_0

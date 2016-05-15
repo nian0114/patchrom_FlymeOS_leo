@@ -82,26 +82,20 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 97
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 44
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->RENDERMODE_STRETCH:I
 
-    .line 45
     iput v7, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->RENDERMODE_FIT:I
 
-    .line 46
     iput v8, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->RENDERMODE_FILL_CROP:I
 
-    .line 47
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->RENDERMODE_CUSTOMIZE:I
 
-    .line 74
     new-instance v0, Landroid/filterfw/geometry/Quad;
 
     new-instance v1, Landroid/filterfw/geometry/Point;
@@ -124,7 +118,6 @@
 
     iput-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSourceQuad:Landroid/filterfw/geometry/Quad;
 
-    .line 80
     new-instance v0, Landroid/filterfw/geometry/Quad;
 
     new-instance v1, Landroid/filterfw/geometry/Point;
@@ -147,13 +140,10 @@
 
     iput-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
-    .line 90
     iput v7, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderMode:I
 
-    .line 91
     iput v5, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mAspectRatio:F
 
-    .line 99
     const-string v0, "SurfaceTextureTarget"
 
     invoke-static {v0, v8}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -162,7 +152,6 @@
 
     iput-boolean v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
-    .line 100
     return-void
 .end method
 
@@ -180,7 +169,6 @@
 
     const/high16 v5, 0x3f000000    # 0.5f
 
-    .line 267
     iget-boolean v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
     if-eqz v2, :cond_0
@@ -191,7 +179,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateTargetRect. Thread: "
+    const-string v4, "updateTargetRect. Thread: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -211,7 +199,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     :cond_0
     iget v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreenWidth:I
 
@@ -225,7 +212,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 269
     iget v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreenWidth:I
 
     int-to-float v2, v2
@@ -236,19 +222,16 @@
 
     div-float v1, v2, v3
 
-    .line 270
     .local v1, "screenAspectRatio":F
     iget v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mAspectRatio:F
 
     div-float v0, v1, v2
 
-    .line 271
     .local v0, "relativeAspectRatio":F
     iget-boolean v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
     if-eqz v2, :cond_1
 
-    .line 272
     const-string v2, "SurfaceTextureTarget"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -321,7 +304,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     :cond_1
     cmpl-float v2, v0, v6
 
@@ -333,24 +315,20 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 278
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     invoke-virtual {v2, v7, v7, v6, v6}, Landroid/filterfw/core/ShaderProgram;->setTargetRect(FFFF)V
 
-    .line 279
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     invoke-virtual {v2, v8}, Landroid/filterfw/core/ShaderProgram;->setClearsOutput(Z)V
 
-    .line 330
     .end local v0    # "relativeAspectRatio":F
     .end local v1    # "screenAspectRatio":F
     :cond_2
     :goto_0
     return-void
 
-    .line 281
     .restart local v0    # "relativeAspectRatio":F
     .restart local v1    # "screenAspectRatio":F
     :cond_3
@@ -358,7 +336,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 326
     :goto_1
     iget-boolean v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
@@ -388,7 +365,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     :cond_4
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
@@ -398,7 +374,6 @@
 
     goto :goto_0
 
-    .line 283
     :pswitch_0
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
@@ -406,41 +381,35 @@
 
     invoke-virtual {v2, v7, v7}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 284
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p1:Landroid/filterfw/geometry/Point;
 
     invoke-virtual {v2, v6, v7}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 285
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p2:Landroid/filterfw/geometry/Point;
 
     invoke-virtual {v2, v7, v6}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 286
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p3:Landroid/filterfw/geometry/Point;
 
     invoke-virtual {v2, v6, v6}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 287
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     invoke-virtual {v2, v8}, Landroid/filterfw/core/ShaderProgram;->setClearsOutput(Z)V
 
     goto :goto_1
 
-    .line 290
     :pswitch_1
     cmpl-float v2, v0, v6
 
     if-lez v2, :cond_5
 
-    .line 292
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p0:Landroid/filterfw/geometry/Point;
@@ -451,7 +420,6 @@
 
     invoke-virtual {v2, v3, v7}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 293
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p1:Landroid/filterfw/geometry/Point;
@@ -462,7 +430,6 @@
 
     invoke-virtual {v2, v3, v7}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 294
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p2:Landroid/filterfw/geometry/Point;
@@ -473,7 +440,6 @@
 
     invoke-virtual {v2, v3, v6}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 295
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p3:Landroid/filterfw/geometry/Point;
@@ -484,7 +450,6 @@
 
     invoke-virtual {v2, v3, v6}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 304
     :goto_2
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
@@ -492,7 +457,6 @@
 
     goto :goto_1
 
-    .line 299
     :cond_5
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
@@ -504,7 +468,6 @@
 
     invoke-virtual {v2, v7, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 300
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p1:Landroid/filterfw/geometry/Point;
@@ -515,7 +478,6 @@
 
     invoke-virtual {v2, v6, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 301
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p2:Landroid/filterfw/geometry/Point;
@@ -526,7 +488,6 @@
 
     invoke-virtual {v2, v7, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 302
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p3:Landroid/filterfw/geometry/Point;
@@ -539,13 +500,11 @@
 
     goto :goto_2
 
-    .line 307
     :pswitch_2
     cmpl-float v2, v0, v6
 
     if-lez v2, :cond_6
 
-    .line 309
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p0:Landroid/filterfw/geometry/Point;
@@ -556,7 +515,6 @@
 
     invoke-virtual {v2, v7, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 310
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p1:Landroid/filterfw/geometry/Point;
@@ -567,7 +525,6 @@
 
     invoke-virtual {v2, v6, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 311
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p2:Landroid/filterfw/geometry/Point;
@@ -578,7 +535,6 @@
 
     invoke-virtual {v2, v7, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 312
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p3:Landroid/filterfw/geometry/Point;
@@ -589,7 +545,6 @@
 
     invoke-virtual {v2, v6, v3}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 320
     :goto_3
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
@@ -597,7 +552,6 @@
 
     goto/16 :goto_1
 
-    .line 315
     :cond_6
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
@@ -609,7 +563,6 @@
 
     invoke-virtual {v2, v3, v7}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 316
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p1:Landroid/filterfw/geometry/Point;
@@ -620,7 +573,6 @@
 
     invoke-virtual {v2, v3, v7}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 317
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p2:Landroid/filterfw/geometry/Point;
@@ -631,7 +583,6 @@
 
     invoke-virtual {v2, v3, v6}, Landroid/filterfw/geometry/Point;->set(FF)V
 
-    .line 318
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mTargetQuad:Landroid/filterfw/geometry/Quad;
 
     iget-object v2, v2, Landroid/filterfw/geometry/Quad;->p3:Landroid/filterfw/geometry/Point;
@@ -644,7 +595,6 @@
 
     goto :goto_3
 
-    .line 323
     :pswitch_3
     iget-object v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
@@ -654,7 +604,6 @@
 
     goto/16 :goto_1
 
-    .line 281
     nop
 
     :pswitch_data_0
@@ -673,7 +622,6 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 176
     monitor-enter p0
 
     :try_start_0
@@ -681,7 +629,6 @@
 
     if-lez v0, :cond_0
 
-    .line 177
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
 
     move-result-object v0
@@ -690,20 +637,17 @@
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/GLEnvironment;->unregisterSurfaceId(I)V
 
-    .line 178
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceId:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 180
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 176
     :catchall_0
     move-exception v0
 
@@ -717,7 +661,6 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 186
     monitor-enter p0
 
     :try_start_0
@@ -731,13 +674,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     :cond_0
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-nez v0, :cond_2
 
-    .line 188
     const-string v0, "SurfaceTextureTarget"
 
     const-string v1, "SurfaceTexture is already null. Nothing to disconnect."
@@ -746,26 +687,22 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 201
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 191
     :cond_2
     const/4 v0, 0x0
 
     :try_start_1
     iput-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 197
     iget v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceId:I
 
     if-lez v0, :cond_1
 
-    .line 198
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
 
     move-result-object v0
@@ -774,7 +711,6 @@
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/GLEnvironment;->unregisterSurfaceId(I)V
 
-    .line 199
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceId:I
@@ -783,7 +719,6 @@
 
     goto :goto_0
 
-    .line 186
     :catchall_0
     move-exception v0
 
@@ -798,7 +733,6 @@
     .param p2, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 255
     iget-boolean v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
     if-eqz v0, :cond_0
@@ -829,11 +763,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     :cond_0
     invoke-virtual {p0}, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->updateRenderMode()V
 
-    .line 257
     return-void
 .end method
 
@@ -842,7 +774,6 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 155
     monitor-enter p0
 
     :try_start_0
@@ -850,14 +781,12 @@
 
     if-nez v0, :cond_0
 
-    .line 156
     const-string v0, "SurfaceTextureTarget"
 
     const-string v1, "SurfaceTexture is null!!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -886,7 +815,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 155
     :catchall_0
     move-exception v0
 
@@ -894,7 +822,6 @@
 
     throw v0
 
-    .line 159
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
@@ -913,12 +840,10 @@
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceId:I
 
-    .line 161
     iget v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceId:I
 
     if-gtz v0, :cond_1
 
-    .line 162
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -947,7 +872,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 164
     :cond_1
     monitor-exit p0
 
@@ -963,7 +887,6 @@
 
     const/4 v4, 0x0
 
-    .line 133
     iget-boolean v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
     if-eqz v1, :cond_0
@@ -994,7 +917,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     :cond_0
     invoke-static {p1}, Landroid/filterfw/core/ShaderProgram;->createIdentity(Landroid/filterfw/core/FilterContext;)Landroid/filterfw/core/ShaderProgram;
 
@@ -1002,22 +924,18 @@
 
     iput-object v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
-    .line 137
     iget-object v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     const/high16 v2, -0x40800000    # -1.0f
 
     invoke-virtual {v1, v4, v5, v5, v2}, Landroid/filterfw/core/ShaderProgram;->setSourceRect(FFFF)V
 
-    .line 138
     iget-object v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     invoke-virtual {v1, v4, v4, v4}, Landroid/filterfw/core/ShaderProgram;->setClearColor(FFF)V
 
-    .line 140
     invoke-virtual {p0}, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->updateRenderMode()V
 
-    .line 143
     new-instance v0, Landroid/filterfw/core/MutableFrameFormat;
 
     const/4 v1, 0x2
@@ -1026,20 +944,17 @@
 
     invoke-direct {v0, v1, v2}, Landroid/filterfw/core/MutableFrameFormat;-><init>(II)V
 
-    .line 145
     .local v0, "screenFormat":Landroid/filterfw/core/MutableFrameFormat;
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setBytesPerSample(I)V
 
-    .line 146
     iget v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreenWidth:I
 
     iget v2, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreenHeight:I
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/MutableFrameFormat;->setDimensions(II)V
 
-    .line 147
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
     move-result-object v1
@@ -1056,7 +971,6 @@
 
     iput-object v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreen:Landroid/filterfw/core/GLFrame;
 
-    .line 150
     return-void
 .end method
 
@@ -1067,7 +981,6 @@
     .prologue
     const/4 v9, 0x3
 
-    .line 206
     monitor-enter p0
 
     :try_start_0
@@ -1077,21 +990,18 @@
 
     if-gtz v6, :cond_1
 
-    .line 251
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 209
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
 
     move-result-object v2
 
-    .line 212
     .local v2, "glEnv":Landroid/filterfw/core/GLEnvironment;
     const-string v6, "frame"
 
@@ -1099,11 +1009,9 @@
 
     move-result-object v4
 
-    .line 213
     .local v4, "input":Landroid/filterfw/core/Frame;
     const/4 v0, 0x0
 
-    .line 215
     .local v0, "createdFrame":Z
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
@@ -1127,7 +1035,6 @@
 
     div-float v1, v6, v7
 
-    .line 217
     .local v1, "currentAspectRatio":F
     iget v6, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mAspectRatio:F
 
@@ -1135,12 +1042,10 @@
 
     if-eqz v6, :cond_3
 
-    .line 218
     iget-boolean v6, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
     if-eqz v6, :cond_2
 
-    .line 219
     const-string v6, "SurfaceTextureTarget"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1189,18 +1094,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :cond_2
     iput v1, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mAspectRatio:F
 
-    .line 223
     invoke-direct {p0}, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->updateTargetRect()V
 
-    .line 227
     :cond_3
     const/4 v3, 0x0
 
-    .line 228
     .local v3, "gpuFrame":Landroid/filterfw/core/Frame;
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
@@ -1210,11 +1111,9 @@
 
     move-result v5
 
-    .line 229
     .local v5, "target":I
     if-eq v5, v9, :cond_4
 
-    .line 230
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
     move-result-object v6
@@ -1225,43 +1124,35 @@
 
     move-result-object v3
 
-    .line 232
     const/4 v0, 0x1
 
-    .line 238
     :goto_1
     iget v6, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mSurfaceId:I
 
     invoke-virtual {v2, v6}, Landroid/filterfw/core/GLEnvironment;->activateSurfaceWithId(I)V
 
-    .line 241
     iget-object v6, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mProgram:Landroid/filterfw/core/ShaderProgram;
 
     iget-object v7, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreen:Landroid/filterfw/core/GLFrame;
 
     invoke-virtual {v6, v3, v7}, Landroid/filterfw/core/ShaderProgram;->process(Landroid/filterfw/core/Frame;Landroid/filterfw/core/Frame;)V
 
-    .line 243
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->getTimestamp()J
 
     move-result-wide v6
 
     invoke-virtual {v2, v6, v7}, Landroid/filterfw/core/GLEnvironment;->setSurfaceTimestamp(J)V
 
-    .line 246
     invoke-virtual {v2}, Landroid/filterfw/core/GLEnvironment;->swapBuffers()V
 
-    .line 248
     if-eqz v0, :cond_0
 
-    .line 249
     invoke-virtual {v3}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_0
 
-    .line 206
     .end local v0    # "createdFrame":Z
     .end local v1    # "currentAspectRatio":F
     .end local v2    # "glEnv":Landroid/filterfw/core/GLEnvironment;
@@ -1275,7 +1166,6 @@
 
     throw v6
 
-    .line 234
     .restart local v0    # "createdFrame":Z
     .restart local v1    # "currentAspectRatio":F
     .restart local v2    # "glEnv":Landroid/filterfw/core/GLEnvironment;
@@ -1292,7 +1182,6 @@
     .locals 2
 
     .prologue
-    .line 105
     monitor-enter p0
 
     :try_start_0
@@ -1300,7 +1189,6 @@
 
     if-nez v0, :cond_0
 
-    .line 106
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Null SurfaceTexture passed to SurfaceTextureTarget"
@@ -1311,7 +1199,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 105
     :catchall_0
     move-exception v0
 
@@ -1319,7 +1206,6 @@
 
     throw v0
 
-    .line 110
     :cond_0
     :try_start_1
     const-string v0, "frame"
@@ -1334,7 +1220,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 111
     monitor-exit p0
 
     return-void
@@ -1345,17 +1230,14 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 261
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreen:Landroid/filterfw/core/GLFrame;
 
     if-eqz v0, :cond_0
 
-    .line 262
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mScreen:Landroid/filterfw/core/GLFrame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/GLFrame;->release()Landroid/filterfw/core/Frame;
 
-    .line 264
     :cond_0
     return-void
 .end method
@@ -1364,7 +1246,6 @@
     .locals 3
 
     .prologue
-    .line 114
     iget-boolean v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mLogVerbose:Z
 
     if-eqz v0, :cond_0
@@ -1375,7 +1256,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateRenderMode. Thread: "
+    const-string v2, "updateRenderMode. Thread: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1395,16 +1276,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     :cond_0
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderModeString:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 116
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderModeString:Ljava/lang/String;
 
-    const-string/jumbo v1, "stretch"
+    const-string v1, "stretch"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1412,20 +1291,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 117
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderMode:I
 
-    .line 128
     :cond_1
     :goto_0
     invoke-direct {p0}, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->updateTargetRect()V
 
-    .line 129
     return-void
 
-    .line 118
     :cond_2
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderModeString:Ljava/lang/String;
 
@@ -1437,14 +1312,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 119
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderMode:I
 
     goto :goto_0
 
-    .line 120
     :cond_3
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderModeString:Ljava/lang/String;
 
@@ -1456,14 +1329,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 121
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderMode:I
 
     goto :goto_0
 
-    .line 122
     :cond_4
     iget-object v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderModeString:Ljava/lang/String;
 
@@ -1475,14 +1346,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 123
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/filterpacks/videosrc/SurfaceTextureTarget;->mRenderMode:I
 
     goto :goto_0
 
-    .line 125
     :cond_5
     new-instance v0, Ljava/lang/RuntimeException;
 

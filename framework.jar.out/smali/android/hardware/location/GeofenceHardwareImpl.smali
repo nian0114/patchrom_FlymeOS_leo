@@ -121,7 +121,6 @@
     .locals 2
 
     .prologue
-    .line 43
     const-string v0, "GeofenceHardwareImpl"
 
     const/4 v1, 0x3
@@ -142,68 +141,56 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
-    .line 50
     new-array v0, v1, [Ljava/util/ArrayList;
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacks:[Ljava/util/ArrayList;
 
-    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mReapers:Ljava/util/ArrayList;
 
-    .line 57
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
-    .line 533
     new-instance v0, Landroid/hardware/location/GeofenceHardwareImpl$1;
 
     invoke-direct {v0, p0}, Landroid/hardware/location/GeofenceHardwareImpl$1;-><init>(Landroid/hardware/location/GeofenceHardwareImpl;)V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofenceHandler:Landroid/os/Handler;
 
-    .line 665
     new-instance v0, Landroid/hardware/location/GeofenceHardwareImpl$2;
 
     invoke-direct {v0, p0}, Landroid/hardware/location/GeofenceHardwareImpl$2;-><init>(Landroid/hardware/location/GeofenceHardwareImpl;)V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
-    .line 719
     new-instance v0, Landroid/hardware/location/GeofenceHardwareImpl$3;
 
     invoke-direct {v0, p0}, Landroid/hardware/location/GeofenceHardwareImpl$3;-><init>(Landroid/hardware/location/GeofenceHardwareImpl;)V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mReaperHandler:Landroid/os/Handler;
 
-    .line 100
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mContext:Landroid/content/Context;
 
-    .line 102
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->setMonitorAvailability(II)V
 
-    .line 104
     const/4 v0, 0x1
 
     invoke-direct {p0, v0, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->setMonitorAvailability(II)V
 
-    .line 108
     return-void
 .end method
 
@@ -212,7 +199,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
     return-object v0
@@ -223,7 +209,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Landroid/hardware/location/GeofenceHardwareImpl;->releaseWakeLock()V
 
     return-void
@@ -234,7 +219,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacks:[Ljava/util/ArrayList;
 
     return-object v0
@@ -245,7 +229,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofenceHandler:Landroid/os/Handler;
 
     return-object v0
@@ -256,7 +239,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
     return-object v0
@@ -267,7 +249,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mReaperHandler:Landroid/os/Handler;
 
     return-object v0
@@ -278,7 +259,6 @@
     .param p0, "x0"    # Landroid/hardware/location/GeofenceHardwareImpl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mReapers:Ljava/util/ArrayList;
 
     return-object v0
@@ -288,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 41
     sget-boolean v0, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     return v0
@@ -298,15 +277,13 @@
     .locals 3
 
     .prologue
-    .line 111
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v1, :cond_0
 
-    .line 112
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -314,7 +291,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 114
     .local v0, "powerManager":Landroid/os/PowerManager;
     const/4 v1, 0x1
 
@@ -326,14 +302,12 @@
 
     iput-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 116
     .end local v0    # "powerManager":Landroid/os/PowerManager;
     :cond_0
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 117
     return-void
 .end method
 
@@ -342,7 +316,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 93
     const-class v1, Landroid/hardware/location/GeofenceHardwareImpl;
 
     monitor-enter v1
@@ -352,14 +325,12 @@
 
     if-nez v0, :cond_0
 
-    .line 94
     new-instance v0, Landroid/hardware/location/GeofenceHardwareImpl;
 
     invoke-direct {v0, p0}, Landroid/hardware/location/GeofenceHardwareImpl;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/hardware/location/GeofenceHardwareImpl;->sInstance:Landroid/hardware/location/GeofenceHardwareImpl;
 
-    .line 96
     :cond_0
     sget-object v0, Landroid/hardware/location/GeofenceHardwareImpl;->sInstance:Landroid/hardware/location/GeofenceHardwareImpl;
     :try_end_0
@@ -369,7 +340,6 @@
 
     return-object v0
 
-    .line 93
     :catchall_0
     move-exception v0
 
@@ -382,7 +352,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -395,7 +364,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 121
     :cond_0
     return-void
 .end method
@@ -407,27 +375,21 @@
     .param p3, "operationStatus"    # I
 
     .prologue
-    .line 493
     invoke-direct {p0}, Landroid/hardware/location/GeofenceHardwareImpl;->acquireWakeLock()V
 
-    .line 494
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofenceHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 495
     .local v0, "message":Landroid/os/Message;
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 496
     iput p3, v0, Landroid/os/Message;->arg2:I
 
-    .line 497
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 498
     return-void
 .end method
 
@@ -437,24 +399,19 @@
     .param p2, "val"    # I
 
     .prologue
-    .line 784
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
     monitor-enter v1
 
-    .line 785
     :try_start_0
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
     aput p2, v0, p1
 
-    .line 786
     monitor-exit v1
 
-    .line 787
     return-void
 
-    .line 786
     :catchall_0
     move-exception v0
 
@@ -471,7 +428,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 144
     :try_start_0
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
@@ -485,17 +441,14 @@
 
     move-result v1
 
-    .line 150
     .local v1, "fusedSupported":Z
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 151
     const/4 v3, 0x1
 
     invoke-direct {p0, v3, v2}, Landroid/hardware/location/GeofenceHardwareImpl;->setMonitorAvailability(II)V
 
-    .line 155
     :cond_0
     return-void
 
@@ -503,14 +456,11 @@
     :cond_1
     move v1, v2
 
-    .line 144
     goto :goto_0
 
-    .line 145
     :catch_0
     move-exception v0
 
-    .line 146
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "GeofenceHardwareImpl"
 
@@ -518,7 +468,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     const/4 v1, 0x0
 
     .restart local v1    # "fusedSupported":Z
@@ -531,7 +480,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 127
     :try_start_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
@@ -541,24 +489,19 @@
 
     move-result v1
 
-    .line 133
     .local v1, "gpsSupported":Z
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 136
     invoke-direct {p0, v4, v4}, Landroid/hardware/location/GeofenceHardwareImpl;->setMonitorAvailability(II)V
 
-    .line 139
     :cond_0
     return-void
 
-    .line 128
     .end local v1    # "gpsSupported":Z
     :catch_0
     move-exception v0
 
-    .line 129
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -566,7 +509,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     const/4 v1, 0x0
 
     .restart local v1    # "gpsSupported":Z
@@ -582,18 +524,15 @@
     .param p3, "callback"    # Landroid/hardware/location/IGeofenceHardwareCallback;
 
     .prologue
-    .line 219
     invoke-virtual/range {p2 .. p2}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getId()I
 
     move-result v15
 
-    .line 223
     .local v15, "geofenceId":I
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 224
     const-string v2, "addCircularFence: monitoringType=%d, %s"
 
     const/4 v3, 0x2
@@ -616,7 +555,6 @@
 
     move-result-object v17
 
-    .line 228
     .local v17, "message":Ljava/lang/String;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -624,7 +562,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     .end local v17    # "message":Ljava/lang/String;
     :cond_0
     move-object/from16 v0, p0
@@ -633,7 +570,6 @@
 
     monitor-enter v3
 
-    .line 237
     :try_start_0
     move-object/from16 v0, p0
 
@@ -643,23 +579,18 @@
 
     invoke-virtual {v2, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 238
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 240
     packed-switch p1, :pswitch_data_0
 
-    .line 272
     const/16 v18, 0x0
 
-    .line 274
     .local v18, "result":Z
     :goto_0
     if-eqz v18, :cond_4
 
-    .line 275
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/hardware/location/GeofenceHardwareImpl;->mReaperHandler:Landroid/os/Handler;
@@ -672,7 +603,6 @@
 
     move-result-object v16
 
-    .line 276
     .local v16, "m":Landroid/os/Message;
     move/from16 v0, p1
 
@@ -680,7 +610,6 @@
 
     iput v0, v1, Landroid/os/Message;->arg1:I
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/hardware/location/GeofenceHardwareImpl;->mReaperHandler:Landroid/os/Handler;
@@ -689,7 +618,6 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 284
     .end local v16    # "m":Landroid/os/Message;
     :goto_1
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
@@ -720,13 +648,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     .end local v18    # "result":Z
     :cond_1
     :goto_2
     return v18
 
-    .line 238
     :catchall_0
     move-exception v2
 
@@ -737,7 +663,6 @@
 
     throw v2
 
-    .line 242
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -749,7 +674,6 @@
 
     goto :goto_2
 
-    .line 244
     :cond_2
     :try_start_2
     move-object/from16 v0, p0
@@ -797,12 +721,10 @@
     .restart local v18    # "result":Z
     goto :goto_0
 
-    .line 253
     .end local v18    # "result":Z
     :catch_0
     move-exception v14
 
-    .line 254
     .local v14, "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -810,14 +732,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     const/16 v18, 0x0
 
-    .line 257
     .restart local v18    # "result":Z
     goto :goto_0
 
-    .line 259
     .end local v14    # "e":Landroid/os/RemoteException;
     .end local v18    # "result":Z
     :pswitch_1
@@ -827,12 +746,10 @@
 
     if-nez v2, :cond_3
 
-    .line 260
     const/16 v18, 0x0
 
     goto :goto_2
 
-    .line 263
     :cond_3
     :try_start_3
     move-object/from16 v0, p0
@@ -851,18 +768,15 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 265
     const/16 v18, 0x1
 
     .restart local v18    # "result":Z
     goto/16 :goto_0
 
-    .line 266
     .end local v18    # "result":Z
     :catch_1
     move-exception v14
 
-    .line 267
     .restart local v14    # "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -870,14 +784,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     const/16 v18, 0x0
 
-    .line 270
     .restart local v18    # "result":Z
     goto/16 :goto_0
 
-    .line 279
     .end local v14    # "e":Landroid/os/RemoteException;
     :cond_4
     move-object/from16 v0, p0
@@ -886,7 +797,6 @@
 
     monitor-enter v3
 
-    .line 280
     :try_start_4
     move-object/from16 v0, p0
 
@@ -894,7 +804,6 @@
 
     invoke-virtual {v2, v15}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 281
     monitor-exit v3
 
     goto/16 :goto_1
@@ -908,7 +817,6 @@
 
     throw v2
 
-    .line 240
     nop
 
     :pswitch_data_0
@@ -924,7 +832,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 882
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.ACCESS_FINE_LOCATION"
@@ -935,14 +842,11 @@
 
     if-nez v0, :cond_0
 
-    .line 884
     const/4 v0, 0x3
 
-    .line 889
     :goto_0
     return v0
 
-    .line 885
     :cond_0
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mContext:Landroid/content/Context;
 
@@ -954,12 +858,10 @@
 
     if-nez v0, :cond_1
 
-    .line 887
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 889
     :cond_1
     const/4 v0, 0x1
 
@@ -973,16 +875,13 @@
     .prologue
     const/4 v0, 0x3
 
-    .line 791
     packed-switch p1, :pswitch_data_0
 
-    .line 797
     const/4 v0, 0x1
 
     :pswitch_0
     return v0
 
-    .line 791
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1000,12 +899,10 @@
 
     const/4 v4, 0x0
 
-    .line 184
     iget-object v5, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
     monitor-enter v5
 
-    .line 185
     :try_start_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
@@ -1017,7 +914,6 @@
 
     move v1, v3
 
-    .line 187
     .local v1, "gpsSupported":Z
     :goto_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
@@ -1030,25 +926,20 @@
 
     move v0, v3
 
-    .line 189
     .local v0, "fusedSupported":Z
     :goto_1
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 191
     if-eqz v1, :cond_3
 
-    .line 192
     if-eqz v0, :cond_2
 
-    .line 193
     new-array v2, v7, [I
 
     fill-array-data v2, :array_0
 
-    .line 202
     :goto_2
     return-object v2
 
@@ -1057,17 +948,14 @@
     :cond_0
     move v1, v4
 
-    .line 185
     goto :goto_0
 
     .restart local v1    # "gpsSupported":Z
     :cond_1
     move v0, v4
 
-    .line 187
     goto :goto_1
 
-    .line 189
     .end local v1    # "gpsSupported":Z
     :catchall_0
     move-exception v2
@@ -1079,7 +967,6 @@
 
     throw v2
 
-    .line 197
     .restart local v0    # "fusedSupported":Z
     .restart local v1    # "gpsSupported":Z
     :cond_2
@@ -1089,24 +976,20 @@
 
     goto :goto_2
 
-    .line 199
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 200
     new-array v2, v3, [I
 
     aput v3, v2, v4
 
     goto :goto_2
 
-    .line 202
     :cond_4
     new-array v2, v4, [I
 
     goto :goto_2
 
-    .line 193
     nop
 
     :array_0
@@ -1121,12 +1004,10 @@
     .param p1, "monitoringType"    # I
 
     .prologue
-    .line 207
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
     monitor-enter v1
 
-    .line 208
     :try_start_0
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
 
@@ -1136,7 +1017,6 @@
 
     if-gez p1, :cond_1
 
-    .line 209
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1146,7 +1026,6 @@
 
     throw v0
 
-    .line 212
     :catchall_0
     move-exception v0
 
@@ -1156,7 +1035,6 @@
 
     throw v0
 
-    .line 211
     :cond_1
     :try_start_1
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mSupportedMonitorTypes:[I
@@ -1178,7 +1056,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 331
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -1205,13 +1082,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     :cond_0
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 334
     :try_start_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
@@ -1221,7 +1096,6 @@
 
     if-nez v2, :cond_1
 
-    .line 335
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1252,7 +1126,6 @@
 
     throw v2
 
-    .line 337
     :catchall_0
     move-exception v2
 
@@ -1268,13 +1141,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 338
     packed-switch p2, :pswitch_data_0
 
-    .line 361
     const/4 v1, 0x0
 
-    .line 363
     .local v1, "result":Z
     :goto_0
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
@@ -1287,7 +1157,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "pauseGeofence: Result is: "
+    const-string v4, "pauseGeofence: Result is: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1303,18 +1173,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     .end local v1    # "result":Z
     :cond_2
     return v1
 
-    .line 340
     :pswitch_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
     if-eqz v2, :cond_2
 
-    .line 342
     :try_start_2
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
@@ -1327,12 +1194,10 @@
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 343
     .end local v1    # "result":Z
     :catch_0
     move-exception v0
 
-    .line 344
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -1340,14 +1205,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     const/4 v1, 0x0
 
-    .line 347
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 349
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "result":Z
     :pswitch_1
@@ -1355,7 +1217,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 353
     :try_start_3
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
@@ -1363,18 +1224,15 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 354
     const/4 v1, 0x1
 
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 355
     .end local v1    # "result":Z
     :catch_1
     move-exception v0
 
-    .line 356
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -1382,14 +1240,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     const/4 v1, 0x0
 
-    .line 359
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 338
     nop
 
     :pswitch_data_0
@@ -1407,39 +1262,32 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 409
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mReaperHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v3, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 411
     .local v1, "reaperMessage":Landroid/os/Message;
     iput p1, v1, Landroid/os/Message;->arg1:I
 
-    .line 412
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mReaperHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 414
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v3, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 415
     .local v0, "m":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 416
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 417
     const/4 v2, 0x1
 
     return v2
@@ -1453,7 +1301,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 291
     sget-boolean v3, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v3, :cond_0
@@ -1480,17 +1327,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     :cond_0
     const/4 v1, 0x0
 
-    .line 294
     .local v1, "result":Z
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 295
     :try_start_0
     iget-object v4, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
@@ -1500,7 +1344,6 @@
 
     if-nez v4, :cond_1
 
-    .line 296
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1531,7 +1374,6 @@
 
     throw v2
 
-    .line 298
     :catchall_0
     move-exception v2
 
@@ -1547,13 +1389,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 299
     packed-switch p2, :pswitch_data_0
 
-    .line 322
     const/4 v1, 0x0
 
-    .line 324
     :goto_0
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
@@ -1565,7 +1404,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeGeofence: Result is: "
+    const-string v4, "removeGeofence: Result is: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1584,17 +1423,14 @@
     :cond_2
     move v2, v1
 
-    .line 325
     :cond_3
     return v2
 
-    .line 301
     :pswitch_0
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
     if-eqz v3, :cond_3
 
-    .line 303
     :try_start_2
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
@@ -1606,11 +1442,9 @@
 
     goto :goto_0
 
-    .line 304
     :catch_0
     move-exception v0
 
-    .line 305
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -1618,20 +1452,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     const/4 v1, 0x0
 
-    .line 308
     goto :goto_0
 
-    .line 310
     .end local v0    # "e":Landroid/os/RemoteException;
     :pswitch_1
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
     if-eqz v3, :cond_3
 
-    .line 314
     :try_start_3
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
@@ -1647,16 +1477,13 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 315
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 316
     :catch_1
     move-exception v0
 
-    .line 317
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -1664,13 +1491,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     const/4 v1, 0x0
 
-    .line 320
     goto :goto_0
 
-    .line 299
     nop
 
     :pswitch_data_0
@@ -1686,7 +1510,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 504
     sget-boolean v0, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1723,13 +1546,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     :cond_0
     const/4 v0, 0x2
 
     invoke-direct {p0, v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceOperationStatus(III)V
 
-    .line 506
     return-void
 .end method
 
@@ -1741,18 +1562,14 @@
     .param p4, "source"    # I
 
     .prologue
-    .line 473
     invoke-direct {p0, p1, p2}, Landroid/hardware/location/GeofenceHardwareImpl;->setMonitorAvailability(II)V
 
-    .line 474
     invoke-direct {p0}, Landroid/hardware/location/GeofenceHardwareImpl;->acquireWakeLock()V
 
-    .line 475
     new-instance v0, Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
     invoke-direct {v0, p1, p2, p4, p3}, Landroid/hardware/location/GeofenceHardwareMonitorEvent;-><init>(IIILandroid/location/Location;)V
 
-    .line 480
     .local v0, "event":Landroid/hardware/location/GeofenceHardwareMonitorEvent;
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
@@ -1762,11 +1579,9 @@
 
     move-result-object v1
 
-    .line 481
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 482
     return-void
 .end method
 
@@ -1776,7 +1591,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 520
     sget-boolean v0, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1813,13 +1627,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 521
     :cond_0
     const/4 v0, 0x4
 
     invoke-direct {p0, v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceOperationStatus(III)V
 
-    .line 522
     return-void
 .end method
 
@@ -1829,7 +1641,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 512
     sget-boolean v0, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1866,13 +1677,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     :cond_0
     const/4 v0, 0x3
 
     invoke-direct {p0, v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceOperationStatus(III)V
 
-    .line 514
     return-void
 .end method
 
@@ -1882,7 +1691,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 528
     sget-boolean v0, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1919,13 +1727,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 529
     :cond_0
     const/4 v0, 0x5
 
     invoke-direct {p0, v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceOperationStatus(III)V
 
-    .line 530
     return-void
 .end method
 
@@ -1939,10 +1745,8 @@
     .param p7, "sourcesUsed"    # I
 
     .prologue
-    .line 438
     if-nez p2, :cond_0
 
-    .line 439
     const-string v3, "GeofenceHardwareImpl"
 
     const-string v4, "Invalid Geofence Transition: location=%p"
@@ -1961,17 +1765,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 463
     :goto_0
     return-void
 
-    .line 442
     :cond_0
     sget-boolean v3, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 443
     const-string v3, "GeofenceHardwareImpl"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2040,7 +1841,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     :cond_1
     new-instance v2, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;
 
@@ -2060,11 +1860,9 @@
 
     invoke-direct/range {v2 .. v10}, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;-><init>(Landroid/hardware/location/GeofenceHardwareImpl;IIJLandroid/location/Location;II)V
 
-    .line 457
     .local v2, "geofenceTransition":Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;
     invoke-direct {p0}, Landroid/hardware/location/GeofenceHardwareImpl;->acquireWakeLock()V
 
-    .line 459
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofenceHandler:Landroid/os/Handler;
 
     const/4 v4, 0x1
@@ -2073,7 +1871,6 @@
 
     move-result-object v11
 
-    .line 462
     .local v11, "message":Landroid/os/Message;
     invoke-virtual {v11}, Landroid/os/Message;->sendToTarget()V
 
@@ -2089,7 +1886,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 371
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -2116,13 +1912,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 373
     :cond_0
     iget-object v3, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 374
     :try_start_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGeofences:Landroid/util/SparseArray;
 
@@ -2132,7 +1926,6 @@
 
     if-nez v2, :cond_1
 
-    .line 375
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2163,7 +1956,6 @@
 
     throw v2
 
-    .line 377
     :catchall_0
     move-exception v2
 
@@ -2179,13 +1971,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 378
     packed-switch p2, :pswitch_data_0
 
-    .line 401
     const/4 v1, 0x0
 
-    .line 403
     .local v1, "result":Z
     :goto_0
     sget-boolean v2, Landroid/hardware/location/GeofenceHardwareImpl;->DEBUG:Z
@@ -2198,7 +1987,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "resumeGeofence: Result is: "
+    const-string v4, "resumeGeofence: Result is: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2214,18 +2003,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 404
     .end local v1    # "result":Z
     :cond_2
     return v1
 
-    .line 380
     :pswitch_0
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
     if-eqz v2, :cond_2
 
-    .line 382
     :try_start_2
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
@@ -2238,12 +2024,10 @@
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 383
     .end local v1    # "result":Z
     :catch_0
     move-exception v0
 
-    .line 384
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -2251,14 +2035,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     const/4 v1, 0x0
 
-    .line 387
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 389
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "result":Z
     :pswitch_1
@@ -2266,7 +2047,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 393
     :try_start_3
     iget-object v2, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
@@ -2274,18 +2054,15 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 394
     const/4 v1, 0x1
 
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 395
     .end local v1    # "result":Z
     :catch_1
     move-exception v0
 
-    .line 396
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v2, "GeofenceHardwareImpl"
 
@@ -2293,14 +2070,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     const/4 v1, 0x0
 
-    .line 399
     .restart local v1    # "result":Z
     goto :goto_0
 
-    .line 378
     nop
 
     :pswitch_data_0
@@ -2315,31 +2089,24 @@
     .param p1, "service"    # Landroid/location/IFusedGeofenceHardware;
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
     if-nez v0, :cond_0
 
-    .line 171
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
-    .line 172
     invoke-direct {p0}, Landroid/hardware/location/GeofenceHardwareImpl;->updateFusedHardwareAvailability()V
 
-    .line 179
     :goto_0
     return-void
 
-    .line 173
     :cond_0
     if-nez p1, :cond_1
 
-    .line 174
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mFusedService:Landroid/location/IFusedGeofenceHardware;
 
-    .line 175
     const-string v0, "GeofenceHardwareImpl"
 
     const-string v1, "Fused Geofence Hardware service seems to have crashed"
@@ -2348,7 +2115,6 @@
 
     goto :goto_0
 
-    .line 177
     :cond_1
     const-string v0, "GeofenceHardwareImpl"
 
@@ -2364,31 +2130,24 @@
     .param p1, "service"    # Landroid/location/IGpsGeofenceHardware;
 
     .prologue
-    .line 158
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
     if-nez v0, :cond_0
 
-    .line 159
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
-    .line 160
     invoke-direct {p0}, Landroid/hardware/location/GeofenceHardwareImpl;->updateGpsHardwareAvailability()V
 
-    .line 167
     :goto_0
     return-void
 
-    .line 161
     :cond_0
     if-nez p1, :cond_1
 
-    .line 162
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mGpsService:Landroid/location/IGpsGeofenceHardware;
 
-    .line 163
     const-string v0, "GeofenceHardwareImpl"
 
     const-string v1, "GPS Geofence Hardware service seems to have crashed"
@@ -2397,7 +2156,6 @@
 
     goto :goto_0
 
-    .line 165
     :cond_1
     const-string v0, "GeofenceHardwareImpl"
 
@@ -2414,7 +2172,6 @@
     .param p2, "callback"    # Landroid/hardware/location/IGeofenceHardwareMonitorCallback;
 
     .prologue
-    .line 422
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -2423,16 +2180,13 @@
 
     move-result-object v0
 
-    .line 423
     .local v0, "m":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 424
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardwareImpl;->mCallbacksHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 425
     const/4 v1, 0x1
 
     return v1

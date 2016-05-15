@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 166
     iput-object p1, p0, Landroid/widget/YearPickerView$1;->this$0:Landroid/widget/YearPickerView;
 
     iput p2, p0, Landroid/widget/YearPickerView$1;->val$position:I
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/widget/YearPickerView$1;->this$0:Landroid/widget/YearPickerView;
 
     iget v1, p0, Landroid/widget/YearPickerView$1;->val$position:I
@@ -57,11 +55,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/YearPickerView;->setSelectionFromTop(II)V
 
-    .line 171
     iget-object v0, p0, Landroid/widget/YearPickerView$1;->this$0:Landroid/widget/YearPickerView;
 
     invoke-virtual {v0}, Landroid/widget/YearPickerView;->requestLayout()V
 
-    .line 172
     return-void
 .end method

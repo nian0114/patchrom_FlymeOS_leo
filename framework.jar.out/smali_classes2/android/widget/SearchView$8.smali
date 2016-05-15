@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1190
     iput-object p1, p0, Landroid/widget/SearchView$8;->this$0:Landroid/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +42,11 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1196
     iget-object v0, p0, Landroid/widget/SearchView$8;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->onSubmitQuery()V
     invoke-static {v0}, Landroid/widget/SearchView;->access$900(Landroid/widget/SearchView;)V
 
-    .line 1197
     const/4 v0, 0x1
 
     return v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,17 +37,14 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 84
     const/4 v2, 0x0
 
-    .line 87
     .local v2, "controller":Ljava/lang/Object;
     :try_start_0
     invoke-static {p0}, Landroid/net/wimax/WimaxHelper;->getWimaxClassLoader(Landroid/content/Context;)Ldalvik/system/DexClassLoader;
 
     move-result-object v7
 
-    .line 88
     .local v7, "wimaxClassLoader":Ldalvik/system/DexClassLoader;
     sget-object v8, Landroid/net/wimax/WimaxHelper;->sWimaxManagerClassname:Ljava/lang/String;
 
@@ -60,29 +56,24 @@
 
     if-eqz v8, :cond_1
 
-    .line 90
     const-string v8, "WiMax"
 
     invoke-static {v8}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 91
     .local v1, "b":Landroid/os/IBinder;
     if-eqz v1, :cond_0
 
-    .line 92
     const-string v8, "com.htc.net.wimax.IWimaxController$Stub"
 
     invoke-virtual {v7, v8}, Ldalvik/system/DexClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 93
     .local v5, "klass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v5, :cond_0
 
-    .line 94
     const-string v8, "asInterface"
 
     const/4 v9, 0x1
@@ -99,7 +90,6 @@
 
     move-result-object v0
 
-    .line 95
     .local v0, "asInterface":Ljava/lang/reflect/Method;
     const/4 v8, 0x0
 
@@ -115,21 +105,17 @@
 
     move-result-object v6
 
-    .line 96
     .local v6, "wc":Ljava/lang/Object;
     if-eqz v6, :cond_0
 
-    .line 97
     const-string v8, "com.htc.net.wimax.WimaxController"
 
     invoke-virtual {v7, v8}, Ldalvik/system/DexClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 98
     if-eqz v5, :cond_0
 
-    .line 99
     invoke-virtual {v5}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v8
@@ -138,7 +124,6 @@
 
     aget-object v3, v8, v9
 
-    .line 100
     .local v3, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     const/4 v8, 0x2
 
@@ -156,7 +141,6 @@
 
     move-result-object v2
 
-    .line 120
     .end local v0    # "asInterface":Ljava/lang/reflect/Method;
     .end local v1    # "b":Landroid/os/IBinder;
     .end local v2    # "controller":Ljava/lang/Object;
@@ -168,7 +152,6 @@
     :goto_0
     return-object v2
 
-    .line 105
     .restart local v2    # "controller":Ljava/lang/Object;
     .restart local v7    # "wimaxClassLoader":Ldalvik/system/DexClassLoader;
     :cond_1
@@ -182,18 +165,15 @@
 
     if-eqz v8, :cond_0
 
-    .line 110
     const-string v8, "android.net.fourG.wimax.Wimax4GManager"
 
     invoke-virtual {v7, v8}, Ldalvik/system/DexClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 111
     .restart local v5    # "klass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v5, :cond_0
 
-    .line 112
     invoke-virtual {v5}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v8
@@ -202,7 +182,6 @@
 
     aget-object v3, v8, v9
 
-    .line 113
     .restart local v3    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     const/4 v8, 0x0
 
@@ -216,14 +195,12 @@
 
     goto :goto_0
 
-    .line 116
     .end local v3    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     .end local v5    # "klass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v7    # "wimaxClassLoader":Ldalvik/system/DexClassLoader;
     :catch_0
     move-exception v4
 
-    .line 117
     .local v4, "e":Ljava/lang/Exception;
     const-string v8, "WimaxHelper"
 
@@ -239,19 +216,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 51
     invoke-static {p0}, Landroid/net/wimax/WimaxHelper;->isWimaxSupported(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 52
     sget-object v2, Landroid/net/wimax/WimaxHelper;->sWimaxClassLoader:Ldalvik/system/DexClassLoader;
 
     if-nez v2, :cond_1
 
-    .line 53
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -264,7 +238,6 @@
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sWimaxManagerClassname:Ljava/lang/String;
 
-    .line 60
     sget-object v2, Landroid/net/wimax/WimaxHelper;->sWimaxManagerClassname:Ljava/lang/String;
 
     const-string v3, "com.htc.net.wimax.WimaxController"
@@ -275,22 +248,18 @@
 
     if-eqz v2, :cond_2
 
-    .line 61
     const-string v2, "isWimaxEnabled"
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sIsWimaxEnabledMethodname:Ljava/lang/String;
 
-    .line 62
-    const-string/jumbo v2, "setWimaxEnabled"
+    const-string v2, "setWimaxEnabled"
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sSetWimaxEnabledMethodname:Ljava/lang/String;
 
-    .line 63
     const-string v2, "getWimaxState"
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sGetWimaxStateMethodname:Ljava/lang/String;
 
-    .line 70
     :cond_0
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -303,7 +272,6 @@
 
     move-result-object v0
 
-    .line 72
     .local v0, "wimaxJarLocation":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -315,7 +283,6 @@
 
     move-result-object v1
 
-    .line 74
     .local v1, "wimaxLibLocation":Ljava/lang/String;
     new-instance v2, Ldalvik/system/DexClassLoader;
 
@@ -339,17 +306,14 @@
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sWimaxClassLoader:Ldalvik/system/DexClassLoader;
 
-    .line 78
     .end local v0    # "wimaxJarLocation":Ljava/lang/String;
     .end local v1    # "wimaxLibLocation":Ljava/lang/String;
     :cond_1
     sget-object v2, Landroid/net/wimax/WimaxHelper;->sWimaxClassLoader:Ldalvik/system/DexClassLoader;
 
-    .line 80
     :goto_1
     return-object v2
 
-    .line 64
     :cond_2
     sget-object v2, Landroid/net/wimax/WimaxHelper;->sWimaxManagerClassname:Ljava/lang/String;
 
@@ -361,24 +325,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 65
     const-string v2, "is4GEnabled"
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sIsWimaxEnabledMethodname:Ljava/lang/String;
 
-    .line 66
-    const-string/jumbo v2, "set4GEnabled"
+    const-string v2, "set4GEnabled"
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sSetWimaxEnabledMethodname:Ljava/lang/String;
 
-    .line 67
     const-string v2, "get4GState"
 
     sput-object v2, Landroid/net/wimax/WimaxHelper;->sGetWimaxStateMethodname:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 80
     :cond_3
     const/4 v2, 0x0
 
@@ -390,10 +350,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 178
     const/4 v2, 0x0
 
-    .line 180
     .local v2, "wimaxInfo":Ljava/lang/Object;
     :try_start_0
     const-string v4, "WiMax"
@@ -402,7 +360,6 @@
 
     move-result-object v3
 
-    .line 181
     .local v3, "wimaxService":Ljava/lang/Object;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -418,7 +375,6 @@
 
     move-result-object v1
 
-    .line 182
     .local v1, "getConnectionInfo":Ljava/lang/reflect/Method;
     const/4 v4, 0x0
 
@@ -430,19 +386,16 @@
 
     move-result-object v2
 
-    .line 186
     .end local v1    # "getConnectionInfo":Ljava/lang/reflect/Method;
     .end local v2    # "wimaxInfo":Ljava/lang/Object;
     .end local v3    # "wimaxService":Ljava/lang/Object;
     :goto_0
     return-object v2
 
-    .line 183
     .restart local v2    # "wimaxInfo":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 184
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "WimaxHelper"
 
@@ -458,10 +411,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 151
     const/4 v2, 0x0
 
-    .line 153
     .local v2, "ret":I
     :try_start_0
     const-string v4, "WiMax"
@@ -470,7 +421,6 @@
 
     move-result-object v3
 
-    .line 154
     .local v3, "wimaxService":Ljava/lang/Object;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -486,7 +436,6 @@
 
     move-result-object v1
 
-    .line 155
     .local v1, "m":Ljava/lang/reflect/Method;
     const/4 v4, 0x0
 
@@ -504,17 +453,14 @@
 
     move-result v2
 
-    .line 159
     .end local v1    # "m":Ljava/lang/reflect/Method;
     .end local v3    # "wimaxService":Ljava/lang/Object;
     :goto_0
     return v2
 
-    .line 156
     :catch_0
     move-exception v0
 
-    .line 157
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "WimaxHelper"
 
@@ -530,10 +476,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 124
     const/4 v2, 0x0
 
-    .line 126
     .local v2, "ret":Z
     :try_start_0
     const-string v4, "WiMax"
@@ -542,7 +486,6 @@
 
     move-result-object v3
 
-    .line 127
     .local v3, "wimaxService":Ljava/lang/Object;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -558,7 +501,6 @@
 
     move-result-object v1
 
-    .line 128
     .local v1, "m":Ljava/lang/reflect/Method;
     const/4 v4, 0x0
 
@@ -576,17 +518,14 @@
 
     move-result v2
 
-    .line 132
     .end local v1    # "m":Ljava/lang/reflect/Method;
     .end local v3    # "wimaxService":Ljava/lang/Object;
     :goto_0
     return v2
 
-    .line 129
     :catch_0
     move-exception v0
 
-    .line 130
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "WimaxHelper"
 
@@ -602,7 +541,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -626,10 +564,8 @@
 
     const/4 v6, 0x0
 
-    .line 136
     const/4 v2, 0x0
 
-    .line 138
     .local v2, "ret":Z
     :try_start_0
     const-string v4, "WiMax"
@@ -638,7 +574,6 @@
 
     move-result-object v3
 
-    .line 139
     .local v3, "wimaxService":Ljava/lang/Object;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -660,7 +595,6 @@
 
     move-result-object v1
 
-    .line 140
     .local v1, "m":Ljava/lang/reflect/Method;
     const/4 v4, 0x1
 
@@ -684,15 +618,13 @@
 
     move-result v2
 
-    .line 141
     if-eqz v2, :cond_0
 
-    .line 142
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
-    const-string/jumbo v8, "wimax_on"
+    const-string v8, "wimax_on"
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -711,7 +643,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
     .end local v1    # "m":Ljava/lang/reflect/Method;
     .end local v3    # "wimaxService":Ljava/lang/Object;
     :cond_0
@@ -723,16 +654,13 @@
     :cond_1
     move v4, v6
 
-    .line 142
     goto :goto_0
 
-    .line 144
     .end local v1    # "m":Ljava/lang/reflect/Method;
     .end local v3    # "wimaxService":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 145
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "WimaxHelper"
 
@@ -748,10 +676,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 163
     const/4 v1, 0x0
 
-    .line 165
     .local v1, "ret":Z
     :try_start_0
     const-string v4, "WiMax"
@@ -760,13 +686,12 @@
 
     move-result-object v3
 
-    .line 166
     .local v3, "wimaxService":Ljava/lang/Object;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
 
-    const-string/jumbo v5, "wimaxRescan"
+    const-string v5, "wimaxRescan"
 
     const/4 v6, 0x0
 
@@ -776,11 +701,9 @@
 
     move-result-object v2
 
-    .line 167
     .local v2, "wimaxRescan":Ljava/lang/reflect/Method;
     if-eqz v2, :cond_0
 
-    .line 168
     const/4 v4, 0x0
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -789,21 +712,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 169
     const/4 v1, 0x1
 
-    .line 174
     .end local v2    # "wimaxRescan":Ljava/lang/reflect/Method;
     .end local v3    # "wimaxService":Ljava/lang/Object;
     :cond_0
     :goto_0
     return v1
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "WimaxHelper"
 

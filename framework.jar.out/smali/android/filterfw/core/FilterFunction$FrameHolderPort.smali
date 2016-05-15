@@ -23,16 +23,13 @@
     .locals 2
 
     .prologue
-    .line 33
     iput-object p1, p0, Landroid/filterfw/core/FilterFunction$FrameHolderPort;->this$0:Landroid/filterfw/core/FilterFunction;
 
-    .line 34
     const/4 v0, 0x0
 
     const-string v1, "holder"
 
     invoke-direct {p0, v0, v1}, Landroid/filterfw/core/StreamPort;-><init>(Landroid/filterfw/core/Filter;Ljava/lang/String;)V
 
-    .line 35
     return-void
 .end method

@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 29
     const-class v0, Landroid/media/tv/TvStreamConfig;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -59,7 +58,6 @@
 
     sput-object v0, Landroid/media/tv/TvStreamConfig;->TAG:Ljava/lang/String;
 
-    .line 45
     new-instance v0, Landroid/media/tv/TvStreamConfig$1;
 
     invoke-direct {v0}, Landroid/media/tv/TvStreamConfig$1;-><init>()V
@@ -73,7 +71,6 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,7 +81,6 @@
     .param p1, "x0"    # Landroid/media/tv/TvStreamConfig$1;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Landroid/media/tv/TvStreamConfig;-><init>()V
 
     return-void
@@ -96,7 +92,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 28
     iput p1, p0, Landroid/media/tv/TvStreamConfig;->mStreamId:I
 
     return p1
@@ -108,7 +103,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 28
     iput p1, p0, Landroid/media/tv/TvStreamConfig;->mType:I
 
     return p1
@@ -120,7 +114,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 28
     iput p1, p0, Landroid/media/tv/TvStreamConfig;->mMaxWidth:I
 
     return p1
@@ -132,7 +125,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 28
     iput p1, p0, Landroid/media/tv/TvStreamConfig;->mMaxHeight:I
 
     return p1
@@ -144,7 +136,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 28
     iput p1, p0, Landroid/media/tv/TvStreamConfig;->mGeneration:I
 
     return p1
@@ -156,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 103
     const/4 v0, 0x0
 
     return v0
@@ -169,15 +159,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 171
     if-nez p1, :cond_1
 
-    .line 175
     :cond_0
     :goto_0
     return v1
 
-    .line 172
     :cond_1
     instance-of v2, p1, Landroid/media/tv/TvStreamConfig;
 
@@ -185,10 +172,8 @@
 
     move-object v0, p1
 
-    .line 174
     check-cast v0, Landroid/media/tv/TvStreamConfig;
 
-    .line 175
     .local v0, "config":Landroid/media/tv/TvStreamConfig;
     iget v2, v0, Landroid/media/tv/TvStreamConfig;->mGeneration:I
 
@@ -229,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mGeneration:I
 
     return v0
@@ -239,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mMaxHeight:I
 
     return v0
@@ -249,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mMaxWidth:I
 
     return v0
@@ -259,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mStreamId:I
 
     return v0
@@ -269,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mType:I
 
     return v0
@@ -279,21 +259,18 @@
     .locals 3
 
     .prologue
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 93
     .local v0, "b":Ljava/lang/StringBuilder;
     const-string v1, "TvStreamConfig {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 94
-    const-string/jumbo v1, "mStreamId="
+    const-string v1, "mStreamId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -309,8 +286,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
-    const-string/jumbo v1, "mType="
+    const-string v1, "mType="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -326,8 +302,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
-    const-string/jumbo v1, "mGeneration="
+    const-string v1, "mGeneration="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -339,11 +314,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -357,31 +331,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 108
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mStreamId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 109
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 110
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mMaxWidth:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 111
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mMaxHeight:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 112
     iget v0, p0, Landroid/media/tv/TvStreamConfig;->mGeneration:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 113
     return-void
 .end method

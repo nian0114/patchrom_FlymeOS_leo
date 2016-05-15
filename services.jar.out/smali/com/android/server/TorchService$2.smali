@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 217
     iput-object p1, p0, Lcom/android/server/TorchService$2;->this$0:Lcom/android/server/TorchService;
 
     iput p2, p0, Lcom/android/server/TorchService$2;->val$cameraId:I
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 220
     iget-object v0, p0, Lcom/android/server/TorchService$2;->this$0:Lcom/android/server/TorchService;
 
     # getter for: Lcom/android/server/TorchService;->mCamerasInUse:Landroid/util/SparseArray;
@@ -58,7 +56,6 @@
 
     monitor-enter v1
 
-    .line 221
     :try_start_0
     # getter for: Lcom/android/server/TorchService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/TorchService;->access$400()Z
@@ -100,7 +97,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :cond_0
     iget-object v0, p0, Lcom/android/server/TorchService$2;->this$0:Lcom/android/server/TorchService;
 
@@ -111,13 +107,10 @@
     # invokes: Lcom/android/server/TorchService;->removeCameraUserLocked(Landroid/os/IBinder;I)V
     invoke-static {v0, v2, v3}, Lcom/android/server/TorchService;->access$600(Lcom/android/server/TorchService;Landroid/os/IBinder;I)V
 
-    .line 223
     monitor-exit v1
 
-    .line 224
     return-void
 
-    .line 223
     :catchall_0
     move-exception v0
 

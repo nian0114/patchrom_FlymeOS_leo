@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1075
     iput-object p1, p0, Landroid/net/wifi/WifiConfiguration$2;->this$0:Landroid/net/wifi/WifiConfiguration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v3, -0x1
 
-    .line 1077
     move-object v0, p1
 
     check-cast v0, Landroid/net/wifi/ScanResult;
@@ -54,10 +52,8 @@
     .local v0, "a":Landroid/net/wifi/ScanResult;
     move-object v1, p2
 
-    .line 1078
     check-cast v1, Landroid/net/wifi/ScanResult;
 
-    .line 1079
     .local v1, "b":Landroid/net/wifi/ScanResult;
     iget v4, v0, Landroid/net/wifi/ScanResult;->numIpConfigFailures:I
 
@@ -65,12 +61,10 @@
 
     if-le v4, v5, :cond_1
 
-    .line 1097
     :cond_0
     :goto_0
     return v2
 
-    .line 1082
     :cond_1
     iget v4, v0, Landroid/net/wifi/ScanResult;->numIpConfigFailures:I
 
@@ -80,10 +74,8 @@
 
     move v2, v3
 
-    .line 1083
     goto :goto_0
 
-    .line 1085
     :cond_2
     iget-wide v4, v0, Landroid/net/wifi/ScanResult;->seen:J
 
@@ -95,10 +87,8 @@
 
     move v2, v3
 
-    .line 1086
     goto :goto_0
 
-    .line 1088
     :cond_3
     iget-wide v4, v0, Landroid/net/wifi/ScanResult;->seen:J
 
@@ -108,7 +98,6 @@
 
     if-ltz v4, :cond_0
 
-    .line 1091
     iget v4, v0, Landroid/net/wifi/ScanResult;->level:I
 
     iget v5, v1, Landroid/net/wifi/ScanResult;->level:I
@@ -117,10 +106,8 @@
 
     move v2, v3
 
-    .line 1092
     goto :goto_0
 
-    .line 1094
     :cond_4
     iget v3, v0, Landroid/net/wifi/ScanResult;->level:I
 
@@ -128,7 +115,6 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 1097
     iget-object v2, v0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     iget-object v3, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;

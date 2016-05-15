@@ -80,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 863
     new-instance v0, Landroid/location/Location$1;
 
     invoke-direct {v0}, Landroid/location/Location$1;-><init>()V
@@ -103,82 +102,58 @@
 
     const-wide/16 v2, 0x0
 
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     iput-wide v6, p0, Landroid/location/Location;->mTime:J
 
-    .line 83
     iput-wide v6, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
-    .line 84
     iput-wide v2, p0, Landroid/location/Location;->mLatitude:D
 
-    .line 85
     iput-wide v2, p0, Landroid/location/Location;->mLongitude:D
 
-    .line 86
     iput-boolean v4, p0, Landroid/location/Location;->mHasAltitude:Z
 
-    .line 87
     iput-wide v2, p0, Landroid/location/Location;->mAltitude:D
 
-    .line 88
     iput-boolean v4, p0, Landroid/location/Location;->mHasSpeed:Z
 
-    .line 89
     iput v1, p0, Landroid/location/Location;->mSpeed:F
 
-    .line 90
     iput-boolean v4, p0, Landroid/location/Location;->mHasBearing:Z
 
-    .line 91
     iput v1, p0, Landroid/location/Location;->mBearing:F
 
-    .line 92
     iput-boolean v4, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 93
     iput v1, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 94
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
-    .line 95
     iput-boolean v4, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
-    .line 99
     iput-wide v2, p0, Landroid/location/Location;->mLat1:D
 
-    .line 100
     iput-wide v2, p0, Landroid/location/Location;->mLon1:D
 
-    .line 101
     iput-wide v2, p0, Landroid/location/Location;->mLat2:D
 
-    .line 102
     iput-wide v2, p0, Landroid/location/Location;->mLon2:D
 
-    .line 103
     iput v1, p0, Landroid/location/Location;->mDistance:F
 
-    .line 104
     iput v1, p0, Landroid/location/Location;->mInitialBearing:F
 
-    .line 106
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/location/Location;->mResults:[F
 
-    .line 124
     invoke-virtual {p0, p1}, Landroid/location/Location;->set(Landroid/location/Location;)V
 
-    .line 125
     return-void
 .end method
 
@@ -195,82 +170,58 @@
 
     const-wide/16 v2, 0x0
 
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     iput-wide v6, p0, Landroid/location/Location;->mTime:J
 
-    .line 83
     iput-wide v6, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
-    .line 84
     iput-wide v2, p0, Landroid/location/Location;->mLatitude:D
 
-    .line 85
     iput-wide v2, p0, Landroid/location/Location;->mLongitude:D
 
-    .line 86
     iput-boolean v4, p0, Landroid/location/Location;->mHasAltitude:Z
 
-    .line 87
     iput-wide v2, p0, Landroid/location/Location;->mAltitude:D
 
-    .line 88
     iput-boolean v4, p0, Landroid/location/Location;->mHasSpeed:Z
 
-    .line 89
     iput v1, p0, Landroid/location/Location;->mSpeed:F
 
-    .line 90
     iput-boolean v4, p0, Landroid/location/Location;->mHasBearing:Z
 
-    .line 91
     iput v1, p0, Landroid/location/Location;->mBearing:F
 
-    .line 92
     iput-boolean v4, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 93
     iput v1, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 94
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
-    .line 95
     iput-boolean v4, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
-    .line 99
     iput-wide v2, p0, Landroid/location/Location;->mLat1:D
 
-    .line 100
     iput-wide v2, p0, Landroid/location/Location;->mLon1:D
 
-    .line 101
     iput-wide v2, p0, Landroid/location/Location;->mLat2:D
 
-    .line 102
     iput-wide v2, p0, Landroid/location/Location;->mLon2:D
 
-    .line 103
     iput v1, p0, Landroid/location/Location;->mDistance:F
 
-    .line 104
     iput v1, p0, Landroid/location/Location;->mInitialBearing:F
 
-    .line 106
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/location/Location;->mResults:[F
 
-    .line 117
     iput-object p1, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
-    .line 118
     return-void
 .end method
 
@@ -280,7 +231,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 41
     iput-wide p1, p0, Landroid/location/Location;->mTime:J
 
     return-wide p1
@@ -292,7 +242,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Landroid/location/Location;->mHasAccuracy:Z
 
     return p1
@@ -304,7 +253,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 41
     iput-wide p1, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
     return-wide p1
@@ -316,7 +264,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 41
     iput p1, p0, Landroid/location/Location;->mAccuracy:F
 
     return p1
@@ -328,7 +275,6 @@
     .param p1, "x1"    # Landroid/os/Bundle;
 
     .prologue
-    .line 41
     iput-object p1, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     return-object p1
@@ -340,7 +286,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
     return p1
@@ -352,7 +297,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 41
     iput-wide p1, p0, Landroid/location/Location;->mLatitude:D
 
     return-wide p1
@@ -364,7 +308,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 41
     iput-wide p1, p0, Landroid/location/Location;->mLongitude:D
 
     return-wide p1
@@ -376,7 +319,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Landroid/location/Location;->mHasAltitude:Z
 
     return p1
@@ -388,7 +330,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 41
     iput-wide p1, p0, Landroid/location/Location;->mAltitude:D
 
     return-wide p1
@@ -400,7 +341,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Landroid/location/Location;->mHasSpeed:Z
 
     return p1
@@ -412,7 +352,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 41
     iput p1, p0, Landroid/location/Location;->mSpeed:F
 
     return p1
@@ -424,7 +363,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Landroid/location/Location;->mHasBearing:Z
 
     return p1
@@ -436,7 +374,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 41
     iput p1, p0, Landroid/location/Location;->mBearing:F
 
     return p1
@@ -451,44 +388,35 @@
     .param p8, "results"    # [F
 
     .prologue
-    .line 293
     const/16 v12, 0x14
 
-    .line 295
     .local v12, "MAXITERS":I
     const-wide v76, 0x3f91df46a2529d39L    # 0.017453292519943295
 
     mul-double p0, p0, v76
 
-    .line 296
     const-wide v76, 0x3f91df46a2529d39L    # 0.017453292519943295
 
     mul-double p4, p4, v76
 
-    .line 297
     const-wide v76, 0x3f91df46a2529d39L    # 0.017453292519943295
 
     mul-double p2, p2, v76
 
-    .line 298
     const-wide v76, 0x3f91df46a2529d39L    # 0.017453292519943295
 
     mul-double p6, p6, v76
 
-    .line 300
     const-wide v18, 0x415854a640000000L    # 6378137.0
 
-    .line 301
     .local v18, "a":D
     const-wide v22, 0x41583fc4141bda51L    # 6356752.3142
 
-    .line 302
     .local v22, "b":D
     sub-double v76, v18, v22
 
     div-double v44, v76, v18
 
-    .line 303
     .local v44, "f":D
     mul-double v76, v18, v18
 
@@ -500,15 +428,12 @@
 
     div-double v20, v76, v78
 
-    .line 305
     .local v20, "aSqMinusBSqOverBSq":D
     sub-double v10, p6, p2
 
-    .line 306
     .local v10, "L":D
     const-wide/16 v4, 0x0
 
-    .line 307
     .local v4, "A":D
     const-wide/high16 v76, 0x3ff0000000000000L    # 1.0
 
@@ -524,7 +449,6 @@
 
     move-result-wide v14
 
-    .line 308
     .local v14, "U1":D
     const-wide/high16 v76, 0x3ff0000000000000L    # 1.0
 
@@ -540,75 +464,59 @@
 
     move-result-wide v16
 
-    .line 310
     .local v16, "U2":D
     invoke-static {v14, v15}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v34
 
-    .line 311
     .local v34, "cosU1":D
     invoke-static/range {v16 .. v17}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v38
 
-    .line 312
     .local v38, "cosU2":D
     invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v64
 
-    .line 313
     .local v64, "sinU1":D
     invoke-static/range {v16 .. v17}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v68
 
-    .line 314
     .local v68, "sinU2":D
     mul-double v36, v34, v38
 
-    .line 315
     .local v36, "cosU1cosU2":D
     mul-double v66, v64, v68
 
-    .line 317
     .local v66, "sinU1sinU2":D
     const-wide/16 v54, 0x0
 
-    .line 318
     .local v54, "sigma":D
     const-wide/16 v42, 0x0
 
-    .line 319
     .local v42, "deltaSigma":D
     const-wide/16 v32, 0x0
 
-    .line 320
     .local v32, "cosSqAlpha":D
     const-wide/16 v24, 0x0
 
-    .line 321
     .local v24, "cos2SM":D
     const-wide/16 v30, 0x0
 
-    .line 322
     .local v30, "cosSigma":D
     const-wide/16 v60, 0x0
 
-    .line 323
     .local v60, "sinSigma":D
     const-wide/16 v28, 0x0
 
-    .line 324
     .local v28, "cosLambda":D
     const-wide/16 v58, 0x0
 
-    .line 326
     .local v58, "sinLambda":D
     move-wide/from16 v50, v10
 
-    .line 327
     .local v50, "lambda":D
     const/16 v48, 0x0
 
@@ -618,24 +526,19 @@
 
     if-ge v0, v12, :cond_0
 
-    .line 328
     move-wide/from16 v52, v50
 
-    .line 329
     .local v52, "lambdaOrig":D
     invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v28
 
-    .line 330
     invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v58
 
-    .line 331
     mul-double v70, v38, v58
 
-    .line 332
     .local v70, "t1":D
     mul-double v76, v34, v68
 
@@ -645,7 +548,6 @@
 
     sub-double v72, v76, v78
 
-    .line 333
     .local v72, "t2":D
     mul-double v76, v70, v70
 
@@ -653,18 +555,15 @@
 
     add-double v62, v76, v78
 
-    .line 334
     .local v62, "sinSqSigma":D
     invoke-static/range {v62 .. v63}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v60
 
-    .line 335
     mul-double v76, v36, v28
 
     add-double v30, v66, v76
 
-    .line 336
     move-wide/from16 v0, v60
 
     move-wide/from16 v2, v30
@@ -673,7 +572,6 @@
 
     move-result-wide v54
 
-    .line 337
     const-wide/16 v76, 0x0
 
     cmpl-double v49, v60, v76
@@ -682,7 +580,6 @@
 
     const-wide/16 v56, 0x0
 
-    .line 339
     .local v56, "sinAlpha":D
     :goto_1
     const-wide/high16 v76, 0x3ff0000000000000L    # 1.0
@@ -691,7 +588,6 @@
 
     sub-double v32, v76, v78
 
-    .line 340
     const-wide/16 v76, 0x0
 
     cmpl-double v49, v32, v76
@@ -700,11 +596,9 @@
 
     const-wide/16 v24, 0x0
 
-    .line 343
     :goto_2
     mul-double v74, v32, v20
 
-    .line 344
     .local v74, "uSquared":D
     const-wide/high16 v76, 0x3ff0000000000000L    # 1.0
 
@@ -736,7 +630,6 @@
 
     add-double v4, v76, v78
 
-    .line 347
     const-wide/high16 v76, 0x4090000000000000L    # 1024.0
 
     div-double v76, v74, v76
@@ -763,7 +656,6 @@
 
     mul-double v6, v76, v78
 
-    .line 350
     .local v6, "B":D
     const-wide/high16 v76, 0x4030000000000000L    # 16.0
 
@@ -787,11 +679,9 @@
 
     mul-double v8, v76, v78
 
-    .line 353
     .local v8, "C":D
     mul-double v26, v24, v24
 
-    .line 354
     .local v26, "cos2SMSq":D
     mul-double v76, v6, v60
 
@@ -845,7 +735,6 @@
 
     mul-double v42, v76, v78
 
-    .line 361
     const-wide/high16 v76, 0x3ff0000000000000L    # 1.0
 
     sub-double v76, v76, v8
@@ -880,12 +769,10 @@
 
     add-double v50, v10, v76
 
-    .line 367
     sub-double v76, v50, v52
 
     div-double v40, v76, v50
 
-    .line 368
     .local v40, "delta":D
     invoke-static/range {v40 .. v41}, Ljava/lang/Math;->abs(D)D
 
@@ -897,7 +784,6 @@
 
     if-gez v49, :cond_4
 
-    .line 373
     .end local v6    # "B":D
     .end local v8    # "C":D
     .end local v26    # "cos2SMSq":D
@@ -919,13 +805,11 @@
 
     double-to-float v13, v0
 
-    .line 374
     .local v13, "distance":F
     const/16 v49, 0x0
 
     aput v13, p8, v49
 
-    .line 375
     move-object/from16 v0, p8
 
     array-length v0, v0
@@ -940,7 +824,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 376
     mul-double v76, v38, v58
 
     mul-double v78, v34, v68
@@ -961,7 +844,6 @@
 
     move/from16 v47, v0
 
-    .line 378
     .local v47, "initialBearing":F
     move/from16 v0, v47
 
@@ -979,12 +861,10 @@
 
     move/from16 v47, v0
 
-    .line 379
     const/16 v49, 0x1
 
     aput v47, p8, v49
 
-    .line 380
     move-object/from16 v0, p8
 
     array-length v0, v0
@@ -999,7 +879,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 381
     mul-double v76, v34, v58
 
     move-wide/from16 v0, v64
@@ -1026,7 +905,6 @@
 
     move/from16 v46, v0
 
-    .line 383
     .local v46, "finalBearing":F
     move/from16 v0, v46
 
@@ -1044,18 +922,15 @@
 
     move/from16 v46, v0
 
-    .line 384
     const/16 v49, 0x2
 
     aput v46, p8, v49
 
-    .line 387
     .end local v46    # "finalBearing":F
     .end local v47    # "initialBearing":F
     :cond_1
     return-void
 
-    .line 337
     .end local v13    # "distance":F
     .restart local v52    # "lambdaOrig":D
     .restart local v62    # "sinSqSigma":D
@@ -1068,7 +943,6 @@
 
     goto/16 :goto_1
 
-    .line 340
     .restart local v56    # "sinAlpha":D
     :cond_3
     const-wide/high16 v76, 0x4000000000000000L    # 2.0
@@ -1081,7 +955,6 @@
 
     goto/16 :goto_2
 
-    .line 327
     .restart local v6    # "B":D
     .restart local v8    # "C":D
     .restart local v26    # "cos2SMSq":D
@@ -1098,10 +971,8 @@
     .param p0, "coordinate"    # Ljava/lang/String;
 
     .prologue
-    .line 228
     if-nez p0, :cond_0
 
-    .line 229
     new-instance v15, Ljava/lang/NullPointerException;
 
     const-string v18, "coordinate"
@@ -1112,11 +983,9 @@
 
     throw v15
 
-    .line 232
     :cond_0
     const/4 v8, 0x0
 
-    .line 233
     .local v8, "negative":Z
     const/4 v15, 0x0
 
@@ -1132,7 +1001,6 @@
 
     if-ne v15, v0, :cond_1
 
-    .line 234
     const/4 v15, 0x1
 
     move-object/from16 v0, p0
@@ -1141,10 +1009,8 @@
 
     move-result-object p0
 
-    .line 235
     const/4 v8, 0x1
 
-    .line 238
     :cond_1
     new-instance v13, Ljava/util/StringTokenizer;
 
@@ -1154,19 +1020,16 @@
 
     invoke-direct {v13, v0, v15}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
     .local v13, "st":Ljava/util/StringTokenizer;
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v14
 
-    .line 240
     .local v14, "tokens":I
     const/4 v15, 0x1
 
     if-ge v14, v15, :cond_2
 
-    .line 241
     new-instance v15, Ljava/lang/IllegalArgumentException;
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1197,25 +1060,21 @@
 
     throw v15
 
-    .line 244
     :cond_2
     :try_start_0
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 246
     .local v3, "degrees":Ljava/lang/String;
     const/4 v15, 0x1
 
     if-ne v14, v15, :cond_4
 
-    .line 247
     invoke-static {v3}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v16
 
-    .line 248
     .local v16, "val":D
     if-eqz v8, :cond_3
 
@@ -1225,34 +1084,28 @@
 
     move-wide/from16 v18, v0
 
-    .line 282
     :goto_0
     return-wide v18
 
     :cond_3
     move-wide/from16 v18, v16
 
-    .line 248
     goto :goto_0
 
-    .line 251
     .end local v16    # "val":D
     :cond_4
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 252
     .local v5, "minutes":Ljava/lang/String;
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 254
     .local v2, "deg":I
     const-wide/16 v10, 0x0
 
-    .line 256
     .local v10, "sec":D
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -1260,26 +1113,22 @@
 
     if-eqz v15, :cond_6
 
-    .line 257
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v15
 
     int-to-double v6, v15
 
-    .line 258
     .local v6, "min":D
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 259
     .local v12, "seconds":Ljava/lang/String;
     invoke-static {v12}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v10
 
-    .line 264
     .end local v12    # "seconds":Ljava/lang/String;
     :goto_1
     if-eqz v8, :cond_7
@@ -1302,7 +1151,6 @@
 
     const/4 v4, 0x1
 
-    .line 268
     .local v4, "isNegative180":Z
     :goto_2
     int-to-double v0, v2
@@ -1321,7 +1169,6 @@
 
     if-nez v4, :cond_8
 
-    .line 269
     :cond_5
     new-instance v15, Ljava/lang/IllegalArgumentException;
 
@@ -1355,7 +1202,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 283
     .end local v2    # "deg":I
     .end local v3    # "degrees":Ljava/lang/String;
     .end local v4    # "isNegative180":Z
@@ -1365,7 +1211,6 @@
     :catch_0
     move-exception v9
 
-    .line 284
     .local v9, "nfe":Ljava/lang/NumberFormatException;
     new-instance v15, Ljava/lang/IllegalArgumentException;
 
@@ -1397,7 +1242,6 @@
 
     throw v15
 
-    .line 261
     .end local v9    # "nfe":Ljava/lang/NumberFormatException;
     .restart local v2    # "deg":I
     .restart local v3    # "degrees":Ljava/lang/String;
@@ -1412,13 +1256,11 @@
     .restart local v6    # "min":D
     goto :goto_1
 
-    .line 264
     :cond_7
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 271
     .restart local v4    # "isNegative180":Z
     :cond_8
     const-wide/16 v18, 0x0
@@ -1433,7 +1275,6 @@
 
     if-lez v15, :cond_a
 
-    .line 272
     :cond_9
     new-instance v15, Ljava/lang/IllegalArgumentException;
 
@@ -1465,7 +1306,6 @@
 
     throw v15
 
-    .line 275
     :cond_a
     const-wide/16 v18, 0x0
 
@@ -1479,7 +1319,6 @@
 
     if-lez v15, :cond_c
 
-    .line 276
     :cond_b
     new-instance v15, Ljava/lang/IllegalArgumentException;
 
@@ -1513,7 +1352,6 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 280
     :cond_c
     int-to-double v0, v2
 
@@ -1531,13 +1369,11 @@
 
     add-double v16, v18, v10
 
-    .line 281
     .restart local v16    # "val":D
     const-wide v18, 0x40ac200000000000L    # 3600.0
 
     div-double v16, v16, v18
 
-    .line 282
     if-eqz v8, :cond_d
 
     move-wide/from16 v0, v16
@@ -1568,7 +1404,6 @@
 
     const/4 v6, 0x2
 
-    .line 180
     const-wide v4, -0x3f99800000000000L    # -180.0
 
     cmpg-double v4, p0, v4
@@ -1587,7 +1422,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 182
     :cond_0
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -1613,7 +1447,6 @@
 
     throw v4
 
-    .line 184
     :cond_1
     if-eqz p2, :cond_2
 
@@ -1621,14 +1454,13 @@
 
     if-eq p2, v6, :cond_2
 
-    .line 187
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "outputType="
+    const-string v6, "outputType="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1646,13 +1478,11 @@
 
     throw v4
 
-    .line 190
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 193
     .local v3, "sb":Ljava/lang/StringBuilder;
     const-wide/16 v4, 0x0
 
@@ -1660,15 +1490,12 @@
 
     if-gez v4, :cond_3
 
-    .line 194
     const/16 v4, 0x2d
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 195
     neg-double p0, p0
 
-    .line 198
     :cond_3
     new-instance v1, Ljava/text/DecimalFormat;
 
@@ -1676,13 +1503,11 @@
 
     invoke-direct {v1, v4}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 199
     .local v1, "df":Ljava/text/DecimalFormat;
     if-eq p2, v7, :cond_4
 
     if-ne p2, v6, :cond_5
 
-    .line 200
     :cond_4
     invoke-static {p0, p1}, Ljava/lang/Math;->floor(D)D
 
@@ -1690,47 +1515,36 @@
 
     double-to-int v0, v4
 
-    .line 201
     .local v0, "degrees":I
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 202
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 203
     int-to-double v4, v0
 
     sub-double/2addr p0, v4
 
-    .line 204
     mul-double/2addr p0, v8
 
-    .line 205
     if-ne p2, v6, :cond_5
 
-    .line 206
     invoke-static {p0, p1}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v4
 
     double-to-int v2, v4
 
-    .line 207
     .local v2, "minutes":I
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 208
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 209
     int-to-double v4, v2
 
     sub-double/2addr p0, v4
 
-    .line 210
     mul-double/2addr p0, v8
 
-    .line 213
     .end local v0    # "degrees":I
     .end local v2    # "minutes":I
     :cond_5
@@ -1740,7 +1554,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 214
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -1757,7 +1570,6 @@
     .param p8, "results"    # [F
 
     .prologue
-    .line 409
     if-eqz p8, :cond_0
 
     array-length v0, p8
@@ -1766,21 +1578,18 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 410
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "results is null or has length < 1"
+    const-string v1, "results is null or has length < 1"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 412
     :cond_1
     invoke-static/range {p0 .. p8}, Landroid/location/Location;->computeDistanceAndBearing(DDDD[F)V
 
-    .line 414
     return-void
 .end method
 
@@ -1791,12 +1600,10 @@
     .param p1, "dest"    # Landroid/location/Location;
 
     .prologue
-    .line 453
     iget-object v9, p0, Landroid/location/Location;->mResults:[F
 
     monitor-enter v9
 
-    .line 455
     :try_start_0
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
@@ -1830,7 +1637,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 457
     :cond_0
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
@@ -1844,27 +1650,22 @@
 
     invoke-static/range {v0 .. v8}, Landroid/location/Location;->computeDistanceAndBearing(DDDD[F)V
 
-    .line 459
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLat1:D
 
-    .line 460
     iget-wide v0, p0, Landroid/location/Location;->mLongitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLon1:D
 
-    .line 461
     iget-wide v0, p1, Landroid/location/Location;->mLatitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLat2:D
 
-    .line 462
     iget-wide v0, p1, Landroid/location/Location;->mLongitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLon2:D
 
-    .line 463
     iget-object v0, p0, Landroid/location/Location;->mResults:[F
 
     const/4 v1, 0x0
@@ -1873,7 +1674,6 @@
 
     iput v0, p0, Landroid/location/Location;->mDistance:F
 
-    .line 464
     iget-object v0, p0, Landroid/location/Location;->mResults:[F
 
     const/4 v1, 0x1
@@ -1882,7 +1682,6 @@
 
     iput v0, p0, Landroid/location/Location;->mInitialBearing:F
 
-    .line 466
     :cond_1
     iget v0, p0, Landroid/location/Location;->mInitialBearing:F
 
@@ -1890,7 +1689,6 @@
 
     return v0
 
-    .line 467
     :catchall_0
     move-exception v0
 
@@ -1905,7 +1703,6 @@
     .locals 1
 
     .prologue
-    .line 894
     const/4 v0, 0x0
 
     return v0
@@ -1916,12 +1713,10 @@
     .param p1, "dest"    # Landroid/location/Location;
 
     .prologue
-    .line 426
     iget-object v9, p0, Landroid/location/Location;->mResults:[F
 
     monitor-enter v9
 
-    .line 427
     :try_start_0
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
@@ -1955,7 +1750,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 429
     :cond_0
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
@@ -1969,27 +1763,22 @@
 
     invoke-static/range {v0 .. v8}, Landroid/location/Location;->computeDistanceAndBearing(DDDD[F)V
 
-    .line 431
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLat1:D
 
-    .line 432
     iget-wide v0, p0, Landroid/location/Location;->mLongitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLon1:D
 
-    .line 433
     iget-wide v0, p1, Landroid/location/Location;->mLatitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLat2:D
 
-    .line 434
     iget-wide v0, p1, Landroid/location/Location;->mLongitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLon2:D
 
-    .line 435
     iget-object v0, p0, Landroid/location/Location;->mResults:[F
 
     const/4 v1, 0x0
@@ -1998,7 +1787,6 @@
 
     iput v0, p0, Landroid/location/Location;->mDistance:F
 
-    .line 436
     iget-object v0, p0, Landroid/location/Location;->mResults:[F
 
     const/4 v1, 0x1
@@ -2007,7 +1795,6 @@
 
     iput v0, p0, Landroid/location/Location;->mInitialBearing:F
 
-    .line 438
     :cond_1
     iget v0, p0, Landroid/location/Location;->mDistance:F
 
@@ -2015,7 +1802,6 @@
 
     return v0
 
-    .line 439
     :catchall_0
     move-exception v0
 
@@ -2032,7 +1818,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 860
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2055,7 +1840,6 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 861
     return-void
 .end method
 
@@ -2063,7 +1847,6 @@
     .locals 1
 
     .prologue
-    .line 737
     iget v0, p0, Landroid/location/Location;->mAccuracy:F
 
     return v0
@@ -2073,7 +1856,6 @@
     .locals 2
 
     .prologue
-    .line 593
     iget-wide v0, p0, Landroid/location/Location;->mAltitude:D
 
     return-wide v0
@@ -2083,7 +1865,6 @@
     .locals 1
 
     .prologue
-    .line 671
     iget v0, p0, Landroid/location/Location;->mBearing:F
 
     return v0
@@ -2093,7 +1874,6 @@
     .locals 2
 
     .prologue
-    .line 533
     iget-wide v0, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
     return-wide v0
@@ -2104,28 +1884,23 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 925
     iget-object v1, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
 
-    .line 926
     iget-object v1, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v1, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 927
     .local v0, "value":Landroid/os/Parcelable;
     instance-of v1, v0, Landroid/location/Location;
 
     if-eqz v1, :cond_0
 
-    .line 928
     check-cast v0, Landroid/location/Location;
 
-    .line 931
     .end local v0    # "value":Landroid/os/Parcelable;
     :goto_0
     return-object v0
@@ -2140,7 +1915,6 @@
     .locals 1
 
     .prologue
-    .line 819
     iget-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -2150,7 +1924,6 @@
     .locals 2
 
     .prologue
-    .line 552
     iget-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
     return-wide v0
@@ -2160,7 +1933,6 @@
     .locals 2
 
     .prologue
-    .line 569
     iget-wide v0, p0, Landroid/location/Location;->mLongitude:D
 
     return-wide v0
@@ -2170,7 +1942,6 @@
     .locals 1
 
     .prologue
-    .line 476
     iget-object v0, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
     return-object v0
@@ -2180,7 +1951,6 @@
     .locals 1
 
     .prologue
-    .line 630
     iget v0, p0, Landroid/location/Location;->mSpeed:F
 
     return v0
@@ -2190,7 +1960,6 @@
     .locals 2
 
     .prologue
-    .line 504
     iget-wide v0, p0, Landroid/location/Location;->mTime:J
 
     return-wide v0
@@ -2200,7 +1969,6 @@
     .locals 1
 
     .prologue
-    .line 711
     iget-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
     return v0
@@ -2210,7 +1978,6 @@
     .locals 1
 
     .prologue
-    .line 583
     iget-boolean v0, p0, Landroid/location/Location;->mHasAltitude:Z
 
     return v0
@@ -2220,7 +1987,6 @@
     .locals 1
 
     .prologue
-    .line 658
     iget-boolean v0, p0, Landroid/location/Location;->mHasBearing:Z
 
     return v0
@@ -2230,7 +1996,6 @@
     .locals 1
 
     .prologue
-    .line 621
     iget-boolean v0, p0, Landroid/location/Location;->mHasSpeed:Z
 
     return v0
@@ -2244,37 +2009,31 @@
 
     const/4 v0, 0x0
 
-    .line 777
     iget-object v1, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 781
     :cond_0
     :goto_0
     return v0
 
-    .line 778
     :cond_1
     iget-boolean v1, p0, Landroid/location/Location;->mHasAccuracy:Z
 
     if-eqz v1, :cond_0
 
-    .line 779
     iget-wide v2, p0, Landroid/location/Location;->mTime:J
 
     cmp-long v1, v2, v4
 
     if-eqz v1, :cond_0
 
-    .line 780
     iget-wide v2, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
     cmp-long v1, v2, v4
 
     if-eqz v1, :cond_0
 
-    .line 781
     const/4 v0, 0x1
 
     goto :goto_0
@@ -2284,7 +2043,6 @@
     .locals 1
 
     .prologue
-    .line 954
     iget-boolean v0, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
     return v0
@@ -2296,7 +2054,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 795
     iget-object v0, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -2305,23 +2062,19 @@
 
     iput-object v0, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
-    .line 796
     :cond_0
     iget-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
     if-nez v0, :cond_1
 
-    .line 797
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 798
     const/high16 v0, 0x42c80000    # 100.0f
 
     iput v0, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 800
     :cond_1
     iget-wide v0, p0, Landroid/location/Location;->mTime:J
 
@@ -2335,7 +2088,6 @@
 
     iput-wide v0, p0, Landroid/location/Location;->mTime:J
 
-    .line 801
     :cond_2
     iget-wide v0, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
@@ -2349,7 +2101,6 @@
 
     iput-wide v0, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
-    .line 802
     :cond_3
     return-void
 .end method
@@ -2358,17 +2109,14 @@
     .locals 1
 
     .prologue
-    .line 759
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 760
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 761
     return-void
 .end method
 
@@ -2376,17 +2124,14 @@
     .locals 2
 
     .prologue
-    .line 613
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/location/Location;->mAltitude:D
 
-    .line 614
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAltitude:Z
 
-    .line 615
     return-void
 .end method
 
@@ -2394,17 +2139,14 @@
     .locals 1
 
     .prologue
-    .line 700
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/location/Location;->mBearing:F
 
-    .line 701
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasBearing:Z
 
-    .line 702
     return-void
 .end method
 
@@ -2412,17 +2154,14 @@
     .locals 1
 
     .prologue
-    .line 650
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/location/Location;->mSpeed:F
 
-    .line 651
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasSpeed:Z
 
-    .line 652
     return-void
 .end method
 
@@ -2440,52 +2179,36 @@
 
     const/4 v0, 0x0
 
-    .line 152
     iput-object v4, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
-    .line 153
     iput-wide v6, p0, Landroid/location/Location;->mTime:J
 
-    .line 154
     iput-wide v6, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
-    .line 155
     iput-wide v2, p0, Landroid/location/Location;->mLatitude:D
 
-    .line 156
     iput-wide v2, p0, Landroid/location/Location;->mLongitude:D
 
-    .line 157
     iput-boolean v0, p0, Landroid/location/Location;->mHasAltitude:Z
 
-    .line 158
     iput-wide v2, p0, Landroid/location/Location;->mAltitude:D
 
-    .line 159
     iput-boolean v0, p0, Landroid/location/Location;->mHasSpeed:Z
 
-    .line 160
     iput v1, p0, Landroid/location/Location;->mSpeed:F
 
-    .line 161
     iput-boolean v0, p0, Landroid/location/Location;->mHasBearing:Z
 
-    .line 162
     iput v1, p0, Landroid/location/Location;->mBearing:F
 
-    .line 163
     iput-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 164
     iput v1, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 165
     iput-object v4, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
-    .line 166
     iput-boolean v0, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
-    .line 167
     return-void
 .end method
 
@@ -2494,72 +2217,58 @@
     .param p1, "l"    # Landroid/location/Location;
 
     .prologue
-    .line 131
     iget-object v0, p1, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
-    .line 132
     iget-wide v0, p1, Landroid/location/Location;->mTime:J
 
     iput-wide v0, p0, Landroid/location/Location;->mTime:J
 
-    .line 133
     iget-wide v0, p1, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
     iput-wide v0, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
-    .line 134
     iget-wide v0, p1, Landroid/location/Location;->mLatitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLatitude:D
 
-    .line 135
     iget-wide v0, p1, Landroid/location/Location;->mLongitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mLongitude:D
 
-    .line 136
     iget-boolean v0, p1, Landroid/location/Location;->mHasAltitude:Z
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAltitude:Z
 
-    .line 137
     iget-wide v0, p1, Landroid/location/Location;->mAltitude:D
 
     iput-wide v0, p0, Landroid/location/Location;->mAltitude:D
 
-    .line 138
     iget-boolean v0, p1, Landroid/location/Location;->mHasSpeed:Z
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasSpeed:Z
 
-    .line 139
     iget v0, p1, Landroid/location/Location;->mSpeed:F
 
     iput v0, p0, Landroid/location/Location;->mSpeed:F
 
-    .line 140
     iget-boolean v0, p1, Landroid/location/Location;->mHasBearing:Z
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasBearing:Z
 
-    .line 141
     iget v0, p1, Landroid/location/Location;->mBearing:F
 
     iput v0, p0, Landroid/location/Location;->mBearing:F
 
-    .line 142
     iget-boolean v0, p1, Landroid/location/Location;->mHasAccuracy:Z
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 143
     iget v0, p1, Landroid/location/Location;->mAccuracy:F
 
     iput v0, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 144
     iget-object v0, p1, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -2569,15 +2278,12 @@
     :goto_0
     iput-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
-    .line 145
     iget-boolean v0, p1, Landroid/location/Location;->mIsFromMockProvider:Z
 
     iput-boolean v0, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
-    .line 146
     return-void
 
-    .line 144
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
@@ -2593,15 +2299,12 @@
     .param p1, "accuracy"    # F
 
     .prologue
-    .line 748
     iput p1, p0, Landroid/location/Location;->mAccuracy:F
 
-    .line 749
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
-    .line 750
     return-void
 .end method
 
@@ -2610,15 +2313,12 @@
     .param p1, "altitude"    # D
 
     .prologue
-    .line 602
     iput-wide p1, p0, Landroid/location/Location;->mAltitude:D
 
-    .line 603
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasAltitude:Z
 
-    .line 604
     return-void
 .end method
 
@@ -2629,7 +2329,6 @@
     .prologue
     const/high16 v1, 0x43b40000    # 360.0f
 
-    .line 683
     :goto_0
     const/4 v0, 0x0
 
@@ -2637,33 +2336,27 @@
 
     if-gez v0, :cond_0
 
-    .line 684
     add-float/2addr p1, v1
 
     goto :goto_0
 
-    .line 686
     :cond_0
     :goto_1
     cmpl-float v0, p1, v1
 
     if-ltz v0, :cond_1
 
-    .line 687
     sub-float/2addr p1, v1
 
     goto :goto_1
 
-    .line 689
     :cond_1
     iput p1, p0, Landroid/location/Location;->mBearing:F
 
-    .line 690
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasBearing:Z
 
-    .line 691
     return-void
 .end method
 
@@ -2672,10 +2365,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 542
     iput-wide p1, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
-    .line 543
     return-void
 .end method
 
@@ -2685,25 +2376,21 @@
     .param p2, "value"    # Landroid/location/Location;
 
     .prologue
-    .line 942
     iget-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 943
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
-    .line 945
     :cond_0
     iget-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 946
     return-void
 .end method
 
@@ -2712,7 +2399,6 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 827
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
@@ -2720,10 +2406,8 @@
     :goto_0
     iput-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
-    .line 828
     return-void
 
-    .line 827
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
@@ -2737,10 +2421,8 @@
     .param p1, "isFromMockProvider"    # Z
 
     .prologue
-    .line 965
     iput-boolean p1, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
-    .line 966
     return-void
 .end method
 
@@ -2749,10 +2431,8 @@
     .param p1, "latitude"    # D
 
     .prologue
-    .line 559
     iput-wide p1, p0, Landroid/location/Location;->mLatitude:D
 
-    .line 560
     return-void
 .end method
 
@@ -2761,10 +2441,8 @@
     .param p1, "longitude"    # D
 
     .prologue
-    .line 576
     iput-wide p1, p0, Landroid/location/Location;->mLongitude:D
 
-    .line 577
     return-void
 .end method
 
@@ -2773,10 +2451,8 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 483
     iput-object p1, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
-    .line 484
     return-void
 .end method
 
@@ -2785,15 +2461,12 @@
     .param p1, "speed"    # F
 
     .prologue
-    .line 639
     iput p1, p0, Landroid/location/Location;->mSpeed:F
 
-    .line 640
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Location;->mHasSpeed:Z
 
-    .line 641
     return-void
 .end method
 
@@ -2802,10 +2475,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 514
     iput-wide p1, p0, Landroid/location/Location;->mTime:J
 
-    .line 515
     return-void
 .end method
 
@@ -2819,23 +2490,19 @@
 
     const/4 v6, 0x0
 
-    .line 832
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 833
     .local v0, "s":Ljava/lang/StringBuilder;
     const-string v1, "Location["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 834
     iget-object v1, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 835
     const-string v1, " %.6f,%.6f"
 
     const/4 v2, 0x2
@@ -2864,7 +2531,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 836
     iget-boolean v1, p0, Landroid/location/Location;->mHasAccuracy:Z
 
     if-eqz v1, :cond_6
@@ -2887,7 +2553,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 838
     :goto_0
     iget-wide v2, p0, Landroid/location/Location;->mTime:J
 
@@ -2895,12 +2560,10 @@
 
     if-nez v1, :cond_0
 
-    .line 839
     const-string v1, " t=?!?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 841
     :cond_0
     iget-wide v2, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
@@ -2908,12 +2571,10 @@
 
     if-nez v1, :cond_7
 
-    .line 842
     const-string v1, " et=?!?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 847
     :goto_1
     iget-boolean v1, p0, Landroid/location/Location;->mHasAltitude:Z
 
@@ -2929,7 +2590,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 848
     :cond_1
     iget-boolean v1, p0, Landroid/location/Location;->mHasSpeed:Z
 
@@ -2945,7 +2605,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 849
     :cond_2
     iget-boolean v1, p0, Landroid/location/Location;->mHasBearing:Z
 
@@ -2961,7 +2620,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 850
     :cond_3
     iget-boolean v1, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
@@ -2971,13 +2629,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 852
     :cond_4
     iget-object v1, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     if-eqz v1, :cond_5
 
-    .line 853
     const-string v1, " {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2994,20 +2650,17 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 855
     :cond_5
     const/16 v1, 0x5d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 856
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 837
     :cond_6
     const-string v1, " acc=???"
 
@@ -3015,13 +2668,11 @@
 
     goto :goto_0
 
-    .line 844
     :cond_7
     const-string v1, " et="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 845
     iget-wide v2, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
     const-wide/32 v4, 0xf4240
@@ -3043,32 +2694,26 @@
 
     const/4 v2, 0x0
 
-    .line 899
     iget-object v0, p0, Landroid/location/Location;->mProvider:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 900
     iget-wide v4, p0, Landroid/location/Location;->mTime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 901
     iget-wide v4, p0, Landroid/location/Location;->mElapsedRealtimeNanos:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 902
     iget-wide v4, p0, Landroid/location/Location;->mLatitude:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 903
     iget-wide v4, p0, Landroid/location/Location;->mLongitude:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 904
     iget-boolean v0, p0, Landroid/location/Location;->mHasAltitude:Z
 
     if-eqz v0, :cond_0
@@ -3078,12 +2723,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 905
     iget-wide v4, p0, Landroid/location/Location;->mAltitude:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 906
     iget-boolean v0, p0, Landroid/location/Location;->mHasSpeed:Z
 
     if-eqz v0, :cond_1
@@ -3093,12 +2736,10 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 907
     iget v0, p0, Landroid/location/Location;->mSpeed:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 908
     iget-boolean v0, p0, Landroid/location/Location;->mHasBearing:Z
 
     if-eqz v0, :cond_2
@@ -3108,12 +2749,10 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 909
     iget v0, p0, Landroid/location/Location;->mBearing:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 910
     iget-boolean v0, p0, Landroid/location/Location;->mHasAccuracy:Z
 
     if-eqz v0, :cond_3
@@ -3123,17 +2762,14 @@
     :goto_3
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 911
     iget v0, p0, Landroid/location/Location;->mAccuracy:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 912
     iget-object v0, p0, Landroid/location/Location;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 913
     iget-boolean v0, p0, Landroid/location/Location;->mIsFromMockProvider:Z
 
     if-eqz v0, :cond_4
@@ -3141,36 +2777,30 @@
     :goto_4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 914
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 904
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 906
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 908
     goto :goto_2
 
     :cond_3
     move v0, v2
 
-    .line 910
     goto :goto_3
 
     :cond_4
     move v1, v2
 
-    .line 913
     goto :goto_4
 .end method

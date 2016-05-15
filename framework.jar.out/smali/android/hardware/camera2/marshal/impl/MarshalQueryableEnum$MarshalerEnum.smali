@@ -47,22 +47,18 @@
     .end annotation
 
     .prologue
-    .line 52
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>.MarshalerEnum;"
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<TT;>;"
     iput-object p1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->this$0:Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;
 
-    .line 53
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
-    .line 55
     invoke-virtual {p2}, Landroid/hardware/camera2/utils/TypeReference;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->mClass:Ljava/lang/Class;
 
-    .line 56
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 97
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>.MarshalerEnum;"
     iget v0, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->mNativeType:I
 
@@ -99,39 +94,32 @@
     .local p1, "value":Ljava/lang/Enum;, "TT;"
     const/4 v3, 0x1
 
-    .line 60
     # invokes: Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->getEnumValue(Ljava/lang/Enum;)I
     invoke-static {p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum;->access$000(Ljava/lang/Enum;)I
 
     move-result v0
 
-    .line 62
     .local v0, "enumValue":I
     iget v1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->mNativeType:I
 
     if-ne v1, v3, :cond_0
 
-    .line 63
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 73
     :goto_0
     return-void
 
-    .line 64
     :cond_0
     iget v1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->mNativeType:I
 
     if-nez v1, :cond_3
 
-    .line 65
     if-ltz v0, :cond_1
 
     const/16 v1, 0xff
 
     if-le v0, v1, :cond_2
 
-    .line 66
     :cond_1
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
@@ -155,7 +143,6 @@
 
     throw v1
 
-    .line 69
     :cond_2
     int-to-byte v1, v0
 
@@ -163,7 +150,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_3
     new-instance v1, Ljava/lang/AssertionError;
 
@@ -176,7 +162,6 @@
     .locals 0
 
     .prologue
-    .line 47
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>.MarshalerEnum;"
     check-cast p1, Ljava/lang/Enum;
 
@@ -197,13 +182,11 @@
     .end annotation
 
     .prologue
-    .line 79
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>.MarshalerEnum;"
     iget v1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->mNativeType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 88
     new-instance v1, Ljava/lang/AssertionError;
 
     const-string v2, "Unexpected native type; impossible since its not supported"
@@ -212,13 +195,11 @@
 
     throw v1
 
-    .line 81
     :pswitch_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 92
     .local v0, "enumValue":I
     :goto_0
     iget-object v1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->mClass:Ljava/lang/Class;
@@ -230,7 +211,6 @@
 
     return-object v1
 
-    .line 85
     .end local v0    # "enumValue":I
     :pswitch_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
@@ -239,11 +219,9 @@
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 86
     .restart local v0    # "enumValue":I
     goto :goto_0
 
-    .line 79
     nop
 
     :pswitch_data_0
@@ -257,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 47
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum<TT;>.MarshalerEnum;"
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableEnum$MarshalerEnum;->unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Enum;
 

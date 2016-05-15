@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 968
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 971
     .local p2, "value":Ljava/lang/Object;, "TT;"
     check-cast p2, Landroid/location/Location;
 
@@ -52,6 +50,5 @@
     # invokes: Landroid/hardware/camera2/impl/CameraMetadataNative;->setGpsLocation(Landroid/location/Location;)Z
     invoke-static {p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->access$1300(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/location/Location;)Z
 
-    .line 972
     return-void
 .end method

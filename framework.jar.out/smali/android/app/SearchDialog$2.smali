@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 178
     iput-object p1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     invoke-virtual {v0}, Landroid/app/SearchDialog;->dismiss()V
 
-    .line 182
     return-void
 .end method

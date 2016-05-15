@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 171
     iput-object p1, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,16 +42,13 @@
     .param p3, "newVal"    # I
 
     .prologue
-    .line 173
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->updateInputState()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$000(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 174
     invoke-virtual {p1}, Landroid/widget/NumberPicker;->requestFocus()Z
 
-    .line 175
     iget-object v1, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
@@ -70,22 +66,18 @@
     # setter for: Landroid/widget/TimePickerSpinnerDelegate;->mIsAm:Z
     invoke-static {v1, v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$102(Landroid/widget/TimePickerSpinnerDelegate;Z)Z
 
-    .line 176
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->updateAmPmControl()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$200(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 177
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->onTimeChanged()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$300(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 178
     return-void
 
-    .line 175
     :cond_0
     const/4 v0, 0x0
 

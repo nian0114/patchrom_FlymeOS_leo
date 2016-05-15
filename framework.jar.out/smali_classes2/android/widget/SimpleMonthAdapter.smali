@@ -35,31 +35,26 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 35
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mMinDate:Ljava/util/Calendar;
 
-    .line 36
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mMaxDate:Ljava/util/Calendar;
 
-    .line 40
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mSelectedDay:Ljava/util/Calendar;
 
-    .line 41
     const/high16 v0, -0x1000000
 
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
@@ -68,17 +63,14 @@
 
     iput-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mCalendarTextColors:Landroid/content/res/ColorStateList;
 
-    .line 197
     new-instance v0, Landroid/widget/SimpleMonthAdapter$1;
 
     invoke-direct {v0, p0}, Landroid/widget/SimpleMonthAdapter$1;-><init>(Landroid/widget/SimpleMonthAdapter;)V
 
     iput-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mOnDayClickListener:Landroid/widget/SimpleMonthView$OnDayClickListener;
 
-    .line 47
     iput-object p1, p0, Landroid/widget/SimpleMonthAdapter;->mContext:Landroid/content/Context;
 
-    .line 48
     return-void
 .end method
 
@@ -88,7 +80,6 @@
     .param p1, "x1"    # Ljava/util/Calendar;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Landroid/widget/SimpleMonthAdapter;->isCalendarInRange(Ljava/util/Calendar;)Z
 
     move-result v0
@@ -101,7 +92,6 @@
     .param p0, "x0"    # Landroid/widget/SimpleMonthAdapter;
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mOnDaySelectedListener:Landroid/widget/SimpleMonthAdapter$OnDaySelectedListener;
 
     return-object v0
@@ -112,7 +102,6 @@
     .param p1, "value"    # Ljava/util/Calendar;
 
     .prologue
-    .line 194
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mMinDate:Ljava/util/Calendar;
 
     invoke-virtual {p1, v0}, Ljava/util/Calendar;->compareTo(Ljava/util/Calendar;)I
@@ -148,7 +137,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 190
     iget-object v1, p0, Landroid/widget/SimpleMonthAdapter;->mSelectedDay:Ljava/util/Calendar;
 
     invoke-virtual {v1, v0}, Ljava/util/Calendar;->get(I)I
@@ -186,7 +174,6 @@
 
     const/4 v4, 0x1
 
-    .line 111
     iget-object v2, p0, Landroid/widget/SimpleMonthAdapter;->mMaxDate:Ljava/util/Calendar;
 
     invoke-virtual {v2, v4}, Ljava/util/Calendar;->get(I)I
@@ -201,7 +188,6 @@
 
     sub-int v1, v2, v3
 
-    .line 112
     .local v1, "diffYear":I
     iget-object v2, p0, Landroid/widget/SimpleMonthAdapter;->mMaxDate:Ljava/util/Calendar;
 
@@ -217,7 +203,6 @@
 
     sub-int v0, v2, v3
 
-    .line 113
     .local v0, "diffMonth":I
     mul-int/lit8 v2, v1, 0xc
 
@@ -232,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Landroid/widget/SimpleMonthAdapter;->mFirstDayOfWeek:I
 
     return v0
@@ -243,7 +227,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     return-object v0
@@ -254,7 +237,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 123
     int-to-long v0, p1
 
     return-wide v0
@@ -267,15 +249,12 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 135
     if-eqz p2, :cond_1
 
     move-object v0, p2
 
-    .line 136
     check-cast v0, Landroid/widget/SimpleMonthView;
 
-    .line 152
     .local v0, "v":Landroid/widget/SimpleMonthView;
     :cond_0
     :goto_0
@@ -287,7 +266,6 @@
 
     move-result v8
 
-    .line 153
     .local v8, "minMonth":I
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mMinDate:Ljava/util/Calendar;
 
@@ -297,21 +275,17 @@
 
     move-result v9
 
-    .line 154
     .local v9, "minYear":I
     add-int v7, p1, v8
 
-    .line 155
     .local v7, "currentMonth":I
     rem-int/lit8 v2, v7, 0xc
 
-    .line 156
     .local v2, "month":I
     div-int/lit8 v4, v7, 0xc
 
     add-int v3, v4, v9
 
-    .line 158
     .local v3, "year":I
     invoke-direct {p0, v3, v2}, Landroid/widget/SimpleMonthAdapter;->isSelectedDayInMonth(II)Z
 
@@ -319,7 +293,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 159
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mSelectedDay:Ljava/util/Calendar;
 
     const/4 v11, 0x5
@@ -328,17 +301,14 @@
 
     move-result v1
 
-    .line 166
     .local v1, "selectedDay":I
     :goto_1
     invoke-virtual {v0}, Landroid/widget/SimpleMonthView;->reuse()V
 
-    .line 169
     if-ne v8, v2, :cond_3
 
     if-ne v9, v3, :cond_3
 
-    .line 170
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mMinDate:Ljava/util/Calendar;
 
     const/4 v11, 0x5
@@ -347,7 +317,6 @@
 
     move-result v5
 
-    .line 176
     .local v5, "enabledDayRangeStart":I
     :goto_2
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mMaxDate:Ljava/util/Calendar;
@@ -370,7 +339,6 @@
 
     if-ne v4, v3, :cond_4
 
-    .line 177
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mMaxDate:Ljava/util/Calendar;
 
     const/4 v11, 0x5
@@ -379,20 +347,16 @@
 
     move-result v6
 
-    .line 182
     .local v6, "enabledDayRangeEnd":I
     :goto_3
     iget v4, p0, Landroid/widget/SimpleMonthAdapter;->mFirstDayOfWeek:I
 
     invoke-virtual/range {v0 .. v6}, Landroid/widget/SimpleMonthView;->setMonthParams(IIIIII)V
 
-    .line 184
     invoke-virtual {v0}, Landroid/widget/SimpleMonthView;->invalidate()V
 
-    .line 186
     return-object v0
 
-    .line 138
     .end local v0    # "v":Landroid/widget/SimpleMonthView;
     .end local v1    # "selectedDay":I
     .end local v2    # "month":I
@@ -409,7 +373,6 @@
 
     invoke-direct {v0, v4}, Landroid/widget/SimpleMonthView;-><init>(Landroid/content/Context;)V
 
-    .line 141
     .restart local v0    # "v":Landroid/widget/SimpleMonthView;
     new-instance v10, Landroid/widget/AbsListView$LayoutParams;
 
@@ -419,33 +382,27 @@
 
     invoke-direct {v10, v4, v11}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 143
     .local v10, "params":Landroid/widget/AbsListView$LayoutParams;
     invoke-virtual {v0, v10}, Landroid/widget/SimpleMonthView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 144
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Landroid/widget/SimpleMonthView;->setClickable(Z)V
 
-    .line 145
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mOnDayClickListener:Landroid/widget/SimpleMonthView$OnDayClickListener;
 
     invoke-virtual {v0, v4}, Landroid/widget/SimpleMonthView;->setOnDayClickListener(Landroid/widget/SimpleMonthView$OnDayClickListener;)V
 
-    .line 147
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mCalendarTextColors:Landroid/content/res/ColorStateList;
 
     if-eqz v4, :cond_0
 
-    .line 148
     iget-object v4, p0, Landroid/widget/SimpleMonthAdapter;->mCalendarTextColors:Landroid/content/res/ColorStateList;
 
     invoke-virtual {v0, v4}, Landroid/widget/SimpleMonthView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     goto :goto_0
 
-    .line 161
     .end local v10    # "params":Landroid/widget/AbsListView$LayoutParams;
     .restart local v2    # "month":I
     .restart local v3    # "year":I
@@ -458,14 +415,12 @@
     .restart local v1    # "selectedDay":I
     goto :goto_1
 
-    .line 172
     :cond_3
     const/4 v5, 0x1
 
     .restart local v5    # "enabledDayRangeStart":I
     goto :goto_2
 
-    .line 179
     :cond_4
     const/16 v6, 0x1f
 
@@ -477,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 128
     const/4 v0, 0x1
 
     return v0
@@ -488,7 +442,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 97
     iget-object v2, p0, Landroid/widget/SimpleMonthAdapter;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/android/internal/R$styleable;->TextAppearance:[I
@@ -497,7 +450,6 @@
 
     move-result-object v0
 
-    .line 99
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v2, 0x3
 
@@ -505,18 +457,14 @@
 
     move-result-object v1
 
-    .line 100
     .local v1, "textColor":Landroid/content/res/ColorStateList;
     if-eqz v1, :cond_0
 
-    .line 101
     iput-object v1, p0, Landroid/widget/SimpleMonthAdapter;->mCalendarTextColors:Landroid/content/res/ColorStateList;
 
-    .line 106
     :cond_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 107
     return-void
 .end method
 
@@ -525,10 +473,8 @@
     .param p1, "colors"    # Landroid/content/res/ColorStateList;
 
     .prologue
-    .line 88
     iput-object p1, p0, Landroid/widget/SimpleMonthAdapter;->mCalendarTextColors:Landroid/content/res/ColorStateList;
 
-    .line 89
     return-void
 .end method
 
@@ -537,13 +483,10 @@
     .param p1, "firstDayOfWeek"    # I
 
     .prologue
-    .line 58
     iput p1, p0, Landroid/widget/SimpleMonthAdapter;->mFirstDayOfWeek:I
 
-    .line 60
     invoke-virtual {p0}, Landroid/widget/SimpleMonthAdapter;->notifyDataSetInvalidated()V
 
-    .line 61
     return-void
 .end method
 
@@ -552,10 +495,8 @@
     .param p1, "listener"    # Landroid/widget/SimpleMonthAdapter$OnDaySelectedListener;
 
     .prologue
-    .line 84
     iput-object p1, p0, Landroid/widget/SimpleMonthAdapter;->mOnDaySelectedListener:Landroid/widget/SimpleMonthAdapter$OnDaySelectedListener;
 
-    .line 85
     return-void
 .end method
 
@@ -565,7 +506,6 @@
     .param p2, "max"    # Ljava/util/Calendar;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mMinDate:Ljava/util/Calendar;
 
     invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
@@ -574,7 +514,6 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 52
     iget-object v0, p0, Landroid/widget/SimpleMonthAdapter;->mMaxDate:Ljava/util/Calendar;
 
     invoke-virtual {p2}, Ljava/util/Calendar;->getTimeInMillis()J
@@ -583,10 +522,8 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 54
     invoke-virtual {p0}, Landroid/widget/SimpleMonthAdapter;->notifyDataSetInvalidated()V
 
-    .line 55
     return-void
 .end method
 
@@ -595,12 +532,9 @@
     .param p1, "day"    # Ljava/util/Calendar;
 
     .prologue
-    .line 73
     iput-object p1, p0, Landroid/widget/SimpleMonthAdapter;->mSelectedDay:Ljava/util/Calendar;
 
-    .line 75
     invoke-virtual {p0}, Landroid/widget/SimpleMonthAdapter;->notifyDataSetChanged()V
 
-    .line 76
     return-void
 .end method

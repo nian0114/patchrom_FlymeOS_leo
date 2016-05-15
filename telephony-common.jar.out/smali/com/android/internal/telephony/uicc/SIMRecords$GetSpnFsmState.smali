@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 1693
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     const-string v1, "IDLE"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->IDLE:Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
-    .line 1694
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     const-string v1, "INIT"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->INIT:Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
-    .line 1695
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     const-string v1, "READ_SPN_3GPP"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->READ_SPN_3GPP:Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
-    .line 1696
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     const-string v1, "READ_SPN_CPHS"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->READ_SPN_CPHS:Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
-    .line 1697
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     const-string v1, "READ_SPN_SHORT_CPHS"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->READ_SPN_SHORT_CPHS:Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
-    .line 1692
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 1692
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1692
     const-class v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 1692
     sget-object v0, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->$VALUES:[Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->clone()Ljava/lang/Object;

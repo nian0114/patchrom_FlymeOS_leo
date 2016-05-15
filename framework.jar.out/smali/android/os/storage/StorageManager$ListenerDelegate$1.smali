@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 265
     iput-object p1, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
     iput-object p3, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->val$this$0:Landroid/os/storage/StorageManager;
@@ -43,12 +42,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 268
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/storage/StorageManager$StorageEvent;
 
-    .line 270
     .local v0, "e":Landroid/os/storage/StorageManager$StorageEvent;
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -58,10 +55,8 @@
 
     move-object v1, v0
 
-    .line 271
     check-cast v1, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
 
-    .line 272
     .local v1, "ev":Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
     iget-object v2, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
@@ -71,12 +66,10 @@
 
     invoke-virtual {v2, v3}, Landroid/os/storage/StorageEventListener;->onUsbMassStorageConnectionChanged(Z)V
 
-    .line 279
     .end local v1    # "ev":Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
     :goto_0
     return-void
 
-    .line 273
     :cond_0
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -86,10 +79,8 @@
 
     move-object v1, v0
 
-    .line 274
     check-cast v1, Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
 
-    .line 275
     .local v1, "ev":Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
     iget-object v2, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
@@ -105,7 +96,6 @@
 
     goto :goto_0
 
-    .line 277
     .end local v1    # "ev":Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
     :cond_1
     const-string v2, "StorageManager"

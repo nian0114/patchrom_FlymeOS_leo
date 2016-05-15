@@ -69,7 +69,6 @@
 
     const/4 v3, 0x0
 
-    .line 1818
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/media/MediaCodecInfo$Feature;
@@ -107,7 +106,6 @@
     .locals 0
 
     .prologue
-    .line 1850
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -117,14 +115,12 @@
     .locals 3
 
     .prologue
-    .line 1873
     iget-object v1, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mParent:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     invoke-virtual {v1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getMimeType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1874
     .local v0, "mime":Ljava/lang/String;
     const-string v1, "audio/flac"
 
@@ -134,7 +130,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1875
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -153,17 +148,14 @@
 
     iput-object v1, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mComplexityRange:Landroid/util/Range;
 
-    .line 1876
     const/4 v1, 0x1
 
     iput v1, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mBitControl:I
 
-    .line 1884
     :cond_0
     :goto_0
     return-void
 
-    .line 1877
     :cond_1
     const-string v1, "audio/3gpp"
 
@@ -205,7 +197,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1882
     :cond_2
     const/4 v1, 0x4
 
@@ -220,16 +211,13 @@
     .param p1, "parent"    # Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     .prologue
-    .line 1855
     new-instance v0, Landroid/media/MediaCodecInfo$EncoderCapabilities;
 
     invoke-direct {v0}, Landroid/media/MediaCodecInfo$EncoderCapabilities;-><init>()V
 
-    .line 1856
     .local v0, "caps":Landroid/media/MediaCodecInfo$EncoderCapabilities;
     invoke-virtual {v0, p0, p1}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->init(Landroid/media/MediaFormat;Landroid/media/MediaCodecInfo$CodecCapabilities;)V
 
-    .line 1857
     return-object v0
 .end method
 
@@ -238,7 +226,6 @@
     .param p0, "mode"    # Ljava/lang/String;
 
     .prologue
-    .line 1825
     sget-object v0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->bitrates:[Landroid/media/MediaCodecInfo$Feature;
 
     .local v0, "arr$":[Landroid/media/MediaCodecInfo$Feature;
@@ -253,7 +240,6 @@
 
     aget-object v1, v0, v2
 
-    .line 1826
     .local v1, "feat":Landroid/media/MediaCodecInfo$Feature;
     iget-object v4, v1, Landroid/media/MediaCodecInfo$Feature;->mName:Ljava/lang/String;
 
@@ -263,22 +249,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 1827
     iget v4, v1, Landroid/media/MediaCodecInfo$Feature;->mValue:I
 
-    .line 1830
     .end local v1    # "feat":Landroid/media/MediaCodecInfo$Feature;
     :goto_1
     return v4
 
-    .line 1825
     .restart local v1    # "feat":Landroid/media/MediaCodecInfo$Feature;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1830
     .end local v1    # "feat":Landroid/media/MediaCodecInfo$Feature;
     :cond_1
     const/4 v4, 0x0
@@ -291,12 +273,10 @@
     .param p1, "info"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 1892
     invoke-virtual {p1}, Landroid/media/MediaFormat;->getMap()Ljava/util/Map;
 
     move-result-object v3
 
-    .line 1894
     .local v3, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v5, "complexity-range"
 
@@ -306,7 +286,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 1895
     const-string v5, "complexity-range"
 
     invoke-virtual {p1, v5}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -321,9 +300,8 @@
 
     iput-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mComplexityRange:Landroid/util/Range;
 
-    .line 1899
     :cond_0
-    const-string/jumbo v5, "quality-range"
+    const-string v5, "quality-range"
 
     invoke-virtual {p1, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
@@ -331,8 +309,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 1900
-    const-string/jumbo v5, "quality-range"
+    const-string v5, "quality-range"
 
     invoke-virtual {p1, v5}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -346,7 +323,6 @@
 
     iput-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mQualityRange:Landroid/util/Range;
 
-    .line 1903
     :cond_1
     const-string v5, "feature-bitrate-control"
 
@@ -356,7 +332,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 1904
     const-string v5, "feature-bitrate-control"
 
     invoke-virtual {p1, v5}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -381,7 +356,6 @@
 
     aget-object v4, v0, v1
 
-    .line 1905
     .local v4, "mode":Ljava/lang/String;
     iget v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mBitControl:I
 
@@ -393,12 +367,10 @@
 
     iput v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mBitControl:I
 
-    .line 1904
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1910
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -425,10 +397,9 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1914
     :goto_1
     :try_start_1
-    const-string/jumbo v5, "quality-default"
+    const-string v5, "quality-default"
 
     invoke-interface {v3, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -448,9 +419,8 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1917
     :goto_2
-    const-string/jumbo v5, "quality-scale"
+    const-string v5, "quality-scale"
 
     invoke-interface {v3, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -460,16 +430,13 @@
 
     iput-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mQualityScale:Ljava/lang/String;
 
-    .line 1918
     return-void
 
-    .line 1915
     :catch_0
     move-exception v5
 
     goto :goto_2
 
-    .line 1911
     :catch_1
     move-exception v5
 
@@ -483,42 +450,35 @@
     .param p3, "profile"    # Ljava/lang/Integer;
 
     .prologue
-    .line 1922
     const/4 v3, 0x1
 
-    .line 1923
     .local v3, "ok":Z
     if-eqz v3, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 1924
     iget-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mComplexityRange:Landroid/util/Range;
 
     invoke-virtual {v5, p1}, Landroid/util/Range;->contains(Ljava/lang/Comparable;)Z
 
     move-result v3
 
-    .line 1926
     :cond_0
     if-eqz v3, :cond_1
 
     if-eqz p2, :cond_1
 
-    .line 1927
     iget-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mQualityRange:Landroid/util/Range;
 
     invoke-virtual {v5, p2}, Landroid/util/Range;->contains(Ljava/lang/Comparable;)Z
 
     move-result v3
 
-    .line 1929
     :cond_1
     if-eqz v3, :cond_3
 
     if-eqz p3, :cond_3
 
-    .line 1930
     iget-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mParent:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     iget-object v0, v5, Landroid/media/MediaCodecInfo$CodecCapabilities;->profileLevels:[Landroid/media/MediaCodecInfo$CodecProfileLevel;
@@ -535,7 +495,6 @@
 
     aget-object v4, v0, v1
 
-    .line 1931
     .local v4, "pl":Landroid/media/MediaCodecInfo$CodecProfileLevel;
     iget v5, v4, Landroid/media/MediaCodecInfo$CodecProfileLevel;->profile:I
 
@@ -545,17 +504,14 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 1932
     const/4 p3, 0x0
 
-    .line 1936
     .end local v4    # "pl":Landroid/media/MediaCodecInfo$CodecProfileLevel;
     :cond_2
     if-nez p3, :cond_5
 
     const/4 v3, 0x1
 
-    .line 1938
     .end local v0    # "arr$":[Landroid/media/MediaCodecInfo$CodecProfileLevel;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -563,7 +519,6 @@
     :goto_1
     return v3
 
-    .line 1930
     .restart local v0    # "arr$":[Landroid/media/MediaCodecInfo$CodecProfileLevel;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -573,7 +528,6 @@
 
     goto :goto_0
 
-    .line 1936
     .end local v4    # "pl":Landroid/media/MediaCodecInfo$CodecProfileLevel;
     :cond_5
     const/4 v3, 0x0
@@ -596,7 +550,6 @@
     .end annotation
 
     .prologue
-    .line 1808
     iget-object v0, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mComplexityRange:Landroid/util/Range;
 
     return-object v0
@@ -615,7 +568,6 @@
     .end annotation
 
     .prologue
-    .line 1796
     iget-object v0, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mQualityRange:Landroid/util/Range;
 
     return-object v0
@@ -629,10 +581,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1863
     iput-object p2, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mParent:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    .line 1864
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -647,7 +597,6 @@
 
     iput-object v0, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mComplexityRange:Landroid/util/Range;
 
-    .line 1865
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -662,18 +611,14 @@
 
     iput-object v0, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mQualityRange:Landroid/util/Range;
 
-    .line 1866
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mBitControl:I
 
-    .line 1868
     invoke-direct {p0}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->applyLevelLimits()V
 
-    .line 1869
     invoke-direct {p0, p1}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->parseFromInfo(Landroid/media/MediaFormat;)V
 
-    .line 1870
     return-void
 .end method
 
@@ -686,7 +631,6 @@
 
     const/4 v5, 0x0
 
-    .line 1837
     sget-object v0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->bitrates:[Landroid/media/MediaCodecInfo$Feature;
 
     .local v0, "arr$":[Landroid/media/MediaCodecInfo$Feature;
@@ -701,13 +645,11 @@
 
     aget-object v1, v0, v2
 
-    .line 1838
     .local v1, "feat":Landroid/media/MediaCodecInfo$Feature;
     iget v6, v1, Landroid/media/MediaCodecInfo$Feature;->mValue:I
 
     if-ne p1, v6, :cond_1
 
-    .line 1839
     iget v6, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mBitControl:I
 
     shl-int v7, v4, p1
@@ -716,7 +658,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 1842
     .end local v1    # "feat":Landroid/media/MediaCodecInfo$Feature;
     :goto_1
     return v4
@@ -725,10 +666,8 @@
     :cond_0
     move v4, v5
 
-    .line 1839
     goto :goto_1
 
-    .line 1837
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
@@ -738,7 +677,6 @@
     :cond_2
     move v4, v5
 
-    .line 1842
     goto :goto_1
 .end method
 
@@ -747,7 +685,6 @@
     .param p1, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 1944
     iget-object v4, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mQualityRange:Landroid/util/Range;
 
     invoke-virtual {v4}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -772,8 +709,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1946
-    const-string/jumbo v4, "quality"
+    const-string v4, "quality"
 
     iget-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mDefaultQuality:Ljava/lang/Integer;
 
@@ -783,7 +719,6 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 1948
     :cond_0
     iget-object v4, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mComplexityRange:Landroid/util/Range;
 
@@ -809,7 +744,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1950
     const-string v4, "complexity"
 
     iget-object v5, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mDefaultComplexity:Ljava/lang/Integer;
@@ -820,7 +754,6 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 1953
     :cond_1
     sget-object v0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->bitrates:[Landroid/media/MediaCodecInfo$Feature;
 
@@ -836,7 +769,6 @@
 
     aget-object v1, v0, v2
 
-    .line 1954
     .local v1, "feat":Landroid/media/MediaCodecInfo$Feature;
     iget v4, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mBitControl:I
 
@@ -850,19 +782,16 @@
 
     if-eqz v4, :cond_3
 
-    .line 1955
     const-string v4, "bitrate-mode"
 
     iget v5, v1, Landroid/media/MediaCodecInfo$Feature;->mValue:I
 
     invoke-virtual {p1, v4, v5}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 1959
     .end local v1    # "feat":Landroid/media/MediaCodecInfo$Feature;
     :cond_2
     return-void
 
-    .line 1953
     .restart local v1    # "feat":Landroid/media/MediaCodecInfo$Feature;
     :cond_3
     add-int/lit8 v2, v2, 0x1
@@ -875,12 +804,10 @@
     .param p1, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 1963
     invoke-virtual {p1}, Landroid/media/MediaFormat;->getMap()Ljava/util/Map;
 
     move-result-object v3
 
-    .line 1964
     .local v3, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iget-object v8, p0, Landroid/media/MediaCodecInfo$EncoderCapabilities;->mParent:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
@@ -888,7 +815,6 @@
 
     move-result-object v4
 
-    .line 1966
     .local v4, "mime":Ljava/lang/String;
     const-string v8, "bitrate-mode"
 
@@ -898,7 +824,6 @@
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 1967
     .local v5, "mode":Ljava/lang/Integer;
     if-eqz v5, :cond_0
 
@@ -912,14 +837,11 @@
 
     if-nez v8, :cond_0
 
-    .line 1968
     const/4 v8, 0x0
 
-    .line 1998
     :goto_0
     return v8
 
-    .line 1971
     :cond_0
     const-string v8, "complexity"
 
@@ -929,7 +851,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 1972
     .local v1, "complexity":Ljava/lang/Integer;
     const-string v8, "audio/flac"
 
@@ -939,7 +860,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 1973
     const-string v8, "flac-compression-level"
 
     invoke-interface {v3, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -948,17 +868,14 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 1975
     .local v2, "flacComplexity":Ljava/lang/Integer;
     if-nez v1, :cond_3
 
-    .line 1976
     move-object v1, v2
 
-    .line 1985
     .end local v2    # "flacComplexity":Ljava/lang/Integer;
     :cond_1
-    const-string/jumbo v8, "profile"
+    const-string v8, "profile"
 
     invoke-interface {v3, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -966,7 +883,6 @@
 
     check-cast v6, Ljava/lang/Integer;
 
-    .line 1986
     .local v6, "profile":Ljava/lang/Integer;
     const-string v8, "audio/mp4a-latm"
 
@@ -976,7 +892,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 1987
     const-string v8, "aac-profile"
 
     invoke-interface {v3, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -985,17 +900,14 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1988
     .local v0, "aacProfile":Ljava/lang/Integer;
     if-nez v6, :cond_4
 
-    .line 1989
     move-object v6, v0
 
-    .line 1996
     .end local v0    # "aacProfile":Ljava/lang/Integer;
     :cond_2
-    const-string/jumbo v8, "quality"
+    const-string v8, "quality"
 
     invoke-interface {v3, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1003,7 +915,6 @@
 
     check-cast v7, Ljava/lang/Integer;
 
-    .line 1998
     .local v7, "quality":Ljava/lang/Integer;
     invoke-direct {p0, v1, v7, v6}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->supports(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Z
 
@@ -1011,7 +922,6 @@
 
     goto :goto_0
 
-    .line 1977
     .end local v6    # "profile":Ljava/lang/Integer;
     .end local v7    # "quality":Ljava/lang/Integer;
     .restart local v2    # "flacComplexity":Ljava/lang/Integer;
@@ -1020,7 +930,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 1978
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "conflicting values for complexity and flac-compression-level"
@@ -1029,7 +938,6 @@
 
     throw v8
 
-    .line 1990
     .end local v2    # "flacComplexity":Ljava/lang/Integer;
     .restart local v0    # "aacProfile":Ljava/lang/Integer;
     .restart local v6    # "profile":Ljava/lang/Integer;
@@ -1038,7 +946,6 @@
 
     if-eq v0, v6, :cond_2
 
-    .line 1991
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "conflicting values for profile and aac-profile"

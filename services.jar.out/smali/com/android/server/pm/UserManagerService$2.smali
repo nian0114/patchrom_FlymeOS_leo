@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1373
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$2;->this$0:Lcom/android/server/pm/UserManagerService;
 
     iput p2, p0, Lcom/android/server/pm/UserManagerService$2;->val$userHandle:I
@@ -43,13 +42,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1381
     new-instance v0, Lcom/android/server/pm/UserManagerService$2$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/UserManagerService$2$1;-><init>(Lcom/android/server/pm/UserManagerService$2;)V
 
     invoke-virtual {v0}, Lcom/android/server/pm/UserManagerService$2$1;->start()V
 
-    .line 1390
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 193
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 197
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -61,11 +58,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->loge(Ljava/lang/String;)V
 
-    .line 207
     :goto_0
     return-void
 
-    .line 201
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 203
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -81,7 +75,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 204
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTracker;->onSimRecordsLoaded()V
@@ -89,7 +82,6 @@
 
     goto :goto_0
 
-    .line 201
     nop
 
     :pswitch_data_0

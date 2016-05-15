@@ -31,22 +31,17 @@
     .param p3, "score"    # I
 
     .prologue
-    .line 181
     iput-object p1, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->this$0:Landroid/net/NetworkFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 182
     iput-object p2, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 183
     iput p3, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->score:I
 
-    .line 184
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
-    .line 185
     return-void
 .end method

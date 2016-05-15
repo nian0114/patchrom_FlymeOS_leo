@@ -29,12 +29,10 @@
     .param p2, "viewId"    # I
 
     .prologue
-    .line 690
     iput-object p1, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->this$0:Landroid/widget/TabHost;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 691
     # getter for: Landroid/widget/TabHost;->mTabContent:Landroid/widget/FrameLayout;
     invoke-static {p1}, Landroid/widget/TabHost;->access$100(Landroid/widget/TabHost;)Landroid/widget/FrameLayout;
 
@@ -46,22 +44,18 @@
 
     iput-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
-    .line 692
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 693
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 698
     return-void
 
-    .line 695
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -95,7 +89,6 @@
     .param p3, "x2"    # Landroid/widget/TabHost$1;
 
     .prologue
-    .line 686
     invoke-direct {p0, p1, p2}, Landroid/widget/TabHost$ViewIdContentStrategy;-><init>(Landroid/widget/TabHost;I)V
 
     return-void
@@ -107,14 +100,12 @@
     .locals 2
 
     .prologue
-    .line 701
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 702
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     return-object v0
@@ -124,13 +115,11 @@
     .locals 2
 
     .prologue
-    .line 706
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 707
     return-void
 .end method

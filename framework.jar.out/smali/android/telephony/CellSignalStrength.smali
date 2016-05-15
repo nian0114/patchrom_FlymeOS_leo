@@ -24,26 +24,25 @@
     .locals 3
 
     .prologue
-    .line 37
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "none"
+    const-string v2, "none"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "poor"
+    const-string v2, "poor"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string/jumbo v2, "moderate"
+    const-string v2, "moderate"
 
     aput-object v2, v0, v1
 
@@ -68,10 +67,8 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     return-void
 .end method
 

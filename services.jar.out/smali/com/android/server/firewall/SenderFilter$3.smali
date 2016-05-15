@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p7, "receivingUid"    # I
 
     .prologue
-    .line 91
     invoke-static {p4, p5}, Lcom/android/server/firewall/SenderFilter;->isPrivilegedApp(II)Z
 
     move-result v0

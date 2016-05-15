@@ -40,15 +40,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 139
     invoke-direct {p0, p1}, Landroid/view/ActionProvider;-><init>(Landroid/content/Context;)V
 
-    .line 106
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/widget/ShareActionProvider;->mMaxShownActivityCount:I
 
-    .line 111
     new-instance v0, Landroid/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener;
 
     const/4 v1, 0x0
@@ -57,15 +54,12 @@
 
     iput-object v0, p0, Landroid/widget/ShareActionProvider;->mOnMenuItemClickListener:Landroid/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener;
 
-    .line 127
     const-string v0, "share_history.xml"
 
     iput-object v0, p0, Landroid/widget/ShareActionProvider;->mShareHistoryFileName:Ljava/lang/String;
 
-    .line 140
     iput-object p1, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
-    .line 141
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .param p0, "x0"    # Landroid/widget/ShareActionProvider;
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -85,7 +78,6 @@
     .param p0, "x0"    # Landroid/widget/ShareActionProvider;
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/widget/ShareActionProvider;->mShareHistoryFileName:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +88,6 @@
     .param p0, "x0"    # Landroid/widget/ShareActionProvider;
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/widget/ShareActionProvider;->mOnShareTargetSelectedListener:Landroid/widget/ShareActionProvider$OnShareTargetSelectedListener;
 
     return-object v0
@@ -106,22 +97,18 @@
     .locals 3
 
     .prologue
-    .line 319
     iget-object v1, p0, Landroid/widget/ShareActionProvider;->mOnShareTargetSelectedListener:Landroid/widget/ShareActionProvider$OnShareTargetSelectedListener;
 
     if-nez v1, :cond_0
 
-    .line 327
     :goto_0
     return-void
 
-    .line 322
     :cond_0
     iget-object v1, p0, Landroid/widget/ShareActionProvider;->mOnChooseActivityListener:Landroid/widget/ActivityChooserModel$OnChooseActivityListener;
 
     if-nez v1, :cond_1
 
-    .line 323
     new-instance v1, Landroid/widget/ShareActionProvider$ShareActivityChooserModelPolicy;
 
     const/4 v2, 0x0
@@ -130,7 +117,6 @@
 
     iput-object v1, p0, Landroid/widget/ShareActionProvider;->mOnChooseActivityListener:Landroid/widget/ActivityChooserModel$OnChooseActivityListener;
 
-    .line 325
     :cond_1
     iget-object v1, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
@@ -140,7 +126,6 @@
 
     move-result-object v0
 
-    .line 326
     .local v0, "dataModel":Landroid/widget/ActivityChooserModel;
     iget-object v1, p0, Landroid/widget/ShareActionProvider;->mOnChooseActivityListener:Landroid/widget/ActivityChooserModel$OnChooseActivityListener;
 
@@ -155,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 191
     const/4 v0, 0x1
 
     return v0
@@ -165,14 +149,12 @@
     .locals 7
 
     .prologue
-    .line 164
     new-instance v0, Landroid/widget/ActivityChooserView;
 
     iget-object v4, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v4}, Landroid/widget/ActivityChooserView;-><init>(Landroid/content/Context;)V
 
-    .line 165
     .local v0, "activityChooserView":Landroid/widget/ActivityChooserView;
     invoke-virtual {v0}, Landroid/widget/ActivityChooserView;->isInEditMode()Z
 
@@ -180,7 +162,6 @@
 
     if-nez v4, :cond_0
 
-    .line 166
     iget-object v4, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Landroid/widget/ShareActionProvider;->mShareHistoryFileName:Ljava/lang/String;
@@ -189,18 +170,15 @@
 
     move-result-object v1
 
-    .line 167
     .local v1, "dataModel":Landroid/widget/ActivityChooserModel;
     invoke-virtual {v0, v1}, Landroid/widget/ActivityChooserView;->setActivityChooserModel(Landroid/widget/ActivityChooserModel;)V
 
-    .line 171
     .end local v1    # "dataModel":Landroid/widget/ActivityChooserModel;
     :cond_0
     new-instance v3, Landroid/util/TypedValue;
 
     invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
 
-    .line 172
     .local v3, "outTypedValue":Landroid/util/TypedValue;
     iget-object v4, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
@@ -214,7 +192,6 @@
 
     invoke-virtual {v4, v5, v3, v6}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 173
     iget-object v4, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
     iget v5, v3, Landroid/util/TypedValue;->resourceId:I
@@ -223,24 +200,19 @@
 
     move-result-object v2
 
-    .line 174
     .local v2, "drawable":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0, v2}, Landroid/widget/ActivityChooserView;->setExpandActivityOverflowButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 175
     invoke-virtual {v0, p0}, Landroid/widget/ActivityChooserView;->setProvider(Landroid/view/ActionProvider;)V
 
-    .line 178
     const v4, 0x1040670
 
     invoke-virtual {v0, v4}, Landroid/widget/ActivityChooserView;->setDefaultActionButtonContentDescription(I)V
 
-    .line 180
     const v4, 0x104066f
 
     invoke-virtual {v0, v4}, Landroid/widget/ActivityChooserView;->setExpandActivityOverflowButtonContentDescription(I)V
 
-    .line 183
     return-object v0
 .end method
 
@@ -251,10 +223,8 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 200
     invoke-interface {p1}, Landroid/view/SubMenu;->clear()V
 
-    .line 202
     iget-object v7, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
     iget-object v8, p0, Landroid/widget/ShareActionProvider;->mShareHistoryFileName:Ljava/lang/String;
@@ -263,7 +233,6 @@
 
     move-result-object v2
 
-    .line 203
     .local v2, "dataModel":Landroid/widget/ActivityChooserModel;
     iget-object v7, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
@@ -271,13 +240,11 @@
 
     move-result-object v6
 
-    .line 205
     .local v6, "packageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {v2}, Landroid/widget/ActivityChooserModel;->getActivityCount()I
 
     move-result v3
 
-    .line 206
     .local v3, "expandedActivityCount":I
     iget v7, p0, Landroid/widget/ShareActionProvider;->mMaxShownActivityCount:I
 
@@ -285,7 +252,6 @@
 
     move-result v1
 
-    .line 209
     .local v1, "collapsedActivityCount":I
     const/4 v5, 0x0
 
@@ -293,12 +259,10 @@
     :goto_0
     if-ge v5, v1, :cond_0
 
-    .line 210
     invoke-virtual {v2, v5}, Landroid/widget/ActivityChooserModel;->getActivity(I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
 
-    .line 211
     .local v0, "activity":Landroid/content/pm/ResolveInfo;
     invoke-virtual {v0, v6}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
@@ -320,17 +284,14 @@
 
     invoke-interface {v7, v8}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 209
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 216
     .end local v0    # "activity":Landroid/content/pm/ResolveInfo;
     :cond_0
     if-ge v1, v3, :cond_1
 
-    .line 218
     iget-object v7, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
 
     const v8, 0x104069a
@@ -343,19 +304,16 @@
 
     move-result-object v4
 
-    .line 221
     .local v4, "expandedSubMenu":Landroid/view/SubMenu;
     const/4 v5, 0x0
 
     :goto_1
     if-ge v5, v3, :cond_1
 
-    .line 222
     invoke-virtual {v2, v5}, Landroid/widget/ActivityChooserModel;->getActivity(I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
 
-    .line 223
     .restart local v0    # "activity":Landroid/content/pm/ResolveInfo;
     invoke-virtual {v0, v6}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
@@ -377,12 +335,10 @@
 
     invoke-interface {v7, v8}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 221
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 228
     .end local v0    # "activity":Landroid/content/pm/ResolveInfo;
     .end local v4    # "expandedSubMenu":Landroid/view/SubMenu;
     :cond_1
@@ -394,13 +350,10 @@
     .param p1, "listener"    # Landroid/widget/ShareActionProvider$OnShareTargetSelectedListener;
 
     .prologue
-    .line 154
     iput-object p1, p0, Landroid/widget/ShareActionProvider;->mOnShareTargetSelectedListener:Landroid/widget/ShareActionProvider$OnShareTargetSelectedListener;
 
-    .line 155
     invoke-direct {p0}, Landroid/widget/ShareActionProvider;->setActivityChooserPolicyIfNeeded()V
 
-    .line 156
     return-void
 .end method
 
@@ -409,13 +362,10 @@
     .param p1, "shareHistoryFile"    # Ljava/lang/String;
 
     .prologue
-    .line 260
     iput-object p1, p0, Landroid/widget/ShareActionProvider;->mShareHistoryFileName:Ljava/lang/String;
 
-    .line 261
     invoke-direct {p0}, Landroid/widget/ShareActionProvider;->setActivityChooserPolicyIfNeeded()V
 
-    .line 262
     return-void
 .end method
 
@@ -424,15 +374,12 @@
     .param p1, "shareIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 279
     if-eqz p1, :cond_1
 
-    .line 280
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 281
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.SEND"
 
@@ -450,13 +397,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 282
     :cond_0
     const/high16 v2, 0x8080000
 
     invoke-virtual {p1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 286
     .end local v0    # "action":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
@@ -467,10 +412,8 @@
 
     move-result-object v1
 
-    .line 288
     .local v1, "dataModel":Landroid/widget/ActivityChooserModel;
     invoke-virtual {v1, p1}, Landroid/widget/ActivityChooserModel;->setIntent(Landroid/content/Intent;)V
 
-    .line 289
     return-void
 .end method

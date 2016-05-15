@@ -64,22 +64,16 @@
     .param p4, "appId"    # I
 
     .prologue
-    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
     iput-object p1, p0, Landroid/print/PrintManager;->mContext:Landroid/content/Context;
 
-    .line 187
     iput-object p2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
-    .line 188
     iput p3, p0, Landroid/print/PrintManager;->mUserId:I
 
-    .line 189
     iput p4, p0, Landroid/print/PrintManager;->mAppId:I
 
-    .line 190
     new-instance v0, Landroid/print/PrintManager$1;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -94,7 +88,6 @@
 
     iput-object v0, p0, Landroid/print/PrintManager;->mHandler:Landroid/os/Handler;
 
-    .line 208
     return-void
 .end method
 
@@ -105,36 +98,30 @@
     .param p1, "listener"    # Landroid/print/PrintManager$PrintJobStateChangeListener;
 
     .prologue
-    .line 242
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v2, :cond_0
 
-    .line 243
     const-string v2, "PrintManager"
 
     const-string v3, "Feature android.software.print not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     :goto_0
     return-void
 
-    .line 246
     :cond_0
     iget-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
     if-nez v2, :cond_1
 
-    .line 247
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
-    .line 250
     :cond_1
     new-instance v1, Landroid/print/PrintManager$PrintJobStateChangeListenerWrapper;
 
@@ -142,7 +129,6 @@
 
     invoke-direct {v1, p1, v2}, Landroid/print/PrintManager$PrintJobStateChangeListenerWrapper;-><init>(Landroid/print/PrintManager$PrintJobStateChangeListener;Landroid/os/Handler;)V
 
-    .line 253
     .local v1, "wrappedListener":Landroid/print/PrintManager$PrintJobStateChangeListenerWrapper;
     :try_start_0
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -153,7 +139,6 @@
 
     invoke-interface {v2, v1, v3, v4}, Landroid/print/IPrintManager;->addPrintJobStateChangeListener(Landroid/print/IPrintJobStateChangeListener;II)V
 
-    .line 254
     iget-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
     invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -162,11 +147,9 @@
 
     goto :goto_0
 
-    .line 255
     :catch_0
     move-exception v0
 
-    .line 256
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "PrintManager"
 
@@ -182,23 +165,19 @@
     .param p1, "printJobId"    # Landroid/print/PrintJobId;
 
     .prologue
-    .line 342
     iget-object v1, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v1, :cond_0
 
-    .line 343
     const-string v1, "PrintManager"
 
     const-string v2, "Feature android.software.print not available"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 351
     :goto_0
     return-void
 
-    .line 347
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -213,11 +192,9 @@
 
     goto :goto_0
 
-    .line 348
     :catch_0
     move-exception v0
 
-    .line 349
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "PrintManager"
 
@@ -248,22 +225,18 @@
     .locals 4
 
     .prologue
-    .line 501
     iget-object v0, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v0, :cond_0
 
-    .line 502
     const-string v0, "PrintManager"
 
     const-string v1, "Feature android.software.print not available"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     const/4 v0, 0x0
 
-    .line 505
     :goto_0
     return-object v0
 
@@ -294,29 +267,24 @@
     .end annotation
 
     .prologue
-    .line 460
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v2, :cond_1
 
-    .line 461
     const-string v2, "PrintManager"
 
     const-string v3, "Feature android.software.print not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 472
     :cond_0
     :goto_0
     return-object v0
 
-    .line 465
     :cond_1
     :try_start_0
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -329,11 +297,9 @@
 
     move-result-object v0
 
-    .line 466
     .local v0, "enabledServices":Ljava/util/List;, "Ljava/util/List<Landroid/printservice/PrintServiceInfo;>;"
     if-nez v0, :cond_0
 
-    .line 472
     .end local v0    # "enabledServices":Ljava/util/List;, "Ljava/util/List<Landroid/printservice/PrintServiceInfo;>;"
     :goto_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -342,11 +308,9 @@
 
     goto :goto_0
 
-    .line 469
     :catch_0
     move-exception v1
 
-    .line 470
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "PrintManager"
 
@@ -362,22 +326,18 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 219
     iget-object v0, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v0, :cond_0
 
-    .line 220
     const-string v0, "PrintManager"
 
     const-string v1, "Feature android.software.print not available"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     const/4 v0, 0x0
 
-    .line 223
     :goto_0
     return-object v0
 
@@ -408,29 +368,24 @@
     .end annotation
 
     .prologue
-    .line 482
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v2, :cond_1
 
-    .line 483
     const-string v2, "PrintManager"
 
     const-string v3, "Feature android.software.print not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 494
     :cond_0
     :goto_0
     return-object v0
 
-    .line 487
     :cond_1
     :try_start_0
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -443,11 +398,9 @@
 
     move-result-object v0
 
-    .line 488
     .local v0, "installedServices":Ljava/util/List;, "Ljava/util/List<Landroid/printservice/PrintServiceInfo;>;"
     if-nez v0, :cond_0
 
-    .line 494
     .end local v0    # "installedServices":Ljava/util/List;, "Ljava/util/List<Landroid/printservice/PrintServiceInfo;>;"
     :goto_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -456,11 +409,9 @@
 
     goto :goto_0
 
-    .line 491
     :catch_0
     move-exception v1
 
-    .line 492
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "PrintManager"
 
@@ -478,24 +429,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 298
     iget-object v3, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v3, :cond_1
 
-    .line 299
     const-string v3, "PrintManager"
 
     const-string v4, "Feature android.software.print not available"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 310
     :cond_0
     :goto_0
     return-object v2
 
-    .line 303
     :cond_1
     :try_start_0
     iget-object v3, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -508,11 +455,9 @@
 
     move-result-object v0
 
-    .line 304
     .local v0, "printJob":Landroid/print/PrintJobInfo;
     if-eqz v0, :cond_0
 
-    .line 305
     new-instance v3, Landroid/print/PrintJob;
 
     invoke-direct {v3, v0, p0}, Landroid/print/PrintJob;-><init>(Landroid/print/PrintJobInfo;Landroid/print/PrintManager;)V
@@ -523,12 +468,10 @@
 
     goto :goto_0
 
-    .line 307
     .end local v0    # "printJob":Landroid/print/PrintJobInfo;
     :catch_0
     move-exception v1
 
-    .line 308
     .local v1, "re":Landroid/os/RemoteException;
     const-string v3, "PrintManager"
 
@@ -544,7 +487,6 @@
     .param p1, "printJobId"    # Landroid/print/PrintJobId;
 
     .prologue
-    .line 228
     :try_start_0
     iget-object v1, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
@@ -558,15 +500,12 @@
 
     move-result-object v1
 
-    .line 232
     :goto_0
     return-object v1
 
-    .line 229
     :catch_0
     move-exception v0
 
-    .line 230
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "PrintManager"
 
@@ -590,7 +529,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 232
     const/4 v1, 0x0
 
     goto :goto_0
@@ -609,29 +547,24 @@
     .end annotation
 
     .prologue
-    .line 320
     iget-object v5, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v5, :cond_1
 
-    .line 321
     const-string v5, "PrintManager"
 
     const-string v6, "Feature android.software.print not available"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v3
 
-    .line 338
     :cond_0
     :goto_0
     return-object v3
 
-    .line 325
     :cond_1
     :try_start_0
     iget-object v5, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -644,30 +577,25 @@
 
     move-result-object v2
 
-    .line 326
     .local v2, "printJobInfos":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     if-nez v2, :cond_2
 
-    .line 327
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v3
 
     goto :goto_0
 
-    .line 329
     :cond_2
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 330
     .local v1, "printJobCount":I
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 331
     .local v3, "printJobs":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrintJob;>;"
     const/4 v0, 0x0
 
@@ -675,7 +603,6 @@
     :goto_1
     if-ge v0, v1, :cond_0
 
-    .line 332
     new-instance v6, Landroid/print/PrintJob;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -690,12 +617,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 331
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 335
     .end local v0    # "i":I
     .end local v1    # "printJobCount":I
     .end local v2    # "printJobInfos":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrintJobInfo;>;"
@@ -703,7 +628,6 @@
     :catch_0
     move-exception v4
 
-    .line 336
     .local v4, "re":Landroid/os/RemoteException;
     const-string v5, "PrintManager"
 
@@ -711,7 +635,6 @@
 
     invoke-static {v5, v6, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 338
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v3
@@ -726,26 +649,21 @@
     .param p3, "attributes"    # Landroid/print/PrintAttributes;
 
     .prologue
-    .line 416
     iget-object v0, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v0, :cond_0
 
-    .line 417
     const-string v0, "PrintManager"
 
     const-string v1, "Feature android.software.print not available"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     const/4 v0, 0x0
 
-    .line 450
     :goto_0
     return-object v0
 
-    .line 420
     :cond_0
     iget-object v0, p0, Landroid/print/PrintManager;->mContext:Landroid/content/Context;
 
@@ -753,7 +671,6 @@
 
     if-nez v0, :cond_1
 
-    .line 421
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Can print only from an activity"
@@ -762,7 +679,6 @@
 
     throw v0
 
-    .line 423
     :cond_1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -770,20 +686,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 424
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "printJobName cannot be empty"
+    const-string v1, "printJobName cannot be empty"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 426
     :cond_2
     if-nez p2, :cond_3
 
-    .line 427
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "documentAdapter cannot be null"
@@ -792,7 +705,6 @@
 
     throw v0
 
-    .line 429
     :cond_3
     new-instance v2, Landroid/print/PrintManager$PrintDocumentAdapterDelegate;
 
@@ -802,7 +714,6 @@
 
     invoke-direct {v2, v0, p2}, Landroid/print/PrintManager$PrintDocumentAdapterDelegate;-><init>(Landroid/app/Activity;Landroid/print/PrintDocumentAdapter;)V
 
-    .line 432
     .local v2, "delegate":Landroid/print/PrintManager$PrintDocumentAdapterDelegate;
     :try_start_0
     iget-object v0, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -825,11 +736,9 @@
 
     move-result-object v11
 
-    .line 434
     .local v11, "result":Landroid/os/Bundle;
     if-eqz v11, :cond_6
 
-    .line 435
     const-string v0, "android.print.intent.extra.EXTRA_PRINT_JOB"
 
     invoke-virtual {v11, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -838,7 +747,6 @@
 
     check-cast v9, Landroid/print/PrintJobInfo;
 
-    .line 436
     .local v9, "printJob":Landroid/print/PrintJobInfo;
     const-string v0, "android.print.intent.extra.EXTRA_PRINT_DIALOG_INTENT"
 
@@ -850,19 +758,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 437
     .local v4, "intent":Landroid/content/IntentSender;
     if-eqz v9, :cond_4
 
     if-nez v4, :cond_5
 
-    .line 438
     :cond_4
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 441
     :cond_5
     :try_start_1
     iget-object v3, p0, Landroid/print/PrintManager;->mContext:Landroid/content/Context;
@@ -877,7 +782,6 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/content/Context;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;III)V
 
-    .line 442
     new-instance v0, Landroid/print/PrintJob;
 
     invoke-direct {v0, v9, p0}, Landroid/print/PrintJob;-><init>(Landroid/print/PrintJobInfo;Landroid/print/PrintManager;)V
@@ -887,11 +791,9 @@
 
     goto :goto_0
 
-    .line 443
     :catch_0
     move-exception v12
 
-    .line 444
     .local v12, "sie":Landroid/content/IntentSender$SendIntentException;
     :try_start_2
     const-string v0, "PrintManager"
@@ -902,7 +804,6 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 450
     .end local v4    # "intent":Landroid/content/IntentSender;
     .end local v9    # "printJob":Landroid/print/PrintJobInfo;
     .end local v11    # "result":Landroid/os/Bundle;
@@ -913,11 +814,9 @@
 
     goto :goto_0
 
-    .line 447
     :catch_1
     move-exception v10
 
-    .line 448
     .local v10, "re":Landroid/os/RemoteException;
     const-string v0, "PrintManager"
 
@@ -933,30 +832,25 @@
     .param p1, "listener"    # Landroid/print/PrintManager$PrintJobStateChangeListener;
 
     .prologue
-    .line 267
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v2, :cond_1
 
-    .line 268
     const-string v2, "PrintManager"
 
     const-string v3, "Feature android.software.print not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     :cond_0
     :goto_0
     return-void
 
-    .line 271
     :cond_1
     iget-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
     if-eqz v2, :cond_0
 
-    .line 274
     iget-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -965,11 +859,9 @@
 
     check-cast v1, Landroid/print/PrintManager$PrintJobStateChangeListenerWrapper;
 
-    .line 276
     .local v1, "wrappedListener":Landroid/print/PrintManager$PrintJobStateChangeListenerWrapper;
     if-eqz v1, :cond_0
 
-    .line 279
     iget-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->isEmpty()Z
@@ -978,16 +870,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 280
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/print/PrintManager;->mPrintJobStateChangeListeners:Ljava/util/Map;
 
-    .line 282
     :cond_2
     invoke-virtual {v1}, Landroid/print/PrintManager$PrintJobStateChangeListenerWrapper;->destroy()V
 
-    .line 284
     :try_start_0
     iget-object v2, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
@@ -999,11 +888,9 @@
 
     goto :goto_0
 
-    .line 285
     :catch_0
     move-exception v0
 
-    .line 286
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "PrintManager"
 
@@ -1019,23 +906,19 @@
     .param p1, "printJobId"    # Landroid/print/PrintJobId;
 
     .prologue
-    .line 354
     iget-object v1, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
 
     if-nez v1, :cond_0
 
-    .line 355
     const-string v1, "PrintManager"
 
     const-string v2, "Feature android.software.print not available"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     :goto_0
     return-void
 
-    .line 359
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/print/PrintManager;->mService:Landroid/print/IPrintManager;
@@ -1050,11 +933,9 @@
 
     goto :goto_0
 
-    .line 360
     :catch_0
     move-exception v0
 
-    .line 361
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "PrintManager"
 

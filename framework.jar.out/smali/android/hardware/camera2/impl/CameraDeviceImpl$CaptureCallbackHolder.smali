@@ -53,16 +53,13 @@
     .end annotation
 
     .prologue
-    .line 923
     .local p2, "requestList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/CaptureRequest;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 924
     if-eqz p1, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 925
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -72,24 +69,19 @@
 
     throw v0
 
-    .line 928
     :cond_1
     iput-boolean p4, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRepeating:Z
 
-    .line 929
     iput-object p3, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mHandler:Landroid/os/Handler;
 
-    .line 930
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRequestList:Ljava/util/List;
 
-    .line 931
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mCallback:Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
 
-    .line 932
     return-void
 .end method
 
@@ -99,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 939
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mCallback:Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
 
     return-object v0
@@ -109,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 963
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -119,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 959
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->getRequest(I)Landroid/hardware/camera2/CaptureRequest;
@@ -138,7 +127,6 @@
 
     const/4 v4, 0x0
 
-    .line 943
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRequestList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -147,7 +135,6 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 944
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Requested subsequenceId %d is larger than request list size %d."
@@ -182,11 +169,9 @@
 
     throw v0
 
-    .line 949
     :cond_0
     if-gez p1, :cond_1
 
-    .line 950
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Requested subsequenceId %d is negative"
@@ -207,7 +192,6 @@
 
     throw v0
 
-    .line 953
     :cond_1
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRequestList:Ljava/util/List;
 
@@ -224,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 935
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRepeating:Z
 
     return v0

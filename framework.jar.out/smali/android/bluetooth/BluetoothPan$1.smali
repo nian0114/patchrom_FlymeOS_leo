@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 184
     iput-object p1, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,14 +37,13 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 189
     const-string v2, "BluetoothPan"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onBluetoothStateChange on: "
+    const-string v4, "onBluetoothStateChange on: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,10 +59,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     if-eqz p1, :cond_1
 
-    .line 192
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
@@ -75,14 +71,12 @@
 
     if-nez v2, :cond_0
 
-    .line 193
     const-string v2, "BluetoothPan"
 
-    const-string/jumbo v3, "onBluetoothStateChange call bindService"
+    const-string v3, "onBluetoothStateChange call bindService"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothPan;->doBind()Z
@@ -90,41 +84,35 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 212
     :cond_0
     :goto_0
     return-void
 
-    .line 196
     :catch_0
     move-exception v0
 
-    .line 197
     .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v2, "BluetoothPan"
 
-    const-string/jumbo v3, "onBluetoothStateChange: could not bind to PAN service: "
+    const-string v3, "onBluetoothStateChange: could not bind to PAN service: "
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 198
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v0
 
-    .line 199
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v2, "BluetoothPan"
 
-    const-string/jumbo v3, "onBluetoothStateChange: could not bind to PAN service: "
+    const-string v3, "onBluetoothStateChange: could not bind to PAN service: "
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 203
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
@@ -136,7 +124,6 @@
 
     monitor-enter v3
 
-    .line 205
     :try_start_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
@@ -145,7 +132,6 @@
     # setter for: Landroid/bluetooth/BluetoothPan;->mPanService:Landroid/bluetooth/IBluetoothPan;
     invoke-static {v2, v4}, Landroid/bluetooth/BluetoothPan;->access$002(Landroid/bluetooth/BluetoothPan;Landroid/bluetooth/IBluetoothPan;)Landroid/bluetooth/IBluetoothPan;
 
-    .line 206
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     # getter for: Landroid/bluetooth/BluetoothPan;->mContext:Landroid/content/Context;
@@ -165,7 +151,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 210
     :goto_1
     :try_start_2
     monitor-exit v3
@@ -181,11 +166,9 @@
 
     throw v2
 
-    .line 207
     :catch_2
     move-exception v1
 
-    .line 208
     .local v1, "re":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "BluetoothPan"

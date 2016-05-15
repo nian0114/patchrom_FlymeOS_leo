@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1786
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .param p1, "artistId"    # J
 
     .prologue
-    .line 1789
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

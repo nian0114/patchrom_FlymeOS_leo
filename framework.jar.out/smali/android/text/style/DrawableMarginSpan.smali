@@ -19,13 +19,10 @@
     .param p1, "b"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 30
     return-void
 .end method
 
@@ -35,16 +32,12 @@
     .param p2, "pad"    # I
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 34
     iput p2, p0, Landroid/text/style/DrawableMarginSpan;->mPad:I
 
-    .line 35
     return-void
 .end method
 
@@ -60,7 +53,6 @@
     .param p6, "fm"    # Landroid/graphics/Paint$FontMetricsInt;
 
     .prologue
-    .line 60
     check-cast p1, Landroid/text/Spanned;
 
     .end local p1    # "text":Ljava/lang/CharSequence;
@@ -70,14 +62,12 @@
 
     if-ne p3, v2, :cond_1
 
-    .line 61
     iget-object v2, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 63
     .local v0, "ht":I
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
@@ -91,18 +81,15 @@
 
     sub-int v1, v0, v2
 
-    .line 64
     .local v1, "need":I
     if-lez v1, :cond_0
 
-    .line 65
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     add-int/2addr v2, v1
 
     iput v2, p6, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    .line 67
     :cond_0
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
@@ -116,17 +103,14 @@
 
     sub-int v1, v0, v2
 
-    .line 68
     if-lez v1, :cond_1
 
-    .line 69
     iget v2, p6, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
     add-int/2addr v2, v1
 
     iput v2, p6, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
-    .line 71
     .end local v0    # "ht":I
     .end local v1    # "need":I
     :cond_1
@@ -149,7 +133,6 @@
     .param p12, "layout"    # Landroid/text/Layout;
 
     .prologue
-    .line 45
     check-cast p8, Landroid/text/Spanned;
 
     .end local p8    # "text":Ljava/lang/CharSequence;
@@ -159,11 +142,9 @@
 
     move-result v5
 
-    .line 46
     .local v5, "st":I
     move v4, p3
 
-    .line 47
     .local v4, "ix":I
     move-object/from16 v0, p12
 
@@ -177,7 +158,6 @@
 
     move-result v3
 
-    .line 49
     .local v3, "itop":I
     iget-object v6, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -185,7 +165,6 @@
 
     move-result v2
 
-    .line 50
     .local v2, "dw":I
     iget-object v6, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -193,7 +172,6 @@
 
     move-result v1
 
-    .line 53
     .local v1, "dh":I
     iget-object v6, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -203,12 +181,10 @@
 
     invoke-virtual {v6, v4, v3, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 54
     iget-object v6, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 55
     return-void
 .end method
 
@@ -217,7 +193,6 @@
     .param p1, "first"    # Z
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/text/style/DrawableMarginSpan;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 214
     iput-object p1, p0, Landroid/transition/ChangeText$2;->this$0:Landroid/transition/ChangeText;
 
     iput-object p2, p0, Landroid/transition/ChangeText$2;->val$view:Landroid/widget/TextView;
@@ -49,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 217
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -60,7 +58,6 @@
 
     move-result v0
 
-    .line 218
     .local v0, "currAlpha":I
     iget-object v1, p0, Landroid/transition/ChangeText$2;->val$view:Landroid/widget/TextView;
 
@@ -90,6 +87,5 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 220
     return-void
 .end method

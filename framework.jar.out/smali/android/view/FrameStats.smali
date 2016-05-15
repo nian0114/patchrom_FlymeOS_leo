@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,17 +29,14 @@
     .locals 2
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Landroid/view/FrameStats;->getFrameCount()I
 
     move-result v0
 
     if-gtz v0, :cond_0
 
-    .line 82
     const-wide/16 v0, -0x1
 
-    .line 84
     :goto_0
     return-wide v0
 
@@ -62,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/view/FrameStats;->mFramesPresentedTimeNano:[J
 
     if-eqz v0, :cond_0
@@ -85,19 +80,16 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/view/FrameStats;->mFramesPresentedTimeNano:[J
 
     if-nez v0, :cond_0
 
-    .line 96
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 98
     :cond_0
     iget-object v0, p0, Landroid/view/FrameStats;->mFramesPresentedTimeNano:[J
 
@@ -110,7 +102,6 @@
     .locals 2
 
     .prologue
-    .line 44
     iget-wide v0, p0, Landroid/view/FrameStats;->mRefreshPeriodNano:J
 
     return-wide v0
@@ -120,17 +111,14 @@
     .locals 2
 
     .prologue
-    .line 66
     invoke-virtual {p0}, Landroid/view/FrameStats;->getFrameCount()I
 
     move-result v0
 
     if-gtz v0, :cond_0
 
-    .line 67
     const-wide/16 v0, -0x1
 
-    .line 69
     :goto_0
     return-wide v0
 

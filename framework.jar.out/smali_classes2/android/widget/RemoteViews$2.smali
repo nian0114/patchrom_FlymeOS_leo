@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 2603
     iput-object p1, p0, Landroid/widget/RemoteViews$2;->this$0:Landroid/widget/RemoteViews;
 
     iput-object p3, p0, Landroid/widget/RemoteViews$2;->val$contextForResources:Landroid/content/Context;
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 2606
     iget-object v0, p0, Landroid/widget/RemoteViews$2;->val$contextForResources:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -56,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 2610
     iget-object v0, p0, Landroid/widget/RemoteViews$2;->val$contextForResources:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;

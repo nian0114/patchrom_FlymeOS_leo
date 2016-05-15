@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 20
     const-string v0, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
     invoke-virtual {p0, p0, v0}, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -59,17 +56,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     if-nez p0, :cond_0
 
-    .line 29
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 31
     :cond_0
     const-string v1, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
@@ -77,7 +70,6 @@
 
     move-result-object v0
 
-    .line 32
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -85,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 33
     check-cast v0, Lorg/codeaurora/ims/csvt/ICsvtServiceListener;
 
     goto :goto_0
 
-    .line 35
     :cond_1
     new-instance v0, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub$Proxy;
 
@@ -106,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-object p0
 .end method
 
@@ -127,10 +116,8 @@
 
     const/4 v2, 0x1
 
-    .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 91
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -138,7 +125,6 @@
     :goto_0
     return v2
 
-    .line 47
     :sswitch_0
     const-string v3, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
@@ -146,49 +132,41 @@
 
     goto :goto_0
 
-    .line 52
     :sswitch_1
     const-string v3, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 55
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub;->onPhoneStateChanged(I)V
 
     goto :goto_0
 
-    .line 60
     .end local v0    # "_arg0":I
     :sswitch_2
     const-string v3, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 62
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 63
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub;->onCallStatus(I)V
 
     goto :goto_0
 
-    .line 68
     .end local v0    # "_arg0":I
     :sswitch_3
     const-string v3, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 70
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -197,41 +175,35 @@
 
     move v0, v2
 
-    .line 71
     .local v0, "_arg0":Z
     :cond_0
     invoke-virtual {p0, v0}, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub;->onCallWaiting(Z)V
 
     goto :goto_0
 
-    .line 76
     .end local v0    # "_arg0":Z
     :sswitch_4
     const-string v3, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 78
     sget-object v3, Lorg/codeaurora/ims/csvt/CallForwardInfoP;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 79
     .local v1, "_arg0":Ljava/util/List;, "Ljava/util/List<Lorg/codeaurora/ims/csvt/CallForwardInfoP;>;"
     invoke-virtual {p0, v1}, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub;->onCallForwardingOptions(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 84
     .end local v1    # "_arg0":Ljava/util/List;, "Ljava/util/List<Lorg/codeaurora/ims/csvt/CallForwardInfoP;>;"
     :sswitch_5
     const-string v3, "org.codeaurora.ims.csvt.ICsvtServiceListener"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -240,14 +212,12 @@
 
     move v0, v2
 
-    .line 87
     .restart local v0    # "_arg0":Z
     :cond_1
     invoke-virtual {p0, v0}, Lorg/codeaurora/ims/csvt/ICsvtServiceListener$Stub;->onRingbackTone(Z)V
 
     goto :goto_0
 
-    .line 43
     nop
 
     :sswitch_data_0

@@ -28,7 +28,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 169
     iput-object p1, p0, Landroid/provider/SearchRecentSuggestions$1;->this$0:Landroid/provider/SearchRecentSuggestions;
 
     iput-object p3, p0, Landroid/provider/SearchRecentSuggestions$1;->val$queryString:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/provider/SearchRecentSuggestions$1;->this$0:Landroid/provider/SearchRecentSuggestions;
 
     iget-object v1, p0, Landroid/provider/SearchRecentSuggestions$1;->val$queryString:Ljava/lang/String;
@@ -56,7 +54,6 @@
     # invokes: Landroid/provider/SearchRecentSuggestions;->saveRecentQueryBlocking(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Landroid/provider/SearchRecentSuggestions;->access$000(Landroid/provider/SearchRecentSuggestions;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
     # getter for: Landroid/provider/SearchRecentSuggestions;->sWritesInProgress:Ljava/util/concurrent/Semaphore;
     invoke-static {}, Landroid/provider/SearchRecentSuggestions;->access$100()Ljava/util/concurrent/Semaphore;
 
@@ -64,6 +61,5 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 174
     return-void
 .end method

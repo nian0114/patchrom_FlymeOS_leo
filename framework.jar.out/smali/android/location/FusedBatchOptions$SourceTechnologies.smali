@@ -31,27 +31,22 @@
     .locals 1
 
     .prologue
-    .line 90
     const/4 v0, 0x1
 
     sput v0, Landroid/location/FusedBatchOptions$SourceTechnologies;->GNSS:I
 
-    .line 91
     const/4 v0, 0x2
 
     sput v0, Landroid/location/FusedBatchOptions$SourceTechnologies;->WIFI:I
 
-    .line 92
     const/4 v0, 0x4
 
     sput v0, Landroid/location/FusedBatchOptions$SourceTechnologies;->SENSORS:I
 
-    .line 93
     const/16 v0, 0x8
 
     sput v0, Landroid/location/FusedBatchOptions$SourceTechnologies;->CELL:I
 
-    .line 94
     const/16 v0, 0x10
 
     sput v0, Landroid/location/FusedBatchOptions$SourceTechnologies;->BLUETOOTH:I
@@ -63,7 +58,6 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

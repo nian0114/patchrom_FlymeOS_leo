@@ -12,17 +12,14 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/Shape;-><init>()V
 
-    .line 31
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/drawable/shapes/RectShape;->mRect:Landroid/graphics/RectF;
 
-    .line 33
     return-void
 .end method
 
@@ -37,14 +34,12 @@
     .end annotation
 
     .prologue
-    .line 61
     invoke-super {p0}, Landroid/graphics/drawable/shapes/Shape;->clone()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/drawable/shapes/RectShape;
 
-    .line 62
     .local v0, "shape":Landroid/graphics/drawable/shapes/RectShape;
     new-instance v1, Landroid/graphics/RectF;
 
@@ -54,7 +49,6 @@
 
     iput-object v1, v0, Landroid/graphics/drawable/shapes/RectShape;->mRect:Landroid/graphics/RectF;
 
-    .line 63
     return-object v0
 .end method
 
@@ -67,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 30
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RectShape;->clone()Landroid/graphics/drawable/shapes/RectShape;
 
     move-result-object v0
@@ -84,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 30
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RectShape;->clone()Landroid/graphics/drawable/shapes/RectShape;
 
     move-result-object v0
@@ -98,12 +90,10 @@
     .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 37
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RectShape;->mRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 38
     return-void
 .end method
 
@@ -112,12 +102,10 @@
     .param p1, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 42
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/RectShape;->rect()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 43
     .local v0, "rect":Landroid/graphics/RectF;
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
@@ -161,7 +149,6 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Outline;->setRect(IIII)V
 
-    .line 45
     return-void
 .end method
 
@@ -173,12 +160,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 49
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RectShape;->mRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0, v1, v1, p1, p2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 50
     return-void
 .end method
 
@@ -186,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Landroid/graphics/drawable/shapes/RectShape;->mRect:Landroid/graphics/RectF;
 
     return-object v0

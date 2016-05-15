@@ -68,24 +68,20 @@
 
     const/16 v3, 0x8
 
-    .line 166
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
-    .line 167
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, v6, v6}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 168
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, v7, v7}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 169
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x4
@@ -94,56 +90,48 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 170
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 171
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 172
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 173
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x40
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 174
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x80
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 175
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x100
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 176
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x200
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 177
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x400
@@ -152,21 +140,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 178
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x800
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 179
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x1000
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 180
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x2000
@@ -175,7 +160,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 181
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x4000
@@ -184,7 +168,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 182
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, 0x10000
@@ -193,7 +176,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 183
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, 0x20000
@@ -202,7 +184,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 184
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, 0x40000
@@ -211,7 +192,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 185
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, 0x80000
@@ -220,7 +200,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 186
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, 0x100000
@@ -229,7 +208,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 187
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, 0x200000
@@ -238,7 +216,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 189
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffffffc
@@ -247,14 +224,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 190
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffffff8
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 191
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffffff0
@@ -263,7 +238,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 192
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7fffffe0
@@ -272,7 +246,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 193
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7fffffc0
@@ -281,7 +254,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 194
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7fffff80
@@ -290,21 +262,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 195
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffffe00
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 196
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffffc00
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 197
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffff800
@@ -313,7 +282,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 198
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7ffff000
@@ -322,7 +290,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 199
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7fffe000
@@ -331,7 +298,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 200
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7fffc000
@@ -340,7 +306,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 201
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const v1, -0x7fff8000
@@ -349,7 +314,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 202
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, -0x7fff0000
@@ -358,31 +322,26 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 203
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/high16 v1, -0x7ffe0000
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 210
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
-    .line 211
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, v6, v6}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 212
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, v7, v7}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 213
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x3
@@ -391,14 +350,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 214
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 215
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x5
@@ -407,7 +364,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 216
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x6
@@ -416,21 +372,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 217
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v4, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 218
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x80
 
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 219
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x9
@@ -439,7 +392,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 220
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xa
@@ -448,7 +400,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 221
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xb
@@ -457,7 +408,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 222
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xc
@@ -466,14 +416,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 223
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x800
 
     invoke-virtual {v0, v5, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 224
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xe
@@ -482,7 +430,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 225
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xf
@@ -491,7 +438,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 226
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x10
@@ -500,7 +446,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 227
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x11
@@ -509,7 +454,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 228
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x12
@@ -518,7 +462,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 229
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x13
@@ -527,7 +470,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 230
     return-void
 .end method
 
@@ -536,17 +478,14 @@
     .param p1, "config"    # Landroid/media/AudioDevicePortConfig;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     new-instance v0, Landroid/media/AudioDevicePortConfig;
 
     invoke-direct {v0, p1}, Landroid/media/AudioDevicePortConfig;-><init>(Landroid/media/AudioDevicePortConfig;)V
 
     iput-object v0, p0, Landroid/media/AudioDevice;->mConfig:Landroid/media/AudioDevicePortConfig;
 
-    .line 113
     return-void
 .end method
 
@@ -555,7 +494,6 @@
     .param p0, "deviceType"    # I
 
     .prologue
-    .line 153
     sget-object v0, Landroid/media/AudioDevice;->EXT_TO_INT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
@@ -572,7 +510,6 @@
     .param p0, "intDevice"    # I
 
     .prologue
-    .line 158
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
@@ -590,7 +527,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Landroid/media/AudioDevice;->mConfig:Landroid/media/AudioDevicePortConfig;
 
     invoke-virtual {v0}, Landroid/media/AudioDevicePortConfig;->port()Landroid/media/AudioDevicePort;
@@ -608,7 +544,6 @@
     .locals 3
 
     .prologue
-    .line 139
     sget-object v0, Landroid/media/AudioDevice;->INT_TO_EXT_DEVICE_MAPPING:Landroid/util/SparseIntArray;
 
     iget-object v1, p0, Landroid/media/AudioDevice;->mConfig:Landroid/media/AudioDevicePortConfig;
@@ -636,7 +571,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 121
     iget-object v1, p0, Landroid/media/AudioDevice;->mConfig:Landroid/media/AudioDevicePortConfig;
 
     invoke-virtual {v1}, Landroid/media/AudioDevicePortConfig;->port()Landroid/media/AudioDevicePort;
@@ -662,7 +596,6 @@
     .locals 2
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/media/AudioDevice;->mConfig:Landroid/media/AudioDevicePortConfig;
 
     invoke-virtual {v0}, Landroid/media/AudioDevicePortConfig;->port()Landroid/media/AudioDevicePort;

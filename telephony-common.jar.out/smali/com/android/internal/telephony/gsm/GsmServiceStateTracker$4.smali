@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 959
     invoke-static {}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->values()[Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     move-result-object v0

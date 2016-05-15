@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 102
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # getter for: Lcom/android/server/connectivity/PacManager;->mProxyLock:Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v3
 
-    .line 103
     :try_start_0
     sget-object v2, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
@@ -71,11 +68,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
@@ -93,7 +88,6 @@
 
     move-result-object v0
 
-    .line 110
     .local v0, "file":Ljava/lang/String;
     :goto_1
     :try_start_2
@@ -101,10 +95,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 111
     if-eqz v0, :cond_2
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # getter for: Lcom/android/server/connectivity/PacManager;->mProxyLock:Ljava/lang/Object;
@@ -114,7 +106,6 @@
 
     monitor-enter v3
 
-    .line 113
     :try_start_3
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
@@ -129,19 +120,16 @@
 
     if-nez v2, :cond_1
 
-    .line 114
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # invokes: Lcom/android/server/connectivity/PacManager;->setCurrentProxyScript(Ljava/lang/String;)Z
     invoke-static {v2, v0}, Lcom/android/server/connectivity/PacManager;->access$400(Lcom/android/server/connectivity/PacManager;Ljava/lang/String;)Z
 
-    .line 116
     :cond_1
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     const/4 v3, 0x1
@@ -149,13 +137,11 @@
     # setter for: Lcom/android/server/connectivity/PacManager;->mHasDownloaded:Z
     invoke-static {v2, v3}, Lcom/android/server/connectivity/PacManager;->access$502(Lcom/android/server/connectivity/PacManager;Z)Z
 
-    .line 118
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # invokes: Lcom/android/server/connectivity/PacManager;->sendProxyIfNeeded()V
     invoke-static {v2}, Lcom/android/server/connectivity/PacManager;->access$600(Lcom/android/server/connectivity/PacManager;)V
 
-    .line 119
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # invokes: Lcom/android/server/connectivity/PacManager;->longSchedule()V
@@ -163,16 +149,13 @@
 
     goto :goto_0
 
-    .line 106
     .end local v0    # "file":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 107
     .local v1, "ioe":Ljava/io/IOException;
     const/4 v0, 0x0
 
-    .line 108
     .restart local v0    # "file":Ljava/lang/String;
     :try_start_4
     const-string v2, "PacManager"
@@ -199,7 +182,6 @@
 
     goto :goto_1
 
-    .line 110
     .end local v0    # "file":Ljava/lang/String;
     .end local v1    # "ioe":Ljava/io/IOException;
     :catchall_0
@@ -211,7 +193,6 @@
 
     throw v2
 
-    .line 116
     .restart local v0    # "file":Ljava/lang/String;
     :catchall_1
     move-exception v2
@@ -223,7 +204,6 @@
 
     throw v2
 
-    .line 121
     :cond_2
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 

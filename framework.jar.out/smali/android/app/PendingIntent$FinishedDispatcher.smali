@@ -41,19 +41,14 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 201
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
 
-    .line 202
     iput-object p1, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 203
     iput-object p2, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mWho:Landroid/app/PendingIntent$OnFinished;
 
-    .line 204
     iput-object p3, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mHandler:Landroid/os/Handler;
 
-    .line 205
     return-void
 .end method
 
@@ -70,31 +65,23 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 208
     iput-object p1, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mIntent:Landroid/content/Intent;
 
-    .line 209
     iput p2, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mResultCode:I
 
-    .line 210
     iput-object p3, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mResultData:Ljava/lang/String;
 
-    .line 211
     iput-object p4, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mResultExtras:Landroid/os/Bundle;
 
-    .line 212
     iget-object v0, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 213
     invoke-virtual {p0}, Landroid/app/PendingIntent$FinishedDispatcher;->run()V
 
-    .line 217
     :goto_0
     return-void
 
-    .line 215
     :cond_0
     iget-object v0, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mHandler:Landroid/os/Handler;
 
@@ -107,7 +94,6 @@
     .locals 6
 
     .prologue
-    .line 219
     iget-object v0, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mWho:Landroid/app/PendingIntent$OnFinished;
 
     iget-object v1, p0, Landroid/app/PendingIntent$FinishedDispatcher;->mPendingIntent:Landroid/app/PendingIntent;
@@ -122,6 +108,5 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/app/PendingIntent$OnFinished;->onSendFinished(Landroid/app/PendingIntent;Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 221
     return-void
 .end method

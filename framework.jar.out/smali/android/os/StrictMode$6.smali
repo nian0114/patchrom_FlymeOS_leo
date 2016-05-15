@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,12 +33,10 @@
     .locals 6
 
     .prologue
-    .line 1477
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 1478
     .local v0, "now":J
     # getter for: Landroid/os/StrictMode;->sLastInstanceCountCheckMillis:J
     invoke-static {}, Landroid/os/StrictMode;->access$1500()J
@@ -54,14 +51,11 @@
 
     if-lez v2, :cond_0
 
-    .line 1479
     # setter for: Landroid/os/StrictMode;->sLastInstanceCountCheckMillis:J
     invoke-static {v0, v1}, Landroid/os/StrictMode;->access$1502(J)J
 
-    .line 1480
     invoke-static {}, Landroid/os/StrictMode;->conditionallyCheckInstanceCounts()V
 
-    .line 1482
     :cond_0
     const/4 v2, 0x1
 

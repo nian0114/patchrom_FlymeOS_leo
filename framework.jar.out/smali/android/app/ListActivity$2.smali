@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 316
     iput-object p1, p0, Landroid/app/ListActivity$2;->this$0:Landroid/app/ListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 319
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Landroid/app/ListActivity$2;->this$0:Landroid/app/ListActivity;
 
@@ -68,6 +66,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
-    .line 320
     return-void
 .end method

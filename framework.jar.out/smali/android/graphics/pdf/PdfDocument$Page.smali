@@ -27,16 +27,12 @@
     .param p2, "pageInfo"    # Landroid/graphics/pdf/PdfDocument$PageInfo;
 
     .prologue
-    .line 393
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 394
     iput-object p1, p0, Landroid/graphics/pdf/PdfDocument$Page;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 395
     iput-object p2, p0, Landroid/graphics/pdf/PdfDocument$Page;->mPageInfo:Landroid/graphics/pdf/PdfDocument$PageInfo;
 
-    .line 396
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p3, "x2"    # Landroid/graphics/pdf/PdfDocument$1;
 
     .prologue
-    .line 383
     invoke-direct {p0, p1, p2}, Landroid/graphics/pdf/PdfDocument$Page;-><init>(Landroid/graphics/Canvas;Landroid/graphics/pdf/PdfDocument$PageInfo;)V
 
     return-void
@@ -58,7 +53,6 @@
     .param p0, "x0"    # Landroid/graphics/pdf/PdfDocument$Page;
 
     .prologue
-    .line 383
     invoke-direct {p0}, Landroid/graphics/pdf/PdfDocument$Page;->finish()V
 
     return-void
@@ -68,22 +62,18 @@
     .locals 1
 
     .prologue
-    .line 450
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$Page;->mCanvas:Landroid/graphics/Canvas;
 
     if-eqz v0, :cond_0
 
-    .line 451
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$Page;->mCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v0}, Landroid/graphics/Canvas;->release()V
 
-    .line 452
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/pdf/PdfDocument$Page;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 454
     :cond_0
     return-void
 .end method
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 431
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$Page;->mCanvas:Landroid/graphics/Canvas;
 
     return-object v0
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 442
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$Page;->mPageInfo:Landroid/graphics/pdf/PdfDocument$PageInfo;
 
     return-object v0
@@ -114,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 446
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$Page;->mCanvas:Landroid/graphics/Canvas;
 
     if-nez v0, :cond_0

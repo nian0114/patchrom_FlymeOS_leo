@@ -29,15 +29,12 @@
     .param p2, "cb"    # Landroid/os/IBinder;
 
     .prologue
-    .line 627
     iput-object p1, p0, Landroid/media/MediaFocusControl$AudioFocusDeathHandler;->this$0:Landroid/media/MediaFocusControl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 628
     iput-object p2, p0, Landroid/media/MediaFocusControl$AudioFocusDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 629
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 632
     # getter for: Landroid/media/MediaFocusControl;->mAudioFocusLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/MediaFocusControl;->access$2000()Ljava/lang/Object;
 
@@ -55,7 +51,6 @@
 
     monitor-enter v1
 
-    .line 633
     :try_start_0
     const-string v0, "MediaFocusControl"
 
@@ -63,7 +58,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     iget-object v0, p0, Landroid/media/MediaFocusControl$AudioFocusDeathHandler;->this$0:Landroid/media/MediaFocusControl;
 
     iget-object v2, p0, Landroid/media/MediaFocusControl$AudioFocusDeathHandler;->mCb:Landroid/os/IBinder;
@@ -71,13 +65,10 @@
     # invokes: Landroid/media/MediaFocusControl;->removeFocusStackEntryForClient(Landroid/os/IBinder;)V
     invoke-static {v0, v2}, Landroid/media/MediaFocusControl;->access$2100(Landroid/media/MediaFocusControl;Landroid/os/IBinder;)V
 
-    .line 635
     monitor-exit v1
 
-    .line 636
     return-void
 
-    .line 635
     :catchall_0
     move-exception v0
 
@@ -92,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 639
     iget-object v0, p0, Landroid/media/MediaFocusControl$AudioFocusDeathHandler;->mCb:Landroid/os/IBinder;
 
     return-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5031
     iput-object p1, p0, Landroid/view/ViewRootImpl$SyntheticKeyboardHandler;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 5033
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result v2
@@ -47,47 +45,39 @@
 
     if-eqz v2, :cond_1
 
-    .line 5055
     :cond_0
     :goto_0
     return-void
 
-    .line 5037
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v17
 
-    .line 5038
     .local v17, "kcm":Landroid/view/KeyCharacterMap;
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v18
 
-    .line 5039
     .local v18, "keyCode":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result v19
 
-    .line 5042
     .local v19, "metaState":I
     invoke-virtual/range {v17 .. v19}, Landroid/view/KeyCharacterMap;->getFallbackAction(II)Landroid/view/KeyCharacterMap$FallbackAction;
 
     move-result-object v15
 
-    .line 5044
     .local v15, "fallbackAction":Landroid/view/KeyCharacterMap$FallbackAction;
     if-eqz v15, :cond_0
 
-    .line 5045
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result v2
 
     or-int/lit16 v12, v2, 0x400
 
-    .line 5046
     .local v12, "flags":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getDownTime()J
 
@@ -127,11 +117,9 @@
 
     move-result-object v16
 
-    .line 5052
     .local v16, "fallbackEvent":Landroid/view/KeyEvent;
     invoke-virtual {v15}, Landroid/view/KeyCharacterMap$FallbackAction;->recycle()V
 
-    .line 5053
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticKeyboardHandler;->this$0:Landroid/view/ViewRootImpl;

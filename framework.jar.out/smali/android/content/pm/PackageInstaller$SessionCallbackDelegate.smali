@@ -42,20 +42,16 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 512
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallerCallback$Stub;-><init>()V
 
-    .line 513
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
 
-    .line 514
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p2, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 515
     return-void
 .end method
 
@@ -70,10 +66,8 @@
 
     const/4 v3, 0x1
 
-    .line 519
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 520
     .local v1, "sessionId":I
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -81,11 +75,9 @@
 
     move v3, v0
 
-    .line 538
     :goto_0
     return v3
 
-    .line 522
     :pswitch_0
     iget-object v2, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
 
@@ -93,7 +85,6 @@
 
     goto :goto_0
 
-    .line 525
     :pswitch_1
     iget-object v2, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
 
@@ -101,7 +92,6 @@
 
     goto :goto_0
 
-    .line 528
     :pswitch_2
     iget v2, p1, Landroid/os/Message;->arg2:I
 
@@ -109,7 +99,6 @@
 
     move v0, v3
 
-    .line 529
     .local v0, "active":Z
     :cond_0
     iget-object v2, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
@@ -118,7 +107,6 @@
 
     goto :goto_0
 
-    .line 532
     .end local v0    # "active":Z
     :pswitch_3
     iget-object v4, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
@@ -135,7 +123,6 @@
 
     goto :goto_0
 
-    .line 535
     :pswitch_4
     iget-object v2, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
 
@@ -150,7 +137,6 @@
 
     goto :goto_0
 
-    .line 520
     nop
 
     :pswitch_data_0
@@ -169,7 +155,6 @@
     .param p2, "active"    # Z
 
     .prologue
-    .line 553
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -185,10 +170,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 555
     return-void
 
-    .line 553
     :cond_0
     const/4 v0, 0x0
 
@@ -200,7 +183,6 @@
     .param p1, "sessionId"    # I
 
     .prologue
-    .line 548
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -213,7 +195,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 549
     return-void
 .end method
 
@@ -222,7 +203,6 @@
     .param p1, "sessionId"    # I
 
     .prologue
-    .line 543
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -235,7 +215,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 544
     return-void
 .end method
 
@@ -245,7 +224,6 @@
     .param p2, "success"    # Z
 
     .prologue
-    .line 565
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x5
@@ -261,10 +239,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 567
     return-void
 
-    .line 565
     :cond_0
     const/4 v0, 0x0
 
@@ -277,7 +253,6 @@
     .param p2, "progress"    # F
 
     .prologue
-    .line 559
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
@@ -294,6 +269,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 561
     return-void
 .end method

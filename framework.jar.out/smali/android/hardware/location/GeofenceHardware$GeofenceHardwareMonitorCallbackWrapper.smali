@@ -35,19 +35,16 @@
     .param p2, "c"    # Landroid/hardware/location/GeofenceHardwareMonitorCallback;
 
     .prologue
-    .line 477
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareMonitorCallbackWrapper;->this$0:Landroid/hardware/location/GeofenceHardware;
 
     invoke-direct {p0}, Landroid/hardware/location/IGeofenceHardwareMonitorCallback$Stub;-><init>()V
 
-    .line 478
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareMonitorCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
-    .line 479
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p1, "event"    # Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
     .prologue
-    .line 482
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareMonitorCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,16 +63,13 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareMonitorCallback;
 
-    .line 483
     .local v0, "c":Landroid/hardware/location/GeofenceHardwareMonitorCallback;
     if-nez v0, :cond_1
 
-    .line 496
     :cond_0
     :goto_0
     return-void
 
-    .line 486
     :cond_1
     invoke-virtual {p1}, Landroid/hardware/location/GeofenceHardwareMonitorEvent;->getMonitoringType()I
 
@@ -97,19 +90,16 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/hardware/location/GeofenceHardwareMonitorCallback;->onMonitoringSystemChange(IZLandroid/location/Location;)V
 
-    .line 493
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
 
     if-lt v1, v2, :cond_0
 
-    .line 494
     invoke-virtual {v0, p1}, Landroid/hardware/location/GeofenceHardwareMonitorCallback;->onMonitoringSystemChange(Landroid/hardware/location/GeofenceHardwareMonitorEvent;)V
 
     goto :goto_0
 
-    .line 486
     :cond_2
     const/4 v1, 0x0
 

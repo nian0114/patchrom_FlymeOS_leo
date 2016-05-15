@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 574
     iput-object p1, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,15 +42,12 @@
     .param p3, "fromuser"    # Z
 
     .prologue
-    .line 589
     if-nez p3, :cond_1
 
-    .line 600
     :cond_0
     :goto_0
     return-void
 
-    .line 595
     :cond_1
     iget-object v4, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
@@ -66,7 +62,6 @@
 
     int-to-long v0, v4
 
-    .line 596
     .local v0, "duration":J
     int-to-long v4, p2
 
@@ -76,7 +71,6 @@
 
     div-long v2, v4, v6
 
-    .line 597
     .local v2, "newposition":J
     iget-object v4, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
@@ -89,7 +83,6 @@
 
     invoke-interface {v4, v5}, Landroid/widget/MediaController$MediaPlayerControl;->seekTo(I)V
 
-    .line 598
     iget-object v4, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     # getter for: Landroid/widget/MediaController;->mCurrentTime:Landroid/widget/TextView;
@@ -99,7 +92,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 599
     iget-object v4, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     # getter for: Landroid/widget/MediaController;->mCurrentTime:Landroid/widget/TextView;
@@ -126,14 +118,12 @@
     .param p1, "bar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 576
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     const v1, 0x36ee80
 
     invoke-virtual {v0, v1}, Landroid/widget/MediaController;->show(I)V
 
-    .line 578
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     const/4 v1, 0x1
@@ -141,7 +131,6 @@
     # setter for: Landroid/widget/MediaController;->mDragging:Z
     invoke-static {v0, v1}, Landroid/widget/MediaController;->access$602(Landroid/widget/MediaController;Z)Z
 
-    .line 585
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     # getter for: Landroid/widget/MediaController;->mHandler:Landroid/os/Handler;
@@ -153,7 +142,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 586
     return-void
 .end method
 
@@ -162,7 +150,6 @@
     .param p1, "bar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 603
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     const/4 v1, 0x0
@@ -170,26 +157,22 @@
     # setter for: Landroid/widget/MediaController;->mDragging:Z
     invoke-static {v0, v1}, Landroid/widget/MediaController;->access$602(Landroid/widget/MediaController;Z)Z
 
-    .line 604
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     # invokes: Landroid/widget/MediaController;->setProgress()I
     invoke-static {v0}, Landroid/widget/MediaController;->access$500(Landroid/widget/MediaController;)I
 
-    .line 605
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     # invokes: Landroid/widget/MediaController;->updatePausePlay()V
     invoke-static {v0}, Landroid/widget/MediaController;->access$1200(Landroid/widget/MediaController;)V
 
-    .line 606
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     const/16 v1, 0xbb8
 
     invoke-virtual {v0, v1}, Landroid/widget/MediaController;->show(I)V
 
-    .line 611
     iget-object v0, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     # getter for: Landroid/widget/MediaController;->mHandler:Landroid/os/Handler;
@@ -201,6 +184,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 612
     return-void
 .end method

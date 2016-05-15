@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 35
     new-instance v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     const-string v1, "RADIO_OFF"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_OFF:Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
-    .line 36
     new-instance v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     const-string v1, "RADIO_UNAVAILABLE"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_UNAVAILABLE:Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
-    .line 37
     new-instance v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     const-string v1, "RADIO_ON"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_ON:Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
-    .line 34
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/telephony/CommandsInterface$RadioState;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     const-class v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->$VALUES:[Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/CommandsInterface$RadioState;->clone()Ljava/lang/Object;
@@ -147,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 44
     sget-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_UNAVAILABLE:Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     if-eq p0, v0, :cond_0
@@ -167,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 40
     sget-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_ON:Lcom/android/internal/telephony/CommandsInterface$RadioState;
 
     if-ne p0, v0, :cond_0

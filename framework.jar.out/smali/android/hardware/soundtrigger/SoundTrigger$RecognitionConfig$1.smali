@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 683
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 685
     # invokes: Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;->fromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;
     invoke-static {p1}, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;->access$400(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;
 
@@ -58,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 683
     invoke-virtual {p0, p1}, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 689
     new-array v0, p1, [Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;
 
     return-object v0
@@ -81,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 683
     invoke-virtual {p0, p1}, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig$1;->newArray(I)[Landroid/hardware/soundtrigger/SoundTrigger$RecognitionConfig;
 
     move-result-object v0

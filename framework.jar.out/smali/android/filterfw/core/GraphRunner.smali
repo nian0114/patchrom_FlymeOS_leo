@@ -37,18 +37,14 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/filterfw/core/GraphRunner;->mFilterContext:Landroid/filterfw/core/FilterContext;
 
-    .line 50
     iput-object p1, p0, Landroid/filterfw/core/GraphRunner;->mFilterContext:Landroid/filterfw/core/FilterContext;
 
-    .line 51
     return-void
 .end method
 
@@ -58,14 +54,12 @@
     .locals 2
 
     .prologue
-    .line 65
     iget-object v1, p0, Landroid/filterfw/core/GraphRunner;->mFilterContext:Landroid/filterfw/core/FilterContext;
 
     invoke-virtual {v1}, Landroid/filterfw/core/FilterContext;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
 
     move-result-object v0
 
-    .line 66
     .local v0, "glEnv":Landroid/filterfw/core/GLEnvironment;
     if-eqz v0, :cond_0
 
@@ -75,13 +69,10 @@
 
     if-nez v1, :cond_0
 
-    .line 67
     invoke-virtual {v0}, Landroid/filterfw/core/GLEnvironment;->activate()V
 
-    .line 68
     const/4 v1, 0x1
 
-    .line 70
     :goto_0
     return v1
 
@@ -98,21 +89,17 @@
     .locals 2
 
     .prologue
-    .line 77
     iget-object v1, p0, Landroid/filterfw/core/GraphRunner;->mFilterContext:Landroid/filterfw/core/FilterContext;
 
     invoke-virtual {v1}, Landroid/filterfw/core/FilterContext;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
 
     move-result-object v0
 
-    .line 78
     .local v0, "glEnv":Landroid/filterfw/core/GLEnvironment;
     if-eqz v0, :cond_0
 
-    .line 79
     invoke-virtual {v0}, Landroid/filterfw/core/GLEnvironment;->deactivate()V
 
-    .line 81
     :cond_0
     return-void
 .end method
@@ -121,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Landroid/filterfw/core/GraphRunner;->mFilterContext:Landroid/filterfw/core/FilterContext;
 
     return-object v0

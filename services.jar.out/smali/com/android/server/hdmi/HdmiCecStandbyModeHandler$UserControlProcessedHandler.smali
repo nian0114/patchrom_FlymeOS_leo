@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$1;
 
     .prologue
-    .line 67
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler;-><init>(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)V
 
     return-void
@@ -53,21 +51,17 @@
     .param p1, "message"    # Lcom/android/server/hdmi/HdmiCecMessage;
 
     .prologue
-    .line 71
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->isPowerOnOrToggleCommand(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 72
     const/4 v0, 0x0
 
-    .line 76
     :goto_0
     return v0
 
-    .line 73
     :cond_0
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->isPowerOffOrToggleCommand(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
@@ -75,12 +69,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 74
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 76
     :cond_1
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 

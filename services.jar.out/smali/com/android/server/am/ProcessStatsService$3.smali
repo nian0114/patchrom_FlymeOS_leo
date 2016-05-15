@@ -28,7 +28,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 527
     iput-object p1, p0, Lcom/android/server/am/ProcessStatsService$3;->this$0:Lcom/android/server/am/ProcessStatsService;
 
     iput-object p3, p0, Lcom/android/server/am/ProcessStatsService$3;->val$fds:[Landroid/os/ParcelFileDescriptor;
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 529
     new-instance v1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     iget-object v2, p0, Lcom/android/server/am/ProcessStatsService$3;->val$fds:[Landroid/os/ParcelFileDescriptor;
@@ -57,27 +55,22 @@
 
     invoke-direct {v1, v2}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 531
     .local v1, "fout":Ljava/io/FileOutputStream;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ProcessStatsService$3;->val$outData:[B
 
     invoke-virtual {v1, v2}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 532
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 536
     :goto_0
     return-void
 
-    .line 533
     :catch_0
     move-exception v0
 
-    .line 534
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "ProcessStatsService"
 

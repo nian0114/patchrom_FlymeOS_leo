@@ -84,68 +84,54 @@
     .param p4, "daj"    # Landroid/view/DisplayAdjustments;
 
     .prologue
-    .line 262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v0, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
 
-    .line 263
     iput-object p1, p0, Landroid/view/Display;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
-    .line 264
     iput p2, p0, Landroid/view/Display;->mDisplayId:I
 
-    .line 265
     iput-object p3, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 266
     new-instance v0, Landroid/view/DisplayAdjustments;
 
     invoke-direct {v0, p4}, Landroid/view/DisplayAdjustments;-><init>(Landroid/view/DisplayAdjustments;)V
 
     iput-object v0, p0, Landroid/view/Display;->mDisplayAdjustments:Landroid/view/DisplayAdjustments;
 
-    .line 267
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/view/Display;->mIsValid:Z
 
-    .line 270
     iget v0, p3, Landroid/view/DisplayInfo;->layerStack:I
 
     iput v0, p0, Landroid/view/Display;->mLayerStack:I
 
-    .line 271
     iget v0, p3, Landroid/view/DisplayInfo;->flags:I
 
     iput v0, p0, Landroid/view/Display;->mFlags:I
 
-    .line 272
     iget v0, p3, Landroid/view/DisplayInfo;->type:I
 
     iput v0, p0, Landroid/view/Display;->mType:I
 
-    .line 273
     iget-object v0, p3, Landroid/view/DisplayInfo;->address:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/view/Display;->mAddress:Ljava/lang/String;
 
-    .line 274
     iget v0, p3, Landroid/view/DisplayInfo;->ownerUid:I
 
     iput v0, p0, Landroid/view/Display;->mOwnerUid:I
 
-    .line 275
     iget-object v0, p3, Landroid/view/DisplayInfo;->ownerPackageName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/view/Display;->mOwnerPackageName:Ljava/lang/String;
 
-    .line 276
     return-void
 .end method
 
@@ -156,7 +142,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 749
     and-int/lit8 v0, p1, 0x4
 
     if-eqz v0, :cond_0
@@ -188,7 +173,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 857
     if-eq p0, v0, :cond_0
 
     const/4 v1, 0x4
@@ -210,10 +194,8 @@
     .param p0, "state"    # I
 
     .prologue
-    .line 835
     packed-switch p0, :pswitch_data_0
 
-    .line 847
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -221,37 +203,31 @@
     :goto_0
     return-object v0
 
-    .line 837
     :pswitch_0
     const-string v0, "UNKNOWN"
 
     goto :goto_0
 
-    .line 839
     :pswitch_1
     const-string v0, "OFF"
 
     goto :goto_0
 
-    .line 841
     :pswitch_2
     const-string v0, "ON"
 
     goto :goto_0
 
-    .line 843
     :pswitch_3
     const-string v0, "DOZE"
 
     goto :goto_0
 
-    .line 845
     :pswitch_4
     const-string v0, "DOZE_SUSPEND"
 
     goto :goto_0
 
-    .line 835
     nop
 
     :pswitch_data_0
@@ -269,10 +245,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 813
     packed-switch p0, :pswitch_data_0
 
-    .line 827
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -280,43 +254,36 @@
     :goto_0
     return-object v0
 
-    .line 815
     :pswitch_0
     const-string v0, "UNKNOWN"
 
     goto :goto_0
 
-    .line 817
     :pswitch_1
     const-string v0, "BUILT_IN"
 
     goto :goto_0
 
-    .line 819
     :pswitch_2
     const-string v0, "HDMI"
 
     goto :goto_0
 
-    .line 821
     :pswitch_3
     const-string v0, "WIFI"
 
     goto :goto_0
 
-    .line 823
     :pswitch_4
     const-string v0, "OVERLAY"
 
     goto :goto_0
 
-    .line 825
     :pswitch_5
     const-string v0, "VIRTUAL"
 
     goto :goto_0
 
-    .line 813
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -332,12 +299,10 @@
     .locals 6
 
     .prologue
-    .line 788
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 789
     .local v0, "now":J
     iget-wide v2, p0, Landroid/view/Display;->mLastCachedAppSizeUpdate:J
 
@@ -349,10 +314,8 @@
 
     if-lez v2, :cond_0
 
-    .line 790
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 791
     iget-object v2, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v3, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
@@ -361,24 +324,20 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/DisplayInfo;->getAppMetrics(Landroid/util/DisplayMetrics;Landroid/view/DisplayAdjustments;)V
 
-    .line 792
     iget-object v2, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
 
     iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v2, p0, Landroid/view/Display;->mCachedAppWidthCompat:I
 
-    .line 793
     iget-object v2, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
 
     iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v2, p0, Landroid/view/Display;->mCachedAppHeightCompat:I
 
-    .line 794
     iput-wide v0, p0, Landroid/view/Display;->mLastCachedAppSizeUpdate:J
 
-    .line 796
     :cond_0
     return-void
 .end method
@@ -387,7 +346,6 @@
     .locals 3
 
     .prologue
-    .line 766
     iget-object v1, p0, Landroid/view/Display;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget v2, p0, Landroid/view/Display;->mDisplayId:I
@@ -396,35 +354,28 @@
 
     move-result-object v0
 
-    .line 767
     .local v0, "newInfo":Landroid/view/DisplayInfo;
     if-nez v0, :cond_1
 
-    .line 769
     iget-boolean v1, p0, Landroid/view/Display;->mIsValid:Z
 
     if-eqz v1, :cond_0
 
-    .line 770
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/view/Display;->mIsValid:Z
 
-    .line 785
     :cond_0
     :goto_0
     return-void
 
-    .line 777
     :cond_1
     iput-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 778
     iget-boolean v1, p0, Landroid/view/Display;->mIsValid:Z
 
     if-nez v1, :cond_0
 
-    .line 779
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/view/Display;->mIsValid:Z
@@ -438,7 +389,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Landroid/view/Display;->mAddress:Ljava/lang/String;
 
     return-object v0
@@ -448,14 +398,11 @@
     .locals 2
 
     .prologue
-    .line 638
     monitor-enter p0
 
-    .line 639
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 640
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-wide v0, v0, Landroid/view/DisplayInfo;->appVsyncOffsetNanos:J
@@ -464,7 +411,6 @@
 
     return-wide v0
 
-    .line 641
     :catchall_0
     move-exception v0
 
@@ -481,48 +427,39 @@
     .param p2, "outLargestSize"    # Landroid/graphics/Point;
 
     .prologue
-    .line 503
     monitor-enter p0
 
-    .line 504
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 505
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->smallestNominalAppWidth:I
 
     iput v0, p1, Landroid/graphics/Point;->x:I
 
-    .line 506
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->smallestNominalAppHeight:I
 
     iput v0, p1, Landroid/graphics/Point;->y:I
 
-    .line 507
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->largestNominalAppWidth:I
 
     iput v0, p2, Landroid/graphics/Point;->x:I
 
-    .line 508
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->largestNominalAppHeight:I
 
     iput v0, p2, Landroid/graphics/Point;->y:I
 
-    .line 509
     monitor-exit p0
 
-    .line 510
     return-void
 
-    .line 509
     :catchall_0
     move-exception v0
 
@@ -537,7 +474,6 @@
     .locals 1
 
     .prologue
-    .line 411
     iget-object v0, p0, Landroid/view/Display;->mDisplayAdjustments:Landroid/view/DisplayAdjustments;
 
     return-object v0
@@ -547,7 +483,6 @@
     .locals 1
 
     .prologue
-    .line 286
     iget v0, p0, Landroid/view/Display;->mDisplayId:I
 
     return v0
@@ -558,26 +493,21 @@
     .param p1, "outDisplayInfo"    # Landroid/view/DisplayInfo;
 
     .prologue
-    .line 317
     monitor-enter p0
 
-    .line 318
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 319
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     invoke-virtual {p1, v0}, Landroid/view/DisplayInfo;->copyFrom(Landroid/view/DisplayInfo;)V
 
-    .line 320
     iget-boolean v0, p0, Landroid/view/Display;->mIsValid:Z
 
     monitor-exit p0
 
     return v0
 
-    .line 321
     :catchall_0
     move-exception v0
 
@@ -592,7 +522,6 @@
     .locals 1
 
     .prologue
-    .line 347
     iget v0, p0, Landroid/view/Display;->mFlags:I
 
     return v0
@@ -604,21 +533,17 @@
     .end annotation
 
     .prologue
-    .line 540
     monitor-enter p0
 
-    .line 541
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateCachedAppSizeIfNeededLocked()V
 
-    .line 542
     iget v0, p0, Landroid/view/Display;->mCachedAppHeightCompat:I
 
     monitor-exit p0
 
     return v0
 
-    .line 543
     :catchall_0
     move-exception v0
 
@@ -633,7 +558,6 @@
     .locals 1
 
     .prologue
-    .line 334
     iget v0, p0, Landroid/view/Display;->mLayerStack:I
 
     return v0
@@ -643,14 +567,11 @@
     .locals 2
 
     .prologue
-    .line 518
     monitor-enter p0
 
-    .line 519
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 520
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->logicalWidth:I
@@ -667,7 +588,6 @@
 
     return v0
 
-    .line 521
     :catchall_0
     move-exception v0
 
@@ -683,40 +603,32 @@
     .param p1, "outMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
-    .line 677
     monitor-enter p0
 
-    .line 678
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 679
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v1, p0, Landroid/view/Display;->mDisplayAdjustments:Landroid/view/DisplayAdjustments;
 
     invoke-virtual {v0, p1, v1}, Landroid/view/DisplayInfo;->getAppMetrics(Landroid/util/DisplayMetrics;Landroid/view/DisplayAdjustments;)V
 
-    .line 680
     invoke-virtual {p0}, Landroid/view/Display;->getDisplayId()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 681
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE_DEFAULT:I
 
     iput v0, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 683
     :cond_0
     monitor-exit p0
 
-    .line 684
     return-void
 
-    .line 683
     :catchall_0
     move-exception v0
 
@@ -731,14 +643,11 @@
     .locals 1
 
     .prologue
-    .line 423
     monitor-enter p0
 
-    .line 424
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 425
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v0, v0, Landroid/view/DisplayInfo;->name:Ljava/lang/String;
@@ -747,7 +656,6 @@
 
     return-object v0
 
-    .line 426
     :catchall_0
     move-exception v0
 
@@ -764,7 +672,6 @@
     .end annotation
 
     .prologue
-    .line 592
     invoke-virtual {p0}, Landroid/view/Display;->getRotation()I
 
     move-result v0
@@ -777,14 +684,11 @@
     .param p1, "outRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 553
     monitor-enter p0
 
-    .line 554
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 555
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->overscanLeft:I
@@ -803,13 +707,10 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 557
     monitor-exit p0
 
-    .line 558
     return-void
 
-    .line 557
     :catchall_0
     move-exception v0
 
@@ -824,7 +725,6 @@
     .locals 1
 
     .prologue
-    .line 401
     iget-object v0, p0, Landroid/view/Display;->mOwnerPackageName:Ljava/lang/String;
 
     return-object v0
@@ -834,7 +734,6 @@
     .locals 1
 
     .prologue
-    .line 388
     iget v0, p0, Landroid/view/Display;->mOwnerUid:I
 
     return v0
@@ -846,7 +745,6 @@
     .end annotation
 
     .prologue
-    .line 604
     const/4 v0, 0x1
 
     return v0
@@ -856,14 +754,11 @@
     .locals 2
 
     .prologue
-    .line 656
     monitor-enter p0
 
-    .line 657
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 658
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-wide v0, v0, Landroid/view/DisplayInfo;->presentationDeadlineNanos:J
@@ -872,7 +767,6 @@
 
     return-wide v0
 
-    .line 659
     :catchall_0
     move-exception v0
 
@@ -888,14 +782,11 @@
     .param p1, "outMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
-    .line 718
     monitor-enter p0
 
-    .line 719
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 720
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     sget-object v1, Landroid/content/res/CompatibilityInfo;->DEFAULT_COMPATIBILITY_INFO:Landroid/content/res/CompatibilityInfo;
@@ -908,13 +799,10 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/view/DisplayInfo;->getLogicalMetrics(Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;Landroid/os/IBinder;)V
 
-    .line 723
     monitor-exit p0
 
-    .line 724
     return-void
 
-    .line 723
     :catchall_0
     move-exception v0
 
@@ -930,34 +818,27 @@
     .param p1, "outSize"    # Landroid/graphics/Point;
 
     .prologue
-    .line 699
     monitor-enter p0
 
-    .line 700
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 701
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     iput v0, p1, Landroid/graphics/Point;->x:I
 
-    .line 702
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     iput v0, p1, Landroid/graphics/Point;->y:I
 
-    .line 703
     monitor-exit p0
 
-    .line 704
     return-void
 
-    .line 703
     :catchall_0
     move-exception v0
 
@@ -973,14 +854,11 @@
     .param p1, "outSize"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 465
     monitor-enter p0
 
-    .line 466
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 467
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v1, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
@@ -989,7 +867,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/DisplayInfo;->getAppMetrics(Landroid/util/DisplayMetrics;Landroid/view/DisplayAdjustments;)V
 
-    .line 468
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -1004,13 +881,10 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 469
     monitor-exit p0
 
-    .line 470
     return-void
 
-    .line 469
     :catchall_0
     move-exception v0
 
@@ -1025,14 +899,11 @@
     .locals 1
 
     .prologue
-    .line 611
     monitor-enter p0
 
-    .line 612
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 613
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->refreshRate:F
@@ -1041,7 +912,6 @@
 
     return v0
 
-    .line 614
     :catchall_0
     move-exception v0
 
@@ -1056,14 +926,11 @@
     .locals 1
 
     .prologue
-    .line 579
     monitor-enter p0
 
-    .line 580
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 581
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->rotation:I
@@ -1072,7 +939,6 @@
 
     return v0
 
-    .line 582
     :catchall_0
     move-exception v0
 
@@ -1088,14 +954,11 @@
     .param p1, "outSize"    # Landroid/graphics/Point;
 
     .prologue
-    .line 450
     monitor-enter p0
 
-    .line 451
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 452
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v1, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
@@ -1104,27 +967,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/DisplayInfo;->getAppMetrics(Landroid/util/DisplayMetrics;Landroid/view/DisplayAdjustments;)V
 
-    .line 453
     iget-object v0, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v0, p1, Landroid/graphics/Point;->x:I
 
-    .line 454
     iget-object v0, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v0, p1, Landroid/graphics/Point;->y:I
 
-    .line 455
     monitor-exit p0
 
-    .line 456
     return-void
 
-    .line 455
     :catchall_0
     move-exception v0
 
@@ -1139,14 +997,11 @@
     .locals 1
 
     .prologue
-    .line 733
     monitor-enter p0
 
-    .line 734
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 735
     iget-boolean v0, p0, Landroid/view/Display;->mIsValid:Z
 
     if-eqz v0, :cond_0
@@ -1165,7 +1020,6 @@
 
     goto :goto_0
 
-    .line 736
     :catchall_0
     move-exception v0
 
@@ -1180,19 +1034,15 @@
     .locals 2
 
     .prologue
-    .line 621
     monitor-enter p0
 
-    .line 622
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 623
     iget-object v1, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v0, v1, Landroid/view/DisplayInfo;->supportedRefreshRates:[F
 
-    .line 624
     .local v0, "refreshRates":[F
     array-length v1, v0
 
@@ -1204,7 +1054,6 @@
 
     return-object v1
 
-    .line 625
     .end local v0    # "refreshRates":[F
     :catchall_0
     move-exception v1
@@ -1220,7 +1069,6 @@
     .locals 1
 
     .prologue
-    .line 364
     iget v0, p0, Landroid/view/Display;->mType:I
 
     return v0
@@ -1232,21 +1080,17 @@
     .end annotation
 
     .prologue
-    .line 529
     monitor-enter p0
 
-    .line 530
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateCachedAppSizeIfNeededLocked()V
 
-    .line 531
     iget v0, p0, Landroid/view/Display;->mCachedAppWidthCompat:I
 
     monitor-exit p0
 
     return v0
 
-    .line 532
     :catchall_0
     move-exception v0
 
@@ -1262,7 +1106,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 744
     iget v0, p0, Landroid/view/Display;->mFlags:I
 
     iget v1, p0, Landroid/view/Display;->mOwnerUid:I
@@ -1278,7 +1121,6 @@
     .locals 2
 
     .prologue
-    .line 760
     iget v0, p0, Landroid/view/Display;->mFlags:I
 
     and-int/lit8 v0, v0, 0xc
@@ -1302,21 +1144,17 @@
     .locals 1
 
     .prologue
-    .line 303
     monitor-enter p0
 
-    .line 304
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 305
     iget-boolean v0, p0, Landroid/view/Display;->mIsValid:Z
 
     monitor-exit p0
 
     return v0
 
-    .line 306
     :catchall_0
     move-exception v0
 
@@ -1331,14 +1169,11 @@
     .locals 3
 
     .prologue
-    .line 801
     monitor-enter p0
 
-    .line 802
     :try_start_0
     invoke-direct {p0}, Landroid/view/Display;->updateDisplayInfoLocked()V
 
-    .line 803
     iget-object v0, p0, Landroid/view/Display;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget-object v1, p0, Landroid/view/Display;->mTempMetrics:Landroid/util/DisplayMetrics;
@@ -1347,7 +1182,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/DisplayInfo;->getAppMetrics(Landroid/util/DisplayMetrics;Landroid/view/DisplayAdjustments;)V
 
-    .line 804
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1408,7 +1242,6 @@
 
     return-object v0
 
-    .line 806
     :catchall_0
     move-exception v0
 

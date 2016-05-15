@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 135
     new-instance v6, Landroid/net/wifi/WifiConnectionStatistics;
 
     invoke-direct {v6}, Landroid/net/wifi/WifiConnectionStatistics;-><init>()V
 
-    .line 136
     .local v6, "stats":Landroid/net/wifi/WifiConnectionStatistics;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -58,35 +55,30 @@
 
     iput v7, v6, Landroid/net/wifi/WifiConnectionStatistics;->num24GhzConnected:I
 
-    .line 137
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     iput v7, v6, Landroid/net/wifi/WifiConnectionStatistics;->num5GhzConnected:I
 
-    .line 138
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     iput v7, v6, Landroid/net/wifi/WifiConnectionStatistics;->numAutoJoinAttempt:I
 
-    .line 139
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     iput v7, v6, Landroid/net/wifi/WifiConnectionStatistics;->numAutoRoamAttempt:I
 
-    .line 140
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     iput v7, v6, Landroid/net/wifi/WifiConnectionStatistics;->numWifiManagerJoinAttempt:I
 
-    .line 141
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -94,7 +86,6 @@
     .local v1, "n":I
     move v2, v1
 
-    .line 142
     .end local v1    # "n":I
     .local v2, "n":I
     :goto_0
@@ -104,30 +95,25 @@
     .restart local v1    # "n":I
     if-lez v2, :cond_0
 
-    .line 143
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 144
     .local v0, "Key":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 145
     .local v3, "numConnection":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 146
     .local v4, "numUsage":I
     new-instance v5, Landroid/net/wifi/WifiNetworkConnectionStatistics;
 
     invoke-direct {v5, v3, v4}, Landroid/net/wifi/WifiNetworkConnectionStatistics;-><init>(II)V
 
-    .line 148
     .local v5, "st":Landroid/net/wifi/WifiNetworkConnectionStatistics;
     iget-object v7, v6, Landroid/net/wifi/WifiConnectionStatistics;->untrustedNetworkHistory:Ljava/util/HashMap;
 
@@ -135,12 +121,10 @@
 
     move v2, v1
 
-    .line 149
     .end local v1    # "n":I
     .restart local v2    # "n":I
     goto :goto_0
 
-    .line 150
     .end local v0    # "Key":Ljava/lang/String;
     .end local v2    # "n":I
     .end local v3    # "numConnection":I
@@ -155,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 133
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiConnectionStatistics$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WifiConnectionStatistics;
 
     move-result-object v0
@@ -168,7 +151,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 154
     new-array v0, p1, [Landroid/net/wifi/WifiConnectionStatistics;
 
     return-object v0
@@ -178,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 133
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiConnectionStatistics$1;->newArray(I)[Landroid/net/wifi/WifiConnectionStatistics;
 
     move-result-object v0

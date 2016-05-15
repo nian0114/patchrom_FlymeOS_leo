@@ -27,13 +27,10 @@
     .param p1, "id"    # Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;
 
     .prologue
-    .line 326
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 327
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiRecordSources$DigitalChannelData;->mChannelIdentifier:Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;
 
-    .line 328
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p0, "number"    # I
 
     .prologue
-    .line 322
     new-instance v0, Landroid/hardware/hdmi/HdmiRecordSources$DigitalChannelData;
 
     new-instance v1, Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;
@@ -66,7 +62,6 @@
     .param p1, "minorNumber"    # I
 
     .prologue
-    .line 317
     new-instance v0, Landroid/hardware/hdmi/HdmiRecordSources$DigitalChannelData;
 
     new-instance v1, Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;
@@ -92,23 +87,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 332
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiRecordSources$DigitalChannelData;->mChannelIdentifier:Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;
 
     # invokes: Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;->toByteArray([BI)I
     invoke-static {v0, p1, p2}, Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;->access$400(Landroid/hardware/hdmi/HdmiRecordSources$ChannelIdentifier;[BI)I
 
-    .line 334
     add-int/lit8 v0, p2, 0x4
 
     aput-byte v1, p1, v0
 
-    .line 335
     add-int/lit8 v0, p2, 0x5
 
     aput-byte v1, p1, v0
 
-    .line 336
     const/4 v0, 0x6
 
     return v0

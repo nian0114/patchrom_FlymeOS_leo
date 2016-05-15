@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 53
     iput-object p1, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
-    .line 54
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 55
     return-void
 .end method
 
@@ -45,16 +42,13 @@
 
     const/4 v5, 0x1
 
-    .line 59
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 117
     :goto_0
     return-void
 
-    .line 61
     :pswitch_0
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -65,13 +59,11 @@
 
     monitor-enter v7
 
-    .line 62
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 63
     .local v3, "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/TorchManager$TorchCallback;>;"
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -100,7 +92,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 65
     .local v2, "listener":Landroid/hardware/TorchManager$TorchCallback;
     :try_start_1
     iget v4, p1, Landroid/os/Message;->arg1:I
@@ -117,11 +108,9 @@
 
     goto :goto_1
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "e":Ljava/lang/Throwable;
     :try_start_2
     sget-object v4, Landroid/hardware/TorchManager;->TAG:Ljava/lang/String;
@@ -130,12 +119,10 @@
 
     invoke-static {v4, v8, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 68
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 76
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
@@ -155,10 +142,8 @@
     :cond_0
     move v4, v6
 
-    .line 65
     goto :goto_2
 
-    .line 71
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :cond_1
     :try_start_3
@@ -168,7 +153,6 @@
 
     if-lez v4, :cond_2
 
-    .line 72
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -186,7 +170,6 @@
 
     check-cast v2, Landroid/hardware/TorchManager$TorchCallback;
 
-    .line 73
     .restart local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -199,7 +182,6 @@
 
     goto :goto_3
 
-    .line 76
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :cond_2
     monitor-exit v7
@@ -208,7 +190,6 @@
 
     goto :goto_0
 
-    .line 80
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/TorchManager$TorchCallback;>;"
     :pswitch_1
@@ -221,13 +202,11 @@
 
     monitor-enter v5
 
-    .line 81
     :try_start_4
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
     .restart local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/TorchManager$TorchCallback;>;"
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -256,7 +235,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 84
     .restart local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :try_start_5
     invoke-interface {v2}, Landroid/hardware/TorchManager$TorchCallback;->onTorchError()V
@@ -266,11 +244,9 @@
 
     goto :goto_4
 
-    .line 85
     :catch_1
     move-exception v0
 
-    .line 86
     .restart local v0    # "e":Ljava/lang/Throwable;
     :try_start_6
     sget-object v4, Landroid/hardware/TorchManager;->TAG:Ljava/lang/String;
@@ -279,12 +255,10 @@
 
     invoke-static {v4, v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 87
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_4
 
-    .line 95
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
@@ -298,7 +272,6 @@
 
     throw v4
 
-    .line 90
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/TorchManager$TorchCallback;>;"
     :cond_3
@@ -309,7 +282,6 @@
 
     if-lez v4, :cond_4
 
-    .line 91
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -327,7 +299,6 @@
 
     check-cast v2, Landroid/hardware/TorchManager$TorchCallback;
 
-    .line 92
     .restart local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -340,7 +311,6 @@
 
     goto :goto_5
 
-    .line 95
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :cond_4
     monitor-exit v5
@@ -349,7 +319,6 @@
 
     goto/16 :goto_0
 
-    .line 99
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/TorchManager$TorchCallback;>;"
     :pswitch_2
@@ -362,13 +331,11 @@
 
     monitor-enter v7
 
-    .line 100
     :try_start_8
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 101
     .restart local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/TorchManager$TorchCallback;>;"
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -397,7 +364,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 103
     .restart local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :try_start_9
     iget v4, p1, Landroid/os/Message;->arg1:I
@@ -414,11 +380,9 @@
 
     goto :goto_6
 
-    .line 104
     :catch_2
     move-exception v0
 
-    .line 105
     .restart local v0    # "e":Ljava/lang/Throwable;
     :try_start_a
     sget-object v4, Landroid/hardware/TorchManager;->TAG:Ljava/lang/String;
@@ -427,12 +391,10 @@
 
     invoke-static {v4, v8, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 106
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_6
 
-    .line 114
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
@@ -452,10 +414,8 @@
     :cond_5
     move v4, v6
 
-    .line 103
     goto :goto_7
 
-    .line 109
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :cond_6
     :try_start_b
@@ -465,7 +425,6 @@
 
     if-lez v4, :cond_7
 
-    .line 110
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -483,7 +442,6 @@
 
     check-cast v2, Landroid/hardware/TorchManager$TorchCallback;
 
-    .line 111
     .restart local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     iget-object v4, p0, Landroid/hardware/TorchManager$TorchHandler;->this$0:Landroid/hardware/TorchManager;
 
@@ -496,7 +454,6 @@
 
     goto :goto_8
 
-    .line 114
     .end local v2    # "listener":Landroid/hardware/TorchManager$TorchCallback;
     :cond_7
     monitor-exit v7
@@ -505,7 +462,6 @@
 
     goto/16 :goto_0
 
-    .line 59
     nop
 
     :pswitch_data_0

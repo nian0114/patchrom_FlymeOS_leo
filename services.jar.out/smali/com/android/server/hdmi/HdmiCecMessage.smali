@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 29
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
     sput-object v0, Lcom/android/server/hdmi/HdmiCecMessage;->EMPTY_PARAM:[B
@@ -38,21 +37,16 @@
     .param p4, "params"    # [B
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
-    .line 42
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
-    .line 43
     and-int/lit16 v0, p3, 0xff
 
     iput v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
-    .line 44
     array-length v0, p4
 
     invoke-static {p4, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -61,7 +55,6 @@
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
-    .line 45
     return-void
 .end method
 
@@ -70,10 +63,8 @@
     .param p0, "opcode"    # I
 
     .prologue
-    .line 103
     sparse-switch p0, :sswitch_data_0
 
-    .line 247
     const-string v0, "Opcode: %02X"
 
     const/4 v1, 0x1
@@ -95,433 +86,361 @@
     :goto_0
     return-object v0
 
-    .line 105
     :sswitch_0
     const-string v0, "Feature Abort"
 
     goto :goto_0
 
-    .line 107
     :sswitch_1
     const-string v0, "Image View On"
 
     goto :goto_0
 
-    .line 109
     :sswitch_2
     const-string v0, "Tuner Step Increment"
 
     goto :goto_0
 
-    .line 111
     :sswitch_3
     const-string v0, "Tuner Step Decrement"
 
     goto :goto_0
 
-    .line 113
     :sswitch_4
     const-string v0, "Tuner Device Staus"
 
     goto :goto_0
 
-    .line 115
     :sswitch_5
     const-string v0, "Give Tuner Device Status"
 
     goto :goto_0
 
-    .line 117
     :sswitch_6
     const-string v0, "Record On"
 
     goto :goto_0
 
-    .line 119
     :sswitch_7
     const-string v0, "Record Status"
 
     goto :goto_0
 
-    .line 121
     :sswitch_8
     const-string v0, "Record Off"
 
     goto :goto_0
 
-    .line 123
     :sswitch_9
     const-string v0, "Text View On"
 
     goto :goto_0
 
-    .line 125
     :sswitch_a
     const-string v0, "Record Tv Screen"
 
     goto :goto_0
 
-    .line 127
     :sswitch_b
     const-string v0, "Give Deck Status"
 
     goto :goto_0
 
-    .line 129
     :sswitch_c
     const-string v0, "Deck Status"
 
     goto :goto_0
 
-    .line 131
     :sswitch_d
     const-string v0, "Set Menu Language"
 
     goto :goto_0
 
-    .line 133
     :sswitch_e
     const-string v0, "Clear Analog Timer"
 
     goto :goto_0
 
-    .line 135
     :sswitch_f
     const-string v0, "Set Analog Timer"
 
     goto :goto_0
 
-    .line 137
     :sswitch_10
     const-string v0, "Timer Status"
 
     goto :goto_0
 
-    .line 139
     :sswitch_11
     const-string v0, "Standby"
 
     goto :goto_0
 
-    .line 141
     :sswitch_12
     const-string v0, "Play"
 
     goto :goto_0
 
-    .line 143
     :sswitch_13
     const-string v0, "Deck Control"
 
     goto :goto_0
 
-    .line 145
     :sswitch_14
     const-string v0, "Timer Cleared Status"
 
     goto :goto_0
 
-    .line 147
     :sswitch_15
     const-string v0, "User Control Pressed"
 
     goto :goto_0
 
-    .line 149
     :sswitch_16
     const-string v0, "User Control Release"
 
     goto :goto_0
 
-    .line 151
     :sswitch_17
     const-string v0, "Give Osd Name"
 
     goto :goto_0
 
-    .line 153
     :sswitch_18
     const-string v0, "Set Osd Name"
 
     goto :goto_0
 
-    .line 155
     :sswitch_19
     const-string v0, "Set Osd String"
 
     goto :goto_0
 
-    .line 157
     :sswitch_1a
     const-string v0, "Set Timer Program Title"
 
     goto :goto_0
 
-    .line 159
     :sswitch_1b
     const-string v0, "System Audio Mode Request"
 
     goto :goto_0
 
-    .line 161
     :sswitch_1c
     const-string v0, "Give Audio Status"
 
     goto :goto_0
 
-    .line 163
     :sswitch_1d
     const-string v0, "Set System Audio Mode"
 
     goto :goto_0
 
-    .line 165
     :sswitch_1e
     const-string v0, "Report Audio Status"
 
     goto :goto_0
 
-    .line 167
     :sswitch_1f
     const-string v0, "Give System Audio Mode Status"
 
     goto :goto_0
 
-    .line 169
     :sswitch_20
     const-string v0, "System Audio Mode Status"
 
     goto :goto_0
 
-    .line 171
     :sswitch_21
     const-string v0, "Routing Change"
 
     goto :goto_0
 
-    .line 173
     :sswitch_22
     const-string v0, "Routing Information"
 
     goto :goto_0
 
-    .line 175
     :sswitch_23
     const-string v0, "Active Source"
 
     goto :goto_0
 
-    .line 177
     :sswitch_24
     const-string v0, "Give Physical Address"
 
     goto :goto_0
 
-    .line 179
     :sswitch_25
     const-string v0, "Report Physical Address"
 
     goto :goto_0
 
-    .line 181
     :sswitch_26
     const-string v0, "Request Active Source"
 
     goto :goto_0
 
-    .line 183
     :sswitch_27
     const-string v0, "Set Stream Path"
 
     goto :goto_0
 
-    .line 185
     :sswitch_28
     const-string v0, "Device Vendor Id"
 
     goto :goto_0
 
-    .line 187
     :sswitch_29
     const-string v0, "Vendor Commandn"
 
     goto :goto_0
 
-    .line 189
     :sswitch_2a
     const-string v0, "Vendor Remote Button Down"
 
     goto/16 :goto_0
 
-    .line 191
     :sswitch_2b
     const-string v0, "Vendor Remote Button Up"
 
     goto/16 :goto_0
 
-    .line 193
     :sswitch_2c
     const-string v0, "Give Device Vendor Id"
 
     goto/16 :goto_0
 
-    .line 195
     :sswitch_2d
     const-string v0, "Menu REquest"
 
     goto/16 :goto_0
 
-    .line 197
     :sswitch_2e
     const-string v0, "Menu Status"
 
     goto/16 :goto_0
 
-    .line 199
     :sswitch_2f
     const-string v0, "Give Device Power Status"
 
     goto/16 :goto_0
 
-    .line 201
     :sswitch_30
     const-string v0, "Report Power Status"
 
     goto/16 :goto_0
 
-    .line 203
     :sswitch_31
     const-string v0, "Get Menu Language"
 
     goto/16 :goto_0
 
-    .line 205
     :sswitch_32
     const-string v0, "Select Analog Service"
 
     goto/16 :goto_0
 
-    .line 207
     :sswitch_33
     const-string v0, "Select Digital Service"
 
     goto/16 :goto_0
 
-    .line 209
     :sswitch_34
     const-string v0, "Set Digital Timer"
 
     goto/16 :goto_0
 
-    .line 211
     :sswitch_35
     const-string v0, "Clear Digital Timer"
 
     goto/16 :goto_0
 
-    .line 213
     :sswitch_36
     const-string v0, "Set Audio Rate"
 
     goto/16 :goto_0
 
-    .line 215
     :sswitch_37
     const-string v0, "InActive Source"
 
     goto/16 :goto_0
 
-    .line 217
     :sswitch_38
     const-string v0, "Cec Version"
 
     goto/16 :goto_0
 
-    .line 219
     :sswitch_39
     const-string v0, "Get Cec Version"
 
     goto/16 :goto_0
 
-    .line 221
     :sswitch_3a
     const-string v0, "Vendor Command With Id"
 
     goto/16 :goto_0
 
-    .line 223
     :sswitch_3b
     const-string v0, "Clear External Timer"
 
     goto/16 :goto_0
 
-    .line 225
     :sswitch_3c
     const-string v0, "Set External Timer"
 
     goto/16 :goto_0
 
-    .line 227
     :sswitch_3d
     const-string v0, "Repot Short Audio Descriptor"
 
     goto/16 :goto_0
 
-    .line 229
     :sswitch_3e
     const-string v0, "Request Short Audio Descriptor"
 
     goto/16 :goto_0
 
-    .line 231
     :sswitch_3f
     const-string v0, "Initiate ARC"
 
     goto/16 :goto_0
 
-    .line 233
     :sswitch_40
     const-string v0, "Report ARC Initiated"
 
     goto/16 :goto_0
 
-    .line 235
     :sswitch_41
     const-string v0, "Report ARC Terminated"
 
     goto/16 :goto_0
 
-    .line 237
     :sswitch_42
     const-string v0, "Request ARC Initiation"
 
     goto/16 :goto_0
 
-    .line 239
     :sswitch_43
     const-string v0, "Request ARC Termination"
 
     goto/16 :goto_0
 
-    .line 241
     :sswitch_44
     const-string v0, "Terminate ARC"
 
     goto/16 :goto_0
 
-    .line 243
     :sswitch_45
     const-string v0, "Cdc Message"
 
     goto/16 :goto_0
 
-    .line 245
     :sswitch_46
     const-string v0, "Abort"
 
     goto/16 :goto_0
 
-    .line 103
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -604,7 +523,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
     return v0
@@ -614,7 +532,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
     return v0
@@ -624,7 +541,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     return-object v0
@@ -634,7 +550,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
     return v0
@@ -648,12 +563,10 @@
 
     const/4 v9, 0x0
 
-    .line 90
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 91
     .local v4, "s":Ljava/lang/StringBuffer;
     const-string v5, "<%s> src: %d, dst: %d"
 
@@ -693,19 +606,16 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 93
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     array-length v5, v5
 
     if-lez v5, :cond_0
 
-    .line 94
     const-string v5, ", params:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     .local v0, "arr$":[B
@@ -720,7 +630,6 @@
 
     aget-byte v1, v0, v2
 
-    .line 96
     .local v1, "data":B
     const-string v5, " %02X"
 
@@ -738,12 +647,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 95
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 99
     .end local v0    # "arr$":[B
     .end local v1    # "data":B
     .end local v2    # "i$":I

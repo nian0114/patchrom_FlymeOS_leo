@@ -44,38 +44,28 @@
     .param p8, "managingTrust"    # Z
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput p1, p0, Lcom/android/server/trust/TrustArchive$Event;->type:I
 
-    .line 59
     iput p2, p0, Lcom/android/server/trust/TrustArchive$Event;->userId:I
 
-    .line 60
     iput-object p3, p0, Lcom/android/server/trust/TrustArchive$Event;->agent:Landroid/content/ComponentName;
 
-    .line 61
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/trust/TrustArchive$Event;->elapsedTimestamp:J
 
-    .line 62
     iput-object p4, p0, Lcom/android/server/trust/TrustArchive$Event;->message:Ljava/lang/String;
 
-    .line 63
     iput-wide p5, p0, Lcom/android/server/trust/TrustArchive$Event;->duration:J
 
-    .line 64
     iput-boolean p7, p0, Lcom/android/server/trust/TrustArchive$Event;->userInitiated:Z
 
-    .line 65
     iput-boolean p8, p0, Lcom/android/server/trust/TrustArchive$Event;->managingTrust:Z
 
-    .line 66
     return-void
 .end method
 
@@ -91,7 +81,6 @@
     .param p9, "x7"    # Lcom/android/server/trust/TrustArchive$1;
 
     .prologue
-    .line 42
     invoke-direct/range {p0 .. p8}, Lcom/android/server/trust/TrustArchive$Event;-><init>(IILandroid/content/ComponentName;Ljava/lang/String;JZZ)V
 
     return-void

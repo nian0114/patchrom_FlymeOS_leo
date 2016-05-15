@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .param p3, "endValue"    # Landroid/graphics/Matrix;
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return-object v0
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 53
     check-cast p2, Landroid/graphics/Matrix;
 
     check-cast p3, Landroid/graphics/Matrix;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,14 +36,12 @@
     .param p2, "right"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 26
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getGlobalSortKey()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 27
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +66,6 @@
 
     throw v0
 
-    .line 29
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getGlobalSortKey()Ljava/lang/String;
 
@@ -77,7 +73,6 @@
 
     if-nez v0, :cond_1
 
-    .line 30
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -102,7 +97,6 @@
 
     throw v0
 
-    .line 32
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getGlobalSortKey()Ljava/lang/String;
 
@@ -123,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 23
     check-cast p1, Lcom/android/server/notification/NotificationRecord;
 
     check-cast p2, Lcom/android/server/notification/NotificationRecord;

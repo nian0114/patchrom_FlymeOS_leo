@@ -53,44 +53,35 @@
 
     const/4 v2, 0x0
 
-    .line 94
     sget-object v3, Landroid/media/audiofx/BassBoost;->EFFECT_TYPE_BASS_BOOST:Ljava/util/UUID;
 
     sget-object v4, Landroid/media/audiofx/BassBoost;->EFFECT_TYPE_NULL:Ljava/util/UUID;
 
     invoke-direct {p0, v3, v4, p1, p2}, Landroid/media/audiofx/AudioEffect;-><init>(Ljava/util/UUID;Ljava/util/UUID;II)V
 
-    .line 60
     iput-boolean v2, p0, Landroid/media/audiofx/BassBoost;->mStrengthSupported:Z
 
-    .line 65
     iput-object v5, p0, Landroid/media/audiofx/BassBoost;->mParamListener:Landroid/media/audiofx/BassBoost$OnParameterChangeListener;
 
-    .line 70
     iput-object v5, p0, Landroid/media/audiofx/BassBoost;->mBaseParamListener:Landroid/media/audiofx/BassBoost$BaseParameterListener;
 
-    .line 75
     new-instance v3, Ljava/lang/Object;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     iput-object v3, p0, Landroid/media/audiofx/BassBoost;->mParamListenerLock:Ljava/lang/Object;
 
-    .line 96
     if-nez p2, :cond_0
 
-    .line 97
     const-string v3, "BassBoost"
 
     const-string v4, "WARNING: attaching a BassBoost to global output mix is deprecated!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :cond_0
     new-array v0, v1, [I
 
-    .line 101
     .local v0, "value":[I
     invoke-virtual {p0, v2, v0}, Landroid/media/audiofx/BassBoost;->getParameter(I[I)I
 
@@ -98,7 +89,6 @@
 
     invoke-virtual {p0, v3}, Landroid/media/audiofx/BassBoost;->checkStatus(I)V
 
-    .line 102
     aget v3, v0, v2
 
     if-eqz v3, :cond_1
@@ -106,13 +96,11 @@
     :goto_0
     iput-boolean v1, p0, Landroid/media/audiofx/BassBoost;->mStrengthSupported:Z
 
-    .line 103
     return-void
 
     :cond_1
     move v1, v2
 
-    .line 102
     goto :goto_0
 .end method
 
@@ -121,7 +109,6 @@
     .param p0, "x0"    # Landroid/media/audiofx/BassBoost;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/media/audiofx/BassBoost;->mParamListenerLock:Ljava/lang/Object;
 
     return-object v0
@@ -132,7 +119,6 @@
     .param p0, "x0"    # Landroid/media/audiofx/BassBoost;
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/media/audiofx/BassBoost;->mParamListener:Landroid/media/audiofx/BassBoost$OnParameterChangeListener;
 
     return-object v0
@@ -153,16 +139,13 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 268
     new-instance v0, Landroid/media/audiofx/BassBoost$Settings;
 
     invoke-direct {v0}, Landroid/media/audiofx/BassBoost$Settings;-><init>()V
 
-    .line 269
     .local v0, "settings":Landroid/media/audiofx/BassBoost$Settings;
     new-array v1, v2, [S
 
-    .line 270
     .local v1, "value":[S
     invoke-virtual {p0, v2, v1}, Landroid/media/audiofx/BassBoost;->getParameter(I[S)I
 
@@ -170,14 +153,12 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/BassBoost;->checkStatus(I)V
 
-    .line 271
     const/4 v2, 0x0
 
     aget-short v2, v1, v2
 
     iput-short v2, v0, Landroid/media/audiofx/BassBoost$Settings;->strength:S
 
-    .line 272
     return-object v0
 .end method
 
@@ -194,10 +175,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 140
     new-array v0, v1, [S
 
-    .line 141
     .local v0, "value":[S
     invoke-virtual {p0, v1, v0}, Landroid/media/audiofx/BassBoost;->getParameter(I[S)I
 
@@ -205,7 +184,6 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/BassBoost;->checkStatus(I)V
 
-    .line 142
     const/4 v1, 0x0
 
     aget-short v1, v0, v1
@@ -217,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-boolean v0, p0, Landroid/media/audiofx/BassBoost;->mStrengthSupported:Z
 
     return v0
@@ -228,21 +205,17 @@
     .param p1, "listener"    # Landroid/media/audiofx/BassBoost$OnParameterChangeListener;
 
     .prologue
-    .line 200
     iget-object v1, p0, Landroid/media/audiofx/BassBoost;->mParamListenerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 201
     :try_start_0
     iget-object v0, p0, Landroid/media/audiofx/BassBoost;->mParamListener:Landroid/media/audiofx/BassBoost$OnParameterChangeListener;
 
     if-nez v0, :cond_0
 
-    .line 202
     iput-object p1, p0, Landroid/media/audiofx/BassBoost;->mParamListener:Landroid/media/audiofx/BassBoost$OnParameterChangeListener;
 
-    .line 203
     new-instance v0, Landroid/media/audiofx/BassBoost$BaseParameterListener;
 
     const/4 v2, 0x0
@@ -251,19 +224,15 @@
 
     iput-object v0, p0, Landroid/media/audiofx/BassBoost;->mBaseParamListener:Landroid/media/audiofx/BassBoost$BaseParameterListener;
 
-    .line 204
     iget-object v0, p0, Landroid/media/audiofx/BassBoost;->mBaseParamListener:Landroid/media/audiofx/BassBoost$BaseParameterListener;
 
     invoke-super {p0, v0}, Landroid/media/audiofx/AudioEffect;->setParameterListener(Landroid/media/audiofx/AudioEffect$OnParameterChangeListener;)V
 
-    .line 206
     :cond_0
     monitor-exit v1
 
-    .line 207
     return-void
 
-    .line 206
     :catchall_0
     move-exception v0
 
@@ -286,7 +255,6 @@
     .end annotation
 
     .prologue
-    .line 285
     const/4 v0, 0x1
 
     iget-short v1, p1, Landroid/media/audiofx/BassBoost$Settings;->strength:S
@@ -297,7 +265,6 @@
 
     invoke-virtual {p0, v0}, Landroid/media/audiofx/BassBoost;->checkStatus(I)V
 
-    .line 286
     return-void
 .end method
 
@@ -313,7 +280,6 @@
     .end annotation
 
     .prologue
-    .line 127
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/BassBoost;->setParameter(IS)I
@@ -322,6 +288,5 @@
 
     invoke-virtual {p0, v0}, Landroid/media/audiofx/BassBoost;->checkStatus(I)V
 
-    .line 128
     return-void
 .end method

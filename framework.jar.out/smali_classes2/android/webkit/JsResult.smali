@@ -23,13 +23,10 @@
     .param p1, "receiver"    # Landroid/webkit/JsResult$ResultReceiver;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object p1, p0, Landroid/webkit/JsResult;->mReceiver:Landroid/webkit/JsResult$ResultReceiver;
 
-    .line 63
     return-void
 .end method
 
@@ -37,12 +34,10 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/webkit/JsResult;->mReceiver:Landroid/webkit/JsResult$ResultReceiver;
 
     invoke-interface {v0, p0}, Landroid/webkit/JsResult$ResultReceiver;->onJsResultComplete(Landroid/webkit/JsResult;)V
 
-    .line 76
     return-void
 .end method
 
@@ -52,15 +47,12 @@
     .locals 1
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/JsResult;->mResult:Z
 
-    .line 46
     invoke-direct {p0}, Landroid/webkit/JsResult;->wakeUp()V
 
-    .line 47
     return-void
 .end method
 
@@ -68,15 +60,12 @@
     .locals 1
 
     .prologue
-    .line 53
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/JsResult;->mResult:Z
 
-    .line 54
     invoke-direct {p0}, Landroid/webkit/JsResult;->wakeUp()V
 
-    .line 55
     return-void
 .end method
 
@@ -84,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Landroid/webkit/JsResult;->mResult:Z
 
     return v0

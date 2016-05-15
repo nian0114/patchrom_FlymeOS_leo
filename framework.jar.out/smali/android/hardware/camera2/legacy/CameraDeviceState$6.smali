@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 280
     iput-object p1, p0, Landroid/hardware/camera2/legacy/CameraDeviceState$6;->this$0:Landroid/hardware/camera2/legacy/CameraDeviceState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 283
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceState$6;->this$0:Landroid/hardware/camera2/legacy/CameraDeviceState;
 
     # getter for: Landroid/hardware/camera2/legacy/CameraDeviceState;->mCurrentListener:Landroid/hardware/camera2/legacy/CameraDeviceState$CameraDeviceStateListener;
@@ -50,6 +48,5 @@
 
     invoke-interface {v0}, Landroid/hardware/camera2/legacy/CameraDeviceState$CameraDeviceStateListener;->onIdle()V
 
-    .line 284
     return-void
 .end method

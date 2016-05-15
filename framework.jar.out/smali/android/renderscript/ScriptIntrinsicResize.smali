@@ -14,10 +14,8 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/ScriptIntrinsic;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 27
     return-void
 .end method
 
@@ -26,7 +24,6 @@
     .param p0, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 38
     const/16 v3, 0xc
 
     const-wide/16 v4, 0x0
@@ -35,13 +32,11 @@
 
     move-result-wide v0
 
-    .line 39
     .local v0, "id":J
     new-instance v2, Landroid/renderscript/ScriptIntrinsicResize;
 
     invoke-direct {v2, v0, v1, p0}, Landroid/renderscript/ScriptIntrinsicResize;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 40
     .local v2, "si":Landroid/renderscript/ScriptIntrinsicResize;
     return-object v2
 .end method
@@ -53,12 +48,10 @@
     .param p1, "aout"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicResize;->mInput:Landroid/renderscript/Allocation;
 
     if-ne p1, v0, :cond_0
 
-    .line 83
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v1, "Output cannot be same as Input."
@@ -67,13 +60,11 @@
 
     throw v0
 
-    .line 85
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/renderscript/ScriptIntrinsicResize;->forEach_bicubic(Landroid/renderscript/Allocation;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 86
     return-void
 .end method
 
@@ -85,7 +76,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 98
     const/4 v1, 0x0
 
     move-object v2, v4
@@ -100,7 +90,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/ScriptIntrinsicResize;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 99
     return-void
 .end method
 
@@ -108,7 +97,6 @@
     .locals 2
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -126,7 +114,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 107
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -143,12 +130,10 @@
     .param p1, "ain"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 51
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getElement()Landroid/renderscript/Element;
 
     move-result-object v0
 
-    .line 52
     .local v0, "e":Landroid/renderscript/Element;
     iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
 
@@ -198,7 +183,6 @@
 
     if-nez v1, :cond_0
 
-    .line 56
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v2, "Unsuported element type."
@@ -207,15 +191,12 @@
 
     throw v1
 
-    .line 59
     :cond_0
     iput-object p1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mInput:Landroid/renderscript/Allocation;
 
-    .line 60
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, p1}, Landroid/renderscript/ScriptIntrinsicResize;->setVar(ILandroid/renderscript/BaseObj;)V
 
-    .line 61
     return-void
 .end method

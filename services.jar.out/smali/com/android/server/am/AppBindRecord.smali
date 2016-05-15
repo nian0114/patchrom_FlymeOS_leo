@@ -30,26 +30,20 @@
     .param p3, "_client"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/AppBindRecord;->connections:Landroid/util/ArraySet;
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/am/AppBindRecord;->service:Lcom/android/server/am/ServiceRecord;
 
-    .line 55
     iput-object p2, p0, Lcom/android/server/am/AppBindRecord;->intent:Lcom/android/server/am/IntentBindRecord;
 
-    .line 56
     iput-object p3, p0, Lcom/android/server/am/AppBindRecord;->client:Lcom/android/server/am/ProcessRecord;
 
-    .line 57
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +81,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 37
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,10 +107,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 38
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppBindRecord;->dumpInIntentBind(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 39
     return-void
 .end method
 
@@ -128,18 +118,15 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     iget-object v3, p0, Lcom/android/server/am/AppBindRecord;->connections:Landroid/util/ArraySet;
 
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
     move-result v0
 
-    .line 43
     .local v0, "N":I
     if-lez v0, :cond_0
 
-    .line 44
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,14 +147,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 45
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 46
     iget-object v3, p0, Lcom/android/server/am/AppBindRecord;->connections:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -176,7 +161,6 @@
 
     check-cast v1, Lcom/android/server/am/ConnectionRecord;
 
-    .line 47
     .local v1, "c":Lcom/android/server/am/ConnectionRecord;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -202,12 +186,10 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 45
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 50
     .end local v1    # "c":Lcom/android/server/am/ConnectionRecord;
     .end local v2    # "i":I
     :cond_0
@@ -218,7 +200,6 @@
     .locals 2
 
     .prologue
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

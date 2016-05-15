@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 366
     iput-object p1, p0, Landroid/widget/SearchView$5;->this$0:Landroid/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,12 +48,10 @@
     .param p9, "oldBottom"    # I
 
     .prologue
-    .line 370
     iget-object v0, p0, Landroid/widget/SearchView$5;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->adjustDropDownSizeAndPosition()V
     invoke-static {v0}, Landroid/widget/SearchView;->access$300(Landroid/widget/SearchView;)V
 
-    .line 371
     return-void
 .end method

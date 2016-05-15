@@ -33,17 +33,14 @@
     .param p1, "rc"    # Landroid/media/RemoteController;
 
     .prologue
-    .line 635
     invoke-direct {p0}, Landroid/media/IRemoteControlDisplay$Stub;-><init>()V
 
-    .line 636
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
-    .line 637
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 751
     iget-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,22 +63,18 @@
 
     check-cast v7, Landroid/media/RemoteController;
 
-    .line 752
     .local v7, "rc":Landroid/media/RemoteController;
     if-nez v7, :cond_1
 
-    .line 774
     :cond_0
     :goto_0
     return-void
 
-    .line 756
     :cond_1
     if-nez p2, :cond_2
 
     if-eqz p3, :cond_0
 
-    .line 759
     :cond_2
     # getter for: Landroid/media/RemoteController;->mGenLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/RemoteController;->access$400()Ljava/lang/Object;
@@ -91,7 +83,6 @@
 
     monitor-enter v1
 
-    .line 760
     :try_start_0
     # getter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v7}, Landroid/media/RemoteController;->access$500(Landroid/media/RemoteController;)I
@@ -100,12 +91,10 @@
 
     if-eq v0, p1, :cond_3
 
-    .line 761
     monitor-exit v1
 
     goto :goto_0
 
-    .line 763
     :catchall_0
     move-exception v0
 
@@ -121,10 +110,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 764
     if-nez p2, :cond_4
 
-    .line 765
     new-instance p2, Landroid/os/Bundle;
 
     .end local p2    # "metadata":Landroid/os/Bundle;
@@ -132,12 +119,10 @@
 
     invoke-direct {p2, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 767
     .restart local p2    # "metadata":Landroid/os/Bundle;
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 768
     const/16 v0, 0x64
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -146,7 +131,6 @@
 
     invoke-virtual {p2, v0, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 771
     :cond_5
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v7}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
@@ -177,7 +161,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 733
     iget-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -186,15 +169,12 @@
 
     check-cast v7, Landroid/media/RemoteController;
 
-    .line 734
     .local v7, "rc":Landroid/media/RemoteController;
     if-nez v7, :cond_0
 
-    .line 748
     :goto_0
     return-void
 
-    .line 738
     :cond_0
     # getter for: Landroid/media/RemoteController;->mGenLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/RemoteController;->access$400()Ljava/lang/Object;
@@ -203,7 +183,6 @@
 
     monitor-enter v1
 
-    .line 739
     :try_start_0
     # getter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v7}, Landroid/media/RemoteController;->access$500(Landroid/media/RemoteController;)I
@@ -212,12 +191,10 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 740
     monitor-exit v1
 
     goto :goto_0
 
-    .line 742
     :catchall_0
     move-exception v0
 
@@ -233,14 +210,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 743
     new-instance v5, Landroid/os/Bundle;
 
     const/4 v0, 0x1
 
     invoke-direct {v5, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 744
     .local v5, "metadata":Landroid/os/Bundle;
     const/16 v0, 0x64
 
@@ -250,7 +225,6 @@
 
     invoke-virtual {v5, v0, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 745
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v7}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
 
@@ -279,7 +253,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 641
     iget-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -288,20 +261,16 @@
 
     check-cast v10, Landroid/media/RemoteController;
 
-    .line 642
     .local v10, "rc":Landroid/media/RemoteController;
     if-nez v10, :cond_1
 
-    .line 660
     :cond_0
     :goto_0
     return-void
 
-    .line 645
     :cond_1
     const/4 v9, 0x0
 
-    .line 646
     .local v9, "isNew":Z
     # getter for: Landroid/media/RemoteController;->mGenLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/RemoteController;->access$400()Ljava/lang/Object;
@@ -310,7 +279,6 @@
 
     monitor-enter v2
 
-    .line 647
     :try_start_0
     # getter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v10}, Landroid/media/RemoteController;->access$500(Landroid/media/RemoteController;)I
@@ -319,23 +287,18 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 648
     # setter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v10, p1}, Landroid/media/RemoteController;->access$502(Landroid/media/RemoteController;I)I
 
-    .line 649
     const/4 v9, 0x1
 
-    .line 651
     :cond_2
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 652
     if-eqz p2, :cond_3
 
-    .line 653
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v10}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
 
@@ -354,13 +317,11 @@
     # invokes: Landroid/media/RemoteController;->sendMsg(Landroid/os/Handler;IIIILjava/lang/Object;I)V
     invoke-static/range {v0 .. v6}, Landroid/media/RemoteController;->access$700(Landroid/os/Handler;IIIILjava/lang/Object;I)V
 
-    .line 656
     :cond_3
     if-nez v9, :cond_4
 
     if-eqz p3, :cond_0
 
-    .line 657
     :cond_4
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v10}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
@@ -387,7 +348,6 @@
 
     goto :goto_0
 
-    .line 651
     :catchall_0
     move-exception v0
 
@@ -401,7 +361,6 @@
     :cond_5
     move v6, v1
 
-    .line 657
     goto :goto_1
 .end method
 
@@ -412,7 +371,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 663
     iget-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -421,15 +379,12 @@
 
     check-cast v7, Landroid/media/RemoteController;
 
-    .line 664
     .local v7, "rc":Landroid/media/RemoteController;
     if-nez v7, :cond_0
 
-    .line 669
     :goto_0
     return-void
 
-    .line 667
     :cond_0
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v7}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
@@ -468,7 +423,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 714
     iget-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -477,20 +431,16 @@
 
     check-cast v7, Landroid/media/RemoteController;
 
-    .line 715
     .local v7, "rc":Landroid/media/RemoteController;
     if-nez v7, :cond_1
 
-    .line 730
     :cond_0
     :goto_0
     return-void
 
-    .line 719
     :cond_1
     if-eqz p2, :cond_0
 
-    .line 722
     # getter for: Landroid/media/RemoteController;->mGenLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/RemoteController;->access$400()Ljava/lang/Object;
 
@@ -498,7 +448,6 @@
 
     monitor-enter v1
 
-    .line 723
     :try_start_0
     # getter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v7}, Landroid/media/RemoteController;->access$500(Landroid/media/RemoteController;)I
@@ -507,12 +456,10 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 724
     monitor-exit v1
 
     goto :goto_0
 
-    .line 726
     :catchall_0
     move-exception v0
 
@@ -528,7 +475,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 727
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v7}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
 
@@ -559,7 +505,6 @@
     .param p7, "speed"    # F
 
     .prologue
-    .line 673
     iget-object v1, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -568,15 +513,12 @@
 
     check-cast v8, Landroid/media/RemoteController;
 
-    .line 674
     .local v8, "rc":Landroid/media/RemoteController;
     if-nez v8, :cond_0
 
-    .line 695
     :goto_0
     return-void
 
-    .line 685
     :cond_0
     # getter for: Landroid/media/RemoteController;->mGenLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/RemoteController;->access$400()Ljava/lang/Object;
@@ -585,7 +527,6 @@
 
     monitor-enter v2
 
-    .line 686
     :try_start_0
     # getter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v8}, Landroid/media/RemoteController;->access$500(Landroid/media/RemoteController;)I
@@ -594,12 +535,10 @@
 
     if-eq v1, p1, :cond_1
 
-    .line 687
     monitor-exit v2
 
     goto :goto_0
 
-    .line 689
     :catchall_0
     move-exception v1
 
@@ -615,7 +554,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 690
     new-instance v0, Landroid/media/RemoteController$PlaybackInfo;
 
     move v1, p2
@@ -628,7 +566,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/media/RemoteController$PlaybackInfo;-><init>(IJJF)V
 
-    .line 692
     .local v0, "playbackInfo":Landroid/media/RemoteController$PlaybackInfo;
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v8}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
@@ -662,7 +599,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 699
     iget-object v0, p0, Landroid/media/RemoteController$RcDisplay;->mController:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -671,15 +607,12 @@
 
     check-cast v7, Landroid/media/RemoteController;
 
-    .line 700
     .local v7, "rc":Landroid/media/RemoteController;
     if-nez v7, :cond_0
 
-    .line 711
     :goto_0
     return-void
 
-    .line 703
     :cond_0
     # getter for: Landroid/media/RemoteController;->mGenLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/RemoteController;->access$400()Ljava/lang/Object;
@@ -688,7 +621,6 @@
 
     monitor-enter v1
 
-    .line 704
     :try_start_0
     # getter for: Landroid/media/RemoteController;->mClientGenerationIdCurrent:I
     invoke-static {v7}, Landroid/media/RemoteController;->access$500(Landroid/media/RemoteController;)I
@@ -697,12 +629,10 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 705
     monitor-exit v1
 
     goto :goto_0
 
-    .line 707
     :catchall_0
     move-exception v0
 
@@ -718,7 +648,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 708
     # getter for: Landroid/media/RemoteController;->mEventHandler:Landroid/media/RemoteController$EventHandler;
     invoke-static {v7}, Landroid/media/RemoteController;->access$600(Landroid/media/RemoteController;)Landroid/media/RemoteController$EventHandler;
 

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 669
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 671
     new-instance v0, Landroid/hardware/camera2/CameraManager;
 
     invoke-direct {v0, p1}, Landroid/hardware/camera2/CameraManager;-><init>(Landroid/content/Context;)V

@@ -27,13 +27,10 @@
     .locals 0
 
     .prologue
-    .line 2386
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2387
     invoke-virtual {p0}, Landroid/widget/GridLayout$Bounds;->reset()V
 
-    .line 2388
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p1, "x0"    # Landroid/widget/GridLayout$1;
 
     .prologue
-    .line 2381
     invoke-direct {p0}, Landroid/widget/GridLayout$Bounds;-><init>()V
 
     return-void
@@ -59,7 +55,6 @@
     .param p5, "horizontal"    # Z
 
     .prologue
-    .line 2411
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
     invoke-virtual {p1}, Landroid/widget/GridLayout;->getLayoutMode()I
@@ -81,7 +76,6 @@
     .param p2, "after"    # I
 
     .prologue
-    .line 2397
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
@@ -90,7 +84,6 @@
 
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
-    .line 2398
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
     invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
@@ -99,7 +92,6 @@
 
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
-    .line 2399
     return-void
 .end method
 
@@ -112,7 +104,6 @@
     .param p5, "size"    # I
 
     .prologue
-    .line 2415
     iget v3, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
     invoke-virtual {p3}, Landroid/widget/GridLayout$Spec;->getFlexibility()I
@@ -123,10 +114,8 @@
 
     iput v3, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
-    .line 2416
     iget-boolean v2, p4, Landroid/widget/GridLayout$Axis;->horizontal:Z
 
-    .line 2417
     .local v2, "horizontal":Z
     iget-object v3, p3, Landroid/widget/GridLayout$Spec;->alignment:Landroid/widget/GridLayout$Alignment;
 
@@ -134,7 +123,6 @@
 
     move-result-object v0
 
-    .line 2419
     .local v0, "alignment":Landroid/widget/GridLayout$Alignment;
     invoke-virtual {p1}, Landroid/widget/GridLayout;->getLayoutMode()I
 
@@ -144,13 +132,11 @@
 
     move-result v1
 
-    .line 2420
     .local v1, "before":I
     sub-int v3, p5, v1
 
     invoke-virtual {p0, v1, v3}, Landroid/widget/GridLayout$Bounds;->include(II)V
 
-    .line 2421
     return-void
 .end method
 
@@ -160,18 +146,14 @@
     .prologue
     const/high16 v0, -0x80000000
 
-    .line 2391
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
-    .line 2392
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
-    .line 2393
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
-    .line 2394
     return-void
 .end method
 
@@ -180,10 +162,8 @@
     .param p1, "min"    # Z
 
     .prologue
-    .line 2402
     if-nez p1, :cond_0
 
-    .line 2403
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
     invoke-static {v0}, Landroid/widget/GridLayout;->canStretch(I)Z
@@ -192,10 +172,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2404
     const v0, 0x186a0
 
-    .line 2407
     :goto_0
     return v0
 
@@ -213,7 +191,6 @@
     .locals 2
 
     .prologue
-    .line 2425
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

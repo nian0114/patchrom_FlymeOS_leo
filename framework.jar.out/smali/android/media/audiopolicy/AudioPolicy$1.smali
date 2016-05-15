@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 418
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     invoke-direct {p0}, Landroid/media/audiopolicy/IAudioPolicyCallback$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "requestResult"    # I
 
     .prologue
-    .line 421
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     const/4 v1, 0x1
@@ -47,7 +45,6 @@
     # invokes: Landroid/media/audiopolicy/AudioPolicy;->sendMsg(ILjava/lang/Object;I)V
     invoke-static {v0, v1, p1, p2}, Landroid/media/audiopolicy/AudioPolicy;->access$100(Landroid/media/audiopolicy/AudioPolicy;ILjava/lang/Object;I)V
 
-    .line 426
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p2, "wasNotified"    # Z
 
     .prologue
-    .line 429
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     const/4 v2, 0x2
@@ -70,10 +66,8 @@
     # invokes: Landroid/media/audiopolicy/AudioPolicy;->sendMsg(ILjava/lang/Object;I)V
     invoke-static {v1, v2, p1, v0}, Landroid/media/audiopolicy/AudioPolicy;->access$100(Landroid/media/audiopolicy/AudioPolicy;ILjava/lang/Object;I)V
 
-    .line 434
     return-void
 
-    .line 429
     :cond_0
     const/4 v0, 0x0
 

@@ -28,21 +28,16 @@
     .param p3, "enabled"    # Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .prologue
-    .line 234
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 235
     iput-object p2, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mContext:Landroid/content/Context;
 
-    .line 236
     iput-object p3, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 237
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->onChange(Z)V
 
-    .line 238
     return-void
 .end method
 
@@ -55,7 +50,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 242
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mContext:Landroid/content/Context;
@@ -75,10 +69,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 244
     return-void
 
-    .line 242
     :cond_0
     const/4 v0, 0x0
 

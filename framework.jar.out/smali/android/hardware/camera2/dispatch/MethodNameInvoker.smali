@@ -60,26 +60,21 @@
     .end annotation
 
     .prologue
-    .line 43
     .local p0, "this":Landroid/hardware/camera2/dispatch/MethodNameInvoker;, "Landroid/hardware/camera2/dispatch/MethodNameInvoker<TT;>;"
     .local p1, "target":Landroid/hardware/camera2/dispatch/Dispatchable;, "Landroid/hardware/camera2/dispatch/Dispatchable<TT;>;"
     .local p2, "targetClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->mMethods:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 44
     iput-object p2, p0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->mTargetClass:Ljava/lang/Class;
 
-    .line 45
     iput-object p1, p0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->mTarget:Landroid/hardware/camera2/dispatch/Dispatchable;
 
-    .line 46
     return-void
 .end method
 
@@ -102,13 +97,11 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p0, "this":Landroid/hardware/camera2/dispatch/MethodNameInvoker;, "Landroid/hardware/camera2/dispatch/MethodNameInvoker<TT;>;"
-    const-string/jumbo v6, "methodName must not be null"
+    const-string v6, "methodName must not be null"
 
     invoke-static {p1, v6}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     iget-object v6, p0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->mMethods:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v6, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -117,11 +110,9 @@
 
     check-cast v5, Ljava/lang/reflect/Method;
 
-    .line 70
     .local v5, "targetMethod":Ljava/lang/reflect/Method;
     if-nez v5, :cond_2
 
-    .line 71
     iget-object v6, p0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->mTargetClass:Ljava/lang/Class;
 
     invoke-virtual {v6}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
@@ -140,7 +131,6 @@
 
     aget-object v4, v0, v2
 
-    .line 73
     .local v4, "method":Ljava/lang/reflect/Method;
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -162,20 +152,16 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 75
     move-object v5, v4
 
-    .line 76
     iget-object v6, p0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->mMethods:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v6, p1, v5}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
     .end local v4    # "method":Ljava/lang/reflect/Method;
     :cond_0
     if-nez v5, :cond_2
 
-    .line 82
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -212,14 +198,12 @@
 
     throw v6
 
-    .line 71
     .restart local v4    # "method":Ljava/lang/reflect/Method;
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 88
     .end local v0    # "arr$":[Ljava/lang/reflect/Method;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -234,19 +218,15 @@
 
     move-result-object v6
 
-    .line 92
     :goto_1
     return-object v6
 
-    .line 89
     :catch_0
     move-exception v1
 
-    .line 90
     .local v1, "e":Ljava/lang/Throwable;
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Throwable;)V
 
-    .line 92
     const/4 v6, 0x0
 
     goto :goto_1

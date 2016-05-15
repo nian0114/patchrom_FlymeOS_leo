@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/android/internal/util/DumpUtils$1;->val$sw:Ljava/io/StringWriter;
 
     iput-object p2, p0, Lcom/android/internal/util/DumpUtils$1;->val$dump:Lcom/android/internal/util/DumpUtils$Dump;
@@ -44,22 +43,18 @@
     .locals 2
 
     .prologue
-    .line 43
     new-instance v0, Lcom/android/internal/util/FastPrintWriter;
 
     iget-object v1, p0, Lcom/android/internal/util/DumpUtils$1;->val$sw:Ljava/io/StringWriter;
 
     invoke-direct {v0, v1}, Lcom/android/internal/util/FastPrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 44
     .local v0, "lpw":Ljava/io/PrintWriter;
     iget-object v1, p0, Lcom/android/internal/util/DumpUtils$1;->val$dump:Lcom/android/internal/util/DumpUtils$Dump;
 
     invoke-interface {v1, v0}, Lcom/android/internal/util/DumpUtils$Dump;->dump(Ljava/io/PrintWriter;)V
 
-    .line 45
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
-    .line 46
     return-void
 .end method

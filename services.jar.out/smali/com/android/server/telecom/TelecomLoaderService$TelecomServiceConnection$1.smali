@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection$1;->this$1:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection$1;->this$1:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
     iget-object v0, v0, Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
@@ -48,6 +46,5 @@
     # invokes: Lcom/android/server/telecom/TelecomLoaderService;->connectToTelecom()V
     invoke-static {v0}, Lcom/android/server/telecom/TelecomLoaderService;->access$000(Lcom/android/server/telecom/TelecomLoaderService;)V
 
-    .line 49
     return-void
 .end method

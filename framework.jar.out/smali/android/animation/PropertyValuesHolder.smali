@@ -99,21 +99,18 @@
 
     const/4 v3, 0x0
 
-    .line 83
     new-instance v0, Landroid/animation/IntEvaluator;
 
     invoke-direct {v0}, Landroid/animation/IntEvaluator;-><init>()V
 
     sput-object v0, Landroid/animation/PropertyValuesHolder;->sIntEvaluator:Landroid/animation/TypeEvaluator;
 
-    .line 84
     new-instance v0, Landroid/animation/FloatEvaluator;
 
     invoke-direct {v0}, Landroid/animation/FloatEvaluator;-><init>()V
 
     sput-object v0, Landroid/animation/PropertyValuesHolder;->sFloatEvaluator:Landroid/animation/TypeEvaluator;
 
-    .line 93
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -146,7 +143,6 @@
 
     sput-object v0, Landroid/animation/PropertyValuesHolder;->FLOAT_VARIANTS:[Ljava/lang/Class;
 
-    .line 95
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -179,7 +175,6 @@
 
     sput-object v0, Landroid/animation/PropertyValuesHolder;->INTEGER_VARIANTS:[Ljava/lang/Class;
 
-    .line 97
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -212,14 +207,12 @@
 
     sput-object v0, Landroid/animation/PropertyValuesHolder;->DOUBLE_VARIANTS:[Ljava/lang/Class;
 
-    .line 103
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/animation/PropertyValuesHolder;->sSetterPropertyMap:Ljava/util/HashMap;
 
-    .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -236,39 +229,30 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 143
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mSetter:Ljava/lang/reflect/Method;
 
-    .line 68
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
-    .line 79
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 109
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mTmpValueArray:[Ljava/lang/Object;
 
-    .line 144
     iput-object p1, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
-    .line 145
     if-eqz p1, :cond_0
 
-    .line 146
     invoke-virtual {p1}, Landroid/util/Property;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
-    .line 148
     :cond_0
     return-void
 .end method
@@ -279,7 +263,6 @@
     .param p2, "x1"    # Landroid/animation/PropertyValuesHolder$1;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Landroid/animation/PropertyValuesHolder;-><init>(Landroid/util/Property;)V
 
     return-void
@@ -292,29 +275,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mSetter:Ljava/lang/reflect/Method;
 
-    .line 68
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
-    .line 79
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 109
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mTmpValueArray:[Ljava/lang/Object;
 
-    .line 136
     iput-object p1, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
-    .line 137
     return-void
 .end method
 
@@ -324,7 +300,6 @@
     .param p2, "x1"    # Landroid/animation/PropertyValuesHolder$1;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Landroid/animation/PropertyValuesHolder;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -338,7 +313,6 @@
     .param p4, "x3"    # I
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2, p3, p4}, Landroid/animation/PropertyValuesHolder;->nCallTwoIntMethod(Ljava/lang/Object;JII)V
 
     return-void
@@ -354,7 +328,6 @@
     .param p6, "x5"    # I
 
     .prologue
-    .line 39
     invoke-static/range {p0 .. p6}, Landroid/animation/PropertyValuesHolder;->nCallFourIntMethod(Ljava/lang/Object;JIIII)V
 
     return-void
@@ -367,7 +340,6 @@
     .param p3, "x2"    # [I
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2, p3}, Landroid/animation/PropertyValuesHolder;->nCallMultipleIntMethod(Ljava/lang/Object;J[I)V
 
     return-void
@@ -380,7 +352,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2}, Landroid/animation/PropertyValuesHolder;->nGetMultipleIntMethod(Ljava/lang/Class;Ljava/lang/String;I)J
 
     move-result-wide v0
@@ -395,7 +366,6 @@
     .param p3, "x2"    # I
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2, p3}, Landroid/animation/PropertyValuesHolder;->nCallIntMethod(Ljava/lang/Object;JI)V
 
     return-void
@@ -407,7 +377,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     invoke-static {p0, p1}, Landroid/animation/PropertyValuesHolder;->nGetIntMethod(Ljava/lang/Class;Ljava/lang/String;)J
 
     move-result-wide v0
@@ -422,7 +391,6 @@
     .param p3, "x2"    # F
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2, p3}, Landroid/animation/PropertyValuesHolder;->nCallFloatMethod(Ljava/lang/Object;JF)V
 
     return-void
@@ -434,7 +402,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     invoke-static {p0, p1}, Landroid/animation/PropertyValuesHolder;->nGetFloatMethod(Ljava/lang/Class;Ljava/lang/String;)J
 
     move-result-wide v0
@@ -450,7 +417,6 @@
     .param p4, "x3"    # F
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2, p3, p4}, Landroid/animation/PropertyValuesHolder;->nCallTwoFloatMethod(Ljava/lang/Object;JFF)V
 
     return-void
@@ -466,7 +432,6 @@
     .param p6, "x5"    # F
 
     .prologue
-    .line 39
     invoke-static/range {p0 .. p6}, Landroid/animation/PropertyValuesHolder;->nCallFourFloatMethod(Ljava/lang/Object;JFFFF)V
 
     return-void
@@ -479,7 +444,6 @@
     .param p3, "x2"    # [F
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2, p3}, Landroid/animation/PropertyValuesHolder;->nCallMultipleFloatMethod(Ljava/lang/Object;J[F)V
 
     return-void
@@ -492,7 +456,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-static {p0, p1, p2}, Landroid/animation/PropertyValuesHolder;->nGetMultipleFloatMethod(Ljava/lang/Class;Ljava/lang/String;I)J
 
     move-result-wide v0
@@ -505,19 +468,16 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 844
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
     if-eqz v0, :cond_1
 
-    .line 845
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
     instance-of v0, v0, Landroid/animation/BidirectionalTypeConverter;
 
     if-nez v0, :cond_0
 
-    .line 846
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -558,7 +518,6 @@
 
     throw v0
 
-    .line 850
     :cond_0
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
@@ -568,7 +527,6 @@
 
     move-result-object p1
 
-    .line 852
     :cond_1
     return-object p1
 .end method
@@ -579,7 +537,6 @@
     .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
-    .line 1069
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -588,13 +545,11 @@
 
     if-nez v2, :cond_1
 
-    .line 1075
     .end local p0    # "prefix":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 1073
     .restart local p0    # "prefix":Ljava/lang/String;
     :cond_1
     const/4 v2, 0x0
@@ -607,7 +562,6 @@
 
     move-result v0
 
-    .line 1074
     .local v0, "firstLetter":C
     const/4 v2, 0x1
 
@@ -615,7 +569,6 @@
 
     move-result-object v1
 
-    .line 1075
     .local v1, "theRest":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -651,10 +604,8 @@
 
     const/4 v10, 0x0
 
-    .line 674
     const/4 v5, 0x0
 
-    .line 675
     .local v5, "returnVal":Ljava/lang/reflect/Method;
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
@@ -662,15 +613,12 @@
 
     move-result-object v4
 
-    .line 676
     .local v4, "methodName":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 677
     .local v0, "args":[Ljava/lang/Class;
     if-nez p3, :cond_2
 
-    .line 679
     :try_start_0
     invoke-virtual {p1, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     :try_end_0
@@ -678,12 +626,10 @@
 
     move-result-object v5
 
-    .line 712
     :cond_0
     :goto_0
     if-nez v5, :cond_1
 
-    .line 713
     const-string v9, "PropertyValuesHolder"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -735,19 +681,16 @@
     :cond_1
     move-object v6, v5
 
-    .line 718
     .end local v5    # "returnVal":Ljava/lang/reflect/Method;
     .local v6, "returnVal":Ljava/lang/reflect/Method;
     :goto_1
     return-object v6
 
-    .line 684
     .end local v6    # "returnVal":Ljava/lang/reflect/Method;
     .restart local v5    # "returnVal":Ljava/lang/reflect/Method;
     :cond_2
     new-array v0, v11, [Ljava/lang/Class;
 
-    .line 686
     const-class v9, Ljava/lang/Float;
 
     invoke-virtual {p3, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -756,10 +699,8 @@
 
     if-eqz v9, :cond_4
 
-    .line 687
     sget-object v8, Landroid/animation/PropertyValuesHolder;->FLOAT_VARIANTS:[Ljava/lang/Class;
 
-    .line 696
     .local v8, "typeVariants":[Ljava/lang/Class;
     :goto_2
     move-object v1, v8
@@ -776,22 +717,18 @@
 
     aget-object v7, v1, v2
 
-    .line 697
     .local v7, "typeVariant":Ljava/lang/Class;
     aput-object v7, v0, v10
 
-    .line 699
     :try_start_1
     invoke-virtual {p1, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v5
 
-    .line 700
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
     if-nez v9, :cond_3
 
-    .line 702
     iput-object v7, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
     :try_end_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_0
@@ -799,12 +736,10 @@
     :cond_3
     move-object v6, v5
 
-    .line 704
     .end local v5    # "returnVal":Ljava/lang/reflect/Method;
     .restart local v6    # "returnVal":Ljava/lang/reflect/Method;
     goto :goto_1
 
-    .line 688
     .end local v1    # "arr$":[Ljava/lang/Class;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -821,13 +756,11 @@
 
     if-eqz v9, :cond_5
 
-    .line 689
     sget-object v8, Landroid/animation/PropertyValuesHolder;->INTEGER_VARIANTS:[Ljava/lang/Class;
 
     .restart local v8    # "typeVariants":[Ljava/lang/Class;
     goto :goto_2
 
-    .line 690
     .end local v8    # "typeVariants":[Ljava/lang/Class;
     :cond_5
     const-class v9, Ljava/lang/Double;
@@ -838,24 +771,20 @@
 
     if-eqz v9, :cond_6
 
-    .line 691
     sget-object v8, Landroid/animation/PropertyValuesHolder;->DOUBLE_VARIANTS:[Ljava/lang/Class;
 
     .restart local v8    # "typeVariants":[Ljava/lang/Class;
     goto :goto_2
 
-    .line 693
     .end local v8    # "typeVariants":[Ljava/lang/Class;
     :cond_6
     new-array v8, v11, [Ljava/lang/Class;
 
-    .line 694
     .restart local v8    # "typeVariants":[Ljava/lang/Class;
     aput-object p3, v8, v10
 
     goto :goto_2
 
-    .line 705
     .restart local v1    # "arr$":[Ljava/lang/Class;
     .restart local v2    # "i$":I
     .restart local v3    # "len$":I
@@ -863,12 +792,10 @@
     :catch_0
     move-exception v9
 
-    .line 696
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 680
     .end local v1    # "arr$":[Ljava/lang/Class;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -931,7 +858,6 @@
     .end annotation
 
     .prologue
-    .line 287
     .local p0, "property":Landroid/util/Property;, "Landroid/util/Property<*Ljava/lang/Float;>;"
     new-instance v0, Landroid/animation/PropertyValuesHolder$FloatPropertyValuesHolder;
 
@@ -946,7 +872,6 @@
     .param p1, "values"    # [F
 
     .prologue
-    .line 276
     new-instance v0, Landroid/animation/PropertyValuesHolder$FloatPropertyValuesHolder;
 
     invoke-direct {v0, p0, p1}, Landroid/animation/PropertyValuesHolder$FloatPropertyValuesHolder;-><init>(Ljava/lang/String;[F)V
@@ -969,7 +894,6 @@
     .end annotation
 
     .prologue
-    .line 169
     .local p0, "property":Landroid/util/Property;, "Landroid/util/Property<*Ljava/lang/Integer;>;"
     new-instance v0, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;
 
@@ -984,7 +908,6 @@
     .param p1, "values"    # [I
 
     .prologue
-    .line 158
     new-instance v0, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;
 
     invoke-direct {v0, p0, p1}, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;-><init>(Ljava/lang/String;[I)V
@@ -998,12 +921,10 @@
     .param p1, "values"    # [Landroid/animation/Keyframe;
 
     .prologue
-    .line 544
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofKeyframe([Landroid/animation/Keyframe;)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
-    .line 545
     .local v0, "keyframeSet":Landroid/animation/KeyframeSet;
     invoke-static {p0, v0}, Landroid/animation/PropertyValuesHolder;->ofKeyframes(Landroid/util/Property;Landroid/animation/Keyframes;)Landroid/animation/PropertyValuesHolder;
 
@@ -1018,12 +939,10 @@
     .param p1, "values"    # [Landroid/animation/Keyframe;
 
     .prologue
-    .line 523
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofKeyframe([Landroid/animation/Keyframe;)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
-    .line 524
     .local v0, "keyframeSet":Landroid/animation/KeyframeSet;
     invoke-static {p0, v0}, Landroid/animation/PropertyValuesHolder;->ofKeyframes(Ljava/lang/String;Landroid/animation/Keyframes;)Landroid/animation/PropertyValuesHolder;
 
@@ -1038,12 +957,10 @@
     .param p1, "keyframes"    # Landroid/animation/Keyframes;
 
     .prologue
-    .line 563
     instance-of v1, p1, Landroid/animation/Keyframes$IntKeyframes;
 
     if-eqz v1, :cond_0
 
-    .line 564
     new-instance v0, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;
 
     check-cast p1, Landroid/animation/Keyframes$IntKeyframes;
@@ -1051,18 +968,15 @@
     .end local p1    # "keyframes":Landroid/animation/Keyframes;
     invoke-direct {v0, p0, p1}, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;-><init>(Landroid/util/Property;Landroid/animation/Keyframes$IntKeyframes;)V
 
-    .line 571
     :goto_0
     return-object v0
 
-    .line 565
     .restart local p1    # "keyframes":Landroid/animation/Keyframes;
     :cond_0
     instance-of v1, p1, Landroid/animation/Keyframes$FloatKeyframes;
 
     if-eqz v1, :cond_1
 
-    .line 566
     new-instance v0, Landroid/animation/PropertyValuesHolder$FloatPropertyValuesHolder;
 
     check-cast p1, Landroid/animation/Keyframes$FloatKeyframes;
@@ -1072,18 +986,15 @@
 
     goto :goto_0
 
-    .line 568
     .restart local p1    # "keyframes":Landroid/animation/Keyframes;
     :cond_1
     new-instance v0, Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Landroid/util/Property;)V
 
-    .line 569
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     iput-object p1, v0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 570
     invoke-interface {p1}, Landroid/animation/Keyframes;->getType()Ljava/lang/Class;
 
     move-result-object v1
@@ -1099,12 +1010,10 @@
     .param p1, "keyframes"    # Landroid/animation/Keyframes;
 
     .prologue
-    .line 549
     instance-of v1, p1, Landroid/animation/Keyframes$IntKeyframes;
 
     if-eqz v1, :cond_0
 
-    .line 550
     new-instance v0, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;
 
     check-cast p1, Landroid/animation/Keyframes$IntKeyframes;
@@ -1112,18 +1021,15 @@
     .end local p1    # "keyframes":Landroid/animation/Keyframes;
     invoke-direct {v0, p0, p1}, Landroid/animation/PropertyValuesHolder$IntPropertyValuesHolder;-><init>(Ljava/lang/String;Landroid/animation/Keyframes$IntKeyframes;)V
 
-    .line 558
     :goto_0
     return-object v0
 
-    .line 551
     .restart local p1    # "keyframes":Landroid/animation/Keyframes;
     :cond_0
     instance-of v1, p1, Landroid/animation/Keyframes$FloatKeyframes;
 
     if-eqz v1, :cond_1
 
-    .line 552
     new-instance v0, Landroid/animation/PropertyValuesHolder$FloatPropertyValuesHolder;
 
     check-cast p1, Landroid/animation/Keyframes$FloatKeyframes;
@@ -1133,18 +1039,15 @@
 
     goto :goto_0
 
-    .line 555
     .restart local p1    # "keyframes":Landroid/animation/Keyframes;
     :cond_1
     new-instance v0, Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Ljava/lang/String;)V
 
-    .line 556
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     iput-object p1, v0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 557
     invoke-interface {p1}, Landroid/animation/Keyframes;->getType()Ljava/lang/Class;
 
     move-result-object v1
@@ -1175,14 +1078,12 @@
     .end annotation
 
     .prologue
-    .line 381
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<TT;[F>;"
     .local p2, "evaluator":Landroid/animation/TypeEvaluator;, "Landroid/animation/TypeEvaluator<TT;>;"
     invoke-static {p3}, Landroid/animation/KeyframeSet;->ofKeyframe([Landroid/animation/Keyframe;)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
-    .line 382
     .local v0, "keyframeSet":Landroid/animation/KeyframeSet;
     new-instance v1, Landroid/animation/PropertyValuesHolder$MultiFloatValuesHolder;
 
@@ -1209,7 +1110,6 @@
     .end annotation
 
     .prologue
-    .line 359
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<TV;[F>;"
     .local p2, "evaluator":Landroid/animation/TypeEvaluator;, "Landroid/animation/TypeEvaluator<TV;>;"
     .local p3, "values":[Ljava/lang/Object;, "[TV;"
@@ -1226,18 +1126,15 @@
     .param p1, "path"    # Landroid/graphics/Path;
 
     .prologue
-    .line 337
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofPath(Landroid/graphics/Path;)Landroid/animation/PathKeyframes;
 
     move-result-object v1
 
-    .line 338
     .local v1, "keyframes":Landroid/animation/Keyframes;
     new-instance v0, Landroid/animation/PropertyValuesHolder$PointFToFloatArray;
 
     invoke-direct {v0}, Landroid/animation/PropertyValuesHolder$PointFToFloatArray;-><init>()V
 
-    .line 339
     .local v0, "converter":Landroid/animation/PropertyValuesHolder$PointFToFloatArray;
     new-instance v2, Landroid/animation/PropertyValuesHolder$MultiFloatValuesHolder;
 
@@ -1254,14 +1151,12 @@
     .param p1, "values"    # [[F
 
     .prologue
-    .line 305
     array-length v4, p1
 
     const/4 v5, 0x2
 
     if-ge v4, v5, :cond_0
 
-    .line 306
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "At least 2 values must be supplied"
@@ -1270,11 +1165,9 @@
 
     throw v4
 
-    .line 308
     :cond_0
     const/4 v3, 0x0
 
-    .line 309
     .local v3, "numParameters":I
     const/4 v1, 0x0
 
@@ -1284,44 +1177,36 @@
 
     if-ge v1, v4, :cond_4
 
-    .line 310
     aget-object v4, p1, v1
 
     if-nez v4, :cond_1
 
-    .line 311
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "values must not be null"
+    const-string v5, "values must not be null"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 313
     :cond_1
     aget-object v4, p1, v1
 
     array-length v2, v4
 
-    .line 314
     .local v2, "length":I
     if-nez v1, :cond_3
 
-    .line 315
     move v3, v2
 
-    .line 309
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 316
     :cond_3
     if-eq v2, v3, :cond_2
 
-    .line 317
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Values must all have the same length"
@@ -1330,7 +1215,6 @@
 
     throw v4
 
-    .line 320
     .end local v2    # "length":I
     :cond_4
     new-instance v0, Landroid/animation/FloatArrayEvaluator;
@@ -1339,7 +1223,6 @@
 
     invoke-direct {v0, v4}, Landroid/animation/FloatArrayEvaluator;-><init>([F)V
 
-    .line 321
     .local v0, "evaluator":Landroid/animation/FloatArrayEvaluator;
     new-instance v4, Landroid/animation/PropertyValuesHolder$MultiFloatValuesHolder;
 
@@ -1374,14 +1257,12 @@
     .end annotation
 
     .prologue
-    .line 264
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<TT;[I>;"
     .local p2, "evaluator":Landroid/animation/TypeEvaluator;, "Landroid/animation/TypeEvaluator<TT;>;"
     invoke-static {p3}, Landroid/animation/KeyframeSet;->ofKeyframe([Landroid/animation/Keyframe;)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
-    .line 265
     .local v0, "keyframeSet":Landroid/animation/KeyframeSet;
     new-instance v1, Landroid/animation/PropertyValuesHolder$MultiIntValuesHolder;
 
@@ -1408,7 +1289,6 @@
     .end annotation
 
     .prologue
-    .line 242
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<TV;[I>;"
     .local p2, "evaluator":Landroid/animation/TypeEvaluator;, "Landroid/animation/TypeEvaluator<TV;>;"
     .local p3, "values":[Ljava/lang/Object;, "[TV;"
@@ -1425,18 +1305,15 @@
     .param p1, "path"    # Landroid/graphics/Path;
 
     .prologue
-    .line 219
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofPath(Landroid/graphics/Path;)Landroid/animation/PathKeyframes;
 
     move-result-object v1
 
-    .line 220
     .local v1, "keyframes":Landroid/animation/Keyframes;
     new-instance v0, Landroid/animation/PropertyValuesHolder$PointFToIntArray;
 
     invoke-direct {v0}, Landroid/animation/PropertyValuesHolder$PointFToIntArray;-><init>()V
 
-    .line 221
     .local v0, "converter":Landroid/animation/PropertyValuesHolder$PointFToIntArray;
     new-instance v2, Landroid/animation/PropertyValuesHolder$MultiIntValuesHolder;
 
@@ -1453,14 +1330,12 @@
     .param p1, "values"    # [[I
 
     .prologue
-    .line 187
     array-length v4, p1
 
     const/4 v5, 0x2
 
     if-ge v4, v5, :cond_0
 
-    .line 188
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "At least 2 values must be supplied"
@@ -1469,11 +1344,9 @@
 
     throw v4
 
-    .line 190
     :cond_0
     const/4 v3, 0x0
 
-    .line 191
     .local v3, "numParameters":I
     const/4 v1, 0x0
 
@@ -1483,44 +1356,36 @@
 
     if-ge v1, v4, :cond_4
 
-    .line 192
     aget-object v4, p1, v1
 
     if-nez v4, :cond_1
 
-    .line 193
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "values must not be null"
+    const-string v5, "values must not be null"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 195
     :cond_1
     aget-object v4, p1, v1
 
     array-length v2, v4
 
-    .line 196
     .local v2, "length":I
     if-nez v1, :cond_3
 
-    .line 197
     move v3, v2
 
-    .line 191
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 198
     :cond_3
     if-eq v2, v3, :cond_2
 
-    .line 199
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Values must all have the same length"
@@ -1529,7 +1394,6 @@
 
     throw v4
 
-    .line 202
     .end local v2    # "length":I
     :cond_4
     new-instance v0, Landroid/animation/IntArrayEvaluator;
@@ -1538,7 +1402,6 @@
 
     invoke-direct {v0, v4}, Landroid/animation/IntArrayEvaluator;-><init>([I)V
 
-    .line 203
     .local v0, "evaluator":Landroid/animation/IntArrayEvaluator;
     new-instance v4, Landroid/animation/PropertyValuesHolder$MultiIntValuesHolder;
 
@@ -1572,7 +1435,6 @@
     .end annotation
 
     .prologue
-    .line 471
     .local p0, "property":Landroid/util/Property;, "Landroid/util/Property<*TV;>;"
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<TT;TV;>;"
     .local p2, "evaluator":Landroid/animation/TypeEvaluator;, "Landroid/animation/TypeEvaluator<TT;>;"
@@ -1581,17 +1443,13 @@
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Landroid/util/Property;)V
 
-    .line 472
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     invoke-virtual {v0, p1}, Landroid/animation/PropertyValuesHolder;->setConverter(Landroid/animation/TypeConverter;)V
 
-    .line 473
     invoke-virtual {v0, p3}, Landroid/animation/PropertyValuesHolder;->setObjectValues([Ljava/lang/Object;)V
 
-    .line 474
     invoke-virtual {v0, p2}, Landroid/animation/PropertyValuesHolder;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    .line 475
     return-object v0
 .end method
 
@@ -1616,14 +1474,12 @@
     .end annotation
 
     .prologue
-    .line 496
     .local p0, "property":Landroid/util/Property;, "Landroid/util/Property<*TV;>;"
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<Landroid/graphics/PointF;TV;>;"
     new-instance v0, Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Landroid/util/Property;)V
 
-    .line 497
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     invoke-static {p2}, Landroid/animation/KeyframeSet;->ofPath(Landroid/graphics/Path;)Landroid/animation/PathKeyframes;
 
@@ -1631,15 +1487,12 @@
 
     iput-object v1, v0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 498
     const-class v1, Landroid/graphics/PointF;
 
     iput-object v1, v0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 499
     invoke-virtual {v0, p1}, Landroid/animation/PropertyValuesHolder;->setConverter(Landroid/animation/TypeConverter;)V
 
-    .line 500
     return-object v0
 .end method
 
@@ -1659,21 +1512,17 @@
     .end annotation
 
     .prologue
-    .line 444
     .local p1, "evaluator":Landroid/animation/TypeEvaluator;, "Landroid/animation/TypeEvaluator<TV;>;"
     .local p2, "values":[Ljava/lang/Object;, "[TV;"
     new-instance v0, Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Landroid/util/Property;)V
 
-    .line 445
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     invoke-virtual {v0, p2}, Landroid/animation/PropertyValuesHolder;->setObjectValues([Ljava/lang/Object;)V
 
-    .line 446
     invoke-virtual {v0, p1}, Landroid/animation/PropertyValuesHolder;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    .line 447
     return-object v0
 .end method
 
@@ -1696,13 +1545,11 @@
     .end annotation
 
     .prologue
-    .line 423
     .local p1, "converter":Landroid/animation/TypeConverter;, "Landroid/animation/TypeConverter<Landroid/graphics/PointF;*>;"
     new-instance v0, Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Ljava/lang/String;)V
 
-    .line 424
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     invoke-static {p2}, Landroid/animation/KeyframeSet;->ofPath(Landroid/graphics/Path;)Landroid/animation/PathKeyframes;
 
@@ -1710,15 +1557,12 @@
 
     iput-object v1, v0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 425
     const-class v1, Landroid/graphics/PointF;
 
     iput-object v1, v0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 426
     invoke-virtual {v0, p1}, Landroid/animation/PropertyValuesHolder;->setConverter(Landroid/animation/TypeConverter;)V
 
-    .line 427
     return-object v0
 .end method
 
@@ -1729,19 +1573,15 @@
     .param p2, "values"    # [Ljava/lang/Object;
 
     .prologue
-    .line 399
     new-instance v0, Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {v0, p0}, Landroid/animation/PropertyValuesHolder;-><init>(Ljava/lang/String;)V
 
-    .line 400
     .local v0, "pvh":Landroid/animation/PropertyValuesHolder;
     invoke-virtual {v0, p2}, Landroid/animation/PropertyValuesHolder;->setObjectValues([Ljava/lang/Object;)V
 
-    .line 401
     invoke-virtual {v0, p1}, Landroid/animation/PropertyValuesHolder;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    .line 402
     return-object v0
 .end method
 
@@ -1750,7 +1590,6 @@
     .param p1, "targetClass"    # Ljava/lang/Class;
 
     .prologue
-    .line 773
     sget-object v0, Landroid/animation/PropertyValuesHolder;->sGetterPropertyMap:Ljava/util/HashMap;
 
     const-string v1, "get"
@@ -1763,7 +1602,6 @@
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
-    .line 774
     return-void
 .end method
 
@@ -1792,15 +1630,12 @@
     .end annotation
 
     .prologue
-    .line 735
     .local p2, "propertyMapMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Class;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Method;>;>;"
     const/4 v2, 0x0
 
-    .line 736
     .local v2, "setterOrGetter":Ljava/lang/reflect/Method;
     monitor-enter p2
 
-    .line 740
     :try_start_0
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1808,25 +1643,20 @@
 
     check-cast v1, Ljava/util/HashMap;
 
-    .line 741
     .local v1, "propertyMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Method;>;"
     const/4 v3, 0x0
 
-    .line 742
     .local v3, "wasInMap":Z
     if-eqz v1, :cond_0
 
-    .line 743
     iget-object v4, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 744
     if-eqz v3, :cond_0
 
-    .line 745
     iget-object v4, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1839,42 +1669,33 @@
 
     move-object v2, v0
 
-    .line 748
     :cond_0
     if-nez v3, :cond_2
 
-    .line 749
     invoke-direct {p0, p1, p3, p4}, Landroid/animation/PropertyValuesHolder;->getPropertyFunction(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
-    .line 750
     if-nez v1, :cond_1
 
-    .line 751
     new-instance v1, Ljava/util/HashMap;
 
     .end local v1    # "propertyMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Method;>;"
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 752
     .restart local v1    # "propertyMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Method;>;"
     invoke-virtual {p2, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 754
     :cond_1
     iget-object v4, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
     invoke-virtual {v1, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 756
     :cond_2
     monitor-exit p2
 
-    .line 757
     return-object v2
 
-    .line 756
     .end local v1    # "propertyMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Method;>;"
     .end local v3    # "wasInMap":Z
     :catchall_0
@@ -1893,12 +1714,10 @@
     .param p2, "kf"    # Landroid/animation/Keyframe;
 
     .prologue
-    .line 863
     iget-object v3, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     if-eqz v3, :cond_0
 
-    .line 864
     iget-object v3, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     invoke-virtual {v3, p1}, Landroid/util/Property;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1909,11 +1728,9 @@
 
     move-result-object v2
 
-    .line 865
     .local v2, "value":Ljava/lang/Object;
     invoke-virtual {p2, v2}, Landroid/animation/Keyframe;->setValue(Ljava/lang/Object;)V
 
-    .line 868
     .end local v2    # "value":Ljava/lang/Object;
     :cond_0
     :try_start_0
@@ -1921,26 +1738,21 @@
 
     if-nez v3, :cond_1
 
-    .line 869
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 870
     .local v1, "targetClass":Ljava/lang/Class;
     invoke-direct {p0, v1}, Landroid/animation/PropertyValuesHolder;->setupGetter(Ljava/lang/Class;)V
 
-    .line 871
     iget-object v3, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_1
 
-    .line 883
     .end local v1    # "targetClass":Ljava/lang/Class;
     :goto_0
     return-void
 
-    .line 876
     :cond_1
     iget-object v3, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
@@ -1956,7 +1768,6 @@
 
     move-result-object v2
 
-    .line 877
     .restart local v2    # "value":Ljava/lang/Object;
     invoke-virtual {p2, v2}, Landroid/animation/Keyframe;->setValue(Ljava/lang/Object;)V
     :try_end_0
@@ -1965,12 +1776,10 @@
 
     goto :goto_0
 
-    .line 878
     .end local v2    # "value":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 879
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v3, "PropertyValuesHolder"
 
@@ -1982,12 +1791,10 @@
 
     goto :goto_0
 
-    .line 880
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_1
     move-exception v0
 
-    .line 881
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const-string v3, "PropertyValuesHolder"
 
@@ -2007,14 +1814,12 @@
     .param p1, "fraction"    # F
 
     .prologue
-    .line 994
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     invoke-interface {v1, p1}, Landroid/animation/Keyframes;->getValue(F)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 995
     .local v0, "value":Ljava/lang/Object;
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
@@ -2024,10 +1829,8 @@
     :goto_0
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mAnimatedValue:Ljava/lang/Object;
 
-    .line 996
     return-void
 
-    .line 995
     .restart local v0    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
@@ -2043,7 +1846,6 @@
     .locals 3
 
     .prologue
-    .line 918
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -2051,18 +1853,15 @@
 
     check-cast v1, Landroid/animation/PropertyValuesHolder;
 
-    .line 919
     .local v1, "newPVH":Landroid/animation/PropertyValuesHolder;
     iget-object v2, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
     iput-object v2, v1, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
-    .line 920
     iget-object v2, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     iput-object v2, v1, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
-    .line 921
     iget-object v2, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     invoke-interface {v2}, Landroid/animation/Keyframes;->clone()Landroid/animation/Keyframes;
@@ -2071,23 +1870,19 @@
 
     iput-object v2, v1, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 922
     iget-object v2, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
     iput-object v2, v1, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 926
     .end local v1    # "newPVH":Landroid/animation/PropertyValuesHolder;
     :goto_0
     return-object v1
 
-    .line 924
     :catch_0
     move-exception v0
 
-    .line 926
     .local v0, "e":Ljava/lang/CloneNotSupportedException;
     const/4 v1, 0x0
 
@@ -2103,7 +1898,6 @@
     .end annotation
 
     .prologue
-    .line 39
     invoke-virtual {p0}, Landroid/animation/PropertyValuesHolder;->clone()Landroid/animation/PropertyValuesHolder;
 
     move-result-object v0
@@ -2115,7 +1909,6 @@
     .locals 1
 
     .prologue
-    .line 1047
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mAnimatedValue:Ljava/lang/Object;
 
     return-object v0
@@ -2125,7 +1918,6 @@
     .locals 1
 
     .prologue
-    .line 1038
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
     return-object v0
@@ -2135,12 +1927,10 @@
     .locals 2
 
     .prologue
-    .line 958
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
     if-nez v0, :cond_0
 
-    .line 961
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
     const-class v1, Ljava/lang/Integer;
@@ -2152,24 +1942,20 @@
     :goto_0
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
-    .line 965
     :cond_0
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
     if-eqz v0, :cond_1
 
-    .line 968
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
     invoke-interface {v0, v1}, Landroid/animation/Keyframes;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    .line 970
     :cond_1
     return-void
 
-    .line 961
     :cond_2
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
@@ -2192,12 +1978,10 @@
     .param p1, "target"    # Ljava/lang/Object;
 
     .prologue
-    .line 938
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     if-eqz v1, :cond_0
 
-    .line 939
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     invoke-virtual {p0}, Landroid/animation/PropertyValuesHolder;->getAnimatedValue()Ljava/lang/Object;
@@ -2206,13 +1990,11 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 941
     :cond_0
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mSetter:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_1
 
-    .line 943
     :try_start_0
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mTmpValueArray:[Ljava/lang/Object;
 
@@ -2224,7 +2006,6 @@
 
     aput-object v3, v1, v2
 
-    .line 944
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mSetter:Ljava/lang/reflect/Method;
 
     iget-object v2, p0, Landroid/animation/PropertyValuesHolder;->mTmpValueArray:[Ljava/lang/Object;
@@ -2234,16 +2015,13 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 951
     :cond_1
     :goto_0
     return-void
 
-    .line 945
     :catch_0
     move-exception v0
 
-    .line 946
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v1, "PropertyValuesHolder"
 
@@ -2255,12 +2033,10 @@
 
     goto :goto_0
 
-    .line 947
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_1
     move-exception v0
 
-    .line 948
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const-string v1, "PropertyValuesHolder"
 
@@ -2278,10 +2054,8 @@
     .param p1, "converter"    # Landroid/animation/TypeConverter;
 
     .prologue
-    .line 654
     iput-object p1, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
-    .line 655
     return-void
 .end method
 
@@ -2290,15 +2064,12 @@
     .param p1, "evaluator"    # Landroid/animation/TypeEvaluator;
 
     .prologue
-    .line 983
     iput-object p1, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
-    .line 984
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     invoke-interface {v0, p1}, Landroid/animation/Keyframes;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    .line 985
     return-void
 .end method
 
@@ -2307,19 +2078,16 @@
     .param p1, "values"    # [F
 
     .prologue
-    .line 607
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 608
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofFloat([F)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 609
     return-void
 .end method
 
@@ -2328,19 +2096,16 @@
     .param p1, "values"    # [I
 
     .prologue
-    .line 589
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 590
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofInt([I)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 591
     return-void
 .end method
 
@@ -2349,10 +2114,8 @@
     .param p1, "values"    # [Landroid/animation/Keyframe;
 
     .prologue
-    .line 617
     array-length v2, p1
 
-    .line 618
     .local v2, "numKeyframes":I
     const/4 v3, 0x2
 
@@ -2362,7 +2125,6 @@
 
     new-array v1, v3, [Landroid/animation/Keyframe;
 
-    .line 619
     .local v1, "keyframes":[Landroid/animation/Keyframe;
     const/4 v3, 0x0
 
@@ -2374,24 +2136,20 @@
 
     iput-object v3, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 620
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 621
     aget-object v3, p1, v0
 
     aput-object v3, v1, v0
 
-    .line 620
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 623
     :cond_0
     new-instance v3, Landroid/animation/KeyframeSet;
 
@@ -2399,7 +2157,6 @@
 
     iput-object v3, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 624
     return-void
 .end method
 
@@ -2408,7 +2165,6 @@
     .param p1, "values"    # [Ljava/lang/Object;
 
     .prologue
-    .line 640
     const/4 v0, 0x0
 
     aget-object v0, p1, v0
@@ -2419,26 +2175,22 @@
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 641
     invoke-static {p1}, Landroid/animation/KeyframeSet;->ofObject([Ljava/lang/Object;)Landroid/animation/KeyframeSet;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
-    .line 642
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
     if-eqz v0, :cond_0
 
-    .line 643
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mEvaluator:Landroid/animation/TypeEvaluator;
 
     invoke-interface {v0, v1}, Landroid/animation/Keyframes;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
-    .line 645
     :cond_0
     return-void
 .end method
@@ -2448,10 +2200,8 @@
     .param p1, "property"    # Landroid/util/Property;
 
     .prologue
-    .line 1026
     iput-object p1, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
-    .line 1027
     return-void
 .end method
 
@@ -2460,10 +2210,8 @@
     .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
-    .line 1014
     iput-object p1, p0, Landroid/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
-    .line 1015
     return-void
 .end method
 
@@ -2472,14 +2220,12 @@
     .param p1, "target"    # Ljava/lang/Object;
 
     .prologue
-    .line 909
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     invoke-interface {v1}, Landroid/animation/Keyframes;->getKeyframes()Ljava/util/List;
 
     move-result-object v0
 
-    .line 910
     .local v0, "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -2487,7 +2233,6 @@
 
     if-nez v1, :cond_0
 
-    .line 911
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2502,7 +2247,6 @@
 
     invoke-direct {p0, p1, v1}, Landroid/animation/PropertyValuesHolder;->setupValue(Ljava/lang/Object;Landroid/animation/Keyframe;)V
 
-    .line 913
     :cond_0
     return-void
 .end method
@@ -2512,19 +2256,17 @@
     .param p1, "targetClass"    # Ljava/lang/Class;
 
     .prologue
-    .line 765
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
 
     if-nez v1, :cond_0
 
     iget-object v0, p0, Landroid/animation/PropertyValuesHolder;->mValueType:Ljava/lang/Class;
 
-    .line 766
     .local v0, "propertyType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     sget-object v1, Landroid/animation/PropertyValuesHolder;->sSetterPropertyMap:Ljava/util/HashMap;
 
-    const-string/jumbo v2, "set"
+    const-string v2, "set"
 
     invoke-direct {p0, p1, v1, v2, v0}, Landroid/animation/PropertyValuesHolder;->setupSetterOrGetter(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -2532,10 +2274,8 @@
 
     iput-object v1, p0, Landroid/animation/PropertyValuesHolder;->mSetter:Ljava/lang/reflect/Method;
 
-    .line 767
     return-void
 
-    .line 765
     .end local v0    # "propertyType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mConverter:Landroid/animation/TypeConverter;
@@ -2554,20 +2294,16 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 787
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     invoke-interface {v9}, Landroid/animation/Keyframes;->invalidateCache()V
 
-    .line 788
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     if-eqz v9, :cond_4
 
-    .line 791
     const/4 v6, 0x0
 
-    .line 792
     .local v6, "testValue":Ljava/lang/Object;
     :try_start_0
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
@@ -2576,13 +2312,11 @@
 
     move-result-object v3
 
-    .line 793
     .local v3, "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
     if-nez v3, :cond_3
 
     move v2, v8
 
-    .line 794
     .local v2, "keyframeCount":I
     :goto_0
     const/4 v1, 0x0
@@ -2594,14 +2328,12 @@
     :goto_1
     if-ge v1, v2, :cond_7
 
-    .line 795
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/animation/Keyframe;
 
-    .line 796
     .local v4, "kf":Landroid/animation/Keyframe;
     invoke-virtual {v4}, Landroid/animation/Keyframe;->hasValue()Z
 
@@ -2615,11 +2347,9 @@
 
     if-eqz v10, :cond_2
 
-    .line 797
     :cond_0
     if-nez v9, :cond_1
 
-    .line 798
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     invoke-virtual {v9, p1}, Landroid/util/Property;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2633,23 +2363,19 @@
     .restart local v6    # "testValue":Ljava/lang/Object;
     move-object v9, v6
 
-    .line 800
     .end local v6    # "testValue":Ljava/lang/Object;
     :cond_1
     invoke-virtual {v4, v9}, Landroid/animation/Keyframe;->setValue(Ljava/lang/Object;)V
 
-    .line 801
     const/4 v10, 0x1
 
     invoke-virtual {v4, v10}, Landroid/animation/Keyframe;->setValueWasSetOnStart(Z)V
 
-    .line 794
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 793
     .end local v1    # "i":I
     .end local v2    # "keyframeCount":I
     .end local v4    # "kf":Landroid/animation/Keyframe;
@@ -2663,13 +2389,11 @@
 
     goto :goto_0
 
-    .line 805
     .end local v3    # "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
     .end local v6    # "testValue":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 806
     .local v0, "e":Ljava/lang/ClassCastException;
     const-string v9, "PropertyValuesHolder"
 
@@ -2715,33 +2439,27 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 808
     const/4 v9, 0x0
 
     iput-object v9, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
-    .line 812
     .end local v0    # "e":Ljava/lang/ClassCastException;
     :cond_4
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
     if-nez v9, :cond_7
 
-    .line 813
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 814
     .local v5, "targetClass":Ljava/lang/Class;
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mSetter:Ljava/lang/reflect/Method;
 
     if-nez v9, :cond_5
 
-    .line 815
     invoke-virtual {p0, v5}, Landroid/animation/PropertyValuesHolder;->setupSetter(Ljava/lang/Class;)V
 
-    .line 817
     :cond_5
     iget-object v9, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
@@ -2749,13 +2467,11 @@
 
     move-result-object v3
 
-    .line 818
     .restart local v3    # "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
     if-nez v3, :cond_8
 
     move v2, v8
 
-    .line 819
     .restart local v2    # "keyframeCount":I
     :goto_2
     const/4 v1, 0x0
@@ -2764,14 +2480,12 @@
     :goto_3
     if-ge v1, v2, :cond_7
 
-    .line 820
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/animation/Keyframe;
 
-    .line 821
     .restart local v4    # "kf":Landroid/animation/Keyframe;
     invoke-virtual {v4}, Landroid/animation/Keyframe;->hasValue()Z
 
@@ -2785,21 +2499,17 @@
 
     if-eqz v8, :cond_a
 
-    .line 822
     :cond_6
     iget-object v8, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
     if-nez v8, :cond_9
 
-    .line 823
     invoke-direct {p0, v5}, Landroid/animation/PropertyValuesHolder;->setupGetter(Ljava/lang/Class;)V
 
-    .line 824
     iget-object v8, p0, Landroid/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
     if-nez v8, :cond_9
 
-    .line 841
     .end local v1    # "i":I
     .end local v2    # "keyframeCount":I
     .end local v3    # "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
@@ -2808,7 +2518,6 @@
     :cond_7
     return-void
 
-    .line 818
     .restart local v3    # "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
     .restart local v5    # "targetClass":Ljava/lang/Class;
     :cond_8
@@ -2818,7 +2527,6 @@
 
     goto :goto_2
 
-    .line 830
     .restart local v1    # "i":I
     .restart local v2    # "keyframeCount":I
     .restart local v4    # "kf":Landroid/animation/Keyframe;
@@ -2838,11 +2546,9 @@
 
     move-result-object v7
 
-    .line 831
     .local v7, "value":Ljava/lang/Object;
     invoke-virtual {v4, v7}, Landroid/animation/Keyframe;->setValue(Ljava/lang/Object;)V
 
-    .line 832
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Landroid/animation/Keyframe;->setValueWasSetOnStart(Z)V
@@ -2850,7 +2556,6 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 819
     .end local v7    # "value":Ljava/lang/Object;
     :cond_a
     :goto_4
@@ -2858,11 +2563,9 @@
 
     goto :goto_3
 
-    .line 833
     :catch_1
     move-exception v0
 
-    .line 834
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v8, "PropertyValuesHolder"
 
@@ -2874,12 +2577,10 @@
 
     goto :goto_4
 
-    .line 835
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_2
     move-exception v0
 
-    .line 836
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const-string v8, "PropertyValuesHolder"
 
@@ -2897,14 +2598,12 @@
     .param p1, "target"    # Ljava/lang/Object;
 
     .prologue
-    .line 894
     iget-object v1, p0, Landroid/animation/PropertyValuesHolder;->mKeyframes:Landroid/animation/Keyframes;
 
     invoke-interface {v1}, Landroid/animation/Keyframes;->getKeyframes()Ljava/util/List;
 
     move-result-object v0
 
-    .line 895
     .local v0, "keyframes":Ljava/util/List;, "Ljava/util/List<Landroid/animation/Keyframe;>;"
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -2912,7 +2611,6 @@
 
     if-nez v1, :cond_0
 
-    .line 896
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2923,7 +2621,6 @@
 
     invoke-direct {p0, p1, v1}, Landroid/animation/PropertyValuesHolder;->setupValue(Ljava/lang/Object;Landroid/animation/Keyframe;)V
 
-    .line 898
     :cond_0
     return-void
 .end method
@@ -2932,7 +2629,6 @@
     .locals 2
 
     .prologue
-    .line 1052
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

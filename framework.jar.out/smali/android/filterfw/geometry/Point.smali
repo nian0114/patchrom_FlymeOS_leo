@@ -14,10 +14,8 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     return-void
 .end method
 
@@ -27,16 +25,12 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput p1, p0, Landroid/filterfw/geometry/Point;->x:F
 
-    .line 35
     iput p2, p0, Landroid/filterfw/geometry/Point;->y:F
 
-    .line 36
     return-void
 .end method
 
@@ -50,7 +44,6 @@
 
     const/4 v1, 0x0
 
-    .line 44
     iget v0, p0, Landroid/filterfw/geometry/Point;->x:F
 
     cmpl-float v0, v0, v1
@@ -91,7 +84,6 @@
     .param p1, "p"    # Landroid/filterfw/geometry/Point;
 
     .prologue
-    .line 77
     invoke-virtual {p1, p0}, Landroid/filterfw/geometry/Point;->minus(Landroid/filterfw/geometry/Point;)Landroid/filterfw/geometry/Point;
 
     move-result-object v0
@@ -107,7 +99,6 @@
     .locals 3
 
     .prologue
-    .line 73
     iget v0, p0, Landroid/filterfw/geometry/Point;->x:F
 
     iget v1, p0, Landroid/filterfw/geometry/Point;->x:F
@@ -139,7 +130,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 57
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     iget v1, p0, Landroid/filterfw/geometry/Point;->x:F
@@ -160,7 +150,6 @@
     .param p1, "point"    # Landroid/filterfw/geometry/Point;
 
     .prologue
-    .line 61
     iget v0, p1, Landroid/filterfw/geometry/Point;->x:F
 
     iget v1, p1, Landroid/filterfw/geometry/Point;->y:F
@@ -178,7 +167,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 69
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     iget v1, p0, Landroid/filterfw/geometry/Point;->x:F
@@ -198,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 85
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Landroid/filterfw/geometry/Point;->scaledTo(F)Landroid/filterfw/geometry/Point;
@@ -214,7 +201,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 49
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     iget v1, p0, Landroid/filterfw/geometry/Point;->x:F
@@ -235,7 +221,6 @@
     .param p1, "point"    # Landroid/filterfw/geometry/Point;
 
     .prologue
-    .line 53
     iget v0, p1, Landroid/filterfw/geometry/Point;->x:F
 
     iget v1, p1, Landroid/filterfw/geometry/Point;->y:F
@@ -252,7 +237,6 @@
     .param p1, "radians"    # F
 
     .prologue
-    .line 101
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     float-to-double v2, p1
@@ -321,14 +305,11 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 89
     iget v1, p0, Landroid/filterfw/geometry/Point;->x:F
 
-    .line 90
     .local v1, "nx":F
     iget v2, p0, Landroid/filterfw/geometry/Point;->y:F
 
-    .line 91
     .local v2, "ny":F
     const/4 v0, 0x0
 
@@ -336,22 +317,17 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
-    .line 92
     move v3, v1
 
-    .line 93
     .local v3, "ox":F
     move v1, v2
 
-    .line 94
     neg-float v2, v3
 
-    .line 91
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 96
     .end local v3    # "ox":F
     :cond_0
     new-instance v4, Landroid/filterfw/geometry/Point;
@@ -367,7 +343,6 @@
     .param p2, "radians"    # F
 
     .prologue
-    .line 106
     invoke-virtual {p0, p1}, Landroid/filterfw/geometry/Point;->minus(Landroid/filterfw/geometry/Point;)Landroid/filterfw/geometry/Point;
 
     move-result-object v0
@@ -388,7 +363,6 @@
     .param p1, "length"    # F
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Landroid/filterfw/geometry/Point;->length()F
 
     move-result v0
@@ -408,13 +382,10 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 39
     iput p1, p0, Landroid/filterfw/geometry/Point;->x:F
 
-    .line 40
     iput p2, p0, Landroid/filterfw/geometry/Point;->y:F
 
-    .line 41
     return-void
 .end method
 
@@ -423,7 +394,6 @@
     .param p1, "s"    # F
 
     .prologue
-    .line 65
     new-instance v0, Landroid/filterfw/geometry/Point;
 
     iget v1, p0, Landroid/filterfw/geometry/Point;->x:F
@@ -443,7 +413,6 @@
     .locals 2
 
     .prologue
-    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 552
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 553
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 554
     return-void
 .end method
 
@@ -42,10 +39,8 @@
     .param p1, "source"    # Landroid/media/MediaMetadata;
 
     .prologue
-    .line 563
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 564
     new-instance v0, Landroid/os/Bundle;
 
     # getter for: Landroid/media/MediaMetadata;->mBundle:Landroid/os/Bundle;
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 565
     return-void
 .end method
 
@@ -67,10 +61,8 @@
     .param p2, "maxBitmapSize"    # I
 
     .prologue
-    .line 578
     invoke-direct {p0, p1}, Landroid/media/MediaMetadata$Builder;-><init>(Landroid/media/MediaMetadata;)V
 
-    .line 579
     iget-object v4, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v4}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
@@ -96,7 +88,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 580
     .local v2, "key":Ljava/lang/String;
     iget-object v4, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
@@ -104,7 +95,6 @@
 
     move-result-object v3
 
-    .line 581
     .local v3, "value":Ljava/lang/Object;
     if-eqz v3, :cond_0
 
@@ -114,10 +104,8 @@
 
     move-object v0, v3
 
-    .line 582
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 583
     .local v0, "bmp":Landroid/graphics/Bitmap;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -131,7 +119,6 @@
 
     if-le v4, p2, :cond_0
 
-    .line 584
     :cond_1
     invoke-direct {p0, v0, p2}, Landroid/media/MediaMetadata$Builder;->scaleBitmap(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
@@ -141,7 +128,6 @@
 
     goto :goto_0
 
-    .line 588
     .end local v0    # "bmp":Landroid/graphics/Bitmap;
     .end local v2    # "key":Ljava/lang/String;
     .end local v3    # "value":Ljava/lang/Object;
@@ -155,10 +141,8 @@
     .param p2, "maxSize"    # I
 
     .prologue
-    .line 759
     int-to-float v2, p2
 
-    .line 760
     .local v2, "maxSizeF":F
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -168,7 +152,6 @@
 
     div-float v5, v2, v6
 
-    .line 761
     .local v5, "widthScale":F
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -178,13 +161,11 @@
 
     div-float v1, v2, v6
 
-    .line 762
     .local v1, "heightScale":F
     invoke-static {v5, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v3
 
-    .line 763
     .local v3, "scale":F
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -196,7 +177,6 @@
 
     float-to-int v0, v6
 
-    .line 764
     .local v0, "height":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -208,7 +188,6 @@
 
     float-to-int v4, v6
 
-    .line 765
     .local v4, "width":I
     const/4 v6, 0x1
 
@@ -225,7 +204,6 @@
     .locals 3
 
     .prologue
-    .line 755
     new-instance v0, Landroid/media/MediaMetadata;
 
     iget-object v1, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
@@ -243,7 +221,6 @@
     .param p2, "value"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 739
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -255,7 +232,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 740
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -275,7 +251,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 741
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -306,13 +281,11 @@
 
     throw v0
 
-    .line 745
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 746
     return-object p0
 .end method
 
@@ -322,7 +295,6 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 686
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -334,7 +306,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 687
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -352,7 +323,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 688
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -383,13 +353,11 @@
 
     throw v0
 
-    .line 692
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 693
     return-object p0
 .end method
 
@@ -399,7 +367,6 @@
     .param p2, "value"    # Landroid/media/Rating;
 
     .prologue
-    .line 710
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -411,7 +378,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 711
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -431,7 +397,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 712
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -462,13 +427,11 @@
 
     throw v0
 
-    .line 716
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 717
     return-object p0
 .end method
 
@@ -478,7 +441,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 659
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -490,7 +452,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 660
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -510,7 +471,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 661
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -541,13 +501,11 @@
 
     throw v0
 
-    .line 665
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 666
     return-object p0
 .end method
 
@@ -557,7 +515,6 @@
     .param p2, "value"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 617
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -569,7 +526,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 618
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -589,7 +545,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 619
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -620,12 +575,10 @@
 
     throw v0
 
-    .line 623
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 624
     return-object p0
 .end method

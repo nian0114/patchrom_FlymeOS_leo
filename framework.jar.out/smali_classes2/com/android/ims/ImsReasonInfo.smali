@@ -204,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 378
     new-instance v0, Lcom/android/ims/ImsReasonInfo$1;
 
     invoke-direct {v0}, Lcom/android/ims/ImsReasonInfo$1;-><init>()V
@@ -220,24 +219,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 296
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 297
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 298
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 299
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 300
     return-void
 .end method
 
@@ -247,26 +240,20 @@
     .param p2, "extraCode"    # I
 
     .prologue
-    .line 306
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 307
     div-int/lit8 v0, p1, 0x64
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 308
     iput p1, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 309
     iput p2, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 310
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 311
     return-void
 .end method
 
@@ -277,24 +264,18 @@
     .param p3, "extraMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 314
     div-int/lit8 v0, p1, 0x64
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 315
     iput p1, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 316
     iput p2, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 317
     iput-object p3, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 318
     return-void
 .end method
 
@@ -303,13 +284,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 302
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 303
     invoke-direct {p0, p1}, Lcom/android/ims/ImsReasonInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 304
     return-void
 .end method
 
@@ -318,35 +296,30 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 372
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 373
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 374
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 375
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 376
     return-void
 .end method
 
@@ -356,7 +329,6 @@
     .locals 1
 
     .prologue
-    .line 360
     const/4 v0, 0x0
 
     return v0
@@ -366,7 +338,6 @@
     .locals 1
 
     .prologue
-    .line 324
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
     return v0
@@ -376,7 +347,6 @@
     .locals 1
 
     .prologue
-    .line 331
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
     return v0
@@ -386,7 +356,6 @@
     .locals 1
 
     .prologue
-    .line 338
     iget-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     return-object v0
@@ -396,7 +365,6 @@
     .locals 1
 
     .prologue
-    .line 345
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
     return v0
@@ -406,7 +374,6 @@
     .locals 2
 
     .prologue
-    .line 354
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -478,26 +445,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 365
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 366
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 367
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 368
     iget-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 369
     return-void
 .end method

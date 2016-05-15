@@ -113,16 +113,12 @@
     .prologue
     const/high16 v0, -0x80000000
 
-    .line 6706
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 6578
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6586
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6708
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x4
@@ -131,7 +127,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6709
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x8
@@ -140,7 +135,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6711
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x21
@@ -149,7 +143,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6712
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x11
@@ -158,7 +151,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6713
     return-void
 .end method
 
@@ -174,27 +166,21 @@
 
     const/high16 v8, -0x80000000
 
-    .line 6639
     invoke-direct {p0}, Landroid/view/ViewGroup$LayoutParams;-><init>()V
 
-    .line 6578
     iput v8, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6586
     iput v8, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6641
     sget-object v6, Lcom/android/internal/R$styleable;->ViewGroup_MarginLayout:[I
 
     invoke-virtual {p1, p2, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 6642
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {p0, v0, v5, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setBaseAttributes(Landroid/content/res/TypedArray;II)V
 
-    .line 6646
     const/4 v6, 0x2
 
     const/4 v7, -0x1
@@ -203,23 +189,17 @@
 
     move-result v3
 
-    .line 6648
     .local v3, "margin":I
     if-ltz v3, :cond_4
 
-    .line 6649
     iput v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6650
     iput v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 6651
     iput v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6652
     iput v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 6688
     :cond_0
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -230,7 +210,6 @@
 
     move-result v1
 
-    .line 6689
     .local v1, "hasRtlSupport":Z
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
@@ -242,7 +221,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 6691
     .local v2, "isSystemApp":Z
     :goto_1
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -251,7 +229,6 @@
 
     iget v4, v5, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 6692
     .local v4, "targetSdkVersion":I
     const/16 v5, 0x11
 
@@ -262,7 +239,6 @@
     :cond_1
     if-nez v1, :cond_3
 
-    .line 6693
     :cond_2
     iget-byte v5, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -272,7 +248,6 @@
 
     iput-byte v5, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6697
     :cond_3
     iget-byte v5, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -282,13 +257,10 @@
 
     iput-byte v5, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6699
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 6700
     return-void
 
-    .line 6654
     .end local v1    # "hasRtlSupport":Z
     .end local v2    # "isSystemApp":Z
     .end local v4    # "targetSdkVersion":I
@@ -301,12 +273,10 @@
 
     iput v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6657
     iget v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     if-ne v6, v8, :cond_5
 
-    .line 6658
     iget-byte v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v6, v6, 0x4
@@ -315,10 +285,8 @@
 
     iput-byte v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6659
     iput v5, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6661
     :cond_5
     const/4 v6, 0x5
 
@@ -328,12 +296,10 @@
 
     iput v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6664
     iget v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     if-ne v6, v8, :cond_6
 
-    .line 6665
     iget-byte v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v6, v6, 0x8
@@ -342,10 +308,8 @@
 
     iput-byte v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6666
     iput v5, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6669
     :cond_6
     const/4 v6, 0x4
 
@@ -355,7 +319,6 @@
 
     iput v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 6672
     const/4 v6, 0x6
 
     invoke-virtual {v0, v6, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -364,7 +327,6 @@
 
     iput v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 6676
     const/4 v6, 0x7
 
     invoke-virtual {v0, v6, v8}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -373,7 +335,6 @@
 
     iput v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6679
     const/16 v6, 0x8
 
     invoke-virtual {v0, v6, v8}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -382,14 +343,12 @@
 
     iput v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6683
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->isMarginRelative()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 6684
     iget-byte v6, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v6, v6, 0x20
@@ -404,7 +363,6 @@
     :cond_7
     move v2, v5
 
-    .line 6689
     goto :goto_1
 .end method
 
@@ -415,16 +373,12 @@
     .prologue
     const/high16 v0, -0x80000000
 
-    .line 6738
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 6578
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6586
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6740
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x4
@@ -433,7 +387,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6741
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x8
@@ -442,7 +395,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6743
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x21
@@ -451,7 +403,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6744
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x11
@@ -460,7 +411,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6745
     return-void
 .end method
 
@@ -471,61 +421,48 @@
     .prologue
     const/high16 v0, -0x80000000
 
-    .line 6720
     invoke-direct {p0}, Landroid/view/ViewGroup$LayoutParams;-><init>()V
 
-    .line 6578
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6586
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6721
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 6722
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 6724
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6725
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 6726
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6727
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 6728
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6729
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6731
     iget-byte v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6732
     return-void
 .end method
 
@@ -537,7 +474,6 @@
 
     const/high16 v3, -0x80000000
 
-    .line 6943
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, 0x10
@@ -546,7 +482,6 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 6946
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, 0x4
@@ -559,12 +494,10 @@
 
     if-le v0, v3, :cond_0
 
-    .line 6948
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6950
     :cond_0
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -578,12 +511,10 @@
 
     if-le v0, v3, :cond_1
 
-    .line 6952
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6974
     :cond_1
     :goto_0
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
@@ -594,10 +525,8 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6975
     return-void
 
-    .line 6958
     :cond_2
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -605,7 +534,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 6967
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     if-le v0, v3, :cond_6
@@ -615,7 +543,6 @@
     :goto_1
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6969
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
     if-le v0, v3, :cond_3
@@ -627,7 +554,6 @@
 
     goto :goto_0
 
-    .line 6960
     :pswitch_0
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
@@ -638,7 +564,6 @@
     :goto_2
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6962
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     if-le v0, v3, :cond_4
@@ -653,16 +578,13 @@
     :cond_5
     move v0, v1
 
-    .line 6960
     goto :goto_2
 
     :cond_6
     move v0, v1
 
-    .line 6967
     goto :goto_1
 
-    .line 6958
     nop
 
     :pswitch_data_0
@@ -678,42 +600,34 @@
     .param p1, "source"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 6751
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6752
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 6753
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6754
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 6755
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6756
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6758
     iget-byte v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6759
     return-void
 .end method
 
@@ -721,7 +635,6 @@
     .locals 1
 
     .prologue
-    .line 6922
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, 0x3
@@ -733,7 +646,6 @@
     .locals 2
 
     .prologue
-    .line 6870
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
     const/high16 v1, -0x80000000
@@ -742,11 +654,9 @@
 
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6879
     :goto_0
     return v0
 
-    .line 6871
     :cond_0
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -756,10 +666,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6872
     invoke-direct {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->doResolveMargins()V
 
-    .line 6874
     :cond_1
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -767,18 +675,15 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 6879
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     goto :goto_0
 
-    .line 6876
     :pswitch_0
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     goto :goto_0
 
-    .line 6874
     nop
 
     :pswitch_data_0
@@ -791,7 +696,6 @@
     .locals 2
 
     .prologue
-    .line 6837
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     const/high16 v1, -0x80000000
@@ -800,11 +704,9 @@
 
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6846
     :goto_0
     return v0
 
-    .line 6838
     :cond_0
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -814,10 +716,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6839
     invoke-direct {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->doResolveMargins()V
 
-    .line 6841
     :cond_1
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -825,18 +725,15 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 6846
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     goto :goto_0
 
-    .line 6843
     :pswitch_0
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     goto :goto_0
 
-    .line 6841
     nop
 
     :pswitch_data_0
@@ -851,7 +748,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 6981
     iget-byte v1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v1, v1, 0x3
@@ -873,7 +769,6 @@
     .prologue
     const/high16 v1, -0x80000000
 
-    .line 6892
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
     if-ne v0, v1, :cond_0
@@ -901,7 +796,6 @@
     .param p3, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 6989
     iget-object v0, p1, Landroid/view/View;->mParent:Landroid/view/ViewParent;
 
     invoke-static {v0}, Landroid/view/View;->isLayoutModeOptical(Ljava/lang/Object;)Z
@@ -914,7 +808,6 @@
 
     move-result-object v10
 
-    .line 6991
     .local v10, "oi":Landroid/graphics/Insets;
     :goto_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
@@ -964,10 +857,8 @@
     # invokes: Landroid/view/ViewGroup;->fillDifference(Landroid/graphics/Canvas;IIIIIIIILandroid/graphics/Paint;)V
     invoke-static/range {v0 .. v9}, Landroid/view/ViewGroup;->access$500(Landroid/graphics/Canvas;IIIIIIIILandroid/graphics/Paint;)V
 
-    .line 7001
     return-void
 
-    .line 6989
     .end local v10    # "oi":Landroid/graphics/Insets;
     :cond_0
     sget-object v10, Landroid/graphics/Insets;->NONE:Landroid/graphics/Insets;
@@ -980,10 +871,8 @@
     .param p1, "layoutDirection"    # I
 
     .prologue
-    .line 6931
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setLayoutDirection(I)V
 
-    .line 6935
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->isMarginRelative()Z
 
     move-result v0
@@ -998,12 +887,10 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 6940
     :cond_0
     :goto_0
     return-void
 
-    .line 6939
     :cond_1
     invoke-direct {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->doResolveMargins()V
 
@@ -1015,19 +902,16 @@
     .param p1, "layoutDirection"    # I
 
     .prologue
-    .line 6902
     if-eqz p1, :cond_1
 
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_1
 
-    .line 6913
     :cond_0
     :goto_0
     return-void
 
-    .line 6904
     :cond_1
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -1035,7 +919,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 6905
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x4
@@ -1044,7 +927,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6906
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v1, p1, 0x3
@@ -1055,14 +937,12 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6907
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->isMarginRelative()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 6908
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x20
@@ -1073,7 +953,6 @@
 
     goto :goto_0
 
-    .line 6910
     :cond_2
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -1091,10 +970,8 @@
     .param p1, "end"    # I
 
     .prologue
-    .line 6858
     iput p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6859
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x20
@@ -1103,7 +980,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6860
     return-void
 .end method
 
@@ -1112,10 +988,8 @@
     .param p1, "start"    # I
 
     .prologue
-    .line 6825
     iput p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6826
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x20
@@ -1124,7 +998,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6827
     return-void
 .end method
 
@@ -1136,19 +1009,14 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 6778
     iput p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 6779
     iput p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 6780
     iput p3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 6781
     iput p4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 6782
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x5
@@ -1157,7 +1025,6 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6783
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     and-int/lit8 v0, v0, -0x9
@@ -1166,14 +1033,12 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6784
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->isMarginRelative()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6785
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x20
@@ -1182,11 +1047,9 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6789
     :goto_0
     return-void
 
-    .line 6787
     :cond_0
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
@@ -1207,19 +1070,14 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 6810
     iput p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->startMargin:I
 
-    .line 6811
     iput p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 6812
     iput p3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->endMargin:I
 
-    .line 6813
     iput p4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 6814
     iget-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
     or-int/lit8 v0, v0, 0x20
@@ -1228,6 +1086,5 @@
 
     iput-byte v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->mMarginFlags:B
 
-    .line 6815
     return-void
 .end method

@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 53
     iput-object p1, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator$1;->this$1:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;
 
     iput p2, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator$1;->val$touchX:I
@@ -56,7 +55,6 @@
     .locals 5
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator$1;->this$1:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;
 
     iget-object v0, v0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;->this$0:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;
@@ -77,6 +75,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->onEdgeGestureActivation(IILcom/android/internal/util/gesture/EdgeGesturePosition;I)V
 
-    .line 56
     return-void
 .end method

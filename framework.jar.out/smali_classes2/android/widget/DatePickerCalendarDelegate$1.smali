@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 664
     iput-object p1, p0, Landroid/widget/DatePickerCalendarDelegate$1;->this$0:Landroid/widget/DatePickerCalendarDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 667
     iget-object v0, p0, Landroid/widget/DatePickerCalendarDelegate$1;->this$0:Landroid/widget/DatePickerCalendarDelegate;
 
     # getter for: Landroid/widget/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
@@ -58,12 +56,10 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 668
     iget-object v0, p0, Landroid/widget/DatePickerCalendarDelegate$1;->this$0:Landroid/widget/DatePickerCalendarDelegate;
 
     # invokes: Landroid/widget/DatePickerCalendarDelegate;->onDateChanged(ZZ)V
     invoke-static {v0, v1, v1}, Landroid/widget/DatePickerCalendarDelegate;->access$200(Landroid/widget/DatePickerCalendarDelegate;ZZ)V
 
-    .line 669
     return-void
 .end method

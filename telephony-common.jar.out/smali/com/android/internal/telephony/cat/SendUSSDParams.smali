@@ -15,12 +15,9 @@
     .param p3, "ussdstring"    # Ljava/lang/String;
 
     .prologue
-    .line 253
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/cat/DisplayTextParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;)V
 
-    .line 254
     iput-object p3, p0, Lcom/android/internal/telephony/cat/SendUSSDParams;->ussdString:Ljava/lang/String;
 
-    .line 255
     return-void
 .end method

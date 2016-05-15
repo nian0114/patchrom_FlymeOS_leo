@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 179
     iput-object p1, p0, Lcom/android/server/gesture/EdgeGestureInputFilter$1;->this$0:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p4, "position"    # Lcom/android/internal/util/gesture/EdgeGesturePosition;
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureInputFilter$1;->this$0:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     # getter for: Lcom/android/server/gesture/EdgeGestureInputFilter;->mHandler:Landroid/os/Handler;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureInputFilter$1;->this$0:Lcom/android/server/gesture/EdgeGestureInputFilter;
 
     sget-object v1, Lcom/android/server/gesture/EdgeGestureInputFilter$State;->LOCKED:Lcom/android/server/gesture/EdgeGestureInputFilter$State;
@@ -68,6 +65,5 @@
     # setter for: Lcom/android/server/gesture/EdgeGestureInputFilter;->mState:Lcom/android/server/gesture/EdgeGestureInputFilter$State;
     invoke-static {v0, v1}, Lcom/android/server/gesture/EdgeGestureInputFilter;->access$102(Lcom/android/server/gesture/EdgeGestureInputFilter;Lcom/android/server/gesture/EdgeGestureInputFilter$State;)Lcom/android/server/gesture/EdgeGestureInputFilter$State;
 
-    .line 185
     return-void
 .end method

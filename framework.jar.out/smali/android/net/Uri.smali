@@ -73,7 +73,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 113
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -82,7 +81,6 @@
 
     sput-object v0, Landroid/net/Uri;->LOG:Ljava/lang/String;
 
-    .line 125
     new-instance v0, Ljava/lang/String;
 
     const-string v2, "NOT CACHED"
@@ -91,7 +89,6 @@
 
     sput-object v0, Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
 
-    .line 130
     new-instance v0, Landroid/net/Uri$HierarchicalUri;
 
     sget-object v2, Landroid/net/Uri$Part;->NULL:Landroid/net/Uri$Part;
@@ -108,14 +105,12 @@
 
     sput-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    .line 1762
     new-instance v0, Landroid/net/Uri$1;
 
     invoke-direct {v0}, Landroid/net/Uri$1;-><init>()V
 
     sput-object v0, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 1796
     const-string v0, "0123456789ABCDEF"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
@@ -131,7 +126,6 @@
     .locals 0
 
     .prologue
-    .line 136
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -142,7 +136,6 @@
     .param p1, "x0"    # Landroid/net/Uri$1;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/net/Uri;-><init>()V
 
     return-void
@@ -152,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
 
     return-object v0
@@ -162,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Landroid/net/Uri;->LOG:Ljava/lang/String;
 
     return-object v0
@@ -175,13 +166,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1930
     if-nez p0, :cond_0
 
-    .line 1931
     const/4 v0, 0x0
 
-    .line 1933
     :goto_0
     return-object v0
 
@@ -200,7 +188,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 1809
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -216,42 +203,33 @@
     .param p1, "allow"    # Ljava/lang/String;
 
     .prologue
-    .line 1826
     if-nez p0, :cond_1
 
-    .line 1827
     const/4 p0, 0x0
 
-    .line 1901
     .end local p0    # "s":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 1831
     .restart local p0    # "s":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
 
-    .line 1833
     .local v4, "encoded":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v8
 
-    .line 1838
     .local v8, "oldLength":I
     const/4 v2, 0x0
 
-    .line 1839
     .local v2, "current":I
     :goto_1
     if-ge v2, v8, :cond_8
 
-    .line 1843
     move v7, v2
 
-    .line 1845
     .local v7, "nextToEncode":I
     :goto_2
     if-ge v7, v8, :cond_2
@@ -266,54 +244,42 @@
 
     if-eqz v10, :cond_2
 
-    .line 1846
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 1850
     :cond_2
     if-ne v7, v8, :cond_3
 
-    .line 1851
     if-eqz v2, :cond_0
 
-    .line 1856
     invoke-virtual {v4, p0, v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
-    .line 1857
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1861
     :cond_3
     if-nez v4, :cond_4
 
-    .line 1862
     new-instance v4, Ljava/lang/StringBuilder;
 
     .end local v4    # "encoded":Ljava/lang/StringBuilder;
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1865
     .restart local v4    # "encoded":Ljava/lang/StringBuilder;
     :cond_4
     if-le v7, v2, :cond_5
 
-    .line 1867
     invoke-virtual {v4, p0, v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
-    .line 1875
     :cond_5
     move v2, v7
 
-    .line 1876
     add-int/lit8 v6, v2, 0x1
 
-    .line 1878
     .local v6, "nextAllowed":I
     :goto_3
     if-ge v6, v8, :cond_6
@@ -328,18 +294,15 @@
 
     if-nez v10, :cond_6
 
-    .line 1879
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 1884
     :cond_6
     invoke-virtual {p0, v2, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1886
     .local v9, "toEncode":Ljava/lang/String;
     :try_start_0
     const-string v10, "UTF-8"
@@ -348,11 +311,9 @@
 
     move-result-object v0
 
-    .line 1887
     .local v0, "bytes":[B
     array-length v1, v0
 
-    .line 1888
     .local v1, "bytesLength":I
     const/4 v5, 0x0
 
@@ -360,12 +321,10 @@
     :goto_4
     if-ge v5, v1, :cond_7
 
-    .line 1889
     const/16 v10, 0x25
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1890
     sget-object v10, Landroid/net/Uri;->HEX_DIGITS:[C
 
     aget-byte v11, v0, v5
@@ -378,7 +337,6 @@
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1891
     sget-object v10, Landroid/net/Uri;->HEX_DIGITS:[C
 
     aget-byte v11, v0, v5
@@ -391,19 +349,16 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1888
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 1893
     .end local v0    # "bytes":[B
     .end local v1    # "bytesLength":I
     .end local v5    # "i":I
     :catch_0
     move-exception v3
 
-    .line 1894
     .local v3, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v10, Ljava/lang/AssertionError;
 
@@ -411,7 +366,6 @@
 
     throw v10
 
-    .line 1897
     .end local v3    # "e":Ljava/io/UnsupportedEncodingException;
     .restart local v0    # "bytes":[B
     .restart local v1    # "bytesLength":I
@@ -419,10 +373,8 @@
     :cond_7
     move v2, v6
 
-    .line 1898
     goto :goto_1
 
-    .line 1901
     .end local v0    # "bytes":[B
     .end local v1    # "bytesLength":I
     .end local v5    # "i":I
@@ -444,10 +396,8 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 446
     if-nez p0, :cond_0
 
-    .line 447
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "file"
@@ -456,7 +406,6 @@
 
     throw v0
 
-    .line 450
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -466,7 +415,6 @@
 
     move-result-object v3
 
-    .line 451
     .local v3, "path":Landroid/net/Uri$PathPart;
     new-instance v0, Landroid/net/Uri$HierarchicalUri;
 
@@ -492,32 +440,27 @@
     .param p2, "fragment"    # Ljava/lang/String;
 
     .prologue
-    .line 813
     if-nez p0, :cond_0
 
-    .line 814
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "scheme"
+    const-string v1, "scheme"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 816
     :cond_0
     if-nez p1, :cond_1
 
-    .line 817
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "ssp"
+    const-string v1, "ssp"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 820
     :cond_1
     new-instance v0, Landroid/net/Uri$OpaqueUri;
 
@@ -544,7 +487,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 1913
     const/16 v0, 0x41
 
     if-lt p0, v0, :cond_0
@@ -605,7 +547,6 @@
     .param p0, "uriString"    # Ljava/lang/String;
 
     .prologue
-    .line 432
     new-instance v0, Landroid/net/Uri$StringUri;
 
     const/4 v1, 0x0
@@ -621,18 +562,15 @@
     .param p1, "pathSegment"    # Ljava/lang/String;
 
     .prologue
-    .line 2293
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 2294
     .local v0, "builder":Landroid/net/Uri$Builder;
     invoke-virtual {v0, p1}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 2295
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
@@ -648,17 +586,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1789
     if-nez p1, :cond_0
 
-    .line 1790
     invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1794
     :goto_0
     return-void
 
-    .line 1792
     :cond_0
     invoke-virtual {p1, p0, v0}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
@@ -675,7 +609,6 @@
     .param p1, "location"    # Ljava/lang/String;
 
     .prologue
-    .line 2340
     const-string v0, "file"
 
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -688,10 +621,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2341
     invoke-static {p1}, Landroid/os/StrictMode;->onFileUriExposed(Ljava/lang/String;)V
 
-    .line 2343
     :cond_0
     return-void
 .end method
@@ -701,7 +632,6 @@
     .param p1, "other"    # Landroid/net/Uri;
 
     .prologue
-    .line 352
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -721,7 +651,6 @@
     .locals 1
 
     .prologue
-    .line 53
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Landroid/net/Uri;->compareTo(Landroid/net/Uri;)I
@@ -736,25 +665,20 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 330
     instance-of v1, p1, Landroid/net/Uri;
 
     if-nez v1, :cond_0
 
-    .line 331
     const/4 v1, 0x0
 
-    .line 336
     :goto_0
     return v1
 
     :cond_0
     move-object v0, p1
 
-    .line 334
     check-cast v0, Landroid/net/Uri;
 
-    .line 336
     .local v0, "other":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -780,21 +704,17 @@
     .param p2, "defaultValue"    # Z
 
     .prologue
-    .line 1718
     invoke-virtual {p0, p1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1719
     .local v0, "flag":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 1723
     .end local p2    # "defaultValue":Z
     :goto_0
     return p2
 
-    .line 1722
     .restart local p2    # "defaultValue":Z
     :cond_0
     sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
@@ -803,7 +723,6 @@
 
     move-result-object v0
 
-    .line 1723
     const-string v1, "false"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -837,7 +756,6 @@
     .locals 6
 
     .prologue
-    .line 2307
     const-string v3, "file"
 
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -850,7 +768,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2310
     :try_start_0
     new-instance v3, Ljava/io/File;
 
@@ -866,7 +783,6 @@
 
     move-result-object v0
 
-    .line 2315
     .local v0, "canonicalPath":Ljava/lang/String;
     invoke-static {}, Landroid/os/Environment;->isExternalStorageEmulated()Z
 
@@ -874,7 +790,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2316
     invoke-static {}, Landroid/os/Environment;->getLegacyExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v3
@@ -883,7 +798,6 @@
 
     move-result-object v2
 
-    .line 2320
     .local v2, "legacyPath":Ljava/lang/String;
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -891,7 +805,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2321
     new-instance v3, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
@@ -918,7 +831,6 @@
 
     move-result-object p0
 
-    .line 2329
     .end local v0    # "canonicalPath":Ljava/lang/String;
     .end local v2    # "legacyPath":Ljava/lang/String;
     .end local p0    # "this":Landroid/net/Uri;
@@ -926,16 +838,13 @@
     :goto_0
     return-object p0
 
-    .line 2311
     .restart local p0    # "this":Landroid/net/Uri;
     :catch_0
     move-exception v1
 
-    .line 2312
     .local v1, "e":Ljava/io/IOException;
     goto :goto_0
 
-    .line 2327
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v0    # "canonicalPath":Ljava/lang/String;
     :cond_1
@@ -1009,14 +918,12 @@
 
     const/4 v11, -0x1
 
-    .line 1664
     invoke-virtual {p0}, Landroid/net/Uri;->isOpaque()Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 1665
     new-instance v8, Ljava/lang/UnsupportedOperationException;
 
     const-string v9, "This isn\'t a hierarchical URI."
@@ -1025,11 +932,9 @@
 
     throw v8
 
-    .line 1667
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1668
     new-instance v8, Ljava/lang/NullPointerException;
 
     const-string v9, "key"
@@ -1038,38 +943,31 @@
 
     throw v8
 
-    .line 1671
     :cond_1
     invoke-virtual {p0}, Landroid/net/Uri;->getEncodedQuery()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1672
     .local v5, "query":Ljava/lang/String;
     if-nez v5, :cond_3
 
-    .line 1705
     :cond_2
     :goto_0
     return-object v8
 
-    .line 1676
     :cond_3
     invoke-static {p1, v8}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1677
     .local v0, "encodedKey":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 1678
     .local v3, "length":I
     const/4 v7, 0x0
 
-    .line 1680
     .local v7, "start":I
     :goto_1
     const/16 v9, 0x26
@@ -1078,13 +976,11 @@
 
     move-result v4
 
-    .line 1681
     .local v4, "nextAmpersand":I
     if-eq v4, v11, :cond_6
 
     move v2, v4
 
-    .line 1683
     .local v2, "end":I
     :goto_2
     const/16 v9, 0x3d
@@ -1093,17 +989,14 @@
 
     move-result v6
 
-    .line 1684
     .local v6, "separator":I
     if-gt v6, v2, :cond_4
 
     if-ne v6, v11, :cond_5
 
-    .line 1685
     :cond_4
     move v6, v2
 
-    .line 1688
     :cond_5
     sub-int v9, v6, v7
 
@@ -1123,10 +1016,8 @@
 
     if-eqz v9, :cond_8
 
-    .line 1690
     if-ne v6, v2, :cond_7
 
-    .line 1691
     const-string v8, ""
 
     goto :goto_0
@@ -1136,10 +1027,8 @@
     :cond_6
     move v2, v3
 
-    .line 1681
     goto :goto_2
 
-    .line 1693
     .restart local v2    # "end":I
     .restart local v6    # "separator":I
     :cond_7
@@ -1149,7 +1038,6 @@
 
     move-result-object v1
 
-    .line 1694
     .local v1, "encodedValue":Ljava/lang/String;
     const/4 v8, 0x1
 
@@ -1161,15 +1049,12 @@
 
     goto :goto_0
 
-    .line 1699
     .end local v1    # "encodedValue":Ljava/lang/String;
     :cond_8
     if-eq v4, v11, :cond_2
 
-    .line 1700
     add-int/lit8 v7, v4, 0x1
 
-    .line 1704
     goto :goto_1
 .end method
 
@@ -1188,14 +1073,12 @@
     .prologue
     const/4 v8, -0x1
 
-    .line 1561
     invoke-virtual {p0}, Landroid/net/Uri;->isOpaque()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 1562
     new-instance v7, Ljava/lang/UnsupportedOperationException;
 
     const-string v8, "This isn\'t a hierarchical URI."
@@ -1204,36 +1087,29 @@
 
     throw v7
 
-    .line 1565
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri;->getEncodedQuery()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1566
     .local v4, "query":Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 1567
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v7
 
-    .line 1588
     :goto_0
     return-object v7
 
-    .line 1570
     :cond_1
     new-instance v2, Ljava/util/LinkedHashSet;
 
     invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 1571
     .local v2, "names":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
-    .line 1573
     .local v6, "start":I
     :cond_2
     const/16 v7, 0x26
@@ -1242,7 +1118,6 @@
 
     move-result v3
 
-    .line 1574
     .local v3, "next":I
     if-ne v3, v8, :cond_5
 
@@ -1250,7 +1125,6 @@
 
     move-result v0
 
-    .line 1576
     .local v0, "end":I
     :goto_1
     const/16 v7, 0x3d
@@ -1259,23 +1133,19 @@
 
     move-result v5
 
-    .line 1577
     .local v5, "separator":I
     if-gt v5, v0, :cond_3
 
     if-ne v5, v8, :cond_4
 
-    .line 1578
     :cond_3
     move v5, v0
 
-    .line 1581
     :cond_4
     invoke-virtual {v4, v6, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1582
     .local v1, "name":Ljava/lang/String;
     invoke-static {v1}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1283,17 +1153,14 @@
 
     invoke-interface {v2, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1585
     add-int/lit8 v6, v0, 0x1
 
-    .line 1586
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v7
 
     if-lt v6, v7, :cond_2
 
-    .line 1588
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v7
@@ -1306,7 +1173,6 @@
     :cond_5
     move v0, v3
 
-    .line 1574
     goto :goto_1
 .end method
 
@@ -1328,14 +1194,12 @@
     .prologue
     const/4 v10, -0x1
 
-    .line 1601
     invoke-virtual {p0}, Landroid/net/Uri;->isOpaque()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 1602
     new-instance v8, Ljava/lang/UnsupportedOperationException;
 
     const-string v9, "This isn\'t a hierarchical URI."
@@ -1344,11 +1208,9 @@
 
     throw v8
 
-    .line 1604
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1605
     new-instance v8, Ljava/lang/NullPointerException;
 
     const-string v9, "key"
@@ -1357,26 +1219,21 @@
 
     throw v8
 
-    .line 1608
     :cond_1
     invoke-virtual {p0}, Landroid/net/Uri;->getEncodedQuery()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1609
     .local v4, "query":Ljava/lang/String;
     if-nez v4, :cond_2
 
-    .line 1610
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v8
 
-    .line 1649
     :goto_0
     return-object v8
 
-    .line 1615
     :cond_2
     :try_start_0
     const-string v8, "UTF-8"
@@ -1387,17 +1244,14 @@
 
     move-result-object v1
 
-    .line 1620
     .local v1, "encodedKey":Ljava/lang/String;
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1622
     .local v7, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
-    .line 1624
     .local v6, "start":I
     :goto_1
     const/16 v8, 0x26
@@ -1406,13 +1260,11 @@
 
     move-result v3
 
-    .line 1625
     .local v3, "nextAmpersand":I
     if-eq v3, v10, :cond_6
 
     move v2, v3
 
-    .line 1627
     .local v2, "end":I
     :goto_2
     const/16 v8, 0x3d
@@ -1421,17 +1273,14 @@
 
     move-result v5
 
-    .line 1628
     .local v5, "separator":I
     if-gt v5, v2, :cond_3
 
     if-ne v5, v10, :cond_4
 
-    .line 1629
     :cond_3
     move v5, v2
 
-    .line 1632
     :cond_4
     sub-int v8, v5, v6
 
@@ -1453,26 +1302,20 @@
 
     if-eqz v8, :cond_5
 
-    .line 1634
     if-ne v5, v2, :cond_7
 
-    .line 1635
     const-string v8, ""
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1642
     :cond_5
     :goto_3
     if-eq v3, v10, :cond_8
 
-    .line 1643
     add-int/lit8 v6, v3, 0x1
 
-    .line 1647
     goto :goto_1
 
-    .line 1616
     .end local v1    # "encodedKey":Ljava/lang/String;
     .end local v2    # "end":I
     .end local v3    # "nextAmpersand":I
@@ -1482,7 +1325,6 @@
     :catch_0
     move-exception v0
 
-    .line 1617
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v8, Ljava/lang/AssertionError;
 
@@ -1490,7 +1332,6 @@
 
     throw v8
 
-    .line 1625
     .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     .restart local v1    # "encodedKey":Ljava/lang/String;
     .restart local v3    # "nextAmpersand":I
@@ -1503,7 +1344,6 @@
 
     goto :goto_2
 
-    .line 1637
     .restart local v2    # "end":I
     .restart local v5    # "separator":I
     :cond_7
@@ -1521,7 +1361,6 @@
 
     goto :goto_3
 
-    .line 1649
     :cond_8
     invoke-static {v7}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -1543,7 +1382,6 @@
     .locals 1
 
     .prologue
-    .line 344
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1559,7 +1397,6 @@
     .locals 1
 
     .prologue
-    .line 168
     invoke-virtual {p0}, Landroid/net/Uri;->isRelative()Z
 
     move-result v0
@@ -1584,7 +1421,6 @@
     .locals 1
 
     .prologue
-    .line 150
     invoke-virtual {p0}, Landroid/net/Uri;->isHierarchical()Z
 
     move-result v0
@@ -1609,7 +1445,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2352
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v5
@@ -1624,12 +1459,10 @@
 
     if-nez v5, :cond_1
 
-    .line 2367
     :cond_0
     :goto_0
     return v4
 
-    .line 2353
     :cond_1
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -1645,24 +1478,20 @@
 
     if-eqz v5, :cond_0
 
-    .line 2355
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v3
 
-    .line 2356
     .local v3, "seg":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v1
 
-    .line 2358
     .local v1, "prefixSeg":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 2359
     .local v2, "prefixSize":I
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1670,14 +1499,12 @@
 
     if-lt v5, v2, :cond_0
 
-    .line 2361
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_1
     if-ge v0, v2, :cond_2
 
-    .line 2362
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -1692,12 +1519,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 2361
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 2367
     :cond_2
     const/4 v4, 0x1
 
@@ -1711,22 +1536,18 @@
     .locals 3
 
     .prologue
-    .line 1748
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1749
     .local v1, "scheme":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 1753
     .end local p0    # "this":Landroid/net/Uri;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 1750
     .restart local p0    # "this":Landroid/net/Uri;
     :cond_1
     sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
@@ -1735,7 +1556,6 @@
 
     move-result-object v0
 
-    .line 1751
     .local v0, "lowerScheme":Ljava/lang/String;
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1743,7 +1563,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1753
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v2
@@ -1767,23 +1586,19 @@
 
     const/16 v6, 0x40
 
-    .line 367
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 368
     .local v3, "scheme":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 369
     .local v4, "ssp":Ljava/lang/String;
     if-eqz v3, :cond_4
 
-    .line 370
-    const-string/jumbo v5, "tel"
+    const-string v5, "tel"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1791,7 +1606,7 @@
 
     if-nez v5, :cond_0
 
-    const-string/jumbo v5, "sip"
+    const-string v5, "sip"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1799,7 +1614,7 @@
 
     if-nez v5, :cond_0
 
-    const-string/jumbo v5, "sms"
+    const-string v5, "sms"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1807,7 +1622,7 @@
 
     if-nez v5, :cond_0
 
-    const-string/jumbo v5, "smsto"
+    const-string v5, "smsto"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1815,7 +1630,7 @@
 
     if-nez v5, :cond_0
 
-    const-string/jumbo v5, "mailto"
+    const-string v5, "mailto"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1823,23 +1638,18 @@
 
     if-eqz v5, :cond_4
 
-    .line 373
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 374
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 375
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 376
     if-eqz v4, :cond_3
 
-    .line 377
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -1850,12 +1660,10 @@
 
     if-ge v2, v5, :cond_3
 
-    .line 378
     invoke-virtual {v4, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 379
     .local v1, "c":C
     const/16 v5, 0x2d
 
@@ -1867,17 +1675,14 @@
 
     if-ne v1, v5, :cond_2
 
-    .line 380
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 377
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 382
     :cond_2
     const/16 v5, 0x78
 
@@ -1885,7 +1690,6 @@
 
     goto :goto_1
 
-    .line 386
     .end local v1    # "c":C
     .end local v2    # "i":I
     :cond_3
@@ -1893,35 +1697,27 @@
 
     move-result-object v5
 
-    .line 400
     :goto_2
     return-object v5
 
-    .line 392
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 393
     .restart local v0    # "builder":Ljava/lang/StringBuilder;
     if-eqz v3, :cond_5
 
-    .line 394
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 395
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 397
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 398
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 400
     :cond_6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

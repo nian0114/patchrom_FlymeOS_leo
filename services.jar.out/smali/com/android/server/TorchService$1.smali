@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/android/server/TorchService$1;->this$0:Lcom/android/server/TorchService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 101
     const-string v0, "com.android.server.TorchService.ACTION_TURN_FLASHLIGHT_OFF"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/TorchService$1;->this$0:Lcom/android/server/TorchService;
 
     # getter for: Lcom/android/server/TorchService;->mHandler:Landroid/os/Handler;
@@ -69,12 +66,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 103
     :cond_1
     const-string v0, "android.intent.action.SCREEN_ON"
 
@@ -88,7 +83,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/TorchService$1;->this$0:Lcom/android/server/TorchService;
 
     const/4 v1, 0x1

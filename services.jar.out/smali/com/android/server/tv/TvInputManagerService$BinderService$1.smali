@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 827
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->this$1:Lcom/android/server/tv/TvInputManagerService$BinderService;
 
     iput-object p2, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->val$userState:Lcom/android/server/tv/TvInputManagerService$UserState;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 830
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->this$1:Lcom/android/server/tv/TvInputManagerService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/tv/TvInputManagerService$BinderService;->this$0:Lcom/android/server/tv/TvInputManagerService;
@@ -60,7 +58,6 @@
 
     monitor-enter v1
 
-    .line 831
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->val$userState:Lcom/android/server/tv/TvInputManagerService$UserState;
 
@@ -71,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 832
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->val$userState:Lcom/android/server/tv/TvInputManagerService$UserState;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService$UserState;->callbackSet:Ljava/util/Set;
@@ -83,14 +79,11 @@
 
     invoke-interface {v0, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 834
     :cond_0
     monitor-exit v1
 
-    .line 835
     return-void
 
-    .line 834
     :catchall_0
     move-exception v0
 

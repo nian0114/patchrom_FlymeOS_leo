@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 43
     new-instance v0, Lcom/android/internal/util/ParcelableString;
 
     invoke-direct {v0}, Lcom/android/internal/util/ParcelableString;-><init>()V
 
-    .line 44
     .local v0, "ret":Lcom/android/internal/util/ParcelableString;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -58,7 +55,6 @@
 
     iput-object v1, v0, Lcom/android/internal/util/ParcelableString;->string:Ljava/lang/String;
 
-    .line 45
     return-object v0
 .end method
 
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-virtual {p0, p1}, Lcom/android/internal/util/ParcelableString$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/util/ParcelableString;
 
     move-result-object v0
@@ -79,7 +74,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 49
     new-array v0, p1, [Lcom/android/internal/util/ParcelableString;
 
     return-object v0
@@ -89,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-virtual {p0, p1}, Lcom/android/internal/util/ParcelableString$1;->newArray(I)[Lcom/android/internal/util/ParcelableString;
 
     move-result-object v0

@@ -28,15 +28,12 @@
     .param p2, "tracker"    # Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/telephony/CarrierMessagingServiceManager;-><init>()V
 
-    .line 357
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsSender;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
-    .line 358
     return-void
 .end method
 
@@ -48,10 +45,8 @@
     .param p2, "senderCallback"    # Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;
 
     .prologue
-    .line 362
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;
 
-    .line 363
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v0, v0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
@@ -62,14 +57,12 @@
 
     if-nez v0, :cond_0
 
-    .line 364
     const-string v0, "SMSDispatcher"
 
     const-string v1, "bindService() for carrier messaging service failed"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;
 
     const/4 v1, 0x1
@@ -78,11 +71,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/SMSDispatcher$SmsSenderCallback;->onSendSmsComplete(II)V
 
-    .line 371
     :goto_0
     return-void
 
-    .line 369
     :cond_0
     const-string v0, "SMSDispatcher"
 

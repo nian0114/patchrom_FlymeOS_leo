@@ -20,10 +20,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 293
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 294
     return-void
 .end method
 
@@ -35,11 +33,9 @@
     .param p2, "handler"    # Landroid/widget/RemoteViews$OnClickHandler;
 
     .prologue
-    .line 304
     :try_start_0
     invoke-virtual {p0}, Landroid/widget/RemoteViewsAdapter$RemoteViewsFrameLayout;->removeAllViews()V
 
-    .line 305
     invoke-virtual {p0}, Landroid/widget/RemoteViewsAdapter$RemoteViewsFrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -52,15 +48,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 309
     :goto_0
     return-void
 
-    .line 306
     :catch_0
     move-exception v0
 
-    .line 307
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "RemoteViewsAdapter"
 

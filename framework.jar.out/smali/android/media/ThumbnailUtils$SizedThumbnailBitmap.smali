@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 460
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .param p1, "x0"    # Landroid/media/ThumbnailUtils$1;
 
     .prologue
-    .line 460
     invoke-direct {p0}, Landroid/media/ThumbnailUtils$SizedThumbnailBitmap;-><init>()V
 
     return-void

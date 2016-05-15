@@ -31,7 +31,6 @@
     .locals 3
 
     .prologue
-    .line 38
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "android"
@@ -46,7 +45,6 @@
 
     sput-object v0, Lcom/android/server/pm/BackgroundDexOptService;->sDexoptServiceName:Landroid/content/ComponentName;
 
-    .line 45
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -60,10 +58,8 @@
     .locals 2
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -82,7 +78,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 50
     const-string v2, "jobscheduler"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -91,7 +86,6 @@
 
     check-cast v1, Landroid/app/job/JobScheduler;
 
-    .line 51
     .local v1, "js":Landroid/app/job/JobScheduler;
     new-instance v2, Landroid/app/job/JobInfo$Builder;
 
@@ -113,11 +107,9 @@
 
     move-result-object v0
 
-    .line 55
     .local v0, "job":Landroid/app/job/JobInfo;
     invoke-virtual {v1, v0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 56
     return-void
 .end method
 
@@ -132,14 +124,12 @@
 
     const/4 v0, 0x0
 
-    .line 60
     const-string v1, "BackgroundDexOptService"
 
     const-string v2, "onIdleStart"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     const-string v1, "package"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -148,7 +138,6 @@
 
     check-cast v4, Lcom/android/server/pm/PackageManagerService;
 
-    .line 64
     .local v4, "pm":Lcom/android/server/pm/PackageManagerService;
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerService;->isStorageLow()Z
 
@@ -156,31 +145,25 @@
 
     if-eqz v1, :cond_1
 
-    .line 97
     :cond_0
     :goto_0
     return v0
 
-    .line 67
     :cond_1
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerService;->getPackagesThatNeedDexOpt()Landroid/util/ArraySet;
 
     move-result-object v3
 
-    .line 68
     .local v3, "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     if-eqz v3, :cond_0
 
-    .line 72
     move-object v5, p1
 
-    .line 73
     .local v5, "jobParams":Landroid/app/job/JobParameters;
     iget-object v0, p0, Lcom/android/server/pm/BackgroundDexOptService;->mIdleTime:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 74
     new-instance v0, Lcom/android/server/pm/BackgroundDexOptService$1;
 
     const-string v2, "BackgroundDexOptService_DexOpter"
@@ -193,7 +176,6 @@
 
     move v0, v6
 
-    .line 97
     goto :goto_0
 .end method
 
@@ -204,18 +186,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 102
     const-string v0, "BackgroundDexOptService"
 
     const-string v1, "onIdleStop"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/pm/BackgroundDexOptService;->mIdleTime:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 104
     return v2
 .end method

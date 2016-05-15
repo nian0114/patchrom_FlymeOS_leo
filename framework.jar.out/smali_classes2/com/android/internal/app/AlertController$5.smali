@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 626
     iput-object p1, p0, Lcom/android/internal/app/AlertController$5;->this$0:Lcom/android/internal/app/AlertController;
 
     iput-object p2, p0, Lcom/android/internal/app/AlertController$5;->val$indicatorUp:Landroid/view/View;
@@ -52,7 +51,6 @@
     .param p4, "totalItemCount"    # I
 
     .prologue
-    .line 635
     iget-object v0, p0, Lcom/android/internal/app/AlertController$5;->val$indicatorUp:Landroid/view/View;
 
     iget-object v1, p0, Lcom/android/internal/app/AlertController$5;->val$indicatorDown:Landroid/view/View;
@@ -60,7 +58,6 @@
     # invokes: Lcom/android/internal/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     invoke-static {p1, v0, v1}, Lcom/android/internal/app/AlertController;->access$900(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    .line 636
     return-void
 .end method
 
@@ -70,6 +67,5 @@
     .param p2, "scrollState"    # I
 
     .prologue
-    .line 630
     return-void
 .end method

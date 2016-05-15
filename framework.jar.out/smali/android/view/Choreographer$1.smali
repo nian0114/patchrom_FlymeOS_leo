@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 91
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,16 +39,13 @@
     .locals 3
 
     .prologue
-    .line 94
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 95
     .local v0, "looper":Landroid/os/Looper;
     if-nez v0, :cond_0
 
-    .line 96
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "The current thread must have a looper!"
@@ -58,7 +54,6 @@
 
     throw v1
 
-    .line 98
     :cond_0
     new-instance v1, Landroid/view/Choreographer;
 
@@ -73,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 91
     invoke-virtual {p0}, Landroid/view/Choreographer$1;->initialValue()Landroid/view/Choreographer;
 
     move-result-object v0

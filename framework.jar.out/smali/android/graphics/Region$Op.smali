@@ -58,7 +58,6 @@
 
     const/4 v4, 0x0
 
-    .line 37
     new-instance v0, Landroid/graphics/Region$Op;
 
     const-string v1, "DIFFERENCE"
@@ -67,7 +66,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
-    .line 38
     new-instance v0, Landroid/graphics/Region$Op;
 
     const-string v1, "INTERSECT"
@@ -76,7 +74,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
-    .line 39
     new-instance v0, Landroid/graphics/Region$Op;
 
     const-string v1, "UNION"
@@ -85,7 +82,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
 
-    .line 40
     new-instance v0, Landroid/graphics/Region$Op;
 
     const-string v1, "XOR"
@@ -94,7 +90,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->XOR:Landroid/graphics/Region$Op;
 
-    .line 41
     new-instance v0, Landroid/graphics/Region$Op;
 
     const-string v1, "REVERSE_DIFFERENCE"
@@ -103,7 +98,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->REVERSE_DIFFERENCE:Landroid/graphics/Region$Op;
 
-    .line 42
     new-instance v0, Landroid/graphics/Region$Op;
 
     const-string v1, "REPLACE"
@@ -116,7 +110,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->REPLACE:Landroid/graphics/Region$Op;
 
-    .line 36
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/graphics/Region$Op;
@@ -162,13 +155,10 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 45
     iput p3, p0, Landroid/graphics/Region$Op;->nativeInt:I
 
-    .line 46
     return-void
 .end method
 
@@ -177,7 +167,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     const-class v0, Landroid/graphics/Region$Op;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -193,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Landroid/graphics/Region$Op;->$VALUES:[Landroid/graphics/Region$Op;
 
     invoke-virtual {v0}, [Landroid/graphics/Region$Op;->clone()Ljava/lang/Object;

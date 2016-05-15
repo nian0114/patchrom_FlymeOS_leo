@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 145
     new-instance v0, Landroid/telephony/VoLteServiceState$1;
 
     invoke-direct {v0}, Landroid/telephony/VoLteServiceState$1;-><init>()V
@@ -64,13 +63,10 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     invoke-direct {p0}, Landroid/telephony/VoLteServiceState;->initialize()V
 
-    .line 75
     return-void
 .end method
 
@@ -79,16 +75,12 @@
     .param p1, "srvccState"    # I
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     invoke-direct {p0}, Landroid/telephony/VoLteServiceState;->initialize()V
 
-    .line 85
     iput p1, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
-    .line 86
     return-void
 .end method
 
@@ -97,17 +89,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
-    .line 124
     return-void
 .end method
 
@@ -116,13 +105,10 @@
     .param p1, "s"    # Landroid/telephony/VoLteServiceState;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     invoke-virtual {p0, p1}, Landroid/telephony/VoLteServiceState;->copyFrom(Landroid/telephony/VoLteServiceState;)V
 
-    .line 97
     return-void
 .end method
 
@@ -130,12 +116,10 @@
     .locals 1
 
     .prologue
-    .line 105
     const v0, 0x7fffffff
 
     iput v0, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
-    .line 106
     return-void
 .end method
 
@@ -144,12 +128,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 229
     const-string v0, "VoLteServiceState"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     return-void
 .end method
 
@@ -158,16 +140,13 @@
     .param p0, "m"    # Landroid/os/Bundle;
 
     .prologue
-    .line 63
     new-instance v0, Landroid/telephony/VoLteServiceState;
 
     invoke-direct {v0}, Landroid/telephony/VoLteServiceState;-><init>()V
 
-    .line 64
     .local v0, "ret":Landroid/telephony/VoLteServiceState;
     invoke-direct {v0, p0}, Landroid/telephony/VoLteServiceState;->setFromNotifierBundle(Landroid/os/Bundle;)V
 
-    .line 65
     return-object v0
 .end method
 
@@ -176,8 +155,7 @@
     .param p1, "m"    # Landroid/os/Bundle;
 
     .prologue
-    .line 208
-    const-string/jumbo v0, "mSrvccState"
+    const-string v0, "mSrvccState"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -185,7 +163,6 @@
 
     iput v0, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
-    .line 209
     return-void
 .end method
 
@@ -196,12 +173,10 @@
     .param p1, "s"    # Landroid/telephony/VoLteServiceState;
 
     .prologue
-    .line 112
     iget v0, p1, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
     iput v0, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
-    .line 113
     return-void
 .end method
 
@@ -209,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 137
     const/4 v0, 0x0
 
     return v0
@@ -222,7 +196,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 180
     :try_start_0
     move-object v0, p1
 
@@ -232,25 +205,20 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 185
     .local v2, "s":Landroid/telephony/VoLteServiceState;
     if-nez p1, :cond_1
 
-    .line 189
     .end local v2    # "s":Landroid/telephony/VoLteServiceState;
     :cond_0
     :goto_0
     return v3
 
-    .line 181
     :catch_0
     move-exception v1
 
-    .line 182
     .local v1, "ex":Ljava/lang/ClassCastException;
     goto :goto_0
 
-    .line 189
     .end local v1    # "ex":Ljava/lang/ClassCastException;
     .restart local v2    # "s":Landroid/telephony/VoLteServiceState;
     :cond_1
@@ -270,14 +238,12 @@
     .param p1, "m"    # Landroid/os/Bundle;
 
     .prologue
-    .line 218
-    const-string/jumbo v0, "mSrvccState"
+    const-string v0, "mSrvccState"
 
     iget v1, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 219
     return-void
 .end method
 
@@ -285,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 222
     iget v0, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
     return v0
@@ -295,10 +260,8 @@
     .locals 2
 
     .prologue
-    .line 168
     const/16 v0, 0x1f
 
-    .line 169
     .local v0, "primeNum":I
     iget v1, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
@@ -311,7 +274,6 @@
     .locals 2
 
     .prologue
-    .line 197
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +301,6 @@
     .locals 0
 
     .prologue
-    .line 165
     return-void
 .end method
 
@@ -349,11 +310,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 130
     iget v0, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 131
     return-void
 .end method

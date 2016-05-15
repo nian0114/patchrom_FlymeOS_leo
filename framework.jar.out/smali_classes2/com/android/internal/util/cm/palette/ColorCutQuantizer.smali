@@ -60,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const-class v0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->LOG_TAG:Ljava/lang/String;
 
-    .line 442
     new-instance v0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$1;
 
     invoke-direct {v0}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$1;-><init>()V
@@ -85,34 +83,28 @@
     .param p2, "maxColors"    # I
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     const/4 v10, 0x3
 
     new-array v10, v10, [F
 
     iput-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mTempHsl:[F
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/internal/util/cm/palette/ColorHistogram;->getNumberOfColors()I
 
     move-result v5
 
-    .line 89
     .local v5, "rawColorCount":I
     invoke-virtual {p1}, Lcom/android/internal/util/cm/palette/ColorHistogram;->getColors()[I
 
     move-result-object v7
 
-    .line 90
     .local v7, "rawColors":[I
     invoke-virtual {p1}, Lcom/android/internal/util/cm/palette/ColorHistogram;->getColorCounts()[I
 
     move-result-object v6
 
-    .line 94
     .local v6, "rawColorCounts":[I
     new-instance v10, Landroid/util/SparseIntArray;
 
@@ -120,7 +112,6 @@
 
     iput-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColorPopulations:Landroid/util/SparseIntArray;
 
-    .line 95
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -129,7 +120,6 @@
 
     if-ge v2, v10, :cond_0
 
-    .line 96
     iget-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColorPopulations:Landroid/util/SparseIntArray;
 
     aget v11, v7, v2
@@ -138,21 +128,17 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 95
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 100
     :cond_0
     new-array v10, v5, [I
 
     iput-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
-    .line 101
     const/4 v8, 0x0
 
-    .line 102
     .local v8, "validColorCount":I
     move-object v0, v7
 
@@ -172,7 +158,6 @@
 
     aget v1, v0, v3
 
-    .line 103
     .local v1, "color":I
     invoke-direct {p0, v1}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->shouldIgnoreColor(I)Z
 
@@ -180,7 +165,6 @@
 
     if-nez v10, :cond_4
 
-    .line 104
     iget-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
     add-int/lit8 v8, v9, 0x1
@@ -189,7 +173,6 @@
     .restart local v8    # "validColorCount":I
     aput v1, v10, v9
 
-    .line 102
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
@@ -199,19 +182,16 @@
     .restart local v9    # "validColorCount":I
     goto :goto_1
 
-    .line 108
     .end local v1    # "color":I
     :cond_1
     if-gt v9, p2, :cond_2
 
-    .line 110
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mQuantizedColors:Ljava/util/List;
 
-    .line 111
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
     array-length v4, v0
@@ -223,7 +203,6 @@
 
     aget v1, v0, v3
 
-    .line 112
     .restart local v1    # "color":I
     iget-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mQuantizedColors:Ljava/util/List;
 
@@ -239,12 +218,10 @@
 
     invoke-interface {v10, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 111
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    .line 116
     .end local v1    # "color":I
     :cond_2
     add-int/lit8 v10, v9, -0x1
@@ -255,7 +232,6 @@
 
     iput-object v10, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mQuantizedColors:Ljava/util/List;
 
-    .line 118
     :cond_3
     return-void
 
@@ -273,7 +249,6 @@
     .param p0, "x0"    # Lcom/android/internal/util/cm/palette/ColorCutQuantizer;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
     return-object v0
@@ -287,7 +262,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->modifySignificantOctet(III)V
 
     return-void
@@ -298,7 +272,6 @@
     .param p0, "x0"    # Lcom/android/internal/util/cm/palette/ColorCutQuantizer;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColorPopulations:Landroid/util/SparseIntArray;
 
     return-object v0
@@ -312,18 +285,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 72
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 73
     .local v3, "width":I
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
 
-    .line 75
     .local v7, "height":I
     mul-int v0, v3, v7
 
@@ -338,10 +308,8 @@
 
     move v6, v3
 
-    .line 76
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 78
     new-instance v0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;
 
     new-instance v2, Lcom/android/internal/util/cm/palette/ColorHistogram;
@@ -370,7 +338,6 @@
     .end annotation
 
     .prologue
-    .line 169
     .local p1, "vboxes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;>;"
     new-instance v1, Ljava/util/ArrayList;
 
@@ -380,7 +347,6 @@
 
     invoke-direct {v1, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 170
     .local v1, "colors":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/util/cm/palette/Palette$Swatch;>;"
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -401,13 +367,11 @@
 
     check-cast v3, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
 
-    .line 171
     .local v3, "vbox":Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
     invoke-virtual {v3}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;->getAverageColor()Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     move-result-object v0
 
-    .line 172
     .local v0, "color":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     invoke-static {v0}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->shouldIgnoreColor(Lcom/android/internal/util/cm/palette/Palette$Swatch;)Z
 
@@ -415,12 +379,10 @@
 
     if-nez v4, :cond_0
 
-    .line 175
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 178
     .end local v0    # "color":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     .end local v3    # "vbox":Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
     :cond_1
@@ -432,7 +394,6 @@
     .param p0, "hslColor"    # [F
 
     .prologue
-    .line 422
     const/4 v0, 0x2
 
     aget v0, p0, v0
@@ -463,7 +424,6 @@
 
     const/4 v1, 0x0
 
-    .line 436
     aget v2, p0, v1
 
     const/high16 v3, 0x41200000    # 10.0f
@@ -502,7 +462,6 @@
     .param p0, "hslColor"    # [F
 
     .prologue
-    .line 429
     const/4 v0, 0x2
 
     aget v0, p0, v0
@@ -531,15 +490,12 @@
     .param p3, "upperIndex"    # I
 
     .prologue
-    .line 384
     packed-switch p1, :pswitch_data_0
 
-    .line 403
     :cond_0
     :pswitch_0
     return-void
 
-    .line 390
     :pswitch_1
     move v1, p2
 
@@ -547,12 +503,10 @@
     :goto_0
     if-gt v1, p3, :cond_0
 
-    .line 391
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
     aget v0, v2, v1
 
-    .line 392
     .local v0, "color":I
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
@@ -572,12 +526,10 @@
 
     aput v3, v2, v1
 
-    .line 390
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 397
     .end local v0    # "color":I
     .end local v1    # "i":I
     :pswitch_2
@@ -587,12 +539,10 @@
     :goto_1
     if-gt v1, p3, :cond_0
 
-    .line 398
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
     aget v0, v2, v1
 
-    .line 399
     .restart local v0    # "color":I
     iget-object v2, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mColors:[I
 
@@ -612,12 +562,10 @@
 
     aput v3, v2, v1
 
-    .line 397
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 384
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_0
@@ -641,14 +589,12 @@
     .end annotation
 
     .prologue
-    .line 130
     new-instance v0, Ljava/util/PriorityQueue;
 
     sget-object v1, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->VBOX_COMPARATOR_VOLUME:Ljava/util/Comparator;
 
     invoke-direct {v0, p2, v1}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
 
-    .line 133
     .local v0, "pq":Ljava/util/PriorityQueue;, "Ljava/util/PriorityQueue<Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;>;"
     new-instance v1, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
 
@@ -658,10 +604,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/PriorityQueue;->offer(Ljava/lang/Object;)Z
 
-    .line 137
     invoke-direct {p0, v0, p2}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->splitBoxes(Ljava/util/PriorityQueue;I)V
 
-    .line 140
     invoke-direct {p0, v0}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->generateAverageColors(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v1
@@ -674,7 +618,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 406
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -691,7 +634,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/internal/util/cm/palette/ColorUtils;->RGBtoHSL(III[F)V
 
-    .line 407
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mTempHsl:[F
 
     invoke-static {v0}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->shouldIgnoreColor([F)Z
@@ -706,7 +648,6 @@
     .param p0, "color"    # Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     .prologue
-    .line 411
     invoke-virtual {p0}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getHsl()[F
 
     move-result-object v0
@@ -723,7 +664,6 @@
     .param p0, "hslColor"    # [F
 
     .prologue
-    .line 415
     invoke-static {p0}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->isWhite([F)Z
 
     move-result v0
@@ -768,7 +708,6 @@
     .end annotation
 
     .prologue
-    .line 153
     .local p1, "queue":Ljava/util/PriorityQueue;, "Ljava/util/PriorityQueue<Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;>;"
     :goto_0
     invoke-virtual {p1}, Ljava/util/PriorityQueue;->size()I
@@ -777,14 +716,12 @@
 
     if-ge v1, p2, :cond_0
 
-    .line 154
     invoke-virtual {p1}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
 
-    .line 156
     .local v0, "vbox":Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
     if-eqz v0, :cond_0
 
@@ -794,19 +731,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 158
     invoke-virtual {v0}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;->splitBox()Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/util/PriorityQueue;->offer(Ljava/lang/Object;)Z
 
-    .line 160
     invoke-virtual {p1, v0}, Ljava/util/PriorityQueue;->offer(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 166
     .end local v0    # "vbox":Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
     :cond_0
     return-void
@@ -827,7 +761,6 @@
     .end annotation
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/android/internal/util/cm/palette/ColorCutQuantizer;->mQuantizedColors:Ljava/util/List;
 
     return-object v0

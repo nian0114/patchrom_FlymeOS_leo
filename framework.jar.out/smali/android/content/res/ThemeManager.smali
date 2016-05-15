@@ -55,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-class v0, Landroid/content/res/ThemeManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -73,44 +72,36 @@
     .param p2, "service"    # Landroid/content/res/IThemeService;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
-    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
-    .line 54
     new-instance v0, Landroid/content/res/ThemeManager$1;
 
     invoke-direct {v0, p0}, Landroid/content/res/ThemeManager$1;-><init>(Landroid/content/res/ThemeManager;)V
 
     iput-object v0, p0, Landroid/content/res/ThemeManager;->mThemeChangeListener:Landroid/content/res/IThemeChangeListener;
 
-    .line 108
     new-instance v0, Landroid/content/res/ThemeManager$2;
 
     invoke-direct {v0, p0}, Landroid/content/res/ThemeManager$2;-><init>(Landroid/content/res/ThemeManager;)V
 
     iput-object v0, p0, Landroid/content/res/ThemeManager;->mThemeProcessingListener:Landroid/content/res/IThemeProcessingListener;
 
-    .line 49
     iput-object p1, p0, Landroid/content/res/ThemeManager;->mContext:Landroid/content/Context;
 
-    .line 50
     iput-object p2, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
-    .line 51
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -121,7 +112,6 @@
 
     iput-object v0, p0, Landroid/content/res/ThemeManager;->mHandler:Landroid/os/Handler;
 
-    .line 52
     return-void
 .end method
 
@@ -130,7 +120,6 @@
     .param p0, "x0"    # Landroid/content/res/ThemeManager;
 
     .prologue
-    .line 36
     iget-object v0, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
     return-object v0
@@ -140,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -151,7 +139,6 @@
     .param p0, "x0"    # Landroid/content/res/ThemeManager;
 
     .prologue
-    .line 36
     iget-object v0, p0, Landroid/content/res/ThemeManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -162,7 +149,6 @@
     .param p0, "x0"    # Landroid/content/res/ThemeManager;
 
     .prologue
-    .line 36
     iget-object v0, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
     return-object v0
@@ -173,14 +159,12 @@
     .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 304
     sget-object v0, Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
 
     const-string v1, "Unable to access ThemeService"
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 305
     return-void
 .end method
 
@@ -191,12 +175,10 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeChangeListener;
 
     .prologue
-    .line 139
     iget-object v2, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
     monitor-enter v2
 
-    .line 140
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
@@ -206,7 +188,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 141
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Client was already added "
@@ -215,7 +196,6 @@
 
     throw v1
 
-    .line 151
     :catchall_0
     move-exception v1
 
@@ -225,7 +205,6 @@
 
     throw v1
 
-    .line 143
     :cond_0
     :try_start_1
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
@@ -238,7 +217,6 @@
 
     if-nez v1, :cond_1
 
-    .line 145
     :try_start_2
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -249,7 +227,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 150
     :cond_1
     :goto_0
     :try_start_3
@@ -257,17 +234,13 @@
 
     invoke-interface {v1, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 151
     monitor-exit v2
 
-    .line 152
     return-void
 
-    .line 146
     :catch_0
     move-exception v0
 
-    .line 147
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
 
@@ -284,7 +257,6 @@
     .locals 2
 
     .prologue
-    .line 260
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -292,15 +264,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :goto_0
     return-void
 
-    .line 261
     :catch_0
     move-exception v0
 
-    .line 262
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Landroid/content/res/ThemeManager;->logThemeServiceException(Ljava/lang/Exception;)V
 
@@ -311,7 +280,6 @@
     .locals 2
 
     .prologue
-    .line 287
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -321,19 +289,15 @@
 
     move-result v1
 
-    .line 291
     :goto_0
     return v1
 
-    .line 288
     :catch_0
     move-exception v0
 
-    .line 289
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Landroid/content/res/ThemeManager;->logThemeServiceException(Ljava/lang/Exception;)V
 
-    .line 291
     const/4 v1, -0x1
 
     goto :goto_0
@@ -343,7 +307,6 @@
     .locals 2
 
     .prologue
-    .line 268
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -353,19 +316,15 @@
 
     move-result v1
 
-    .line 273
     :goto_0
     return v1
 
-    .line 269
     :catch_0
     move-exception v0
 
-    .line 270
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Landroid/content/res/ThemeManager;->logThemeServiceException(Ljava/lang/Exception;)V
 
-    .line 273
     const/4 v1, 0x0
 
     goto :goto_0
@@ -376,7 +335,6 @@
     .param p1, "themePkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 278
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -386,19 +344,15 @@
 
     move-result v1
 
-    .line 282
     :goto_0
     return v1
 
-    .line 279
     :catch_0
     move-exception v0
 
-    .line 280
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Landroid/content/res/ThemeManager;->logThemeServiceException(Ljava/lang/Exception;)V
 
-    .line 282
     const/4 v1, 0x0
 
     goto :goto_0
@@ -409,10 +363,8 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeChangeListener;
 
     .prologue
-    .line 176
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeManager;->removeClient(Landroid/content/res/ThemeManager$ThemeChangeListener;)V
 
-    .line 177
     return-void
 .end method
 
@@ -421,10 +373,8 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeChangeListener;
 
     .prologue
-    .line 168
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeManager;->removeClient(Landroid/content/res/ThemeManager$ThemeChangeListener;)V
 
-    .line 169
     return-void
 .end method
 
@@ -433,10 +383,8 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeChangeListener;
 
     .prologue
-    .line 172
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeManager;->addClient(Landroid/content/res/ThemeManager$ThemeChangeListener;)V
 
-    .line 173
     return-void
 .end method
 
@@ -445,7 +393,6 @@
     .param p1, "themePkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 296
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -455,19 +402,15 @@
 
     move-result v1
 
-    .line 300
     :goto_0
     return v1
 
-    .line 297
     :catch_0
     move-exception v0
 
-    .line 298
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Landroid/content/res/ThemeManager;->logThemeServiceException(Ljava/lang/Exception;)V
 
-    .line 300
     const/4 v1, 0x0
 
     goto :goto_0
@@ -478,12 +421,10 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeProcessingListener;
 
     .prologue
-    .line 184
     iget-object v2, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
     monitor-enter v2
 
-    .line 185
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
@@ -493,7 +434,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 186
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Listener was already added "
@@ -502,7 +442,6 @@
 
     throw v1
 
-    .line 196
     :catchall_0
     move-exception v1
 
@@ -512,7 +451,6 @@
 
     throw v1
 
-    .line 188
     :cond_0
     :try_start_1
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
@@ -525,7 +463,6 @@
 
     if-nez v1, :cond_1
 
-    .line 190
     :try_start_2
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -536,7 +473,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 195
     :cond_1
     :goto_0
     :try_start_3
@@ -544,17 +480,13 @@
 
     invoke-interface {v1, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 196
     monitor-exit v2
 
-    .line 197
     return-void
 
-    .line 191
     :catch_0
     move-exception v0
 
-    .line 192
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
 
@@ -572,18 +504,15 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeChangeListener;
 
     .prologue
-    .line 155
     iget-object v2, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
     monitor-enter v2
 
-    .line 156
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 157
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mChangeListeners:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->size()I
@@ -594,7 +523,6 @@
 
     if-nez v1, :cond_0
 
-    .line 159
     :try_start_1
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -605,20 +533,16 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 164
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 165
     return-void
 
-    .line 160
     :catch_0
     move-exception v0
 
-    .line 161
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
 
@@ -628,7 +552,6 @@
 
     goto :goto_0
 
-    .line 164
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -646,7 +569,6 @@
     .param p2, "removePerAppThemes"    # Z
 
     .prologue
-    .line 252
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -654,15 +576,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 256
     :goto_0
     return-void
 
-    .line 253
     :catch_0
     move-exception v0
 
-    .line 254
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Landroid/content/res/ThemeManager;->logThemeServiceException(Ljava/lang/Exception;)V
 
@@ -674,7 +593,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     return-void
 .end method
 
@@ -693,13 +611,11 @@
     .end annotation
 
     .prologue
-    .line 225
     .local p2, "components":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/content/res/ThemeManager;->requestThemeChange(Ljava/lang/String;Ljava/util/List;Z)V
 
-    .line 226
     return-void
 .end method
 
@@ -719,7 +635,6 @@
     .end annotation
 
     .prologue
-    .line 230
     .local p2, "components":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/HashMap;
 
@@ -729,7 +644,6 @@
 
     invoke-direct {v1, v3}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 231
     .local v1, "componentMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -749,18 +663,15 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 232
     .local v0, "component":Ljava/lang/String;
     invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 234
     .end local v0    # "component":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0, v1, p3}, Landroid/content/res/ThemeManager;->requestThemeChange(Ljava/util/Map;Z)V
 
-    .line 235
     return-void
 .end method
 
@@ -778,13 +689,11 @@
     .end annotation
 
     .prologue
-    .line 238
     .local p1, "componentMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/content/res/ThemeManager;->requestThemeChange(Ljava/util/Map;Z)V
 
-    .line 239
     return-void
 .end method
 
@@ -803,13 +712,11 @@
     .end annotation
 
     .prologue
-    .line 242
     .local p1, "componentMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Landroid/content/res/ThemeChangeRequest$Builder;
 
     invoke-direct {v0}, Landroid/content/res/ThemeChangeRequest$Builder;-><init>()V
 
-    .line 243
     .local v0, "builder":Landroid/content/res/ThemeChangeRequest$Builder;
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -833,7 +740,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 244
     .local v1, "component":Ljava/lang/String;
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -845,7 +751,6 @@
 
     goto :goto_0
 
-    .line 247
     .end local v1    # "component":Ljava/lang/String;
     :cond_0
     invoke-virtual {v0}, Landroid/content/res/ThemeChangeRequest$Builder;->build()Landroid/content/res/ThemeChangeRequest;
@@ -854,7 +759,6 @@
 
     invoke-virtual {p0, v3, p2}, Landroid/content/res/ThemeManager;->requestThemeChange(Landroid/content/res/ThemeChangeRequest;Z)V
 
-    .line 248
     return-void
 .end method
 
@@ -863,18 +767,15 @@
     .param p1, "listener"    # Landroid/content/res/ThemeManager$ThemeChangeListener;
 
     .prologue
-    .line 204
     iget-object v2, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
     monitor-enter v2
 
-    .line 205
     :try_start_0
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 206
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mProcessingListeners:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->size()I
@@ -885,7 +786,6 @@
 
     if-nez v1, :cond_0
 
-    .line 208
     :try_start_1
     iget-object v1, p0, Landroid/content/res/ThemeManager;->mService:Landroid/content/res/IThemeService;
 
@@ -896,20 +796,16 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 213
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 214
     return-void
 
-    .line 209
     :catch_0
     move-exception v0
 
-    .line 210
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/content/res/ThemeManager;->TAG:Ljava/lang/String;
 
@@ -919,7 +815,6 @@
 
     goto :goto_0
 
-    .line 213
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1

@@ -12,10 +12,8 @@
     .param p4, "callback"    # Landroid/hardware/hdmi/IHdmiControlCallback;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/hdmi/SystemAudioAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;IZLandroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 40
     invoke-virtual {p0}, Lcom/android/server/hdmi/SystemAudioActionFromTv;->getSourceAddress()I
 
     move-result v0
@@ -24,7 +22,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiUtils;->verifyAddressType(II)V
 
-    .line 41
     return-void
 .end method
 
@@ -34,13 +31,10 @@
     .locals 1
 
     .prologue
-    .line 45
     invoke-virtual {p0}, Lcom/android/server/hdmi/SystemAudioActionFromTv;->removeSystemAudioActionInProgress()V
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/hdmi/SystemAudioActionFromTv;->sendSystemAudioModeRequest()V
 
-    .line 47
     const/4 v0, 0x1
 
     return v0

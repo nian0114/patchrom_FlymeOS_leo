@@ -46,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 1367
     iput-object p1, p0, Landroid/app/BackStackRecord$2;->this$0:Landroid/app/BackStackRecord;
 
     iput-object p2, p0, Landroid/app/BackStackRecord$2;->val$sceneRoot:Landroid/view/ViewGroup;
@@ -82,7 +81,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1370
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$sceneRoot:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -91,52 +89,44 @@
 
     invoke-virtual {v2, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 1371
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$enterTransition:Landroid/transition/Transition;
 
     if-eqz v2, :cond_0
 
-    .line 1372
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$enterTransition:Landroid/transition/Transition;
 
     iget-object v3, p0, Landroid/app/BackStackRecord$2;->val$nonExistingView:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Landroid/transition/Transition;->removeTarget(Landroid/view/View;)Landroid/transition/Transition;
 
-    .line 1373
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$enterTransition:Landroid/transition/Transition;
 
     iget-object v3, p0, Landroid/app/BackStackRecord$2;->val$enteringViews:Ljava/util/ArrayList;
 
     invoke-static {v2, v3}, Landroid/app/BackStackRecord;->removeTargets(Landroid/transition/Transition;Ljava/util/ArrayList;)V
 
-    .line 1375
     :cond_0
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$exitTransition:Landroid/transition/Transition;
 
     if-eqz v2, :cond_1
 
-    .line 1376
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$exitTransition:Landroid/transition/Transition;
 
     iget-object v3, p0, Landroid/app/BackStackRecord$2;->val$exitingViews:Ljava/util/ArrayList;
 
     invoke-static {v2, v3}, Landroid/app/BackStackRecord;->removeTargets(Landroid/transition/Transition;Ljava/util/ArrayList;)V
 
-    .line 1378
     :cond_1
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$sharedElementTransition:Landroid/transition/Transition;
 
     if-eqz v2, :cond_2
 
-    .line 1379
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$sharedElementTransition:Landroid/transition/Transition;
 
     iget-object v3, p0, Landroid/app/BackStackRecord$2;->val$sharedElementTargets:Ljava/util/ArrayList;
 
     invoke-static {v2, v3}, Landroid/app/BackStackRecord;->removeTargets(Landroid/transition/Transition;Ljava/util/ArrayList;)V
 
-    .line 1381
     :cond_2
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$hiddenViews:Ljava/util/ArrayList;
 
@@ -144,7 +134,6 @@
 
     move-result v1
 
-    .line 1382
     .local v1, "numViews":I
     const/4 v0, 0x0
 
@@ -152,7 +141,6 @@
     :goto_0
     if-ge v0, v1, :cond_3
 
-    .line 1383
     iget-object v3, p0, Landroid/app/BackStackRecord$2;->val$overallTransition:Landroid/transition/Transition;
 
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$hiddenViews:Ljava/util/ArrayList;
@@ -165,12 +153,10 @@
 
     invoke-virtual {v3, v2, v4}, Landroid/transition/Transition;->excludeTarget(Landroid/view/View;Z)Landroid/transition/Transition;
 
-    .line 1382
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1385
     :cond_3
     iget-object v2, p0, Landroid/app/BackStackRecord$2;->val$overallTransition:Landroid/transition/Transition;
 
@@ -178,7 +164,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/transition/Transition;->excludeTarget(Landroid/view/View;Z)Landroid/transition/Transition;
 
-    .line 1386
     const/4 v2, 0x1
 
     return v2

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 193
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper$3;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-direct {p0}, Landroid/service/trust/ITrustAgentServiceCallback$Stub;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v3, 0x0
 
-    .line 200
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper$3;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     # getter for: Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
@@ -61,7 +59,6 @@
 
     move-result-object v0
 
-    .line 202
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -71,17 +68,14 @@
 
     invoke-virtual {v1, v2, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 203
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 204
     return-void
 
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     move v1, v3
 
-    .line 200
     goto :goto_0
 .end method
 
@@ -93,7 +87,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$3;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     # getter for: Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
@@ -114,13 +107,11 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 223
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 221
     goto :goto_0
 .end method
 
@@ -128,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 209
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$3;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     # getter for: Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
@@ -140,7 +130,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 210
     return-void
 .end method
 
@@ -151,7 +140,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$3;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     # getter for: Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
@@ -172,12 +160,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 216
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 215
     goto :goto_0
 .end method

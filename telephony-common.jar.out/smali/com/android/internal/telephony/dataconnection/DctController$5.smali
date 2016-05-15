@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 233
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$5;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,14 +37,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 236
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x258
 
     if-lt v0, v1, :cond_1
 
-    .line 237
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +76,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DctController;->access$000(Ljava/lang/String;)V
 
-    .line 239
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$5;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;
@@ -95,12 +91,10 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->notifyDataDetached()V
 
-    .line 246
     :cond_0
     :goto_0
     return-void
 
-    .line 241
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -108,7 +102,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +135,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DctController;->access$000(Ljava/lang/String;)V
 
-    .line 244
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$5;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;

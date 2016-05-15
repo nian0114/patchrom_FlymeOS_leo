@@ -25,13 +25,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 445
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
-    .line 446
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 447
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 451
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 468
     const-string v0, "AudioPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,12 +67,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 470
     :cond_0
     :goto_0
     return-void
 
-    .line 453
     :pswitch_0
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -86,7 +79,6 @@
 
     goto :goto_0
 
-    .line 456
     :pswitch_1
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -97,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 457
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     # getter for: Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
@@ -115,7 +106,6 @@
 
     goto :goto_0
 
-    .line 462
     :pswitch_2
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -126,7 +116,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 463
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     # getter for: Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
@@ -154,7 +143,6 @@
 
     goto :goto_1
 
-    .line 451
     nop
 
     :pswitch_data_0

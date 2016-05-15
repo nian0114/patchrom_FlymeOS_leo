@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 445
     iput-object p1, p0, Landroid/transition/Visibility$2;->this$0:Landroid/transition/Visibility;
 
     iput-boolean p2, p0, Landroid/transition/Visibility$2;->val$isForcedVisibility:Z
@@ -42,7 +41,6 @@
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 446
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/transition/Visibility$2;->mCanceled:Z
@@ -57,12 +55,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 464
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/transition/Visibility$2;->mCanceled:Z
 
-    .line 465
     return-void
 .end method
 
@@ -71,29 +67,24 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 469
     iget-boolean v0, p0, Landroid/transition/Visibility$2;->mCanceled:Z
 
     if-nez v0, :cond_0
 
-    .line 470
     iget-boolean v0, p0, Landroid/transition/Visibility$2;->val$isForcedVisibility:Z
 
     if-eqz v0, :cond_1
 
-    .line 471
     iget-object v0, p0, Landroid/transition/Visibility$2;->val$finalViewToKeep:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 476
     :cond_0
     :goto_0
     return-void
 
-    .line 473
     :cond_1
     iget-object v0, p0, Landroid/transition/Visibility$2;->val$finalViewToKeep:Landroid/view/View;
 
@@ -109,7 +100,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 450
     iget-boolean v0, p0, Landroid/transition/Visibility$2;->mCanceled:Z
 
     if-nez v0, :cond_0
@@ -118,14 +108,12 @@
 
     if-nez v0, :cond_0
 
-    .line 451
     iget-object v0, p0, Landroid/transition/Visibility$2;->val$finalViewToKeep:Landroid/view/View;
 
     iget v1, p0, Landroid/transition/Visibility$2;->val$finalVisibility:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 453
     :cond_0
     return-void
 .end method
@@ -135,7 +123,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 457
     iget-boolean v0, p0, Landroid/transition/Visibility$2;->mCanceled:Z
 
     if-nez v0, :cond_0
@@ -144,14 +131,12 @@
 
     if-nez v0, :cond_0
 
-    .line 458
     iget-object v0, p0, Landroid/transition/Visibility$2;->val$finalViewToKeep:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 460
     :cond_0
     return-void
 .end method

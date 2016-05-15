@@ -32,17 +32,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1826
     iput-object p1, p0, Landroid/media/tv/TvInputManager$Session$InputEventHandler;->this$0:Landroid/media/tv/TvInputManager$Session;
 
-    .line 1827
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1828
     return-void
 .end method
 
@@ -55,16 +52,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1832
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1846
     :goto_0
     return-void
 
-    .line 1834
     :pswitch_0
     iget-object v1, p0, Landroid/media/tv/TvInputManager$Session$InputEventHandler;->this$0:Landroid/media/tv/TvInputManager$Session;
 
@@ -77,7 +71,6 @@
 
     goto :goto_0
 
-    .line 1838
     :pswitch_1
     iget-object v0, p0, Landroid/media/tv/TvInputManager$Session$InputEventHandler;->this$0:Landroid/media/tv/TvInputManager$Session;
 
@@ -89,7 +82,6 @@
 
     goto :goto_0
 
-    .line 1842
     :pswitch_2
     iget-object v0, p0, Landroid/media/tv/TvInputManager$Session$InputEventHandler;->this$0:Landroid/media/tv/TvInputManager$Session;
 
@@ -99,7 +91,6 @@
 
     goto :goto_0
 
-    .line 1832
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

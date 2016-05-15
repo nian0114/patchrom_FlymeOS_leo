@@ -48,22 +48,16 @@
     .param p4, "tag"    # I
 
     .prologue
-    .line 560
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 561
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->ident:Lcom/android/server/net/NetworkIdentitySet;
 
-    .line 562
     iput p2, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->uid:I
 
-    .line 563
     iput p3, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->set:I
 
-    .line 564
     iput p4, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->tag:I
 
-    .line 565
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -102,7 +96,6 @@
 
     iput v0, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->hashCode:I
 
-    .line 566
     return-void
 .end method
 
@@ -113,10 +106,8 @@
     .param p1, "another"    # Lcom/android/server/net/NetworkStatsCollection$Key;
 
     .prologue
-    .line 585
     const/4 v0, 0x0
 
-    .line 586
     .local v0, "res":I
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->ident:Lcom/android/server/net/NetworkIdentitySet;
 
@@ -126,7 +117,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 587
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->ident:Lcom/android/server/net/NetworkIdentitySet;
 
     iget-object v2, p1, Lcom/android/server/net/NetworkStatsCollection$Key;->ident:Lcom/android/server/net/NetworkIdentitySet;
@@ -135,11 +125,9 @@
 
     move-result v0
 
-    .line 589
     :cond_0
     if-nez v0, :cond_1
 
-    .line 590
     iget v1, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->uid:I
 
     iget v2, p1, Lcom/android/server/net/NetworkStatsCollection$Key;->uid:I
@@ -148,11 +136,9 @@
 
     move-result v0
 
-    .line 592
     :cond_1
     if-nez v0, :cond_2
 
-    .line 593
     iget v1, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->set:I
 
     iget v2, p1, Lcom/android/server/net/NetworkStatsCollection$Key;->set:I
@@ -161,11 +147,9 @@
 
     move-result v0
 
-    .line 595
     :cond_2
     if-nez v0, :cond_3
 
-    .line 596
     iget v1, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->tag:I
 
     iget v2, p1, Lcom/android/server/net/NetworkStatsCollection$Key;->tag:I
@@ -174,7 +158,6 @@
 
     move-result v0
 
-    .line 598
     :cond_3
     return v0
 .end method
@@ -183,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 552
     check-cast p1, Lcom/android/server/net/NetworkStatsCollection$Key;
 
     invoke-virtual {p0, p1}, Lcom/android/server/net/NetworkStatsCollection$Key;->compareTo(Lcom/android/server/net/NetworkStatsCollection$Key;)I
@@ -200,17 +182,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 575
     instance-of v2, p1, Lcom/android/server/net/NetworkStatsCollection$Key;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 576
     check-cast v0, Lcom/android/server/net/NetworkStatsCollection$Key;
 
-    .line 577
     .local v0, "key":Lcom/android/server/net/NetworkStatsCollection$Key;
     iget v2, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->uid:I
 
@@ -242,7 +221,6 @@
 
     const/4 v1, 0x1
 
-    .line 580
     .end local v0    # "key":Lcom/android/server/net/NetworkStatsCollection$Key;
     :cond_0
     return v1
@@ -252,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 570
     iget v0, p0, Lcom/android/server/net/NetworkStatsCollection$Key;->hashCode:I
 
     return v0

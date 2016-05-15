@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 711
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
 
     return-void

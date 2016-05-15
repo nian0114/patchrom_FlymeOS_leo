@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1105
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$1;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,25 +38,20 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1108
     if-nez p2, :cond_1
 
-    .line 1121
     :cond_0
     :goto_0
     return-void
 
-    .line 1111
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1112
     .local v0, "extras":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 1115
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$1;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     iget-object v1, v1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
@@ -69,7 +63,6 @@
 
     monitor-enter v2
 
-    .line 1116
     :try_start_0
     const-string v1, "android.media.AudioService.WAKELOCK_ACQUIRED"
 
@@ -94,7 +87,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1118
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$1;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     iget-object v1, v1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
@@ -106,7 +98,6 @@
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1120
     :cond_2
     monitor-exit v2
 

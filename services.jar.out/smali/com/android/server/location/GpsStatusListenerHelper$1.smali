@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$1;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     const/4 v0, 0x0
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 32
     return-void
 .end method
 
@@ -58,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 30
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/GpsStatusListenerHelper$1;->execute(Landroid/location/IGpsStatusListener;)V

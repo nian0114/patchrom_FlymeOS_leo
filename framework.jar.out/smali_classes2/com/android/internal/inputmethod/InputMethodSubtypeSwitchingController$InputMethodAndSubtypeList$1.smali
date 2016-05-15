@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 178
     iput-object p1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList$1;->this$0:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,26 +51,20 @@
     .param p2, "imi2"    # Landroid/view/inputmethod/InputMethodInfo;
 
     .prologue
-    .line 181
     if-nez p2, :cond_0
 
-    .line 182
     const/4 v2, 0x0
 
-    .line 190
     :goto_0
     return v2
 
-    .line 183
     :cond_0
     if-nez p1, :cond_1
 
-    .line 184
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 185
     :cond_1
     iget-object v2, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList$1;->this$0:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
 
@@ -82,7 +75,6 @@
 
     if-nez v2, :cond_2
 
-    .line 186
     invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -97,7 +89,6 @@
 
     goto :goto_0
 
-    .line 188
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -136,7 +127,6 @@
 
     move-result-object v0
 
-    .line 189
     .local v0, "imiId1":Ljava/lang/CharSequence;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -175,7 +165,6 @@
 
     move-result-object v1
 
-    .line 190
     .local v1, "imiId2":Ljava/lang/CharSequence;
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -196,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 178
     check-cast p1, Landroid/view/inputmethod/InputMethodInfo;
 
     check-cast p2, Landroid/view/inputmethod/InputMethodInfo;

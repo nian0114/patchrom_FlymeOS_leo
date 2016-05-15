@@ -25,15 +25,12 @@
     .locals 1
 
     .prologue
-    .line 159
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/SoundPool$Builder;->mMaxStreams:I
 
-    .line 160
     return-void
 .end method
 
@@ -43,12 +40,10 @@
     .locals 4
 
     .prologue
-    .line 193
     iget-object v0, p0, Landroid/media/SoundPool$Builder;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     if-nez v0, :cond_0
 
-    .line 194
     new-instance v0, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
@@ -65,7 +60,6 @@
 
     iput-object v0, p0, Landroid/media/SoundPool$Builder;->mAudioAttributes:Landroid/media/AudioAttributes;
 
-    .line 197
     :cond_0
     new-instance v0, Landroid/media/SoundPool;
 
@@ -90,10 +84,8 @@
     .end annotation
 
     .prologue
-    .line 185
     if-nez p1, :cond_0
 
-    .line 186
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Invalid null AudioAttributes"
@@ -102,11 +94,9 @@
 
     throw v0
 
-    .line 188
     :cond_0
     iput-object p1, p0, Landroid/media/SoundPool$Builder;->mAudioAttributes:Landroid/media/AudioAttributes;
 
-    .line 189
     return-object p0
 .end method
 
@@ -120,10 +110,8 @@
     .end annotation
 
     .prologue
-    .line 169
     if-gtz p1, :cond_0
 
-    .line 170
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Strictly positive value required for the maximum number of streams"
@@ -132,10 +120,8 @@
 
     throw v0
 
-    .line 173
     :cond_0
     iput p1, p0, Landroid/media/SoundPool$Builder;->mMaxStreams:I
 
-    .line 174
     return-object p0
 .end method

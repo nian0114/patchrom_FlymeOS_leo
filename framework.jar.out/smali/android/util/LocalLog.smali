@@ -26,20 +26,16 @@
     .param p1, "maxLines"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Landroid/util/LocalLog;->mLog:Ljava/util/LinkedList;
 
-    .line 38
     iput p1, p0, Landroid/util/LocalLog;->mMaxLines:I
 
-    .line 39
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 54
     monitor-enter p0
 
     :try_start_0
@@ -64,7 +59,6 @@
 
     move-result-object v0
 
-    .line 55
     .local v0, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -73,7 +67,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 56
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -86,7 +79,6 @@
 
     goto :goto_0
 
-    .line 54
     .end local v0    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catchall_0
     move-exception v1
@@ -95,7 +87,6 @@
 
     throw v1
 
-    .line 58
     .restart local v0    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     monitor-exit p0
@@ -108,7 +99,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     monitor-enter p0
 
     :try_start_0
@@ -116,31 +106,26 @@
 
     if-lez v2, :cond_0
 
-    .line 43
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/util/LocalLog;->mNow:J
 
-    .line 44
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 45
     .local v1, "sb":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 46
     .local v0, "c":Ljava/util/Calendar;
     iget-wide v2, p0, Landroid/util/LocalLog;->mNow:J
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 47
     const-string v2, "%tm-%td %tH:%tM:%tS.%tL"
 
     const/4 v3, 0x6
@@ -177,7 +162,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     iget-object v2, p0, Landroid/util/LocalLog;->mLog:Ljava/util/LinkedList;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -208,7 +192,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 49
     :goto_0
     iget-object v2, p0, Landroid/util/LocalLog;->mLog:Ljava/util/LinkedList;
 
@@ -228,7 +211,6 @@
 
     goto :goto_0
 
-    .line 42
     .end local v0    # "c":Ljava/util/Calendar;
     .end local v1    # "sb":Ljava/lang/StringBuilder;
     :catchall_0
@@ -238,7 +220,6 @@
 
     throw v2
 
-    .line 51
     :cond_0
     monitor-exit p0
 

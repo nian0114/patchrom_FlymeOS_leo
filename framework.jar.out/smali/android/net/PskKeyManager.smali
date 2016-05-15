@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 169
     const-string v0, ""
 
     return-object v0
@@ -45,7 +43,6 @@
     .param p2, "engine"    # Ljavax/net/ssl/SSLEngine;
 
     .prologue
-    .line 186
     const-string v0, ""
 
     return-object v0
@@ -56,7 +53,6 @@
     .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 138
     const/4 v0, 0x0
 
     return-object v0
@@ -67,7 +63,6 @@
     .param p1, "engine"    # Ljavax/net/ssl/SSLEngine;
 
     .prologue
-    .line 152
     const/4 v0, 0x0
 
     return-object v0
@@ -80,7 +75,6 @@
     .param p3, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 204
     const/4 v0, 0x0
 
     return-object v0
@@ -93,7 +87,6 @@
     .param p3, "engine"    # Ljavax/net/ssl/SSLEngine;
 
     .prologue
-    .line 222
     const/4 v0, 0x0
 
     return-object v0

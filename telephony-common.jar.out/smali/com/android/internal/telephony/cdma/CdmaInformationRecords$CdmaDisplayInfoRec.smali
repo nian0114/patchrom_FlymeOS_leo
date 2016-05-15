@@ -27,16 +27,12 @@
     .param p2, "alpha"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     iput p1, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaDisplayInfoRec;->id:I
 
-    .line 137
     iput-object p2, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaDisplayInfoRec;->alpha:Ljava/lang/String;
 
-    .line 138
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

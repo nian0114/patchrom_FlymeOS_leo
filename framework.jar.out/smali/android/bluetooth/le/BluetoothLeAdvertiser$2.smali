@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 373
     iput-object p1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser$2;->this$0:Landroid/bluetooth/le/BluetoothLeAdvertiser;
 
     iput-object p2, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser$2;->val$callback:Landroid/bluetooth/le/AdvertiseCallback;
@@ -48,13 +47,11 @@
     .locals 2
 
     .prologue
-    .line 377
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser$2;->val$callback:Landroid/bluetooth/le/AdvertiseCallback;
 
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser$2;->val$settings:Landroid/bluetooth/le/AdvertiseSettings;
 
     invoke-virtual {v0, v1}, Landroid/bluetooth/le/AdvertiseCallback;->onStartSuccess(Landroid/bluetooth/le/AdvertiseSettings;)V
 
-    .line 378
     return-void
 .end method

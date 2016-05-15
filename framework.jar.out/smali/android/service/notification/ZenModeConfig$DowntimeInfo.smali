@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 589
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,12 +47,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 604
     instance-of v2, p1, Landroid/service/notification/ZenModeConfig$DowntimeInfo;
 
     if-nez v2, :cond_1
 
-    .line 606
     :cond_0
     :goto_0
     return v1
@@ -61,10 +58,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 605
     check-cast v0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;
 
-    .line 606
     .local v0, "other":Landroid/service/notification/ZenModeConfig$DowntimeInfo;
     iget v2, p0, Landroid/service/notification/ZenModeConfig$DowntimeInfo;->startHour:I
 
@@ -115,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 599
     const/4 v0, 0x0
 
     return v0

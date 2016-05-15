@@ -34,11 +34,9 @@
     .locals 0
 
     .prologue
-    .line 33
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair<TT1;TT2;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     return-void
 .end method
 
@@ -62,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 150
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair<TT1;TT2;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/Pair<TT1;TT2;>;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair$MarshalerPair;
@@ -86,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 155
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryablePair<TT1;TT2;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/Pair<TT1;TT2;>;>;"
     const-class v0, Landroid/util/Pair;

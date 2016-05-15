@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 852
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->this$0:Lcom/android/server/accessibility/ScreenMagnifier;
 
     iput p2, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->val$scale:F
@@ -52,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 852
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/ScreenMagnifier$2;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -67,7 +65,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 855
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->this$0:Lcom/android/server/accessibility/ScreenMagnifier;
 
     # getter for: Lcom/android/server/accessibility/ScreenMagnifier;->mContext:Landroid/content/Context;
@@ -85,7 +82,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
-    .line 857
     const/4 v0, 0x0
 
     return-object v0

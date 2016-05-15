@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1038
     iput-object p1, p0, Landroid/service/dreams/DreamService$2;->this$0:Landroid/service/dreams/DreamService;
 
     iput-object p2, p0, Landroid/service/dreams/DreamService$2;->val$fd:Ljava/io/FileDescriptor;
@@ -49,7 +48,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1041
     iget-object v0, p0, Landroid/service/dreams/DreamService$2;->this$0:Landroid/service/dreams/DreamService;
 
     iget-object v1, p0, Landroid/service/dreams/DreamService$2;->val$fd:Ljava/io/FileDescriptor;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/service/dreams/DreamService;->dumpOnHandler(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1042
     return-void
 .end method

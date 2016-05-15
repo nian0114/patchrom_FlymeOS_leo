@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 208
     new-instance v0, Landroid/text/method/TextKeyListener$Capitalize;
 
     const-string v1, "NONE"
@@ -81,7 +80,6 @@
 
     sput-object v0, Landroid/text/method/TextKeyListener$Capitalize;->CHARACTERS:Landroid/text/method/TextKeyListener$Capitalize;
 
-    .line 207
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/text/method/TextKeyListener$Capitalize;
@@ -116,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 207
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -127,7 +124,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 207
     const-class v0, Landroid/text/method/TextKeyListener$Capitalize;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -143,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 207
     sget-object v0, Landroid/text/method/TextKeyListener$Capitalize;->$VALUES:[Landroid/text/method/TextKeyListener$Capitalize;
 
     invoke-virtual {v0}, [Landroid/text/method/TextKeyListener$Capitalize;->clone()Ljava/lang/Object;

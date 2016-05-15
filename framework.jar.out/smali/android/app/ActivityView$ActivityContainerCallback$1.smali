@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 343
     iput-object p1, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->this$0:Landroid/app/ActivityView$ActivityContainerCallback;
 
     iput-object p2, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->val$callback:Landroid/app/ActivityView$ActivityViewCallback;
@@ -48,13 +47,11 @@
     .locals 2
 
     .prologue
-    .line 346
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->val$callback:Landroid/app/ActivityView$ActivityViewCallback;
 
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->val$activityView:Landroid/app/ActivityView;
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityView$ActivityViewCallback;->onAllActivitiesComplete(Landroid/app/ActivityView;)V
 
-    .line 347
     return-void
 .end method

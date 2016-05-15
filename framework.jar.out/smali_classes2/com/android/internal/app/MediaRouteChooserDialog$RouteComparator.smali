@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 266
     new-instance v0, Lcom/android/internal/app/MediaRouteChooserDialog$RouteComparator;
 
     invoke-direct {v0}, Lcom/android/internal/app/MediaRouteChooserDialog$RouteComparator;-><init>()V
@@ -50,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 265
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +62,6 @@
     .param p2, "rhs"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 270
     invoke-virtual {p1}, Landroid/media/MediaRouter$RouteInfo;->getName()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -92,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 265
     check-cast p1, Landroid/media/MediaRouter$RouteInfo;
 
     check-cast p2, Landroid/media/MediaRouter$RouteInfo;

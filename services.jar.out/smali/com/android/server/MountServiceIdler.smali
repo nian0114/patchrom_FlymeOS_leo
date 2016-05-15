@@ -24,7 +24,6 @@
     .locals 3
 
     .prologue
-    .line 34
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "android"
@@ -39,7 +38,6 @@
 
     sput-object v0, Lcom/android/server/MountServiceIdler;->sIdleService:Landroid/content/ComponentName;
 
-    .line 37
     const/16 v0, 0x328
 
     sput v0, Lcom/android/server/MountServiceIdler;->MOUNT_JOB_ID:I
@@ -51,10 +49,8 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
-    .line 41
     new-instance v0, Lcom/android/server/MountServiceIdler$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/MountServiceIdler$1;-><init>(Lcom/android/server/MountServiceIdler;)V
@@ -69,7 +65,6 @@
     .param p0, "x0"    # Lcom/android/server/MountServiceIdler;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     return-object v0
@@ -80,7 +75,6 @@
     .param p0, "x0"    # Lcom/android/server/MountServiceIdler;
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
     return v0
@@ -92,7 +86,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 31
     iput-boolean p1, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
     return p1
@@ -103,7 +96,6 @@
     .param p0, "x0"    # Lcom/android/server/MountServiceIdler;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcom/android/server/MountServiceIdler;->mJobParams:Landroid/app/job/JobParameters;
 
     return-object v0
@@ -116,7 +108,6 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 95
     const-string v5, "jobscheduler"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -125,13 +116,11 @@
 
     check-cast v4, Landroid/app/job/JobScheduler;
 
-    .line 97
     .local v4, "tm":Landroid/app/job/JobScheduler;
     invoke-static {}, Lcom/android/server/MountServiceIdler;->tomorrowMidnight()Ljava/util/Calendar;
 
     move-result-object v1
 
-    .line 98
     .local v1, "calendar":Ljava/util/Calendar;
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
@@ -143,7 +132,6 @@
 
     sub-long v2, v6, v8
 
-    .line 100
     .local v2, "timeToMidnight":J
     new-instance v0, Landroid/app/job/JobInfo$Builder;
 
@@ -153,24 +141,19 @@
 
     invoke-direct {v0, v5, v6}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    .line 101
     .local v0, "builder":Landroid/app/job/JobInfo$Builder;
     invoke-virtual {v0, v10}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 102
     invoke-virtual {v0, v10}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 103
     invoke-virtual {v0, v2, v3}, Landroid/app/job/JobInfo$Builder;->setMinimumLatency(J)Landroid/app/job/JobInfo$Builder;
 
-    .line 104
     invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 105
     return-void
 .end method
 
@@ -180,12 +163,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 108
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 109
     .local v0, "calendar":Ljava/util/Calendar;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -193,36 +174,30 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 110
     const/16 v1, 0xb
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 111
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 112
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 113
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 114
     const/4 v1, 0x5
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->add(II)V
 
-    .line 115
     return-object v0
 .end method
 
@@ -235,7 +210,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 62
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -245,46 +219,37 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
     :goto_0
     iput-object p1, p0, Lcom/android/server/MountServiceIdler;->mJobParams:Landroid/app/job/JobParameters;
 
-    .line 70
     sget-object v0, Lcom/android/server/MountService;->sSelf:Lcom/android/server/MountService;
 
-    .line 71
     .local v0, "ms":Lcom/android/server/MountService;
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v2, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     monitor-enter v2
 
-    .line 73
     const/4 v3, 0x1
 
     :try_start_1
     iput-boolean v3, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
-    .line 74
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 75
     iget-object v2, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v2}, Lcom/android/server/MountService;->runIdleMaintenance(Ljava/lang/Runnable;)V
 
-    .line 77
     :cond_0
     if-eqz v0, :cond_1
 
     :goto_1
     return v1
 
-    .line 74
     :catchall_0
     move-exception v1
 
@@ -295,13 +260,11 @@
 
     throw v1
 
-    .line 77
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 63
     .end local v0    # "ms":Lcom/android/server/MountService;
     :catch_0
     move-exception v2
@@ -316,24 +279,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     monitor-enter v1
 
-    .line 86
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
-    .line 87
     monitor-exit v1
 
-    .line 88
     return v2
 
-    .line 87
     :catchall_0
     move-exception v0
 

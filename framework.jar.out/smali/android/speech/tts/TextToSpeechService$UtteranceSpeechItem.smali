@@ -29,13 +29,10 @@
     .param p4, "callerPid"    # I
 
     .prologue
-    .line 764
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 765
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/speech/tts/TextToSpeechService$SpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;II)V
 
-    .line 766
     return-void
 .end method
 
@@ -46,16 +43,13 @@
     .param p1, "errorCode"    # I
 
     .prologue
-    .line 794
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 795
     .local v0, "utteranceId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 796
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     # getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -69,7 +63,6 @@
 
     invoke-virtual {v1, v2, v0, p1}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnError(Ljava/lang/Object;Ljava/lang/String;I)V
 
-    .line 798
     :cond_0
     return-void
 .end method
@@ -78,16 +71,13 @@
     .locals 3
 
     .prologue
-    .line 786
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 787
     .local v0, "utteranceId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 788
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     # getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -101,7 +91,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnStart(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 790
     :cond_0
     return-void
 .end method
@@ -110,16 +99,13 @@
     .locals 3
 
     .prologue
-    .line 778
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 779
     .local v0, "utteranceId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 780
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     # getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -133,7 +119,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnStop(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 782
     :cond_0
     return-void
 .end method
@@ -142,16 +127,13 @@
     .locals 3
 
     .prologue
-    .line 770
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 771
     .local v0, "utteranceId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 772
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     # getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -165,7 +147,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnSuccess(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 774
     :cond_0
     return-void
 .end method
@@ -177,7 +158,6 @@
     .param p3, "defaultValue"    # F
 
     .prologue
-    .line 811
     if-nez p1, :cond_0
 
     .end local p3    # "defaultValue":F
@@ -200,7 +180,6 @@
     .param p3, "defaultValue"    # I
 
     .prologue
-    .line 807
     if-nez p1, :cond_0
 
     .end local p3    # "defaultValue":I
@@ -223,7 +202,6 @@
     .param p3, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 803
     if-nez p1, :cond_0
 
     .end local p3    # "defaultValue":Ljava/lang/String;

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 205
     iput-object p1, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->this$0:Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;
 
     iput p2, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->val$currentAfRun:I
@@ -56,7 +55,6 @@
 
     const/4 v2, 0x0
 
-    .line 208
     iget-object v3, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->this$0:Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;
 
     # getter for: Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->mLock:Ljava/lang/Object;
@@ -66,7 +64,6 @@
 
     monitor-enter v6
 
-    .line 209
     :try_start_0
     iget-object v3, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->this$0:Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;
 
@@ -75,7 +72,6 @@
 
     move-result v0
 
-    .line 211
     .local v0, "latestAfRun":I
     # getter for: Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->VERBOSE:Z
     invoke-static {}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->access$200()Z
@@ -84,7 +80,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 212
     # getter for: Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->access$300()Ljava/lang/String;
 
@@ -94,7 +89,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onAutoFocus - success "
+    const-string v8, "onAutoFocus - success "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -132,19 +127,17 @@
 
     invoke-static {v3, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :cond_0
     iget v3, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->val$currentAfRun:I
 
     if-eq v0, v3, :cond_1
 
-    .line 218
     # getter for: Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->access$300()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "onAutoFocus - ignoring AF callback (old run %d, new run %d)"
+    const-string v3, "onAutoFocus - ignoring AF callback (old run %d, new run %d)"
 
     const/4 v4, 0x2
 
@@ -174,20 +167,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     monitor-exit v6
 
-    .line 243
     :goto_0
     return-void
 
-    .line 224
     :cond_1
     if-eqz p1, :cond_3
 
     const/4 v1, 0x4
 
-    .line 228
     .local v1, "newAfState":I
     :goto_1
     iget-object v7, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->val$afMode:Ljava/lang/String;
@@ -206,7 +195,6 @@
     :goto_2
     packed-switch v2, :pswitch_data_0
 
-    .line 236
     # getter for: Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->access$300()Ljava/lang/String;
 
@@ -216,7 +204,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onAutoFocus - got unexpected onAutoFocus in mode "
+    const-string v4, "onAutoFocus - got unexpected onAutoFocus in mode "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -234,14 +222,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     :pswitch_0
     iget-object v2, p0, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper$2;->this$0:Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;
 
     # setter for: Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->mAfState:I
     invoke-static {v2, v1}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->access$402(Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;I)I
 
-    .line 242
     monitor-exit v6
 
     goto :goto_0
@@ -257,14 +243,12 @@
 
     throw v2
 
-    .line 224
     .restart local v0    # "latestAfRun":I
     :cond_3
     const/4 v1, 0x5
 
     goto :goto_1
 
-    .line 228
     .restart local v1    # "newAfState":I
     :sswitch_0
     :try_start_1
@@ -305,7 +289,7 @@
     goto :goto_2
 
     :sswitch_3
-    const-string/jumbo v2, "macro"
+    const-string v2, "macro"
 
     invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_1

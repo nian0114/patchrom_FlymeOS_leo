@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .param p2, "originalAPKFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     const/4 v0, 0x1
 
     return v0

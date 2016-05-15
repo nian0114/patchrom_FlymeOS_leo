@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 551
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     iput p2, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->val$requestId:I
@@ -52,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 554
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     # invokes: Landroid/hardware/camera2/impl/CameraDeviceImpl;->isClosed()Z
@@ -62,7 +60,6 @@
 
     if-nez v0, :cond_3
 
-    .line 555
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     # getter for: Landroid/hardware/camera2/impl/CameraDeviceImpl;->DEBUG:Z
@@ -72,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 556
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     # getter for: Landroid/hardware/camera2/impl/CameraDeviceImpl;->TAG:Ljava/lang/String;
@@ -102,7 +98,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 560
     :cond_0
     iget-wide v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->val$lastFrameNumber:J
 
@@ -120,7 +115,6 @@
 
     if-lez v0, :cond_2
 
-    .line 562
     :cond_1
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -148,7 +142,6 @@
 
     throw v0
 
-    .line 564
     :cond_2
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$9;->val$holder:Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;
 
@@ -162,7 +155,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;->onCaptureSequenceAborted(Landroid/hardware/camera2/CameraDevice;I)V
 
-    .line 568
     :cond_3
     return-void
 .end method

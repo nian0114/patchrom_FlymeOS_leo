@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 618
     const-class v0, Landroid/media/SubtitleTrack;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -65,18 +64,14 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 618
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 622
     iput-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mEndTimeMs:J
 
-    .line 623
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/media/SubtitleTrack$Run;->mRunID:J
 
-    .line 624
     iput-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mStoredEndTimeMs:J
 
     return-void
@@ -87,7 +82,6 @@
     .param p1, "x0"    # Landroid/media/SubtitleTrack$1;
 
     .prologue
-    .line 618
     invoke-direct {p0}, Landroid/media/SubtitleTrack$Run;-><init>()V
 
     return-void
@@ -101,40 +95,32 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 654
     iget-object v0, p0, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 656
     .local v0, "prev":Landroid/media/SubtitleTrack$Run;
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     if-eqz v1, :cond_0
 
-    .line 657
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     iget-object v2, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     iput-object v2, v1, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 658
     iput-object v3, p0, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 660
     :cond_0
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     if-eqz v1, :cond_1
 
-    .line 661
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     iput-object v0, v1, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 662
     iput-object v3, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 664
     :cond_1
     return-void
 .end method
@@ -152,7 +138,6 @@
     .end annotation
 
     .prologue
-    .line 628
     .local p1, "runsByEndTime":Landroid/util/LongSparseArray;, "Landroid/util/LongSparseArray<Landroid/media/SubtitleTrack$Run;>;"
     iget-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mStoredEndTimeMs:J
 
@@ -160,16 +145,13 @@
 
     move-result v0
 
-    .line 629
     .local v0, "ix":I
     if-ltz v0, :cond_2
 
-    .line 630
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     if-nez v1, :cond_1
 
-    .line 631
     sget-boolean v1, Landroid/media/SubtitleTrack$Run;->$assertionsDisabled:Z
 
     if-nez v1, :cond_0
@@ -186,21 +168,17 @@
 
     throw v1
 
-    .line 632
     :cond_0
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     if-nez v1, :cond_5
 
-    .line 633
     invoke-virtual {p1, v0}, Landroid/util/LongSparseArray;->removeAt(I)V
 
-    .line 638
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroid/media/SubtitleTrack$Run;->removeAtEndTimeMs()V
 
-    .line 642
     :cond_2
     iget-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mEndTimeMs:J
 
@@ -210,12 +188,10 @@
 
     if-ltz v1, :cond_4
 
-    .line 643
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 644
     iget-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mEndTimeMs:J
 
     invoke-virtual {p1, v2, v3}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -226,32 +202,26 @@
 
     iput-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 645
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     if-eqz v1, :cond_3
 
-    .line 646
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
     iput-object p0, v1, Landroid/media/SubtitleTrack$Run;->mPrevRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 
-    .line 648
     :cond_3
     iget-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mEndTimeMs:J
 
     invoke-virtual {p1, v2, v3, p0}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 649
     iget-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mEndTimeMs:J
 
     iput-wide v2, p0, Landroid/media/SubtitleTrack$Run;->mStoredEndTimeMs:J
 
-    .line 651
     :cond_4
     return-void
 
-    .line 635
     :cond_5
     iget-object v1, p0, Landroid/media/SubtitleTrack$Run;->mNextRunAtEndTimeMs:Landroid/media/SubtitleTrack$Run;
 

@@ -12,17 +12,14 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     invoke-static {}, Landroid/app/ActivityThread;->currentPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Vibrator;->mPackageName:Ljava/lang/String;
 
-    .line 41
     return-void
 .end method
 
@@ -31,17 +28,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     invoke-virtual {p1}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Vibrator;->mPackageName:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -64,12 +58,10 @@
     .param p1, "milliseconds"    # J
 
     .prologue
-    .line 65
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/os/Vibrator;->vibrate(JLandroid/media/AudioAttributes;)V
 
-    .line 66
     return-void
 .end method
 
@@ -79,7 +71,6 @@
     .param p3, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 80
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v2
@@ -94,7 +85,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/os/Vibrator;->vibrate(ILjava/lang/String;JLandroid/media/AudioAttributes;)V
 
-    .line 81
     return-void
 .end method
 
@@ -104,12 +94,10 @@
     .param p2, "repeat"    # I
 
     .prologue
-    .line 104
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/os/Vibrator;->vibrate([JILandroid/media/AudioAttributes;)V
 
-    .line 105
     return-void
 .end method
 
@@ -120,7 +108,6 @@
     .param p3, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 132
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -137,6 +124,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/os/Vibrator;->vibrate(ILjava/lang/String;[JILandroid/media/AudioAttributes;)V
 
-    .line 133
     return-void
 .end method

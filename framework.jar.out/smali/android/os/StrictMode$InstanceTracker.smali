@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 2287
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -60,22 +59,18 @@
     .param p1, "instance"    # Ljava/lang/Object;
 
     .prologue
-    .line 2292
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2293
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/os/StrictMode$InstanceTracker;->mKlass:Ljava/lang/Class;
 
-    .line 2295
     sget-object v3, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 2296
     :try_start_0
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -87,7 +82,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 2297
     .local v1, "value":Ljava/lang/Integer;
     if-eqz v1, :cond_0
 
@@ -97,7 +91,6 @@
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 2298
     .local v0, "newValue":I
     :goto_0
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
@@ -110,20 +103,16 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2299
     monitor-exit v3
 
-    .line 2300
     return-void
 
-    .line 2297
     .end local v0    # "newValue":I
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 2299
     .end local v1    # "value":Ljava/lang/Integer;
     :catchall_0
     move-exception v2
@@ -146,13 +135,11 @@
     .end annotation
 
     .prologue
-    .line 2322
     .local p0, "klass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 2323
     :try_start_0
     sget-object v1, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -162,7 +149,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 2324
     .local v0, "value":Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
@@ -180,7 +166,6 @@
 
     goto :goto_0
 
-    .line 2325
     .end local v0    # "value":Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -203,7 +188,6 @@
     .end annotation
 
     .prologue
-    .line 2305
     :try_start_0
     sget-object v3, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -211,7 +195,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2306
     :try_start_1
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -223,22 +206,18 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 2307
     .local v1, "value":Ljava/lang/Integer;
     if-eqz v1, :cond_0
 
-    .line 2308
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 2309
     .local v0, "newValue":I
     if-lez v0, :cond_1
 
-    .line 2310
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
     iget-object v4, p0, Landroid/os/StrictMode$InstanceTracker;->mKlass:Ljava/lang/Class;
@@ -249,7 +228,6 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2315
     .end local v0    # "newValue":I
     :cond_0
     :goto_0
@@ -257,13 +235,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2317
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 2319
     return-void
 
-    .line 2312
     .restart local v0    # "newValue":I
     :cond_1
     :try_start_2
@@ -275,7 +250,6 @@
 
     goto :goto_0
 
-    .line 2315
     .end local v0    # "newValue":I
     .end local v1    # "value":Ljava/lang/Integer;
     :catchall_0
@@ -290,7 +264,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 2317
     :catchall_1
     move-exception v2
 
