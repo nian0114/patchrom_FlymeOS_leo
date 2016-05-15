@@ -1,0 +1,96 @@
+.method public getAllCellInfoUsingSubId(I)Ljava/util/List;
+    .locals 9
+    .param p1, "subId"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List",
+            "<",
+            "Landroid/telephony/CellInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 1321
+    :try_start_0
+    iget-object v6, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneGlobals;
+
+    const-string v7, "android.permission.ACCESS_FINE_LOCATION"
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v6, v7, v8}, Lcom/android/phone/PhoneGlobals;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1331
+    :goto_0
+    invoke-static {}, Lcom/android/phone/PhoneInterfaceManager;->checkIfCallerIsSelfOrForegroundUser()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    .line 1333
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1334
+    .local v1, "cellInfos":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getPhones()[Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    .local v0, "arr$":[Lcom/android/internal/telephony/Phone;
+    array-length v4, v0
+
+    .local v4, "len$":I
+    const/4 v3, 0x0
+
+    .local v3, "i$":I
+    :goto_1
+    if-ge v3, v4, :cond_0
+
+    aget-object v5, v0, v3
+
+    .line 1335
+    .local v5, "phone":Lcom/android/internal/telephony/Phone;
+    invoke-interface {v5}, Lcom/android/internal/telephony/Phone;->getAllCellInfo()Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-interface {v1, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 1334
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    .line 1323
+    .end local v0    # "arr$":[Lcom/android/internal/telephony/Phone;
+    .end local v1    # "cellInfos":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
+    .end local v3    # "i$":I
+    .end local v4    # "len$":I
+    .end local v5    # "phone":Lcom/android/internal/telephony/Phone;
+    :catch_0
+    move-exception v2
+
+    .line 1327
+    .local v2, "e":Ljava/lang/SecurityException;
+    iget-object v6, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneGlobals;
+
+    const-string v7, "android.permission.ACCESS_COARSE_LOCATION"
+
+    invoke-virtual {v6, v7, v1}, Lcom/android/phone/PhoneGlobals;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 1340
+    .end local v2    # "e":Ljava/lang/SecurityException;
+    :cond_0
+    return-object v1
+.end method
