@@ -467,6 +467,35 @@
     goto :goto_0
 .end method
 
+.method public getSeenWakeLocks()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    :try_start_0
+    iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
+
+    invoke-interface {v0}, Landroid/os/IPowerManager;->getSeenWakeLocks()Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public goToSleep(J)V
     .locals 1
     .param p1, "time"    # J

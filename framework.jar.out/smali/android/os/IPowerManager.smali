@@ -71,6 +71,14 @@
     .end annotation
 .end method
 
+.method public abstract getSeenWakeLocks()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract goToSleep(JII)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

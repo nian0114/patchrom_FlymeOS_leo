@@ -717,6 +717,10 @@
     .end annotation
 .end field
 
+.field public static final WAKELOCK_BLOCKING_ENABLED:Ljava/lang/String; = "wakelock_blocking_enabled"
+
+.field public static final WAKELOCK_BLOCKING_LIST:Ljava/lang/String; = "wakelock_blocking_list"
+
 .field public static final WALLPAPER_ACTIVITY:Ljava/lang/String; = "wallpaper_activity"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation

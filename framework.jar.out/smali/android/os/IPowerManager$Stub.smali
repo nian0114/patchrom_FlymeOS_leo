@@ -40,6 +40,8 @@
 
 .field static final TRANSACTION_getPowerProfile:I = 0x1e
 
+.field static final TRANSACTION_getSeenWakeLocks:I = 0x20
+
 .field static final TRANSACTION_goToSleep:I = 0xa
 
 .field static final TRANSACTION_isInteractive:I = 0xc
@@ -1114,6 +1116,25 @@
 
     goto/16 :goto_0
 
+    .end local v1    # "_arg0":Ljava/lang/String;
+    :sswitch_20
+    const-string v0, "android.os.IPowerManager"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Landroid/os/IPowerManager$Stub;->getSeenWakeLocks()Ljava/lang/String;
+
+    move-result-object v7
+
+    .restart local v7    # "_result":Ljava/lang/String;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_0
+
     nop
 
     :sswitch_data_0
@@ -1149,6 +1170,7 @@
         0x1d -> :sswitch_1d
         0x1e -> :sswitch_1e
         0x1f -> :sswitch_1f
+        0x20 -> :sswitch_20
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method
