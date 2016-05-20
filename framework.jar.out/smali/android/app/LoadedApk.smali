@@ -2567,6 +2567,8 @@
 
     iput-object v1, p0, Landroid/app/LoadedApk;->mApplication:Landroid/app/Application;
 
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->cleanflymeTypeface()V
+
     if-eqz p2, :cond_6
 
     :try_start_1
