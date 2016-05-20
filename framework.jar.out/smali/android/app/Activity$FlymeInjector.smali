@@ -2526,58 +2526,67 @@
 .end method
 
 .method static startActivity(Landroid/content/Intent;)V
-    .locals 5
+    .locals 6
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
     invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
     .local v2, "packageName":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v0
 
     .local v0, "className":Ljava/lang/String;
     new-instance v1, Landroid/content/ComponentName;
 
-    const-string v3, "android"
+    const-string v4, "android"
 
-    const-string v4, "com.meizu.app.AccessApplication"
+    const-string v5, "com.meizu.app.AccessApplication"
 
-    invoke-direct {v1, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .local v1, "newComponentName":Landroid/content/ComponentName;
+    invoke-virtual {p0}, Landroid/content/Intent;->getFlags()I
+
+    move-result v3
+
+    .local v3, "srcIntentFlag":I
+    iget-object v4, p0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
+
+    invoke-virtual {v4, v3}, Landroid/content/IntentExt;->setAccessSrcFlags(I)V
+
     invoke-virtual {p0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    iget-object v3, p0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
+    iget-object v4, p0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
 
-    const/high16 v4, 0x40000
+    const/high16 v5, 0x40000
 
-    invoke-virtual {v3, v4}, Landroid/content/IntentExt;->addMeizuFlags(I)V
+    invoke-virtual {v4, v5}, Landroid/content/IntentExt;->addMeizuFlags(I)V
 
-    const-string v3, "fromlauncher"
+    const-string v4, "fromlauncher"
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    invoke-virtual {p0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const-string v3, "accesspkg"
+    const-string v4, "accesspkg"
 
-    invoke-virtual {p0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v3, "accesscls"
+    const-string v4, "accesscls"
 
-    invoke-virtual {p0, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-void
 .end method

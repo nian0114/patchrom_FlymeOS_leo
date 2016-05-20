@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
+    .locals 6
     .param p2, "view"    # Landroid/view/View;
     .param p3, "position"    # I
     .param p4, "id"    # J
@@ -65,7 +65,7 @@
     move-result-object v1
 
     .local v1, "intent":Landroid/content/Intent;
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
 
@@ -104,13 +104,36 @@
 
     iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
 
+    invoke-virtual {v3}, Lcom/android/internal/app/RecommendActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v3
+
+    const-string v4, "android.intent.extra.requset_result"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/app/RecommendActivity;->setResult(I)V
+
+    :cond_1
+    iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
+
     invoke-virtual {v3, v1}, Lcom/android/internal/app/RecommendActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .end local v2    # "resolveInfo":Landroid/content/pm/ResolveInfo;
-    :cond_1
+    :cond_2
     iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     invoke-virtual {v3}, Lcom/android/internal/app/RecommendActivity;->finish()V
